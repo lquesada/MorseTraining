@@ -7,7 +7,7 @@ const langData = {
     // Website title displayed in the browser tab
     "META_TITLE": "Morse Training",
     // Website description used by search engines
-    "META_DESC": "Learn Morse code with games and in-screen or external paddles",
+    "META_DESC": "Learn Morse code with games and support for in-screen or external Morse keys",
 
     // ==========================================
     // HEADER
@@ -17,7 +17,7 @@ const langData = {
     // Main heading of the landing page
     "APP_TITLE": "Morse Training",
     // Subheading below the main title
-    "APP_SUBTITLE": "Learn Morse code with games and in-screen or external paddles",
+    "APP_SUBTITLE": "Learn Morse code with games and support for in-screen or external Morse keys",
 
     // ==========================================
     // SCREENSHOTS
@@ -25,11 +25,11 @@ const langData = {
     // Title for the screenshots section
     "SCREENSHOTS_TITLE": "Screenshots",
     // Alt text for the gameplay screenshot
-    "SCREENSHOT_1_ALT": "Morse Training Gameplay",
+    "SCREENSHOT_1_ALT": "Morse Keyer",
     // Alt text for the menu screenshot
-    "SCREENSHOT_2_ALT": "Morse Training Menu",
+    "SCREENSHOT_2_ALT": "Morse Transmit trainer",
     // Alt text for the statistics screenshot
-    "SCREENSHOT_3_ALT": "Morse Training Stats",
+    "SCREENSHOT_3_ALT": "Morse Receive trainer",
 
     // ==========================================
     // BUTTONS

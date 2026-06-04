@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Morseův trénink",
+    "META_DESC": "Naučte se Morseovu abecedu pomocí her a in-screen nebo externích pádel",
+    "LOGO_ALT": "Logo Morse Training",
+    "APP_TITLE": "Morseův trénink",
+    "APP_SUBTITLE": "Naučte se Morseovu abecedu pomocí her a in-screen nebo externích pádel",
+    "SCREENSHOTS_TITLE": "Snímky obrazovky",
+    "SCREENSHOT_1_ALT": "Hratelnost Morse Training",
+    "SCREENSHOT_2_ALT": "Menu Morse Training",
+    "SCREENSHOT_3_ALT": "Statistiky Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "Získat na Google Play",
+    "BTN_DOWNLOAD_APK": "Stáhnout .apk",
+    "TAGLINE": "Hra zdarma, bez reklam, nevyžaduje připojení",
+    "DOWNLOAD_TITLE": "Stáhnout",
+    "DOWNLOAD_TEXT_1": "Nejlepší je <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">získat aplikaci z obchodu Google Play</a>.",
+    "DOWNLOAD_TEXT_2": "Můžete si také stáhnout soubor .apk níže a nainstalovat jej ručně. To může vyžadovat další nastavování Androidu (udělení oprávnění k instalaci aplikací, povolení možností vývojáře atd.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Verze:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Datum:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Velikost:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Stáhnout MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Copyright &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Zásady ochrany osobních údajů",
+    "FOOTER_MAIN_PAGE": "Hlavní stránka",
+    "WINDLEREYE_SUPPORT": "Podpořte mě poslechem mého hudebního projektu<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Hudební projekt Windlereye",
+    "BTN_REPORT_ISSUES": "NAHLÁSIT PROBLÉMY",
+    "BTN_SOURCE_CODE": "ZDROJOVÝ KÓD",
+    "BTN_THE_AUTHOR": "AUTOR"
+
+};

@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "മോർസ് പരിശീലനം",
+    "META_DESC": "ഗെയിമുകളും ഇൻ-സ്‌ക്രീൻ അല്ലെങ്കിൽ എക്‌സ്‌റ്റേണൽ പാഡിലുകളും ഉപയോഗിച്ച് മോഴ്‌സ് കോഡ് പഠിക്കുക",
+    "LOGO_ALT": "Morse Training ലോഗോ",
+    "APP_TITLE": "മോർസ് പരിശീലനം",
+    "APP_SUBTITLE": "ഗെയിമുകളും ഇൻ-സ്‌ക്രീൻ അല്ലെങ്കിൽ എക്‌സ്‌റ്റേണൽ പാഡിലുകളും ഉപയോഗിച്ച് മോഴ്‌സ് കോഡ് പഠിക്കുക",
+    "SCREENSHOTS_TITLE": "സ്ക്രീൻഷോട്ടുകൾ",
+    "SCREENSHOT_1_ALT": "Morse Training ഗെയിംപ്ലേ",
+    "SCREENSHOT_2_ALT": "Morse Training മെനു",
+    "SCREENSHOT_3_ALT": "Morse Training സ്ഥിതിവിവരക്കണക്കുകൾ",
+    "BTN_GOOGLE_PLAY_ALT": "Google Play-യിൽ നിന്ന് നേടുക",
+    "BTN_DOWNLOAD_APK": ".apk ഡൗൺലോഡ് ചെയ്യുക",
+    "TAGLINE": "സൗജന്യ ഗെയിം, പരസ്യങ്ങളില്ല, ഇന്റർനെറ്റ് ആവശ്യമില്ല",
+    "DOWNLOAD_TITLE": "ഡൗൺലോഡ്",
+    "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store-ൽ നിന്ന് ആപ്പ് ഡൗൺലോഡ് ചെയ്യുന്നതാണ്</a> നല്ലത്.",
+    "DOWNLOAD_TEXT_2": "നിങ്ങൾക്ക് താഴെയുള്ള .apk ഫയൽ ഡൗൺലോഡ് ചെയ്ത് മാനുവലായി ഇൻസ്റ്റാൾ ചെയ്യാനും കഴിയും. ഇതിന് Android-ൽ ചില ക്രമീകരണങ്ങൾ ആവശ്യമായി വന്നേക്കാം (ആപ്പുകൾ ഇൻസ്റ്റാൾ ചെയ്യാൻ അനുമതി നൽകുക, ഡെവലപ്പർ ഓപ്ഷനുകൾ പ്രവർത്തനക്ഷമമാക്കുക മുതലായവ).",
+    "DOWNLOAD_VERSION_INFO": "<strong>പതിപ്പ്:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>തീയതി:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>വലിപ്പം:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "morsetraining-v1.00.apk ഡൗൺലോഡ് ചെയ്യുക",
+    "FOOTER_COPYRIGHT": "പകർപ്പവകാശം &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "സ്വകാര്യതാ നയം",
+    "FOOTER_MAIN_PAGE": "പ്രധാന പേജ്",
+    "WINDLEREYE_SUPPORT": "എൻ്റെ സംഗീത പ്രോജക്റ്റ് കേട്ട് എന്നെ പിന്തുണയ്ക്കുക<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye സംഗീത പദ്ധതി",
+    "BTN_REPORT_ISSUES": "പ്രശ്നങ്ങൾ റിപ്പോർട്ട് ചെയ്യുക",
+    "BTN_SOURCE_CODE": "സോഴ്സ് കോഡ്",
+    "BTN_THE_AUTHOR": "രചയിതാവ്"
+
+};

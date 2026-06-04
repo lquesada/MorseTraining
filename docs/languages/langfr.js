@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Entraînement au morse",
+    "META_DESC": "Apprenez le code Morse avec des jeux et des palettes à l'écran ou externes",
+    "LOGO_ALT": "Logo Morse Training",
+    "APP_TITLE": "Entraînement au morse",
+    "APP_SUBTITLE": "Apprenez le code Morse avec des jeux et des palettes à l'écran ou externes",
+    "SCREENSHOTS_TITLE": "Captures d'écran",
+    "SCREENSHOT_1_ALT": "Gameplay de Morse Training",
+    "SCREENSHOT_2_ALT": "Menu de Morse Training",
+    "SCREENSHOT_3_ALT": "Statistiques de Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "Disponible sur Google Play",
+    "BTN_DOWNLOAD_APK": "Télécharger l'.apk",
+    "TAGLINE": "Jeu gratuit, sans pub, ne nécessite pas de connexion",
+    "DOWNLOAD_TITLE": "Télécharger",
+    "DOWNLOAD_TEXT_1": "Il est préférable <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">d'obtenir l'application sur le Google Play Store</a>.",
+    "DOWNLOAD_TEXT_2": "Vous pouvez également télécharger le fichier .apk ci-dessous et l'installer manuellement. Cela peut nécessiter de configurer Android (accorder des autorisations d'installation, activer les options pour les développeurs, etc.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Version:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Date:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Taille:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Télécharger MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Copyright &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Politique de confidentialité",
+    "FOOTER_MAIN_PAGE": "Page Principale",
+    "WINDLEREYE_SUPPORT": "Soutenez-moi en écoutant mon projet musical<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Projet musical Windlereye",
+    "BTN_REPORT_ISSUES": "RAPPORTER DES PROBLÈMES",
+    "BTN_SOURCE_CODE": "CODE SOURCE",
+    "BTN_THE_AUTHOR": "L'AUTEUR"
+
+};

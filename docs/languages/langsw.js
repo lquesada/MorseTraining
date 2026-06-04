@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Mafunzo ya Morse",
+    "META_DESC": "Jifunze msimbo wa Morse kwa michezo na katika skrini au paddles za nje",
+    "LOGO_ALT": "Nembo ya Morse Training",
+    "APP_TITLE": "Mafunzo ya Morse",
+    "APP_SUBTITLE": "Jifunze msimbo wa Morse kwa michezo na katika skrini au paddles za nje",
+    "SCREENSHOTS_TITLE": "Picha za Skrini",
+    "SCREENSHOT_1_ALT": "Mchezo wa Morse Training",
+    "SCREENSHOT_2_ALT": "Menyu ya Morse Training",
+    "SCREENSHOT_3_ALT": "Takwimu za Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "Ipate kwenye Google Play",
+    "BTN_DOWNLOAD_APK": "Pakua .apk",
+    "TAGLINE": "Mchezo wa bure, hakuna matangazo, haihitaji mtandao",
+    "DOWNLOAD_TITLE": "Pakua",
+    "DOWNLOAD_TEXT_1": "Ni bora <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">kupata programu kutoka Google Play Store</a>.",
+    "DOWNLOAD_TEXT_2": "Unaweza pia kupakua faili ya .apk hapa chini na kuisakinisha wewe mwenyewe. Hii inaweza kuhitaji mipangilio kadhaa katika Android (kutoa ruhusa ya kusakinisha programu, kuwezesha chaguzi za msanidi programu, nk).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Toleo:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Tarehe:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Ukubwa:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Pakua MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Hakimiliki &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Sera ya Faragha",
+    "FOOTER_MAIN_PAGE": "Ukurasa Kuu",
+    "WINDLEREYE_SUPPORT": "Niunge mkono kwa kusikiliza mradi wangu wa muziki<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Mradi wa Muziki wa Windlereye",
+    "BTN_REPORT_ISSUES": "RIPOTI MASUALA",
+    "BTN_SOURCE_CODE": "MSIMBO WA CHANZO",
+    "BTN_THE_AUTHOR": "MWANDISHI"
+
+};

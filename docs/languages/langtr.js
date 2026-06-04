@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Mors Eğitimi",
+    "META_DESC": "Oyunlar ve ekran içi veya harici düğmelerle Mors alfabesini öğrenin",
+    "LOGO_ALT": "Morse Training Logosu",
+    "APP_TITLE": "Mors Eğitimi",
+    "APP_SUBTITLE": "Oyunlar ve ekran içi veya harici düğmelerle Mors alfabesini öğrenin",
+    "SCREENSHOTS_TITLE": "Ekran Görüntüleri",
+    "SCREENSHOT_1_ALT": "Morse Training Oynanış",
+    "SCREENSHOT_2_ALT": "Morse Training Menüsü",
+    "SCREENSHOT_3_ALT": "Morse Training İstatistikleri",
+    "BTN_GOOGLE_PLAY_ALT": "Google Play'den edinin",
+    "BTN_DOWNLOAD_APK": ".apk indir",
+    "TAGLINE": "Ücretsiz oyun, reklamsız, bağlantı gerektirmez",
+    "DOWNLOAD_TITLE": "İndir",
+    "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Uygulamayı Google Play Store'dan indirmek</a> daha iyidir.",
+    "DOWNLOAD_TEXT_2": "Ayrıca aşağıdaki .apk dosyasını indirip manuel olarak yükleyebilirsiniz. Bu, Android'de bazı ayarlar gerektirebilir (uygulama yükleme izni verme, geliştirici seçeneklerini etkinleştirme vb.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Sürüm:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Tarih:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Boyut:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "morsetraining-v1.00.apk indir",
+    "FOOTER_COPYRIGHT": "Telif Hakkı &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Gizlilik Politikası",
+    "FOOTER_MAIN_PAGE": "Ana Sayfa",
+    "WINDLEREYE_SUPPORT": "Müzik projemi dinleyerek bana destek olun<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye Müzik Projesi",
+    "BTN_REPORT_ISSUES": "RAPOR SORUNLARI",
+    "BTN_SOURCE_CODE": "KAYNAK KODU",
+    "BTN_THE_AUTHOR": "YAZAR"
+
+};

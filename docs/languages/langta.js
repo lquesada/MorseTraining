@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "மோர்ஸ் பயிற்சி",
+    "META_DESC": "கேம்கள் மற்றும் இன்-ஸ்கிரீன் அல்லது வெளிப்புற துடுப்புகளுடன் மோர்ஸ் குறியீட்டைக் கற்றுக்கொள்ளுங்கள்",
+    "LOGO_ALT": "Morse Training லோகோ",
+    "APP_TITLE": "மோர்ஸ் பயிற்சி",
+    "APP_SUBTITLE": "கேம்கள் மற்றும் இன்-ஸ்கிரீன் அல்லது வெளிப்புற துடுப்புகளுடன் மோர்ஸ் குறியீட்டைக் கற்றுக்கொள்ளுங்கள்",
+    "SCREENSHOTS_TITLE": "ஸ்கிரீன்ஷாட்கள்",
+    "SCREENSHOT_1_ALT": "Morse Training கேம்ப்ளே",
+    "SCREENSHOT_2_ALT": "Morse Training மெனு",
+    "SCREENSHOT_3_ALT": "Morse Training புள்ளிவிவரங்கள்",
+    "BTN_GOOGLE_PLAY_ALT": "Google Play இல் பெறுங்கள்",
+    "BTN_DOWNLOAD_APK": ".apk ஐ பதிவிறக்குக",
+    "TAGLINE": "இலவச விளையாட்டு, விளம்பரங்கள் இல்லை, இணைய இணைப்பு தேவையில்லை",
+    "DOWNLOAD_TITLE": "பதிவிறக்குக",
+    "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store இலிருந்து பயன்பாட்டைப் பெறுவது</a> சிறந்தது.",
+    "DOWNLOAD_TEXT_2": "கீழேயுள்ள .apk கோப்பைப் பதிவிறக்கம் செய்து கைமுறையாக நிறுவலாம். இதற்கு Android இல் சில அமைப்புகளை மாற்ற வேண்டியிருக்கலாம் (பயன்பாடுகளை நிறுவ அனுமதி வழங்குதல், டெவலப்பர் விருப்பங்களை இயக்குதல் போன்றவை).",
+    "DOWNLOAD_VERSION_INFO": "<strong>பதிப்பு:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>தேதி:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>அளவு:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "morsetraining-v1.00.apk ஐ பதிவிறக்குக",
+    "FOOTER_COPYRIGHT": "பதிப்புரிமை &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "தனியுரிமைக் கொள்கை",
+    "FOOTER_MAIN_PAGE": "முதன்மைப் பக்கம்",
+    "WINDLEREYE_SUPPORT": "எனது இசை திட்டத்தைக் கேட்டு என்னை ஆதரிக்கவும்<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye இசை திட்டம்",
+    "BTN_REPORT_ISSUES": "சிக்கல்களைப் புகாரளிக்கவும்",
+    "BTN_SOURCE_CODE": "மூல குறியீடு",
+    "BTN_THE_AUTHOR": "ஆசிரியர்"
+
+};

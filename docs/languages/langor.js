@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "ମାର୍ସ ଟ୍ରେନିଂ |",
+    "META_DESC": "ଖେଳ ଏବଂ ଇନ-ସ୍କ୍ରିନ୍ କିମ୍ବା ବାହ୍ୟ ପ୍ୟାଡଲ୍ସ ସହିତ ମୋର୍ସ କୋଡ୍ ଶିଖନ୍ତୁ |",
+    "LOGO_ALT": "Morse Training ଲୋଗୋ",
+    "APP_TITLE": "ମାର୍ସ ଟ୍ରେନିଂ |",
+    "APP_SUBTITLE": "ଖେଳ ଏବଂ ଇନ-ସ୍କ୍ରିନ୍ କିମ୍ବା ବାହ୍ୟ ପ୍ୟାଡଲ୍ସ ସହିତ ମୋର୍ସ କୋଡ୍ ଶିଖନ୍ତୁ |",
+    "SCREENSHOTS_TITLE": "ସ୍କ୍ରିନସଟ୍",
+    "SCREENSHOT_1_ALT": "Morse Training ଗେମପ୍ଲେ",
+    "SCREENSHOT_2_ALT": "Morse Training ମେନୁ",
+    "SCREENSHOT_3_ALT": "Morse Training ପରିସଂଖ୍ୟାନ",
+    "BTN_GOOGLE_PLAY_ALT": "Google Play ରୁ ପ୍ରାପ୍ତ କରନ୍ତୁ",
+    "BTN_DOWNLOAD_APK": ".apk ଡାଉନଲୋଡ୍ କରନ୍ତୁ",
+    "TAGLINE": "ମାଗଣା ଗେମ୍, କୌଣସି ବିଜ୍ଞାପନ ନାହିଁ, ଇଣ୍ଟରନେଟ୍ ଆବଶ୍ୟକ ନାହିଁ",
+    "DOWNLOAD_TITLE": "ଡାଉନଲୋଡ୍",
+    "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store ରୁ ଆପ୍ ପ୍ରାପ୍ତ କରିବା</a> ଭଲ ଅଟେ।",
+    "DOWNLOAD_TEXT_2": "ଆପଣ ନିମ୍ନରେ ଥିବା .apk ଫାଇଲ୍ ଡାଉନଲୋଡ୍ କରି ଏହାକୁ ମାନୁଆଲି ଇନଷ୍ଟଲ୍ କରିପାରିବେ। ଏଥିପାଇଁ ଆଣ୍ଡ୍ରଏଡ୍ ରେ କିଛି ସେଟିଂସ୍ ବଦଳାଇବା ଆବଶ್ಯକ ହୋଇପାରେ (ଆପ୍ସ ଇନଷ୍ଟଲ୍ କରିବାକୁ ଅନୁମତି ଦେବା, ଡେଭେଲପର୍ ବିକଳ୍ପ ସକ୍ଷମ କରିବା ଇତ୍ୟାଦି)।",
+    "DOWNLOAD_VERSION_INFO": "<strong>ସଂସ୍କରଣ:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>ତାରିଖ:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>ଆକାର |:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "morsetraining-v1.00.apk ଡାଉନଲୋଡ୍ କରନ୍ତୁ",
+    "FOOTER_COPYRIGHT": "କପିରାଇଟ୍ &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "ଗୋପନୀୟତା ନୀତି",
+    "FOOTER_MAIN_PAGE": "ମୁଖ୍ୟ ପୃଷ୍ଠା",
+    "WINDLEREYE_SUPPORT": "ମୋର ସଙ୍ଗୀତ ପ୍ରୋଜେକ୍ଟ ଶୁଣି ମୋତେ ସମର୍ଥନ କରନ୍ତୁ |<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "ୱିଣ୍ଡଲେରି ମ୍ୟୁଜିକ୍ ପ୍ରୋଜେକ୍ଟ |",
+    "BTN_REPORT_ISSUES": "ରିପୋର୍ଟ ଇସୁଗୁଡିକ |",
+    "BTN_SOURCE_CODE": "SOURCE କୋଡ୍ |",
+    "BTN_THE_AUTHOR": "ଲେଖକ"
+
+};

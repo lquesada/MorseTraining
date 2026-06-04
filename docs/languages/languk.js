@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Навчання Морзе",
+    "META_DESC": "Вивчайте азбуку Морзе за допомогою ігор та екранних або зовнішніх кнопок",
+    "LOGO_ALT": "Логотип Morse Training",
+    "APP_TITLE": "Навчання Морзе",
+    "APP_SUBTITLE": "Вивчайте азбуку Морзе за допомогою ігор та екранних або зовнішніх кнопок",
+    "SCREENSHOTS_TITLE": "Скріншоти",
+    "SCREENSHOT_1_ALT": "Ігровий процес Morse Training",
+    "SCREENSHOT_2_ALT": "Меню Morse Training",
+    "SCREENSHOT_3_ALT": "Статистика Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "Завантажити з Google Play",
+    "BTN_DOWNLOAD_APK": "Завантажити .apk",
+    "TAGLINE": "Безкоштовна гра, без реклами, не потребує підключення",
+    "DOWNLOAD_TITLE": "Завантажити",
+    "DOWNLOAD_TEXT_1": "Найкраще <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">завантажити програму з Google Play Store</a>.",
+    "DOWNLOAD_TEXT_2": "Ви також можете завантажити файл .apk нижче і встановити його вручну. Для цього може знадобитися налаштування Android (надання дозволу на встановлення програм, увімкнення параметрів розробника тощо).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Версія:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Дата:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Розмір:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Завантажити MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Авторські права &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Політика конфіденційності",
+    "FOOTER_MAIN_PAGE": "Головна Сторінка",
+    "WINDLEREYE_SUPPORT": "Підтримайте мене, прослухавши мій музичний проект<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Музичний проект Windlereye",
+    "BTN_REPORT_ISSUES": "ПОВІДОМІТЬ ПРО ПРОБЛЕМИ",
+    "BTN_SOURCE_CODE": "ВИХІДНИЙ КОД",
+    "BTN_THE_AUTHOR": "АВТОР"
+
+};

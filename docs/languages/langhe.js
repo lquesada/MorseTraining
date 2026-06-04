@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "אימון מורס",
+    "META_DESC": "למד קוד מורס עם משחקים ומשוטים במסך או חיצוניים",
+    "LOGO_ALT": "הלוגו של Morse Training",
+    "APP_TITLE": "אימון מורס",
+    "APP_SUBTITLE": "למד קוד מורס עם משחקים ומשוטים במסך או חיצוניים",
+    "SCREENSHOTS_TITLE": "צילומי מסך",
+    "SCREENSHOT_1_ALT": "משחקיות של Morse Training",
+    "SCREENSHOT_2_ALT": "תפריט Morse Training",
+    "SCREENSHOT_3_ALT": "סטטיסטיקות Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "הורד מ-Google Play",
+    "BTN_DOWNLOAD_APK": "הורד .apk",
+    "TAGLINE": "משחק חינמי, ללא פרסומות, לא דורש חיבור אינטרנט",
+    "DOWNLOAD_TITLE": "הורדה",
+    "DOWNLOAD_TEXT_1": "עדיף <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">להוריד את האפליקציה מחנות Google Play</a>.",
+    "DOWNLOAD_TEXT_2": "תוכל גם להוריד את קובץ ה-.apk למטה ולהתקין אותו ידנית. זה עשוי לדרוש הגדרות ב-Android (מתן הרשאות להתקנת אפליקציות, הפעלת אפשרויות מפתחים וכו').",
+    "DOWNLOAD_VERSION_INFO": "<strong>גרסה:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>תאריך:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>גוֹדֶל:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "הורד את MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "זכויות יוצרים &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "מדיניות פרטיות",
+    "FOOTER_MAIN_PAGE": "עמוד ראשי",
+    "WINDLEREYE_SUPPORT": "תמכו בי על ידי האזנה לפרויקט המוזיקה שלי<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye Music Project",
+    "BTN_REPORT_ISSUES": "דווח על בעיות",
+    "BTN_SOURCE_CODE": "קוד המקור",
+    "BTN_THE_AUTHOR": "המחבר"
+
+};

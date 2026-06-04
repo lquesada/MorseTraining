@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Morse Training",
+    "META_DESC": "Learn Morse code with games and in-screen or external paddles",
+    "LOGO_ALT": "Morse Training के लोगो",
+    "APP_TITLE": "Morse Training",
+    "APP_SUBTITLE": "Learn Morse code with games and in-screen or external paddles",
+    "SCREENSHOTS_TITLE": "स्क्रीनशॉट",
+    "SCREENSHOT_1_ALT": "Morse Training गेमप्ले",
+    "SCREENSHOT_2_ALT": "Morse Training मेनू",
+    "SCREENSHOT_3_ALT": "Morse Training आँकड़ा",
+    "BTN_GOOGLE_PLAY_ALT": "Google Play पर पाईं",
+    "BTN_DOWNLOAD_APK": ".apk डाउनलोड करीं",
+    "TAGLINE": "मुफ्त गेम, कउनो विज्ञापन ना, कनेक्शन के जरूरत नइखे",
+    "DOWNLOAD_TITLE": "डाउनलोड",
+    "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store से ऐप प्राप्त कइल</a> बेहतर बा।",
+    "DOWNLOAD_TEXT_2": "रउआँ नीचे दिहल गइल .apk फाइल डाउनलोड क के मैनुअल रूप से भी इंस्टॉल कर सकत बानी। एकरा खातिर Android में कुछ सेटिंग करे के पड़ सकेला (ऐप इंस्टॉल करे के अनुमति दिहल, डेवलपर विकल्प चालू कइल, आदि)।",
+    "DOWNLOAD_VERSION_INFO": "<strong>संस्करण:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>दिनांक:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Size:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "morsetraining-v1.00.apk डाउनलोड करीं",
+    "FOOTER_COPYRIGHT": "कॉपीराइट &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "गोपनीयता नीति",
+    "FOOTER_MAIN_PAGE": "मुख्य पृष्ठ",
+    "WINDLEREYE_SUPPORT": "Support me by listening to my music project <a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye Music Project",
+    "BTN_REPORT_ISSUES": "REPORT ISSUES",
+    "BTN_SOURCE_CODE": "SOURCE CODE",
+    "BTN_THE_AUTHOR": "THE AUTHOR"
+
+};

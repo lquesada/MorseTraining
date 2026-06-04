@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Morse træning",
+    "META_DESC": "Lær morsekode med spil og in-screen eller eksterne padler",
+    "LOGO_ALT": "Morse Training Logo",
+    "APP_TITLE": "Morse træning",
+    "APP_SUBTITLE": "Lær morsekode med spil og in-screen eller eksterne padler",
+    "SCREENSHOTS_TITLE": "Skærmbilleder",
+    "SCREENSHOT_1_ALT": "Morse Training Gameplay",
+    "SCREENSHOT_2_ALT": "Morse Training Menu",
+    "SCREENSHOT_3_ALT": "Morse Training Statistikker",
+    "BTN_GOOGLE_PLAY_ALT": "Hent på Google Play",
+    "BTN_DOWNLOAD_APK": "Download .apk",
+    "TAGLINE": "Gratis spil, ingen annoncer, kræver ikke forbindelse",
+    "DOWNLOAD_TITLE": "Download",
+    "DOWNLOAD_TEXT_1": "Det foretrækkes at <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">hente appen fra Google Play Butik</a>.",
+    "DOWNLOAD_TEXT_2": "Du kan også downloade .apk-filen nedenfor og installere den manuelt. Dette kan kræve justeringer i Android (give tilladelse til at installere apps, aktivere udviklerindstillinger osv.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Version:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Dato:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Størrelse:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Download MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Copyright &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Privatlivspolitik",
+    "FOOTER_MAIN_PAGE": "Hovedside",
+    "WINDLEREYE_SUPPORT": "Støt mig ved at lytte til mit musikprojekt<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye musikprojekt",
+    "BTN_REPORT_ISSUES": "RAPPORTERE PROBLEMER",
+    "BTN_SOURCE_CODE": "KILDEKODE",
+    "BTN_THE_AUTHOR": "FORFATTEREN"
+
+};

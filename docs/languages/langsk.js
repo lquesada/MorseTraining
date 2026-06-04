@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Morseov tréning",
+    "META_DESC": "Naučte sa morzeovku pomocou hier a in-screen alebo externých pádlov",
+    "LOGO_ALT": "Logo Morse Training",
+    "APP_TITLE": "Morseov tréning",
+    "APP_SUBTITLE": "Naučte sa morzeovku pomocou hier a in-screen alebo externých pádlov",
+    "SCREENSHOTS_TITLE": "Snímky obrazovky",
+    "SCREENSHOT_1_ALT": "Hrateľnosť Morse Training",
+    "SCREENSHOT_2_ALT": "Menu Morse Training",
+    "SCREENSHOT_3_ALT": "Štatistiky Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "Získať na Google Play",
+    "BTN_DOWNLOAD_APK": "Stiahnuť .apk",
+    "TAGLINE": "Bezplatná hra, žiadne reklamy, nevyžaduje pripojenie",
+    "DOWNLOAD_TITLE": "Stiahnuť",
+    "DOWNLOAD_TEXT_1": "Najlepšie je <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">získať aplikáciu z obchodu Google Play</a>.",
+    "DOWNLOAD_TEXT_2": "Môžete si tiež stiahnuť súbor .apk nižšie a nainštalovať ho ručne. Môže to vyžadovať určité nastavenia v systéme Android (udelenie povolení na inštaláciu aplikácií, povolenie možností pre vývojárov atď.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Verzia:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Dátum:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Veľkosť:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Stiahnuť MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Copyright &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Zásady ochrany osobných údajov",
+    "FOOTER_MAIN_PAGE": "Hlavná Stránka",
+    "WINDLEREYE_SUPPORT": "Podporte ma počúvaním môjho hudobného projektu<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Hudobný projekt Windlereye",
+    "BTN_REPORT_ISSUES": "NAHLÁSIŤ PROBLÉMY",
+    "BTN_SOURCE_CODE": "ZDROJOVÝ KÓD",
+    "BTN_THE_AUTHOR": "AUTOR"
+
+};

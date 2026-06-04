@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Formación Morse",
+    "META_DESC": "Aprende código Morse con xogos e paletas en pantalla ou externas",
+    "LOGO_ALT": "Logotipo de Morse Training",
+    "APP_TITLE": "Formación Morse",
+    "APP_SUBTITLE": "Aprende código Morse con xogos e paletas en pantalla ou externas",
+    "SCREENSHOTS_TITLE": "Capturas de pantalla",
+    "SCREENSHOT_1_ALT": "Xogo de Morse Training",
+    "SCREENSHOT_2_ALT": "Menú de Morse Training",
+    "SCREENSHOT_3_ALT": "Estatísticas de Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "Consígueo en Google Play",
+    "BTN_DOWNLOAD_APK": "Descargar .apk",
+    "TAGLINE": "Xogo gratuíto, sen anuncios, non require conexión",
+    "DOWNLOAD_TITLE": "Descargar",
+    "DOWNLOAD_TEXT_1": "É preferible <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">obter a aplicación na Google Play Store</a>.",
+    "DOWNLOAD_TEXT_2": "Tamén podes descargar o ficheiro .apk a continuación e instalalo manualmente. Isto pode requirir configurar Android (conceder permisos para instalar aplicacións, activar opcións de programador, etc.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Versión:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Data:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Tamaño:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Descargar MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Copyright &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Política de Privacidade",
+    "FOOTER_MAIN_PAGE": "Páxina Principal",
+    "WINDLEREYE_SUPPORT": "Apóyame escoitando o meu proxecto musical<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye Music Project",
+    "BTN_REPORT_ISSUES": "INFORME CUESTIÓNS",
+    "BTN_SOURCE_CODE": "CÓDIGO FONTE",
+    "BTN_THE_AUTHOR": "O AUTOR"
+
+};

@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "모스 훈련",
+    "META_DESC": "게임과 화면 내 또는 외부 패들로 모스 부호를 배우세요",
+    "LOGO_ALT": "Morse Training 로고",
+    "APP_TITLE": "모스 훈련",
+    "APP_SUBTITLE": "게임과 화면 내 또는 외부 패들로 모스 부호를 배우세요",
+    "SCREENSHOTS_TITLE": "스크린샷",
+    "SCREENSHOT_1_ALT": "Morse Training 게임 플레이",
+    "SCREENSHOT_2_ALT": "Morse Training 메뉴",
+    "SCREENSHOT_3_ALT": "Morse Training 통계",
+    "BTN_GOOGLE_PLAY_ALT": "Google Play에서 다운로드",
+    "BTN_DOWNLOAD_APK": ".apk 다운로드",
+    "TAGLINE": "무료 게임, 광고 없음, 인터넷 연결 불필요",
+    "DOWNLOAD_TITLE": "다운로드",
+    "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play 스토어에서 앱을 다운로드</a>하는 것이 좋습니다.",
+    "DOWNLOAD_TEXT_2": "아래의 .apk 파일을 다운로드하여 수동으로 설치할 수도 있습니다. 이 경우 Android 설정이 필요할 수 있습니다(앱 설치 권한 부여, 개발자 옵션 활성화 등).",
+    "DOWNLOAD_VERSION_INFO": "<strong>버전:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>날짜:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>크기:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "morsetraining-v1.00.apk 다운로드",
+    "FOOTER_COPYRIGHT": "저작권 &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "개인정보 처리방침",
+    "FOOTER_MAIN_PAGE": "메인 페이지",
+    "WINDLEREYE_SUPPORT": "내 음악 프로젝트를 듣고 응원해주세요<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye 음악 프로젝트",
+    "BTN_REPORT_ISSUES": "문제 보고",
+    "BTN_SOURCE_CODE": "소스 코드",
+    "BTN_THE_AUTHOR": "저자"
+
+};

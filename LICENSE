@@ -1,0 +1,33 @@
+# Morse Training Custom License
+
+**Notice regarding Source-Available Status:**  
+Morse Training is distributed as **Source-Available** software. This license is intentionally more restrictive than standard Open Source Initiative (OSI) definitions. The explicit restriction on commercial use is designed in favor of radio amateurs and enthusiasts, guaranteeing that this community project cannot be hijacked whether for profit or not while allowing the Original Developer to sustain the project's long-term development and centralize community improvements for the benefit of all users.
+
+In this license, "**Original Developer**" refers to Luis Quesada Torres, and "**Original Code**" or "**Original Application**" refers to the Morse Training software as maintained at https://github.com/lquesada/MorseTraining.
+
+This software can be modified and shared under the following conditions:
+
+1. **Attribution**: If a binary or a modified version is shared, it must be shared with references to the original developer and this repository (https://github.com/lquesada/MorseTraining). Additionally, all modified versions must:
+    - Clearly state that they are a "modified version of Morse Training" in the credits, app description, repository, and any other public-facing documentation.
+    - Include a prominent link to https://github.com/lquesada/MorseTraining.
+2. **Source Code Distribution**: If the binary contains modified code, the whole modified source code of this app, together with building scripts and any components necessary to make it run, must be made publicly available under this exact same license (for example, via a public GitHub repository).
+3. **No Commercial Applications**: You cannot resell this application, nor applications that use code from this application (either original or modified), and you cannot bundle the application in a device or preinstall it in a device and sell the device. What is acceptable is to point users to the webpage or Google Play Store to install the application.
+
+If you want a commercial licensing deal, you must reach out to the **Original Developer**. Commercial licensing deals will only be granted under conditions that explicitly safeguard the interests of the community. Only the **Original Code** or **Original Application** can be subject to commercial license deals, provided the **Original Developer** agrees. Any modified code or versions of this application cannot be commercialized, and no extra license agreements can be made on them.
+
+**Back-contribution.**
+If you modify this software and publish the modified version or its source code, you hereby grant the Original Developer the right to incorporate any of your improvements, changes, and modifications back into the Original Code or Application and any future versions thereof, including the right for the Original Developer to license such integrated work under commercial terms in accordance with the "No Commercial Applications" section above, always with due credit and reference to your contribution.
+
+**Patent Grant.**
+Subject to the terms and conditions of this license, each contributor hereby grants to you a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable patent license to make, have made, use, import, and otherwise transfer the software solely for non-commercial purposes, strictly subject to the restrictions set forth in the "No Commercial Applications" section of this license. This patent grant explicitly excludes any right to sell, offer to sell, or otherwise commercialize the software or any derivative works thereof.
+
+**Disclaimer of Warranty.**
+By using this software, you assume all responsibility for legal compliance, safety, and equipment damage.
+
+THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+**Limitation of Liability.**
+IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+**Interpretation of the last two points.**
+If the disclaimer of warranty and limitation of liability provided above cannot be given local legal effect according to their terms, reviewing courts shall apply local law that most closely approximates an absolute waiver of all civil liability in connection with the Program, unless a warranty or assumption of liability accompanies a copy of the Program in return for a fee.

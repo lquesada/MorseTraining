@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Morse képzés",
+    "META_DESC": "Tanuljon Morse kódot játékokkal és képernyőn belüli vagy külső lapátokkal",
+    "LOGO_ALT": "Morse Training Logó",
+    "APP_TITLE": "Morse képzés",
+    "APP_SUBTITLE": "Tanuljon Morse kódot játékokkal és képernyőn belüli vagy külső lapátokkal",
+    "SCREENSHOTS_TITLE": "Képernyőképek",
+    "SCREENSHOT_1_ALT": "Morse Training Játékmenet",
+    "SCREENSHOT_2_ALT": "Morse Training Menü",
+    "SCREENSHOT_3_ALT": "Morse Training Statisztikák",
+    "BTN_GOOGLE_PLAY_ALT": "Szerezd meg a Google Playen",
+    "BTN_DOWNLOAD_APK": ".apk letöltése",
+    "TAGLINE": "Ingyenes játék, reklámmentes, nem igényel kapcsolatot",
+    "DOWNLOAD_TITLE": "Letöltés",
+    "DOWNLOAD_TEXT_1": "Célszerű <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">az alkalmazást a Google Play Áruházból beszerezni</a>.",
+    "DOWNLOAD_TEXT_2": "A lenti .apk fájlt is letöltheted és manuálisan telepítheted. Ehhez az Android beállításainak módosítása lehet szükséges (alkalmazások telepítésének engedélyezése, fejlesztői beállítások engedélyezése stb.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Verzió:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Dátum:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Méret:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "morsetraining-v1.00.apk letöltése",
+    "FOOTER_COPYRIGHT": "Szerzői jog &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Adatvédelmi irányelvek",
+    "FOOTER_MAIN_PAGE": "Főoldal",
+    "WINDLEREYE_SUPPORT": "Támogass a zenei projektem meghallgatásával<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye Music Project",
+    "BTN_REPORT_ISSUES": "PROBLÉMÁK BEJELENTÉSE",
+    "BTN_SOURCE_CODE": "FORRÁSKÓD",
+    "BTN_THE_AUTHOR": "A SZERZŐ"
+
+};

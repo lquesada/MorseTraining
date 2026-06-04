@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "మోర్స్ శిక్షణ",
+    "META_DESC": "గేమ్‌లు మరియు ఇన్-స్క్రీన్ లేదా ఎక్స్‌టర్నల్ ప్యాడిల్స్‌తో మోర్స్ కోడ్‌ని నేర్చుకోండి",
+    "LOGO_ALT": "Morse Training లోగో",
+    "APP_TITLE": "మోర్స్ శిక్షణ",
+    "APP_SUBTITLE": "గేమ్‌లు మరియు ఇన్-స్క్రీన్ లేదా ఎక్స్‌టర్నల్ ప్యాడిల్స్‌తో మోర్స్ కోడ్‌ని నేర్చుకోండి",
+    "SCREENSHOTS_TITLE": "స్క్రీన్‌షాట్‌లు",
+    "SCREENSHOT_1_ALT": "Morse Training గేమ్‌ప్లే",
+    "SCREENSHOT_2_ALT": "Morse Training మెనూ",
+    "SCREENSHOT_3_ALT": "Morse Training గణాంకాలు",
+    "BTN_GOOGLE_PLAY_ALT": "Google Play లో పొందండి",
+    "BTN_DOWNLOAD_APK": ".apk డౌన్‌లోడ్ చేయండి",
+    "TAGLINE": "ఉచిత గేమ్, ప్రకటనలు లేవు, ఇంటర్నెట్ అవసరం లేదు",
+    "DOWNLOAD_TITLE": "డౌన్‌లోడ్ చేయండి",
+    "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store నుండి యాప్‌ను పొందడం</a> మంచిది.",
+    "DOWNLOAD_TEXT_2": "మీరు దిగువ ఉన్న .apk ఫైల్‌ను డౌన్‌లోడ్ చేసి, దాన్ని మానవీయంగా ఇన్‌స్టాల్ చేయవచ్చు. దీనికి Android లో కొన్ని సెట్టింగ్‌లు అవసరం కావచ్చు (యాప్‌లను ఇన్‌స్టాల్ చేయడానికి అనుమతి ఇవ్వడం, డెవలపర్ ఎంపికలను ప్రారంభించడం మొదలైనవి).",
+    "DOWNLOAD_VERSION_INFO": "<strong>వెర్షన్:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>తేదీ:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>పరిమాణం:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "morsetraining-v1.00.apk డౌన్‌లోడ్ చేయండి",
+    "FOOTER_COPYRIGHT": "కాపీరైట్ &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "గోప్యతా విధానం",
+    "FOOTER_MAIN_PAGE": "ప్రధాన పేజీ",
+    "WINDLEREYE_SUPPORT": "నా సంగీత ప్రాజెక్ట్‌ను వినడం ద్వారా నాకు మద్దతు ఇవ్వండి<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "విండ్లెరీ మ్యూజిక్ ప్రాజెక్ట్",
+    "BTN_REPORT_ISSUES": "సమస్యలను నివేదించండి",
+    "BTN_SOURCE_CODE": "సోర్స్ కోడ్",
+    "BTN_THE_AUTHOR": "రచయిత"
+
+};

@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Treinamento Morse",
+    "META_DESC": "Aprenda código Morse com jogos e paddles na tela ou externos",
+    "LOGO_ALT": "Logotipo do Morse Training",
+    "APP_TITLE": "Treinamento Morse",
+    "APP_SUBTITLE": "Aprenda código Morse com jogos e paddles na tela ou externos",
+    "SCREENSHOTS_TITLE": "Capturas de Tela",
+    "SCREENSHOT_1_ALT": "Jogabilidade do Morse Training",
+    "SCREENSHOT_2_ALT": "Menu do Morse Training",
+    "SCREENSHOT_3_ALT": "Estatísticas do Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "Disponível no Google Play",
+    "BTN_DOWNLOAD_APK": "Baixar .apk",
+    "TAGLINE": "Jogo gratuito, sem anúncios, não requer conexão",
+    "DOWNLOAD_TITLE": "Download",
+    "DOWNLOAD_TEXT_1": "É preferível <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">obter o aplicativo na Google Play Store</a>.",
+    "DOWNLOAD_TEXT_2": "Você também pode baixar o arquivo .apk abaixo e instalá-lo manualmente. Isso pode exigir ajustes no Android (conceder permissões para instalar aplicativos, ativar opções de desenvolvedor, etc.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Versão:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Data:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Tamanho:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Baixar MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Copyright &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Política de Privacidade",
+    "FOOTER_MAIN_PAGE": "Página Principal",
+    "WINDLEREYE_SUPPORT": "Apoie-me ouvindo meu projeto musical<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Projeto Musical Windlereye",
+    "BTN_REPORT_ISSUES": "PROBLEMAS DE RELATÓRIO",
+    "BTN_SOURCE_CODE": "CÓDIGO FONTE",
+    "BTN_THE_AUTHOR": "O AUTOR"
+
+};

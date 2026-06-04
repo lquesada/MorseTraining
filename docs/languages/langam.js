@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "የሞርስ ስልጠና",
+    "META_DESC": "የሞርስ ኮድን በጨዋታዎች እና በስክሪኑ ውስጥ ወይም በውጫዊ መቅዘፊያዎች ይማሩ",
+    "LOGO_ALT": "የ Morse Training አርማ",
+    "APP_TITLE": "የሞርስ ስልጠና",
+    "APP_SUBTITLE": "የሞርስ ኮድን በጨዋታዎች እና በስክሪኑ ውስጥ ወይም በውጫዊ መቅዘፊያዎች ይማሩ",
+    "SCREENSHOTS_TITLE": "ቅጽበታዊ ገጽ እይታዎች",
+    "SCREENSHOT_1_ALT": "የ Morse Training የጨዋታ ሂደት",
+    "SCREENSHOT_2_ALT": "የ Morse Training ምናሌ",
+    "SCREENSHOT_3_ALT": "የ Morse Training ስታቲስቲክስ",
+    "BTN_GOOGLE_PLAY_ALT": "በ Google Play ላይ ያግኙት",
+    "BTN_DOWNLOAD_APK": ".apk ያውርዱ",
+    "TAGLINE": "ነፃ ጨዋታ፣ ምንም ማስታወቂያዎች የሉም፣ ግንኙነት አያስፈልገውም",
+    "DOWNLOAD_TITLE": "አውርድ",
+    "DOWNLOAD_TEXT_1": "መተግበሪያውን ከ <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store ማግኘት</a> ይመረጣል።",
+    "DOWNLOAD_TEXT_2": "ከታች ያለውን የ .apk ፋይል አውርደው በእጅዎ መጫን ይችላሉ። ይህ ከ Android ጋር ተጨማሪ ማስተካከል ሊጠይቅ ይችላል (መተግበሪያዎችን ለመጫን ፈቃድ መስጠት፣ የገንቢ አማራጮችን ማንቃት፣ ወዘተ)።",
+    "DOWNLOAD_VERSION_INFO": "<strong>ስሪት:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>ቀን:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>መጠን:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "morsetraining-v1.00.apk ያውርዱ",
+    "FOOTER_COPYRIGHT": "የቅጂ መብት &copy; 2026፣ <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "የግላዊነት መመሪያ",
+    "FOOTER_MAIN_PAGE": "ዋና ገጽ",
+    "WINDLEREYE_SUPPORT": "የሙዚቃ ፕሮጄክቴን በማዳመጥ ደግፉኝ።<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye ሙዚቃ ፕሮጀክት",
+    "BTN_REPORT_ISSUES": "ጉዳዮችን ሪፖርት አድርግ",
+    "BTN_SOURCE_CODE": "ምንጭ ኮድ",
+    "BTN_THE_AUTHOR": "ደራሲው"
+
+};

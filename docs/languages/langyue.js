@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "莫尔斯电码培训",
+    "META_DESC": "通过游戏和屏幕内或外部拨片学习莫尔斯电码",
+    "LOGO_ALT": "Morse Training 標誌",
+    "APP_TITLE": "莫尔斯电码培训",
+    "APP_SUBTITLE": "通过游戏和屏幕内或外部拨片学习莫尔斯电码",
+    "SCREENSHOTS_TITLE": "螢幕截圖",
+    "SCREENSHOT_1_ALT": "Morse Training 遊戲畫面",
+    "SCREENSHOT_2_ALT": "Morse Training 選單",
+    "SCREENSHOT_3_ALT": "Morse Training 統計資料",
+    "BTN_GOOGLE_PLAY_ALT": "喺 Google Play 度取得",
+    "BTN_DOWNLOAD_APK": "下載 .apk",
+    "TAGLINE": "免費遊戲，無廣告，唔需要連線",
+    "DOWNLOAD_TITLE": "下載",
+    "DOWNLOAD_TEXT_1": "最好係 <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">喺 Google Play 商店取得應用程式</a>。",
+    "DOWNLOAD_TEXT_2": "你亦都可以下載下面嘅 .apk 檔案，然後自己安裝。呢個可能需要喺 Android 裡面進行啲設定（畀安裝應用程式嘅權限、啟用開發人員選項等）。",
+    "DOWNLOAD_VERSION_INFO": "<strong>版本：</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>日期：</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>尺寸:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "下載 MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "版權所有 &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "隱私權政策",
+    "FOOTER_MAIN_PAGE": "主頁",
+    "WINDLEREYE_SUPPORT": "通过聆听我的音乐项目来支持我<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "温德勒眼音乐项目",
+    "BTN_REPORT_ISSUES": "报告问题",
+    "BTN_SOURCE_CODE": "源代码",
+    "BTN_THE_AUTHOR": "作者"
+
+};

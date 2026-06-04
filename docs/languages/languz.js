@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Morze treningi",
+    "META_DESC": "Morze alifbosini o'yinlar va ekrandagi yoki tashqi eshkaklar yordamida o'rganing",
+    "LOGO_ALT": "Morse Training Logotipi",
+    "APP_TITLE": "Morze treningi",
+    "APP_SUBTITLE": "Morze alifbosini o'yinlar va ekrandagi yoki tashqi eshkaklar yordamida o'rganing",
+    "SCREENSHOTS_TITLE": "Skrinshotlar",
+    "SCREENSHOT_1_ALT": "Morse Training O'yin Jarayoni",
+    "SCREENSHOT_2_ALT": "Morse Training Menyusi",
+    "SCREENSHOT_3_ALT": "Morse Training Statistikasi",
+    "BTN_GOOGLE_PLAY_ALT": "Google Play-dan oling",
+    "BTN_DOWNLOAD_APK": ".apk yuklab olish",
+    "TAGLINE": "Bepul o'yin, reklamasiz, internet talab qilinmaydi",
+    "DOWNLOAD_TITLE": "Yuklab olish",
+    "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Ilovani Google Play Store'dan olish</a> tavsiya etiladi.",
+    "DOWNLOAD_TEXT_2": "Siz quyidagi .apk faylini yuklab olib, uni qo'lda o'rnatishingiz ham mumkin. Bu Android'da ba'zi sozlamalarni talab qilishi mumkin (ilovalarni o'rnatishga ruxsat berish, dasturchi parametrlarini yoqish va h.k.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Versiya:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Sana:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Hajmi:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "morsetraining-v1.00.apk yuklab olish",
+    "FOOTER_COPYRIGHT": "Mualliflik huquqi &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Maxfiylik Siyosati",
+    "FOOTER_MAIN_PAGE": "Asosiy Sahifa",
+    "WINDLEREYE_SUPPORT": "Mening musiqiy loyihamni tinglash orqali meni qo'llab-quvvatlang<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye musiqa loyihasi",
+    "BTN_REPORT_ISSUES": "MASALALAR HAQIDA",
+    "BTN_SOURCE_CODE": "MANBA KODI",
+    "BTN_THE_AUTHOR": "MUALLIF"
+
+};

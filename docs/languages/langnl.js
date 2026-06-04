@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Morse-training",
+    "META_DESC": "Leer morsecode met games en paddles op het scherm of met externe paddles",
+    "LOGO_ALT": "Morse Training Logo",
+    "APP_TITLE": "Morse-training",
+    "APP_SUBTITLE": "Leer morsecode met games en paddles op het scherm of met externe paddles",
+    "SCREENSHOTS_TITLE": "Schermafbeeldingen",
+    "SCREENSHOT_1_ALT": "Morse Training Gameplay",
+    "SCREENSHOT_2_ALT": "Morse Training Menu",
+    "SCREENSHOT_3_ALT": "Morse Training Statistieken",
+    "BTN_GOOGLE_PLAY_ALT": "Downloaden via Google Play",
+    "BTN_DOWNLOAD_APK": ".apk downloaden",
+    "TAGLINE": "Gratis spel, geen advertenties, vereist geen verbinding",
+    "DOWNLOAD_TITLE": "Downloaden",
+    "DOWNLOAD_TEXT_1": "Het is beter om <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">de app uit de Google Play Store te halen</a>.",
+    "DOWNLOAD_TEXT_2": "Je kunt ook het onderstaande .apk-bestand downloaden en het handmatig installeren. Hiervoor zijn mogelijk enkele instellingen in Android vereist (machtigingen verlenen om apps te installeren, ontwikkelaarsopties inschakelen, enz.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Versie:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Datum:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Maat:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Download MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Copyright &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Privacybeleid",
+    "FOOTER_MAIN_PAGE": "Hoofdpagina",
+    "WINDLEREYE_SUPPORT": "Steun mij door naar mijn muziekproject te luisteren<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye-muziekproject",
+    "BTN_REPORT_ISSUES": "RAPPORTEER KWESTIES",
+    "BTN_SOURCE_CODE": "BRONCODE",
+    "BTN_THE_AUTHOR": "DE AUTEUR"
+
+};

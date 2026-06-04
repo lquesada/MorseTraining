@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "મોર્સ તાલીમ",
+    "META_DESC": "રમતો અને ઇન-સ્ક્રીન અથવા બાહ્ય પેડલ્સ સાથે મોર્સ કોડ શીખો",
+    "LOGO_ALT": "Morse Training નો લોગો",
+    "APP_TITLE": "મોર્સ તાલીમ",
+    "APP_SUBTITLE": "રમતો અને ઇન-સ્ક્રીન અથવા બાહ્ય પેડલ્સ સાથે મોર્સ કોડ શીખો",
+    "SCREENSHOTS_TITLE": "સ્ક્રીનશોટ",
+    "SCREENSHOT_1_ALT": "Morse Training ગેમપ્લે",
+    "SCREENSHOT_2_ALT": "Morse Training મેનૂ",
+    "SCREENSHOT_3_ALT": "Morse Training આંકડા",
+    "BTN_GOOGLE_PLAY_ALT": "Google Play પરથી મેળવો",
+    "BTN_DOWNLOAD_APK": ".apk ડાઉનલોડ કરો",
+    "TAGLINE": "મફત રમત, કોઈ જાહેરાતો નહીં, કનેક્શનની જરૂર નથી",
+    "DOWNLOAD_TITLE": "ડાઉનલોડ કરો",
+    "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store પરથી એપ્લિકેશન મેળવવી</a> વધુ સારું છે.",
+    "DOWNLOAD_TEXT_2": "તમે નીચે આપેલ .apk ફાઇલ ડાઉનલોડ કરીને તેને જાતે ઇન્સ્ટોલ પણ કરી શકો છો. આ માટે Android માં કેટલાક સેટિંગ્સ બદલવાની જરૂર પડી શકે છે (એપ્લિકેશનો ઇન્સ્ટોલ કરવાની પરવાનગી આપવી, ડેવલપર વિકલ્પો ચાલુ કરવા વગેરે).",
+    "DOWNLOAD_VERSION_INFO": "<strong>આવૃત્તિ:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>તારીખ:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>કદ:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "morsetraining-v1.00.apk ડાઉનલોડ કરો",
+    "FOOTER_COPYRIGHT": "કોપીરાઈટ &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "ગોપનીયતા નીતિ",
+    "FOOTER_MAIN_PAGE": "મુખ્ય પૃષ્ઠ",
+    "WINDLEREYE_SUPPORT": "મારા મ્યુઝિક પ્રોજેક્ટને સાંભળીને મને સપોર્ટ કરો<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye સંગીત પ્રોજેક્ટ",
+    "BTN_REPORT_ISSUES": "સમસ્યાઓની જાણ કરો",
+    "BTN_SOURCE_CODE": "સ્ત્રોત કોડ",
+    "BTN_THE_AUTHOR": "લેખક"
+
+};

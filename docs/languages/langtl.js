@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Pagsasanay sa Morse",
+    "META_DESC": "Alamin ang Morse code gamit ang mga laro at in-screen o panlabas na sagwan",
+    "LOGO_ALT": "Morse Training Logo",
+    "APP_TITLE": "Pagsasanay sa Morse",
+    "APP_SUBTITLE": "Alamin ang Morse code gamit ang mga laro at in-screen o panlabas na sagwan",
+    "SCREENSHOTS_TITLE": "Mga Screenshot",
+    "SCREENSHOT_1_ALT": "Gameplay ng Morse Training",
+    "SCREENSHOT_2_ALT": "Menu ng Morse Training",
+    "SCREENSHOT_3_ALT": "Istatistika ng Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "Kunin sa Google Play",
+    "BTN_DOWNLOAD_APK": "I-download ang .apk",
+    "TAGLINE": "Libreng laro, walang mga ad, hindi nangangailangan ng koneksyon",
+    "DOWNLOAD_TITLE": "I-download",
+    "DOWNLOAD_TEXT_1": "Mas mainam na <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">kunin ang app mula sa Google Play Store</a>.",
+    "DOWNLOAD_TEXT_2": "Maaari mo ring i-download ang .apk file sa ibaba at i-install ito nang manu-mano. Maaaring mangailangan ito ng mga setting sa Android (pagbibigay ng mga pahintulot na mag-install ng mga app, pagpapagana ng mga opsyon para sa developer, atbp.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Bersyon:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Petsa:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Sukat:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "I-download ang MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Copyright &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Patakaran sa Pagkapribado",
+    "FOOTER_MAIN_PAGE": "Pangunahing Pahina",
+    "WINDLEREYE_SUPPORT": "Suportahan ako sa pamamagitan ng pakikinig sa aking proyekto sa musika<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye Music Project",
+    "BTN_REPORT_ISSUES": "I-ULAT ANG MGA ISYU",
+    "BTN_SOURCE_CODE": "SOURCE CODE",
+    "BTN_THE_AUTHOR": "ANG AUTHOR"
+
+};

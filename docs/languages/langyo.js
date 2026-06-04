@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Morse Ikẹkọ",
+    "META_DESC": "Kọ koodu Morse pẹlu awọn ere ati inu iboju tabi awọn paadi ita",
+    "LOGO_ALT": "Aami Morse Training",
+    "APP_TITLE": "Morse Ikẹkọ",
+    "APP_SUBTITLE": "Kọ koodu Morse pẹlu awọn ere ati inu iboju tabi awọn paadi ita",
+    "SCREENSHOTS_TITLE": "Awọn fọto oju-iboju",
+    "SCREENSHOT_1_ALT": "Ere Morse Training",
+    "SCREENSHOT_2_ALT": "Akojọ aṣayan Morse Training",
+    "SCREENSHOT_3_ALT": "Awọn iṣiro Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "Gba lori Google Play",
+    "BTN_DOWNLOAD_APK": "Ṣe igbasilẹ .apk",
+    "TAGLINE": "Ere ọfẹ, ko si ipolowo, ko nilo intanẹẹti",
+    "DOWNLOAD_TITLE": "Ṣe igbasilẹ",
+    "DOWNLOAD_TEXT_1": "O dara ki o <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">gba app lati Google Play Store</a>.",
+    "DOWNLOAD_TEXT_2": "O tun le ṣe igbasilẹ faili .apk ni isalẹ ki o fi sii pẹlu ọwọ rẹ. Eyi le nilo awọn eto kan lori Android (gbigba igbanilaaye lati fi awọn app sii, titan awọn aṣayan olupilẹṣẹ, ati bẹbẹ lọ).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Ẹya:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Ọjọ:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Iwọn:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Ṣe igbasilẹ MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Aṣẹ-lori-ara &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Ilana Asiri",
+    "FOOTER_MAIN_PAGE": "Oju-iwe Akọkọ",
+    "WINDLEREYE_SUPPORT": "Ṣe atilẹyin fun mi nipa gbigbọ iṣẹ orin mi<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye Music Project",
+    "BTN_REPORT_ISSUES": "ORO IROYIN",
+    "BTN_SOURCE_CODE": "CODE ORISUN",
+    "BTN_THE_AUTHOR": "ORÍKÌN"
+
+};

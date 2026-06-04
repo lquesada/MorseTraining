@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Latihan Morse",
+    "META_DESC": "Diajar kode Morse sareng kaulinan sareng dina layar atanapi paddles éksternal",
+    "LOGO_ALT": "Logo Morse Training",
+    "APP_TITLE": "Latihan Morse",
+    "APP_SUBTITLE": "Diajar kode Morse sareng kaulinan sareng dina layar atanapi paddles éksternal",
+    "SCREENSHOTS_TITLE": "Potret layar",
+    "SCREENSHOT_1_ALT": "Kaulinan Morse Training",
+    "SCREENSHOT_2_ALT": "Menu Morse Training",
+    "SCREENSHOT_3_ALT": "Statistik Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "Kéngingkeun di Google Play",
+    "BTN_DOWNLOAD_APK": "Unduh .apk",
+    "TAGLINE": "Kaulinan gratis, tanpa iklan, teu butuh koneksi",
+    "DOWNLOAD_TITLE": "Unduh",
+    "DOWNLOAD_TEXT_1": "Leuwih hade <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">ngunduh aplikasi ti Google Play Store</a>.",
+    "DOWNLOAD_TEXT_2": "Anjeun ogé tiasa ngaunduh file .apk di handap ieu teras dipasang sacara manual. Ieu panginten peryogi sababaraha pangaturan dina Android (masihan idin pikeun masang aplikasi, ngaktipkeun pilihan pamekar, jsb).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Versi:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Kaping:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Ukuran:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Unduh MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Hak Cipta &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Kabijakan Privasi",
+    "FOOTER_MAIN_PAGE": "Kaca Utama",
+    "WINDLEREYE_SUPPORT": "Dukung kuring ku ngadengekeun proyek musik kuring<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Proyék Musik Windlereye",
+    "BTN_REPORT_ISSUES": "LAPORAN MASALAH",
+    "BTN_SOURCE_CODE": "KODE SUMBER",
+    "BTN_THE_AUTHOR": "NU NGARANG"
+
+};

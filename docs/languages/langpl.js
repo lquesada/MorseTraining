@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Szkolenie Morse’a",
+    "META_DESC": "Ucz się alfabetu Morse’a za pomocą gier i łyżek ekranowych lub zewnętrznych",
+    "LOGO_ALT": "Logo Morse Training",
+    "APP_TITLE": "Szkolenie Morse’a",
+    "APP_SUBTITLE": "Ucz się alfabetu Morse’a za pomocą gier i łyżek ekranowych lub zewnętrznych",
+    "SCREENSHOTS_TITLE": "Zrzuty ekranu",
+    "SCREENSHOT_1_ALT": "Rozgrywka Morse Training",
+    "SCREENSHOT_2_ALT": "Menu Morse Training",
+    "SCREENSHOT_3_ALT": "Statystyki Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "Pobierz z Google Play",
+    "BTN_DOWNLOAD_APK": "Pobierz .apk",
+    "TAGLINE": "Darmowa gra, bez reklam, nie wymaga połączenia",
+    "DOWNLOAD_TITLE": "Pobierz",
+    "DOWNLOAD_TEXT_1": "Najlepiej jest <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">pobrać aplikację ze sklepu Google Play</a>.",
+    "DOWNLOAD_TEXT_2": "Możesz także pobrać poniższy plik .apk i zainstalować go ręcznie. Może to wymagać zmiany ustawień w systemie Android (zezwolenie na instalację aplikacji, włączenie opcji programisty itp.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Wersja:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Data:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Rozmiar:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Pobierz MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Prawa autorskie &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Polityka prywatności",
+    "FOOTER_MAIN_PAGE": "Strona Główna",
+    "WINDLEREYE_SUPPORT": "Wesprzyj mnie słuchając mojego projektu muzycznego<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Projekt muzyczny Windlereye",
+    "BTN_REPORT_ISSUES": "ZGŁOŚ PROBLEMY",
+    "BTN_SOURCE_CODE": "KOD ŹRÓDŁOWY",
+    "BTN_THE_AUTHOR": "AUTOR"
+
+};

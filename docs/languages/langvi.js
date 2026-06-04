@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Đào tạo Morse",
+    "META_DESC": "Tìm hiểu mã Morse với các trò chơi và các mái chèo trên màn hình hoặc bên ngoài",
+    "LOGO_ALT": "Biểu trưng Morse Training",
+    "APP_TITLE": "Đào tạo Morse",
+    "APP_SUBTITLE": "Tìm hiểu mã Morse với các trò chơi và các mái chèo trên màn hình hoặc bên ngoài",
+    "SCREENSHOTS_TITLE": "Ảnh chụp màn hình",
+    "SCREENSHOT_1_ALT": "Cách chơi Morse Training",
+    "SCREENSHOT_2_ALT": "Menu Morse Training",
+    "SCREENSHOT_3_ALT": "Thống kê Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "Tải trên Google Play",
+    "BTN_DOWNLOAD_APK": "Tải xuống .apk",
+    "TAGLINE": "Trò chơi miễn phí, không có quảng cáo, không cần kết nối",
+    "DOWNLOAD_TITLE": "Tải xuống",
+    "DOWNLOAD_TEXT_1": "Tốt nhất là nên <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">tải ứng dụng từ Cửa hàng Google Play</a>.",
+    "DOWNLOAD_TEXT_2": "Bạn cũng có thể tải tệp .apk bên dưới và cài đặt thủ công. Việc này có thể cần điều chỉnh cài đặt trên Android (cấp quyền cài đặt ứng dụng, bật tùy chọn nhà phát triển, v.v.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Phiên bản:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Ngày:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Kích cỡ:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Tải xuống MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Bản quyền &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Chính sách Bảo mật",
+    "FOOTER_MAIN_PAGE": "Trang Chính",
+    "WINDLEREYE_SUPPORT": "Ủng hộ tôi bằng cách nghe dự án âm nhạc của tôi<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Dự án âm nhạc Windlereye",
+    "BTN_REPORT_ISSUES": "BÁO CÁO VẤN ĐỀ",
+    "BTN_SOURCE_CODE": "MÃ NGUỒN",
+    "BTN_THE_AUTHOR": "TÁC GIẢ"
+
+};

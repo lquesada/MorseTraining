@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "モールスの訓練",
+    "META_DESC": "ゲームと画面内または外部パドルでモールス信号を学びましょう",
+    "LOGO_ALT": "Morse Training ロゴ",
+    "APP_TITLE": "モールスの訓練",
+    "APP_SUBTITLE": "ゲームと画面内または外部パドルでモールス信号を学びましょう",
+    "SCREENSHOTS_TITLE": "スクリーンショット",
+    "SCREENSHOT_1_ALT": "Morse Training ゲームプレイ",
+    "SCREENSHOT_2_ALT": "Morse Training メニュー",
+    "SCREENSHOT_3_ALT": "Morse Training 統計",
+    "BTN_GOOGLE_PLAY_ALT": "Google Play で手に入れよう",
+    "BTN_DOWNLOAD_APK": ".apkをダウンロード",
+    "TAGLINE": "無料ゲーム、広告なし、インターネット接続不要",
+    "DOWNLOAD_TITLE": "ダウンロード",
+    "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play ストアからアプリを入手</a>することをお勧めします。",
+    "DOWNLOAD_TEXT_2": "以下の .apk ファイルをダウンロードして手動でインストールすることもできます。これには、Androidでの設定が必要になる場合があります（アプリのインストール権限の付与、開発者向けオプションの有効化など）。",
+    "DOWNLOAD_VERSION_INFO": "<strong>バージョン:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>日付:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>サイズ:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "morsetraining-v1.00.apk をダウンロード",
+    "FOOTER_COPYRIGHT": "Copyright &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "プライバシーポリシー",
+    "FOOTER_MAIN_PAGE": "メインページ",
+    "WINDLEREYE_SUPPORT": "私の音楽プロジェクトを聞いてサポートしてください<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "ウィンドラーアイ音楽プロジェクト",
+    "BTN_REPORT_ISSUES": "問題を報告する",
+    "BTN_SOURCE_CODE": "ソースコード",
+    "BTN_THE_AUTHOR": "著者"
+
+};

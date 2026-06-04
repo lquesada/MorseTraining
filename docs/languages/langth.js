@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "การฝึกอบรมมอร์ส",
+    "META_DESC": "เรียนรู้รหัสมอร์สด้วยเกมและไม้พายบนหน้าจอหรือภายนอก",
+    "LOGO_ALT": "โลโก้ Morse Training",
+    "APP_TITLE": "การฝึกอบรมมอร์ส",
+    "APP_SUBTITLE": "เรียนรู้รหัสมอร์สด้วยเกมและไม้พายบนหน้าจอหรือภายนอก",
+    "SCREENSHOTS_TITLE": "ภาพหน้าจอ",
+    "SCREENSHOT_1_ALT": "การเล่นเกม Morse Training",
+    "SCREENSHOT_2_ALT": "เมนู Morse Training",
+    "SCREENSHOT_3_ALT": "สถิติ Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "ดาวน์โหลดได้ที่ Google Play",
+    "BTN_DOWNLOAD_APK": "ดาวน์โหลด .apk",
+    "TAGLINE": "เกมฟรี ไม่มีโฆษณา ไม่ต้องใช้การเชื่อมต่อ",
+    "DOWNLOAD_TITLE": "ดาวน์โหลด",
+    "DOWNLOAD_TEXT_1": "ขอแนะนำให้<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">ดาวน์โหลดแอปจาก Google Play Store</a>",
+    "DOWNLOAD_TEXT_2": "คุณยังสามารถดาวน์โหลดไฟล์ .apk ด้านล่างและติดตั้งด้วยตนเองได้ สิ่งนี้อาจต้องการการตั้งค่าบางอย่างใน Android (ให้สิทธิ์ในการติดตั้งแอป เปิดใช้งานตัวเลือกสำหรับนักพัฒนาซอฟต์แวร์ ฯลฯ)",
+    "DOWNLOAD_VERSION_INFO": "<strong>เวอร์ชัน:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>วันที่:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>ขนาด:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "ดาวน์โหลด MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "ลิขสิทธิ์ &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "นโยบายความเป็นส่วนตัว",
+    "FOOTER_MAIN_PAGE": "หน้าหลัก",
+    "WINDLEREYE_SUPPORT": "สนับสนุนฉันด้วยการฟังเพลงของฉัน<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "โครงการดนตรี Windlereye",
+    "BTN_REPORT_ISSUES": "รายงานปัญหา",
+    "BTN_SOURCE_CODE": "รหัสแหล่งที่มา",
+    "BTN_THE_AUTHOR": "ผู้เขียน"
+
+};

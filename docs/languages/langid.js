@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Pelatihan Morse",
+    "META_DESC": "Pelajari kode Morse dengan permainan dan dayung di layar atau eksternal",
+    "LOGO_ALT": "Logo Morse Training",
+    "APP_TITLE": "Pelatihan Morse",
+    "APP_SUBTITLE": "Pelajari kode Morse dengan permainan dan dayung di layar atau eksternal",
+    "SCREENSHOTS_TITLE": "Tangkapan Layar",
+    "SCREENSHOT_1_ALT": "Aspek Gim Morse Training",
+    "SCREENSHOT_2_ALT": "Menu Morse Training",
+    "SCREENSHOT_3_ALT": "Statistik Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "Dapatkan di Google Play",
+    "BTN_DOWNLOAD_APK": "Unduh .apk",
+    "TAGLINE": "Gim gratis, tanpa iklan, tidak memerlukan koneksi",
+    "DOWNLOAD_TITLE": "Unduh",
+    "DOWNLOAD_TEXT_1": "Lebih baik <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">mendapatkan aplikasi dari Google Play Store</a>.",
+    "DOWNLOAD_TEXT_2": "Anda juga dapat mengunduh berkas .apk di bawah ini dan menginstalnya secara manual. Hal ini mungkin memerlukan penyesuaian di Android (memberikan izin untuk menginstal aplikasi, mengaktifkan opsi pengembang, dll.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Versi:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Tanggal:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Ukuran:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Unduh MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Hak Cipta &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Kebijakan Privasi",
+    "FOOTER_MAIN_PAGE": "Halaman Utama",
+    "WINDLEREYE_SUPPORT": "Dukung saya dengan mendengarkan proyek musik saya<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Proyek Musik Windlereye",
+    "BTN_REPORT_ISSUES": "MASALAH LAPORAN",
+    "BTN_SOURCE_CODE": "KODE SUMBER",
+    "BTN_THE_AUTHOR": "PENULIS"
+
+};

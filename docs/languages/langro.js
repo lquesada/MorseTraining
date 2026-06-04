@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Antrenamentul Morse",
+    "META_DESC": "Învață cod Morse cu jocuri și palete în ecran sau externe",
+    "LOGO_ALT": "Logo Morse Training",
+    "APP_TITLE": "Antrenamentul Morse",
+    "APP_SUBTITLE": "Învață cod Morse cu jocuri și palete în ecran sau externe",
+    "SCREENSHOTS_TITLE": "Capturi de ecran",
+    "SCREENSHOT_1_ALT": "Modul de joc Morse Training",
+    "SCREENSHOT_2_ALT": "Meniul Morse Training",
+    "SCREENSHOT_3_ALT": "Statistici Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "Descarcă de pe Google Play",
+    "BTN_DOWNLOAD_APK": "Descărcați .apk",
+    "TAGLINE": "Joc gratuit, fără reclame, nu necesită conexiune",
+    "DOWNLOAD_TITLE": "Descărcare",
+    "DOWNLOAD_TEXT_1": "Este de preferat să <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">obțineți aplicația din Magazinul Google Play</a>.",
+    "DOWNLOAD_TEXT_2": "De asemenea, puteți descărca fișierul .apk de mai jos și îl puteți instala manual. Acest lucru poate necesita ajustarea setărilor în Android (acordarea de permisiuni pentru instalarea aplicațiilor, activarea opțiunilor pentru dezvoltatori etc.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Versiune:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Data:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Dimensiune:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Descărcați MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Drepturi de autor &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Politica de confidențialitate",
+    "FOOTER_MAIN_PAGE": "Pagina Principală",
+    "WINDLEREYE_SUPPORT": "Sprijină-mă ascultând proiectul meu muzical<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Proiectul muzical Windlereye",
+    "BTN_REPORT_ISSUES": "REPORTAȚI PROBLEME",
+    "BTN_SOURCE_CODE": "COD SURSA",
+    "BTN_THE_AUTHOR": "AUTORUL"
+
+};

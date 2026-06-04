@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Morse Training",
+    "META_DESC": "Learn Morse code with games and in-screen or external paddles",
+    "LOGO_ALT": "Morse Training Logo",
+    "APP_TITLE": "Morse Training",
+    "APP_SUBTITLE": "Learn Morse code with games and in-screen or external paddles",
+    "SCREENSHOTS_TITLE": "Skärmdumpar",
+    "SCREENSHOT_1_ALT": "Morse Training Spelupplägg",
+    "SCREENSHOT_2_ALT": "Morse Training Meny",
+    "SCREENSHOT_3_ALT": "Morse Training Statistik",
+    "BTN_GOOGLE_PLAY_ALT": "Hämta på Google Play",
+    "BTN_DOWNLOAD_APK": "Ladda ner .apk",
+    "TAGLINE": "Gratis spel, inga annonser, kräver ingen anslutning",
+    "DOWNLOAD_TITLE": "Ladda ner",
+    "DOWNLOAD_TEXT_1": "Det är bäst att <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">hämta appen från Google Play Butik</a>.",
+    "DOWNLOAD_TEXT_2": "Du kan också ladda ner .apk-filen nedan och installera den manuellt. Detta kan kräva vissa inställningar i Android (ge behörighet att installera appar, aktivera utvecklaralternativ, etc.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Version:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Datum:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Storlek:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Ladda ner MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Upphovsrätt &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Integritetspolicy",
+    "FOOTER_MAIN_PAGE": "Huvudsida",
+    "WINDLEREYE_SUPPORT": "Stöd mig genom att lyssna på mitt musikprojekt<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye Music Project",
+    "BTN_REPORT_ISSUES": "RAPPORTERA FRÅGOR",
+    "BTN_SOURCE_CODE": "KÄLLKOD",
+    "BTN_THE_AUTHOR": "FÖRFATTAREN"
+
+};

@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Morse သင်တန်း",
+    "META_DESC": "ဂိမ်းများနှင့် မျက်နှာပြင်အတွင်း သို့မဟုတ် ပြင်ပလှော်တက်များဖြင့် Morse ကုဒ်ကို လေ့လာပါ။",
+    "LOGO_ALT": "Morse Training အမှတ်တံဆိပ်",
+    "APP_TITLE": "Morse သင်တန်း",
+    "APP_SUBTITLE": "ဂိမ်းများနှင့် မျက်နှာပြင်အတွင်း သို့မဟုတ် ပြင်ပလှော်တက်များဖြင့် Morse ကုဒ်ကို လေ့လာပါ။",
+    "SCREENSHOTS_TITLE": "ဖန်သားပြင်ဓာတ်ပုံများ",
+    "SCREENSHOT_1_ALT": "Morse Training ကစားပုံ",
+    "SCREENSHOT_2_ALT": "Morse Training မီနူး",
+    "SCREENSHOT_3_ALT": "Morse Training စာရင်းအင်းများ",
+    "BTN_GOOGLE_PLAY_ALT": "Google Play တွင် ရယူပါ",
+    "BTN_DOWNLOAD_APK": ".apk ဒေါင်းလုဒ်လုပ်ပါ",
+    "TAGLINE": "အခမဲ့ဂိမ်း၊ ကြော်ငြာမရှိပါ၊ အင်တာနက်ချိတ်ဆက်ရန်မလိုပါ",
+    "DOWNLOAD_TITLE": "ဒေါင်းလုဒ်လုပ်ရန်",
+    "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store မှ အက်ပ်ကို ရယူရန်</a> အကြံပြုပါသည်။",
+    "DOWNLOAD_TEXT_2": "အောက်ပါ .apk ဖိုင်ကို ဒေါင်းလုဒ်လုပ်ပြီး ကိုယ်တိုင် ထည့်သွင်းနိုင်သည်။ ၎င်းအတွက် Android တွင် ချိန်ညှိမှုအချို့ လိုအပ်နိုင်သည် (အက်ပ်များ ထည့်သွင်းခွင့် ပြုခြင်း၊ developer ရွေးချယ်မှုများ ဖွင့်ခြင်း စသည်)။",
+    "DOWNLOAD_VERSION_INFO": "<strong>ဗားရှင်း:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>ရက်စွဲ:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>အရွယ်အစား:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "morsetraining-v1.00.apk ဒေါင်းလုဒ်လုပ်ပါ",
+    "FOOTER_COPYRIGHT": "မူပိုင်ခွင့် &copy; ၂၀၂၆၊ <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "ကိုယ်ရေးကိုယ်တာ မူဝါဒ",
+    "FOOTER_MAIN_PAGE": "ပင်မစာမျက်နှာ",
+    "WINDLEREYE_SUPPORT": "ကျွန်ုပ်၏ဂီတပရောဂျက်ကို နားထောင်ခြင်းဖြင့် ကျွန်ုပ်အား ပံ့ပိုးကူညီပါ။<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye ဂီတပရောဂျက်",
+    "BTN_REPORT_ISSUES": "အစီရင်ခံစာများ",
+    "BTN_SOURCE_CODE": "အရင်းအမြစ်ကုဒ်",
+    "BTN_THE_AUTHOR": "စာရေးသူ"
+
+};

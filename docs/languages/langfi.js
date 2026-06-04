@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Morse koulutus",
+    "META_DESC": "Opi morsekoodia pelien ja näytön sisäisten tai ulkoisten päitsimien avulla",
+    "LOGO_ALT": "Morse Training Logo",
+    "APP_TITLE": "Morse koulutus",
+    "APP_SUBTITLE": "Opi morsekoodia pelien ja näytön sisäisten tai ulkoisten päitsimien avulla",
+    "SCREENSHOTS_TITLE": "Kuvakaappaukset",
+    "SCREENSHOT_1_ALT": "Morse Training Pelikuvaa",
+    "SCREENSHOT_2_ALT": "Morse Training Valikko",
+    "SCREENSHOT_3_ALT": "Morse Training Tilastot",
+    "BTN_GOOGLE_PLAY_ALT": "Hanki Google Playsta",
+    "BTN_DOWNLOAD_APK": "Lataa .apk",
+    "TAGLINE": "Ilmainen peli, ei mainoksia, ei vaadi yhteyttä",
+    "DOWNLOAD_TITLE": "Lataa",
+    "DOWNLOAD_TEXT_1": "On suositeltavaa <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">ladata sovellus Google Play -kaupasta</a>.",
+    "DOWNLOAD_TEXT_2": "Voit myös ladata alla olevan .apk-tiedoston ja asentaa sen manuaalisesti. Tämä saattaa edellyttää Androidin asetusten muuttamista (sovellusten asennusluvan myöntäminen, kehittäjäasetusten käyttöönotto jne.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Versio:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Päivämäärä:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Koko:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Lataa MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Tekijänoikeus &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Tietosuojakäytäntö",
+    "FOOTER_MAIN_PAGE": "Pääsivu",
+    "WINDLEREYE_SUPPORT": "Tue minua kuuntelemalla musiikkiprojektiani<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye musiikkiprojekti",
+    "BTN_REPORT_ISSUES": "RAPORTOINTI ONGELISTA",
+    "BTN_SOURCE_CODE": "LÄHDEKOODI",
+    "BTN_THE_AUTHOR": "TEKIJÄ"
+
+};

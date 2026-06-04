@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Morse Prestakuntza",
+    "META_DESC": "Ikasi Morse kodea jokoekin eta pantailan edo kanpoko paletan",
+    "LOGO_ALT": "Morse Training Logotipoa",
+    "APP_TITLE": "Morse Prestakuntza",
+    "APP_SUBTITLE": "Ikasi Morse kodea jokoekin eta pantailan edo kanpoko paletan",
+    "SCREENSHOTS_TITLE": "Pantaila-argazkiak",
+    "SCREENSHOT_1_ALT": "Morse Training Jokabidea",
+    "SCREENSHOT_2_ALT": "Morse Training Menua",
+    "SCREENSHOT_3_ALT": "Morse Training Estatistikak",
+    "BTN_GOOGLE_PLAY_ALT": "Eskuratu Google Play-n",
+    "BTN_DOWNLOAD_APK": "Deskargatu .apk",
+    "TAGLINE": "Doako jokoa, iragarkirik gabe, ez du konexiorik behar",
+    "DOWNLOAD_TITLE": "Deskargatu",
+    "DOWNLOAD_TEXT_1": "Hobe da <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">aplikazioa Google Play Storetik eskuratzea</a>.",
+    "DOWNLOAD_TEXT_2": "Beheko .apk fitxategia deskargatu eta eskuz instala dezakezu. Horrek Androiden doikuntzak eska ditzake (aplikazioak instalatzeko baimenak ematea, garatzailearen aukerak gaitzea, etab.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Bertsioa:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Data:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Tamaina:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Deskargatu MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Copyright &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Pribatutasun Politika",
+    "FOOTER_MAIN_PAGE": "Orri Nagusia",
+    "WINDLEREYE_SUPPORT": "Lagundu nazazu nire musika proiektua entzunez<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye Musika Proiektua",
+    "BTN_REPORT_ISSUES": "ERREPORTAZIOA",
+    "BTN_SOURCE_CODE": "ITURRI KODEA",
+    "BTN_THE_AUTHOR": "EGILEA"
+
+};

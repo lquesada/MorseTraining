@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Horon Morse",
+    "META_DESC": "Koyi lambar Morse tare da wasanni da cikin allo ko paddles na waje",
+    "LOGO_ALT": "Tambarin Morse Training",
+    "APP_TITLE": "Horon Morse",
+    "APP_SUBTITLE": "Koyi lambar Morse tare da wasanni da cikin allo ko paddles na waje",
+    "SCREENSHOTS_TITLE": "Hotunan allo",
+    "SCREENSHOT_1_ALT": "Wasan Morse Training",
+    "SCREENSHOT_2_ALT": "Menu na Morse Training",
+    "SCREENSHOT_3_ALT": "Ƙididdigar Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "Samo a Google Play",
+    "BTN_DOWNLOAD_APK": "Zazzage .apk",
+    "TAGLINE": "Wasa kyauta, babu tallace-tallace, ba ya buƙatar haɗin intanet",
+    "DOWNLOAD_TITLE": "Zazzagewa",
+    "DOWNLOAD_TEXT_1": "Zai fi kyau a <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">sami manhajar daga Google Play Store</a>.",
+    "DOWNLOAD_TEXT_2": "Hakanan za ku iya zazzage fayil ɗin .apk a ƙasa ku sanya shi da kanku. Wannan na iya buƙatar wasu gyare-gyare a Android (bayar da damar sanya manhajoji, kunna zaɓuɓɓukan masu haɓakawa, da sauransu).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Fassara:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Kwanan wata:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Girman:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Zazzage MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Haƙƙin mallaka &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Manufar Sirri",
+    "FOOTER_MAIN_PAGE": "Babban Shafi",
+    "WINDLEREYE_SUPPORT": "Taimaka mini ta hanyar sauraron aikin kiɗa na<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye Music Project",
+    "BTN_REPORT_ISSUES": "BATUN RUWAITO",
+    "BTN_SOURCE_CODE": "KODA MAJIYA",
+    "BTN_THE_AUTHOR": "MARUBUCI"
+
+};

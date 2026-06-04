@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "ಮೋರ್ಸ್ ತರಬೇತಿ",
+    "META_DESC": "ಆಟಗಳು ಮತ್ತು ಇನ್-ಸ್ಕ್ರೀನ್ ಅಥವಾ ಬಾಹ್ಯ ಪ್ಯಾಡಲ್‌ಗಳೊಂದಿಗೆ ಮೋರ್ಸ್ ಕೋಡ್ ಅನ್ನು ಕಲಿಯಿರಿ",
+    "LOGO_ALT": "Morse Training ಲೋಗೋ",
+    "APP_TITLE": "ಮೋರ್ಸ್ ತರಬೇತಿ",
+    "APP_SUBTITLE": "ಆಟಗಳು ಮತ್ತು ಇನ್-ಸ್ಕ್ರೀನ್ ಅಥವಾ ಬಾಹ್ಯ ಪ್ಯಾಡಲ್‌ಗಳೊಂದಿಗೆ ಮೋರ್ಸ್ ಕೋಡ್ ಅನ್ನು ಕಲಿಯಿರಿ",
+    "SCREENSHOTS_TITLE": "ಸ್ಕ್ರೀನ್‌ಶಾಟ್‌ಗಳು",
+    "SCREENSHOT_1_ALT": "Morse Training ಗೇಮ್‌ಪ್ಲೇ",
+    "SCREENSHOT_2_ALT": "Morse Training ಮೆನು",
+    "SCREENSHOT_3_ALT": "Morse Training ಅಂಕಿಅಂಶಗಳು",
+    "BTN_GOOGLE_PLAY_ALT": "Google Play ನಿಂದ ಪಡೆಯಿರಿ",
+    "BTN_DOWNLOAD_APK": ".apk ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
+    "TAGLINE": "ಉಚಿತ ಆಟ, ಯಾವುದೇ ಜಾಹೀರಾತುಗಳಿಲ್ಲ, ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕದ ಅಗತ್ಯವಿಲ್ಲ",
+    "DOWNLOAD_TITLE": "ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
+    "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store ನಿಂದ ಅಪ್ಲಿಕೇಶನ್ ಪಡೆಯುವುದು</a> ಉತ್ತಮ.",
+    "DOWNLOAD_TEXT_2": "ನೀವು ಕೆಳಗಿನ .apk ಫೈಲ್ ಅನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಬಹುದು ಮತ್ತು ಅದನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಸ್ಥಾಪಿಸಬಹುದು. ಇದಕ್ಕೆ Android ನಲ್ಲಿ ಕೆಲವು ಹೊಂದಾಣಿಕೆಗಳು ಬೇಕಾಗಬಹುದು (ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಸ್ಥಾಪಿಸಲು ಅನುಮತಿ ನೀಡುವುದು, ಡೆವಲಪರ್ ಆಯ್ಕೆಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸುವುದು ಇತ್ಯಾದಿ).",
+    "DOWNLOAD_VERSION_INFO": "<strong>ಆವೃತ್ತಿ:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>ದಿನಾಂಕ:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>ಗಾತ್ರ:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "morsetraining-v1.00.apk ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
+    "FOOTER_COPYRIGHT": "ಕೃತಿಸ್ವಾಮ್ಯ &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "ಗೌಪ್ಯತೆ ನೀತಿ",
+    "FOOTER_MAIN_PAGE": "ಮುಖ್ಯ ಪುಟ",
+    "WINDLEREYE_SUPPORT": "ನನ್ನ ಸಂಗೀತ ಯೋಜನೆಯನ್ನು ಕೇಳುವ ಮೂಲಕ ನನ್ನನ್ನು ಬೆಂಬಲಿಸಿ<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "ವಿಂಡ್ಲೆರಿ ಸಂಗೀತ ಯೋಜನೆ",
+    "BTN_REPORT_ISSUES": "ಸಮಸ್ಯೆಗಳನ್ನು ವರದಿ ಮಾಡಿ",
+    "BTN_SOURCE_CODE": "ಮೂಲ ಕೋಡ್",
+    "BTN_THE_AUTHOR": "ಲೇಖಕ"
+
+};

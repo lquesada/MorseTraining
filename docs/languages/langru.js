@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Обучение Морзе",
+    "META_DESC": "Изучайте азбуку Морзе с помощью игр и экранных или внешних джойстиков",
+    "LOGO_ALT": "Логотип Morse Training",
+    "APP_TITLE": "Обучение Морзе",
+    "APP_SUBTITLE": "Изучайте азбуку Морзе с помощью игр и экранных или внешних джойстиков",
+    "SCREENSHOTS_TITLE": "Скриншоты",
+    "SCREENSHOT_1_ALT": "Геймплей Morse Training",
+    "SCREENSHOT_2_ALT": "Меню Morse Training",
+    "SCREENSHOT_3_ALT": "Статистика Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "Доступно в Google Play",
+    "BTN_DOWNLOAD_APK": "Скачать .apk",
+    "TAGLINE": "Бесплатная игра, без рекламы, не требует подключения",
+    "DOWNLOAD_TITLE": "Скачать",
+    "DOWNLOAD_TEXT_1": "Лучше всего <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">скачать приложение из Google Play Маркета</a>.",
+    "DOWNLOAD_TEXT_2": "Вы также можете скачать файл .apk ниже и установить его вручную. Это может потребовать некоторых настроек в Android (предоставление разрешений на установку приложений, включение параметров разработчика и т. д.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Версия:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Дата:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Размер:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Скачать MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Авторские права &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Политика конфиденциальности",
+    "FOOTER_MAIN_PAGE": "Главная Страница",
+    "WINDLEREYE_SUPPORT": "Поддержите меня, послушав мой музыкальный проект<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Музыкальный проект Windlerey",
+    "BTN_REPORT_ISSUES": "СООБЩИТЬ О ПРОБЛЕМАХ",
+    "BTN_SOURCE_CODE": "ИСХОДНЫЙ КОД",
+    "BTN_THE_AUTHOR": "АВТОР"
+
+};

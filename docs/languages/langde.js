@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Morse-Training",
+    "META_DESC": "Lernen Sie Morsecode mit Spielen und Paddeln auf dem Bildschirm oder extern",
+    "LOGO_ALT": "Morse Training Logo",
+    "APP_TITLE": "Morse-Training",
+    "APP_SUBTITLE": "Lernen Sie Morsecode mit Spielen und Paddeln auf dem Bildschirm oder extern",
+    "SCREENSHOTS_TITLE": "Screenshots",
+    "SCREENSHOT_1_ALT": "Morse Training Gameplay",
+    "SCREENSHOT_2_ALT": "Morse Training Menü",
+    "SCREENSHOT_3_ALT": "Morse Training Statistiken",
+    "BTN_GOOGLE_PLAY_ALT": "Holen Sie es sich bei Google Play",
+    "BTN_DOWNLOAD_APK": ".apk herunterladen",
+    "TAGLINE": "Kostenloses Spiel, keine Werbung, benötigt keine Verbindung",
+    "DOWNLOAD_TITLE": "Herunterladen",
+    "DOWNLOAD_TEXT_1": "Es ist besser, <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">die App aus dem Google Play Store zu beziehen</a>.",
+    "DOWNLOAD_TEXT_2": "Sie können auch die unten stehende .apk-Datei herunterladen und manuell installieren. Dies erfordert möglicherweise einige Einstellungen in Android (Berechtigungen zur Installation von Apps erteilen, Entwickleroptionen aktivieren usw.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Version:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Datum:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Größe:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "morsetraining-v1.00.apk herunterladen",
+    "FOOTER_COPYRIGHT": "Copyright &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Datenschutzerklärung",
+    "FOOTER_MAIN_PAGE": "Startseite",
+    "WINDLEREYE_SUPPORT": "Unterstützen Sie mich, indem Sie sich mein Musikprojekt anhören<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye Musikprojekt",
+    "BTN_REPORT_ISSUES": "PROBLEME MELDEN",
+    "BTN_SOURCE_CODE": "QUELLCODE",
+    "BTN_THE_AUTHOR": "DER AUTOR"
+
+};

@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Formació Morse",
+    "META_DESC": "Aprèn codi Morse amb jocs i pales en pantalla o externes",
+    "LOGO_ALT": "Logotip de Morse Training",
+    "APP_TITLE": "Formació Morse",
+    "APP_SUBTITLE": "Aprèn codi Morse amb jocs i pales en pantalla o externes",
+    "SCREENSHOTS_TITLE": "Captures de pantalla",
+    "SCREENSHOT_1_ALT": "Joc de Morse Training",
+    "SCREENSHOT_2_ALT": "Menú de Morse Training",
+    "SCREENSHOT_3_ALT": "Estadístiques de Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "Aconsegueix-ho a Google Play",
+    "BTN_DOWNLOAD_APK": "Descarrega .apk",
+    "TAGLINE": "Joc gratuït, sense anuncis, no requereix connexió",
+    "DOWNLOAD_TITLE": "Descarregar",
+    "DOWNLOAD_TEXT_1": "És preferible <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">obtenir l'aplicació a la Google Play Store</a>.",
+    "DOWNLOAD_TEXT_2": "També pots descarregar el fitxer .apk a continuació i instal·lar-lo manualment. Això pot requerir ajustar algunes opcions a Android (concedir permisos per instal·lar aplicacions, activar opcions de desenvolupador, etc.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Versió:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Data:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Mida:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Descarrega MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Copyright &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Política de privadesa",
+    "FOOTER_MAIN_PAGE": "Pàgina principal",
+    "WINDLEREYE_SUPPORT": "Doneu-me suport escoltant el meu projecte musical<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Projecte musical Windlereye",
+    "BTN_REPORT_ISSUES": "INFORME DE PROBLEMES",
+    "BTN_SOURCE_CODE": "CODI FONT",
+    "BTN_THE_AUTHOR": "L'AUTOR"
+
+};

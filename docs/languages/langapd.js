@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "تدريب مورس",
+    "META_DESC": "تعلم شفرة مورس باستخدام الألعاب والمجاديف الموجودة على الشاشة أو الخارجية",
+    "LOGO_ALT": "شعار Morse Training",
+    "APP_TITLE": "تدريب مورس",
+    "APP_SUBTITLE": "تعلم شفرة مورس باستخدام الألعاب والمجاديف الموجودة على الشاشة أو الخارجية",
+    "SCREENSHOTS_TITLE": "لقطات الشاشة",
+    "SCREENSHOT_1_ALT": "طريقة لعب Morse Training",
+    "SCREENSHOT_2_ALT": "قائمة Morse Training",
+    "SCREENSHOT_3_ALT": "إحصائيات Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "احصل عليه من Google Play",
+    "BTN_DOWNLOAD_APK": "تنزيل .apk",
+    "TAGLINE": "لعبة مجانية، بدون إعلانات، ما بيحتاج إنترنت",
+    "DOWNLOAD_TITLE": "تنزيل",
+    "DOWNLOAD_TEXT_1": "يُفضل <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">الحصول على التطبيق من متجر Google Play</a>.",
+    "DOWNLOAD_TEXT_2": "يمكنك أيضًا تنزيل ملف .apk أدناه وتثبيته يدويًا. قد يتطلب هذا بعض التعديلات في نظام Android (منح أذونات لتثبيت التطبيقات، تمكين خيارات المطور، وما إلى ذلك).",
+    "DOWNLOAD_VERSION_INFO": "<strong>الإصدار:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>التاريخ:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>مقاس:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "تنزيل MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "حقوق النشر &copy; 2026، <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "سياسة الخصوصية",
+    "FOOTER_MAIN_PAGE": "الصفحة الرئيسية",
+    "WINDLEREYE_SUPPORT": "ادعموني بالاستماع إلى مشروعي الموسيقي<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "مشروع موسيقى Windlereye",
+    "BTN_REPORT_ISSUES": "الإبلاغ عن المشكلات",
+    "BTN_SOURCE_CODE": "رمز المصدر",
+    "BTN_THE_AUTHOR": "المؤلف"
+
+};

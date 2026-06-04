@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Morse Training",
+    "META_DESC": "Learn Morse code with games and in-screen or external paddles",
+    "LOGO_ALT": "Morse Training 标志",
+    "APP_TITLE": "Morse Training",
+    "APP_SUBTITLE": "Learn Morse code with games and in-screen or external paddles",
+    "SCREENSHOTS_TITLE": "游戏截图",
+    "SCREENSHOT_1_ALT": "Morse Training 游戏画面",
+    "SCREENSHOT_2_ALT": "Morse Training 菜单",
+    "SCREENSHOT_3_ALT": "Morse Training 统计",
+    "BTN_GOOGLE_PLAY_ALT": "在 Google Play 获取",
+    "BTN_DOWNLOAD_APK": "下载 .apk",
+    "TAGLINE": "免费游戏，无广告，不需要网络连接",
+    "DOWNLOAD_TITLE": "下载",
+    "DOWNLOAD_TEXT_1": "建议您<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">从 Google Play 商店获取该应用</a>。",
+    "DOWNLOAD_TEXT_2": "您也可以下载下方的 .apk 文件并手动安装。这可能需要您在 Android 中进行一些设置（允许安装应用、启用开发者选项等）。",
+    "DOWNLOAD_VERSION_INFO": "<strong>版本:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>日期:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Size:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "下载 MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "版权所有 &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "隐私政策",
+    "FOOTER_MAIN_PAGE": "主页",
+    "WINDLEREYE_SUPPORT": "Support me by listening to my music project <a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye Music Project",
+    "BTN_REPORT_ISSUES": "REPORT ISSUES",
+    "BTN_SOURCE_CODE": "SOURCE CODE",
+    "BTN_THE_AUTHOR": "THE AUTHOR"
+
+};

@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Εκπαίδευση Morse",
+    "META_DESC": "Μάθετε τον κώδικα Μορς με παιχνίδια και κουπιά στην οθόνη ή εξωτερικά",
+    "LOGO_ALT": "Λογότυπο Morse Training",
+    "APP_TITLE": "Εκπαίδευση Morse",
+    "APP_SUBTITLE": "Μάθετε τον κώδικα Μορς με παιχνίδια και κουπιά στην οθόνη ή εξωτερικά",
+    "SCREENSHOTS_TITLE": "Στιγμιότυπα",
+    "SCREENSHOT_1_ALT": "Παιχνίδι Morse Training",
+    "SCREENSHOT_2_ALT": "Μενού Morse Training",
+    "SCREENSHOT_3_ALT": "Στατιστικά Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "Αποκτήστε το στο Google Play",
+    "BTN_DOWNLOAD_APK": "Λήψη .apk",
+    "TAGLINE": "Δωρεάν παιχνίδι, χωρίς διαφημίσεις, δεν απαιτεί σύνδεση",
+    "DOWNLOAD_TITLE": "Λήψη",
+    "DOWNLOAD_TEXT_1": "Είναι προτιμότερο να <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">κατεβάσετε την εφαρμογή από το Google Play Store</a>.",
+    "DOWNLOAD_TEXT_2": "Μπορείτε επίσης να κατεβάσετε το αρχείο .apk παρακάτω και να το εγκαταστήσετε χειροκίνητα. Αυτό ενδέχεται να απαιτεί ρυθμίσεις στο Android (χορήγηση αδειών για εγκατάσταση εφαρμογών, ενεργοποίηση επιλογών προγραμματιστή κ.λπ.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Έκδοση:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Ημερομηνία:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Μέγεθος:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Λήψη MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Πνευματικά δικαιώματα &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Πολιτική Απορρήτου",
+    "FOOTER_MAIN_PAGE": "Αρχική Σελίδα",
+    "WINDLEREYE_SUPPORT": "Υποστηρίξτε με ακούγοντας το μουσικό μου έργο<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Windlereye Music Project",
+    "BTN_REPORT_ISSUES": "ΑΝΑΦΟΡΑ ΘΕΜΑΤΩΝ",
+    "BTN_SOURCE_CODE": "ΠΗΓΗ ΚΩΔ",
+    "BTN_THE_AUTHOR": "Ο ΣΥΓΓΡΑΦΕΑΣ"
+
+};

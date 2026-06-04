@@ -1,0 +1,28 @@
+const langData = {
+    "META_TITLE": "Addestramento Morse",
+    "META_DESC": "Impara il codice Morse con giochi e paddle sullo schermo o esterni",
+    "LOGO_ALT": "Logo Morse Training",
+    "APP_TITLE": "Addestramento Morse",
+    "APP_SUBTITLE": "Impara il codice Morse con giochi e paddle sullo schermo o esterni",
+    "SCREENSHOTS_TITLE": "Screenshot",
+    "SCREENSHOT_1_ALT": "Dinamica di gioco di Morse Training",
+    "SCREENSHOT_2_ALT": "Menu di Morse Training",
+    "SCREENSHOT_3_ALT": "Statistiche di Morse Training",
+    "BTN_GOOGLE_PLAY_ALT": "Disponibile su Google Play",
+    "BTN_DOWNLOAD_APK": "Scarica .apk",
+    "TAGLINE": "Gioco gratuito, nessuna pubblicità, non richiede connessione",
+    "DOWNLOAD_TITLE": "Scarica",
+    "DOWNLOAD_TEXT_1": "È preferibile <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">scaricare l'app dal Google Play Store</a>.",
+    "DOWNLOAD_TEXT_2": "Puoi anche scaricare il file .apk qui sotto e installarlo manualmente. Ciò potrebbe richiedere alcune impostazioni in Android (concedere autorizzazioni per l'installazione di app, abilitare le opzioni sviluppatore, ecc.).",
+    "DOWNLOAD_VERSION_INFO": "<strong>Versione:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Data:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Misurare:</strong> 310 KB",
+    "DOWNLOAD_APK_LINK": "Scarica MorseTraining-v1.06.apk",
+    "FOOTER_COPYRIGHT": "Copyright &copy; 2026, <a href=\"https://www.luisquesada.com\">Luis Quesada Torres</a> (<a href=\"https://www.qrz.com/db/HB9IPH\">HB9IPH</a>)",
+    "FOOTER_PRIVACY": "Informativa sulla privacy",
+    "FOOTER_MAIN_PAGE": "Pagina Principale",
+    "WINDLEREYE_SUPPORT": "Sostienimi ascoltando il mio progetto musicale<a href=\"https://www.windlereye.com\" target=\"_blank\" style=\"color: var(--primary-color);\">Windlereye</a>",
+    "WINDLEREYE_ALT": "Progetto musicale Windlereye",
+    "BTN_REPORT_ISSUES": "RAPPORTO PROBLEMI",
+    "BTN_SOURCE_CODE": "CODICE FONTE",
+    "BTN_THE_AUTHOR": "L'AUTORE"
+
+};

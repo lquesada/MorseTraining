@@ -109,19 +109,15 @@ public class LangHu extends MorseLanguage {
 
         set(MATCH_RESULTS, "Mérkőzések eredményei");
                 
-        set(TX_PRACTICE, "Átadás (képzés)");
-        set(TX_CONTEST, "Átadás (pontos támadás)");
         set(INFINITE, "Gyakorolj időkorlát nélkül");
         set(THREE_MINUTES, "Verje meg pontszámát 3 perc alatt");
 
-        set(RX_PRACTICE, "Fogadás (képzés)");
-        set(RX_CONTEST, "Fogadás (pontos támadás)");
         set(REPEAT, "ISMÉTLÉS");
 
         set(START, "INDÍTÁS");
         set(PICK_LANG_THEME_ON_SHARE, "Nyelv és téma kiválasztása pontszámok megosztásakor");
         set(CONTINUE, "FOLYTATÁS");
-        set(RX, "Kap");
-        set(TX, "Átvitel");
+        set(RX, "Fogni");
+        set(TX, "Adni");
 }
 }

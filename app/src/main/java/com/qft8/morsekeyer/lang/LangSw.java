@@ -108,20 +108,16 @@ public class LangSw extends MorseLanguage {
 
         set(MATCH_RESULTS, "Matokeo ya mechi");
                 
-        set(TX_PRACTICE, "Sambaza (Mafunzo)");
-        set(TX_CONTEST, "Sambaza (Shambulio la Alama)");
         set(INFINITE, "Fanya mazoezi bila kikomo cha muda");
         set(THREE_MINUTES, "Shinda alama zako katika dakika 3");
 
-        set(RX_PRACTICE, "Pokea (Mafunzo)");
-        set(RX_CONTEST, "Pokea (Shambulio la Alama)");
         set(REPEAT, "RUDIA");
 
         set(START, "ANZA");
         set(PICK_LANG_THEME_ON_SHARE, "Chagua lugha na mandhari unaposhiriki alama");
         set(GAMES, "Michezo");
         set(CONTINUE, "ENDELEA");
-        set(RX, "Pokea");
-        set(TX, "Sambaza");
+        set(RX, "Kupokea");
+        set(TX, "Kutuma");
 }
 }

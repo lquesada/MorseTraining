@@ -108,20 +108,16 @@ public class LangYue extends MorseLanguage {
 
         set(MATCH_RESULTS, "比赛结果");
                 
-        set(TX_PRACTICE, "傳輸（訓練）");
-        set(TX_CONTEST, "傳輸（分數攻擊）");
         set(INFINITE, "練習沒有時間限制");
         set(THREE_MINUTES, "3分鐘內打破你的分數");
 
-        set(RX_PRACTICE, "接受（訓練）");
-        set(RX_CONTEST, "接收（分數攻擊）");
         set(REPEAT, "重複");
 
         set(START, "開始");
         set(PICK_LANG_THEME_ON_SHARE, "分享分數時選擇語言同主題");
         set(GAMES, "遊戲");
         set(CONTINUE, "繼續");
-        set(RX, "收到");
-        set(TX, "傳送");
+        set(RX, "接收");
+        set(TX, "傳輸");
 }
 }

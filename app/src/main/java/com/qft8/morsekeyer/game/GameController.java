@@ -1055,7 +1055,7 @@ public class GameController {
             btnGame.setText(LanguageManager.get(MorseLanguage.GAMES));
         }
         if (btnTxPractice != null) {
-            String title = LanguageManager.get(MorseLanguage.TX_PRACTICE);
+            String title = LanguageManager.get(MorseLanguage.TX) + " (Training)";
             String sub = LanguageManager.get(MorseLanguage.INFINITE);
             android.text.SpannableString ss = new android.text.SpannableString(title + "\n" + sub);
             ss.setSpan(new android.text.style.RelativeSizeSpan(0.7f), title.length() + 1, ss.length(),
@@ -1063,7 +1063,7 @@ public class GameController {
             btnTxPractice.setText(ss);
         }
         if (btnTxContest != null) {
-            String title = LanguageManager.get(MorseLanguage.TX_CONTEST);
+            String title = LanguageManager.get(MorseLanguage.TX) + " (Score Attack)";
             String sub = LanguageManager.get(MorseLanguage.THREE_MINUTES);
             android.text.SpannableString ss = new android.text.SpannableString(title + "\n" + sub);
             ss.setSpan(new android.text.style.RelativeSizeSpan(0.7f), title.length() + 1, ss.length(),
@@ -1071,7 +1071,7 @@ public class GameController {
             btnTxContest.setText(ss);
         }
         if (btnRxPractice != null) {
-            String title = LanguageManager.get(MorseLanguage.RX_PRACTICE);
+            String title = LanguageManager.get(MorseLanguage.RX) + " (Training)";
             String sub = LanguageManager.get(MorseLanguage.INFINITE);
             android.text.SpannableString ss = new android.text.SpannableString(title + "\n" + sub);
             ss.setSpan(new android.text.style.RelativeSizeSpan(0.7f), title.length() + 1, ss.length(),
@@ -1079,7 +1079,7 @@ public class GameController {
             btnRxPractice.setText(ss);
         }
         if (btnRxContest != null) {
-            String title = LanguageManager.get(MorseLanguage.RX_CONTEST);
+            String title = LanguageManager.get(MorseLanguage.RX) + " (Score Attack)";
             String sub = LanguageManager.get(MorseLanguage.THREE_MINUTES);
             android.text.SpannableString ss = new android.text.SpannableString(title + "\n" + sub);
             ss.setSpan(new android.text.style.RelativeSizeSpan(0.7f), title.length() + 1, ss.length(),

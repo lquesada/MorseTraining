@@ -108,20 +108,16 @@ public class LangHi extends MorseLanguage {
 
         set(MATCH_RESULTS, "परिणाम");
                 
-        set(TX_PRACTICE, "संचारित (प्रशिक्षण)");
-        set(TX_CONTEST, "ट्रांसमिट (स्कोर हमला)");
         set(INFINITE, "बिना किसी समय सीमा के अभ्यास करें");
         set(THREE_MINUTES, "3 मिनट में अपना स्कोर हराएँ");
 
-        set(RX_PRACTICE, "प्रशिक्षण प्राप्त करें)");
-        set(RX_CONTEST, "प्राप्त करें (स्कोर आक्रमण)");
         set(REPEAT, "दोहराएं");
 
         set(START, "शुरू करें");
         set(PICK_LANG_THEME_ON_SHARE, "स्कोर साझा करते समय भाषा और थीम चुनें");
         set(GAMES, "खेल");
         set(CONTINUE, "जारी रखना");
-        set(RX, "प्राप्त करें");
-        set(TX, "संचारित");
+        set(RX, "प्राप्त करना");
+        set(TX, "प्रसारित करना");
 }
 }

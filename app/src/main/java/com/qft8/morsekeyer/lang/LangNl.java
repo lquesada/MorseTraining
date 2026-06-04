@@ -108,19 +108,15 @@ public class LangNl extends MorseLanguage {
         set(HIGH_SCORE, "Hoge score");
 
                 
-        set(TX_PRACTICE, "Zenden (training)");
-        set(TX_CONTEST, "Verzenden (score-aanval)");
         set(INFINITE, "Oefen zonder tijdslimiet");
         set(THREE_MINUTES, "Verbeter je score in 3 minuten");
 
-        set(RX_PRACTICE, "Ontvangen (training)");
-        set(RX_CONTEST, "Ontvangen (score-aanval)");
         set(REPEAT, "HERHALEN");
 
         set(START, "START");
         set(PICK_LANG_THEME_ON_SHARE, "Kies taal en thema bij het delen van partituren");
         set(CONTINUE, "DOORGAAN");
         set(RX, "Ontvangen");
-        set(TX, "Verzenden");
+        set(TX, "Zenden");
 }
 }

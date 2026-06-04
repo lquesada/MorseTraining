@@ -101,13 +101,9 @@ public class LangJv extends MorseLanguage {
 
         set(MATCH_RESULTS, "Hasil pertandhingan");
                 
-        set(TX_PRACTICE, "Transmit (Latihan)");
-        set(TX_CONTEST, "Kirim (Skor Serangan)");
         set(INFINITE, "Laku tanpa watesan wektu");
         set(THREE_MINUTES, "Ngalahake skor sampeyan sajrone 3 menit");
 
-        set(RX_PRACTICE, "Nampa (Latihan)");
-        set(RX_CONTEST, "Nampa (Skor Serangan)");
         set(REPEAT, "BALENI");
 
         set(START, "MULAI");
@@ -115,6 +111,6 @@ public class LangJv extends MorseLanguage {
         set(GAMES, "Game");
         set(CONTINUE, "TERUS");
         set(RX, "Nampa");
-        set(TX, "ngirim");
+        set(TX, "Ngirim");
 }
 }

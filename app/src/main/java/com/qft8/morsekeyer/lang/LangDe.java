@@ -109,19 +109,15 @@ public class LangDe extends MorseLanguage {
 
         set(MATCH_RESULTS, "Ergebnisse");
                 
-        set(TX_PRACTICE, "Senden (Training)");
-        set(TX_CONTEST, "Senden (Score Attack)");
         set(INFINITE, "Üben Sie ohne zeitliche Begrenzung");
         set(THREE_MINUTES, "Schlagen Sie Ihre Punktzahl in 3 Minuten");
 
-        set(RX_PRACTICE, "Empfangen (Schulung)");
-        set(RX_CONTEST, "Empfangen (Score Attack)");
         set(REPEAT, "WIEDERHOLEN");
 
         set(START, "START");
         set(PICK_LANG_THEME_ON_SHARE, "Sprache und Design beim Teilen von Punktzahlen auswählen");
         set(CONTINUE, "WEITERMACHEN");
-        set(RX, "Erhalten");
-        set(TX, "Übertragen");
+        set(RX, "Empfangen");
+        set(TX, "Senden");
 }
 }

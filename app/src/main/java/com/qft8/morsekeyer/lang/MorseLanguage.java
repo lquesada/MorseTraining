@@ -113,10 +113,7 @@ public abstract class MorseLanguage {
     public static final String WORDS = "WORDS";
     public static final String TX = "TX";
     public static final String RX = "RX";
-    public static final String TX_PRACTICE = "TX_PRACTICE";
-    public static final String TX_CONTEST = "TX_CONTEST";
-    public static final String RX_PRACTICE = "RX_PRACTICE";
-    public static final String RX_CONTEST = "RX_CONTEST";
+
     public static final String INFINITE = "INFINITE";
     public static final String THREE_MINUTES = "THREE_MINUTES";
     public static final String REPEAT = "REPEAT";

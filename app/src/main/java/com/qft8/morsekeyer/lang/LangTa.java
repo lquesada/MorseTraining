@@ -101,20 +101,16 @@ public class LangTa extends MorseLanguage {
 
         set(MATCH_RESULTS, "போட்டி முடிவுகள்");
                 
-        set(TX_PRACTICE, "அனுப்புதல் (பயிற்சி)");
-        set(TX_CONTEST, "டிரான்ஸ்மிட் (ஸ்கோர் அட்டாக்)");
         set(INFINITE, "நேர வரம்பு இல்லாமல் பயிற்சி செய்யுங்கள்");
         set(THREE_MINUTES, "3 நிமிடங்களில் உங்கள் ஸ்கோரை அடிக்கவும்");
 
-        set(RX_PRACTICE, "பெறு (பயிற்சி)");
-        set(RX_CONTEST, "பெறு (ஸ்கோர் தாக்குதல்)");
         set(REPEAT, "மீண்டும் சொல்");
 
         set(START, "தொடங்கு");
         set(PICK_LANG_THEME_ON_SHARE, "மதிப்பெண்களைப் பகிரும்போது மொழி மற்றும் தீமைத் தேர்ந்தெடுக்கவும்");
         set(GAMES, "விளையாட்டுகள்");
         set(CONTINUE, "தொடரவும்");
-        set(RX, "பெறு");
-        set(TX, "அனுப்பு");
+        set(RX, "பெற");
+        set(TX, "அனுப்ப");
 }
 }

@@ -109,13 +109,9 @@ public class LangIt extends MorseLanguage {
 
         set(MATCH_RESULTS, "Risultati");
                 
-        set(TX_PRACTICE, "Trasmissione (formazione)");
-        set(TX_CONTEST, "Trasmissione (Attacco a punti)");
         set(INFINITE, "Esercitati senza limiti di tempo");
         set(THREE_MINUTES, "Batti il ​​tuo punteggio in 3 minuti");
 
-        set(RX_PRACTICE, "Ricevere (formazione)");
-        set(RX_CONTEST, "Ricevi (Attacco a punti)");
         set(REPEAT, "RIPETI");
 
         set(START, "INIZIA");

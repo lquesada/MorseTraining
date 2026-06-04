@@ -109,19 +109,15 @@ public class LangPl extends MorseLanguage {
 
         set(MATCH_RESULTS, "Wyniki");
                 
-        set(TX_PRACTICE, "Transmisja (szkolenie)");
-        set(TX_CONTEST, "Transmisja (atak punktowy)");
         set(INFINITE, "Ćwicz bez ograniczeń czasowych");
         set(THREE_MINUTES, "Pobij swój wynik w 3 minuty");
 
-        set(RX_PRACTICE, "Odbierz (szkolenie)");
-        set(RX_CONTEST, "Otrzymaj (atak punktowy)");
         set(REPEAT, "POWTÓRZ");
 
         set(START, "START");
         set(PICK_LANG_THEME_ON_SHARE, "Wybierz język i motyw podczas udostępniania wyników");
         set(CONTINUE, "KONTYNUOWAĆ");
         set(RX, "Odbierać");
-        set(TX, "Przekazać");
+        set(TX, "Nadawać");
 }
 }

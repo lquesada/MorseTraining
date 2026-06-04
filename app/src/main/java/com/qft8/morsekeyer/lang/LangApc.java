@@ -101,20 +101,16 @@ public class LangApc extends MorseLanguage {
 
         set(MATCH_RESULTS, "نتائج");
                 
-        set(TX_PRACTICE, "نقل (تدريب)");
-        set(TX_CONTEST, "الإرسال (تسجيل الهجوم)");
         set(INFINITE, "ممارسة مع عدم وجود حد زمني");
         set(THREE_MINUTES, "تغلب على درجاتك في 3 دقائق");
 
-        set(RX_PRACTICE, "تلقي (التدريب)");
-        set(RX_CONTEST, "تلقي (هجوم النتيجة)");
         set(REPEAT, "تكرار");
 
         set(START, "بدء");
         set(PICK_LANG_THEME_ON_SHARE, "اختار لغة وثيم لما تشارك السكور");
         set(GAMES, "ألعاب");
         set(CONTINUE, "يكمل");
-        set(RX, "يستلم");
-        set(TX, "نقل");
+        set(RX, "استلم");
+        set(TX, "أرسل");
 }
 }

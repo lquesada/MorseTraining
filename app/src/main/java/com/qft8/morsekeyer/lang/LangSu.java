@@ -101,20 +101,16 @@ public class LangSu extends MorseLanguage {
 
         set(MATCH_RESULTS, "Hasil pertandingan");
                 
-        set(TX_PRACTICE, "Pangiriman (Latihan)");
-        set(TX_CONTEST, "Kirimkeun (Skor Serangan)");
         set(INFINITE, "Latihan tanpa wates waktu");
         set(THREE_MINUTES, "Kocok skor anjeun dina 3 menit");
 
-        set(RX_PRACTICE, "Nampi (Latihan)");
-        set(RX_CONTEST, "Nampi (Skor Serangan)");
         set(REPEAT, "ULANGI");
 
         set(START, "MIMITIAN");
         set(PICK_LANG_THEME_ON_SHARE, "Pilih basa jeung tema nalika ngabagi skor");
         set(GAMES, "Kaulinan");
         set(CONTINUE, "TERUS");
-        set(RX, "Narima");
-        set(TX, "Nepikeun");
+        set(RX, "Nampi");
+        set(TX, "Ngirimkeun");
 }
 }

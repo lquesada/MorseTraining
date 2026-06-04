@@ -108,20 +108,16 @@ public class LangPcm extends MorseLanguage {
 
         set(MATCH_RESULTS, "Match results");
                 
-        set(TX_PRACTICE, "Transmit (Training)");
-        set(TX_CONTEST, "Transmit (Score Attack)");
         set(INFINITE, "Practice with no time limit");
         set(THREE_MINUTES, "Beat your score in 3 minutes");
 
-        set(RX_PRACTICE, "Receive (Training)");
-        set(RX_CONTEST, "Receive (Score Attack)");
         set(REPEAT, "REPEAT");
 
         set(START, "START");
         set(PICK_LANG_THEME_ON_SHARE, "Choose language and theme when you dey share scores");
         set(GAMES, "Games");
         set(CONTINUE, "CONTINUE");
-        set(RX, "Receive");
+        set(RX, "Risiv");
         set(TX, "Transmit");
 }
 }

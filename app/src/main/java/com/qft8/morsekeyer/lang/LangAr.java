@@ -108,13 +108,9 @@ public class LangAr extends MorseLanguage {
 
         set(MATCH_RESULTS, "نتائج");
                 
-        set(TX_PRACTICE, "نقل (تدريب)");
-        set(TX_CONTEST, "الإرسال (تسجيل الهجوم)");
         set(INFINITE, "ممارسة مع عدم وجود حد زمني");
         set(THREE_MINUTES, "تغلب على درجاتك في 3 دقائق");
 
-        set(RX_PRACTICE, "تلقي (التدريب)");
-        set(RX_CONTEST, "تلقي (هجوم النتيجة)");
         set(REPEAT, "تكرار");
 
         set(START, "بدء");

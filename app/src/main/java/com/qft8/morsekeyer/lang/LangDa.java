@@ -108,19 +108,15 @@ public class LangDa extends MorseLanguage {
         set(HIGH_SCORE, "Høj score");
 
                 
-        set(TX_PRACTICE, "Send (træning)");
-        set(TX_CONTEST, "Send (scoreangreb)");
         set(INFINITE, "Øv uden tidsbegrænsning");
         set(THREE_MINUTES, "Slå din score på 3 minutter");
 
-        set(RX_PRACTICE, "Modtag (træning)");
-        set(RX_CONTEST, "Modtag (Scoreangreb)");
         set(REPEAT, "GENTAG");
 
         set(START, "START");
         set(PICK_LANG_THEME_ON_SHARE, "Vælg sprog og tema, når du deler resultater");
         set(CONTINUE, "FORTSÆTTE");
         set(RX, "Modtage");
-        set(TX, "Send");
+        set(TX, "Sende");
 }
 }

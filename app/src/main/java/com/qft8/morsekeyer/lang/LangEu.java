@@ -102,19 +102,15 @@ public class LangEu extends MorseLanguage {
 
         set(MATCH_RESULTS, "Partiduen emaitzak");
                 
-        set(TX_PRACTICE, "Transmititu (prestakuntza)");
-        set(TX_CONTEST, "Transmititu (puntuazio erasoa)");
         set(INFINITE, "Praktikatu denbora mugarik gabe");
         set(THREE_MINUTES, "Irabazi zure puntuazioa 3 minututan");
 
-        set(RX_PRACTICE, "Jaso (prestakuntza)");
-        set(RX_CONTEST, "Jaso (Score Erasoa)");
         set(REPEAT, "ERREPIKATU");
 
         set(START, "HASI");
         set(PICK_LANG_THEME_ON_SHARE, "Aukeratu hizkuntza eta gaia puntuazioak partekatzean");
         set(CONTINUE, "JARRAITU");
         set(RX, "Jaso");
-        set(TX, "Transmititu");
+        set(TX, "Igorri");
 }
 }

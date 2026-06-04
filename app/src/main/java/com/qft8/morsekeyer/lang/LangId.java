@@ -109,19 +109,15 @@ public class LangId extends MorseLanguage {
 
         set(MATCH_RESULTS, "Hasil");
                 
-        set(TX_PRACTICE, "Mengirimkan (Pelatihan)");
-        set(TX_CONTEST, "Mengirimkan (Skor Serangan)");
         set(INFINITE, "Berlatih tanpa batas waktu");
         set(THREE_MINUTES, "Kalahkan skor Anda dalam 3 menit");
 
-        set(RX_PRACTICE, "Terima (Pelatihan)");
-        set(RX_CONTEST, "Terima (Skor Serangan)");
         set(REPEAT, "ULANGI");
 
         set(START, "MULAI");
         set(PICK_LANG_THEME_ON_SHARE, "Pilih bahasa dan tema saat membagikan skor");
         set(CONTINUE, "MELANJUTKAN");
         set(RX, "Menerima");
-        set(TX, "Mengirimkan");
+        set(TX, "Mengirim");
 }
 }

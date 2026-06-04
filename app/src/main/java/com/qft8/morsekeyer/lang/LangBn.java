@@ -108,20 +108,16 @@ public class LangBn extends MorseLanguage {
 
         set(MATCH_RESULTS, "ম্যাচের ফলাফল");
                 
-        set(TX_PRACTICE, "প্রেরণ (প্রশিক্ষণ)");
-        set(TX_CONTEST, "ট্রান্সমিট (স্কোর অ্যাটাক)");
         set(INFINITE, "কোন সময় সীমা ছাড়া অনুশীলন");
         set(THREE_MINUTES, "3 মিনিটে আপনার স্কোর হারান");
 
-        set(RX_PRACTICE, "গ্রহণ (প্রশিক্ষণ)");
-        set(RX_CONTEST, "রিসিভ (স্কোর অ্যাটাক)");
         set(REPEAT, "পুনরাবৃত্তি");
 
         set(START, "শুরু করুন");
         set(PICK_LANG_THEME_ON_SHARE, "স্কোর শেয়ার করার সময় ভাষা এবং থيم বেছে নিন");
         set(GAMES, "গেমস");
         set(CONTINUE, "চালিয়ে যান");
-        set(RX, "গ্রহণ করুন");
-        set(TX, "প্রেরণ");
+        set(RX, "গ্রহণ করা");
+        set(TX, "সম্প্রচার করা");
 }
 }

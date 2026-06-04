@@ -101,13 +101,9 @@ public class LangGl extends MorseLanguage {
 
         set(MATCH_RESULTS, "Resultados do partido");
                 
-        set(TX_PRACTICE, "Transmitir (Formación)");
-        set(TX_CONTEST, "Transmitir (ataque de puntuación)");
         set(INFINITE, "Practica sen límite de tempo");
         set(THREE_MINUTES, "Supera a túa puntuación en 3 minutos");
 
-        set(RX_PRACTICE, "Recibir (Formación)");
-        set(RX_CONTEST, "Recibir (Ataque de puntuación)");
         set(REPEAT, "REPETIR");
 
         set(START, "COMEZAR");

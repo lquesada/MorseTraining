@@ -109,19 +109,15 @@ public class LangRu extends MorseLanguage {
 
         set(MATCH_RESULTS, "Результаты");
                 
-        set(TX_PRACTICE, "Передача (обучение)");
-        set(TX_CONTEST, "Передача (Атака по очкам)");
         set(INFINITE, "Практика без ограничения по времени");
         set(THREE_MINUTES, "Побей свой результат за 3 минуты");
 
-        set(RX_PRACTICE, "Получить (Обучение)");
-        set(RX_CONTEST, "Получить (Атака по очкам)");
         set(REPEAT, "ПОВТОРИТЬ");
 
         set(START, "СТАРТ");
         set(PICK_LANG_THEME_ON_SHARE, "Выбирать язык и тему при публикации результатов");
         set(CONTINUE, "ПРОДОЛЖАТЬ");
-        set(RX, "Получать");
-        set(TX, "Передача");
+        set(RX, "Принимать");
+        set(TX, "Передавать");
 }
 }

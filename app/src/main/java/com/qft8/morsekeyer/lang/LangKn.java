@@ -101,20 +101,16 @@ public class LangKn extends MorseLanguage {
 
         set(MATCH_RESULTS, "ಪಂದ್ಯದ ಫಲಿತಾಂಶಗಳು");
                 
-        set(TX_PRACTICE, "ಪ್ರಸಾರ (ತರಬೇತಿ)");
-        set(TX_CONTEST, "ಪ್ರಸಾರ (ಸ್ಕೋರ್ ಅಟ್ಯಾಕ್)");
         set(INFINITE, "ಯಾವುದೇ ಸಮಯದ ಮಿತಿಯಿಲ್ಲದೆ ಅಭ್ಯಾಸ ಮಾಡಿ");
         set(THREE_MINUTES, "ನಿಮ್ಮ ಸ್ಕೋರ್ ಅನ್ನು 3 ನಿಮಿಷಗಳಲ್ಲಿ ಸೋಲಿಸಿ");
 
-        set(RX_PRACTICE, "ಸ್ವೀಕರಿಸಿ (ತರಬೇತಿ)");
-        set(RX_CONTEST, "ಸ್ವೀಕರಿಸಿ (ಸ್ಕೋರ್ ಅಟ್ಯಾಕ್)");
         set(REPEAT, "ಪುನರಾವರ್ತಿಸಿ");
 
         set(START, "ಪ್ರಾರಂಭಿಸಿ");
         set(PICK_LANG_THEME_ON_SHARE, "ಸ್ಕೋರ್‌ಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳುವಾಗ ಭಾಷೆ ಮತ್ತು ಥೀಮ್ ಅನ್ನು ಆಯ್ಕೆಮಾಡಿ");
         set(GAMES, "ಆಟಗಳು");
         set(CONTINUE, "ಮುಂದುವರಿಸಿ");
-        set(RX, "ಸ್ವೀಕರಿಸಿ");
-        set(TX, "ರವಾನಿಸಿ");
+        set(RX, "ಸ್ವೀಕರಿಸಲು");
+        set(TX, "ರವಾನಿಸಲು");
 }
 }

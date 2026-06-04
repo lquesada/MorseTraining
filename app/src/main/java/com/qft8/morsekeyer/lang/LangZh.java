@@ -108,20 +108,16 @@ public class LangZh extends MorseLanguage {
 
         set(MATCH_RESULTS, "比赛结果");
                 
-        set(TX_PRACTICE, "传输（训练）");
-        set(TX_CONTEST, "传输（得分攻击）");
         set(INFINITE, "练习没有时间限制");
         set(THREE_MINUTES, "3分钟内打破你的分数");
 
-        set(RX_PRACTICE, "接受（训练）");
-        set(RX_CONTEST, "接收（得分攻击）");
         set(REPEAT, "重复");
 
         set(START, "开始");
         set(PICK_LANG_THEME_ON_SHARE, "分享分数时选择语言和主题");
         set(GAMES, "游戏");
         set(CONTINUE, "继续");
-        set(RX, "收到");
-        set(TX, "发送");
+        set(RX, "接收");
+        set(TX, "传输");
 }
 }

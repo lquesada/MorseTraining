@@ -108,13 +108,9 @@ public class LangTh extends MorseLanguage {
 
         set(MATCH_RESULTS, "ผลการแข่งขัน");
                 
-        set(TX_PRACTICE, "ส่ง (การฝึกอบรม)");
-        set(TX_CONTEST, "ส่ง (โจมตีคะแนน)");
         set(INFINITE, "ฝึกฝนได้ไม่จำกัดเวลา");
         set(THREE_MINUTES, "เอาชนะคะแนนของคุณใน 3 นาที");
 
-        set(RX_PRACTICE, "รับ (การฝึกอบรม)");
-        set(RX_CONTEST, "รับ (คะแนนโจมตี)");
         set(REPEAT, "ทำซ้ำ");
 
         set(START, "เริ่ม");

@@ -108,13 +108,9 @@ public class LangTl extends MorseLanguage {
 
         set(MATCH_RESULTS, "Mga resulta ng tugma");
                 
-        set(TX_PRACTICE, "Ipadala (Pagsasanay)");
-        set(TX_CONTEST, "Ipadala (Score Attack)");
         set(INFINITE, "Magsanay nang walang limitasyon sa oras");
         set(THREE_MINUTES, "Talunin ang iyong iskor sa loob ng 3 minuto");
 
-        set(RX_PRACTICE, "Tumanggap (Pagsasanay)");
-        set(RX_CONTEST, "Tumanggap (Pag-atake ng Kalidad)");
         set(REPEAT, "ULITIN");
 
         set(START, "SIMULAN");
@@ -122,6 +118,6 @@ public class LangTl extends MorseLanguage {
         set(GAMES, "Mga Laro");
         set(CONTINUE, "MAGPATULOY");
         set(RX, "Tumanggap");
-        set(TX, "Ipadala");
+        set(TX, "Magpadala");
 }
 }

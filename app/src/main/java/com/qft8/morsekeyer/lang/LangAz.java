@@ -101,20 +101,16 @@ public class LangAz extends MorseLanguage {
 
         set(MATCH_RESULTS, "Matç nəticələri");
                 
-        set(TX_PRACTICE, "Ötürmə (Təlim)");
-        set(TX_CONTEST, "Ötürmə (Hücum Hesabı)");
         set(INFINITE, "Vaxt məhdudiyyəti olmadan məşq edin");
         set(THREE_MINUTES, "Hesabınızı 3 dəqiqə ərzində məğlub edin");
 
-        set(RX_PRACTICE, "Qəbul (Təlim)");
-        set(RX_CONTEST, "Qəbul (Hücum Hesabı)");
         set(REPEAT, "TƏKRARLA");
 
         set(START, "BAŞLA");
         set(PICK_LANG_THEME_ON_SHARE, "Xalları paylaşarkən dil və mövzu seçin");
         set(GAMES, "Oyunlar");
         set(CONTINUE, "DAVAM EDİN");
-        set(RX, "Qəbul et");
-        set(TX, "Ötür");
+        set(RX, "Qəbul etmək");
+        set(TX, "Ötürmək");
 }
 }

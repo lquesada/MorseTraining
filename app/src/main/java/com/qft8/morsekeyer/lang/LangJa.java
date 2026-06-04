@@ -108,20 +108,16 @@ public class LangJa extends MorseLanguage {
 
         set(MATCH_RESULTS, "結果");
                 
-        set(TX_PRACTICE, "送信 (トレーニング)");
-        set(TX_CONTEST, "送信 (Score Attack)");
         set(INFINITE, "時間制限なく練習できる");
         set(THREE_MINUTES, "3 分以内にスコアを更新する");
 
-        set(RX_PRACTICE, "受信 (トレーニング)");
-        set(RX_CONTEST, "受信 (Score Attack)");
         set(REPEAT, "リピート");
 
         set(START, "開始");
         set(PICK_LANG_THEME_ON_SHARE, "スコア共有時に言語とテーマを選択する");
         set(GAMES, "ゲーム");
         set(CONTINUE, "続く");
-        set(RX, "受け取る");
-        set(TX, "送信");
+        set(RX, "受信する");
+        set(TX, "送信する");
 }
 }

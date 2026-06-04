@@ -101,20 +101,16 @@ public class LangMy extends MorseLanguage {
 
         set(MATCH_RESULTS, "ပွဲရလဒ်များ");
                 
-        set(TX_PRACTICE, "ပို့လွှတ်ခြင်း (လေ့ကျင့်ရေး)");
-        set(TX_CONTEST, "ပို့လွှတ်ခြင်း (ရမှတ် တိုက်ခိုက်မှု)");
         set(INFINITE, "အချိန်အကန့်အသတ်မရှိ လေ့ကျင့်ပါ။");
         set(THREE_MINUTES, "သင်၏ဂိုးသွင်းမှုကို 3 မိနစ်အတွင်းအနိုင်ယူပါ။");
 
-        set(RX_PRACTICE, "လက်ခံ (သင်တန်း)၊");
-        set(RX_CONTEST, "လက်ခံ (ရမှတ် တိုက်ခိုက်မှု)");
         set(REPEAT, "ထပ်လုပ်ပါ");
 
         set(START, "စတင်ရန်");
         set(PICK_LANG_THEME_ON_SHARE, "ရမှတ်များ မျှဝေသည့်အခါ ဘာသာစကားနှင့် အပြင်အဆင်ကို ရွေးချယ်ပါ");
         set(GAMES, "ဂိမ်းများ");
         set(CONTINUE, "ဆက်ရန်");
-        set(RX, "လက်ခံတယ်။");
-        set(TX, "ပို့လွှတ်ပါ။");
+        set(RX, "လက်ခံရန်");
+        set(TX, "ထုတ်လွှင့်ရန်");
 }
 }

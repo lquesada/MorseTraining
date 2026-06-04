@@ -101,20 +101,16 @@ public class LangGu extends MorseLanguage {
 
         set(MATCH_RESULTS, "મેચ પરિણામો");
                 
-        set(TX_PRACTICE, "ટ્રાન્સમિટ (તાલીમ)");
-        set(TX_CONTEST, "ટ્રાન્સમિટ (સ્કોર એટેક)");
         set(INFINITE, "કોઈ સમય મર્યાદા વિના પ્રેક્ટિસ કરો");
         set(THREE_MINUTES, "તમારા સ્કોરને 3 મિનિટમાં હરાવો");
 
-        set(RX_PRACTICE, "પ્રાપ્ત કરો (તાલીમ)");
-        set(RX_CONTEST, "પ્રાપ્ત કરો (સ્કોર એટેક)");
         set(REPEAT, "પુનરાવર્તન");
 
         set(START, "શરૂ કરો");
         set(PICK_LANG_THEME_ON_SHARE, "સ્કોર શેર કરતી વખતે ભાષા અને થીમ પસંદ કરો");
         set(GAMES, "રમતો");
         set(CONTINUE, "ચાલુ રાખો");
-        set(RX, "પ્રાપ્ત કરો");
-        set(TX, "ટ્રાન્સમિટ કરો");
+        set(RX, "મેળવવું");
+        set(TX, "મોકલવું");
 }
 }

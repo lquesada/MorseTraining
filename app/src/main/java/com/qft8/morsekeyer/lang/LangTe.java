@@ -101,20 +101,16 @@ public class LangTe extends MorseLanguage {
 
         set(MATCH_RESULTS, "మ్యాచ్ ఫలితాలు");
                 
-        set(TX_PRACTICE, "ప్రసారం (శిక్షణ)");
-        set(TX_CONTEST, "ప్రసారం (స్కోరు దాడి)");
         set(INFINITE, "సమయ పరిమితి లేకుండా ప్రాక్టీస్ చేయండి");
         set(THREE_MINUTES, "3 నిమిషాల్లో మీ స్కోర్‌ను బీట్ చేయండి");
 
-        set(RX_PRACTICE, "స్వీకరించండి (శిక్షణ)");
-        set(RX_CONTEST, "స్వీకరించండి (స్కోరు దాడి)");
         set(REPEAT, "పునరావృతం");
 
         set(START, "ప్రారంభించండి");
         set(PICK_LANG_THEME_ON_SHARE, "స్కోర్‌లను షేర్ చేస్తున్నప్పుడు భాష మరియు థీమ్‌ని ఎంచుకోండి");
         set(GAMES, "ఆటలు");
         set(CONTINUE, "కొనసాగించు");
-        set(RX, "స్వీకరించండి");
-        set(TX, "ప్రసారం చేయండి");
+        set(RX, "స్వీకరించడం");
+        set(TX, "ప్రసారం చేయడం");
 }
 }

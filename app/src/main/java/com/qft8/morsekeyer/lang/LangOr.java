@@ -101,20 +101,16 @@ public class LangOr extends MorseLanguage {
 
         set(MATCH_RESULTS, "ମେଳ ଫଳାଫଳ");
                 
-        set(TX_PRACTICE, "ପ୍ରସାରଣ (ତାଲିମ)");
-        set(TX_CONTEST, "ଟ୍ରାନ୍ସମିଟ୍ (ସ୍କୋର ଆଟାକ୍)");
         set(INFINITE, "କ time ଣସି ସମୟ ସୀମା ସହିତ ଅଭ୍ୟାସ କରନ୍ତୁ |");
         set(THREE_MINUTES, "3 ମିନିଟରେ ଆପଣଙ୍କର ସ୍କୋରକୁ ପରାସ୍ତ କରନ୍ତୁ |");
 
-        set(RX_PRACTICE, "ଗ୍ରହଣ (ତାଲିମ)");
-        set(RX_CONTEST, "ଗ୍ରହଣ କରନ୍ତୁ (ସ୍କୋର ଆଟାକ୍)");
         set(REPEAT, "ପୁନରାବୃତ୍ତି");
 
         set(START, "ଆରମ୍ଭ କରନ୍ତୁ");
         set(PICK_LANG_THEME_ON_SHARE, "ସ୍କୋର ସେୟାର କରିବା ସମୟରେ ଭାଷା ଏବଂ ଥିମ୍ ବାଛନ୍ତୁ");
         set(GAMES, "ଖେଳଗୁଡିକ");
         set(CONTINUE, "ଜାରି ରଖନ୍ତୁ |");
-        set(RX, "ଗ୍ରହଣ କରନ୍ତୁ |");
-        set(TX, "ପ୍ରସାରଣ କରନ୍ତୁ |");
+        set(RX, "ଗ୍ରହଣ କରିବା");
+        set(TX, "ପ୍ରେରଣ କରିବା");
 }
 }

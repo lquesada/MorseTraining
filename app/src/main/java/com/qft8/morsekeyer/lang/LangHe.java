@@ -108,19 +108,15 @@ public class LangHe extends MorseLanguage {
         set(HIGH_SCORE, "ציון גבוה");
 
                 
-        set(TX_PRACTICE, "שידור (אימון)");
-        set(TX_CONTEST, "שידור (התקפת ניקוד)");
         set(INFINITE, "תרגול ללא הגבלת זמן");
         set(THREE_MINUTES, "נצח את התוצאה שלך תוך 3 דקות");
 
-        set(RX_PRACTICE, "קבלה (הדרכה)");
-        set(RX_CONTEST, "קבלה (התקפת ניקוד)");
         set(REPEAT, "חזור");
 
         set(START, "התחל");
         set(PICK_LANG_THEME_ON_SHARE, "בחר שפה ונושא בעת שיתוף ציונים");
         set(CONTINUE, "לְהַמשִׁיך");
-        set(RX, "לְקַבֵּל");
-        set(TX, "לְהַעֲבִיר");
+        set(RX, "לקבל");
+        set(TX, "לשדר");
 }
 }

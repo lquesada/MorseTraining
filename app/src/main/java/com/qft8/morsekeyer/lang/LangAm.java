@@ -108,13 +108,9 @@ public class LangAm extends MorseLanguage {
 
         set(MATCH_RESULTS, "የግጥሚያ ውጤቶች");
                 
-        set(TX_PRACTICE, "አስተላልፍ (ስልጠና)");
-        set(TX_CONTEST, "ማስተላለፍ (የነጥብ ጥቃት)");
         set(INFINITE, "ያለ የጊዜ ገደብ ይለማመዱ");
         set(THREE_MINUTES, "ነጥብዎን በ 3 ደቂቃዎች ውስጥ ያሸንፉ");
 
-        set(RX_PRACTICE, "መቀበል (ስልጠና)");
-        set(RX_CONTEST, "ተቀበል (የውጤት ጥቃት)");
         set(REPEAT, "ድገም");
 
         set(START, "ጀምር");

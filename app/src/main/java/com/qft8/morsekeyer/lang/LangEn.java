@@ -137,13 +137,9 @@ public class LangEn extends MorseLanguage {
                 set(TX, "Transmit");
                 set(RX, "Receive");
 
-                set(TX_PRACTICE, "Transmit (Training)");
-                set(TX_CONTEST, "Transmit (Score Attack)");
                 set(INFINITE, "Practice with no time limit");
                 set(THREE_MINUTES, "Beat your score in 3 minutes");
 
-                set(RX_PRACTICE, "Receive (Training)");
-                set(RX_CONTEST, "Receive (Score Attack)");
                 set(REPEAT, "REPEAT");
 
                 set(START, "START");

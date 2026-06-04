@@ -101,13 +101,9 @@ public class LangYo extends MorseLanguage {
 
         set(MATCH_RESULTS, "Awọn abajade baramu");
                 
-        set(TX_PRACTICE, "Gbigbe (Ikẹkọ)");
-        set(TX_CONTEST, "Gbigbe (Ikọlu Dimegilio)");
         set(INFINITE, "Iwa pẹlu ko si akoko iye to");
         set(THREE_MINUTES, "Lu rẹ Dimegilio ni 3 iṣẹju");
 
-        set(RX_PRACTICE, "Gba (Ikẹkọ)");
-        set(RX_CONTEST, "Gba (Ikọlu Dimegilio)");
         set(REPEAT, "TUN SỌ");
 
         set(START, "BẸRẸ");
@@ -115,6 +111,6 @@ public class LangYo extends MorseLanguage {
         set(GAMES, "Awọn ere");
         set(CONTINUE, "TESIWAJU");
         set(RX, "Gba");
-        set(TX, "Gbigbe");
+        set(TX, "Fi ranṣẹ");
 }
 }

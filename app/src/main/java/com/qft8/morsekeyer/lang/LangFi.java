@@ -109,19 +109,15 @@ public class LangFi extends MorseLanguage {
 
         set(MATCH_RESULTS, "Ottelun tulokset");
                 
-        set(TX_PRACTICE, "Lähetä (koulutus)");
-        set(TX_CONTEST, "Lähetys (pisteet hyökkäys)");
         set(INFINITE, "Harjoittele ilman aikarajaa");
         set(THREE_MINUTES, "Voita pisteesi 3 minuutissa");
 
-        set(RX_PRACTICE, "Vastaanota (koulutus)");
-        set(RX_CONTEST, "Vastaanota (pisteet hyökkäys)");
         set(REPEAT, "TOISTA");
 
         set(START, "ALOITA");
         set(PICK_LANG_THEME_ON_SHARE, "Valitse kieli ja teema tuloksia jaettaessa");
         set(CONTINUE, "JATKAA");
-        set(RX, "Vastaanota");
-        set(TX, "Lähetä");
+        set(RX, "Vastaanottaa");
+        set(TX, "Lähettää");
 }
 }

@@ -114,13 +114,9 @@ public class LangEs extends MorseLanguage {
 
                 set(MATCH_RESULTS, "Resultados");
                                         
-        set(TX_PRACTICE, "Transmisión (Práctica)");
-        set(TX_CONTEST, "Transmisión (Score Attack)");
         set(INFINITE, "Práctica sin límite de tiempo");
         set(THREE_MINUTES, "Supera tu puntuación en 3 minutos");
 
-        set(RX_PRACTICE, "Recepción (Práctica)");
-        set(RX_CONTEST, "Recepción (Score Attack)");
         set(REPEAT, "REPETIR");
 
         set(START, "EMPEZAR");

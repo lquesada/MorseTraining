@@ -108,20 +108,16 @@ public class LangUk extends MorseLanguage {
 
         set(MATCH_RESULTS, "Результати матчів");
                 
-        set(TX_PRACTICE, "Передача (навчання)");
-        set(TX_CONTEST, "Трансмісія (Score Attack)");
         set(INFINITE, "Практика без обмеження часу");
         set(THREE_MINUTES, "Побийте свій рахунок за 3 хвилини");
 
-        set(RX_PRACTICE, "Отримати (навчання)");
-        set(RX_CONTEST, "Прийом (атака за рахунок)");
         set(REPEAT, "ПОВТОРИТИ");
 
         set(START, "ПОЧАТИ");
         set(PICK_LANG_THEME_ON_SHARE, "Вибирати мову та тему під час публікації результатів");
         set(GAMES, "Ігри");
         set(CONTINUE, "ПРОДОВЖУЙТЕ");
-        set(RX, "Отримати");
+        set(RX, "Отримувати");
         set(TX, "Передавати");
 }
 }

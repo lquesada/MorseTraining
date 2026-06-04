@@ -108,20 +108,16 @@ public class LangFa extends MorseLanguage {
 
         set(MATCH_RESULTS, "نتایج مسابقه");
                 
-        set(TX_PRACTICE, "انتقال (آموزش)");
-        set(TX_CONTEST, "انتقال (حمله امتیازی)");
         set(INFINITE, "بدون محدودیت زمانی تمرین کنید");
         set(THREE_MINUTES, "ضرب و شتم امتیاز خود را در 3 دقیقه");
 
-        set(RX_PRACTICE, "دریافت (آموزش)");
-        set(RX_CONTEST, "دریافت (حمله امتیازی)");
         set(REPEAT, "تکرار");
 
         set(START, "شروع");
         set(PICK_LANG_THEME_ON_SHARE, "انتخاب زبان و تم هنگام اشتراک‌گذاری امتیازات");
         set(GAMES, "بازی‌ها");
         set(CONTINUE, "ادامه دهید");
-        set(RX, "دریافت کنید");
-        set(TX, "انتقال دهد");
+        set(RX, "دریافت کردن");
+        set(TX, "ارسال کردن");
 }
 }

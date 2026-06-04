@@ -109,19 +109,15 @@ public class LangSv extends MorseLanguage {
 
         set(MATCH_RESULTS, "Resultat");
                 
-        set(TX_PRACTICE, "Överför (träning)");
-        set(TX_CONTEST, "Sänd (Score Attack)");
         set(INFINITE, "Öva utan tidsbegränsning");
         set(THREE_MINUTES, "Slå din poäng på 3 minuter");
 
-        set(RX_PRACTICE, "Ta emot (utbildning)");
-        set(RX_CONTEST, "Ta emot (Score Attack)");
         set(REPEAT, "UPPREPA");
 
         set(START, "STARTA");
         set(PICK_LANG_THEME_ON_SHARE, "Välj språk och tema när du delar poäng");
         set(CONTINUE, "FORTSÄTTA");
-        set(RX, "Få");
-        set(TX, "Överföra");
+        set(RX, "Motta");
+        set(TX, "Sända");
 }
 }

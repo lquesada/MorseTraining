@@ -100,20 +100,16 @@ public class LangPnb extends MorseLanguage {
         set(HIGH_SCORE, "ਉੱਚ ਸਕੋਰ");
 
                 
-        set(TX_PRACTICE, "ਸੰਚਾਰਿਤ (ਸਿਖਲਾਈ)");
-        set(TX_CONTEST, "ਟ੍ਰਾਂਸਮਿਟ (ਸਕੋਰ ਅਟੈਕ)");
         set(INFINITE, "ਬਿਨਾਂ ਸਮਾਂ ਸੀਮਾ ਦੇ ਅਭਿਆਸ ਕਰੋ");
         set(THREE_MINUTES, "ਆਪਣੇ ਸਕੋਰ ਨੂੰ 3 ਮਿੰਟ ਵਿੱਚ ਹਰਾਓ");
 
-        set(RX_PRACTICE, "ਪ੍ਰਾਪਤ ਕਰੋ (ਸਿਖਲਾਈ)");
-        set(RX_CONTEST, "ਪ੍ਰਾਪਤ ਕਰੋ (ਸਕੋਰ ਅਟੈਕ)");
         set(REPEAT, "دہراؤ");
 
         set(START, "شروع کرو");
         set(PICK_LANG_THEME_ON_SHARE, "اسکور شیئر کرتے وقت زبان اور تھیم کا انتخاب کریں۔");
         set(GAMES, "Games");
         set(CONTINUE, "ਜਾਰੀ ਰੱਖੋ");
-        set(RX, "ਪ੍ਰਾਪਤ ਕਰੋ");
-        set(TX, "ਸੰਚਾਰਿਤ ਕਰੋ");
+        set(RX, "وصول کرنا");
+        set(TX, "منتقل کرنا");
 }
 }

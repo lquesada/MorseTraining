@@ -109,19 +109,15 @@ public class LangKo extends MorseLanguage {
 
         set(MATCH_RESULTS, "결과");
                 
-        set(TX_PRACTICE, "전송(훈련)");
-        set(TX_CONTEST, "전송(스코어 어택)");
         set(INFINITE, "시간 제한 없이 연습하세요");
         set(THREE_MINUTES, "3분 안에 점수를 깨세요");
 
-        set(RX_PRACTICE, "수신 (훈련)");
-        set(RX_CONTEST, "리시브(스코어어택)");
         set(REPEAT, "반복");
 
         set(START, "시작");
         set(PICK_LANG_THEME_ON_SHARE, "점수 공유 시 언어 및 테마 선택");
         set(CONTINUE, "계속하다");
-        set(RX, "받다");
-        set(TX, "부치다");
+        set(RX, "수신하다");
+        set(TX, "송신하다");
 }
 }

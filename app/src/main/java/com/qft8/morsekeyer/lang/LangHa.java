@@ -108,20 +108,16 @@ public class LangHa extends MorseLanguage {
 
         set(MATCH_RESULTS, "Sakamakon wasa");
                 
-        set(TX_PRACTICE, "Watsawa ( Horonwa )");
-        set(TX_CONTEST, "Watsawa (Harin Maki)");
         set(INFINITE, "Yi aiki ba tare da iyakance lokaci ba");
         set(THREE_MINUTES, "Ka doke maki a cikin mintuna 3");
 
-        set(RX_PRACTICE, "Karba (Trans)");
-        set(RX_CONTEST, "Karɓa (Harin maki)");
         set(REPEAT, "MAIMAITA");
 
         set(START, "FARA");
         set(PICK_LANG_THEME_ON_SHARE, "Zaɓi yare da jigo lokacin raba maki");
         set(GAMES, "Wasanni");
         set(CONTINUE, "CIGABA");
-        set(RX, "Karba");
-        set(TX, "watsa");
+        set(RX, "Karɓa");
+        set(TX, "Aika");
 }
 }

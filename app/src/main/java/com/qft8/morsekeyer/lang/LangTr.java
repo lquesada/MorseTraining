@@ -109,19 +109,15 @@ public class LangTr extends MorseLanguage {
 
         set(MATCH_RESULTS, "Sonuçlar");
                 
-        set(TX_PRACTICE, "İletim (Eğitim)");
-        set(TX_CONTEST, "İletim (Skor Saldırısı)");
         set(INFINITE, "Zaman sınırı olmadan pratik yapın");
         set(THREE_MINUTES, "Skorunuzu 3 dakikada geçin");
 
-        set(RX_PRACTICE, "Alma (Eğitim)");
-        set(RX_CONTEST, "Al (Skor Saldırısı)");
         set(REPEAT, "TEKRARLA");
 
         set(START, "BAŞLA");
         set(PICK_LANG_THEME_ON_SHARE, "Puanları paylaşırken dil ve tema seçin");
         set(CONTINUE, "DEVAM ETMEK");
         set(RX, "Almak");
-        set(TX, "İletim");
+        set(TX, "İletmek");
 }
 }

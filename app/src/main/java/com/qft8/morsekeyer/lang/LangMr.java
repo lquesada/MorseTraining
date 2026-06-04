@@ -108,20 +108,16 @@ public class LangMr extends MorseLanguage {
 
         set(MATCH_RESULTS, "सामना निकाल");
                 
-        set(TX_PRACTICE, "प्रसारित (प्रशिक्षण)");
-        set(TX_CONTEST, "प्रसारित (स्कोर हल्ला)");
         set(INFINITE, "वेळेच्या मर्यादेशिवाय सराव करा");
         set(THREE_MINUTES, "तुमचा स्कोअर 3 मिनिटांत मात करा");
 
-        set(RX_PRACTICE, "प्राप्त करा (प्रशिक्षण)");
-        set(RX_CONTEST, "प्राप्त करा (स्कोअर अटॅक)");
         set(REPEAT, "पुन्हा सांगा");
 
         set(START, "सुरू करा");
         set(PICK_LANG_THEME_ON_SHARE, "स्कोर शेअर करताना भाषा आणि थीम निवडा");
         set(GAMES, "खेळ");
         set(CONTINUE, "सुरू ठेवा");
-        set(RX, "प्राप्त करा");
-        set(TX, "प्रसारित करा");
+        set(RX, "प्राप्त करणे");
+        set(TX, "प्रसारित करणे");
 }
 }

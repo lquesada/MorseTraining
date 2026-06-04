@@ -108,19 +108,15 @@ public class LangSk extends MorseLanguage {
         set(HIGH_SCORE, "Vysoké skóre");
 
                 
-        set(TX_PRACTICE, "Prenášať (školenie)");
-        set(TX_CONTEST, "Preniesť (skóre útok)");
         set(INFINITE, "Cvičte bez časového obmedzenia");
         set(THREE_MINUTES, "Prekonajte svoje skóre za 3 minúty");
 
-        set(RX_PRACTICE, "Prijať (školenie)");
-        set(RX_CONTEST, "Prijať (skóre útok)");
         set(REPEAT, "OPAKOVAŤ");
 
         set(START, "ŠTART");
         set(PICK_LANG_THEME_ON_SHARE, "Pri zdieľaní skóre vyberte jazyk a tému");
         set(CONTINUE, "POKRAČOVAŤ");
-        set(RX, "Prijať");
-        set(TX, "Preniesť");
+        set(RX, "Prijímať");
+        set(TX, "Vysielať");
 }
 }

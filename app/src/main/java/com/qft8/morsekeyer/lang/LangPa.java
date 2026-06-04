@@ -101,20 +101,16 @@ public class LangPa extends MorseLanguage {
 
         set(MATCH_RESULTS, "ਮੈਚ ਨਤੀਜੇ");
                 
-        set(TX_PRACTICE, "ਸੰਚਾਰਿਤ (ਸਿਖਲਾਈ)");
-        set(TX_CONTEST, "ਟ੍ਰਾਂਸਮਿਟ (ਸਕੋਰ ਅਟੈਕ)");
         set(INFINITE, "ਬਿਨਾਂ ਸਮਾਂ ਸੀਮਾ ਦੇ ਅਭਿਆਸ ਕਰੋ");
         set(THREE_MINUTES, "ਆਪਣੇ ਸਕੋਰ ਨੂੰ 3 ਮਿੰਟ ਵਿੱਚ ਹਰਾਓ");
 
-        set(RX_PRACTICE, "ਪ੍ਰਾਪਤ ਕਰੋ (ਸਿਖਲਾਈ)");
-        set(RX_CONTEST, "ਪ੍ਰਾਪਤ ਕਰੋ (ਸਕੋਰ ਅਟੈਕ)");
         set(REPEAT, "ਦੁਹਰਾਓ");
 
         set(START, "ਸ਼ੁਰੂ ਕਰੋ");
         set(PICK_LANG_THEME_ON_SHARE, "ਸਕੋਰ ਸਾਂਝੇ ਕਰਨ ਵੇਲੇ ਭਾਸ਼ਾ ਅਤੇ ਥੀਮ ਚੁਣੋ");
         set(GAMES, "ਖੇਡਾਂ");
         set(CONTINUE, "ਜਾਰੀ ਰੱਖੋ");
-        set(RX, "ਪ੍ਰਾਪਤ ਕਰੋ");
-        set(TX, "ਸੰਚਾਰਿਤ ਕਰੋ");
+        set(RX, "ਪ੍ਰਾਪਤ ਕਰਨਾ");
+        set(TX, "ਸੰਚਾਰ ਕਰਨਾ");
 }
 }

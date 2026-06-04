@@ -109,13 +109,9 @@ public class LangRo extends MorseLanguage {
 
         set(MATCH_RESULTS, "Rezultatele meciului");
                 
-        set(TX_PRACTICE, "Transmite (antrenament)");
-        set(TX_CONTEST, "Transmite (Scor Attack)");
         set(INFINITE, "Practică fără limită de timp");
         set(THREE_MINUTES, "Bate-ți scorul în 3 minute");
 
-        set(RX_PRACTICE, "Primire (antrenament)");
-        set(RX_CONTEST, "Primește (Scor Attack)");
         set(REPEAT, "REPETĂ");
 
         set(START, "START");

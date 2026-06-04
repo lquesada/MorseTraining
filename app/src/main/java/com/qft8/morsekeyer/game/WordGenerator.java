@@ -23,8 +23,9 @@ public class WordGenerator {
             "VR", "XX", "VU", "VT", "AP", "4S", "9V", "9M", "YB", "YC", "YD", "YE", "DU", "DV", "HS", "E2", "VK",
             "ZL", "ZS", "ZR", "ZT", "ZU", "SU", "CN", "7X", "3V", "5A", "9G", "5N", "5Z", "5H", "9J", "Z2", "V5"
     };
-    private static final String[] GAME_SUFFIXES = { "/P", "/M", "/MM", "/AM", "/QRP" };
-    
+    private static final String[] GAME_SUFFIXES = { "/P", "/M", "/MM", "/MA", "/QRP", "/1", "/2", "/3", "/4", "/5",
+            "/6", "/7", "/8", "/9" };
+
     private static final String[] Q_CODES_WITH_QUESTION = {
             "QTH?", "QRZ?", "QSL?", "QRL?", "QRM?", "QRN?", "QSB?", "QRK?", "QSA?",
             "QRI?", "QSY?", "QRO?", "QRP?", "QRS?", "QRQ?", "QSO?", "QRU?", "QRV?", "QTR?"
@@ -117,8 +118,10 @@ public class WordGenerator {
                         suffixChance = 30 + extra * 10;
                     }
 
-                    if (prefixChance > 100) prefixChance = 100;
-                    if (suffixChance > 100) suffixChance = 100;
+                    if (prefixChance > 100)
+                        prefixChance = 100;
+                    if (suffixChance > 100)
+                        suffixChance = 100;
 
                     if (prefixChance > 0 && Math.random() * 100 < prefixChance) {
                         String p = ITU_PREFIXES[(int) (Math.random() * ITU_PREFIXES.length)];

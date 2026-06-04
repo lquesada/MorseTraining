@@ -108,20 +108,16 @@ public class LangEo extends MorseLanguage {
 
         set(MATCH_RESULTS, "Matĉaj rezultoj");
                 
-        set(TX_PRACTICE, "Transdono (Trejnado)");
-        set(TX_CONTEST, "Transsendi (Poentaro-Atako)");
         set(INFINITE, "Praktiku sen tempolimo");
         set(THREE_MINUTES, "Batu vian poentaron en 3 minutoj");
 
-        set(RX_PRACTICE, "Ricevu (Trejnado)");
-        set(RX_CONTEST, "Ricevu (Poentaro-Atako)");
         set(REPEAT, "RIPETI");
 
         set(START, "KOMENCI");
         set(PICK_LANG_THEME_ON_SHARE, "Elekti lingvon kaj etoson kiam vi dividas poentojn");
         set(GAMES, "Ludoj");
         set(CONTINUE, "DAŬRU");
-        set(RX, "Ricevu");
-        set(TX, "Transsendi");
+        set(RX, "Ricevi");
+        set(TX, "Sendi");
 }
 }

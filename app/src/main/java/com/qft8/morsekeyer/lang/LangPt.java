@@ -109,13 +109,9 @@ public class LangPt extends MorseLanguage {
 
         set(MATCH_RESULTS, "Resultados");
                 
-        set(TX_PRACTICE, "Transmitir (Treinamento)");
-        set(TX_CONTEST, "Transmitir (ataque de pontuação)");
         set(INFINITE, "Pratique sem limite de tempo");
         set(THREE_MINUTES, "Bata sua pontuação em 3 minutos");
 
-        set(RX_PRACTICE, "Receber (Treinamento)");
-        set(RX_CONTEST, "Receber (Ataque de Pontuação)");
         set(REPEAT, "REPETIR");
 
         set(START, "COMEÇAR");

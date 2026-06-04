@@ -108,19 +108,15 @@ public class LangNo extends MorseLanguage {
         set(HIGH_SCORE, "Høy score");
 
                 
-        set(TX_PRACTICE, "Sende (opplæring)");
-        set(TX_CONTEST, "Sende (Score Attack)");
         set(INFINITE, "Tren uten tidsbegrensning");
         set(THREE_MINUTES, "Slå poengsummen din på 3 minutter");
 
-        set(RX_PRACTICE, "Motta (opplæring)");
-        set(RX_CONTEST, "Motta (score angrep)");
         set(REPEAT, "GJENTA");
 
         set(START, "START");
         set(PICK_LANG_THEME_ON_SHARE, "Velg språk og tema når du deler poeng");
         set(CONTINUE, "FORTSETTE");
         set(RX, "Motta");
-        set(TX, "Overføre");
+        set(TX, "Sende");
 }
 }

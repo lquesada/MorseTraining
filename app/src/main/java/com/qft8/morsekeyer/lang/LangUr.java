@@ -108,20 +108,16 @@ public class LangUr extends MorseLanguage {
 
         set(MATCH_RESULTS, "میچ کے نتائج");
                 
-        set(TX_PRACTICE, "ترسیل (تربیت)");
-        set(TX_CONTEST, "ٹرانسمٹ (اسکور اٹیک)");
         set(INFINITE, "بغیر وقت کی مشق کریں۔");
         set(THREE_MINUTES, "اپنے اسکور کو 3 منٹ میں مات دیں۔");
 
-        set(RX_PRACTICE, "حاصل کریں (تربیت)");
-        set(RX_CONTEST, "وصول کریں (اسکور اٹیک)");
         set(REPEAT, "دہراؤ");
 
         set(START, "شروع کریں");
         set(PICK_LANG_THEME_ON_SHARE, "اسکور شیئر کرتے وقت زبان اور تھیم منتخب کریں");
         set(GAMES, "گیمز");
         set(CONTINUE, "جاری رکھیں");
-        set(RX, "وصول کریں۔");
+        set(RX, "وصول کرنا");
         set(TX, "منتقل کرنا");
 }
 }

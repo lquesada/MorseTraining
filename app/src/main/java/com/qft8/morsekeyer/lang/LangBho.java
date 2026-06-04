@@ -101,20 +101,16 @@ public class LangBho extends MorseLanguage {
 
         set(MATCH_RESULTS, "मैच के नतीजे");
                 
-        set(TX_PRACTICE, "संचरण (प्रशिक्षण) के बा .");
-        set(TX_CONTEST, "संचारित (स्कोर हमला) के बा।");
         set(INFINITE, "बिना कवनो समय सीमा के अभ्यास करीं");
         set(THREE_MINUTES, "3 मिनट में आपन स्कोर हरा दीं");
 
-        set(RX_PRACTICE, "प्राप्त (प्रशिक्षण) के बा .");
-        set(RX_CONTEST, "प्राप्त (स्कोर हमला) के बा।");
         set(REPEAT, "दोहराईं");
 
         set(START, "शुरू करीं");
         set(PICK_LANG_THEME_ON_SHARE, "स्कोर साझा करत समय भाषा आ थीम चुनीं");
         set(GAMES, "खेल");
         set(CONTINUE, "जारी रखना");
-        set(RX, "Receive");
-        set(TX, "Transmit");
+        set(RX, "प्राप्त करीं");
+        set(TX, "प्रसारित करीं");
 }
 }

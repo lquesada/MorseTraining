@@ -108,19 +108,15 @@ public class LangEl extends MorseLanguage {
         set(HIGH_SCORE, "Υψηλή βαθμολογία");
 
                 
-        set(TX_PRACTICE, "Μετάδοση (Εκπαίδευση)");
-        set(TX_CONTEST, "Μετάδοση (Επίθεση σκορ)");
         set(INFINITE, "Εξάσκηση χωρίς χρονικό όριο");
         set(THREE_MINUTES, "Κερδίστε το σκορ σας σε 3 λεπτά");
 
-        set(RX_PRACTICE, "Λήψη (Εκπαίδευση)");
-        set(RX_CONTEST, "Λήψη (Επίθεση βαθμολογίας)");
         set(REPEAT, "ΕΠΑΝΆΛΗΨΗ");
 
         set(START, "ΈΝΑΡΞΗ");
         set(PICK_LANG_THEME_ON_SHARE, "Επιλέξτε γλώσσα και θέμα κατά την κοινή χρήση βαθμολογιών");
         set(CONTINUE, "ΣΥΝΕΧΙΖΩ");
         set(RX, "Λαμβάνω");
-        set(TX, "Μεταδίδω");
+        set(TX, "Εκπέμπω");
 }
 }

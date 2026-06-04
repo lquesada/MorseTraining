@@ -101,13 +101,9 @@ public class LangUz extends MorseLanguage {
 
         set(MATCH_RESULTS, "O'yin natijalari");
                 
-        set(TX_PRACTICE, "O'tkazish (trening)");
-        set(TX_CONTEST, "O'tkazish (baho hujumi)");
         set(INFINITE, "Vaqt cheklovisiz mashq qiling");
         set(THREE_MINUTES, "Hisobingizni 3 daqiqada yengib chiqing");
 
-        set(RX_PRACTICE, "Qabul qilish (trening)");
-        set(RX_CONTEST, "Qabul qilish (hujum balli)");
         set(REPEAT, "TAKRORLASH");
 
         set(START, "BOSHLASH");
@@ -115,6 +111,6 @@ public class LangUz extends MorseLanguage {
         set(GAMES, "O'yinlar");
         set(CONTINUE, "DAVOM ETISH");
         set(RX, "Qabul qilish");
-        set(TX, "O'tkazish");
+        set(TX, "Uzatish");
 }
 }

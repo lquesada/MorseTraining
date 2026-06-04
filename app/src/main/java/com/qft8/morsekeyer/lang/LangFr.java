@@ -109,13 +109,9 @@ public class LangFr extends MorseLanguage {
 
         set(MATCH_RESULTS, "Résultats");
                 
-        set(TX_PRACTICE, "Transmettre (Formation)");
-        set(TX_CONTEST, "Transmettre (Score Attack)");
         set(INFINITE, "Entraînez-vous sans limite de temps");
         set(THREE_MINUTES, "Battez votre score en 3 minutes");
 
-        set(RX_PRACTICE, "Recevoir (Formation)");
-        set(RX_CONTEST, "Recevoir (Score Attack)");
         set(REPEAT, "RÉPÉTER");
 
         set(START, "DÉMARRER");

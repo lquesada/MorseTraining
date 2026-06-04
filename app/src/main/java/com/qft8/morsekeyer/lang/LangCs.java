@@ -102,19 +102,15 @@ public class LangCs extends MorseLanguage {
 
         set(MATCH_RESULTS, "Výsledky zápasů");
                 
-        set(TX_PRACTICE, "Přenášet (školení)");
-        set(TX_CONTEST, "Přenést (útok skóre)");
         set(INFINITE, "Cvičte bez časového omezení");
         set(THREE_MINUTES, "Překonejte své skóre za 3 minuty");
 
-        set(RX_PRACTICE, "Příjem (školení)");
-        set(RX_CONTEST, "Příjem (útok skóre)");
         set(REPEAT, "OPAKOVAT");
 
         set(START, "ZAČÍT");
         set(PICK_LANG_THEME_ON_SHARE, "Vyberte jazyk a motiv při sdílení skóre");
         set(CONTINUE, "POKRAČOVAT");
-        set(RX, "Dostávat");
-        set(TX, "Přenést");
+        set(RX, "Přijímat");
+        set(TX, "Vysílat");
 }
 }

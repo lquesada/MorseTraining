@@ -102,13 +102,9 @@ public class LangCa extends MorseLanguage {
 
         set(MATCH_RESULTS, "Resultats del partit");
                 
-        set(TX_PRACTICE, "Transmetre (entrenament)");
-        set(TX_CONTEST, "Transmissió (atac de puntuació)");
         set(INFINITE, "Practica sense límit de temps");
         set(THREE_MINUTES, "Supera la teva puntuació en 3 minuts");
 
-        set(RX_PRACTICE, "Rebre (formació)");
-        set(RX_CONTEST, "Rebre (atac de puntuació)");
         set(REPEAT, "REPETEIX");
 
         set(START, "INICIA");

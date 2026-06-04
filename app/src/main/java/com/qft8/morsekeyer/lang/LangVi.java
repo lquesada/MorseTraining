@@ -108,20 +108,16 @@ public class LangVi extends MorseLanguage {
 
         set(MATCH_RESULTS, "Kết quả");
                 
-        set(TX_PRACTICE, "Truyền (Đào tạo)");
-        set(TX_CONTEST, "Truyền (Tấn công điểm)");
         set(INFINITE, "Thực hành không giới hạn thời gian");
         set(THREE_MINUTES, "Đánh bại số điểm của bạn trong 3 phút");
 
-        set(RX_PRACTICE, "Nhận (Đào tạo)");
-        set(RX_CONTEST, "Nhận (Tấn công điểm)");
         set(REPEAT, "LẶP LẠI");
 
         set(START, "BẮT ĐẦU");
         set(PICK_LANG_THEME_ON_SHARE, "Chọn ngôn ngữ và chủ đề khi chia sẻ điểm số");
         set(GAMES, "Trò chơi");
         set(CONTINUE, "TIẾP TỤC");
-        set(RX, "Nhận được");
-        set(TX, "truyền");
+        set(RX, "Nhận");
+        set(TX, "Truyền");
 }
 }

@@ -297,7 +297,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:text="Tx Practice\n(infinite)"
-                android:textSize="23sp"
+                android:textSize="22sp"
                 android:lineSpacingExtra="6sp"
                 android:backgroundTint="#FF444444"
                 android:textColor="#FFFFFFFF" />
@@ -308,7 +308,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:text="Tx Contest\n(3 minutes)"
-                android:textSize="23sp"
+                android:textSize="22sp"
                 android:lineSpacingExtra="6sp"
                 android:backgroundTint="#FF444444"
                 android:textColor="#FFFFFFFF" />
@@ -328,7 +328,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:text="Rx Practice\n(infinite)"
-                android:textSize="23sp"
+                android:textSize="22sp"
                 android:lineSpacingExtra="6sp"
                 android:backgroundTint="#FF2A2A2A"
                 android:textColor="#FF888888" />
@@ -339,7 +339,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:text="Rx Contest\n(3 minutes)"
-                android:textSize="23sp"
+                android:textSize="22sp"
                 android:lineSpacingExtra="6sp"
                 android:backgroundTint="#FF2A2A2A"
                 android:textColor="#FF888888" />

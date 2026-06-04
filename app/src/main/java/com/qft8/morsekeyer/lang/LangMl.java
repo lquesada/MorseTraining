@@ -101,13 +101,9 @@ public class LangMl extends MorseLanguage {
 
         set(MATCH_RESULTS, "മത്സര ഫലങ്ങൾ");
                 
-        set(TX_PRACTICE, "ട്രാൻസ്മിറ്റ് (പരിശീലനം)");
-        set(TX_CONTEST, "ട്രാൻസ്മിറ്റ് (സ്കോർ ആക്രമണം)");
         set(INFINITE, "സമയപരിധിയില്ലാതെ പരിശീലിക്കുക");
         set(THREE_MINUTES, "3 മിനിറ്റിനുള്ളിൽ നിങ്ങളുടെ സ്കോർ മറികടക്കുക");
 
-        set(RX_PRACTICE, "സ്വീകരിക്കുക (പരിശീലനം)");
-        set(RX_CONTEST, "സ്വീകരിക്കുക (സ്കോർ ആക്രമണം)");
         set(REPEAT, "ആവർത്തിക്കുക");
 
         set(START, "തുടങ്ങുക");
@@ -115,6 +111,6 @@ public class LangMl extends MorseLanguage {
         set(GAMES, "ഗെയിമുകൾ");
         set(CONTINUE, "തുടരുക");
         set(RX, "സ്വീകരിക്കുക");
-        set(TX, "സംപ്രേക്ഷണം ചെയ്യുക");
+        set(TX, "പ്രക്ഷേപണം ചെയ്യുക");
 }
 }

@@ -362,6 +362,12 @@ public class GameController {
                             b.setPadding(0, 0, 0, 0);
                             b.setBackgroundTintList(android.content.res.ColorStateList.valueOf(initBg));
                             b.setAllCaps(false); // keep it looking consistent
+                            
+                            android.graphics.Typeface mono = androidx.core.content.res.ResourcesCompat.getFont(activity, R.font.roboto_mono);
+                            if (mono != null) {
+                                b.setTypeface(mono, android.graphics.Typeface.BOLD);
+                            }
+
                             androidx.core.widget.TextViewCompat.setAutoSizeTextTypeWithDefaults(
                                     b, androidx.core.widget.TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM);
                             btn = b;
@@ -602,11 +608,7 @@ public class GameController {
         }
 
         if (rxGreenDelayActive) {
-            cancelRxGreenDelay();
-            currentCustomInput = "";
-            rxErrorState = false;
-            java.util.Arrays.fill(rxFixedMap, false);
-            updateRxTextDisplay(false, false);
+            return;
         }
 
         if (key.equals("CLEAR")) {
@@ -693,7 +695,13 @@ public class GameController {
                                 });
                             }
                         };
-                        gameHandler.postDelayed(rxPlayRunnable, 500);
+                        android.content.SharedPreferences prefs = activity.getSharedPreferences("morseKeyerSettings", android.content.Context.MODE_PRIVATE);
+                        int wpm = prefs.getInt("wpm", 15);
+                        boolean strict = prefs.getBoolean("strict", false);
+                        int iws = prefs.getInt("interwordSpacing", 100);
+                        double iwsFactor = strict ? 1.0 : (iws / 100.0);
+                        long delayMs = (long) (7.0 * iwsFactor * (1200.0 / wpm));
+                        gameHandler.postDelayed(rxPlayRunnable, delayMs);
                     } else {
                         if (gameActive && isRxMode && morseKeyer != null) {
                             morseKeyer.playText(currentRxWord, () -> {
@@ -734,39 +742,46 @@ public class GameController {
         }
 
         if (allCorrect && !currentCustomInput.contains("_")) {
+            if (morseKeyer != null) {
+                morseKeyer.cancelAll();
+            }
+
             updateRxTextDisplay(false, true); // show green
             gameScore += currentRxWord.length();
             gameWordsSolved++;
             updateGameStats();
 
-            currentRxWord = WordGenerator.generateGameWord(gameWordsSolved, null);
             gameRxBtnAction.setText(LanguageManager.get(MorseLanguage.REPEAT));
-            if (morseKeyer != null) {
-                setRxActionBtnEnabled(false);
-                rxPlayRunnable = () -> {
-                    if (gameActive && isRxMode && morseKeyer != null) {
-                        morseKeyer.playText(currentRxWord, () -> {
-                            gameHandler.post(() -> setRxActionBtnEnabled(true));
-                        });
-                    }
-                };
-                gameHandler.postDelayed(rxPlayRunnable, 500);
-            }
+            setRxActionBtnEnabled(false);
 
             rxGreenDelayActive = true;
             rxGreenDelayRunnable = () -> {
                 if (gameActive && isRxMode && rxGreenDelayActive) {
                     rxGreenDelayActive = false;
+                    
                     currentCustomInput = "";
                     rxErrorState = false;
                     java.util.Arrays.fill(rxFixedMap, false);
+                    currentRxWord = WordGenerator.generateGameWord(gameWordsSolved, null);
                     updateRxTextDisplay(false, false);
+
+                    if (morseKeyer != null) {
+                        morseKeyer.playText(currentRxWord, () -> {
+                            gameHandler.post(() -> setRxActionBtnEnabled(true));
+                        });
+                    }
                 }
             };
-            gameHandler.postDelayed(rxGreenDelayRunnable, 500);
+            android.content.SharedPreferences prefs = activity.getSharedPreferences("morseKeyerSettings", android.content.Context.MODE_PRIVATE);
+            int wpm = prefs.getInt("wpm", 15);
+            boolean strict = prefs.getBoolean("strict", false);
+            int iws = prefs.getInt("interwordSpacing", 100);
+            double iwsFactor = strict ? 1.0 : (iws / 100.0);
+            long delayMs = (long) (7.0 * iwsFactor * (1200.0 / wpm));
+            gameHandler.postDelayed(rxGreenDelayRunnable, delayMs);
         } else {
             rxErrorState = true;
-            updateRxTextDisplay(true, false);
+            updateRxTextDisplay(true, false); // show red
 
             gameRxBtnAction.setText(LanguageManager.get(MorseLanguage.REPEAT));
             setRxActionBtnEnabled(true);

@@ -41,14 +41,14 @@ function applyTranslations() {
         const isInSubdir = window.location.pathname.includes('/privacy/');
         const descKey = isInSubdir ? 'PRIVACY_META_DESC' : 'META_DESC';
         const metaDesc = document.querySelector('meta[name="description"]');
-        if (metaDesc && langData[descKey]) {
+        if (metaDesc && langData[descKey] !== undefined) {
             metaDesc.content = langData[descKey];
         }
         
         // Replace content in elements marked with data-i18n
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
-            if (langData[key]) {
+            if (langData[key] !== undefined) {
                 // If it's an image, replace the alt text instead of inner HTML
                 if (el.tagName === 'IMG') {
                     el.alt = langData[key];

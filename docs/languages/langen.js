@@ -56,7 +56,8 @@ const langData = {
     "DOWNLOAD_DATE": "Date:",
     "DOWNLOAD_SIZE": "Size:",
     // The link text to actually download the APK
-    "DOWNLOAD": "Download",
+    "DOWNLOAD_BEFORE": "Download ",
+    "DOWNLOAD_AFTER": "",
 
     // ==========================================
     // FOOTER

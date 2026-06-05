@@ -61,6 +61,8 @@ public class GameController {
 
     private boolean gameActive = false;
     private int gameTimeLimit = 0;
+    private boolean isPaused = false;
+    private Runnable rxPlayRunnable = null;
     private boolean rxGreenDelayActive = false;
     private boolean rxErrorState = false;
     private boolean[] rxFixedMap = new boolean[50];
@@ -172,7 +174,7 @@ public class GameController {
 
             @Override
             public void run() {
-                if (!gameActive)
+                if (!gameActive || isPaused)
                     return;
                 ticks++;
                 if (!gameStarted) {
@@ -683,14 +685,15 @@ public class GameController {
                         java.util.Arrays.fill(rxFixedMap, false);
                         updateRxTextDisplay(false, false);
 
-                        gameHandler.postDelayed(() -> {
+                        rxPlayRunnable = () -> {
                             if (gameActive && isRxMode && morseKeyer != null) {
                                 gameStarted = true;
                                 morseKeyer.playText(currentRxWord, () -> {
                                     gameHandler.post(() -> setRxActionBtnEnabled(true));
                                 });
                             }
-                        }, 500);
+                        };
+                        gameHandler.postDelayed(rxPlayRunnable, 500);
                     } else {
                         if (gameActive && isRxMode && morseKeyer != null) {
                             morseKeyer.playText(currentRxWord, () -> {
@@ -740,14 +743,14 @@ public class GameController {
             gameRxBtnAction.setText(LanguageManager.get(MorseLanguage.REPEAT));
             if (morseKeyer != null) {
                 setRxActionBtnEnabled(false);
-                morseKeyer.cancelAll();
-                gameHandler.postDelayed(() -> {
+                rxPlayRunnable = () -> {
                     if (gameActive && isRxMode && morseKeyer != null) {
                         morseKeyer.playText(currentRxWord, () -> {
                             gameHandler.post(() -> setRxActionBtnEnabled(true));
                         });
                     }
-                }, 500);
+                };
+                gameHandler.postDelayed(rxPlayRunnable, 500);
             }
 
             rxGreenDelayActive = true;
@@ -1526,6 +1529,36 @@ public class GameController {
         if (currentShareView != null) {
             ((ViewGroup) activity.findViewById(R.id.root_layout)).removeView(currentShareView);
             currentShareView = null;
+        }
+    }
+
+    public void onPause() {
+        if (gameActive) {
+            isPaused = true;
+            gameHandler.removeCallbacks(gameRunnable);
+            if (isRxMode) {
+                if (rxPlayRunnable != null) {
+                    gameHandler.removeCallbacks(rxPlayRunnable);
+                }
+                cancelRxGreenDelay();
+            }
+        }
+    }
+
+    public void onResume() {
+        if (gameActive) {
+            isPaused = false;
+            gameHandler.removeCallbacks(gameRunnable);
+            gameHandler.postDelayed(gameRunnable, 500);
+            if (isRxMode) {
+                if (gameRxBtnAction != null) {
+                    String text = gameRxBtnAction.getText().toString();
+                    if (text.equals(LanguageManager.get(MorseLanguage.START)) ||
+                            text.equals(LanguageManager.get(MorseLanguage.REPEAT))) {
+                        setRxActionBtnEnabled(true);
+                    }
+                }
+            }
         }
     }
 }

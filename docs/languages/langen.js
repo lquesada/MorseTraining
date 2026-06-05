@@ -52,9 +52,11 @@ const langData = {
     // Second paragraph regarding manual APK installation
     "DOWNLOAD_TEXT_2": "You may also download the .apk file below and install it manually. This may require further fiddling with Android (granting permissions to install apps, enabling developer options, etc.)",
     // Version and date information for the APK download
-    "DOWNLOAD_VERSION_INFO": "<strong>Version:</strong> 1.06 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Date:</strong> 2026-06-04 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Size:</strong> 310 KB",
+    "DOWNLOAD_VERSION": "Version:",
+    "DOWNLOAD_DATE": "Date:",
+    "DOWNLOAD_SIZE": "Size:",
     // The link text to actually download the APK
-    "DOWNLOAD_APK_LINK": "Download MorseTraining-v1.06.apk",
+    "DOWNLOAD": "Download",
 
     // ==========================================
     // FOOTER

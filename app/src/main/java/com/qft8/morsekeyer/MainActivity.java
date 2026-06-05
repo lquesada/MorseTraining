@@ -2626,6 +2626,9 @@ public class MainActivity extends Activity {
         super.onResume();
         initAudioEngine();
         applyKeepScreenOn();
+        if (gameController != null) {
+            gameController.onResume();
+        }
     }
 
     @Override
@@ -2652,6 +2655,9 @@ public class MainActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
+        if (gameController != null) {
+            gameController.onPause();
+        }
         if (keyer != null)
             keyer.cancelAll();
         keyer.handlePaddlePress("left", false);

@@ -33,7 +33,7 @@ public class MorseSettings {
     public boolean showNextWordIndicator = true;
     public String letterColor = "green";
     public int fontSize = 35;
-    public String appTheme = "system";
+    public String appTheme = "dark";
     public float bufferMs = 25.0f;
     public float envelopeMs = 0.75f;
     public float chunkMs = 4.0f;
@@ -65,8 +65,14 @@ public class MorseSettings {
         showNextWordIndicator = prefs.getBoolean("showNextWordIndicator", true);
         letterColor = prefs.getString("letterColor", "green");
         fontSize = prefs.getInt("fontSize", 35);
-        appTheme = prefs.getString("appTheme", "system");
-        if ("white".equals(appTheme)) appTheme = "light";
+        appTheme = prefs.getString("appTheme", "dark");
+        
+        boolean needsSave = false;
+        if ("system".equals(appTheme) || "white".equals(appTheme)) {
+            appTheme = "dark";
+            needsSave = true;
+        }
+        
         bufferMs = prefs.getFloat("bufferMs", 25.0f);
         envelopeMs = prefs.getFloat("envelopeMs", 0.75f);
         chunkMs = prefs.getFloat("chunkMs", 4.0f);
@@ -75,7 +81,15 @@ public class MorseSettings {
         keepAlive = prefs.getBoolean("keepAlive", true);
         keepScreenOn = prefs.getBoolean("keepScreenOn", false);
         language = prefs.getString("language", "system");
-        keyboardType = prefs.getString("keyboardType", "QWERTY");
+        
+        boolean kbNeedsSave = false;
+        if (!prefs.contains("keyboardType")) {
+            keyboardType = guessKeyboardType(language);
+            needsSave = true;
+        } else {
+            keyboardType = prefs.getString("keyboardType", "QWERTY");
+        }
+        
         pickLangThemeOnShare = prefs.getBoolean("pickLangThemeOnShare", false);
 
         String choicesStr = prefs.getString("decoderChoices", "{}");
@@ -88,6 +102,10 @@ public class MorseSettings {
                 decoderChoices.put(k, obj.getString(k));
             }
         } catch (Exception e) {}
+        
+        if (needsSave) {
+            save(ctx);
+        }
     }
 
     public void save(Context ctx) {
@@ -151,7 +169,7 @@ public class MorseSettings {
         showNextWordIndicator = true;
         letterColor = "green";
         fontSize = 35;
-        appTheme = "system";
+        appTheme = "dark";
         bufferMs = 25.0f;
         envelopeMs = 0.75f;
         chunkMs = 4.0f;
@@ -160,8 +178,26 @@ public class MorseSettings {
         keepAlive = true;
         keepScreenOn = false;
         language = "system";
-        keyboardType = "QWERTY";
+        keyboardType = guessKeyboardType(language);
         pickLangThemeOnShare = false;
         decoderChoices.clear();
+    }
+
+    private String guessKeyboardType(String langSetting) {
+        String langCode = langSetting;
+        if ("system".equals(langSetting) || langSetting == null) {
+            langCode = java.util.Locale.getDefault().getLanguage();
+        }
+        if (langCode != null) {
+            langCode = langCode.toLowerCase();
+            if (langCode.equals("de") || langCode.equals("cs") || langCode.equals("sk") ||
+                langCode.equals("hu") || langCode.equals("ro") || langCode.equals("hr") ||
+                langCode.equals("sr") || langCode.equals("sl") || langCode.equals("bs")) {
+                return "QWERTZ";
+            } else if (langCode.equals("fr") || langCode.equals("wa")) {
+                return "AZERTY";
+            }
+        }
+        return "QWERTY";
     }
 }

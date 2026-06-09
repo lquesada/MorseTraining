@@ -370,12 +370,7 @@ public class MainActivity extends Activity {
     }
 
     private boolean isLight() {
-        if ("system".equals(settings.appTheme)) {
-            int nightMode = getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
-            return (nightMode == Configuration.UI_MODE_NIGHT_NO);
-        } else {
-            return "light".equals(settings.appTheme);
-        }
+        return "light".equals(settings.appTheme);
     }
 
     private void applyUiSettings() {
@@ -433,13 +428,7 @@ public class MainActivity extends Activity {
     }
 
     private void applyTheme() {
-        boolean dark;
-        if ("system".equals(settings.appTheme)) {
-            int nightMode = getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
-            dark = (nightMode != Configuration.UI_MODE_NIGHT_NO);
-        } else {
-            dark = "dark".equals(settings.appTheme);
-        }
+        boolean dark = "dark".equals(settings.appTheme);
 
         boolean themeChanged = (dark != lastThemeDark);
         lastThemeDark = dark;
@@ -727,13 +716,7 @@ public class MainActivity extends Activity {
     }
 
     private int getDialogTheme() {
-        boolean dark;
-        if ("system".equals(settings.appTheme)) {
-            int nightMode = getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
-            dark = (nightMode != Configuration.UI_MODE_NIGHT_NO);
-        } else {
-            dark = "dark".equals(settings.appTheme);
-        }
+        boolean dark = "dark".equals(settings.appTheme);
         return dark ? android.R.style.Theme_DeviceDefault_Dialog : android.R.style.Theme_DeviceDefault_Light_Dialog;
     }
 
@@ -1153,9 +1136,8 @@ public class MainActivity extends Activity {
         root.addView(subLabel(APP_THEME));
         dlgAppTheme = new Spinner(dialogCtx);
         dlgAppTheme.setTag("THEME_SPINNER");
-        String[] themes = { "system", "dark", "light" };
+        String[] themes = { "dark", "light" };
         String[] themesDisp = {
-            LanguageManager.get(SYSTEM_SETTING),
             LanguageManager.get(DARK_THEME),
             LanguageManager.get(LIGHT_THEME)
         };
@@ -1555,13 +1537,7 @@ public class MainActivity extends Activity {
     }
 
     private String[] getAvailableColors() {
-        boolean dark;
-        if ("system".equals(settings.appTheme)) {
-            int nightMode = getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
-            dark = (nightMode != Configuration.UI_MODE_NIGHT_NO);
-        } else {
-            dark = "dark".equals(settings.appTheme);
-        }
+        boolean dark = "dark".equals(settings.appTheme);
         if (dark)
             return new String[] { "white", "red", "orange", "yellow", "green", "cyan", "blue", "purple", "pink" };
         else
@@ -1603,7 +1579,7 @@ public class MainActivity extends Activity {
         dlgKeepScreenOn.setChecked(settings.keepScreenOn);
         dlgKeepAlive.setChecked(settings.keepAlive);
 
-        String[] themes = { "system", "dark", "light" };
+        String[] themes = { "dark", "light" };
         for (int i = 0; i < themes.length; i++) {
             if (themes[i].equals(settings.appTheme)) {
                 dlgAppTheme.setSelection(i);

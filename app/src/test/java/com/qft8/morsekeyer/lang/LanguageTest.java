@@ -63,4 +63,40 @@ public class LanguageTest {
             fail("Language synchronization errors found:\n" + errorMsg.toString());
         }
     }
+
+    @Test
+    public void testWindlereyeSupportLink() throws Exception {
+        // Ensure static initialization
+        LanguageManager.getAvailableLanguages();
+        
+        Field languagesField = LanguageManager.class.getDeclaredField("LANGUAGES");
+        languagesField.setAccessible(true);
+        Map<String, MorseLanguage> languages = (Map<String, MorseLanguage>) languagesField.get(null);
+        
+        Field stringsField = MorseLanguage.class.getDeclaredField("strings");
+        stringsField.setAccessible(true);
+        
+        boolean hasError = false;
+        StringBuilder errorMsg = new StringBuilder();
+        
+        for (Map.Entry<String, MorseLanguage> entry : languages.entrySet()) {
+            String langCode = entry.getKey();
+            MorseLanguage langInstance = entry.getValue();
+            
+            Map<String, String> strings = (Map<String, String>) stringsField.get(langInstance);
+            
+            String windlereyeStr = strings.get(MorseLanguage.SUPPORT_WINDLEREYE);
+            if (windlereyeStr != null && !windlereyeStr.contains("Windlereye")) {
+                hasError = true;
+                errorMsg.append("Language [").append(langCode).append("] does not contain 'Windlereye' in SUPPORT_WINDLEREYE string: ").append(windlereyeStr).append("\n");
+            } else if (windlereyeStr == null) {
+                hasError = true;
+                errorMsg.append("Language [").append(langCode).append("] is missing SUPPORT_WINDLEREYE string entirely.\n");
+            }
+        }
+        
+        if (hasError) {
+            fail("Windlereye string errors found:\n" + errorMsg.toString());
+        }
+    }
 }

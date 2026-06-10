@@ -51,7 +51,7 @@ public class LangMr extends MorseLanguage {
                 "सामान्य समस्या: जर आवाजात जास्त क्लिक येत असतील तर 'सॉ-टूथ' पर्याय वापरून पहा। विलंब जास्त असल्यास बफर कमी करा।\n\n" +
                 "कीबोर्ड बटणे:\n" +
                 "  डावे: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  उजवे: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  उजवे: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "की");
         

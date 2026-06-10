@@ -51,7 +51,7 @@ public class LangAr extends MorseLanguage {
                 "مشاكل شائعة: إذا كان الصوت متقطعاً جداً، جرب خيار 'سن المنشار' أو عدل الغلاف. إذا كان التأخير عالياً، قلل المخزن.\n\n" +
                 "مفاتيح لوحة المفاتيح:\n" +
                 "  اليسار: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  اليمين: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  اليمين: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "مفتاح");
         

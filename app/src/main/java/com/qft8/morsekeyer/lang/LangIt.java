@@ -51,7 +51,7 @@ public class LangIt extends MorseLanguage {
                 "Problemi comuni: Se il suono ha troppi clic, prova l'opzione 'Dente di sega' o modifica l'inviluppo. Se la latenza è alta, riduci il buffer. Se il suono si interrompe, aumentalo.\n\n" +
                 "Tasti della tastiera:\n" +
                 "  Sinistra: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Destra: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Destra: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Tasto");
         

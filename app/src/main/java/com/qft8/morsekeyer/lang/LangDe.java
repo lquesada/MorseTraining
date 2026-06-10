@@ -51,7 +51,7 @@ public class LangDe extends MorseLanguage {
                 "Häufige Probleme: Wenn es zu stark klickt, Sägezahn-Option wählen oder Envelope anpassen. Bei hoher Latenz Puffer verringern. Wenn der Ton aussetzt, Puffer erhöhen.\n\n" +
                 "Tastaturbelegung:\n" +
                 "  Links: [  A  ,  \u2190  L-Strg  L-Umschalt  L-Alt  Num.  F1\n" +
-                "  Rechts: ]  D  .  \u2192  R-Strg  R-Umschalt  R-Alt  NumEnter  F2");
+                "  Rechts: ]  D  S  .  \u2192  R-Strg  R-Umschalt  R-Alt  NumEnter  F2");
 
         set(KEY, "Taste");
         

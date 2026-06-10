@@ -51,7 +51,7 @@ public class LangTh extends MorseLanguage {
                 "ปัญหาที่พบบ่อย: ถ้าเสียงมีคลิกมากเกินไป ให้ลองใช้ตัวเลือก 'ฟันเลื่อย' หรือเปลี่ยน envelope ถ้าความล่าช้าสูง ให้ลดบัฟเฟอร์\n\n" +
                 "ปุ่มคีย์บอร์ด:\n" +
                 "  ซ้าย: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  ขวา: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  ขวา: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "คีย์");
         

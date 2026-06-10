@@ -51,7 +51,7 @@ public class LangAm extends MorseLanguage {
                 "የተለመዱ ችግሮች፡ ድምጹ በጣም ጠቅታ ካለው 'Sawtooth' ይሞክሩ። መዘግየት ካለ Buffer ይቀንሱ።\n\n" +
                 "የኪቦርድ ቁልፎች፡\n" +
                 "  ግራ፡ [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  ቀኝ፡ ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  ቀኝ፡ ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "ቁልፍ");
         

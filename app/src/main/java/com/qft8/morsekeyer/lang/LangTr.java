@@ -51,7 +51,7 @@ public class LangTr extends MorseLanguage {
                 "Yaygın sorunlar: Ses çok fazla tıklama yapıyorsa, 'Testere dişi' seçeneğini deneyin veya zarfı değiştirin. Gecikme yüksekse arabelleği azaltın.\n\n" +
                 "Klavye tuşları:\n" +
                 "  Sol: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Sağ: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Sağ: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Anahtar");
         

@@ -51,7 +51,7 @@ public class LangId extends MorseLanguage {
                 "Masalah umum: Jika suara terlalu banyak klik, coba opsi 'Gigi Gergaji' atau ubah envelope. Jika latensi tinggi, kurangi buffer.\n\n" +
                 "Tombol keyboard:\n" +
                 "  Kiri: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Kanan: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Kanan: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Kunci");
         

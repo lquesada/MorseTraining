@@ -51,7 +51,7 @@ public class LangPcm extends MorseLanguage {
                 "Common issues: If sound dey click too much, try 'Sawtooth' option or change envelope. If e dey delay, reduce buffer.\n\n" +
                 "Keyboard keys:\n" +
                 "  Left: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Right: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Right: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Key");
         

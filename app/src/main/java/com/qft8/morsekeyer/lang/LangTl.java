@@ -51,7 +51,7 @@ public class LangTl extends MorseLanguage {
                 "Mga karaniwang isyu: Kung masyadong ma-click ang tunog, subukan ang 'Sawtooth' option o baguhin ang envelope. Kung mataas ang latency, bawasan ang buffer.\n\n" +
                 "Mga key sa keyboard:\n" +
                 "  Kaliwa: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Kanan: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Kanan: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Susi");
         

@@ -51,7 +51,7 @@ public class LangArz extends MorseLanguage {
                 "مشاكل معروفة: لو الصوت فيه تكة عالية، جرب خيار 'سن المنشار'. لو فيه تأخير قلل الـ Buffer.\n\n" +
                 "زراير الكيبورد:\n" +
                 "  شمال: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  يمين: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  يمين: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "مفتاح");
         

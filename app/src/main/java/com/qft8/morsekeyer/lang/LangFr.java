@@ -51,7 +51,7 @@ public class LangFr extends MorseLanguage {
                 "Problèmes courants : Si le son cliquette trop, essayez l'option 'Dents de scie' ou modifiez l'enveloppe. Si la latence est élevée, réduisez le tampon. Si le son se coupe, augmentez-le.\n\n" +
                 "Touches du clavier :\n" +
                 "  Gauche : [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Droite : ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Droite : ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Clé");
         

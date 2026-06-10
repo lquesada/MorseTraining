@@ -62,7 +62,7 @@ public class LangSk extends MorseLanguage {
                 "Bežné problémy: Ak je zvuk vo vašom zariadení príliš klikavý, skúste možnosť pílovitého signálu alebo skúste upraviť obálku. Ak je oneskorenie príliš vysoké, skúste zmenšiť vyrovnávaciu pamäť. Ak sa zvuk prerušuje, skúste ju zväčšiť.\n\n" +
                 "Klávesy na klávesnici:\n" +
                 "  Vľavo: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Vpravo: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Vpravo: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Kľúč");
         

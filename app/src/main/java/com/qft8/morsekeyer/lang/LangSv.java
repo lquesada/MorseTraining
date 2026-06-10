@@ -51,7 +51,7 @@ public class LangSv extends MorseLanguage {
                 "Vanliga problem: Om ljudet klickar för mycket, prova sagtandssignalen eller justera envelopen. Vid hög latens, minska bufferten.\n\n" +
                 "Tangentbordsknappar:\n" +
                 "  Vänster: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Höger: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Höger: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Nyckel");
         

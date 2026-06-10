@@ -51,7 +51,7 @@ public class LangJa extends MorseLanguage {
                 "よくある問題：クリック音が気になる場合は「のこぎり波」を試すか、エンベロープを調整してください。遅延が大きい場合はバッファを減らしてください。\n\n" +
                 "キーボードキー：\n" +
                 "  左： [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  右： ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  右： ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "キー");
         

@@ -62,7 +62,7 @@ public class LangNo extends MorseLanguage {
                 "Vanlige problemer: Hvis lyden klikker for mye på enheten din, prøv 'sagtonnsignal'-alternativet eller prøv å endre stige-/falltiden. Hvis forsinkelsen er for høy, prøv å redusere bufferen. Hvis lyden brytes opp, prøv å øke den.\n\n" +
                 "Tastaturtaster:\n" +
                 "  Venstre: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Høyre: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Høyre: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Nøkkel");
         

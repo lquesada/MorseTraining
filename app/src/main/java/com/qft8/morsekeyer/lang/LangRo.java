@@ -51,7 +51,7 @@ public class LangRo extends MorseLanguage {
                 "Probleme comune: Dacă sunetul are prea multe clicuri, încearcă opțiunea 'Dinte de fierăstrău' sau modifică anvelopa. Dacă latența e mare, redu bufferul.\n\n" +
                 "Taste tastatură:\n" +
                 "  Stânga: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Dreapta: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Dreapta: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Cheie");
         

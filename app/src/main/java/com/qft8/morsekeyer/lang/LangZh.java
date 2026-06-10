@@ -51,7 +51,7 @@ public class LangZh extends MorseLanguage {
                 "常见问题：如果声音点击声太重，请尝试“锯齿波”选项或修改包络。如果延迟太高，请减小缓冲区。\n\n" +
                 "键盘按键：\n" +
                 "  左： [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  右： ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  右： ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "键");
         

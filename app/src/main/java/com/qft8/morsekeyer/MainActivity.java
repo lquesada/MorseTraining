@@ -2003,6 +2003,7 @@ public class MainActivity extends Activity {
                 return "left";
             case KeyEvent.KEYCODE_RIGHT_BRACKET: // ]
             case KeyEvent.KEYCODE_D: // D
+            case KeyEvent.KEYCODE_S: // S
             case KeyEvent.KEYCODE_PERIOD: // .
             case KeyEvent.KEYCODE_DPAD_RIGHT: // Arrow right
             case KeyEvent.KEYCODE_CTRL_RIGHT: // Right Ctrl

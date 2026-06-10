@@ -51,7 +51,7 @@ public class LangEo extends MorseLanguage {
                 "Oftaj problemoj: Se la sono estas tro klaka, provu la 'Segildentan' opcion aŭ modifu la koverton. Se la malfruo estas alta, malpliigu la bufron. Se la sono haltas, pligrandigu ĝin.\n\n" +
                 "Klavaraj klavoj:\n" +
                 "  Maldekstra: [  A  ,  \u2190  L-Stir  L-Maj  L-Alt  Num.  F1\n" +
-                "  Dekstra: ]  D  .  \u2192  R-Stir  R-Maj  R-Alt  NumEniga  F2");
+                "  Dekstra: ]  D  S  .  \u2192  R-Stir  R-Maj  R-Alt  NumEniga  F2");
 
         set(KEY, "Ŝlosilo");
         

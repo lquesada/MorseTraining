@@ -62,7 +62,7 @@ public class LangDa extends MorseLanguage {
                 "Almindelige problemer: Hvis lyden er for klikkende på din enhed, kan du prøve 'Brug savtaksignal for at undgå klik'-indstillingen eller prøve at ændre stige-/faldetiden. Hvis forsinkelsen er for høj, kan du prøve at mindske bufferen. Hvis lyden hakker, kan du prøve at øge den.\n\n" +
                 "Tastaturtaster:\n" +
                 "  Venstre: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Højre: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Højre: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Nøgle");
         

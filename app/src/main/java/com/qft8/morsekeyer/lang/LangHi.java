@@ -51,7 +51,7 @@ public class LangHi extends MorseLanguage {
                 "सामान्य समस्याएँ: यदि ध्वनि बहुत अधिक क्लिक करने वाली है, तो 'सॉ-टूथ' विकल्प आज़माएँ या एनवेलप बदलें। यदि विलंबता बहुत अधिक है, तो बफ़र कम करें।\n\n" +
                 "कीबोर्ड कुंजियाँ:\n" +
                 "  बायां: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  दायां: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  दायां: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "कुंजी");
         

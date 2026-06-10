@@ -44,7 +44,7 @@ public class LangYo extends MorseLanguage {
         set(PERFORMANCE_HINT, "Tí ohùn bá ń gé, jẹ́ kí ààyè ohùn pọ̀ sí i. Tí ó bá lọ́ra, dín i kù.");
         
         set(INFO_TITLE, "Morse Training");
-        set(INFO_TEXT, "Awọn igbewọle atilẹyin: keyboard, iboju ifọwọkan, Asin tabi ohun ti nmu badọgba paadi USB.\n\nFun titẹ-kọtẹ-ọtun ti Asin tabi adaṣe bọtini USB-si-Asin, fi itọka Asin silẹ lori bọtini paadi osi ninu iboju, tẹ osi/ọtun yoo maapu si awọn paadi to tọ.\n\nFun awọn alamuuṣẹ paadi USB-si-keyboard (fun apẹẹrẹ VBand) o ṣiṣẹ laisi eto.\n\nAkoko to muna nilo awọn isinmi laarin awọn lẹta to pe; eyi ti ko muna ngbanilaaye fun titẹ ni iyara.\n\nLaasigbotitusita: Ti ohun ba n tẹ, gbiyanju Sawtooth tabi yi apoowe pada. Ti airi ba ga, dinku saarin. Ti ohun ba n kọsẹ, mu u pọ si.\n\nAwọn bọtini itẹwe:\n  Osi: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n  Ọtun: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+        set(INFO_TEXT, "Awọn igbewọle atilẹyin: keyboard, iboju ifọwọkan, Asin tabi ohun ti nmu badọgba paadi USB.\n\nFun titẹ-kọtẹ-ọtun ti Asin tabi adaṣe bọtini USB-si-Asin, fi itọka Asin silẹ lori bọtini paadi osi ninu iboju, tẹ osi/ọtun yoo maapu si awọn paadi to tọ.\n\nFun awọn alamuuṣẹ paadi USB-si-keyboard (fun apẹẹrẹ VBand) o ṣiṣẹ laisi eto.\n\nAkoko to muna nilo awọn isinmi laarin awọn lẹta to pe; eyi ti ko muna ngbanilaaye fun titẹ ni iyara.\n\nLaasigbotitusita: Ti ohun ba n tẹ, gbiyanju Sawtooth tabi yi apoowe pada. Ti airi ba ga, dinku saarin. Ti ohun ba n kọsẹ, mu u pọ si.\n\nAwọn bọtini itẹwe:\n  Osi: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n  Ọtun: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Bọtini");
         

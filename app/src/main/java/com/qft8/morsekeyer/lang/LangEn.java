@@ -73,7 +73,7 @@ public class LangEn extends MorseLanguage {
                                 +
                                 "Keyboard keys:\n" +
                                 "  Left: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                                "  Right: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                                "  Right: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
                 // --- DYNAMIC UI ---
                 set(KEY, "Key"); // Label on the paddle for non-iambic modes

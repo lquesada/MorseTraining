@@ -51,7 +51,7 @@ public class LangFi extends MorseLanguage {
                 "Yleisiä ongelmia: Jos ääni napsuu liikaa, kokeile sahalaitasignaalia tai säädä envelopea. Jos viive on suuri, pienennä puskuria.\n\n" +
                 "Näppäimistön näppäimet:\n" +
                 "  Vasen: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Oikea: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Oikea: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Avain");
         

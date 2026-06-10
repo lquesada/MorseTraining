@@ -51,7 +51,7 @@ public class LangYue extends MorseLanguage {
                 "常見問題：如果聲音點擊聲太重，請嘗試「鋸齒波」選項或修改包絡。如果延遲太高，請減小緩衝區。\n\n" +
                 "鍵盤按鍵：\n" +
                 "  左： [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  右： ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  右： ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "鍵");
         

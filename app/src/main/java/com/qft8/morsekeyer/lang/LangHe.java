@@ -62,7 +62,7 @@ public class LangHe extends MorseLanguage {
                 "בעיות נפוצות: אם הצליל קליקי מדי במכשיר שלך, נסה את האפשרות של אות שן מסור או נסה לשנות את המעטפת. אם ההשהיה גבוהה מדי, נסה להקטין את הבאפר. אם הצליל נשבר, נסה להגדיל אותו.\n\n" +
                 "מקשי מקלדת:\n" +
                 "  שמאל: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  ימין: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  ימין: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "מפתח");
         

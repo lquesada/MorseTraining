@@ -51,7 +51,7 @@ public class LangSw extends MorseLanguage {
                 "Matatizo ya kawaida: Sauti ikiwa na kelele sana, jaribu chaguo la 'Msumeno' au ubadilishe bahasha. Sauti ikichelewa sana, punguza hifadhi.\n\n" +
                 "Vifungo vya kibodi:\n" +
                 "  Kushoto: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Kulia: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Kulia: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Ufunguo");
         

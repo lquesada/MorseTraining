@@ -51,7 +51,7 @@ public class LangRu extends MorseLanguage {
                 "Проблемы: Если звук слишком резкий, включите 'Пилообразный сигнал'. Если задержка велика, уменьшите буфер. Если звук заикается, увеличьте его.\n\n" +
                 "Клавиши:\n" +
                 "  Лево: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Право: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Право: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Ключ");
         

@@ -51,7 +51,7 @@ public class LangPl extends MorseLanguage {
                 "Problemy: Jeśli dźwięk zbyt mocno klika, spróbuj sygnału piłokształtnego. Jeśli opóźnienie jest duże, zmniejsz bufor. Jeśli dźwięk przerywa, zwiększ go.\n\n" +
                 "Klawisze:\n" +
                 "  Lewo: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Prawo: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Prawo: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Klucz");
         

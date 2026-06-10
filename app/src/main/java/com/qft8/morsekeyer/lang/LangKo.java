@@ -51,7 +51,7 @@ public class LangKo extends MorseLanguage {
                 "일반적인 문제: 소리에 클릭음이 너무 많으면 '톱니파' 옵션을 시도하거나 엔벨로프를 변경하세요. 지연이 심하면 버퍼를 줄이세요.\n\n" +
                 "키보드 키:\n" +
                 "  왼쪽: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  오른쪽: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  오른쪽: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "키");
         

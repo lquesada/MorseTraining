@@ -51,7 +51,7 @@ public class LangPt extends MorseLanguage {
                 "Problemas comuns: Se o som tiver muitos cliques, tente a opção 'Dente de serra' ou altere o envelope. Se a latência for alta, diminua o buffer.\n\n" +
                 "Teclas do teclado:\n" +
                 "  Esquerda: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Direita: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Direita: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Chave");
         

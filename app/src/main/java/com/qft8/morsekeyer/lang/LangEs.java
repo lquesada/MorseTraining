@@ -67,7 +67,7 @@ public class LangEs extends MorseLanguage {
                                 +
                                 "Teclas de teclado:\n" +
                                 "  Izquierda: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                                "  Derecha: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                                "  Derecha: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
                 set(KEY, "Llave");
 

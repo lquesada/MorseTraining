@@ -51,7 +51,7 @@ public class LangFa extends MorseLanguage {
                 "مشکلات رایج: اگر صدا بیش از حد صدای کلیک دارد، گزینه 'دندان‌اره‌ای' را امتحان کنید یا پاکت صوتی را تغییر دهید. اگر تأخیر زیاد است، بافر را کم کنید.\n\n" +
                 "کلیدهای صفحه‌کلید:\n" +
                 "  چپ: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  راست: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  راست: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "کلید");
         

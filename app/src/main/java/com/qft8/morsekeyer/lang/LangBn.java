@@ -51,7 +51,7 @@ public class LangBn extends MorseLanguage {
                 "সাধারণ সমস্যা: শব্দে বেশি ক্লিক হলে 'সটুথ' অপশন ব্যবহার করুন বা এনভেলপ পরিবর্তন করুন। ল্যাটেন্সি বেশি হলে বাফার কমান।\n\n" +
                 "কীবোর্ড কী:\n" +
                 "  বাম: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  ডান: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  ডান: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "কী");
         

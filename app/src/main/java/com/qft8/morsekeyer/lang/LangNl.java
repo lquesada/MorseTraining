@@ -62,7 +62,7 @@ public class LangNl extends MorseLanguage {
                 "Veelvoorkomende problemen: Als het geluid te veel klikt op uw apparaat, probeer dan de optie 'Zaagtandsignaal' of pas de stijg-/daaltijd aan. Als de latentie te hoog is, probeer dan de buffer te verkleinen. Als het geluid hapert, probeer het dan te vergroten.\n\n" +
                 "Toetsenbordtoetsen:\n" +
                 "  Links: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Rechts: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Rechts: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Sleutel");
         

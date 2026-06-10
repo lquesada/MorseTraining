@@ -51,7 +51,7 @@ public class LangVi extends MorseLanguage {
                 "Các vấn đề thường gặp: Nếu âm thanh quá nhiều tiếng click, hãy thử tùy chọn 'Răng cưa' hoặc thay đổi envelope. Nếu độ trễ cao, hãy giảm bộ đệm.\n\n" +
                 "Các phím bàn phím:\n" +
                 "  Trái: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Phải: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Phải: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Phím");
         

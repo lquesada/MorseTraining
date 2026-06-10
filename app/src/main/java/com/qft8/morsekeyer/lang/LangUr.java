@@ -51,7 +51,7 @@ public class LangUr extends MorseLanguage {
                 "عام مسائل: اگر آواز میں بہت زیادہ کلکس ہیں تو 'سا ٹوتھ' آپشن آزمائیں یا اینولپ تبدیل کریں۔ اگر تاخیر زیادہ ہے تو بفر کم کریں۔\n\n" +
                 "کی بورڈ کیز:\n" +
                 "  بایاں: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  دایاں: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  دایاں: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "کلید");
         

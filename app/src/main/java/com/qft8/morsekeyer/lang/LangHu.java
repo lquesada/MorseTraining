@@ -51,7 +51,7 @@ public class LangHu extends MorseLanguage {
                 "Gyakori problémák: Ha túl darabos a hang, próbálja a fűrészfog jelet vagy állítsa az envelope-ot. Ha nagy a késleltetés, csökkentse a puffert.\n\n" +
                 "Billentyűk:\n" +
                 "  Bal: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Jobb: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Jobb: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Billentyű");
         

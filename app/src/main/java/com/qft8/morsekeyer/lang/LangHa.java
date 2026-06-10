@@ -51,7 +51,7 @@ public class LangHa extends MorseLanguage {
                 "Matsaloli: Idan sauti yana yin ƙara sosai, gwada zabin 'Sawtooth' ko canza envelope. Idan jinkiri ya yi yawa, rage buffer.\n\n" +
                 "Maballan madannai:\n" +
                 "  Hagu: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Dama: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Dama: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Maballi");
         

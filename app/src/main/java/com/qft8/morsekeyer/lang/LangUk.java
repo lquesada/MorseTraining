@@ -51,7 +51,7 @@ public class LangUk extends MorseLanguage {
                 "Проблеми: Якщо звук занадто різкий, спробуйте 'Пилоподібний сигнал'. Якщо затримка велика, зменште буфер. Якщо звук заїкається, збільште його.\n\n" +
                 "Клавіші:\n" +
                 "  Вліво: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Вправо: ]  D  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Вправо: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Ключ");
         

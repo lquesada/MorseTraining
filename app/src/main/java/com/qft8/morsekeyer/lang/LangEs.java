@@ -66,8 +66,8 @@ public class LangEs extends MorseLanguage {
                                 "Problemas comunes: Si el sonido tiene demasiados clics, pruebe la opción 'Diente de sierra' o modifique la envolvente. Si la latencia es alta, reduzca el búfer. Si el sonido se entrecorta, auméntelo.\n\n"
                                 +
                                 "Teclas de teclado:\n" +
-                                "  Izquierda: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                                "  Derecha: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                                "  Izquierda: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                                "  Derecha: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
                 set(KEY, "Llave");
 
@@ -114,8 +114,6 @@ public class LangEs extends MorseLanguage {
 
                 set(MATCH_RESULTS, "Resultados");
                                         
-        set(INFINITE, "Práctica sin límite de tiempo");
-        set(THREE_MINUTES, "Supera tu puntuación en 3 minutos");
 
         set(REPEAT, "REPETIR");
 
@@ -124,5 +122,22 @@ public class LangEs extends MorseLanguage {
         set(CONTINUE, "CONTINUAR");
         set(RX, "Recibir");
         set(TX, "Transmitir");
-}
+
+        set(KOCH_METHOD, "Método Koch");
+        set(TARGET, "Objetivo");
+        set(LISTEN, "Escuchar");
+        set(TARGET_MET, "Objetivo cumplido");
+        set(TARGET_NOT_MET, "Objetivo no cumplido");
+            set(LEVEL, "Nivel");
+    
+        set(LEARN, "Aprender");
+        set(PLAY, "Jugar");
+    
+        set(LEVELS_COMPLETED, "Niveles completados");
+        set(RESET_PROGRESS, "Restablecer progreso");
+        set(RESET_PROGRESS_CONFIRM, "¿Estás seguro de que deseas restablecer el progreso?");
+        set(RESET, "Restablecer");
+            set(WPM, "PPM");
+        set(SPACING, "Espaciado");
+    }
 }

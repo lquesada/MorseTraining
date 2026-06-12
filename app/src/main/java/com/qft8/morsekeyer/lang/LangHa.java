@@ -50,8 +50,8 @@ public class LangHa extends MorseLanguage {
                 "Yanayin tsanani yana buƙatar daidaiton lokaci tsakanin haruffa; yanayin sauƙi yana ba da damar aiki cikin sauri.\n\n" +
                 "Matsaloli: Idan sauti yana yin ƙara sosai, gwada zabin 'Sawtooth' ko canza envelope. Idan jinkiri ya yi yawa, rage buffer.\n\n" +
                 "Maballan madannai:\n" +
-                "  Hagu: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Dama: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Hagu: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Dama: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Maballi");
         
@@ -98,7 +98,7 @@ public class LangHa extends MorseLanguage {
                 set(MATCH_COMPLETED, "An kammala wasan");
         set(TRY_AGAIN, "Sake gwadawa");
         set(WORDS, "Kalmomi");
-                set(QUIT_GAME, "Bar Wasan");
+                set(QUIT_GAME, "Bar wasan");
         set(MATCH_SETTINGS, "Siffofin wasanni");
         set(SHARE_PREVIEW, "Raba samfoti");
         set(SHARE, "Raba");
@@ -108,8 +108,6 @@ public class LangHa extends MorseLanguage {
 
         set(MATCH_RESULTS, "Sakamakon wasa");
                 
-        set(INFINITE, "Yi aiki ba tare da iyakance lokaci ba");
-        set(THREE_MINUTES, "Ka doke maki a cikin mintuna 3");
 
         set(REPEAT, "MAIMAITA");
 
@@ -119,5 +117,22 @@ public class LangHa extends MorseLanguage {
         set(CONTINUE, "CIGABA");
         set(RX, "Karɓa");
         set(TX, "Aika");
-}
+
+        set(KOCH_METHOD, "Hanyar Koch");
+        set(TARGET, "Manufa");
+        set(LISTEN, "Saurara");
+        set(TARGET_MET, "An cimma manufa");
+        set(TARGET_NOT_MET, "Ba a cimma manufa ba");
+            set(LEVEL, "Mataki");
+    
+        set(LEARN, "Koya");
+        set(PLAY, "Yi wasa");
+    
+        set(LEVELS_COMPLETED, "Matakan da aka kammala");
+        set(RESET_PROGRESS, "Sake saita ci gaba");
+        set(RESET_PROGRESS_CONFIRM, "Tabbas kana so ka sake saita ci gaba?");
+        set(RESET, "Sake saita");
+            set(WPM, "WPM​");
+        set(SPACING, "Tazarar");
+    }
 }

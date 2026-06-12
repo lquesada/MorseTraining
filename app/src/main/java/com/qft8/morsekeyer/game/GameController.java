@@ -49,7 +49,14 @@ public class GameController {
     private List<View> gameKbButtons = new ArrayList<>();
 
     private LinearLayout gameMenuLayout;
-    private Button btnTxPractice, btnTxContest, btnRxPractice, btnRxContest;
+    private Button btnRxKoch, btnRxPlay, btnTxPlay;
+    private android.widget.Spinner spinnerRxTime, spinnerTxTime;
+    private TextView gameMenuHeaderLearn, gameMenuHeaderRx, gameMenuHeaderTx;
+    private FrameLayout kochLevelLayout;
+    private KochLevelSelectView kochLevelSelectView;
+    private boolean isKochMode = false;
+    private int kochLevel = 1;
+    private int kochTarget = 0;
     private LinearLayout gameMenuPaddleContainer;
     private TextView gameMenuPaddleLeft, gameMenuPaddleRight;
     private View gameMenuPaddleDivider;
@@ -57,7 +64,7 @@ public class GameController {
     private FrameLayout gameQuitDialogOverlay;
     private LinearLayout gameQuitDialogBox;
     private TextView gameQuitDialogText;
-    private Button gameQuitBtnCancel, gameQuitBtnQuit;
+    private Button gameQuitBtnCancel, gameQuitBtnQuit, btnCheatWin;
 
     private boolean gameActive = false;
     private int gameTimeLimit = 0;
@@ -81,6 +88,8 @@ public class GameController {
     private String currentRxWord = "";
     private String currentCustomInput = "";
     private MorseKeyer morseKeyer;
+    private android.widget.ArrayAdapter<String> rxAdapter;
+    private android.widget.ArrayAdapter<String> txAdapter;
 
     private Handler gameHandler = new Handler(Looper.getMainLooper());
     private Runnable gameRunnable;
@@ -118,14 +127,39 @@ public class GameController {
         gameRxKeyboard = activity.findViewById(R.id.game_rx_keyboard);
 
         gameMenuLayout = activity.findViewById(R.id.game_menu_layout);
-        btnTxPractice = activity.findViewById(R.id.btn_tx_practice);
-        btnTxContest = activity.findViewById(R.id.btn_tx_contest);
-        btnRxPractice = activity.findViewById(R.id.btn_rx_practice);
-        btnRxContest = activity.findViewById(R.id.btn_rx_contest);
+        btnRxKoch = activity.findViewById(R.id.btn_rx_koch);
+        btnRxPlay = activity.findViewById(R.id.btn_rx_play);
+        btnTxPlay = activity.findViewById(R.id.btn_tx_play);
+        spinnerRxTime = activity.findViewById(R.id.spinner_rx_time);
+        spinnerTxTime = activity.findViewById(R.id.spinner_tx_time);
+        gameMenuHeaderLearn = activity.findViewById(R.id.game_menu_header_learn);
+        gameMenuHeaderRx = activity.findViewById(R.id.game_menu_header_rx);
+        gameMenuHeaderTx = activity.findViewById(R.id.game_menu_header_tx);
+        kochLevelLayout = activity.findViewById(R.id.koch_level_layout);
         gameMenuPaddleContainer = activity.findViewById(R.id.game_menu_paddle_container);
         gameMenuPaddleLeft = activity.findViewById(R.id.game_menu_paddle_left);
         gameMenuPaddleRight = activity.findViewById(R.id.game_menu_paddle_right);
         gameMenuPaddleDivider = activity.findViewById(R.id.game_menu_paddle_divider);
+
+        btnCheatWin = activity.findViewById(R.id.game_btn_cheat_win);
+        if (com.qft8.morsekeyer.BuildConfig.CHEAT_MODE && btnCheatWin != null) {
+            btnCheatWin.setOnClickListener(v -> {
+                if (gameActive) {
+                    if (isKochMode) {
+                        gameScore = kochTarget;
+                        android.content.SharedPreferences prefs = activity.getSharedPreferences("morseKeyerSettings", android.content.Context.MODE_PRIVATE);
+                        int highest = prefs.getInt("koch_highest_completed_level", 0);
+                        if (kochLevel > highest) {
+                            prefs.edit().putInt("koch_highest_completed_level", kochLevel).apply();
+                        }
+                        endGame();
+                    } else {
+                        gameScore += 50;
+                        updateGameStats();
+                    }
+                }
+            });
+        }
 
         gameQuitDialogOverlay = activity.findViewById(R.id.game_quit_dialog_overlay);
         gameQuitDialogBox = activity.findViewById(R.id.game_quit_dialog_box);
@@ -210,6 +244,15 @@ public class GameController {
             updateLanguage();
         });
 
+        TextView gameMenuWpmDisplay = activity.findViewById(R.id.game_menu_wpm_display);
+        if (gameMenuWpmDisplay != null) {
+            gameMenuWpmDisplay.setOnClickListener(v -> {
+                if (activity instanceof MainActivity) {
+                    ((MainActivity) activity).showSettingsDialog();
+                }
+            });
+        }
+
         activity.findViewById(R.id.game_menu_btn_back).setOnClickListener(v -> {
             gameMenuLayout.setVisibility(View.GONE);
             contentLayout.setVisibility(View.VISIBLE);
@@ -218,34 +261,103 @@ public class GameController {
         TextView gameMenuTitle = activity.findViewById(R.id.game_menu_title);
         gameMenuTitle.setText(LanguageManager.get(MorseLanguage.GAMES));
 
-        btnTxPractice.setOnClickListener(v -> {
-            gameTimeLimit = 0;
-            isRxMode = false;
-            gameMenuLayout.setVisibility(View.GONE);
-            gameLayout.setVisibility(View.VISIBLE);
-            startGame();
+        SharedPreferences prefs = activity.getSharedPreferences("morseKeyerSettings", Context.MODE_PRIVATE);
+        
+        if (prefs.contains("record_rx")) {
+            if (!prefs.contains("record_rx_3")) prefs.edit().putInt("record_rx_3", prefs.getInt("record_rx", 0)).apply();
+            prefs.edit().remove("record_rx").apply();
+        }
+        if (prefs.contains("record")) {
+            if (!prefs.contains("record_tx_3")) prefs.edit().putInt("record_tx_3", prefs.getInt("record", 0)).apply();
+            prefs.edit().remove("record").apply();
+        }
+        
+        List<String> rxTimes = java.util.Arrays.asList("3:00", "5:00", "7:00", "10:00", "20:00", "60:00", "\u221E");
+        List<String> txTimes = java.util.Arrays.asList("3:00", "5:00", "7:00", "10:00", "20:00", "60:00");
+        
+        rxAdapter = new android.widget.ArrayAdapter<String>(activity, android.R.layout.simple_spinner_item, rxTimes) {
+            @Override
+            public View getView(int position, View convertView, android.view.ViewGroup parent) {
+                TextView v = (TextView) super.getView(position, convertView, parent);
+                v.setTextColor(isDarkTheme ? 0xFFFFFFFF : 0xFF000000);
+                v.setTextSize(16);
+                int pad = (int) (12 * activity.getResources().getDisplayMetrics().density + 0.5f);
+                v.setPadding(pad, v.getPaddingTop(), v.getPaddingRight(), v.getPaddingBottom());
+                return v;
+            }
+            @Override
+            public View getDropDownView(int position, View convertView, android.view.ViewGroup parent) {
+                TextView v = (TextView) super.getDropDownView(position, convertView, parent);
+                v.setTextColor(isDarkTheme ? 0xFFFFFFFF : 0xFF000000);
+                int pad = (int) (12 * activity.getResources().getDisplayMetrics().density + 0.5f);
+                v.setPadding(pad, v.getPaddingTop(), v.getPaddingRight(), v.getPaddingBottom());
+                return v;
+            }
+        };
+        rxAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerRxTime.setAdapter(rxAdapter);
+        spinnerRxTime.setSelection(prefs.getInt("rx_time_sel", 0));
+        spinnerRxTime.setOnItemSelectedListener(new android.widget.AdapterView.OnItemSelectedListener() {
+            @Override public void onItemSelected(android.widget.AdapterView<?> p, View v, int pos, long id) {
+                prefs.edit().putInt("rx_time_sel", pos).apply();
+                updateHighScoreDisplay(true);
+            }
+            @Override public void onNothingSelected(android.widget.AdapterView<?> p) {}
         });
-        btnTxContest.setOnClickListener(v -> {
-            gameTimeLimit = 180;
-            isRxMode = false;
-            gameMenuLayout.setVisibility(View.GONE);
-            gameLayout.setVisibility(View.VISIBLE);
-            startGame();
+
+        txAdapter = new android.widget.ArrayAdapter<String>(activity, android.R.layout.simple_spinner_item, txTimes) {
+            @Override
+            public View getView(int position, View convertView, android.view.ViewGroup parent) {
+                TextView v = (TextView) super.getView(position, convertView, parent);
+                v.setTextColor(isDarkTheme ? 0xFFFFFFFF : 0xFF000000);
+                v.setTextSize(16);
+                int pad = (int) (12 * activity.getResources().getDisplayMetrics().density + 0.5f);
+                v.setPadding(pad, v.getPaddingTop(), v.getPaddingRight(), v.getPaddingBottom());
+                return v;
+            }
+            @Override
+            public View getDropDownView(int position, View convertView, android.view.ViewGroup parent) {
+                TextView v = (TextView) super.getDropDownView(position, convertView, parent);
+                v.setTextColor(isDarkTheme ? 0xFFFFFFFF : 0xFF000000);
+                int pad = (int) (12 * activity.getResources().getDisplayMetrics().density + 0.5f);
+                v.setPadding(pad, v.getPaddingTop(), v.getPaddingRight(), v.getPaddingBottom());
+                return v;
+            }
+        };
+        txAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerTxTime.setAdapter(txAdapter);
+        spinnerTxTime.setSelection(prefs.getInt("tx_time_sel", 0));
+        spinnerTxTime.setOnItemSelectedListener(new android.widget.AdapterView.OnItemSelectedListener() {
+            @Override public void onItemSelected(android.widget.AdapterView<?> p, View v, int pos, long id) {
+                prefs.edit().putInt("tx_time_sel", pos).apply();
+                updateHighScoreDisplay(false);
+            }
+            @Override public void onNothingSelected(android.widget.AdapterView<?> p) {}
         });
-        btnRxPractice.setOnClickListener(v -> {
-            gameTimeLimit = 0;
+
+        btnRxPlay.setOnClickListener(v -> {
+            String sel = (String) spinnerRxTime.getSelectedItem();
+            gameTimeLimit = "\u221E".equals(sel) ? 0 : Integer.parseInt(sel.split(":")[0]) * 60;
             isRxMode = true;
+            isKochMode = false;
             gameMenuLayout.setVisibility(View.GONE);
             gameLayout.setVisibility(View.VISIBLE);
             startGame();
         });
-        btnRxContest.setOnClickListener(v -> {
-            gameTimeLimit = 180;
-            isRxMode = true;
+
+        btnTxPlay.setOnClickListener(v -> {
+            String sel = (String) spinnerTxTime.getSelectedItem();
+            gameTimeLimit = Integer.parseInt(sel.split(":")[0]) * 60;
+            isRxMode = false;
+            isKochMode = false;
             gameMenuLayout.setVisibility(View.GONE);
             gameLayout.setVisibility(View.VISIBLE);
             startGame();
         });
+
+        if (btnRxKoch != null) {
+            btnRxKoch.setOnClickListener(v -> showKochMenu());
+        }
 
         setupRxListeners();
 
@@ -254,6 +366,35 @@ public class GameController {
         });
 
         setupCustomKeyboard();
+    }
+
+    private void showKochMenu() {
+        gameMenuLayout.setVisibility(View.GONE);
+        kochLevelLayout.setVisibility(View.VISIBLE);
+        
+        android.content.SharedPreferences prefs = activity.getSharedPreferences("morseKeyerSettings", android.content.Context.MODE_PRIVATE);
+        int highest = prefs.getInt("koch_highest_completed_level", 0);
+        
+        if (kochLevelSelectView != null) {
+            kochLevelLayout.removeView(kochLevelSelectView);
+        }
+        
+        kochLevelSelectView = new KochLevelSelectView(activity, highest, level -> {
+            kochLevelLayout.setVisibility(View.GONE);
+            startKochGame(level);
+        }, () -> {
+            kochLevelLayout.setVisibility(View.GONE);
+            gameMenuLayout.setVisibility(View.VISIBLE);
+        });
+        
+        int cBg = isDarkTheme ? 0xFF1A1A1A : 0xFFFFFFFF;
+        int cBar = isDarkTheme ? 0xFF2A2A2A : 0xFFE0E0E0;
+        int cUtl = isDarkTheme ? 0xFF444444 : 0xFFD0D0D0;
+        int cText = isDarkTheme ? 0xFFFFFFFF : 0xFF000000;
+        kochLevelSelectView.applyTheme(cBg, cBar, cUtl, cText, isDarkTheme);
+        
+        kochLevelLayout.addView(kochLevelSelectView);
+        updateLanguage();
     }
 
     public void setupCustomKeyboard() {
@@ -273,14 +414,14 @@ public class GameController {
                         { "A", "Z", "E", "R", "T", "Y", "U", "I", "O", "P" },
                         { "Q", "S", "D", "F", "G", "H", "J", "K", "L", "M" },
                         { "?", "W", "X", "C", "V", "B", "N", "<1.0>", "DEL" },
-                        { "CLEAR", "SLASH", "SPACE", "ENTER" }
+                        { "CLEAR", "SLASH", "SPACE", ",", ".", "ENTER" }
                 };
                 weightRows = new float[][] {
                         { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
                         { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
                         { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
                         { 1.5f, 1, 1, 1, 1, 1, 1, 1.0f, 1.5f },
-                        { 1.5f, 1, 5, 2.5f }
+                        { 1.5f, 1, 3, 1, 1, 2.5f }
                 };
             } else if ("QWERTZ".equals(kbType)) {
                 layoutRows = new String[][] {
@@ -288,14 +429,14 @@ public class GameController {
                         { "Q", "W", "E", "R", "T", "Z", "U", "I", "O", "P" },
                         { "<0.5>", "A", "S", "D", "F", "G", "H", "J", "K", "L", "<0.5>" },
                         { "?", "Y", "X", "C", "V", "B", "N", "M", "DEL" },
-                        { "CLEAR", "SLASH", "SPACE", "ENTER" }
+                        { "CLEAR", "SLASH", "SPACE", ",", ".", "ENTER" }
                 };
                 weightRows = new float[][] {
                         { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
                         { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
                         { 0.5f, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.5f },
                         { 1.5f, 1, 1, 1, 1, 1, 1, 1, 1.5f },
-                        { 1.5f, 1, 5, 2.5f }
+                        { 1.5f, 1, 3, 1, 1, 2.5f }
                 };
             } else { // QWERTY
                 layoutRows = new String[][] {
@@ -303,14 +444,14 @@ public class GameController {
                         { "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P" },
                         { "<0.5>", "A", "S", "D", "F", "G", "H", "J", "K", "L", "<0.5>" },
                         { "?", "Z", "X", "C", "V", "B", "N", "M", "DEL" },
-                        { "CLEAR", "SLASH", "SPACE", "ENTER" }
+                        { "CLEAR", "SLASH", "SPACE", ",", ".", "ENTER" }
                 };
                 weightRows = new float[][] {
                         { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
                         { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
                         { 0.5f, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.5f },
                         { 1.5f, 1, 1, 1, 1, 1, 1, 1, 1.5f },
-                        { 1.5f, 1, 5, 2.5f }
+                        { 1.5f, 1, 3, 1, 1, 2.5f }
                 };
             }
 
@@ -384,6 +525,7 @@ public class GameController {
                         row.addView(btn);
 
                         btn.setOnTouchListener((v, event) -> {
+                            if (!v.isEnabled()) return true;
                             int action = event.getAction();
                             int activeColor = isDarkTheme ? 0xFF007ACC : 0xFFFF0000;
                             if (action == android.view.MotionEvent.ACTION_DOWN) {
@@ -565,7 +707,14 @@ public class GameController {
                 builder.append(" ");
                 builder.setSpan(new android.text.style.ScaleXSpan(0.7f), spaceStart, builder.length(), 33);
             }
-            char c = i < inputLen ? currentCustomInput.charAt(i) : '_';
+            boolean isListenState = isKochMode && gameRxBtnAction != null && 
+                    gameRxBtnAction.getText().toString().equals(LanguageManager.get(MorseLanguage.LISTEN));
+            char c;
+            if (isListenState) {
+                c = i < targetLen ? currentRxWord.charAt(i) : '_';
+            } else {
+                c = i < inputLen ? currentCustomInput.charAt(i) : '_';
+            }
             int start = builder.length();
             builder.append(c);
             
@@ -599,9 +748,29 @@ public class GameController {
         rxErrorState = false;
     }
 
+    private boolean isKochStartButtonShowing() {
+        if (!isKochMode || gameRxBtnAction == null || gameRxBtnAction.getVisibility() != View.VISIBLE) {
+            return false;
+        }
+        String btnText = gameRxBtnAction.getText().toString();
+        return btnText.equals(LanguageManager.get(MorseLanguage.START)) ||
+               btnText.equals(LanguageManager.get(MorseLanguage.LISTEN));
+    }
+
     private void onCustomKey(String key) {
-        if (!gameActive || !isRxMode || !gameStarted)
+        if (!gameActive || !isRxMode)
             return;
+            
+        if (isKochStartButtonShowing())
+            return;
+        
+        if (!gameStarted) {
+            if (isKochMode) {
+                gameStarted = true;
+            } else {
+                return;
+            }
+        }
 
         if (key.equals("SLASH")) {
             key = "/";
@@ -675,29 +844,54 @@ public class GameController {
             gameRxBtnAction.setOnClickListener(v -> {
                 String text = gameRxBtnAction.getText().toString();
                 if (text.equals(LanguageManager.get(MorseLanguage.START)) ||
-                        text.equals(LanguageManager.get(MorseLanguage.REPEAT))) {
+                        text.equals(LanguageManager.get(MorseLanguage.REPEAT)) ||
+                        text.equals(LanguageManager.get(MorseLanguage.LISTEN))) {
 
                     cancelRxGreenDelay();
-                    gameRxBtnAction.setText(LanguageManager.get(MorseLanguage.REPEAT));
+                    if (text.equals(LanguageManager.get(MorseLanguage.LISTEN))) {
+                        gameRxBtnAction.setText(LanguageManager.get(MorseLanguage.LISTEN));
+                    } else {
+                        gameRxBtnAction.setText(LanguageManager.get(MorseLanguage.REPEAT));
+                    }
                     setRxActionBtnEnabled(false);
 
-                    if (text.equals(LanguageManager.get(MorseLanguage.START))) {
+                    if (text.equals(LanguageManager.get(MorseLanguage.START)) || text.equals(LanguageManager.get(MorseLanguage.LISTEN))) {
                         currentCustomInput = "";
                         rxErrorState = false;
                         java.util.Arrays.fill(rxFixedMap, false);
-                        updateRxTextDisplay(false, false);
-
-                        rxPlayRunnable = () -> {
-                            if (gameActive && isRxMode && morseKeyer != null) {
-                                gameStarted = true;
-                                morseKeyer.playText(currentRxWord, () -> {
-                                    gameHandler.post(() -> setRxActionBtnEnabled(true));
-                                });
-                            }
-                        };
+                        
+                        if (text.equals(LanguageManager.get(MorseLanguage.LISTEN))) {
+                            // First character listen - reveal the gap
+                            updateRxTextDisplay(false, false);
+                            rxPlayRunnable = () -> {
+                                if (gameActive && isRxMode && morseKeyer != null) {
+                                    gameStarted = true;
+                                    morseKeyer.playText(currentRxWord, () -> {
+                                        gameHandler.post(() -> {
+                                            gameRxBtnAction.setText(LanguageManager.get(MorseLanguage.START));
+                                            setRxActionBtnEnabled(true);
+                                            if (isKochMode) {
+                                                currentRxWord = KochWordGenerator.generateWord(kochLevel, gameWordsSolved);
+                                            }
+                                            updateRxTextDisplay(false, false);
+                                        });
+                                    });
+                                }
+                            };
+                        } else {
+                            updateRxTextDisplay(false, false);
+                            rxPlayRunnable = () -> {
+                                if (gameActive && isRxMode && morseKeyer != null) {
+                                    gameStarted = true;
+                                    morseKeyer.playText(currentRxWord, () -> {
+                                        gameHandler.post(() -> setRxActionBtnEnabled(true));
+                                    });
+                                }
+                            };
+                        }
                         android.content.SharedPreferences prefs = activity.getSharedPreferences("morseKeyerSettings", android.content.Context.MODE_PRIVATE);
                         int wpm = prefs.getInt("wpm", 15);
-                        boolean strict = prefs.getBoolean("strict", false);
+                        boolean strict = prefs.getBoolean("strict", true);
                         int iws = prefs.getInt("interwordSpacing", 100);
                         double iwsFactor = strict ? 1.0 : (iws / 100.0);
                         long delayMs = (long) (7.0 * iwsFactor * (1200.0 / wpm));
@@ -713,6 +907,62 @@ public class GameController {
                     endGame();
                 }
             });
+        }
+    }
+
+    private void startKochGame(int level) {
+        isKochMode = true;
+        kochLevel = level;
+        kochTarget = 10 + (level - 1);
+        gameTimeLimit = 0;
+        isRxMode = true;
+        gameLayout.setVisibility(View.VISIBLE);
+        startGame();
+    }
+
+    private void setupRxKeyboardVisibility() {
+        java.util.HashSet<String> visibleTags = new java.util.HashSet<>();
+        visibleTags.add("DEL");
+        visibleTags.add("ENTER");
+        visibleTags.add("SPACE");
+        visibleTags.add("CLEAR");
+        if (isKochMode) {
+            for (int i = 0; i < kochLevel; i++) {
+                String c = KochLevelSelectView.KOCH_CHARS[i];
+                visibleTags.add(c);
+                if ("/".equals(c)) visibleTags.add("SLASH");
+            }
+        }
+
+        for (int i = 0; i < gameRxKeyboard.getChildCount(); i++) {
+            LinearLayout row = (LinearLayout) gameRxKeyboard.getChildAt(i);
+            for (int j = 0; j < row.getChildCount(); j++) {
+                View v = row.getChildAt(j);
+                if (v instanceof Button || v instanceof ImageButton) {
+                    if (!isKochMode) {
+                        v.setVisibility(View.VISIBLE);
+                        v.setEnabled(true);
+                        v.setAlpha(1.0f);
+                    } else {
+                        try {
+                            Object tagObj = v.getTag();
+                            if (tagObj != null && visibleTags.contains(tagObj.toString())) {
+                                v.setVisibility(View.VISIBLE);
+                                v.setEnabled(true);
+                                v.setAlpha(1.0f);
+                            } else {
+                                v.setVisibility(View.VISIBLE);
+                                v.setEnabled(false);
+                                v.setAlpha(0.25f);
+                            }
+                        } catch (Exception e) {
+                            v.setVisibility(View.VISIBLE);
+                            v.setEnabled(false);
+                            v.setAlpha(0.25f);
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -736,6 +986,10 @@ public class GameController {
         }
 
         if (input.isEmpty()) {
+            if (isKochMode && !rxErrorState) {
+                gameScore = Math.max(0, gameScore - 1);
+                updateGameStats();
+            }
             rxErrorState = true;
             updateRxTextDisplay(true, false);
             return;
@@ -747,9 +1001,32 @@ public class GameController {
             }
 
             updateRxTextDisplay(false, true); // show green
-            gameScore += currentRxWord.length();
-            gameWordsSolved++;
-            updateGameStats();
+            
+            if (isKochMode) {
+                String targetChar = KochLevelSelectView.KOCH_CHARS[kochLevel - 1];
+                int points = 0;
+                for (int i = 0; i < currentRxWord.length(); i++) {
+                    if (String.valueOf(currentRxWord.charAt(i)).equals(targetChar)) {
+                        points++;
+                    }
+                }
+                gameScore += points;
+                gameWordsSolved++;
+                updateGameStats();
+                if (gameScore >= kochTarget) {
+                    android.content.SharedPreferences prefs = activity.getSharedPreferences("morseKeyerSettings", android.content.Context.MODE_PRIVATE);
+                    int highest = prefs.getInt("koch_highest_completed_level", 0);
+                    if (kochLevel > highest) {
+                        prefs.edit().putInt("koch_highest_completed_level", kochLevel).apply();
+                    }
+                    gameHandler.postDelayed(this::endGame, 1000); // 1 sec delay to show green before ending
+                    return;
+                }
+            } else {
+                gameScore += currentRxWord.length();
+                gameWordsSolved++;
+                updateGameStats();
+            }
 
             gameRxBtnAction.setText(LanguageManager.get(MorseLanguage.REPEAT));
             setRxActionBtnEnabled(false);
@@ -762,7 +1039,11 @@ public class GameController {
                     currentCustomInput = "";
                     rxErrorState = false;
                     java.util.Arrays.fill(rxFixedMap, false);
-                    currentRxWord = WordGenerator.generateGameWord(gameWordsSolved, null);
+                    if (isKochMode) {
+                        currentRxWord = KochWordGenerator.generateWord(kochLevel, gameWordsSolved);
+                    } else {
+                        currentRxWord = WordGenerator.generateGameWord(gameWordsSolved, null);
+                    }
                     updateRxTextDisplay(false, false);
 
                     if (morseKeyer != null) {
@@ -774,12 +1055,16 @@ public class GameController {
             };
             android.content.SharedPreferences prefs = activity.getSharedPreferences("morseKeyerSettings", android.content.Context.MODE_PRIVATE);
             int wpm = prefs.getInt("wpm", 15);
-            boolean strict = prefs.getBoolean("strict", false);
+            boolean strict = prefs.getBoolean("strict", true);
             int iws = prefs.getInt("interwordSpacing", 100);
             double iwsFactor = strict ? 1.0 : (iws / 100.0);
             long delayMs = (long) (7.0 * iwsFactor * (1200.0 / wpm));
             gameHandler.postDelayed(rxGreenDelayRunnable, delayMs);
         } else {
+            if (isKochMode && !rxErrorState) {
+                gameScore = Math.max(0, gameScore - 1);
+                updateGameStats();
+            }
             rxErrorState = true;
             updateRxTextDisplay(true, false); // show red
 
@@ -817,7 +1102,11 @@ public class GameController {
         if (currentSummaryView != null) {
             closeSummary();
             gameLayout.setVisibility(android.view.View.GONE);
-            gameMenuLayout.setVisibility(android.view.View.VISIBLE);
+            if (isKochMode) {
+                kochLevelLayout.setVisibility(android.view.View.VISIBLE);
+            } else {
+                gameMenuLayout.setVisibility(android.view.View.VISIBLE);
+            }
             return true;
         }
         if (gameLayout != null && gameLayout.getVisibility() == android.view.View.VISIBLE) {
@@ -872,6 +1161,22 @@ public class GameController {
         gameTimeVal.setTextColor(textCol);
         gameScoreLabel.setTextColor(textCol);
         gameScoreVal.setTextColor(textCol);
+        
+        TextView gameMenuWpmDisplay = activity.findViewById(R.id.game_menu_wpm_display);
+        if (gameMenuWpmDisplay != null) {
+            gameMenuWpmDisplay.setTextColor(textCol);
+            
+            int dropdownCol = dark ? 0xFF2F2F2F : 0xFFEEEEEE;
+            android.graphics.drawable.GradientDrawable wpmBg = new android.graphics.drawable.GradientDrawable();
+            wpmBg.setColor(dropdownCol);
+            wpmBg.setShape(android.graphics.drawable.GradientDrawable.RECTANGLE);
+            wpmBg.setCornerRadius(activity.getResources().getDisplayMetrics().density * 4); // 4dp rounded corners
+            
+            android.content.res.ColorStateList rippleColor = android.content.res.ColorStateList.valueOf(dark ? 0x40FFFFFF : 0x40000000);
+            android.graphics.drawable.RippleDrawable ripple = new android.graphics.drawable.RippleDrawable(rippleColor, wpmBg, null);
+            
+            gameMenuWpmDisplay.setBackground(ripple);
+        }
         android.widget.ImageButton gameBtnBack = activity.findViewById(R.id.game_btn_back);
         if (gameBtnBack != null) {
             gameBtnBack.setColorFilter(textCol);
@@ -923,25 +1228,45 @@ public class GameController {
             TextView menuTitle = activity.findViewById(R.id.game_menu_title);
             if (menuTitle != null)
                 menuTitle.setTextColor(textCol);
+                
+            int headerCol = dark ? 0xFFAAAAAA : 0xFF666666;
+            if (gameMenuHeaderLearn != null) gameMenuHeaderLearn.setTextColor(headerCol);
+            if (gameMenuHeaderRx != null) gameMenuHeaderRx.setTextColor(headerCol);
+            if (gameMenuHeaderTx != null) gameMenuHeaderTx.setTextColor(headerCol);
+            android.widget.TextView rxHs = activity.findViewById(R.id.game_menu_rx_highscore);
+            if (rxHs != null) rxHs.setTextColor(headerCol);
+            android.widget.TextView txHs = activity.findViewById(R.id.game_menu_tx_highscore);
+            if (txHs != null) txHs.setTextColor(headerCol);
 
             int menuBtnCol = dark ? 0xFF444444 : 0xFFDDDDDD;
+            int dropdownCol = dark ? 0xFF2F2F2F : 0xFFEEEEEE;
             int menuTextCol = dark ? 0xFFFFFFFF : 0xFF000000;
-            if (btnTxPractice != null) {
-                btnTxPractice.setBackgroundTintList(android.content.res.ColorStateList.valueOf(menuBtnCol));
-                btnTxPractice.setTextColor(menuTextCol);
+            if (btnRxKoch != null) {
+                btnRxKoch.setBackgroundTintList(android.content.res.ColorStateList.valueOf(menuBtnCol));
+                btnRxKoch.setTextColor(menuTextCol);
             }
-            if (btnTxContest != null) {
-                btnTxContest.setBackgroundTintList(android.content.res.ColorStateList.valueOf(menuBtnCol));
-                btnTxContest.setTextColor(menuTextCol);
+            if (btnRxPlay != null) {
+                btnRxPlay.setBackgroundTintList(android.content.res.ColorStateList.valueOf(menuBtnCol));
+                btnRxPlay.setTextColor(menuTextCol);
             }
-            if (btnRxPractice != null) {
-                btnRxPractice.setBackgroundTintList(android.content.res.ColorStateList.valueOf(menuBtnCol));
-                btnRxPractice.setTextColor(menuTextCol);
+            if (btnTxPlay != null) {
+                btnTxPlay.setBackgroundTintList(android.content.res.ColorStateList.valueOf(menuBtnCol));
+                btnTxPlay.setTextColor(menuTextCol);
             }
-            if (btnRxContest != null) {
-                btnRxContest.setBackgroundTintList(android.content.res.ColorStateList.valueOf(menuBtnCol));
-                btnRxContest.setTextColor(menuTextCol);
+            if (spinnerRxTime != null) {
+                View rxBg = activity.findViewById(R.id.spinner_rx_bg);
+                if (rxBg != null) rxBg.setBackgroundColor(dropdownCol);
+                spinnerRxTime.setBackgroundTintList(android.content.res.ColorStateList.valueOf(menuTextCol));
+                spinnerRxTime.setPopupBackgroundDrawable(new android.graphics.drawable.ColorDrawable(barCol));
             }
+            if (spinnerTxTime != null) {
+                View txBg = activity.findViewById(R.id.spinner_tx_bg);
+                if (txBg != null) txBg.setBackgroundColor(dropdownCol);
+                spinnerTxTime.setBackgroundTintList(android.content.res.ColorStateList.valueOf(menuTextCol));
+                spinnerTxTime.setPopupBackgroundDrawable(new android.graphics.drawable.ColorDrawable(barCol));
+            }
+            if (rxAdapter != null) rxAdapter.notifyDataSetChanged();
+            if (txAdapter != null) txAdapter.notifyDataSetChanged();
 
             if (gameMenuPaddleContainer != null) {
                 gameMenuPaddleContainer.setBackgroundColor(barCol);
@@ -969,10 +1294,13 @@ public class GameController {
             androidx.core.widget.TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(
                     gameRxTextDisplay, 12, fontSize, 1, android.util.TypedValue.COMPLEX_UNIT_SP);
         }
-        if (gameActive && isRxMode) {
-            gamePaddleContainer.setVisibility(View.GONE);
+        if (gameActive && !isRxMode) {
+            gamePaddleContainer.setVisibility(View.VISIBLE);
         } else {
-            gamePaddleContainer.setVisibility(showPaddles ? View.VISIBLE : View.GONE);
+            gamePaddleContainer.setVisibility(View.GONE);
+        }
+        if (gameMenuPaddleContainer != null) {
+            gameMenuPaddleContainer.setVisibility(View.GONE);
         }
     }
 
@@ -1069,41 +1397,50 @@ public class GameController {
         if (gameMenuTitle != null) {
             gameMenuTitle.setText(LanguageManager.get(MorseLanguage.GAMES));
         }
+        TextView gameMenuWpmDisplay = activity.findViewById(R.id.game_menu_wpm_display);
+        if (gameMenuWpmDisplay != null) {
+            android.content.SharedPreferences prefs = activity.getSharedPreferences("morseKeyerSettings", android.content.Context.MODE_PRIVATE);
+            int wpm = prefs.getInt("wpm", 15);
+            int interletterSpacing = prefs.getInt("interletterSpacing", 100);
+            int interwordSpacing = prefs.getInt("interwordSpacing", 100);
+            boolean strict = prefs.getBoolean("strict", true);
+            
+            String wpmStr = LanguageManager.get(MorseLanguage.WPM) + ": " + wpm;
+            String spcStr = LanguageManager.get(MorseLanguage.SPACING) + " " + 
+                            (strict ? "100%" : interletterSpacing + "%") + "/" + 
+                            (strict ? "100%" : interwordSpacing + "%");
+            
+            gameMenuWpmDisplay.setText(wpmStr + "; " + spcStr);
+        }
         if (btnGame != null) {
             btnGame.setText(LanguageManager.get(MorseLanguage.GAMES));
         }
-        if (btnTxPractice != null) {
-            String title = LanguageManager.get(MorseLanguage.TX) + " (Training)";
-            String sub = LanguageManager.get(MorseLanguage.INFINITE);
-            android.text.SpannableString ss = new android.text.SpannableString(title + "\n" + sub);
-            ss.setSpan(new android.text.style.RelativeSizeSpan(0.7f), title.length() + 1, ss.length(),
-                    android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-            btnTxPractice.setText(ss);
+        if (gameMenuHeaderLearn != null) {
+            gameMenuHeaderLearn.setText(LanguageManager.get(MorseLanguage.LEARN));
         }
-        if (btnTxContest != null) {
-            String title = LanguageManager.get(MorseLanguage.TX) + " (Score Attack)";
-            String sub = LanguageManager.get(MorseLanguage.THREE_MINUTES);
-            android.text.SpannableString ss = new android.text.SpannableString(title + "\n" + sub);
-            ss.setSpan(new android.text.style.RelativeSizeSpan(0.7f), title.length() + 1, ss.length(),
-                    android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-            btnTxContest.setText(ss);
+        if (gameMenuHeaderRx != null) {
+            gameMenuHeaderRx.setText(LanguageManager.get(MorseLanguage.RX));
         }
-        if (btnRxPractice != null) {
-            String title = LanguageManager.get(MorseLanguage.RX) + " (Training)";
-            String sub = LanguageManager.get(MorseLanguage.INFINITE);
-            android.text.SpannableString ss = new android.text.SpannableString(title + "\n" + sub);
-            ss.setSpan(new android.text.style.RelativeSizeSpan(0.7f), title.length() + 1, ss.length(),
-                    android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-            btnRxPractice.setText(ss);
+        if (gameMenuHeaderTx != null) {
+            gameMenuHeaderTx.setText(LanguageManager.get(MorseLanguage.TX));
         }
-        if (btnRxContest != null) {
-            String title = LanguageManager.get(MorseLanguage.RX) + " (Score Attack)";
-            String sub = LanguageManager.get(MorseLanguage.THREE_MINUTES);
-            android.text.SpannableString ss = new android.text.SpannableString(title + "\n" + sub);
-            ss.setSpan(new android.text.style.RelativeSizeSpan(0.7f), title.length() + 1, ss.length(),
-                    android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-            btnRxContest.setText(ss);
+        if (btnRxPlay != null) {
+            btnRxPlay.setText(LanguageManager.get(MorseLanguage.PLAY));
         }
+        if (btnTxPlay != null) {
+            btnTxPlay.setText(LanguageManager.get(MorseLanguage.PLAY));
+        }
+        if (btnRxKoch != null) {
+            SharedPreferences prefs = activity.getSharedPreferences("morseKeyerSettings", Context.MODE_PRIVATE);
+            int highest = prefs.getInt("koch_highest_completed_level", 0);
+            btnRxKoch.setText(LanguageManager.get(MorseLanguage.KOCH_METHOD));
+            TextView kochLevelsView = activity.findViewById(R.id.game_menu_koch_levels);
+            if (kochLevelsView != null) {
+                kochLevelsView.setText(LanguageManager.get(MorseLanguage.LEVELS_COMPLETED) + ": " + highest + "/40");
+            }
+        }
+        updateHighScoreDisplay(true);
+        updateHighScoreDisplay(false);
 
         if (gameRxBtnAction != null) {
             android.text.TextPaint paint = gameRxBtnAction.getPaint();
@@ -1143,10 +1480,12 @@ public class GameController {
 
     public void updatePaddleVisual(String side, boolean pressed, int actCol, int bgCol) {
         if (pressed && gameActive && !gameStarted) {
-            gameStarted = true;
-            gameTextInput.setGravity(android.view.Gravity.END | android.view.Gravity.CENTER_VERTICAL);
-            gameTextInput.setText("");
-            updateGameStats();
+            if (!isKochStartButtonShowing()) {
+                gameStarted = true;
+                gameTextInput.setGravity(android.view.Gravity.END | android.view.Gravity.CENTER_VERTICAL);
+                gameTextInput.setText("");
+                updateGameStats();
+            }
         }
         if ("left".equals(side)) {
             if (gamePaddleLeft != null)
@@ -1203,6 +1542,8 @@ public class GameController {
     public void onDecode(String text) {
         if (!gameActive)
             return;
+        if (isKochStartButtonShowing())
+            return;
         String gCurrent = gameTextInput.getText().toString();
         if (gCurrent.endsWith("​_")) {
             gameTextInput.setText(gCurrent.substring(0, gCurrent.length() - 2) + " ");
@@ -1217,6 +1558,8 @@ public class GameController {
     public void onWordGapPending() {
         if (!gameActive)
             return;
+        if (isKochStartButtonShowing())
+            return;
         gameTextInput.append("​_");
         trimGameText();
         checkGameMatches();
@@ -1224,6 +1567,8 @@ public class GameController {
 
     public void onWordGapConfirmed() {
         if (!gameActive)
+            return;
+        if (isKochStartButtonShowing())
             return;
         String gCurrent = gameTextInput.getText().toString();
         if (gCurrent.endsWith("​_")) {
@@ -1289,16 +1634,46 @@ public class GameController {
         }
     }
 
+    private String getRecordKey(boolean isRx, int timeSeconds) {
+        if (timeSeconds == 0) return null;
+        return "record_" + (isRx ? "rx" : "tx") + "_" + (timeSeconds / 60);
+    }
+
+    private void updateHighScoreDisplay(boolean isRx) {
+        android.widget.Spinner spinner = isRx ? spinnerRxTime : spinnerTxTime;
+        TextView scoreView = activity.findViewById(isRx ? R.id.game_menu_rx_highscore : R.id.game_menu_tx_highscore);
+        if (spinner == null || scoreView == null) return;
+        
+        String sel = (String) spinner.getSelectedItem();
+        if (sel == null) return;
+        
+        int timeLimit = "\u221E".equals(sel) ? 0 : Integer.parseInt(sel.split(":")[0]) * 60;
+        
+        if (timeLimit == 0) {
+            scoreView.setVisibility(View.INVISIBLE);
+        } else {
+            scoreView.setVisibility(View.VISIBLE);
+            SharedPreferences prefs = activity.getSharedPreferences("morseKeyerSettings", Context.MODE_PRIVATE);
+            String rKey = getRecordKey(isRx, timeLimit);
+            int score = rKey != null ? prefs.getInt(rKey, 0) : 0;
+            scoreView.setText(LanguageManager.get(MorseLanguage.HIGH_SCORE) + ": " + score);
+        }
+    }
+
     private void startGame() {
         WordGenerator.reset();
         gameActive = true;
         gameTimeElapsed = 0;
         gameScore = 0;
         gameWordsSolved = 0;
-        SharedPreferences prefs = activity.getSharedPreferences("morse_game", Context.MODE_PRIVATE);
+        currentCustomInput = "";
+        if (com.qft8.morsekeyer.BuildConfig.CHEAT_MODE && btnCheatWin != null) {
+            btnCheatWin.setVisibility(isKochMode ? View.VISIBLE : View.GONE);
+        }
+        SharedPreferences prefs = activity.getSharedPreferences("morseKeyerSettings", Context.MODE_PRIVATE);
 
-        String recordKey = isRxMode ? "record_rx" : "record";
-        gameRecord = prefs.getInt(recordKey, 0);
+        String recordKey = getRecordKey(isRxMode, gameTimeLimit);
+        gameRecord = recordKey != null ? prefs.getInt(recordKey, 0) : 0;
 
         if (isRxMode) {
             if (morseKeyer != null) {
@@ -1314,8 +1689,19 @@ public class GameController {
             gameRxBtnAction.setText(LanguageManager.get(MorseLanguage.START));
             setRxActionBtnEnabled(true);
 
-            currentCustomInput = "";
-            currentRxWord = WordGenerator.generateGameWord(gameWordsSolved, null);
+            if (isKochMode) {
+                gameTimeLabel.setVisibility(View.GONE);
+                gameTimeVal.setVisibility(View.GONE);
+                currentRxWord = KochLevelSelectView.KOCH_CHARS[kochLevel - 1];
+                gameRxBtnAction.setText(LanguageManager.get(MorseLanguage.LISTEN));
+                setupRxKeyboardVisibility();
+            } else {
+                gameTimeLabel.setVisibility(View.VISIBLE);
+                gameTimeVal.setVisibility(View.VISIBLE);
+                currentRxWord = WordGenerator.generateGameWord(gameWordsSolved, null);
+                gameRxBtnAction.setText(LanguageManager.get(MorseLanguage.START));
+                setupRxKeyboardVisibility();
+            }
             gameStarted = false;
             rxErrorState = false;
             java.util.Arrays.fill(rxFixedMap, false);
@@ -1409,9 +1795,11 @@ public class GameController {
         stopGame();
         if (gameTimeLimit > 0 && gameScore > gameRecord) {
             gameRecord = gameScore;
-            String recordKey = isRxMode ? "record_rx" : "record";
-            SharedPreferences prefs = activity.getSharedPreferences("morse_game", Context.MODE_PRIVATE);
-            prefs.edit().putInt(recordKey, gameRecord).apply();
+            SharedPreferences prefs = activity.getSharedPreferences("morseKeyerSettings", Context.MODE_PRIVATE);
+            String recordKey = getRecordKey(isRxMode, gameTimeLimit);
+            if (recordKey != null) {
+                prefs.edit().putInt(recordKey, gameRecord).apply();
+            }
         }
         updateGameStats();
         showSummary();
@@ -1422,6 +1810,13 @@ public class GameController {
     }
 
     private void updateGameStats(boolean colonVisible) {
+        if (isKochMode) {
+            gameTimeLabel.setVisibility(View.GONE);
+            gameTimeVal.setVisibility(View.GONE);
+            gameScoreLabel.setText(LanguageManager.get(MorseLanguage.SCORE).replace(":", "").trim() + ": ");
+            gameScoreVal.setText(gameScore + " / " + kochTarget);
+            return;
+        }
         int t = gameTimeLimit > 0 ? (gameTimeLimit - gameTimeElapsed) : gameTimeElapsed;
         int min = t / 60;
         String sec = String.valueOf(t % 60);
@@ -1452,7 +1847,7 @@ public class GameController {
         int wpm = prefs.getInt("wpm", 15);
         boolean strict = prefs.getBoolean("strict", true);
         int interletterSpacing = prefs.getInt("interletterSpacing", 100);
-        int interwordSpacing = prefs.getInt("interwordSpacing", 75);
+        int interwordSpacing = prefs.getInt("interwordSpacing", 100);
 
         List<SummaryView.SummaryRow> params = new ArrayList<>();
         params.add(new SummaryView.SummaryRow(MorseLanguage.INTERLETTER_SPACING,
@@ -1468,22 +1863,30 @@ public class GameController {
         String timeStr = min + ":" + sec;
 
         currentSummaryView = new SummaryView(activity, rawMode, wpm, timeStr, gameWordsSolved, gameScore, gameRecord,
-                params, gameTimeLimit == 0,
+                params, gameTimeLimit == 0, isKochMode, kochTarget,
                 () -> { // onRetry
                     closeSummary();
-                    startGame();
+                    if (isKochMode) {
+                        startKochGame(kochLevel);
+                    } else {
+                        startGame();
+                    }
                 },
                 () -> { // onQuit
                     closeSummary();
                     gameLayout.setVisibility(View.GONE);
-                    gameMenuLayout.setVisibility(View.VISIBLE);
+                    if (isKochMode) {
+                        showKochMenu();
+                    } else {
+                        gameMenuLayout.setVisibility(View.VISIBLE);
+                    }
                 },
                 () -> { // onShare
                     boolean pickLang = prefs.getBoolean("pickLangThemeOnShare", false);
                     if (pickLang) {
                         closeSummary();
                         currentShareView = ShareManager.createShareView(activity, rawMode, wpm, timeStr,
-                                gameWordsSolved, gameScore, gameRecord, params, gameTimeLimit == 0, isDarkTheme,
+                                gameWordsSolved, gameScore, gameRecord, params, gameTimeLimit == 0, isKochMode, kochTarget, isDarkTheme,
                                 () -> { // onBack
                                     closeShare();
                                     showSummary();
@@ -1492,12 +1895,13 @@ public class GameController {
                                     closeShare();
                                     gameLayout.setVisibility(View.GONE);
                                     contentLayout.setVisibility(View.VISIBLE);
+                                    if (isKochMode) showKochMenu();
                                 });
                         ((ViewGroup) activity.findViewById(R.id.root_layout)).addView(currentShareView);
                         applyPaddlesToOverlay(currentShareView, "share_");
                     } else {
                         ShareManager.shareDirectly(activity, rawMode, wpm, timeStr, gameWordsSolved, gameScore,
-                                gameRecord, params, gameTimeLimit == 0, isDarkTheme, null);
+                                gameRecord, params, gameTimeLimit == 0, isKochMode, kochTarget, isDarkTheme, null);
                     }
                 },
                 isDarkTheme);

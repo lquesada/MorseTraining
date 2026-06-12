@@ -50,8 +50,8 @@ public class LangVi extends MorseLanguage {
                 "Chế độ nghiêm ngặt yêu cầu thời gian chính xác giữa các chữ cái; chế độ không nghiêm ngặt cho phép thao tác nhanh hơn.\n\n" +
                 "Các vấn đề thường gặp: Nếu âm thanh quá nhiều tiếng click, hãy thử tùy chọn 'Răng cưa' hoặc thay đổi envelope. Nếu độ trễ cao, hãy giảm bộ đệm.\n\n" +
                 "Các phím bàn phím:\n" +
-                "  Trái: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Phải: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Trái: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Phải: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Phím");
         
@@ -108,8 +108,6 @@ public class LangVi extends MorseLanguage {
 
         set(MATCH_RESULTS, "Kết quả");
                 
-        set(INFINITE, "Thực hành không giới hạn thời gian");
-        set(THREE_MINUTES, "Đánh bại số điểm của bạn trong 3 phút");
 
         set(REPEAT, "LẶP LẠI");
 
@@ -119,5 +117,22 @@ public class LangVi extends MorseLanguage {
         set(CONTINUE, "TIẾP TỤC");
         set(RX, "Nhận");
         set(TX, "Truyền");
-}
+
+        set(KOCH_METHOD, "Phương pháp Koch");
+        set(TARGET, "Mục tiêu");
+        set(LISTEN, "Nghe");
+        set(TARGET_MET, "Đã đạt mục tiêu");
+        set(TARGET_NOT_MET, "Chưa đạt mục tiêu");
+            set(LEVEL, "Cấp độ");
+    
+        set(LEARN, "Học");
+        set(PLAY, "Chơi");
+    
+        set(LEVELS_COMPLETED, "Các cấp độ đã hoàn thành");
+        set(RESET_PROGRESS, "Đặt lại tiến trình");
+        set(RESET_PROGRESS_CONFIRM, "Bạn có chắc chắn muốn đặt lại tiến trình?");
+        set(RESET, "Đặt lại");
+            set(WPM, "WPM​");
+        set(SPACING, "Khoảng cách");
+    }
 }

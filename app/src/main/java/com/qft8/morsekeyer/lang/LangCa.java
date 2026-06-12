@@ -44,7 +44,7 @@ public class LangCa extends MorseLanguage {
         set(PERFORMANCE_HINT, "Si el so s'entretalla, augmenta el búfer. Si la latència és alta, redueix-lo.");
 
         set(INFO_TITLE, "Morse Training");
-        set(INFO_TEXT, "Entrades compatibles: teclat, pantalla tàctil, ratolí o adaptador de pales USB.\n\nPer a la tecla de clic esquerre/dret del ratolí o l'adaptador de pales USB a ratolí, deixeu el punter del ratolí sobre el botó de la pala esquerra a la pantalla, el clic esquerre/dret s'assignarà a les pales correctes.\n\nPer als adaptadors de pales d'USB a teclat (per exemple, VBand) funciona directament sense configuració.\n\nLa temporització estricta requereix pauses precises entre lletres; la no estricta permet una manipulació més ràpida.\n\nSolució de problemes: Si el so fa clics, proveu Dent de serra o canvieu l'envolvent. Si la latència és alta, reduïu el búfer. Si el so s'entretalla, augmenteu-lo.\n\nTecles del teclat:\n  Esquerra: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n  Dreta: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+        set(INFO_TEXT, "Entrades compatibles: teclat, pantalla tàctil, ratolí o adaptador de pales USB.\n\nPer a la tecla de clic esquerre/dret del ratolí o l'adaptador de pales USB a ratolí, deixeu el punter del ratolí sobre el botó de la pala esquerra a la pantalla, el clic esquerre/dret s'assignarà a les pales correctes.\n\nPer als adaptadors de pales d'USB a teclat (per exemple, VBand) funciona directament sense configuració.\n\nLa temporització estricta requereix pauses precises entre lletres; la no estricta permet una manipulació més ràpida.\n\nSolució de problemes: Si el so fa clics, proveu Dent de serra o canvieu l'envolvent. Si la latència és alta, reduïu el búfer. Si el so s'entretalla, augmenteu-lo.\n\nTecles del teclat:\n  Esquerra: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n  Dreta: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Clau");
 
@@ -102,8 +102,6 @@ public class LangCa extends MorseLanguage {
 
         set(MATCH_RESULTS, "Resultats del partit");
                 
-        set(INFINITE, "Practica sense límit de temps");
-        set(THREE_MINUTES, "Supera la teva puntuació en 3 minuts");
 
         set(REPEAT, "REPETEIX");
 
@@ -112,5 +110,22 @@ public class LangCa extends MorseLanguage {
         set(CONTINUE, "CONTINUA");
         set(RX, "Rebre");
         set(TX, "Transmetre");
-}
+
+        set(KOCH_METHOD, "Mètode Koch");
+        set(TARGET, "Objectiu");
+        set(LISTEN, "Escolta");
+        set(TARGET_MET, "Objectiu assolit");
+        set(TARGET_NOT_MET, "Objectiu no assolit");
+            set(LEVEL, "Nivell");
+    
+        set(LEARN, "Aprèn");
+        set(PLAY, "Juga");
+    
+        set(LEVELS_COMPLETED, "Nivells completats");
+        set(RESET_PROGRESS, "Restableix el progrés");
+        set(RESET_PROGRESS_CONFIRM, "Estàs segur que vols restablir el progrés?");
+        set(RESET, "Restableix");
+            set(WPM, "WPM​");
+        set(SPACING, "Espaiat");
+    }
 }

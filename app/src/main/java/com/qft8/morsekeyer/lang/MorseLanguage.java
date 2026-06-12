@@ -22,6 +22,11 @@ public abstract class MorseLanguage {
     public static final String SETTINGS_TITLE = "SETTINGS_TITLE";
     public static final String SAVE = "SAVE";
     public static final String RESET_DEFAULTS = "RESET_DEFAULTS";
+    public static final String RESET_PROGRESS = "RESET_PROGRESS";
+    public static final String RESET_PROGRESS_CONFIRM = "RESET_PROGRESS_CONFIRM";
+    public static final String RESET = "RESET";
+    public static final String WPM = "WPM";
+    public static final String SPACING = "SPACING";
     public static final String CLOSE = "CLOSE";
 
     public static final String CANCEL = "CANCEL";
@@ -113,9 +118,16 @@ public abstract class MorseLanguage {
     public static final String WORDS = "WORDS";
     public static final String TX = "TX";
     public static final String RX = "RX";
+    public static final String LEARN = "LEARN";
+    public static final String KOCH_METHOD = "KOCH_METHOD";
+    public static final String TARGET = "TARGET";
+    public static final String LISTEN = "LISTEN";
+    public static final String TARGET_MET = "TARGET_MET";
+    public static final String TARGET_NOT_MET = "TARGET_NOT_MET";
+    public static final String LEVEL = "LEVEL";
+    public static final String LEVELS_COMPLETED = "LEVELS_COMPLETED";
 
-    public static final String INFINITE = "INFINITE";
-    public static final String THREE_MINUTES = "THREE_MINUTES";
+    public static final String PLAY = "PLAY";
     public static final String REPEAT = "REPEAT";
     public static final String START = "START";
     public static final String CONTINUE = "CONTINUE";

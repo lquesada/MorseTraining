@@ -44,7 +44,7 @@ public class LangEu extends MorseLanguage {
         set(PERFORMANCE_HINT, "Soinua mozten bada, handitu bufferra. Latentzia handia bada, murriztu.");
         
         set(INFO_TITLE, "Morse Training");
-        set(INFO_TEXT, "Onartutako sarrerak: teklatua, ukipen-pantaila, sagua edo USB arraun-egokitzailea.\n\nSaguaren ezkerreko/eskuineko klik teklak edo USB-saguaren arraun egokitzaileak erabiltzeko, utzi saguaren erakuslea pantailako ezkerreko arraun botoiaren gainean; ezkerreko/eskuineko klikak arraun egokietara mapatuko dira.\n\nUSB-teklatu arraun egokitzaileentzat (adibidez, VBand), inolako konfiguraziorik gabe funtzionatzen du.\n\nDenboralizazio zehatzak letren arteko etenaldi zehatzak eskatzen ditu; zehatza ez denak azkarrago idazteko aukera ematen du.\n\nArazoak konpontzea: Soinuak klik egiten badu, saiatu Zerra-hortza erabiltzen edo aldatu inguratzailea. Latentzia altua bada, murriztu bufferra. Soinua totelka ari bada, handitu.\n\nTeklatuko teklak:\n  Ezkerra: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n  Eskuina: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+        set(INFO_TEXT, "Onartutako sarrerak: teklatua, ukipen-pantaila, sagua edo USB arraun-egokitzailea.\n\nSaguaren ezkerreko/eskuineko klik teklak edo USB-saguaren arraun egokitzaileak erabiltzeko, utzi saguaren erakuslea pantailako ezkerreko arraun botoiaren gainean; ezkerreko/eskuineko klikak arraun egokietara mapatuko dira.\n\nUSB-teklatu arraun egokitzaileentzat (adibidez, VBand), inolako konfiguraziorik gabe funtzionatzen du.\n\nDenboralizazio zehatzak letren arteko etenaldi zehatzak eskatzen ditu; zehatza ez denak azkarrago idazteko aukera ematen du.\n\nArazoak konpontzea: Soinuak klik egiten badu, saiatu Zerra-hortza erabiltzen edo aldatu inguratzailea. Latentzia altua bada, murriztu bufferra. Soinua totelka ari bada, handitu.\n\nTeklatuko teklak:\n  Ezkerra: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n  Eskuina: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Gakoa");
         
@@ -102,8 +102,6 @@ public class LangEu extends MorseLanguage {
 
         set(MATCH_RESULTS, "Partiduen emaitzak");
                 
-        set(INFINITE, "Praktikatu denbora mugarik gabe");
-        set(THREE_MINUTES, "Irabazi zure puntuazioa 3 minututan");
 
         set(REPEAT, "ERREPIKATU");
 
@@ -112,5 +110,22 @@ public class LangEu extends MorseLanguage {
         set(CONTINUE, "JARRAITU");
         set(RX, "Jaso");
         set(TX, "Igorri");
-}
+
+        set(KOCH_METHOD, "Koch metodoa");
+        set(TARGET, "Helburua");
+        set(LISTEN, "Entzun");
+        set(TARGET_MET, "Helburua lortuta");
+        set(TARGET_NOT_MET, "Helburua ez da lortu");
+            set(LEVEL, "Maila");
+    
+        set(LEARN, "Ikasi");
+        set(PLAY, "Jolastu");
+    
+        set(LEVELS_COMPLETED, "Osatutako mailak");
+        set(RESET_PROGRESS, "Berrezarri progresioa");
+        set(RESET_PROGRESS_CONFIRM, "Ziur zaude progresioa berrezarri nahi duzula?");
+        set(RESET, "Berrezarri");
+            set(WPM, "WPM​");
+        set(SPACING, "Tartea");
+    }
 }

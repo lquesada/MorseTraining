@@ -44,7 +44,7 @@ public class LangJv extends MorseLanguage {
         set(PERFORMANCE_HINT, "Yen swara pedhot-pedhot, tambah buffer. Yen latensi dhuwur, suda buffer.");
         
         set(INFO_TITLE, "Morse Training");
-        set(INFO_TEXT, "Input sing didhukung: keyboard, layar demek, mouse utawa adaptor paddle USB.\n\nKanggo mouse nengen/kiwa-klik keying utawa USB-kanggo-mouse paddle adaptor, ninggalake mouse pointer liwat tombol kiwa paddle ing layar, kiwa/nengen bakal peta kanggo paddles bener.\n\nKanggo adaptor paddle USB-menyang-keyboard (umpamane VBand) kerjane langsung tanpa persiyapan.\n\nWektu sing ketat mbutuhake jeda antar-huruf sing tepat; sing ora ketat ngidini keying sing luwih cepet.\n\nNgatasi Masalah: Yen swara muni klik, coba Sawtooth utawa ganti amplop. Yen latensi dhuwur, kurangi buffer. Yen swara gagap, tambahake.\n\nTombol keyboard:\n  Kiwa: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n  Tengen: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+        set(INFO_TEXT, "Input sing didhukung: keyboard, layar demek, mouse utawa adaptor paddle USB.\n\nKanggo mouse nengen/kiwa-klik keying utawa USB-kanggo-mouse paddle adaptor, ninggalake mouse pointer liwat tombol kiwa paddle ing layar, kiwa/nengen bakal peta kanggo paddles bener.\n\nKanggo adaptor paddle USB-menyang-keyboard (umpamane VBand) kerjane langsung tanpa persiyapan.\n\nWektu sing ketat mbutuhake jeda antar-huruf sing tepat; sing ora ketat ngidini keying sing luwih cepet.\n\nNgatasi Masalah: Yen swara muni klik, coba Sawtooth utawa ganti amplop. Yen latensi dhuwur, kurangi buffer. Yen swara gagap, tambahake.\n\nTombol keyboard:\n  Kiwa: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n  Tengen: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Kunci");
         
@@ -91,7 +91,7 @@ public class LangJv extends MorseLanguage {
                 set(MATCH_COMPLETED, "Pertandhingan rampung");
         set(TRY_AGAIN, "Coba maneh");
         set(WORDS, "Tembung");
-                set(QUIT_GAME, "Mungkasi Game");
+                set(QUIT_GAME, "Mungkasi game");
         set(MATCH_SETTINGS, "Paramèter game");
         set(SHARE_PREVIEW, "Nuduhake pratinjau");
         set(SHARE, "Nuduhake");
@@ -101,8 +101,6 @@ public class LangJv extends MorseLanguage {
 
         set(MATCH_RESULTS, "Hasil pertandhingan");
                 
-        set(INFINITE, "Laku tanpa watesan wektu");
-        set(THREE_MINUTES, "Ngalahake skor sampeyan sajrone 3 menit");
 
         set(REPEAT, "BALENI");
 
@@ -112,5 +110,22 @@ public class LangJv extends MorseLanguage {
         set(CONTINUE, "TERUS");
         set(RX, "Nampa");
         set(TX, "Ngirim");
-}
+
+        set(KOCH_METHOD, "Metode Koch");
+        set(TARGET, "Target");
+        set(LISTEN, "Rungokake");
+        set(TARGET_MET, "Target digayuh");
+        set(TARGET_NOT_MET, "Target ora digayuh");
+            set(LEVEL, "Tingkat");
+    
+        set(LEARN, "Sinau");
+        set(PLAY, "Dolanan");
+    
+        set(LEVELS_COMPLETED, "Tingkat rampung");
+        set(RESET_PROGRESS, "Reset kemajuan");
+        set(RESET_PROGRESS_CONFIRM, "Sampeyan yakin arep ngreset kemajuan?");
+        set(RESET, "Reset");
+            set(WPM, "WPM​");
+        set(SPACING, "Spasi");
+    }
 }

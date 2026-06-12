@@ -50,8 +50,8 @@ public class LangFa extends MorseLanguage {
                 "حالت دقیق به زمان‌بندی درست بین حروف نیاز دارد؛ حالت غیردقیق اجازه کلیدزنی سریع‌تر را می‌دهد.\n\n" +
                 "مشکلات رایج: اگر صدا بیش از حد صدای کلیک دارد، گزینه 'دندان‌اره‌ای' را امتحان کنید یا پاکت صوتی را تغییر دهید. اگر تأخیر زیاد است، بافر را کم کنید.\n\n" +
                 "کلیدهای صفحه‌کلید:\n" +
-                "  چپ: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  راست: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  چپ: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  راست: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "کلید");
         
@@ -108,8 +108,6 @@ public class LangFa extends MorseLanguage {
 
         set(MATCH_RESULTS, "نتایج مسابقه");
                 
-        set(INFINITE, "بدون محدودیت زمانی تمرین کنید");
-        set(THREE_MINUTES, "ضرب و شتم امتیاز خود را در 3 دقیقه");
 
         set(REPEAT, "تکرار");
 
@@ -119,5 +117,22 @@ public class LangFa extends MorseLanguage {
         set(CONTINUE, "ادامه دهید");
         set(RX, "دریافت کردن");
         set(TX, "ارسال کردن");
-}
+
+        set(KOCH_METHOD, "روش کخ");
+        set(TARGET, "هدف");
+        set(LISTEN, "گوش دادن");
+        set(TARGET_MET, "هدف محقق شد");
+        set(TARGET_NOT_MET, "هدف محقق نشد");
+            set(LEVEL, "سطح");
+    
+        set(LEARN, "یادگیری");
+        set(PLAY, "بازی");
+    
+        set(LEVELS_COMPLETED, "سطوح تکمیل شده");
+        set(RESET_PROGRESS, "بازنشانی پیشرفت");
+        set(RESET_PROGRESS_CONFIRM, "آیا از بازنشانی پیشرفت مطمئن هستید؟");
+        set(RESET, "بازنشانی");
+            set(WPM, "WPM​");
+        set(SPACING, "فاصله");
+    }
 }

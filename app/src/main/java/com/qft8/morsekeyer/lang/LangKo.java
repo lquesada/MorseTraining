@@ -50,8 +50,8 @@ public class LangKo extends MorseLanguage {
                 "엄격 모드는 글자 간의 정확한 타이밍이 필요하며, 일반 모드는 더 빠른 키잉이 가능합니다.\n\n" +
                 "일반적인 문제: 소리에 클릭음이 너무 많으면 '톱니파' 옵션을 시도하거나 엔벨로프를 변경하세요. 지연이 심하면 버퍼를 줄이세요.\n\n" +
                 "키보드 키:\n" +
-                "  왼쪽: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  오른쪽: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  왼쪽: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  오른쪽: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "키");
         
@@ -109,8 +109,6 @@ public class LangKo extends MorseLanguage {
 
         set(MATCH_RESULTS, "결과");
                 
-        set(INFINITE, "시간 제한 없이 연습하세요");
-        set(THREE_MINUTES, "3분 안에 점수를 깨세요");
 
         set(REPEAT, "반복");
 
@@ -119,5 +117,22 @@ public class LangKo extends MorseLanguage {
         set(CONTINUE, "계속하다");
         set(RX, "수신하다");
         set(TX, "송신하다");
-}
+
+        set(KOCH_METHOD, "코흐 방법");
+        set(TARGET, "목표");
+        set(LISTEN, "듣기");
+        set(TARGET_MET, "목표 달성");
+        set(TARGET_NOT_MET, "목표 미달성");
+            set(LEVEL, "레벨");
+    
+        set(LEARN, "학습");
+        set(PLAY, "플레이");
+    
+        set(LEVELS_COMPLETED, "완료된 레벨");
+        set(RESET_PROGRESS, "진행 상황 초기화");
+        set(RESET_PROGRESS_CONFIRM, "진행 상황을 초기화하시겠습니까?");
+        set(RESET, "초기화");
+            set(WPM, "WPM​");
+        set(SPACING, "간격");
+    }
 }

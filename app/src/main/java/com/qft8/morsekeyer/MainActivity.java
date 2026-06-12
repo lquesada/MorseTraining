@@ -72,7 +72,7 @@ public class MainActivity extends Activity {
     private View paddleDivider;
 
     // Game Controller
-    private com.qft8.morsekeyer.game.GameController gameController;
+    public com.qft8.morsekeyer.game.GameController gameController;
 
     // Settings dialog widget refs (created dynamically)
     private Spinner dlgMode;
@@ -107,7 +107,7 @@ public class MainActivity extends Activity {
 
 
     private int C_BG, C_BAR, C_UTL, C_BTN, C_PP, C_PL, C_PR, C_TEXT, C_TERM, C_TABLE, C_W;
-    private final int C_ACT = 0xFF007ACC;
+    private int C_ACT = 0xFF007ACC;
     private KeyInterceptLayout rootLayout;
     private LinearLayout contentLayout;
     private LinearLayout dialogRoot;
@@ -281,7 +281,7 @@ public class MainActivity extends Activity {
     private void setupBlipButton(View btn, Runnable action) {
         btn.setOnTouchListener((v, event) -> {
             int actionEvent = event.getAction();
-            int activeColor = lastThemeDark ? 0xFF007ACC : 0xFFFF0000;
+            int activeColor = C_ACT;
             if (actionEvent == android.view.MotionEvent.ACTION_DOWN) {
                 v.setBackgroundTintList(android.content.res.ColorStateList.valueOf(activeColor));
                 if (btn instanceof android.widget.Button) {
@@ -458,7 +458,8 @@ public class MainActivity extends Activity {
             C_PL = 0xFFD0D0D0;
             C_PR = 0xFFC0C0C0;
             C_W = 0xFFFFFFFF;
-            C_PP = 0xFFFF0000;
+            C_ACT = 0xFF007ACC;
+            C_PP = C_ACT;
             if ("white".equals(settings.letterColor))
                 settings.letterColor = "black";
         }
@@ -720,7 +721,7 @@ public class MainActivity extends Activity {
         return dark ? android.R.style.Theme_DeviceDefault_Dialog : android.R.style.Theme_DeviceDefault_Light_Dialog;
     }
 
-    private void showSettingsDialog() {
+    public void showSettingsDialog() {
         dialogCtx = new ContextThemeWrapper(this, getDialogTheme());
         LinearLayout root = new LinearLayout(dialogCtx);
         root.setOrientation(LinearLayout.VERTICAL);
@@ -1471,8 +1472,42 @@ public class MainActivity extends Activity {
         bottomSpacer.setLayoutParams(new LinearLayout.LayoutParams(1, dp(10)));
         root.addView(bottomSpacer);
 
+        LinearLayout titleLayout = new LinearLayout(dialogCtx);
+        titleLayout.setOrientation(LinearLayout.HORIZONTAL);
+        titleLayout.setGravity(Gravity.CENTER_VERTICAL);
+        titleLayout.setLayoutParams(new LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT, dp(60)
+        ));
+        titleLayout.setPadding(dp(3), dp(3), dp(3), dp(3));
+        
+        android.widget.ImageView backBtn = new android.widget.ImageView(dialogCtx);
+        backBtn.setImageResource(R.drawable.ic_arrow_back);
+        backBtn.setColorFilter(C_TEXT);
+        backBtn.setScaleType(android.widget.ImageView.ScaleType.CENTER_INSIDE);
+        LinearLayout.LayoutParams backBtnLp = new LinearLayout.LayoutParams(dp(54), dp(54));
+        backBtnLp.setMarginEnd(dp(8));
+        backBtn.setLayoutParams(backBtnLp);
+        backBtn.setPadding(dp(12), dp(12), dp(12), dp(12));
+        
+        android.util.TypedValue outValue = new android.util.TypedValue();
+        dialogCtx.getTheme().resolveAttribute(android.R.attr.selectableItemBackgroundBorderless, outValue, true);
+        backBtn.setBackgroundResource(outValue.resourceId);
+        backBtn.setOnClickListener(v -> {
+            if (settingsDialog != null) settingsDialog.dismiss();
+        });
+        
+        TextView titleView = new TextView(dialogCtx);
+        titleView.setText(LanguageManager.get(SETTINGS_TITLE));
+        titleView.setTextSize(android.util.TypedValue.COMPLEX_UNIT_SP, 24);
+        titleView.setTypeface(null, android.graphics.Typeface.BOLD);
+        titleView.setTextColor(C_TEXT);
+        titleView.setTypeface(null, Typeface.BOLD);
+        
+        titleLayout.addView(backBtn);
+        titleLayout.addView(titleView);
+
         settingsDialog = new AlertDialog.Builder(this, getDialogTheme())
-                .setTitle(LanguageManager.get(SETTINGS_TITLE))
+                .setCustomTitle(titleLayout)
                 .setView(sv)
                 .setPositiveButton(LanguageManager.get(SAVE), null)
                 .setNeutralButton(LanguageManager.get(RESET_DEFAULTS), null)
@@ -1756,11 +1791,48 @@ public class MainActivity extends Activity {
 
         sv.addView(container);
 
+        LinearLayout titleLayout = new LinearLayout(infoCtx);
+        titleLayout.setOrientation(LinearLayout.HORIZONTAL);
+        titleLayout.setGravity(Gravity.CENTER_VERTICAL);
+        titleLayout.setLayoutParams(new LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT, dp(60)
+        ));
+        titleLayout.setPadding(dp(3), dp(3), dp(3), dp(3));
+        
+        android.widget.ImageView backBtn = new android.widget.ImageView(infoCtx);
+        backBtn.setImageResource(R.drawable.ic_arrow_back);
+        backBtn.setColorFilter(C_TEXT);
+        backBtn.setScaleType(android.widget.ImageView.ScaleType.CENTER_INSIDE);
+        LinearLayout.LayoutParams backBtnLp = new LinearLayout.LayoutParams(dp(54), dp(54));
+        backBtnLp.setMarginEnd(dp(8));
+        backBtn.setLayoutParams(backBtnLp);
+        backBtn.setPadding(dp(12), dp(12), dp(12), dp(12));
+        
+        android.util.TypedValue outValue = new android.util.TypedValue();
+        infoCtx.getTheme().resolveAttribute(android.R.attr.selectableItemBackgroundBorderless, outValue, true);
+        backBtn.setBackgroundResource(outValue.resourceId);
+        
+        TextView titleView = new TextView(infoCtx);
+        titleView.setText(LanguageManager.get(INFO_TITLE));
+        titleView.setTextSize(android.util.TypedValue.COMPLEX_UNIT_SP, 24);
+        titleView.setTypeface(null, android.graphics.Typeface.BOLD);
+        titleView.setTextColor(C_TEXT);
+        titleView.setTypeface(null, Typeface.BOLD);
+        
+        titleLayout.addView(backBtn);
+        titleLayout.addView(titleView);
+
+        final AlertDialog[] diagRef = new AlertDialog[1];
+        backBtn.setOnClickListener(v -> {
+            if (diagRef[0] != null) diagRef[0].dismiss();
+        });
+
         AlertDialog diag = new AlertDialog.Builder(this, getDialogTheme())
-                .setTitle(LanguageManager.get(INFO_TITLE))
+                .setCustomTitle(titleLayout)
                 .setView(sv)
                 .setPositiveButton(LanguageManager.get(CLOSE), null)
                 .create();
+        diagRef[0] = diag;
         diag.show();
         Button btnClose = diag.getButton(AlertDialog.BUTTON_POSITIVE);
         if (btnClose != null) {
@@ -1995,6 +2067,10 @@ public class MainActivity extends Activity {
             case KeyEvent.KEYCODE_A: // A
             case KeyEvent.KEYCODE_COMMA: // ,
             case KeyEvent.KEYCODE_DPAD_LEFT: // Arrow left
+            case KeyEvent.KEYCODE_1:
+            case KeyEvent.KEYCODE_0:
+            case KeyEvent.KEYCODE_NUMPAD_1:
+            case KeyEvent.KEYCODE_NUMPAD_0:
             case KeyEvent.KEYCODE_CTRL_LEFT: // Left Ctrl
             case KeyEvent.KEYCODE_SHIFT_LEFT: // Left Shift
             case KeyEvent.KEYCODE_ALT_LEFT: // Left Alt
@@ -2006,6 +2082,10 @@ public class MainActivity extends Activity {
             case KeyEvent.KEYCODE_S: // S
             case KeyEvent.KEYCODE_PERIOD: // .
             case KeyEvent.KEYCODE_DPAD_RIGHT: // Arrow right
+            case KeyEvent.KEYCODE_3:
+            case KeyEvent.KEYCODE_9:
+            case KeyEvent.KEYCODE_NUMPAD_3:
+            case KeyEvent.KEYCODE_NUMPAD_9:
             case KeyEvent.KEYCODE_CTRL_RIGHT: // Right Ctrl
             case KeyEvent.KEYCODE_SHIFT_RIGHT: // Right Shift
             case KeyEvent.KEYCODE_ALT_RIGHT: // Right Alt
@@ -2468,6 +2548,14 @@ public class MainActivity extends Activity {
             applyTheme();
     }
 
+    private void setTwoLineButtonText(Button btn, String line1, String line2) {
+        if (btn == null) return;
+        String fullText = line1 + "\n" + line2;
+        android.text.SpannableString ss = new android.text.SpannableString(fullText);
+        ss.setSpan(new android.text.style.RelativeSizeSpan(0.65f), line1.length(), fullText.length(), android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        btn.setText(ss);
+    }
+
     private void applyOrientation() {
         if (middleLayout == null)
             return;
@@ -2515,38 +2603,6 @@ public class MainActivity extends Activity {
         if (gameMenuBtnsContainer != null) {
             int pad = dp(32);
             gameMenuBtnsContainer.setPadding(pad, pad, pad, pad);
-        }
-        
-        LinearLayout gameMenuRowTx = findViewById(R.id.game_menu_row_tx);
-        LinearLayout gameMenuRowRx = findViewById(R.id.game_menu_row_rx);
-        if (gameMenuRowTx != null && gameMenuRowRx != null) {
-            gameMenuRowTx.setOrientation(LinearLayout.VERTICAL);
-            gameMenuRowRx.setOrientation(LinearLayout.VERTICAL);
-            
-            View btnTxPrac = findViewById(R.id.btn_tx_practice);
-            View btnTxCont = findViewById(R.id.btn_tx_contest);
-            View btnRxPrac = findViewById(R.id.btn_rx_practice);
-            View btnRxCont = findViewById(R.id.btn_rx_contest);
-            
-            if (btnTxPrac != null && btnTxCont != null && btnRxPrac != null && btnRxCont != null) {
-                LinearLayout.LayoutParams p1 = (LinearLayout.LayoutParams) btnTxPrac.getLayoutParams();
-                LinearLayout.LayoutParams p2 = (LinearLayout.LayoutParams) btnTxCont.getLayoutParams();
-                LinearLayout.LayoutParams p3 = (LinearLayout.LayoutParams) btnRxPrac.getLayoutParams();
-                LinearLayout.LayoutParams p4 = (LinearLayout.LayoutParams) btnRxCont.getLayoutParams();
-                
-                p1.setMargins(0, 0, 0, dp(16));
-                p2.setMargins(0, 0, 0, dp(16));
-                p3.setMargins(0, 0, 0, dp(16));
-                p4.setMargins(0, 0, 0, 0);
-                p1.width = LinearLayout.LayoutParams.MATCH_PARENT; p1.height = 0;
-                p2.width = LinearLayout.LayoutParams.MATCH_PARENT; p2.height = 0;
-                p3.width = LinearLayout.LayoutParams.MATCH_PARENT; p3.height = 0;
-                p4.width = LinearLayout.LayoutParams.MATCH_PARENT; p4.height = 0;
-                btnTxPrac.setLayoutParams(p1);
-                btnTxCont.setLayoutParams(p2);
-                btnRxPrac.setLayoutParams(p3);
-                btnRxCont.setLayoutParams(p4);
-            }
         }
         
         View rxTextDisplay = findViewById(R.id.game_rx_text_container);

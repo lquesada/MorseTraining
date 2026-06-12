@@ -50,8 +50,8 @@ public class LangPl extends MorseLanguage {
                 "Tryb rygorystyczny wymaga precyzyjnego timingu; tryb swobodny pozwala na szybsze kluczowanie.\n\n" +
                 "Problemy: Jeśli dźwięk zbyt mocno klika, spróbuj sygnału piłokształtnego. Jeśli opóźnienie jest duże, zmniejsz bufor. Jeśli dźwięk przerywa, zwiększ go.\n\n" +
                 "Klawisze:\n" +
-                "  Lewo: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Prawo: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Lewo: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Prawo: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Klucz");
         
@@ -109,8 +109,6 @@ public class LangPl extends MorseLanguage {
 
         set(MATCH_RESULTS, "Wyniki");
                 
-        set(INFINITE, "Ćwicz bez ograniczeń czasowych");
-        set(THREE_MINUTES, "Pobij swój wynik w 3 minuty");
 
         set(REPEAT, "POWTÓRZ");
 
@@ -119,5 +117,22 @@ public class LangPl extends MorseLanguage {
         set(CONTINUE, "KONTYNUOWAĆ");
         set(RX, "Odbierać");
         set(TX, "Nadawać");
-}
+
+        set(KOCH_METHOD, "Metoda Kocha");
+        set(TARGET, "Cel");
+        set(LISTEN, "Słuchaj");
+        set(TARGET_MET, "Cel osiągnięty");
+        set(TARGET_NOT_MET, "Cel nieosiągnięty");
+            set(LEVEL, "Poziom");
+    
+        set(LEARN, "Ucz się");
+        set(PLAY, "Graj");
+    
+        set(LEVELS_COMPLETED, "Ukończone poziomy");
+        set(RESET_PROGRESS, "Zresetuj postęp");
+        set(RESET_PROGRESS_CONFIRM, "Czy na pewno chcesz zresetować postęp?");
+        set(RESET, "Zresetuj");
+            set(WPM, "WPM​");
+        set(SPACING, "Odstępy");
+    }
 }

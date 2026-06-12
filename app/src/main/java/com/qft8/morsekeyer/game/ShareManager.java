@@ -45,7 +45,7 @@ public class ShareManager {
                 context.getResources().getDisplayMetrics());
     }
 
-    public static View createShareView(Activity activity, String keyerType, int wpm, String timePlayed, int words, int score, int record, List<SummaryView.SummaryRow> params, boolean isInfiniteMode, boolean isDarkInitially, Runnable onBack, Runnable onQuit) {
+    public static View createShareView(Activity activity, String keyerType, int wpm, String timePlayed, int words, int score, int record, List<SummaryView.SummaryRow> params, boolean isInfiniteMode, boolean isKochMode, int kochTarget, boolean isDarkInitially, Runnable onBack, Runnable onQuit) {
         final LinearLayout contentWrapper = new LinearLayout(activity);
         final FrameLayout previewContainer = new FrameLayout(activity);
         final LinearLayout rightColumn = new LinearLayout(activity);
@@ -279,41 +279,7 @@ public class ShareManager {
 
         root.addView(contentWrapper);
 
-        boolean showPaddles = activity.getSharedPreferences("morseKeyerSettings", Context.MODE_PRIVATE).getBoolean("showPaddles", true);
-        if (showPaddles) {
-            LinearLayout pContainer = new LinearLayout(activity);
-            pContainer.setOrientation(LinearLayout.HORIZONTAL);
-            pContainer.setBackgroundColor(barCol);
-            pContainer.setTag("share_paddle_container");
-            
-            TextView pLeft = new TextView(activity);
-            pLeft.setBackgroundColor(isDarkInitially ? 0xFF444444 : 0xFFD0D0D0);
-            pLeft.setGravity(Gravity.CENTER);
-            pLeft.setTextColor(textPrimary);
-            pLeft.setTypeface(null, Typeface.BOLD);
-            pLeft.setTag("share_paddle_left");
-            
-            View pDiv = new View(activity);
-            pDiv.setBackgroundColor(isDarkInitially ? 0xFF666666 : 0xFFCCCCCC);
-            pDiv.setTag("share_paddle_divider");
-            
-            TextView pRight = new TextView(activity);
-            pRight.setBackgroundColor(isDarkInitially ? 0xFF555555 : 0xFFC0C0C0);
-            pRight.setGravity(Gravity.CENTER);
-            pRight.setTextColor(textPrimary);
-            pRight.setTypeface(null, Typeface.BOLD);
-            pRight.setTag("share_paddle_right");
-            
-            LinearLayout.LayoutParams lpLeft = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 1f);
-            LinearLayout.LayoutParams lpDiv = new LinearLayout.LayoutParams(dp(activity, 2), LinearLayout.LayoutParams.MATCH_PARENT);
-            LinearLayout.LayoutParams lpRight = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 1f);
-            
-            pContainer.addView(pLeft, lpLeft);
-            pContainer.addView(pDiv, lpDiv);
-            pContainer.addView(pRight, lpRight);
-            
-            root.addView(pContainer, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, dp(activity, 124)));
-        }
+
         
         final View[] currentShareView = new View[1];
         final String[] currentLangToShare = {LanguageManager.getCurrentKey()};
@@ -323,7 +289,7 @@ public class ShareManager {
             String originalLang = LanguageManager.getCurrentKey();
             LanguageManager.init(currentLangToShare[0]);
             
-            View shareView = createMatchShareView(activity, keyerType, wpm, timePlayed, words, score, record, params, isInfiniteMode, isDark);
+            View shareView = createMatchShareView(activity, keyerType, wpm, timePlayed, words, score, record, params, isInfiniteMode, isKochMode, kochTarget, isDark);
             currentShareView[0] = shareView;
 
             // Render view offscreen for preview
@@ -438,8 +404,8 @@ public class ShareManager {
         return root;
     }
 
-    public static void shareDirectly(Activity activity, String keyerType, int wpm, String timePlayed, int words, int score, int record, List<SummaryView.SummaryRow> params, boolean isInfiniteMode, boolean isDarkTheme, Runnable onComplete) {
-        View view = createMatchShareView(activity, keyerType, wpm, timePlayed, words, score, record, params, isInfiniteMode, isDarkTheme);
+    public static void shareDirectly(Activity activity, String keyerType, int wpm, String timePlayed, int words, int score, int record, List<SummaryView.SummaryRow> params, boolean isInfiniteMode, boolean isKochMode, int kochTarget, boolean isDarkTheme, Runnable onComplete) {
+        View view = createMatchShareView(activity, keyerType, wpm, timePlayed, words, score, record, params, isInfiniteMode, isKochMode, kochTarget, isDarkTheme);
         view.measure(
             View.MeasureSpec.makeMeasureSpec(1080, View.MeasureSpec.EXACTLY),
             View.MeasureSpec.makeMeasureSpec(1920, View.MeasureSpec.UNSPECIFIED)
@@ -492,7 +458,7 @@ public class ShareManager {
         return (int) (value * 3.0f);
     }
 
-    private static View createMatchShareView(Context context, String keyerType, int wpm, String timePlayed, int words, int score, int record, List<SummaryView.SummaryRow> params, boolean isInfiniteMode, boolean darkTheme) {
+    private static View createMatchShareView(Context context, String keyerType, int wpm, String timePlayed, int words, int score, int record, List<SummaryView.SummaryRow> params, boolean isInfiniteMode, boolean isKochMode, int kochTarget, boolean darkTheme) {
         int bgCol = darkTheme ? 0xFF1A1A1A : 0xFFFFFFFF;
         int textPrimary = darkTheme ? 0xFFFFFFFF : 0xFF000000;
         int textSecondary = darkTheme ? 0xFFAAAAAA : 0xFF555555;
@@ -510,7 +476,7 @@ public class ShareManager {
         headerRow.setOrientation(LinearLayout.HORIZONTAL);
         headerRow.setGravity(Gravity.TOP);
         // Padding below logo
-        headerRow.setPadding(0, 0, 0, px(20));
+        headerRow.setPadding(0, 0, 0, px(18));
 
         ImageView logo = new ImageView(context);
         logo.setImageResource(R.drawable.morse_logo);
@@ -539,7 +505,12 @@ public class ShareManager {
         titleCol.addView(appTitle);
         
         TextView modeTitle = new TextView(context);
-        String modeText = (keyerType == null) ? LanguageManager.get(MorseLanguage.RX) : LanguageManager.get(MorseLanguage.TX);
+        String modeText;
+        if (isKochMode) {
+            modeText = "Koch";
+        } else {
+            modeText = (keyerType == null) ? LanguageManager.get(MorseLanguage.RX) : LanguageManager.get(MorseLanguage.TX);
+        }
         modeTitle.setText(modeText);
         modeTitle.setTextColor(textSecondary);
         modeTitle.setTextSize(TypedValue.COMPLEX_UNIT_PX, px(28));
@@ -566,9 +537,43 @@ public class ShareManager {
         statsHeader.setPadding(0, 0, 0, px(8));
         statsCard.addView(statsHeader);
 
-        addStatRow(context, statsCard, textPrimary, textSecondary, LanguageManager.get(MorseLanguage.SCORE).replace(":", "").trim(), String.valueOf(score));
-        boolean timeWeird = isInfiniteMode || !timePlayed.equals("3:00");
-        addStatRow(context, statsCard, textPrimary, textSecondary, LanguageManager.get(MorseLanguage.TIME).replace(":", "").trim(), timePlayed, timeWeird);
+        if (isKochMode) {
+            addStatRow(context, statsCard, textPrimary, textSecondary, LanguageManager.get(MorseLanguage.SCORE).replace(":", "").trim(), score + " / " + kochTarget);
+        } else {
+            addStatRow(context, statsCard, textPrimary, textSecondary, LanguageManager.get(MorseLanguage.SCORE).replace(":", "").trim(), String.valueOf(score));
+        }
+        boolean isStandardTime = timePlayed.equals("3:00") || timePlayed.equals("5:00") || timePlayed.equals("7:00") || timePlayed.equals("10:00") || timePlayed.equals("20:00") || timePlayed.equals("60:00");
+        Integer timeColor = null;
+        if (isStandardTime) {
+            timeColor = 0xFF00C853;
+        }
+        addStatRow(context, statsCard, textPrimary, textSecondary, LanguageManager.get(MorseLanguage.TIME).replace(":", "").trim(), timePlayed, timeColor);
+
+        if (isKochMode) {
+            int kochLevel = (kochTarget - 10) / 2 + 1;
+            TextView levelTxt = new TextView(context);
+            levelTxt.setText(LanguageManager.get(MorseLanguage.LEVEL) + kochLevel);
+            levelTxt.setTextColor(textPrimary);
+            levelTxt.setTextSize(TypedValue.COMPLEX_UNIT_PX, px(18));
+            levelTxt.setGravity(Gravity.CENTER);
+            levelTxt.setTypeface(Typeface.DEFAULT_BOLD);
+            LinearLayout.LayoutParams levelParams = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            levelParams.bottomMargin = px(8);
+            root.addView(levelTxt, levelParams);
+
+            TextView targetTxt = new TextView(context);
+            targetTxt.setText(LanguageManager.get(score >= kochTarget ? MorseLanguage.TARGET_MET : MorseLanguage.TARGET_NOT_MET));
+            targetTxt.setTextColor(score >= kochTarget ? 0xFF00C853 : 0xFFD50000);
+            targetTxt.setTextSize(TypedValue.COMPLEX_UNIT_PX, px(20));
+            targetTxt.setGravity(Gravity.CENTER);
+            targetTxt.setTypeface(Typeface.DEFAULT_BOLD);
+            LinearLayout.LayoutParams targetParams = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            targetParams.bottomMargin = px(10);
+            root.addView(targetTxt, targetParams);
+        }
+
         root.addView(statsCard);
 
         // Spacer
@@ -636,10 +641,10 @@ public class ShareManager {
     }
 
     private static void addStatRow(Context context, LinearLayout parent, int textPrimary, int textSecondary, String label, String value) {
-        addStatRow(context, parent, textPrimary, textSecondary, label, value, false);
+        addStatRow(context, parent, textPrimary, textSecondary, label, value, null);
     }
 
-    private static void addStatRow(Context context, LinearLayout parent, int textPrimary, int textSecondary, String label, String value, boolean highlight) {
+    private static void addStatRow(Context context, LinearLayout parent, int textPrimary, int textSecondary, String label, String value, Integer valueColorOverride) {
         LinearLayout row = new LinearLayout(context);
         row.setOrientation(LinearLayout.HORIZONTAL);
         row.setPadding(0, px(3), 0, px(3));
@@ -653,7 +658,7 @@ public class ShareManager {
 
         TextView valueView = new TextView(context);
         valueView.setText(value);
-        valueView.setTextColor(highlight ? 0xFFFF0000 : textPrimary);
+        valueView.setTextColor(valueColorOverride != null ? valueColorOverride : textPrimary);
         valueView.setTextSize(TypedValue.COMPLEX_UNIT_PX, px(14));
         valueView.setTypeface(Typeface.DEFAULT_BOLD);
         valueView.setGravity(Gravity.END);

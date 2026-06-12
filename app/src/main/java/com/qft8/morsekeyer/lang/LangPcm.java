@@ -50,8 +50,8 @@ public class LangPcm extends MorseLanguage {
                 "Strict mode need correct timing between letters; non-strict go let you key fast.\n\n" +
                 "Common issues: If sound dey click too much, try 'Sawtooth' option or change envelope. If e dey delay, reduce buffer.\n\n" +
                 "Keyboard keys:\n" +
-                "  Left: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Right: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Left: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Right: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Key");
         
@@ -98,7 +98,7 @@ public class LangPcm extends MorseLanguage {
                 set(MATCH_COMPLETED, "Match don finish");
         set(TRY_AGAIN, "Try again");
         set(WORDS, "Words");
-                set(QUIT_GAME, "Quit Game");
+                set(QUIT_GAME, "Quit game");
         set(MATCH_SETTINGS, "Game parameters");
         set(SHARE_PREVIEW, "Share preview");
         set(SHARE, "Share");
@@ -108,8 +108,6 @@ public class LangPcm extends MorseLanguage {
 
         set(MATCH_RESULTS, "Match results");
                 
-        set(INFINITE, "Practice with no time limit");
-        set(THREE_MINUTES, "Beat your score in 3 minutes");
 
         set(REPEAT, "REPEAT");
 
@@ -119,5 +117,22 @@ public class LangPcm extends MorseLanguage {
         set(CONTINUE, "CONTINUE");
         set(RX, "Risiv");
         set(TX, "Transmit");
-}
+
+        set(KOCH_METHOD, "Koch method");
+        set(TARGET, "Target");
+        set(LISTEN, "Hear");
+        set(TARGET_MET, "Target reach");
+        set(TARGET_NOT_MET, "Target no reach");
+            set(LEVEL, "Level");
+    
+        set(LEARN, "Learn");
+        set(PLAY, "Play");
+    
+        set(LEVELS_COMPLETED, "Level finish");
+        set(RESET_PROGRESS, "Reset progress");
+        set(RESET_PROGRESS_CONFIRM, "You sure say you won reset progress?");
+        set(RESET, "Reset");
+            set(WPM, "WPM");
+        set(SPACING, "Space");
+    }
 }

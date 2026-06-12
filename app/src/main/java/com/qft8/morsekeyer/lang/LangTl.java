@@ -50,8 +50,8 @@ public class LangTl extends MorseLanguage {
                 "Ang mahigpit na mode ay nangangailangan ng tamang timing sa pagitan ng mga titik; ang hindi mahigpit na mode ay nagbibigay-daan sa mas mabilis na pag-key.\n\n" +
                 "Mga karaniwang isyu: Kung masyadong ma-click ang tunog, subukan ang 'Sawtooth' option o baguhin ang envelope. Kung mataas ang latency, bawasan ang buffer.\n\n" +
                 "Mga key sa keyboard:\n" +
-                "  Kaliwa: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Kanan: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Kaliwa: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Kanan: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Susi");
         
@@ -98,7 +98,7 @@ public class LangTl extends MorseLanguage {
                 set(MATCH_COMPLETED, "Tapos na ang laban");
         set(TRY_AGAIN, "Subukan muli");
         set(WORDS, "Mga salita");
-                set(QUIT_GAME, "Itigil ang Laro");
+                set(QUIT_GAME, "Itigil ang laro");
         set(MATCH_SETTINGS, "Mga parameter ng laro");
         set(SHARE_PREVIEW, "Ibahagi ang preview");
         set(SHARE, "Ibahagi");
@@ -108,8 +108,6 @@ public class LangTl extends MorseLanguage {
 
         set(MATCH_RESULTS, "Mga resulta ng tugma");
                 
-        set(INFINITE, "Magsanay nang walang limitasyon sa oras");
-        set(THREE_MINUTES, "Talunin ang iyong iskor sa loob ng 3 minuto");
 
         set(REPEAT, "ULITIN");
 
@@ -119,5 +117,22 @@ public class LangTl extends MorseLanguage {
         set(CONTINUE, "MAGPATULOY");
         set(RX, "Tumanggap");
         set(TX, "Magpadala");
-}
+
+        set(KOCH_METHOD, "Paraang Koch");
+        set(TARGET, "Target");
+        set(LISTEN, "Makinig");
+        set(TARGET_MET, "Naabot ang target");
+        set(TARGET_NOT_MET, "Hindi naabot ang target");
+            set(LEVEL, "Antas");
+    
+        set(LEARN, "Matuto");
+        set(PLAY, "Maglaro");
+    
+        set(LEVELS_COMPLETED, "Mga nakumpletong antas");
+        set(RESET_PROGRESS, "I-reset ang pag-unlad");
+        set(RESET_PROGRESS_CONFIRM, "Sigurado ka bang gusto mong i-reset ang pag-unlad?");
+        set(RESET, "I-reset");
+            set(WPM, "WPM");
+        set(SPACING, "Espasyo");
+    }
 }

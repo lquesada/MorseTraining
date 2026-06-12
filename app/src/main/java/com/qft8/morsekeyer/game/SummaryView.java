@@ -44,10 +44,12 @@ public class SummaryView extends LinearLayout {
     private final boolean darkTheme;
     private final Activity activity;
     private final boolean isInfiniteMode;
+    private final boolean isKochMode;
+    private final int kochTarget;
 
     public SummaryView(Activity activity, String keyerType, int wpm, String timePlayed,
                        int words, int score, int record, List<SummaryRow> params,
-                       boolean isInfiniteMode, Runnable onRetry, Runnable onQuit, Runnable onShare, boolean darkTheme) {
+                       boolean isInfiniteMode, boolean isKochMode, int kochTarget, Runnable onRetry, Runnable onQuit, Runnable onShare, boolean darkTheme) {
         super(activity);
         this.activity = activity;
         this.keyerType = keyerType;
@@ -58,6 +60,8 @@ public class SummaryView extends LinearLayout {
         this.record = record;
         this.params = params;
         this.isInfiniteMode = isInfiniteMode;
+        this.isKochMode = isKochMode;
+        this.kochTarget = kochTarget;
         this.onRetry = onRetry;
         this.onQuit = onQuit;
         this.onShare = onShare;
@@ -78,7 +82,7 @@ public class SummaryView extends LinearLayout {
         int textSecondary = darkTheme ? 0xFFAAAAAA : 0xFF555555;
         int surfaceCol = darkTheme ? 0xFF2A2A2A : 0xFFF5F5F5;
         int borderCol = darkTheme ? 0xFF444444 : 0xFFE0E0E0;
-        int accentCol = darkTheme ? 0xFF00C0FF : 0xFF0080FF;
+        int accentCol = 0xFF007ACC;
         int barCol = darkTheme ? 0xFF2A2A2A : 0xFFDDDDDD;
         int utlCol = darkTheme ? 0xFF444444 : 0xFFD0D0D0;
         
@@ -197,18 +201,51 @@ public class SummaryView extends LinearLayout {
         statsHeaderParams.bottomMargin = dp(8);
         statsCard.addView(statsHeader, statsHeaderParams);
 
-        addStatRow(statsCard, textPrimary, textSecondary, LanguageManager.get(MorseLanguage.SCORE).replace(":", "").trim(), String.valueOf(score));
-        boolean timeWeird = isInfiniteMode || !timePlayed.equals("3:00");
-        addStatRow(statsCard, textPrimary, textSecondary, LanguageManager.get(MorseLanguage.TIME).replace(":", "").trim(), timePlayed, timeWeird);
+        if (isKochMode) {
+            addStatRow(statsCard, textPrimary, textSecondary, LanguageManager.get(MorseLanguage.SCORE).replace(":", "").trim(), score + " / " + kochTarget);
+        } else {
+            addStatRow(statsCard, textPrimary, textSecondary, LanguageManager.get(MorseLanguage.SCORE).replace(":", "").trim(), String.valueOf(score));
+        }
+        boolean isStandardTime = timePlayed.equals("3:00") || timePlayed.equals("5:00") || timePlayed.equals("7:00") || timePlayed.equals("10:00") || timePlayed.equals("20:00") || timePlayed.equals("60:00");
+        Integer timeColor = null;
+        if (isStandardTime) {
+            timeColor = 0xFF00C853;
+        }
+        addStatRow(statsCard, textPrimary, textSecondary, LanguageManager.get(MorseLanguage.TIME).replace(":", "").trim(), timePlayed, timeColor);
         LinearLayout.LayoutParams statsCardParams = new LinearLayout.LayoutParams(
                 LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         statsCardParams.bottomMargin = dp(20);
         
+        if (isKochMode) {
+            int kochLevel = (kochTarget - 10) + 1;
+            TextView levelTxt = new TextView(getContext());
+            levelTxt.setText(LanguageManager.get(MorseLanguage.LEVEL) + kochLevel);
+            levelTxt.setTextColor(textPrimary);
+            levelTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+            levelTxt.setGravity(Gravity.CENTER);
+            levelTxt.setTypeface(Typeface.DEFAULT_BOLD);
+            LinearLayout.LayoutParams levelParams = new LinearLayout.LayoutParams(
+                    LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+            levelParams.bottomMargin = dp(8);
+            root.addView(levelTxt, levelParams);
+
+            TextView targetTxt = new TextView(getContext());
+            targetTxt.setText(LanguageManager.get(score >= kochTarget ? MorseLanguage.TARGET_MET : MorseLanguage.TARGET_NOT_MET));
+            targetTxt.setTextColor(score >= kochTarget ? 0xFF00C853 : 0xFFD50000);
+            targetTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+            targetTxt.setGravity(Gravity.CENTER);
+            targetTxt.setTypeface(Typeface.DEFAULT_BOLD);
+            LinearLayout.LayoutParams targetParams = new LinearLayout.LayoutParams(
+                    LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+            targetParams.bottomMargin = dp(24);
+            root.addView(targetTxt, targetParams);
+        }
+
         root.addView(statsCard, statsCardParams);
         root.addView(paramsCard, paramsCardViewParams);
 
         // HIGH SCORE TEXT
-        if (!isInfiniteMode) {
+        if (!isInfiniteMode && !isKochMode) {
             TextView highScoreTxt = new TextView(getContext());
             highScoreTxt.setText(LanguageManager.get(MorseLanguage.YOUR_HIGH_SCORE_IS) + " " + record);
             highScoreTxt.setTextColor(textSecondary);
@@ -226,51 +263,74 @@ public class SummaryView extends LinearLayout {
         buttonsRow.setOrientation(LinearLayout.HORIZONTAL);
         buttonsRow.setWeightSum(2f);
         
-        // QUIT BUTTON
-        TextView quitBtn = new TextView(getContext());
-        quitBtn.setText(LanguageManager.get(MorseLanguage.QUIT_GAME));
-        quitBtn.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
-        quitBtn.setTypeface(Typeface.DEFAULT_BOLD);
-        quitBtn.setGravity(Gravity.CENTER);
-        quitBtn.setPadding(dp(16), dp(18), dp(16), dp(18));
-        quitBtn.setTextColor(textPrimary);
-        GradientDrawable quitBg = new GradientDrawable();
-        quitBg.setShape(GradientDrawable.RECTANGLE);
-        quitBg.setCornerRadius(dp(16));
-        quitBg.setColor(surfaceCol);
-        quitBg.setStroke(dp(1), borderCol);
-        quitBtn.setBackground(quitBg);
-        quitBtn.setOnClickListener(v -> {
-            if (onQuit != null) onQuit.run();
-        });
-        LinearLayout.LayoutParams quitParams = new LinearLayout.LayoutParams(
-                0, LayoutParams.WRAP_CONTENT, 1f);
-        quitParams.rightMargin = dp(6);
-        buttonsRow.addView(quitBtn, quitParams);
+        if (isKochMode || isInfiniteMode) {
+            TextView contBtn = new TextView(getContext());
+            contBtn.setText(LanguageManager.get(MorseLanguage.CONTINUE));
+            contBtn.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+            contBtn.setTypeface(Typeface.DEFAULT_BOLD);
+            contBtn.setGravity(Gravity.CENTER);
+            contBtn.setPadding(dp(16), dp(18), dp(16), dp(18));
+            contBtn.setTextColor(textPrimary);
+            GradientDrawable contBg = new GradientDrawable();
+            contBg.setShape(GradientDrawable.RECTANGLE);
+            contBg.setCornerRadius(dp(16));
+            contBg.setColor(surfaceCol);
+            contBg.setStroke(dp(1), borderCol);
+            contBtn.setBackground(contBg);
+            contBtn.setOnClickListener(v -> {
+                if (onQuit != null) onQuit.run();
+            });
+            LinearLayout.LayoutParams contParams = new LinearLayout.LayoutParams(
+                    0, LayoutParams.WRAP_CONTENT, 2f);
+            buttonsRow.addView(contBtn, contParams);
+        } else {
+            // QUIT BUTTON
+            TextView quitBtn = new TextView(getContext());
+            quitBtn.setText(LanguageManager.get(MorseLanguage.QUIT_GAME));
+            quitBtn.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+            quitBtn.setTypeface(Typeface.DEFAULT_BOLD);
+            quitBtn.setGravity(Gravity.CENTER);
+            quitBtn.setPadding(dp(16), dp(18), dp(16), dp(18));
+            quitBtn.setTextColor(textPrimary);
+            GradientDrawable quitBg = new GradientDrawable();
+            quitBg.setShape(GradientDrawable.RECTANGLE);
+            quitBg.setCornerRadius(dp(16));
+            quitBg.setColor(surfaceCol);
+            quitBg.setStroke(dp(1), borderCol);
+            quitBtn.setBackground(quitBg);
+            quitBtn.setOnClickListener(v -> {
+                if (onQuit != null) onQuit.run();
+            });
+            
+            // RETRY BUTTON
+            TextView retryBtn = new TextView(getContext());
+            retryBtn.setText(LanguageManager.get(MorseLanguage.TRY_AGAIN));
+            retryBtn.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+            retryBtn.setTypeface(Typeface.DEFAULT_BOLD);
+            retryBtn.setTextColor(0xFFFFFFFF);
+            retryBtn.setGravity(Gravity.CENTER);
+            retryBtn.setPadding(dp(16), dp(18), dp(16), dp(18));
 
-        // RETRY BUTTON
-        TextView retryBtn = new TextView(getContext());
-        retryBtn.setText(LanguageManager.get(MorseLanguage.TRY_AGAIN));
-        retryBtn.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
-        retryBtn.setTypeface(Typeface.DEFAULT_BOLD);
-        retryBtn.setTextColor(textPrimary);
-        retryBtn.setGravity(Gravity.CENTER);
-        retryBtn.setPadding(dp(16), dp(18), dp(16), dp(18));
+            GradientDrawable retryBg = new GradientDrawable();
+            retryBg.setShape(GradientDrawable.RECTANGLE);
+            retryBg.setCornerRadius(dp(16));
+            retryBg.setColor(accentCol);
+            retryBtn.setBackground(retryBg);
 
-        GradientDrawable retryBg = new GradientDrawable();
-        retryBg.setShape(GradientDrawable.RECTANGLE);
-        retryBg.setCornerRadius(dp(16));
-        retryBg.setColor(darkTheme ? 0xFF444444 : 0xFFCCCCCC);
-        retryBtn.setBackground(retryBg);
+            retryBtn.setOnClickListener(v -> {
+                if (onRetry != null) onRetry.run();
+            });
 
-        retryBtn.setOnClickListener(v -> {
-            if (onRetry != null) onRetry.run();
-        });
-
-        LinearLayout.LayoutParams retryParams = new LinearLayout.LayoutParams(
-                0, LayoutParams.WRAP_CONTENT, 1f);
-        retryParams.leftMargin = dp(6);
-        buttonsRow.addView(retryBtn, retryParams);
+            LinearLayout.LayoutParams btnParams1 = new LinearLayout.LayoutParams(
+                    0, LayoutParams.WRAP_CONTENT, 1f);
+            btnParams1.rightMargin = dp(6);
+            LinearLayout.LayoutParams btnParams2 = new LinearLayout.LayoutParams(
+                    0, LayoutParams.WRAP_CONTENT, 1f);
+            btnParams2.leftMargin = dp(6);
+            
+            buttonsRow.addView(quitBtn, btnParams1);
+            buttonsRow.addView(retryBtn, btnParams2);
+        }
 
         LinearLayout.LayoutParams buttonsRowParams = new LinearLayout.LayoutParams(
                 LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
@@ -304,41 +364,7 @@ public class SummaryView extends LinearLayout {
                 LayoutParams.MATCH_PARENT, 0, 1f);
         addView(scrollView, scrollParams);
 
-        boolean showPaddles = activity.getSharedPreferences("morseKeyerSettings", Context.MODE_PRIVATE).getBoolean("showPaddles", true);
-        if (showPaddles) {
-            LinearLayout pContainer = new LinearLayout(getContext());
-            pContainer.setOrientation(LinearLayout.HORIZONTAL);
-            pContainer.setBackgroundColor(barCol);
-            pContainer.setTag("summary_paddle_container");
-            
-            TextView pLeft = new TextView(getContext());
-            pLeft.setBackgroundColor(darkTheme ? 0xFF444444 : 0xFFD0D0D0);
-            pLeft.setGravity(Gravity.CENTER);
-            pLeft.setTextColor(textPrimary);
-            pLeft.setTypeface(null, Typeface.BOLD);
-            pLeft.setTag("summary_paddle_left");
-            
-            View pDiv = new View(getContext());
-            pDiv.setBackgroundColor(darkTheme ? 0xFF666666 : 0xFFCCCCCC);
-            pDiv.setTag("summary_paddle_divider");
-            
-            TextView pRight = new TextView(getContext());
-            pRight.setBackgroundColor(darkTheme ? 0xFF555555 : 0xFFC0C0C0);
-            pRight.setGravity(Gravity.CENTER);
-            pRight.setTextColor(textPrimary);
-            pRight.setTypeface(null, Typeface.BOLD);
-            pRight.setTag("summary_paddle_right");
-            
-            LinearLayout.LayoutParams lpLeft = new LinearLayout.LayoutParams(0, LayoutParams.MATCH_PARENT, 1f);
-            LinearLayout.LayoutParams lpDiv = new LinearLayout.LayoutParams(dp(2), LayoutParams.MATCH_PARENT);
-            LinearLayout.LayoutParams lpRight = new LinearLayout.LayoutParams(0, LayoutParams.MATCH_PARENT, 1f);
-            
-            pContainer.addView(pLeft, lpLeft);
-            pContainer.addView(pDiv, lpDiv);
-            pContainer.addView(pRight, lpRight);
-            
-            addView(pContainer, new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, dp(124)));
-        }
+
     }
 
     private LinearLayout createCard(int surfaceCol, int borderCol) {
@@ -357,10 +383,10 @@ public class SummaryView extends LinearLayout {
     }
 
     private void addStatRow(LinearLayout parent, int textPrimary, int textSecondary, String label, String value) {
-        addStatRow(parent, textPrimary, textSecondary, label, value, false);
+        addStatRow(parent, textPrimary, textSecondary, label, value, null);
     }
 
-    private void addStatRow(LinearLayout parent, int textPrimary, int textSecondary, String label, String value, boolean highlight) {
+    private void addStatRow(LinearLayout parent, int textPrimary, int textSecondary, String label, String value, Integer valueColorOverride) {
         LinearLayout row = new LinearLayout(getContext());
         row.setOrientation(LinearLayout.HORIZONTAL);
         row.setPadding(0, dp(4), 0, dp(4));
@@ -375,7 +401,7 @@ public class SummaryView extends LinearLayout {
 
         TextView valueView = new TextView(getContext());
         valueView.setText(value);
-        valueView.setTextColor(highlight ? 0xFFFF0000 : textPrimary);
+        valueView.setTextColor(valueColorOverride != null ? valueColorOverride : textPrimary);
         valueView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
         valueView.setTypeface(Typeface.DEFAULT_BOLD);
         valueView.setGravity(Gravity.END);

@@ -50,8 +50,8 @@ public class LangWuu extends MorseLanguage {
                 "严格模式要求字母间有时序准确；非严格模式允许更快的操作。\n\n" +
                 "常见问题：如果声音点击声太重，请尝试“锯齿波”选项或修改包络。如果延迟太高，请减小缓冲区。\n\n" +
                 "键盘按键：\n" +
-                "  左： [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  右： ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  左： [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  右： ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "键");
         
@@ -108,8 +108,6 @@ public class LangWuu extends MorseLanguage {
 
         set(MATCH_RESULTS, "比赛结果");
                 
-        set(INFINITE, "练习没有时间限制");
-        set(THREE_MINUTES, "3分钟内打破你的分数");
 
         set(REPEAT, "重复");
 
@@ -119,5 +117,22 @@ public class LangWuu extends MorseLanguage {
         set(CONTINUE, "继续");
         set(RX, "接收");
         set(TX, "传输");
-}
+
+        set(KOCH_METHOD, "柯赫方法");
+        set(TARGET, "目标");
+        set(LISTEN, "听");
+        set(TARGET_MET, "目标达到");
+        set(TARGET_NOT_MET, "目标呒没达到");
+            set(LEVEL, "等级");
+    
+        set(LEARN, "学习");
+        set(PLAY, "白相");
+    
+        set(LEVELS_COMPLETED, "完成个等级");
+        set(RESET_PROGRESS, "重置进度");
+        set(RESET_PROGRESS_CONFIRM, "侬确定要重置进度𠲎？");
+        set(RESET, "重置");
+            set(WPM, "WPM");
+        set(SPACING, "間距");
+    }
 }

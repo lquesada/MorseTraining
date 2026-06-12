@@ -50,8 +50,8 @@ public class LangHi extends MorseLanguage {
                 "सख्त मोड के लिए अक्षरों के बीच उचित समय की आवश्यकता होती है; गैर-सख्त मोड तेज़ संचालन की अनुमति देता है।\n\n" +
                 "सामान्य समस्याएँ: यदि ध्वनि बहुत अधिक क्लिक करने वाली है, तो 'सॉ-टूथ' विकल्प आज़माएँ या एनवेलप बदलें। यदि विलंबता बहुत अधिक है, तो बफ़र कम करें।\n\n" +
                 "कीबोर्ड कुंजियाँ:\n" +
-                "  बायां: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  दायां: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  बायां: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  दायां: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "कुंजी");
         
@@ -108,8 +108,6 @@ public class LangHi extends MorseLanguage {
 
         set(MATCH_RESULTS, "परिणाम");
                 
-        set(INFINITE, "बिना किसी समय सीमा के अभ्यास करें");
-        set(THREE_MINUTES, "3 मिनट में अपना स्कोर हराएँ");
 
         set(REPEAT, "दोहराएं");
 
@@ -119,5 +117,22 @@ public class LangHi extends MorseLanguage {
         set(CONTINUE, "जारी रखना");
         set(RX, "प्राप्त करना");
         set(TX, "प्रसारित करना");
-}
+
+        set(KOCH_METHOD, "कोच विधि");
+        set(TARGET, "लक्ष्य");
+        set(LISTEN, "सुनें");
+        set(TARGET_MET, "लक्ष्य पूरा हुआ");
+        set(TARGET_NOT_MET, "लक्ष्य पूरा नहीं हुआ");
+            set(LEVEL, "स्तर");
+    
+        set(LEARN, "सीखें");
+        set(PLAY, "खेलें");
+    
+        set(LEVELS_COMPLETED, "पूरा किए गए स्तर");
+        set(RESET_PROGRESS, "प्रगति रीसेट करें");
+        set(RESET_PROGRESS_CONFIRM, "क्या आप वाकई प्रगति रीसेट करना चाहते हैं?");
+        set(RESET, "रीसेट करें");
+            set(WPM, "WPM​");
+        set(SPACING, "अंतर");
+    }
 }

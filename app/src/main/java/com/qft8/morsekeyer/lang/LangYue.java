@@ -50,8 +50,8 @@ public class LangYue extends MorseLanguage {
                 "嚴格模式要求字母間有準確時序；非嚴格模式允許更快的操作。\n\n" +
                 "常見問題：如果聲音點擊聲太重，請嘗試「鋸齒波」選項或修改包絡。如果延遲太高，請減小緩衝區。\n\n" +
                 "鍵盤按鍵：\n" +
-                "  左： [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  右： ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  左： [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  右： ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "鍵");
         
@@ -108,8 +108,6 @@ public class LangYue extends MorseLanguage {
 
         set(MATCH_RESULTS, "比赛结果");
                 
-        set(INFINITE, "練習沒有時間限制");
-        set(THREE_MINUTES, "3分鐘內打破你的分數");
 
         set(REPEAT, "重複");
 
@@ -119,5 +117,22 @@ public class LangYue extends MorseLanguage {
         set(CONTINUE, "繼續");
         set(RX, "接收");
         set(TX, "傳輸");
-}
+
+        set(KOCH_METHOD, "柯赫方法");
+        set(TARGET, "目標");
+        set(LISTEN, "聽");
+        set(TARGET_MET, "目標達到");
+        set(TARGET_NOT_MET, "目標未達到");
+            set(LEVEL, "等級");
+    
+        set(LEARN, "學習");
+        set(PLAY, "玩");
+    
+        set(LEVELS_COMPLETED, "完成嘅等級");
+        set(RESET_PROGRESS, "重置進度");
+        set(RESET_PROGRESS_CONFIRM, "你確定要重置進度？");
+        set(RESET, "重置");
+            set(WPM, "WPM");
+        set(SPACING, "間距");
+    }
 }

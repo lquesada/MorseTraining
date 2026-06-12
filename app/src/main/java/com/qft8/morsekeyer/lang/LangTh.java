@@ -50,8 +50,8 @@ public class LangTh extends MorseLanguage {
                 "โหมดเข้มงวดต้องใช้จังหวะที่แม่นยำระหว่างตัวอักษร โหมดไม่เข้มงวดช่วยให้เคาะได้เร็วขึ้น\n\n" +
                 "ปัญหาที่พบบ่อย: ถ้าเสียงมีคลิกมากเกินไป ให้ลองใช้ตัวเลือก 'ฟันเลื่อย' หรือเปลี่ยน envelope ถ้าความล่าช้าสูง ให้ลดบัฟเฟอร์\n\n" +
                 "ปุ่มคีย์บอร์ด:\n" +
-                "  ซ้าย: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  ขวา: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  ซ้าย: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  ขวา: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "คีย์");
         
@@ -108,8 +108,6 @@ public class LangTh extends MorseLanguage {
 
         set(MATCH_RESULTS, "ผลการแข่งขัน");
                 
-        set(INFINITE, "ฝึกฝนได้ไม่จำกัดเวลา");
-        set(THREE_MINUTES, "เอาชนะคะแนนของคุณใน 3 นาที");
 
         set(REPEAT, "ทำซ้ำ");
 
@@ -119,5 +117,22 @@ public class LangTh extends MorseLanguage {
         set(CONTINUE, "ดำเนินการต่อ");
         set(RX, "รับ");
         set(TX, "ส่ง");
-}
+
+        set(KOCH_METHOD, "วิธีคอค");
+        set(TARGET, "เป้าหมาย");
+        set(LISTEN, "ฟัง");
+        set(TARGET_MET, "บรรลุเป้าหมาย");
+        set(TARGET_NOT_MET, "ไม่บรรลุเป้าหมาย");
+            set(LEVEL, "ระดับ");
+    
+        set(LEARN, "เรียนรู้");
+        set(PLAY, "เล่น");
+    
+        set(LEVELS_COMPLETED, "ระดับที่สำเร็จ");
+        set(RESET_PROGRESS, "รีเซ็ตความคืบหน้า");
+        set(RESET_PROGRESS_CONFIRM, "แน่ใจหรือไม่ว่าต้องการรีเซ็ตความคืบหน้า?");
+        set(RESET, "รีเซ็ต");
+            set(WPM, "WPM​");
+        set(SPACING, "ระยะห่าง");
+    }
 }

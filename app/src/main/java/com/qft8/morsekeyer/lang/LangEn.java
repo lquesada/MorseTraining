@@ -72,8 +72,8 @@ public class LangEn extends MorseLanguage {
                                 "Common issues: If the sound is too clickety in your device, try the 'No-click' option or try modifying the envelope. If latency is too high, try decreasing the buffer. If the sound breaks, try increasing it.\n\n"
                                 +
                                 "Keyboard keys:\n" +
-                                "  Left: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                                "  Right: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                                "  Left: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                                "  Right: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
                 // --- DYNAMIC UI ---
                 set(KEY, "Key"); // Label on the paddle for non-iambic modes
@@ -117,7 +117,7 @@ public class LangEn extends MorseLanguage {
                 // player quits)
                 set(WORDS, "Words"); // Number of words/callsigns the player completed
                 // Date when the high score was achieved
-                set(QUIT_GAME, "Quit Game"); // Button to exit the game and return to main screen
+                set(QUIT_GAME, "Quit game"); // Button to exit the game and return to main screen
                 set(MATCH_SETTINGS, "Match settings"); // Section header for keyer configuration used during the match
                 set(MATCH_RESULTS, "Match results"); // Section header for match results
                 // Section header for high score
@@ -137,13 +137,35 @@ public class LangEn extends MorseLanguage {
                 set(TX, "Transmit");
                 set(RX, "Receive");
 
-                set(INFINITE, "Practice with no time limit");
-                set(THREE_MINUTES, "Beat your score in 3 minutes");
-
+                set(LEARN, "Learn"); // Header for the learn section in the game menu
+                set(PLAY, "Play"); // Button to start the game
                 set(REPEAT, "REPEAT");
 
                 set(START, "START");
-                set(CONTINUE, "CONTINUE");
+                set(CONTINUE, "Continue");
                 set(PICK_LANG_THEME_ON_SHARE, "Choose language and theme when sharing scores");
-        }
+        
+
+        set(KOCH_METHOD, "Koch method");
+        set(TARGET, "Target");
+        set(LISTEN, "LISTEN");
+        set(TARGET_MET, "TARGET MET");
+        set(TARGET_NOT_MET, "TARGET NOT MET");
+            set(LEVEL, "Level: ");
+            set(LEVELS_COMPLETED, "Levels completed");
+    
+    
+
+    
+        set(KOCH_METHOD, "Koch method");
+        set(TARGET, "Target");
+        set(LISTEN, "LISTEN");
+        set(TARGET_MET, "TARGET MET");
+        set(TARGET_NOT_MET, "TARGET NOT MET");
+        set(RESET_PROGRESS, "Reset progress");
+        set(RESET_PROGRESS_CONFIRM, "Are you sure you want to reset progress?");
+        set(RESET, "Reset");
+        set(WPM, "WPM");
+        set(SPACING, "Spacing");
+    }
 }

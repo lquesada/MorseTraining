@@ -50,8 +50,8 @@ public class LangUr extends MorseLanguage {
                 "سخت موڈ میں حروف کے درمیان درست ٹائمنگ کی ضرورت ہوتی ہے؛ غیر سخت موڈ تیز آپریشن کی اجازت دیتا ہے۔\n\n" +
                 "عام مسائل: اگر آواز میں بہت زیادہ کلکس ہیں تو 'سا ٹوتھ' آپشن آزمائیں یا اینولپ تبدیل کریں۔ اگر تاخیر زیادہ ہے تو بفر کم کریں۔\n\n" +
                 "کی بورڈ کیز:\n" +
-                "  بایاں: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  دایاں: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  بایاں: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  دایاں: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "کلید");
         
@@ -108,8 +108,6 @@ public class LangUr extends MorseLanguage {
 
         set(MATCH_RESULTS, "میچ کے نتائج");
                 
-        set(INFINITE, "بغیر وقت کی مشق کریں۔");
-        set(THREE_MINUTES, "اپنے اسکور کو 3 منٹ میں مات دیں۔");
 
         set(REPEAT, "دہراؤ");
 
@@ -119,5 +117,22 @@ public class LangUr extends MorseLanguage {
         set(CONTINUE, "جاری رکھیں");
         set(RX, "وصول کرنا");
         set(TX, "منتقل کرنا");
-}
+
+        set(KOCH_METHOD, "کوچ طریقہ");
+        set(TARGET, "ہدف");
+        set(LISTEN, "سنیں");
+        set(TARGET_MET, "ہدف حاصل ہو گیا");
+        set(TARGET_NOT_MET, "ہدف حاصل نہیں ہوا");
+            set(LEVEL, "سطح");
+    
+        set(LEARN, "سیکھیں");
+        set(PLAY, "کھیلیں");
+    
+        set(LEVELS_COMPLETED, "مکمل شدہ سطحیں");
+        set(RESET_PROGRESS, "پیشرفت ری سیٹ کریں");
+        set(RESET_PROGRESS_CONFIRM, "کیا آپ پیشرفت ری سیٹ کرنا چاہتے ہیں؟");
+        set(RESET, "ری سیٹ کریں");
+            set(WPM, "WPM​");
+        set(SPACING, "فاصلہ");
+    }
 }

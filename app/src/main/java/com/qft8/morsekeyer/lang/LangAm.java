@@ -50,8 +50,8 @@ public class LangAm extends MorseLanguage {
                 "ትክክለኛ ሞድ በፊደላት መካከል ጥብቅ ሰዓት ይፈልጋል፤ ተራ ሞድ ፈጣን ስራ ይፈቅዳል።\n\n" +
                 "የተለመዱ ችግሮች፡ ድምጹ በጣም ጠቅታ ካለው 'Sawtooth' ይሞክሩ። መዘግየት ካለ Buffer ይቀንሱ።\n\n" +
                 "የኪቦርድ ቁልፎች፡\n" +
-                "  ግራ፡ [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  ቀኝ፡ ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  ግራ፡ [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  ቀኝ፡ ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "ቁልፍ");
         
@@ -108,8 +108,6 @@ public class LangAm extends MorseLanguage {
 
         set(MATCH_RESULTS, "የግጥሚያ ውጤቶች");
                 
-        set(INFINITE, "ያለ የጊዜ ገደብ ይለማመዱ");
-        set(THREE_MINUTES, "ነጥብዎን በ 3 ደቂቃዎች ውስጥ ያሸንፉ");
 
         set(REPEAT, "ድገም");
 
@@ -119,5 +117,22 @@ public class LangAm extends MorseLanguage {
         set(CONTINUE, "ቀጥል");
         set(RX, "ተቀበል");
         set(TX, "አስተላልፍ");
-}
+
+        set(KOCH_METHOD, "የኮክ ዘዴ");
+        set(TARGET, "ዒላማ");
+        set(LISTEN, "አዳምጥ");
+        set(TARGET_MET, "ዒላማ ተሳክቷል");
+        set(TARGET_NOT_MET, "ዒላማ አልተሳካም");
+            set(LEVEL, "ደረጃ");
+    
+        set(LEARN, "ተማር");
+        set(PLAY, "አጫውት");
+    
+        set(LEVELS_COMPLETED, "ደረጃዎች ተጠናቀዋል");
+        set(RESET_PROGRESS, "እድገት ዳግም አስጀምር");
+        set(RESET_PROGRESS_CONFIRM, "እድገትን ዳግም ማስጀመር እርግጠኛ ነዎት?");
+        set(RESET, "ዳግም አስጀምር");
+            set(WPM, "WPM​");
+        set(SPACING, "ክፍተት");
+    }
 }

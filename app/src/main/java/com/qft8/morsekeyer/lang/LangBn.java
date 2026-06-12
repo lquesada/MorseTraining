@@ -50,8 +50,8 @@ public class LangBn extends MorseLanguage {
                 "কঠোর মোডে অক্ষরের মাঝে সঠিক টাইমিং প্রয়োজন; সাধারণ মোডে দ্রুত কিয়িং সম্ভব।\n\n" +
                 "সাধারণ সমস্যা: শব্দে বেশি ক্লিক হলে 'সটুথ' অপশন ব্যবহার করুন বা এনভেলপ পরিবর্তন করুন। ল্যাটেন্সি বেশি হলে বাফার কমান।\n\n" +
                 "কীবোর্ড কী:\n" +
-                "  বাম: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  ডান: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  বাম: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  ডান: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "কী");
         
@@ -108,8 +108,6 @@ public class LangBn extends MorseLanguage {
 
         set(MATCH_RESULTS, "ম্যাচের ফলাফল");
                 
-        set(INFINITE, "কোন সময় সীমা ছাড়া অনুশীলন");
-        set(THREE_MINUTES, "3 মিনিটে আপনার স্কোর হারান");
 
         set(REPEAT, "পুনরাবৃত্তি");
 
@@ -119,5 +117,22 @@ public class LangBn extends MorseLanguage {
         set(CONTINUE, "চালিয়ে যান");
         set(RX, "গ্রহণ করা");
         set(TX, "সম্প্রচার করা");
-}
+
+        set(KOCH_METHOD, "কোচ পদ্ধতি");
+        set(TARGET, "লক্ষ্য");
+        set(LISTEN, "শুনুন");
+        set(TARGET_MET, "লক্ষ্য পূরণ হয়েছে");
+        set(TARGET_NOT_MET, "লক্ষ্য পূরণ হয়নি");
+            set(LEVEL, "স্তর");
+    
+        set(LEARN, "শিখুন");
+        set(PLAY, "খেলুন");
+    
+        set(LEVELS_COMPLETED, "সম্পন্ন স্তর");
+        set(RESET_PROGRESS, "অগ্রগতি রিসেট করুন");
+        set(RESET_PROGRESS_CONFIRM, "আপনি কি অগ্রগতি রিসেট করতে চান?");
+        set(RESET, "রিসেট করুন");
+            set(WPM, "WPM​");
+        set(SPACING, "ব্যবধান");
+    }
 }

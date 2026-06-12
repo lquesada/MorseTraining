@@ -50,8 +50,8 @@ public class LangDe extends MorseLanguage {
                 "Der strikte Modus erfordert korrektes Timing; der nicht-strikte Modus erlaubt schnellere Eingabe.\n\n" +
                 "Häufige Probleme: Wenn es zu stark klickt, Sägezahn-Option wählen oder Envelope anpassen. Bei hoher Latenz Puffer verringern. Wenn der Ton aussetzt, Puffer erhöhen.\n\n" +
                 "Tastaturbelegung:\n" +
-                "  Links: [  A  ,  \u2190  L-Strg  L-Umschalt  L-Alt  Num.  F1\n" +
-                "  Rechts: ]  D  S  .  \u2192  R-Strg  R-Umschalt  R-Alt  NumEnter  F2");
+                "  Links: [  A  ,  1  0  \u2190  L-Strg  L-Umschalt  L-Alt  Num.  F1\n" +
+                "  Rechts: ]  D  S  .  3  9  \u2192  R-Strg  R-Umschalt  R-Alt  NumEnter  F2");
 
         set(KEY, "Taste");
         
@@ -109,8 +109,6 @@ public class LangDe extends MorseLanguage {
 
         set(MATCH_RESULTS, "Ergebnisse");
                 
-        set(INFINITE, "Üben Sie ohne zeitliche Begrenzung");
-        set(THREE_MINUTES, "Schlagen Sie Ihre Punktzahl in 3 Minuten");
 
         set(REPEAT, "WIEDERHOLEN");
 
@@ -119,5 +117,22 @@ public class LangDe extends MorseLanguage {
         set(CONTINUE, "WEITERMACHEN");
         set(RX, "Empfangen");
         set(TX, "Senden");
-}
+
+        set(KOCH_METHOD, "Koch-Methode");
+        set(TARGET, "Ziel");
+        set(LISTEN, "Zuhören");
+        set(TARGET_MET, "Ziel erreicht");
+        set(TARGET_NOT_MET, "Ziel nicht erreicht");
+            set(LEVEL, "Level");
+    
+        set(LEARN, "Lernen");
+        set(PLAY, "Spielen");
+    
+        set(LEVELS_COMPLETED, "Abgeschlossene Level");
+        set(RESET_PROGRESS, "Fortschritt zurücksetzen");
+        set(RESET_PROGRESS_CONFIRM, "Bist du sicher, dass du den Fortschritt zurücksetzen möchtest?");
+        set(RESET, "Zurücksetzen");
+            set(WPM, "WPM​");
+        set(SPACING, "Abstand");
+    }
 }

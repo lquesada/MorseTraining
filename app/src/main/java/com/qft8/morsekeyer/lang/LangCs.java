@@ -44,7 +44,7 @@ public class LangCs extends MorseLanguage {
         set(PERFORMANCE_HINT, "Pokud zvuk koktá, zvyšte buffer. Pokud je latence vysoká, snižte jej.");
         
         set(INFO_TITLE, "Morse Training");
-        set(INFO_TEXT, "Podporované vstupy: klávesnice, dotyková obrazovka, myš nebo USB adaptér pro pádla.\n\nPro klíčování levým/pravým tlačítkem myši nebo adaptér pádla z USB na myš nechte ukazatel myši nad levým tlačítkem pádla na obrazovce, levé/pravé kliknutí se namapuje na správná pádla.\n\nPro USB adaptéry pádel na klávesnici (např. VBand) to funguje ihned po připojení.\n\nPřísné časování vyžaduje přesné mezery mezi písmeny; nepřísné umožňuje rychlejší klíčování.\n\nŘešení problémů: Pokud zvuk cvaká, zkuste Pilový zub nebo změňte obálku. Pokud je zpoždění vysoké, zmenšete vyrovnávací paměť. Pokud se zvuk zasekává, zvyšte ji.\n\nKlávesy na klávesnici:\n  Levá: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n  Pravá: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+        set(INFO_TEXT, "Podporované vstupy: klávesnice, dotyková obrazovka, myš nebo USB adaptér pro pádla.\n\nPro klíčování levým/pravým tlačítkem myši nebo adaptér pádla z USB na myš nechte ukazatel myši nad levým tlačítkem pádla na obrazovce, levé/pravé kliknutí se namapuje na správná pádla.\n\nPro USB adaptéry pádel na klávesnici (např. VBand) to funguje ihned po připojení.\n\nPřísné časování vyžaduje přesné mezery mezi písmeny; nepřísné umožňuje rychlejší klíčování.\n\nŘešení problémů: Pokud zvuk cvaká, zkuste Pilový zub nebo změňte obálku. Pokud je zpoždění vysoké, zmenšete vyrovnávací paměť. Pokud se zvuk zasekává, zvyšte ji.\n\nKlávesy na klávesnici:\n  Levá: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n  Pravá: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Klíč");
         
@@ -102,8 +102,6 @@ public class LangCs extends MorseLanguage {
 
         set(MATCH_RESULTS, "Výsledky zápasů");
                 
-        set(INFINITE, "Cvičte bez časového omezení");
-        set(THREE_MINUTES, "Překonejte své skóre za 3 minuty");
 
         set(REPEAT, "OPAKOVAT");
 
@@ -112,5 +110,22 @@ public class LangCs extends MorseLanguage {
         set(CONTINUE, "POKRAČOVAT");
         set(RX, "Přijímat");
         set(TX, "Vysílat");
-}
+
+        set(KOCH_METHOD, "Kochova metoda");
+        set(TARGET, "Cíl");
+        set(LISTEN, "Poslouchat");
+        set(TARGET_MET, "Cíl splněn");
+        set(TARGET_NOT_MET, "Cíl nesplněn");
+            set(LEVEL, "Úroveň");
+    
+        set(LEARN, "Učit se");
+        set(PLAY, "Hrát");
+    
+        set(LEVELS_COMPLETED, "Dokončené úrovně");
+        set(RESET_PROGRESS, "Resetovat postup");
+        set(RESET_PROGRESS_CONFIRM, "Opravdu chcete resetovat postup?");
+        set(RESET, "Resetovat");
+            set(WPM, "WPM​");
+        set(SPACING, "Mezery");
+    }
 }

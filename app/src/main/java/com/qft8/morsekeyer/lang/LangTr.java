@@ -50,8 +50,8 @@ public class LangTr extends MorseLanguage {
                 "Katı mod, harfler arasında hassas zamanlama gerektirir; katı olmayan mod daha hızlı kullanıma izin verir.\n\n" +
                 "Yaygın sorunlar: Ses çok fazla tıklama yapıyorsa, 'Testere dişi' seçeneğini deneyin veya zarfı değiştirin. Gecikme yüksekse arabelleği azaltın.\n\n" +
                 "Klavye tuşları:\n" +
-                "  Sol: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Sağ: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Sol: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Sağ: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Anahtar");
         
@@ -109,8 +109,6 @@ public class LangTr extends MorseLanguage {
 
         set(MATCH_RESULTS, "Sonuçlar");
                 
-        set(INFINITE, "Zaman sınırı olmadan pratik yapın");
-        set(THREE_MINUTES, "Skorunuzu 3 dakikada geçin");
 
         set(REPEAT, "TEKRARLA");
 
@@ -119,5 +117,22 @@ public class LangTr extends MorseLanguage {
         set(CONTINUE, "DEVAM ETMEK");
         set(RX, "Almak");
         set(TX, "İletmek");
-}
+
+        set(KOCH_METHOD, "Koch yöntemi");
+        set(TARGET, "Hedef");
+        set(LISTEN, "Dinle");
+        set(TARGET_MET, "Hedefe ulaşıldı");
+        set(TARGET_NOT_MET, "Hedefe ulaşılmadı");
+            set(LEVEL, "Seviye");
+    
+        set(LEARN, "Öğren");
+        set(PLAY, "Oyna");
+    
+        set(LEVELS_COMPLETED, "Tamamlanan seviyeler");
+        set(RESET_PROGRESS, "İlerlemeyi sıfırla");
+        set(RESET_PROGRESS_CONFIRM, "İlerlemeyi sıfırlamak istediğinizden emin misiniz?");
+        set(RESET, "Sıfırla");
+            set(WPM, "WPM​");
+        set(SPACING, "Aralık");
+    }
 }

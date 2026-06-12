@@ -61,8 +61,8 @@ public class LangHe extends MorseLanguage {
                 "מצב קפדני דורש את התזמון הנכון בין אותיות, מצב לא קפדני מאפשר מניפולציה מהירה יותר.\n\n" +
                 "בעיות נפוצות: אם הצליל קליקי מדי במכשיר שלך, נסה את האפשרות של אות שן מסור או נסה לשנות את המעטפת. אם ההשהיה גבוהה מדי, נסה להקטין את הבאפר. אם הצליל נשבר, נסה להגדיל אותו.\n\n" +
                 "מקשי מקלדת:\n" +
-                "  שמאל: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  ימין: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  שמאל: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  ימין: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "מפתח");
         
@@ -108,8 +108,6 @@ public class LangHe extends MorseLanguage {
         set(HIGH_SCORE, "ציון גבוה");
 
                 
-        set(INFINITE, "תרגול ללא הגבלת זמן");
-        set(THREE_MINUTES, "נצח את התוצאה שלך תוך 3 דקות");
 
         set(REPEAT, "חזור");
 
@@ -118,5 +116,22 @@ public class LangHe extends MorseLanguage {
         set(CONTINUE, "לְהַמשִׁיך");
         set(RX, "לקבל");
         set(TX, "לשדר");
-}
+
+        set(KOCH_METHOD, "שיטת קוך");
+        set(TARGET, "יעד");
+        set(LISTEN, "הקשב");
+        set(TARGET_MET, "היעד הושג");
+        set(TARGET_NOT_MET, "היעד לא הושג");
+            set(LEVEL, "שלב");
+    
+        set(LEARN, "למד");
+        set(PLAY, "שחק");
+    
+        set(LEVELS_COMPLETED, "שלבים שהושלמו");
+        set(RESET_PROGRESS, "אפס התקדמות");
+        set(RESET_PROGRESS_CONFIRM, "האם אתה בטוח שברצונך לאפס התקדמות?");
+        set(RESET, "אפס");
+            set(WPM, "WPM​");
+        set(SPACING, "ריווח");
+    }
 }

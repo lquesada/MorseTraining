@@ -61,8 +61,8 @@ public class LangSk extends MorseLanguage {
                 "Prísny režim vyžaduje presné načasovanie medzi písmenami, neprísny režim umožňuje rýchlejšiu manipuláciu.\n\n" +
                 "Bežné problémy: Ak je zvuk vo vašom zariadení príliš klikavý, skúste možnosť pílovitého signálu alebo skúste upraviť obálku. Ak je oneskorenie príliš vysoké, skúste zmenšiť vyrovnávaciu pamäť. Ak sa zvuk prerušuje, skúste ju zväčšiť.\n\n" +
                 "Klávesy na klávesnici:\n" +
-                "  Vľavo: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Vpravo: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Vľavo: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Vpravo: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Kľúč");
         
@@ -108,8 +108,6 @@ public class LangSk extends MorseLanguage {
         set(HIGH_SCORE, "Vysoké skóre");
 
                 
-        set(INFINITE, "Cvičte bez časového obmedzenia");
-        set(THREE_MINUTES, "Prekonajte svoje skóre za 3 minúty");
 
         set(REPEAT, "OPAKOVAŤ");
 
@@ -118,5 +116,22 @@ public class LangSk extends MorseLanguage {
         set(CONTINUE, "POKRAČOVAŤ");
         set(RX, "Prijímať");
         set(TX, "Vysielať");
-}
+
+        set(KOCH_METHOD, "Kochova metóda");
+        set(TARGET, "Cieľ");
+        set(LISTEN, "Počúvať");
+        set(TARGET_MET, "Cieľ splnený");
+        set(TARGET_NOT_MET, "Cieľ nesplnený");
+            set(LEVEL, "Úroveň");
+    
+        set(LEARN, "Učiť sa");
+        set(PLAY, "Hrať");
+    
+        set(LEVELS_COMPLETED, "Dokončené úrovne");
+        set(RESET_PROGRESS, "Resetovať postup");
+        set(RESET_PROGRESS_CONFIRM, "Naozaj chcete resetovať postup?");
+        set(RESET, "Resetovať");
+            set(WPM, "WPM​");
+        set(SPACING, "Medzery");
+    }
 }

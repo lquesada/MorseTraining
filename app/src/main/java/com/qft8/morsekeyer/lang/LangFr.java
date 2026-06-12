@@ -50,8 +50,8 @@ public class LangFr extends MorseLanguage {
                 "Le mode strict exige un timing précis ; le mode non-strict permet une manipulation plus rapide.\n\n" +
                 "Problèmes courants : Si le son cliquette trop, essayez l'option 'Dents de scie' ou modifiez l'enveloppe. Si la latence est élevée, réduisez le tampon. Si le son se coupe, augmentez-le.\n\n" +
                 "Touches du clavier :\n" +
-                "  Gauche : [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Droite : ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Gauche : [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Droite : ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Clé");
         
@@ -109,8 +109,6 @@ public class LangFr extends MorseLanguage {
 
         set(MATCH_RESULTS, "Résultats");
                 
-        set(INFINITE, "Entraînez-vous sans limite de temps");
-        set(THREE_MINUTES, "Battez votre score en 3 minutes");
 
         set(REPEAT, "RÉPÉTER");
 
@@ -119,5 +117,22 @@ public class LangFr extends MorseLanguage {
         set(CONTINUE, "CONTINUER");
         set(RX, "Recevoir");
         set(TX, "Transmettre");
-}
+
+        set(KOCH_METHOD, "Méthode Koch");
+        set(TARGET, "Cible");
+        set(LISTEN, "Écouter");
+        set(TARGET_MET, "Objectif atteint");
+        set(TARGET_NOT_MET, "Objectif non atteint");
+            set(LEVEL, "Niveau");
+    
+        set(LEARN, "Apprendre");
+        set(PLAY, "Jouer");
+    
+        set(LEVELS_COMPLETED, "Niveaux terminés");
+        set(RESET_PROGRESS, "Réinitialiser la progression");
+        set(RESET_PROGRESS_CONFIRM, "Êtes-vous sûr de vouloir réinitialiser la progression ?");
+        set(RESET, "Réinitialiser");
+            set(WPM, "MPM");
+        set(SPACING, "Espacement");
+    }
 }

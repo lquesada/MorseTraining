@@ -44,7 +44,7 @@ public class LangGl extends MorseLanguage {
         set(PERFORMANCE_HINT, "Se o son se corta, aumenta o búfer. Se a latencia é alta, redúceo.");
         
         set(INFO_TITLE, "Morse Training");
-        set(INFO_TEXT, "Entradas soportadas: teclado, pantalla táctil, rato ou adaptador de pas USB.\n\nPara manipular co clic esquerdo/dereito do rato ou cun adaptador de pas USB a rato, deixe o punteiro do rato sobre o botón da pa esquerda na pantalla; o clic esquerdo/dereito asignarase ás pas correctas.\n\nPara os adaptadores de pas de USB a teclado (por exemplo, VBand) funciona directamente sen configuración.\n\nA temporización estrita require pausas precisas entre letras; a non estrita permite unha manipulación máis rápida.\n\nSolución de problemas: Se o son ten clics, probe Dente de serra o cambie a envolvente. Se a latencia é alta, reduza o búfer. Se o son se entrecorta, auménteo.\n\nTeclas do teclado:\n  Esquerda: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n  Dereita: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+        set(INFO_TEXT, "Entradas soportadas: teclado, pantalla táctil, rato ou adaptador de pas USB.\n\nPara manipular co clic esquerdo/dereito do rato ou cun adaptador de pas USB a rato, deixe o punteiro do rato sobre o botón da pa esquerda na pantalla; o clic esquerdo/dereito asignarase ás pas correctas.\n\nPara os adaptadores de pas de USB a teclado (por exemplo, VBand) funciona directamente sen configuración.\n\nA temporización estrita require pausas precisas entre letras; a non estrita permite unha manipulación máis rápida.\n\nSolución de problemas: Se o son ten clics, probe Dente de serra o cambie a envolvente. Se a latencia é alta, reduza o búfer. Se o son se entrecorta, auménteo.\n\nTeclas do teclado:\n  Esquerda: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n  Dereita: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Chave");
         
@@ -101,8 +101,6 @@ public class LangGl extends MorseLanguage {
 
         set(MATCH_RESULTS, "Resultados do partido");
                 
-        set(INFINITE, "Practica sen límite de tempo");
-        set(THREE_MINUTES, "Supera a túa puntuación en 3 minutos");
 
         set(REPEAT, "REPETIR");
 
@@ -112,5 +110,22 @@ public class LangGl extends MorseLanguage {
         set(CONTINUE, "CONTINUAR");
         set(RX, "Recibir");
         set(TX, "Transmitir");
-}
+
+        set(KOCH_METHOD, "Método Koch");
+        set(TARGET, "Obxectivo");
+        set(LISTEN, "Escoitar");
+        set(TARGET_MET, "Obxectivo acadado");
+        set(TARGET_NOT_MET, "Obxectivo non acadado");
+            set(LEVEL, "Nivel");
+    
+        set(LEARN, "Aprender");
+        set(PLAY, "Xogar");
+    
+        set(LEVELS_COMPLETED, "Niveis completados");
+        set(RESET_PROGRESS, "Restablecer progreso");
+        set(RESET_PROGRESS_CONFIRM, "Estás seguro de que queres restablecer o progreso?");
+        set(RESET, "Restablecer");
+            set(WPM, "WPM​");
+        set(SPACING, "Espazamento");
+    }
 }

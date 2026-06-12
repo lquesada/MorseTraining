@@ -50,8 +50,8 @@ public class LangRo extends MorseLanguage {
                 "Modul strict necesită timp precis între litere; modul non-strict permite manipulare mai rapidă.\n\n" +
                 "Probleme comune: Dacă sunetul are prea multe clicuri, încearcă opțiunea 'Dinte de fierăstrău' sau modifică anvelopa. Dacă latența e mare, redu bufferul.\n\n" +
                 "Taste tastatură:\n" +
-                "  Stânga: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Dreapta: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Stânga: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Dreapta: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Cheie");
         
@@ -109,8 +109,6 @@ public class LangRo extends MorseLanguage {
 
         set(MATCH_RESULTS, "Rezultatele meciului");
                 
-        set(INFINITE, "Practică fără limită de timp");
-        set(THREE_MINUTES, "Bate-ți scorul în 3 minute");
 
         set(REPEAT, "REPETĂ");
 
@@ -119,5 +117,22 @@ public class LangRo extends MorseLanguage {
         set(CONTINUE, "CONTINUA");
         set(RX, "Primi");
         set(TX, "Transmite");
-}
+
+        set(KOCH_METHOD, "Metoda Koch");
+        set(TARGET, "Țintă");
+        set(LISTEN, "Ascultă");
+        set(TARGET_MET, "Țintă atinsă");
+        set(TARGET_NOT_MET, "Țintă neatinsă");
+            set(LEVEL, "Nivel");
+    
+        set(LEARN, "Învață");
+        set(PLAY, "Joacă");
+    
+        set(LEVELS_COMPLETED, "Niveluri completate");
+        set(RESET_PROGRESS, "Resetează progresul");
+        set(RESET_PROGRESS_CONFIRM, "Sigur vrei să resetezi progresul?");
+        set(RESET, "Resetează");
+            set(WPM, "WPM​");
+        set(SPACING, "Spațiere");
+    }
 }

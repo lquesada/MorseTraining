@@ -50,8 +50,8 @@ public class LangPt extends MorseLanguage {
                 "O modo estrito exige tempo preciso entre letras; o modo não estrito permite manipulação mais rápida.\n\n" +
                 "Problemas comuns: Se o som tiver muitos cliques, tente a opção 'Dente de serra' ou altere o envelope. Se a latência for alta, diminua o buffer.\n\n" +
                 "Teclas do teclado:\n" +
-                "  Esquerda: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Direita: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Esquerda: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Direita: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Chave");
         
@@ -109,8 +109,6 @@ public class LangPt extends MorseLanguage {
 
         set(MATCH_RESULTS, "Resultados");
                 
-        set(INFINITE, "Pratique sem limite de tempo");
-        set(THREE_MINUTES, "Bata sua pontuação em 3 minutos");
 
         set(REPEAT, "REPETIR");
 
@@ -119,5 +117,22 @@ public class LangPt extends MorseLanguage {
         set(CONTINUE, "CONTINUAR");
         set(RX, "Receber");
         set(TX, "Transmitir");
-}
+
+        set(KOCH_METHOD, "Método Koch");
+        set(TARGET, "Alvo");
+        set(LISTEN, "Ouvir");
+        set(TARGET_MET, "Alvo atingido");
+        set(TARGET_NOT_MET, "Alvo não atingido");
+            set(LEVEL, "Nível");
+    
+        set(LEARN, "Aprender");
+        set(PLAY, "Jogar");
+    
+        set(LEVELS_COMPLETED, "Níveis concluídos");
+        set(RESET_PROGRESS, "Redefinir progresso");
+        set(RESET_PROGRESS_CONFIRM, "Tem certeza de que deseja redefinir o progresso?");
+        set(RESET, "Redefinir");
+            set(WPM, "WPM​");
+        set(SPACING, "Espaçamento");
+    }
 }

@@ -50,8 +50,8 @@ public class LangHu extends MorseLanguage {
                 "A szigorú mód pontos időzítést igényel; a nem szigorú mód gyorsabb kezelést tesz lehetővé.\n\n" +
                 "Gyakori problémák: Ha túl darabos a hang, próbálja a fűrészfog jelet vagy állítsa az envelope-ot. Ha nagy a késleltetés, csökkentse a puffert.\n\n" +
                 "Billentyűk:\n" +
-                "  Bal: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Jobb: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Bal: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Jobb: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Billentyű");
         
@@ -109,8 +109,6 @@ public class LangHu extends MorseLanguage {
 
         set(MATCH_RESULTS, "Mérkőzések eredményei");
                 
-        set(INFINITE, "Gyakorolj időkorlát nélkül");
-        set(THREE_MINUTES, "Verje meg pontszámát 3 perc alatt");
 
         set(REPEAT, "ISMÉTLÉS");
 
@@ -119,5 +117,22 @@ public class LangHu extends MorseLanguage {
         set(CONTINUE, "FOLYTATÁS");
         set(RX, "Fogni");
         set(TX, "Adni");
-}
+
+        set(KOCH_METHOD, "Koch-módszer");
+        set(TARGET, "Cél");
+        set(LISTEN, "Hallgat");
+        set(TARGET_MET, "Cél elérve");
+        set(TARGET_NOT_MET, "Cél nincs elérve");
+            set(LEVEL, "Szint");
+    
+        set(LEARN, "Tanulás");
+        set(PLAY, "Játék");
+    
+        set(LEVELS_COMPLETED, "Befejezett szintek");
+        set(RESET_PROGRESS, "Haladás visszaállítása");
+        set(RESET_PROGRESS_CONFIRM, "Biztosan vissza akarja állítani a haladást?");
+        set(RESET, "Visszaállítás");
+            set(WPM, "WPM​");
+        set(SPACING, "Térköz");
+    }
 }

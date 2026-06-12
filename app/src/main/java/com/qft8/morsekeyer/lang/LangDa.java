@@ -61,8 +61,8 @@ public class LangDa extends MorseLanguage {
                 "Streng tilstand kræver korrekt timing mellem bogstaver, ikke-streng tilstand tillader hurtigere manipulation.\n\n" +
                 "Almindelige problemer: Hvis lyden er for klikkende på din enhed, kan du prøve 'Brug savtaksignal for at undgå klik'-indstillingen eller prøve at ændre stige-/faldetiden. Hvis forsinkelsen er for høj, kan du prøve at mindske bufferen. Hvis lyden hakker, kan du prøve at øge den.\n\n" +
                 "Tastaturtaster:\n" +
-                "  Venstre: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Højre: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Venstre: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Højre: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Nøgle");
         
@@ -108,8 +108,6 @@ public class LangDa extends MorseLanguage {
         set(HIGH_SCORE, "Høj score");
 
                 
-        set(INFINITE, "Øv uden tidsbegrænsning");
-        set(THREE_MINUTES, "Slå din score på 3 minutter");
 
         set(REPEAT, "GENTAG");
 
@@ -118,5 +116,22 @@ public class LangDa extends MorseLanguage {
         set(CONTINUE, "FORTSÆTTE");
         set(RX, "Modtage");
         set(TX, "Sende");
-}
+
+        set(KOCH_METHOD, "Koch-metoden");
+        set(TARGET, "Mål");
+        set(LISTEN, "Lyt");
+        set(TARGET_MET, "Mål nået");
+        set(TARGET_NOT_MET, "Mål ikke nået");
+            set(LEVEL, "Niveau");
+    
+        set(LEARN, "Lær");
+        set(PLAY, "Spil");
+    
+        set(LEVELS_COMPLETED, "Gennemførte niveauer");
+        set(RESET_PROGRESS, "Nulstil fremskridt");
+        set(RESET_PROGRESS_CONFIRM, "Er du sikker på, at du vil nulstille fremskridtet?");
+        set(RESET, "Nulstil");
+            set(WPM, "WPM​");
+        set(SPACING, "Mellemrum");
+    }
 }

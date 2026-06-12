@@ -50,8 +50,8 @@ public class LangId extends MorseLanguage {
                 "Mode ketat memerlukan waktu yang tepat antar huruf; mode tidak ketat memungkinkan manipulasi lebih cepat.\n\n" +
                 "Masalah umum: Jika suara terlalu banyak klik, coba opsi 'Gigi Gergaji' atau ubah envelope. Jika latensi tinggi, kurangi buffer.\n\n" +
                 "Tombol keyboard:\n" +
-                "  Kiri: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Kanan: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Kiri: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Kanan: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Kunci");
         
@@ -109,8 +109,6 @@ public class LangId extends MorseLanguage {
 
         set(MATCH_RESULTS, "Hasil");
                 
-        set(INFINITE, "Berlatih tanpa batas waktu");
-        set(THREE_MINUTES, "Kalahkan skor Anda dalam 3 menit");
 
         set(REPEAT, "ULANGI");
 
@@ -119,5 +117,22 @@ public class LangId extends MorseLanguage {
         set(CONTINUE, "MELANJUTKAN");
         set(RX, "Menerima");
         set(TX, "Mengirim");
-}
+
+        set(KOCH_METHOD, "Metode Koch");
+        set(TARGET, "Target");
+        set(LISTEN, "Dengarkan");
+        set(TARGET_MET, "Target tercapai");
+        set(TARGET_NOT_MET, "Target tidak tercapai");
+            set(LEVEL, "Tingkat");
+    
+        set(LEARN, "Belajar");
+        set(PLAY, "Mainkan");
+    
+        set(LEVELS_COMPLETED, "Tingkat diselesaikan");
+        set(RESET_PROGRESS, "Atur ulang kemajuan");
+        set(RESET_PROGRESS_CONFIRM, "Anda yakin ingin mengatur ulang kemajuan?");
+        set(RESET, "Atur ulang");
+            set(WPM, "WPM​");
+        set(SPACING, "Spasi");
+    }
 }

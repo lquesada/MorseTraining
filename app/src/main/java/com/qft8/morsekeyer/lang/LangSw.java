@@ -50,8 +50,8 @@ public class LangSw extends MorseLanguage {
                 "Njia madhubuti inahitaji muda sahihi kati ya herufi; njia isiyo madhubuti inaruhusu ufunguaji wa kasi zaidi.\n\n" +
                 "Matatizo ya kawaida: Sauti ikiwa na kelele sana, jaribu chaguo la 'Msumeno' au ubadilishe bahasha. Sauti ikichelewa sana, punguza hifadhi.\n\n" +
                 "Vifungo vya kibodi:\n" +
-                "  Kushoto: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Kulia: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Kushoto: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Kulia: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Ufunguo");
         
@@ -98,7 +98,7 @@ public class LangSw extends MorseLanguage {
                 set(MATCH_COMPLETED, "Mechi imekamilika");
         set(TRY_AGAIN, "Jaribu tena");
         set(WORDS, "Maneno");
-                set(QUIT_GAME, "Acha Mchezo");
+                set(QUIT_GAME, "Acha mchezo");
         set(MATCH_SETTINGS, "Vigezo vya mchezo");
         set(SHARE_PREVIEW, "Shiriki onyesho la kukagua");
         set(SHARE, "Shiriki");
@@ -108,8 +108,6 @@ public class LangSw extends MorseLanguage {
 
         set(MATCH_RESULTS, "Matokeo ya mechi");
                 
-        set(INFINITE, "Fanya mazoezi bila kikomo cha muda");
-        set(THREE_MINUTES, "Shinda alama zako katika dakika 3");
 
         set(REPEAT, "RUDIA");
 
@@ -119,5 +117,22 @@ public class LangSw extends MorseLanguage {
         set(CONTINUE, "ENDELEA");
         set(RX, "Kupokea");
         set(TX, "Kutuma");
-}
+
+        set(KOCH_METHOD, "Mbinu ya Koch");
+        set(TARGET, "Lengo");
+        set(LISTEN, "Sikiliza");
+        set(TARGET_MET, "Lengo limefikiwa");
+        set(TARGET_NOT_MET, "Lengo halijafikiwa");
+            set(LEVEL, "Kiwango");
+    
+        set(LEARN, "Jifunze");
+        set(PLAY, "Cheza");
+    
+        set(LEVELS_COMPLETED, "Viwango vilivyokamilika");
+        set(RESET_PROGRESS, "Wezesha upya maendeleo");
+        set(RESET_PROGRESS_CONFIRM, "Una uhakika unataka kuwezesha upya?");
+        set(RESET, "Wezesha upya");
+            set(WPM, "WPM​");
+        set(SPACING, "Nafasi");
+    }
 }

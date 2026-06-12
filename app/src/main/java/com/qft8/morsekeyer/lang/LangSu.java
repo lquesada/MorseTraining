@@ -44,7 +44,7 @@ public class LangSu extends MorseLanguage {
         set(PERFORMANCE_HINT, "Upami sora peget, tambah buffer. Upami lami, kirangan.");
         
         set(INFO_TITLE, "Morse Training");
-        set(INFO_TEXT, "Input anu dirojong: kibor, layar rampa, beurit atanapi adaptor dayung USB.\n\nPikeun mouse kenca/katuhu-klik keying atawa adaptor dayung USB-ka-beurit, ninggalkeun panunjuk beurit dina tombol ngawelah kénca dina layar, kénca/katuhu bakal peta ka dayung nu bener.\n\nPikeun adaptor dayung USB-ka-kibor (misalna VBand) tiasa langsung dianggo tanpa setelan.\n\nWaktos anu ketat ngabutuhkeun jeda antar-huruf anu pas; anu teu ketat ngamungkinkeun keying anu langkung gancang.\n\nNgungkulan masalah: Lamun sora klik, cobi Sawtooth atawa robah amplop. Lamun laténsi luhur, kurangan panyangga. Lamun sora kaganggu, tambahkeun.\n\nKonci kibor:\n  Kénca: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n  Katuhu: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+        set(INFO_TEXT, "Input anu dirojong: kibor, layar rampa, beurit atanapi adaptor dayung USB.\n\nPikeun mouse kenca/katuhu-klik keying atawa adaptor dayung USB-ka-beurit, ninggalkeun panunjuk beurit dina tombol ngawelah kénca dina layar, kénca/katuhu bakal peta ka dayung nu bener.\n\nPikeun adaptor dayung USB-ka-kibor (misalna VBand) tiasa langsung dianggo tanpa setelan.\n\nWaktos anu ketat ngabutuhkeun jeda antar-huruf anu pas; anu teu ketat ngamungkinkeun keying anu langkung gancang.\n\nNgungkulan masalah: Lamun sora klik, cobi Sawtooth atawa robah amplop. Lamun laténsi luhur, kurangan panyangga. Lamun sora kaganggu, tambahkeun.\n\nKonci kibor:\n  Kénca: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n  Katuhu: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Konci");
         
@@ -91,7 +91,7 @@ public class LangSu extends MorseLanguage {
                 set(MATCH_COMPLETED, "Pertandingan réngsé");
         set(TRY_AGAIN, "Cobi deui");
         set(WORDS, "Kecap-kecap");
-                set(QUIT_GAME, "Leupaskeun Kaulinan");
+                set(QUIT_GAME, "Leupaskeun kaulinan");
         set(MATCH_SETTINGS, "Parameter kaulinan");
         set(SHARE_PREVIEW, "Bagikeun sawangan");
         set(SHARE, "Bagikeun");
@@ -101,8 +101,6 @@ public class LangSu extends MorseLanguage {
 
         set(MATCH_RESULTS, "Hasil pertandingan");
                 
-        set(INFINITE, "Latihan tanpa wates waktu");
-        set(THREE_MINUTES, "Kocok skor anjeun dina 3 menit");
 
         set(REPEAT, "ULANGI");
 
@@ -112,5 +110,22 @@ public class LangSu extends MorseLanguage {
         set(CONTINUE, "TERUS");
         set(RX, "Nampi");
         set(TX, "Ngirimkeun");
-}
+
+        set(KOCH_METHOD, "Metode Koch");
+        set(TARGET, "Target");
+        set(LISTEN, "Dengekeun");
+        set(TARGET_MET, "Target kahontal");
+        set(TARGET_NOT_MET, "Target teu kahontal");
+            set(LEVEL, "Tingkat");
+    
+        set(LEARN, "Diajar");
+        set(PLAY, "Ulin");
+    
+        set(LEVELS_COMPLETED, "Tingkat rengse");
+        set(RESET_PROGRESS, "Mereset kamajuan");
+        set(RESET_PROGRESS_CONFIRM, "Anjeun yakin rek mereset kamajuan?");
+        set(RESET, "Reset");
+            set(WPM, "WPM​");
+        set(SPACING, "Spasi");
+    }
 }

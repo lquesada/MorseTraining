@@ -50,8 +50,8 @@ public class LangSv extends MorseLanguage {
                 "Strikt läge kräver korrekt timing; icke-strikt läge tillåter snabbare manipulering.\n\n" +
                 "Vanliga problem: Om ljudet klickar för mycket, prova sagtandssignalen eller justera envelopen. Vid hög latens, minska bufferten.\n\n" +
                 "Tangentbordsknappar:\n" +
-                "  Vänster: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Höger: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Vänster: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Höger: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Nyckel");
         
@@ -109,8 +109,6 @@ public class LangSv extends MorseLanguage {
 
         set(MATCH_RESULTS, "Resultat");
                 
-        set(INFINITE, "Öva utan tidsbegränsning");
-        set(THREE_MINUTES, "Slå din poäng på 3 minuter");
 
         set(REPEAT, "UPPREPA");
 
@@ -119,5 +117,22 @@ public class LangSv extends MorseLanguage {
         set(CONTINUE, "FORTSÄTTA");
         set(RX, "Motta");
         set(TX, "Sända");
-}
+
+        set(KOCH_METHOD, "Koch-metoden");
+        set(TARGET, "Mål");
+        set(LISTEN, "Lyssna");
+        set(TARGET_MET, "Mål uppnått");
+        set(TARGET_NOT_MET, "Mål ej uppnått");
+            set(LEVEL, "Nivå");
+    
+        set(LEARN, "Lär dig");
+        set(PLAY, "Spela");
+    
+        set(LEVELS_COMPLETED, "Slutförda nivåer");
+        set(RESET_PROGRESS, "Återställ framsteg");
+        set(RESET_PROGRESS_CONFIRM, "Är du säker på att du vill återställa framstegen?");
+        set(RESET, "Återställ");
+            set(WPM, "WPM​");
+        set(SPACING, "Avstånd");
+    }
 }

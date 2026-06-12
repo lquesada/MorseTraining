@@ -44,7 +44,7 @@ public class LangUz extends MorseLanguage {
         set(PERFORMANCE_HINT, "Agar ovoz uzilsa, buferni oshiring. Kechikish yuqori bo'lsa, kamaytiring.");
         
         set(INFO_TITLE, "Morse Training");
-        set(INFO_TEXT, "Qo'llab-quvvatlanadigan kiritishlar: klaviatura, sensorli ekran, sichqoncha yoki USB eshkak adapteri.\n\nSichqonchani chap/o‘ng tugmani bosish orqali kalitlash yoki USB-sichqonchali eshkak eshish adapteri uchun sichqoncha ko‘rsatkichini ekrandagi chap eshkak tugmasi ustida qoldiring, chap/o‘ng tugmani bosish to‘g‘ri eshkaklarga ulanadi.\n\nUSB-klaviatura eshkak adapterlari uchun (masalan, VBand) u hech qanday sozlamalarsiz ishlaydi.\n\nQat'iy vaqt harflar orasidagi aniq tanaffuslarni talab qiladi; qat'iy bo'lmagan tezroq yozish imkonini beradi.\n\nMuammolarni hal qilish: Agar ovoz chertayotgan bo'lsa, Arra tishini sinab ko'ring yoki konvertni o'zgartiring. Agar kechikish yuqori bo'lsa, buferni kamaytiring. Agar ovoz duduqlansa, uni oshiring.\n\nKlaviatura tugmalari:\n  Chap: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n  O'ng: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+        set(INFO_TEXT, "Qo'llab-quvvatlanadigan kiritishlar: klaviatura, sensorli ekran, sichqoncha yoki USB eshkak adapteri.\n\nSichqonchani chap/o‘ng tugmani bosish orqali kalitlash yoki USB-sichqonchali eshkak eshish adapteri uchun sichqoncha ko‘rsatkichini ekrandagi chap eshkak tugmasi ustida qoldiring, chap/o‘ng tugmani bosish to‘g‘ri eshkaklarga ulanadi.\n\nUSB-klaviatura eshkak adapterlari uchun (masalan, VBand) u hech qanday sozlamalarsiz ishlaydi.\n\nQat'iy vaqt harflar orasidagi aniq tanaffuslarni talab qiladi; qat'iy bo'lmagan tezroq yozish imkonini beradi.\n\nMuammolarni hal qilish: Agar ovoz chertayotgan bo'lsa, Arra tishini sinab ko'ring yoki konvertni o'zgartiring. Agar kechikish yuqori bo'lsa, buferni kamaytiring. Agar ovoz duduqlansa, uni oshiring.\n\nKlaviatura tugmalari:\n  Chap: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n  O'ng: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Kalit");
         
@@ -101,8 +101,6 @@ public class LangUz extends MorseLanguage {
 
         set(MATCH_RESULTS, "O'yin natijalari");
                 
-        set(INFINITE, "Vaqt cheklovisiz mashq qiling");
-        set(THREE_MINUTES, "Hisobingizni 3 daqiqada yengib chiqing");
 
         set(REPEAT, "TAKRORLASH");
 
@@ -112,5 +110,22 @@ public class LangUz extends MorseLanguage {
         set(CONTINUE, "DAVOM ETISH");
         set(RX, "Qabul qilish");
         set(TX, "Uzatish");
-}
+
+        set(KOCH_METHOD, "Koch usuli");
+        set(TARGET, "Maqsad");
+        set(LISTEN, "Tinglash");
+        set(TARGET_MET, "Maqsadga erishildi");
+        set(TARGET_NOT_MET, "Maqsadga erishilmadi");
+            set(LEVEL, "Daraja");
+    
+        set(LEARN, "O'rganish");
+        set(PLAY, "O'ynash");
+    
+        set(LEVELS_COMPLETED, "Tugallangan darajalar");
+        set(RESET_PROGRESS, "Jarayonni qayta tiklash");
+        set(RESET_PROGRESS_CONFIRM, "Jarayonni qayta tiklashga ishonchingiz komilmi?");
+        set(RESET, "Qayta tiklash");
+            set(WPM, "WPM​");
+        set(SPACING, "Oraliği");
+    }
 }

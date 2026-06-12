@@ -50,8 +50,8 @@ public class LangIt extends MorseLanguage {
                 "La modalità rigorosa richiede un timing preciso; quella non rigorosa permette una manipolazione più rapida.\n\n" +
                 "Problemi comuni: Se il suono ha troppi clic, prova l'opzione 'Dente di sega' o modifica l'inviluppo. Se la latenza è alta, riduci il buffer. Se il suono si interrompe, aumentalo.\n\n" +
                 "Tasti della tastiera:\n" +
-                "  Sinistra: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Destra: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Sinistra: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Destra: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Tasto");
         
@@ -109,8 +109,6 @@ public class LangIt extends MorseLanguage {
 
         set(MATCH_RESULTS, "Risultati");
                 
-        set(INFINITE, "Esercitati senza limiti di tempo");
-        set(THREE_MINUTES, "Batti il ​​tuo punteggio in 3 minuti");
 
         set(REPEAT, "RIPETI");
 
@@ -119,5 +117,22 @@ public class LangIt extends MorseLanguage {
         set(CONTINUE, "CONTINUARE");
         set(RX, "Ricevere");
         set(TX, "Trasmettere");
-}
+
+        set(KOCH_METHOD, "Metodo Koch");
+        set(TARGET, "Obiettivo");
+        set(LISTEN, "Ascolta");
+        set(TARGET_MET, "Obiettivo raggiunto");
+        set(TARGET_NOT_MET, "Obiettivo non raggiunto");
+            set(LEVEL, "Livello");
+    
+        set(LEARN, "Impara");
+        set(PLAY, "Gioca");
+    
+        set(LEVELS_COMPLETED, "Livelli completati");
+        set(RESET_PROGRESS, "Ripristina progressi");
+        set(RESET_PROGRESS_CONFIRM, "Sei sicuro di voler ripristinare i progressi?");
+        set(RESET, "Ripristina");
+            set(WPM, "WPM​");
+        set(SPACING, "Spaziatura");
+    }
 }

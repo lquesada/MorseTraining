@@ -50,8 +50,8 @@ public class LangFi extends MorseLanguage {
                 "Tarkka ajoitus vaatii oikeat välit kirjainten välillä; vapaa tila sallii nopeamman käytön.\n\n" +
                 "Yleisiä ongelmia: Jos ääni napsuu liikaa, kokeile sahalaitasignaalia tai säädä envelopea. Jos viive on suuri, pienennä puskuria.\n\n" +
                 "Näppäimistön näppäimet:\n" +
-                "  Vasen: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Oikea: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Vasen: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Oikea: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Avain");
         
@@ -109,8 +109,6 @@ public class LangFi extends MorseLanguage {
 
         set(MATCH_RESULTS, "Ottelun tulokset");
                 
-        set(INFINITE, "Harjoittele ilman aikarajaa");
-        set(THREE_MINUTES, "Voita pisteesi 3 minuutissa");
 
         set(REPEAT, "TOISTA");
 
@@ -119,5 +117,22 @@ public class LangFi extends MorseLanguage {
         set(CONTINUE, "JATKAA");
         set(RX, "Vastaanottaa");
         set(TX, "Lähettää");
-}
+
+        set(KOCH_METHOD, "Koch-menetelmä");
+        set(TARGET, "Tavoite");
+        set(LISTEN, "Kuuntele");
+        set(TARGET_MET, "Tavoite saavutettu");
+        set(TARGET_NOT_MET, "Tavoite ei saavutettu");
+            set(LEVEL, "Taso");
+    
+        set(LEARN, "Opi");
+        set(PLAY, "Pelaa");
+    
+        set(LEVELS_COMPLETED, "Suoritetut tasot");
+        set(RESET_PROGRESS, "Nollaa edistyminen");
+        set(RESET_PROGRESS_CONFIRM, "Haluatko varmasti nollata edistymisen?");
+        set(RESET, "Nollaa");
+            set(WPM, "WPM​");
+        set(SPACING, "Välistys");
+    }
 }

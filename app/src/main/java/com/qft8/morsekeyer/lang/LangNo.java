@@ -61,8 +61,8 @@ public class LangNo extends MorseLanguage {
                 "Streng modus krever nøyaktig timing mellom bokstaver, ikke-streng modus tillater raskere manipulering.\n\n" +
                 "Vanlige problemer: Hvis lyden klikker for mye på enheten din, prøv 'sagtonnsignal'-alternativet eller prøv å endre stige-/falltiden. Hvis forsinkelsen er for høy, prøv å redusere bufferen. Hvis lyden brytes opp, prøv å øke den.\n\n" +
                 "Tastaturtaster:\n" +
-                "  Venstre: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Høyre: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Venstre: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Høyre: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Nøkkel");
         
@@ -108,8 +108,6 @@ public class LangNo extends MorseLanguage {
         set(HIGH_SCORE, "Høy score");
 
                 
-        set(INFINITE, "Tren uten tidsbegrensning");
-        set(THREE_MINUTES, "Slå poengsummen din på 3 minutter");
 
         set(REPEAT, "GJENTA");
 
@@ -118,5 +116,22 @@ public class LangNo extends MorseLanguage {
         set(CONTINUE, "FORTSETTE");
         set(RX, "Motta");
         set(TX, "Sende");
-}
+
+        set(KOCH_METHOD, "Koch-metoden");
+        set(TARGET, "Mål");
+        set(LISTEN, "Lytt");
+        set(TARGET_MET, "Mål nådd");
+        set(TARGET_NOT_MET, "Mål ikke nådd");
+            set(LEVEL, "Nivå");
+    
+        set(LEARN, "Lær");
+        set(PLAY, "Spill");
+    
+        set(LEVELS_COMPLETED, "Fullførte nivåer");
+        set(RESET_PROGRESS, "Nullstill fremdrift");
+        set(RESET_PROGRESS_CONFIRM, "Er du sikker på at du vil nullstille fremdriften?");
+        set(RESET, "Nullstill");
+            set(WPM, "WPM​");
+        set(SPACING, "Avstand");
+    }
 }

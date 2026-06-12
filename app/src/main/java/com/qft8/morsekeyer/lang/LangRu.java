@@ -50,8 +50,8 @@ public class LangRu extends MorseLanguage {
                 "Строгий режим требует точных интервалов; нестрогий позволяет передавать быстрее.\n\n" +
                 "Проблемы: Если звук слишком резкий, включите 'Пилообразный сигнал'. Если задержка велика, уменьшите буфер. Если звук заикается, увеличьте его.\n\n" +
                 "Клавиши:\n" +
-                "  Лево: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Право: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Лево: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Право: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Ключ");
         
@@ -109,8 +109,6 @@ public class LangRu extends MorseLanguage {
 
         set(MATCH_RESULTS, "Результаты");
                 
-        set(INFINITE, "Практика без ограничения по времени");
-        set(THREE_MINUTES, "Побей свой результат за 3 минуты");
 
         set(REPEAT, "ПОВТОРИТЬ");
 
@@ -119,5 +117,22 @@ public class LangRu extends MorseLanguage {
         set(CONTINUE, "ПРОДОЛЖАТЬ");
         set(RX, "Принимать");
         set(TX, "Передавать");
-}
+
+        set(KOCH_METHOD, "Метод Коха");
+        set(TARGET, "Цель");
+        set(LISTEN, "Слушать");
+        set(TARGET_MET, "Цель достигнута");
+        set(TARGET_NOT_MET, "Цель не достигнута");
+            set(LEVEL, "Уровень");
+    
+        set(LEARN, "Учить");
+        set(PLAY, "Играть");
+    
+        set(LEVELS_COMPLETED, "Завершенные уровни");
+        set(RESET_PROGRESS, "Сбросить прогресс");
+        set(RESET_PROGRESS_CONFIRM, "Вы уверены, что хотите сбросить прогресс?");
+        set(RESET, "Сбросить");
+            set(WPM, "WPM​");
+        set(SPACING, "Интервал");
+    }
 }

@@ -50,8 +50,8 @@ public class LangJa extends MorseLanguage {
                 "厳密モードは文字間の正確なタイミングを必要とします。非厳密モードはより高速な操作が可能です。\n\n" +
                 "よくある問題：クリック音が気になる場合は「のこぎり波」を試すか、エンベロープを調整してください。遅延が大きい場合はバッファを減らしてください。\n\n" +
                 "キーボードキー：\n" +
-                "  左： [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  右： ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  左： [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  右： ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "キー");
         
@@ -108,8 +108,6 @@ public class LangJa extends MorseLanguage {
 
         set(MATCH_RESULTS, "結果");
                 
-        set(INFINITE, "時間制限なく練習できる");
-        set(THREE_MINUTES, "3 分以内にスコアを更新する");
 
         set(REPEAT, "リピート");
 
@@ -119,5 +117,22 @@ public class LangJa extends MorseLanguage {
         set(CONTINUE, "続く");
         set(RX, "受信する");
         set(TX, "送信する");
-}
+
+        set(KOCH_METHOD, "コッホ法");
+        set(TARGET, "目標");
+        set(LISTEN, "聴く");
+        set(TARGET_MET, "目標達成");
+        set(TARGET_NOT_MET, "目標未達成");
+            set(LEVEL, "レベル");
+    
+        set(LEARN, "学ぶ");
+        set(PLAY, "プレイ");
+    
+        set(LEVELS_COMPLETED, "完了したレベル");
+        set(RESET_PROGRESS, "進捗をリセット");
+        set(RESET_PROGRESS_CONFIRM, "進捗をリセットしてもよろしいですか？");
+        set(RESET, "リセット");
+            set(WPM, "WPM​");
+        set(SPACING, "間隔");
+    }
 }

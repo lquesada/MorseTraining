@@ -50,8 +50,8 @@ public class LangEo extends MorseLanguage {
                 "Strikta reĝimo postulas precizan tempadon inter literoj; malstrikta reĝimo permesas pli rapidan manipuladon.\n\n" +
                 "Oftaj problemoj: Se la sono estas tro klaka, provu la 'Segildentan' opcion aŭ modifu la koverton. Se la malfruo estas alta, malpliigu la bufron. Se la sono haltas, pligrandigu ĝin.\n\n" +
                 "Klavaraj klavoj:\n" +
-                "  Maldekstra: [  A  ,  \u2190  L-Stir  L-Maj  L-Alt  Num.  F1\n" +
-                "  Dekstra: ]  D  S  .  \u2192  R-Stir  R-Maj  R-Alt  NumEniga  F2");
+                "  Maldekstra: [  A  ,  1  0  \u2190  L-Stir  L-Maj  L-Alt  Num.  F1\n" +
+                "  Dekstra: ]  D  S  .  3  9  \u2192  R-Stir  R-Maj  R-Alt  NumEniga  F2");
 
         set(KEY, "Ŝlosilo");
         
@@ -98,7 +98,7 @@ public class LangEo extends MorseLanguage {
                 set(MATCH_COMPLETED, "Matĉo finita");
         set(TRY_AGAIN, "Provu denove");
         set(WORDS, "Vortoj");
-                set(QUIT_GAME, "Forlasu Ludon");
+                set(QUIT_GAME, "Forlasu ludon");
         set(MATCH_SETTINGS, "Ludaj parametroj");
         set(SHARE_PREVIEW, "Kunhavigi antaŭrigardon");
         set(SHARE, "Kunhavigi");
@@ -108,8 +108,6 @@ public class LangEo extends MorseLanguage {
 
         set(MATCH_RESULTS, "Matĉaj rezultoj");
                 
-        set(INFINITE, "Praktiku sen tempolimo");
-        set(THREE_MINUTES, "Batu vian poentaron en 3 minutoj");
 
         set(REPEAT, "RIPETI");
 
@@ -119,5 +117,22 @@ public class LangEo extends MorseLanguage {
         set(CONTINUE, "DAŬRU");
         set(RX, "Ricevi");
         set(TX, "Sendi");
-}
+
+        set(KOCH_METHOD, "Koch-metodo");
+        set(TARGET, "Celo");
+        set(LISTEN, "Aŭskulti");
+        set(TARGET_MET, "Celo atingita");
+        set(TARGET_NOT_MET, "Celo ne atingita");
+            set(LEVEL, "Nivelo");
+    
+        set(LEARN, "Lerni");
+        set(PLAY, "Ludi");
+    
+        set(LEVELS_COMPLETED, "Finitaj niveloj");
+        set(RESET_PROGRESS, "Restarigi progreson");
+        set(RESET_PROGRESS_CONFIRM, "Ĉu vi certas restarigi progreson?");
+        set(RESET, "Restarigi");
+            set(WPM, "WPM​");
+        set(SPACING, "Interspaco");
+    }
 }

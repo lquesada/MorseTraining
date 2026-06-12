@@ -44,7 +44,7 @@ public class LangAz extends MorseLanguage {
         set(PERFORMANCE_HINT, "Əgər səs kəsilirsə, buferi artırın. Gecikmə yüksəkdirsə, azaldın.");
         
         set(INFO_TITLE, "Morse Training");
-        set(INFO_TEXT, "Dəstəklənən girişlər: klaviatura, sensor ekran, siçan və ya USB avar adapteri.\n\nSiçan sol/sağ klik düyməsi və ya USB-siçan avarlı adapteri üçün, siçan göstəricisini ekrandakı sol avar düyməsinin üzərində buraxın, sol/sağ klik düzgün avarlara uyğun olacaq.\n\nUSB-klaviatura avar adapterləri üçün (məsələn, VBand) heç bir əlavə quraşdırma olmadan işləyir.\n\nSərt vaxtlama hərflər arası dəqiq fasilələr tələb edir; sərt olmayan isə daha sürətli yazmağa imkan verir.\n\nProblemlərin həlli: Səs tıkqıltılıdırsa, Mişar dişi yoxlayın və ya zərfi dəyişdirin. Gecikmə yüksəkdirsə, buferi azaldın. Səs qırılırsa, onu artırın.\n\nKlaviatura düymələri:\n  Sol: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n  Sağ: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+        set(INFO_TEXT, "Dəstəklənən girişlər: klaviatura, sensor ekran, siçan və ya USB avar adapteri.\n\nSiçan sol/sağ klik düyməsi və ya USB-siçan avarlı adapteri üçün, siçan göstəricisini ekrandakı sol avar düyməsinin üzərində buraxın, sol/sağ klik düzgün avarlara uyğun olacaq.\n\nUSB-klaviatura avar adapterləri üçün (məsələn, VBand) heç bir əlavə quraşdırma olmadan işləyir.\n\nSərt vaxtlama hərflər arası dəqiq fasilələr tələb edir; sərt olmayan isə daha sürətli yazmağa imkan verir.\n\nProblemlərin həlli: Səs tıkqıltılıdırsa, Mişar dişi yoxlayın və ya zərfi dəyişdirin. Gecikmə yüksəkdirsə, buferi azaldın. Səs qırılırsa, onu artırın.\n\nKlaviatura düymələri:\n  Sol: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n  Sağ: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Açar");
         
@@ -101,8 +101,6 @@ public class LangAz extends MorseLanguage {
 
         set(MATCH_RESULTS, "Matç nəticələri");
                 
-        set(INFINITE, "Vaxt məhdudiyyəti olmadan məşq edin");
-        set(THREE_MINUTES, "Hesabınızı 3 dəqiqə ərzində məğlub edin");
 
         set(REPEAT, "TƏKRARLA");
 
@@ -112,5 +110,22 @@ public class LangAz extends MorseLanguage {
         set(CONTINUE, "DAVAM EDİN");
         set(RX, "Qəbul etmək");
         set(TX, "Ötürmək");
-}
+
+        set(KOCH_METHOD, "Koch metodu");
+        set(TARGET, "Hədəf");
+        set(LISTEN, "Dinlə");
+        set(TARGET_MET, "Hədəfə çatıldı");
+        set(TARGET_NOT_MET, "Hədəfə çatılmadı");
+            set(LEVEL, "Səviyyə");
+    
+        set(LEARN, "Öyrən");
+        set(PLAY, "Oyna");
+    
+        set(LEVELS_COMPLETED, "Tamamlanan səviyyələr");
+        set(RESET_PROGRESS, "İrəliləyişi sıfırla");
+        set(RESET_PROGRESS_CONFIRM, "Sıfırlamaq istədiyinizə əminsiniz?");
+        set(RESET, "Sıfırla");
+            set(WPM, "WPM​");
+        set(SPACING, "Aralıq");
+    }
 }

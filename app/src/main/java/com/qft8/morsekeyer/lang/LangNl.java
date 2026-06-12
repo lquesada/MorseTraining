@@ -61,8 +61,8 @@ public class LangNl extends MorseLanguage {
                 "Strikte modus vereist de juiste timing tussen letters, niet-strikte modus staat snellere manipulatie toe.\n\n" +
                 "Veelvoorkomende problemen: Als het geluid te veel klikt op uw apparaat, probeer dan de optie 'Zaagtandsignaal' of pas de stijg-/daaltijd aan. Als de latentie te hoog is, probeer dan de buffer te verkleinen. Als het geluid hapert, probeer het dan te vergroten.\n\n" +
                 "Toetsenbordtoetsen:\n" +
-                "  Links: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Rechts: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Links: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Rechts: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Sleutel");
         
@@ -108,8 +108,6 @@ public class LangNl extends MorseLanguage {
         set(HIGH_SCORE, "Hoge score");
 
                 
-        set(INFINITE, "Oefen zonder tijdslimiet");
-        set(THREE_MINUTES, "Verbeter je score in 3 minuten");
 
         set(REPEAT, "HERHALEN");
 
@@ -118,5 +116,22 @@ public class LangNl extends MorseLanguage {
         set(CONTINUE, "DOORGAAN");
         set(RX, "Ontvangen");
         set(TX, "Zenden");
-}
+
+        set(KOCH_METHOD, "Koch-methode");
+        set(TARGET, "Doel");
+        set(LISTEN, "Luister");
+        set(TARGET_MET, "Doel bereikt");
+        set(TARGET_NOT_MET, "Doel niet bereikt");
+            set(LEVEL, "Niveau");
+    
+        set(LEARN, "Leren");
+        set(PLAY, "Spelen");
+    
+        set(LEVELS_COMPLETED, "Voltooide niveaus");
+        set(RESET_PROGRESS, "Voortgang resetten");
+        set(RESET_PROGRESS_CONFIRM, "Weet u zeker dat u de voortgang wilt resetten?");
+        set(RESET, "Resetten");
+            set(WPM, "WPM​");
+        set(SPACING, "Afstand");
+    }
 }

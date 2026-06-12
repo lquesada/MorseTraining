@@ -61,8 +61,8 @@ public class LangEl extends MorseLanguage {
                 "Η αυστηρή λειτουργία απαιτεί το σωστό χρονισμό μεταξύ των γραμμάτων, η μη αυστηρή λειτουργία επιτρέπει ταχύτερο χειρισμό.\n\n" +
                 "Κοινά προβλήματα: Αν ο ήχος έχει πολλά κλικ στη συσκευή σας, δοκιμάστε την επιλογή 'σήματος πριονωτής μορφής' ή προσπαθήστε να τροποποιήσετε την περιβάλλουσα. Αν η καθυστέρηση είναι πολύ υψηλή, προσπαθήστε να μειώσετε την προσωρινή μνήμη. Αν ο ήχος σπάει, προσπαθήστε να την αυξήσετε.\n\n" +
                 "Πλήκτρα πληκτρολογίου:\n" +
-                "  Αριστερά: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Δεξιά: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Αριστερά: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Δεξιά: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Κλειδί");
         
@@ -108,8 +108,6 @@ public class LangEl extends MorseLanguage {
         set(HIGH_SCORE, "Υψηλή βαθμολογία");
 
                 
-        set(INFINITE, "Εξάσκηση χωρίς χρονικό όριο");
-        set(THREE_MINUTES, "Κερδίστε το σκορ σας σε 3 λεπτά");
 
         set(REPEAT, "ΕΠΑΝΆΛΗΨΗ");
 
@@ -118,5 +116,22 @@ public class LangEl extends MorseLanguage {
         set(CONTINUE, "ΣΥΝΕΧΙΖΩ");
         set(RX, "Λαμβάνω");
         set(TX, "Εκπέμπω");
-}
+
+        set(KOCH_METHOD, "Μέθοδος Koch");
+        set(TARGET, "Στόχος");
+        set(LISTEN, "Ακούστε");
+        set(TARGET_MET, "Ο στόχος επιτεύχθηκε");
+        set(TARGET_NOT_MET, "Ο στόχος δεν επιτεύχθηκε");
+            set(LEVEL, "Επίπεδο");
+    
+        set(LEARN, "Μάθετε");
+        set(PLAY, "Παίξτε");
+    
+        set(LEVELS_COMPLETED, "Ολοκληρωμένα επίπεδα");
+        set(RESET_PROGRESS, "Επαναφορά προόδου");
+        set(RESET_PROGRESS_CONFIRM, "Είστε σίγουροι για την επαναφορά;");
+        set(RESET, "Επαναφορά");
+            set(WPM, "WPM​");
+        set(SPACING, "Διάστιχο");
+    }
 }

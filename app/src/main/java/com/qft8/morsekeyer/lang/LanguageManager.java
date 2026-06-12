@@ -95,6 +95,9 @@ public class LanguageManager {
         return current.get(key);
     }
 
+    public static final String KOCH_METHOD = "KOCH_METHOD";
+    public static final String CONTINUE = "CONTINUE";
+
     public static Map<String, String> getAvailableLanguages() {
         return NAMES;
     }
@@ -117,4 +120,4 @@ public class LanguageManager {
     public static String getCurrentKey() {
         return currentKey;
     }
-}
+    }

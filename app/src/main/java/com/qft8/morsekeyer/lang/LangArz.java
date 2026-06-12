@@ -50,8 +50,8 @@ public class LangArz extends MorseLanguage {
                 "الوضع المظبوط بيحتاج توقيت دقيق بين الحروف؛ الوضع العادي بيخليك تدوس أسرع.\n\n" +
                 "مشاكل معروفة: لو الصوت فيه تكة عالية، جرب خيار 'سن المنشار'. لو فيه تأخير قلل الـ Buffer.\n\n" +
                 "زراير الكيبورد:\n" +
-                "  شمال: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  يمين: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  شمال: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  يمين: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "مفتاح");
         
@@ -108,8 +108,6 @@ public class LangArz extends MorseLanguage {
 
         set(MATCH_RESULTS, "نتائج");
                 
-        set(INFINITE, "ممارسة مع عدم وجود حد زمني");
-        set(THREE_MINUTES, "تغلب على درجاتك في 3 دقائق");
 
         set(REPEAT, "تكرار");
 
@@ -119,5 +117,22 @@ public class LangArz extends MorseLanguage {
         set(CONTINUE, "يكمل");
         set(RX, "يستلم");
         set(TX, "نقل");
-}
+
+        set(KOCH_METHOD, "طريقة كوخ");
+        set(TARGET, "الهدف");
+        set(LISTEN, "استمع");
+        set(TARGET_MET, "تم تحقيق الهدف");
+        set(TARGET_NOT_MET, "لم يتم تحقيق الهدف");
+            set(LEVEL, "مستوى");
+    
+        set(LEARN, "تعلم");
+        set(PLAY, "العب");
+    
+        set(LEVELS_COMPLETED, "المستويات المنجزة");
+        set(RESET_PROGRESS, "إعادة ضبط التقدم");
+        set(RESET_PROGRESS_CONFIRM, "هل أنت متأكد من إعادة الضبط؟");
+        set(RESET, "إعادة ضبط");
+            set(WPM, "WPM");
+        set(SPACING, "مسافة");
+    }
 }

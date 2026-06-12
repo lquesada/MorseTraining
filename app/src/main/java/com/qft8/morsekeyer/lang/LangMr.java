@@ -50,8 +50,8 @@ public class LangMr extends MorseLanguage {
                 "कठोर मोडमध्ये अक्षरांमधील योग्य वेळेची आवश्यकता असते; इतर मोडमध्ये जलद गतीने काम करता येते।\n\n" +
                 "सामान्य समस्या: जर आवाजात जास्त क्लिक येत असतील तर 'सॉ-टूथ' पर्याय वापरून पहा। विलंब जास्त असल्यास बफर कमी करा।\n\n" +
                 "कीबोर्ड बटणे:\n" +
-                "  डावे: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  उजवे: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  डावे: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  उजवे: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "की");
         
@@ -108,8 +108,6 @@ public class LangMr extends MorseLanguage {
 
         set(MATCH_RESULTS, "सामना निकाल");
                 
-        set(INFINITE, "वेळेच्या मर्यादेशिवाय सराव करा");
-        set(THREE_MINUTES, "तुमचा स्कोअर 3 मिनिटांत मात करा");
 
         set(REPEAT, "पुन्हा सांगा");
 
@@ -119,5 +117,22 @@ public class LangMr extends MorseLanguage {
         set(CONTINUE, "सुरू ठेवा");
         set(RX, "प्राप्त करणे");
         set(TX, "प्रसारित करणे");
-}
+
+        set(KOCH_METHOD, "कोच पद्धत");
+        set(TARGET, "लक्ष्य");
+        set(LISTEN, "ऐका");
+        set(TARGET_MET, "लक्ष्य साध्य");
+        set(TARGET_NOT_MET, "लक्ष्य साध्य नाही");
+            set(LEVEL, "पातळी");
+    
+        set(LEARN, "शिका");
+        set(PLAY, "खेळा");
+    
+        set(LEVELS_COMPLETED, "पूर्ण झालेल्या पातळ्या");
+        set(RESET_PROGRESS, "प्रगती रीसेट करा");
+        set(RESET_PROGRESS_CONFIRM, "तुम्हाला नक्की प्रगती रीसेट करायची आहे का?");
+        set(RESET, "रीसेट करा");
+            set(WPM, "WPM​");
+        set(SPACING, "अंतर");
+    }
 }

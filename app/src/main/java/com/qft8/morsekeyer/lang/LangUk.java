@@ -50,8 +50,8 @@ public class LangUk extends MorseLanguage {
                 "Суворий режим вимагає точних інтервалів; несуворий дозволяє передавати швидше.\n\n" +
                 "Проблеми: Якщо звук занадто різкий, спробуйте 'Пилоподібний сигнал'. Якщо затримка велика, зменште буфер. Якщо звук заїкається, збільште його.\n\n" +
                 "Клавіші:\n" +
-                "  Вліво: [  A  ,  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
-                "  Вправо: ]  D  S  .  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
+                "  Вліво: [  A  ,  1  0  \u2190  L-Ctrl  L-Shift  L-Alt  Num.  F1\n" +
+                "  Вправо: ]  D  S  .  3  9  \u2192  R-Ctrl  R-Shift  R-Alt  NumEnter  F2");
 
         set(KEY, "Ключ");
         
@@ -108,8 +108,6 @@ public class LangUk extends MorseLanguage {
 
         set(MATCH_RESULTS, "Результати матчів");
                 
-        set(INFINITE, "Практика без обмеження часу");
-        set(THREE_MINUTES, "Побийте свій рахунок за 3 хвилини");
 
         set(REPEAT, "ПОВТОРИТИ");
 
@@ -119,5 +117,22 @@ public class LangUk extends MorseLanguage {
         set(CONTINUE, "ПРОДОВЖУЙТЕ");
         set(RX, "Отримувати");
         set(TX, "Передавати");
-}
+
+        set(KOCH_METHOD, "Метод Коха");
+        set(TARGET, "Ціль");
+        set(LISTEN, "Слухати");
+        set(TARGET_MET, "Ціль досягнута");
+        set(TARGET_NOT_MET, "Ціль не досягнута");
+            set(LEVEL, "Рівень");
+    
+        set(LEARN, "Вчити");
+        set(PLAY, "Грати");
+    
+        set(LEVELS_COMPLETED, "Завершені рівні");
+        set(RESET_PROGRESS, "Скинути прогрес");
+        set(RESET_PROGRESS_CONFIRM, "Ви впевнені, що хочете скинути прогрес?");
+        set(RESET, "Скинути");
+            set(WPM, "WPM​");
+        set(SPACING, "Інтервал");
+    }
 }

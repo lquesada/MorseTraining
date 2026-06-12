@@ -84,10 +84,10 @@ public class LangArq extends MorseLanguage {
         set(QUIT, "خروج");
         set(QUIT_GAME_PROMPT, "راك متأكد حاب تخرج من هاد اللعبة؟");
 
-        set(SCORE, "النتيجة: ");
+        set(SCORE, "النتيجة");
         set(HIGH_SCORE, "درجة عالية");
-        set(YOUR_HIGH_SCORE_IS, "أعلى نتيجة ديالك هي:");
-        set(TIME, "الوقت: ");
+        set(YOUR_HIGH_SCORE_IS, "أعلى نتيجة ديالك هي");
+        set(TIME, "الوقت");
                 set(MATCH_COMPLETED, "المباراة كملت");
         set(TRY_AGAIN, "عاود جرب");
         set(WORDS, "كلمات");
@@ -113,8 +113,7 @@ public class LangArq extends MorseLanguage {
 
         set(KOCH_METHOD, "طريقة كوخ");
         set(TARGET, "الهدف");
-        set(LISTEN, "استمع");
-        set(TARGET_MET, "تم تحقيق الهدف");
+set(TARGET_MET, "تم تحقيق الهدف");
         set(TARGET_NOT_MET, "لم يتم تحقيق الهدف");
             set(LEVEL, "مستوى");
     
@@ -127,5 +126,7 @@ public class LangArq extends MorseLanguage {
         set(RESET, "إعادة ضبط");
             set(WPM, "WPM");
         set(SPACING, "مسافة");
+        set(BACK, "رجوع");
+        set(NEXT_LEVEL, "المستوى الجاي");
     }
 }

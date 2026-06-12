@@ -91,10 +91,10 @@ public class LangIt extends MorseLanguage {
         set(QUIT, "Esci");
         set(QUIT_GAME_PROMPT, "Sei sicuro di voler uscire da questo gioco?");
 
-        set(SCORE, "Punteggio: ");
+        set(SCORE, "Punteggio");
         set(HIGH_SCORE, "Punteggio alto");
-        set(YOUR_HIGH_SCORE_IS, "Il tuo punteggio più alto è:");
-        set(TIME, "Tempo: ");
+        set(YOUR_HIGH_SCORE_IS, "Il tuo punteggio più alto è");
+        set(TIME, "Tempo");
                 set(MATCH_COMPLETED, "Partita completata");
         set(TRY_AGAIN, "Riprova");
         set(WORDS, "Parole");
@@ -120,8 +120,7 @@ public class LangIt extends MorseLanguage {
 
         set(KOCH_METHOD, "Metodo Koch");
         set(TARGET, "Obiettivo");
-        set(LISTEN, "Ascolta");
-        set(TARGET_MET, "Obiettivo raggiunto");
+set(TARGET_MET, "Obiettivo raggiunto");
         set(TARGET_NOT_MET, "Obiettivo non raggiunto");
             set(LEVEL, "Livello");
     
@@ -134,5 +133,7 @@ public class LangIt extends MorseLanguage {
         set(RESET, "Ripristina");
             set(WPM, "WPM​");
         set(SPACING, "Spaziatura");
+        set(BACK, "Indietro");
+        set(NEXT_LEVEL, "Livello successivo");
     }
 }

@@ -84,10 +84,10 @@ public class LangAz extends MorseLanguage {
         set(QUIT, "Çıx");
         set(QUIT_GAME_PROMPT, "Bu oyundan çıxmaq istədiyinizə əminsiniz?");
 
-        set(SCORE, "Xal: ");
+        set(SCORE, "Xal");
         set(HIGH_SCORE, "Yüksək xal");
-        set(YOUR_HIGH_SCORE_IS, "Ən yüksək balınız:");
-        set(TIME, "Vaxt: ");
+        set(YOUR_HIGH_SCORE_IS, "Ən yüksək balınız");
+        set(TIME, "Vaxt");
                 set(MATCH_COMPLETED, "Oyun bitdi");
         set(TRY_AGAIN, "Yenidən cəhd et");
         set(WORDS, "Sözlər");
@@ -113,8 +113,7 @@ public class LangAz extends MorseLanguage {
 
         set(KOCH_METHOD, "Koch metodu");
         set(TARGET, "Hədəf");
-        set(LISTEN, "Dinlə");
-        set(TARGET_MET, "Hədəfə çatıldı");
+set(TARGET_MET, "Hədəfə çatıldı");
         set(TARGET_NOT_MET, "Hədəfə çatılmadı");
             set(LEVEL, "Səviyyə");
     
@@ -127,5 +126,7 @@ public class LangAz extends MorseLanguage {
         set(RESET, "Sıfırla");
             set(WPM, "WPM​");
         set(SPACING, "Aralıq");
+        set(BACK, "Geri");
+        set(NEXT_LEVEL, "Növbəti səviyyə");
     }
 }

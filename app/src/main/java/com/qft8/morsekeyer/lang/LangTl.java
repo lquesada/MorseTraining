@@ -91,10 +91,10 @@ public class LangTl extends MorseLanguage {
         set(QUIT, "Umalis");
         set(QUIT_GAME_PROMPT, "Sigurado ka bang gusto mong umalis sa larong ito?");
 
-        set(SCORE, "Iskor: ");
+        set(SCORE, "Iskor");
         set(HIGH_SCORE, "Mataas na marka");
-        set(YOUR_HIGH_SCORE_IS, "Ang pinakamataas mong iskor ay:");
-        set(TIME, "Oras: ");
+        set(YOUR_HIGH_SCORE_IS, "Ang pinakamataas mong iskor ay");
+        set(TIME, "Oras");
                 set(MATCH_COMPLETED, "Tapos na ang laban");
         set(TRY_AGAIN, "Subukan muli");
         set(WORDS, "Mga salita");
@@ -120,8 +120,7 @@ public class LangTl extends MorseLanguage {
 
         set(KOCH_METHOD, "Paraang Koch");
         set(TARGET, "Target");
-        set(LISTEN, "Makinig");
-        set(TARGET_MET, "Naabot ang target");
+set(TARGET_MET, "Naabot ang target");
         set(TARGET_NOT_MET, "Hindi naabot ang target");
             set(LEVEL, "Antas");
     
@@ -134,5 +133,7 @@ public class LangTl extends MorseLanguage {
         set(RESET, "I-reset");
             set(WPM, "WPM");
         set(SPACING, "Espasyo");
+        set(BACK, "Bumalik");
+        set(NEXT_LEVEL, "Susunod na antas");
     }
 }

@@ -84,10 +84,10 @@ public class LangEu extends MorseLanguage {
         set(QUIT, "Irten");
         set(QUIT_GAME_PROMPT, "Ziur zaude joko honetatik irten nahi duzula?");
 
-        set(SCORE, "Puntuazioa: ");
+        set(SCORE, "Puntuazioa");
         set(HIGH_SCORE, "Puntuazio altua");
-        set(YOUR_HIGH_SCORE_IS, "Zure puntuazio altuena:");
-        set(TIME, "Denbora: ");
+        set(YOUR_HIGH_SCORE_IS, "Zure puntuazio altuena");
+        set(TIME, "Denbora");
                 set(MATCH_COMPLETED, "Partida amaituta");
         set(TRY_AGAIN, "Saiatu berriro");
         set(WORDS, "Hitzak");
@@ -113,8 +113,7 @@ public class LangEu extends MorseLanguage {
 
         set(KOCH_METHOD, "Koch metodoa");
         set(TARGET, "Helburua");
-        set(LISTEN, "Entzun");
-        set(TARGET_MET, "Helburua lortuta");
+set(TARGET_MET, "Helburua lortuta");
         set(TARGET_NOT_MET, "Helburua ez da lortu");
             set(LEVEL, "Maila");
     
@@ -127,5 +126,7 @@ public class LangEu extends MorseLanguage {
         set(RESET, "Berrezarri");
             set(WPM, "WPM​");
         set(SPACING, "Tartea");
+        set(BACK, "Atzera");
+        set(NEXT_LEVEL, "Hurrengo maila");
     }
 }

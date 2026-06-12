@@ -93,9 +93,9 @@ public class LangPnb extends MorseLanguage {
         set(THEME, "ਥੀਮ");
 
         set(MATCH_RESULTS, "ਮੈਚ ਨਤੀਜੇ");
-        set(TIME, "ਸਮਾਂ: ");
+        set(TIME, "ਸਮਾਂ");
         set(TRY_AGAIN, "ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ");
-        set(SCORE, "ਸਕੋਰ: ");
+        set(SCORE, "ਸਕੋਰ");
         set(MATCH_COMPLETED, "ਮੈਚ ਪੂਰਾ ਹੋਇਆ");
         set(HIGH_SCORE, "ਉੱਚ ਸਕੋਰ");
 
@@ -112,8 +112,7 @@ public class LangPnb extends MorseLanguage {
 
         set(KOCH_METHOD, "کوچ طریقہ");
         set(TARGET, "ہدف");
-        set(LISTEN, "سنو");
-        set(TARGET_MET, "ہدف حاصل ہو گیا");
+set(TARGET_MET, "ہدف حاصل ہو گیا");
         set(TARGET_NOT_MET, "ہدف حاصل نہیں ہوا");
             set(LEVEL, "سطح");
     
@@ -126,5 +125,7 @@ public class LangPnb extends MorseLanguage {
         set(RESET, "ری سیٹ کریں");
             set(WPM, "WPM");
         set(SPACING, "فاصلہ");
+        set(BACK, "پچھے");
+        set(NEXT_LEVEL, "اگلا درجہ");
     }
 }

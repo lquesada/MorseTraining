@@ -91,10 +91,10 @@ public class LangSv extends MorseLanguage {
         set(QUIT, "Avsluta");
         set(QUIT_GAME_PROMPT, "Är du säker på att du vill avsluta det här spelet?");
 
-        set(SCORE, "Poäng: ");
+        set(SCORE, "Poäng");
         set(HIGH_SCORE, "Hög poäng");
-        set(YOUR_HIGH_SCORE_IS, "Ditt högsta poäng är:");
-        set(TIME, "Tid: ");
+        set(YOUR_HIGH_SCORE_IS, "Ditt högsta poäng är");
+        set(TIME, "Tid");
                 set(MATCH_COMPLETED, "Matchen är klar");
         set(TRY_AGAIN, "Försök igen");
         set(WORDS, "Ord");
@@ -120,8 +120,7 @@ public class LangSv extends MorseLanguage {
 
         set(KOCH_METHOD, "Koch-metoden");
         set(TARGET, "Mål");
-        set(LISTEN, "Lyssna");
-        set(TARGET_MET, "Mål uppnått");
+set(TARGET_MET, "Mål uppnått");
         set(TARGET_NOT_MET, "Mål ej uppnått");
             set(LEVEL, "Nivå");
     
@@ -134,5 +133,7 @@ public class LangSv extends MorseLanguage {
         set(RESET, "Återställ");
             set(WPM, "WPM​");
         set(SPACING, "Avstånd");
+        set(BACK, "Tillbaka");
+        set(NEXT_LEVEL, "Nästa nivå");
     }
 }

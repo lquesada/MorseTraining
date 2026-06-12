@@ -91,10 +91,10 @@ public class LangUr extends MorseLanguage {
         set(QUIT, "باہر نکلیں");
         set(QUIT_GAME_PROMPT, "کیا آپ واقعی اس گیم سے باہر نکلنا چاہتے ہیں؟");
 
-        set(SCORE, "اسکور: ");
+        set(SCORE, "اسکور");
         set(HIGH_SCORE, "اعلی سکور");
-        set(YOUR_HIGH_SCORE_IS, "آپ کا سب سے زیادہ اسکور ہے:");
-        set(TIME, "وقت: ");
+        set(YOUR_HIGH_SCORE_IS, "آپ کا سب سے زیادہ اسکور ہے");
+        set(TIME, "وقت");
                 set(MATCH_COMPLETED, "میچ مکمل ہوگیا");
         set(TRY_AGAIN, "دوبارہ کوشش کریں");
         set(WORDS, "الفاظ");
@@ -120,8 +120,7 @@ public class LangUr extends MorseLanguage {
 
         set(KOCH_METHOD, "کوچ طریقہ");
         set(TARGET, "ہدف");
-        set(LISTEN, "سنیں");
-        set(TARGET_MET, "ہدف حاصل ہو گیا");
+set(TARGET_MET, "ہدف حاصل ہو گیا");
         set(TARGET_NOT_MET, "ہدف حاصل نہیں ہوا");
             set(LEVEL, "سطح");
     
@@ -134,5 +133,7 @@ public class LangUr extends MorseLanguage {
         set(RESET, "ری سیٹ کریں");
             set(WPM, "WPM​");
         set(SPACING, "فاصلہ");
+        set(BACK, "واپس");
+        set(NEXT_LEVEL, "اگلا درجہ");
     }
 }

@@ -91,10 +91,10 @@ public class LangJa extends MorseLanguage {
         set(QUIT, "終了");
         set(QUIT_GAME_PROMPT, "このゲームを終了してもよろしいですか？");
 
-        set(SCORE, "スコア: ");
+        set(SCORE, "スコア");
         set(HIGH_SCORE, "ハイスコ​​ア");
-        set(YOUR_HIGH_SCORE_IS, "あなたのハイスコア：");
-        set(TIME, "時間: ");
+        set(YOUR_HIGH_SCORE_IS, "あなたのハイスコア");
+        set(TIME, "時間");
                 set(MATCH_COMPLETED, "マッチ完了");
         set(TRY_AGAIN, "再試行");
         set(WORDS, "単語");
@@ -120,8 +120,7 @@ public class LangJa extends MorseLanguage {
 
         set(KOCH_METHOD, "コッホ法");
         set(TARGET, "目標");
-        set(LISTEN, "聴く");
-        set(TARGET_MET, "目標達成");
+set(TARGET_MET, "目標達成");
         set(TARGET_NOT_MET, "目標未達成");
             set(LEVEL, "レベル");
     
@@ -134,5 +133,7 @@ public class LangJa extends MorseLanguage {
         set(RESET, "リセット");
             set(WPM, "WPM​");
         set(SPACING, "間隔");
+        set(BACK, "戻る");
+        set(NEXT_LEVEL, "次のレベル");
     }
 }

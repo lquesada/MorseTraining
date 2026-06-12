@@ -45,7 +45,7 @@ public class ShareManager {
                 context.getResources().getDisplayMetrics());
     }
 
-    public static View createShareView(Activity activity, String keyerType, int wpm, String timePlayed, int words, int score, int record, List<SummaryView.SummaryRow> params, boolean isInfiniteMode, boolean isKochMode, int kochTarget, boolean isDarkInitially, Runnable onBack, Runnable onQuit) {
+    public static View createShareView(Activity activity, String keyerType, int wpm, String timePlayed, int words, int score, int record, List<SummaryView.SummaryRow> params, boolean isInfiniteMode, boolean isKochMode, int kochTarget, int kochLevel, boolean isDarkInitially, Runnable onBack, Runnable onQuit) {
         final LinearLayout contentWrapper = new LinearLayout(activity);
         final FrameLayout previewContainer = new FrameLayout(activity);
         final LinearLayout rightColumn = new LinearLayout(activity);
@@ -89,48 +89,91 @@ public class ShareManager {
         
         root.setBackgroundColor(bgCol);
 
-        // TOP BAR (Matching SummaryView)
-        FrameLayout topBar = new FrameLayout(activity);
+        // TOP BAR (Matching game_top_bar exactly)
+        LinearLayout topBar = new LinearLayout(activity);
+        topBar.setOrientation(LinearLayout.HORIZONTAL);
         topBar.setBackgroundColor(barCol);
         topBar.setPadding(dp(activity, 3), dp(activity, 3), dp(activity, 3), dp(activity, 3));
+        topBar.setGravity(Gravity.CENTER_VERTICAL);
         
+        android.widget.ImageButton btnBack = new android.widget.ImageButton(activity);
+        btnBack.setImageResource(R.drawable.ic_arrow_back);
+        btnBack.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+        btnBack.setColorFilter(isDarkInitially ? 0xFFFFFFFF : 0xFF000000);
+        
+        int pad = dp(activity, 12);
+        int w = dp(activity, 54);
+        int h = dp(activity, 54);
+        int marginEnd = dp(activity, 8);
+        
+        if (activity != null) {
+            android.widget.ImageButton template = activity.findViewById(com.qft8.morsekeyer.R.id.game_btn_back);
+            if (template != null) {
+                if (template.getBackground() != null) {
+                    btnBack.setBackground(template.getBackground().getConstantState().newDrawable().mutate());
+                } else {
+                    btnBack.setBackgroundTintList(android.content.res.ColorStateList.valueOf(utlCol));
+                }
+                pad = template.getPaddingTop();
+                w = template.getLayoutParams().width;
+                h = template.getLayoutParams().height;
+                if (template.getLayoutParams() instanceof android.view.ViewGroup.MarginLayoutParams) {
+                    marginEnd = ((android.view.ViewGroup.MarginLayoutParams) template.getLayoutParams()).rightMargin;
+                }
+            } else {
+                btnBack.setBackgroundTintList(android.content.res.ColorStateList.valueOf(utlCol));
+            }
+        } else {
+            btnBack.setBackgroundTintList(android.content.res.ColorStateList.valueOf(utlCol));
+        }
+        
+        btnBack.setMinimumWidth(0);
+        btnBack.setMinimumHeight(0);
+        btnBack.setPadding(pad, pad, pad, pad);
+        
+        btnBack.setOnClickListener(v -> {
+            if (onBack != null) onBack.run();
+        });
+        
+        LinearLayout.LayoutParams backBtnParams = new LinearLayout.LayoutParams(w, h);
+        backBtnParams.rightMargin = marginEnd;
+        topBar.addView(btnBack, backBtnParams);
+
+        // Spacer
+        android.widget.Space space1 = new android.widget.Space(activity);
+        topBar.addView(space1, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 1f));
+
         TextView title = new TextView(activity);
         title.setText(LanguageManager.get(MorseLanguage.SHARE_PREVIEW));
         title.setTextColor(textPrimary);
         title.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
         title.setTypeface(Typeface.DEFAULT_BOLD);
-        title.setGravity(Gravity.CENTER);
         title.setSingleLine(true);
         title.setEllipsize(android.text.TextUtils.TruncateAt.END);
         
-        android.widget.ImageButton btnBack = new android.widget.ImageButton(activity);
-        btnBack.setImageResource(R.drawable.ic_arrow_back);
-        btnBack.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
-        btnBack.setPadding(dp(activity, 12), dp(activity, 12), dp(activity, 12), dp(activity, 12));
-        btnBack.setColorFilter(isDarkInitially ? 0xFFFFFFFF : 0xFF000000);
-        btnBack.setBackgroundTintList(android.content.res.ColorStateList.valueOf(utlCol));
-        btnBack.setOnClickListener(v -> {
-            if (onBack != null) onBack.run();
-        });
-        
-        FrameLayout.LayoutParams backBtnParams = new FrameLayout.LayoutParams(dp(activity, 54), dp(activity, 54));
-        backBtnParams.gravity = Gravity.START | Gravity.CENTER_VERTICAL;
-        topBar.addView(btnBack, backBtnParams);
+        topBar.addView(title, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
-        FrameLayout.LayoutParams titleParams = new FrameLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
-        titleParams.leftMargin = dp(activity, 60);
-        titleParams.rightMargin = dp(activity, 60);
-        topBar.addView(title, titleParams);
+        // Spacer
+        android.widget.Space space2 = new android.widget.Space(activity);
+        topBar.addView(space2, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 1f));
+
+        // Dummy view for symmetry (54dp width, 8dp marginStart)
+        android.view.View dummyView = new android.view.View(activity);
+        LinearLayout.LayoutParams dummyParams = new LinearLayout.LayoutParams(dp(activity, 54), dp(activity, 54));
+        dummyParams.leftMargin = dp(activity, 8);
+        topBar.addView(dummyView, dummyParams);
 
         // Flash overlay for visual indicator
         android.view.View flashOverlay = new android.view.View(activity);
         flashOverlay.setBackgroundColor(0xFFFFFFFF);
         flashOverlay.setVisibility(android.view.View.GONE);
         flashOverlay.setTag("share_flash_overlay");
-        topBar.addView(flashOverlay, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
+        
+        FrameLayout topBarWrapper = new FrameLayout(activity);
+        topBarWrapper.addView(topBar, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, dp(activity, 60)));
+        topBarWrapper.addView(flashOverlay, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
 
-        root.addView(topBar, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, dp(activity, 60)));
+        root.addView(topBarWrapper, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, dp(activity, 60)));
 
         contentWrapper.setPadding(dp(activity, 20), dp(activity, 10), dp(activity, 20), dp(activity, 16));
         LinearLayout.LayoutParams contentParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1f);
@@ -289,7 +332,7 @@ public class ShareManager {
             String originalLang = LanguageManager.getCurrentKey();
             LanguageManager.init(currentLangToShare[0]);
             
-            View shareView = createMatchShareView(activity, keyerType, wpm, timePlayed, words, score, record, params, isInfiniteMode, isKochMode, kochTarget, isDark);
+            View shareView = createMatchShareView(activity, keyerType, wpm, timePlayed, words, score, record, params, isInfiniteMode, isKochMode, kochTarget, kochLevel, isDark);
             currentShareView[0] = shareView;
 
             // Render view offscreen for preview
@@ -404,8 +447,8 @@ public class ShareManager {
         return root;
     }
 
-    public static void shareDirectly(Activity activity, String keyerType, int wpm, String timePlayed, int words, int score, int record, List<SummaryView.SummaryRow> params, boolean isInfiniteMode, boolean isKochMode, int kochTarget, boolean isDarkTheme, Runnable onComplete) {
-        View view = createMatchShareView(activity, keyerType, wpm, timePlayed, words, score, record, params, isInfiniteMode, isKochMode, kochTarget, isDarkTheme);
+    public static void shareDirectly(Activity activity, String keyerType, int wpm, String timePlayed, int words, int score, int record, List<SummaryView.SummaryRow> params, boolean isInfiniteMode, boolean isKochMode, int kochTarget, int kochLevel, boolean isDarkTheme, Runnable onComplete) {
+        View view = createMatchShareView(activity, keyerType, wpm, timePlayed, words, score, record, params, isInfiniteMode, isKochMode, kochTarget, kochLevel, isDarkTheme);
         view.measure(
             View.MeasureSpec.makeMeasureSpec(1080, View.MeasureSpec.EXACTLY),
             View.MeasureSpec.makeMeasureSpec(1920, View.MeasureSpec.UNSPECIFIED)
@@ -458,7 +501,7 @@ public class ShareManager {
         return (int) (value * 3.0f);
     }
 
-    private static View createMatchShareView(Context context, String keyerType, int wpm, String timePlayed, int words, int score, int record, List<SummaryView.SummaryRow> params, boolean isInfiniteMode, boolean isKochMode, int kochTarget, boolean darkTheme) {
+    private static View createMatchShareView(Context context, String keyerType, int wpm, String timePlayed, int words, int score, int record, List<SummaryView.SummaryRow> params, boolean isInfiniteMode, boolean isKochMode, int kochTarget, int kochLevel, boolean darkTheme) {
         int bgCol = darkTheme ? 0xFF1A1A1A : 0xFFFFFFFF;
         int textPrimary = darkTheme ? 0xFFFFFFFF : 0xFF000000;
         int textSecondary = darkTheme ? 0xFFAAAAAA : 0xFF555555;
@@ -550,9 +593,8 @@ public class ShareManager {
         addStatRow(context, statsCard, textPrimary, textSecondary, LanguageManager.get(MorseLanguage.TIME).replace(":", "").trim(), timePlayed, timeColor);
 
         if (isKochMode) {
-            int kochLevel = (kochTarget - 10) / 2 + 1;
             TextView levelTxt = new TextView(context);
-            levelTxt.setText(LanguageManager.get(MorseLanguage.LEVEL) + kochLevel);
+            levelTxt.setText(LanguageManager.get(MorseLanguage.LEVEL) + ": " + kochLevel);
             levelTxt.setTextColor(textPrimary);
             levelTxt.setTextSize(TypedValue.COMPLEX_UNIT_PX, px(18));
             levelTxt.setGravity(Gravity.CENTER);

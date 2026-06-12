@@ -91,10 +91,10 @@ public class LangFr extends MorseLanguage {
         set(QUIT, "Quitter");
         set(QUIT_GAME_PROMPT, "Voulez-vous vraiment quitter ce jeu ?");
 
-        set(SCORE, "Score : ");
+        set(SCORE, "Score");
         set(HIGH_SCORE, "Note élevée");
-        set(YOUR_HIGH_SCORE_IS, "Votre meilleur score est :");
-        set(TIME, "Temps : ");
+        set(YOUR_HIGH_SCORE_IS, "Votre meilleur score est");
+        set(TIME, "Temps");
                 set(MATCH_COMPLETED, "Partie terminée");
         set(TRY_AGAIN, "Réessayer");
         set(WORDS, "Mots");
@@ -120,8 +120,7 @@ public class LangFr extends MorseLanguage {
 
         set(KOCH_METHOD, "Méthode Koch");
         set(TARGET, "Cible");
-        set(LISTEN, "Écouter");
-        set(TARGET_MET, "Objectif atteint");
+set(TARGET_MET, "Objectif atteint");
         set(TARGET_NOT_MET, "Objectif non atteint");
             set(LEVEL, "Niveau");
     
@@ -134,5 +133,7 @@ public class LangFr extends MorseLanguage {
         set(RESET, "Réinitialiser");
             set(WPM, "MPM");
         set(SPACING, "Espacement");
+        set(BACK, "Retour");
+        set(NEXT_LEVEL, "Niveau suivant");
     }
 }

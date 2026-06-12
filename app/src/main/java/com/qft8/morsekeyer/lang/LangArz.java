@@ -91,10 +91,10 @@ public class LangArz extends MorseLanguage {
         set(QUIT, "خروج");
         set(QUIT_GAME_PROMPT, "انت متأكد إنك عايز تخرج من اللعبة دي؟");
 
-        set(SCORE, "النتيجة: ");
+        set(SCORE, "النتيجة");
         set(HIGH_SCORE, "درجة عالية");
-        set(YOUR_HIGH_SCORE_IS, "أعلى سكور ليك هو:");
-        set(TIME, "الوقت: ");
+        set(YOUR_HIGH_SCORE_IS, "أعلى سكور ليك هو");
+        set(TIME, "الوقت");
                 set(MATCH_COMPLETED, "الماتش خلص");
         set(TRY_AGAIN, "حاول تاني");
         set(WORDS, "كلمات");
@@ -120,8 +120,7 @@ public class LangArz extends MorseLanguage {
 
         set(KOCH_METHOD, "طريقة كوخ");
         set(TARGET, "الهدف");
-        set(LISTEN, "استمع");
-        set(TARGET_MET, "تم تحقيق الهدف");
+set(TARGET_MET, "تم تحقيق الهدف");
         set(TARGET_NOT_MET, "لم يتم تحقيق الهدف");
             set(LEVEL, "مستوى");
     
@@ -134,5 +133,7 @@ public class LangArz extends MorseLanguage {
         set(RESET, "إعادة ضبط");
             set(WPM, "WPM");
         set(SPACING, "مسافة");
+        set(BACK, "رجوع");
+        set(NEXT_LEVEL, "المستوى اللي بعده");
     }
 }

@@ -84,10 +84,10 @@ public class LangGu extends MorseLanguage {
         set(QUIT, "બહાર નીકળો");
         set(QUIT_GAME_PROMPT, "શું તમે ખાતરીપૂર્વક આ રમતમાંથી બહાર નીકળવા માંગો છો?");
 
-        set(SCORE, "સ્કોર: ");
+        set(SCORE, "સ્કોર");
         set(HIGH_SCORE, "ઉચ્ચ સ્કોર");
-        set(YOUR_HIGH_SCORE_IS, "તમારો ઉચ્ચ સ્કોર છે:");
-        set(TIME, "સમય: ");
+        set(YOUR_HIGH_SCORE_IS, "તમારો ઉચ્ચ સ્કોર છે");
+        set(TIME, "સમય");
                 set(MATCH_COMPLETED, "મેચ પૂર્ણ");
         set(TRY_AGAIN, "ફરી પ્રયાસ કરો");
         set(WORDS, "શબ્દો");
@@ -113,8 +113,7 @@ public class LangGu extends MorseLanguage {
 
         set(KOCH_METHOD, "કોચ પદ્ધતિ");
         set(TARGET, "લક્ષ્ય");
-        set(LISTEN, "સાંભળો");
-        set(TARGET_MET, "લક્ષ્ય પ્રાપ્ત");
+set(TARGET_MET, "લક્ષ્ય પ્રાપ્ત");
         set(TARGET_NOT_MET, "લક્ષ્ય પ્રાપ્ત નથી");
             set(LEVEL, "સ્તર");
     
@@ -127,5 +126,7 @@ public class LangGu extends MorseLanguage {
         set(RESET, "રીસેટ કરો");
             set(WPM, "WPM​");
         set(SPACING, "અંતર");
+        set(BACK, "પાછળ");
+        set(NEXT_LEVEL, "આગળનું સ્તર");
     }
 }

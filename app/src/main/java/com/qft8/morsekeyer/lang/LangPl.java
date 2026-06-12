@@ -91,10 +91,10 @@ public class LangPl extends MorseLanguage {
         set(QUIT, "Wyjdź");
         set(QUIT_GAME_PROMPT, "Czy na pewno chcesz wyjść z tej gry?");
 
-        set(SCORE, "Wynik: ");
+        set(SCORE, "Wynik");
         set(HIGH_SCORE, "Wysoki wynik");
-        set(YOUR_HIGH_SCORE_IS, "Twój najwyższy wynik to:");
-        set(TIME, "Czas: ");
+        set(YOUR_HIGH_SCORE_IS, "Twój najwyższy wynik to");
+        set(TIME, "Czas");
                 set(MATCH_COMPLETED, "Mecz zakończony");
         set(TRY_AGAIN, "Spróbuj ponownie");
         set(WORDS, "Słowa");
@@ -120,8 +120,7 @@ public class LangPl extends MorseLanguage {
 
         set(KOCH_METHOD, "Metoda Kocha");
         set(TARGET, "Cel");
-        set(LISTEN, "Słuchaj");
-        set(TARGET_MET, "Cel osiągnięty");
+set(TARGET_MET, "Cel osiągnięty");
         set(TARGET_NOT_MET, "Cel nieosiągnięty");
             set(LEVEL, "Poziom");
     
@@ -134,5 +133,7 @@ public class LangPl extends MorseLanguage {
         set(RESET, "Zresetuj");
             set(WPM, "WPM​");
         set(SPACING, "Odstępy");
+        set(BACK, "Wstecz");
+        set(NEXT_LEVEL, "Następny poziom");
     }
 }

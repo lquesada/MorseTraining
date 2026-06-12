@@ -91,10 +91,10 @@ public class LangZh extends MorseLanguage {
         set(QUIT, "退出");
         set(QUIT_GAME_PROMPT, "您确定要退出此游戏吗？");
 
-        set(SCORE, "分数：");
+        set(SCORE, "分数");
         set(HIGH_SCORE, "高分");
-        set(YOUR_HIGH_SCORE_IS, "你的最高分是：");
-        set(TIME, "时间：");
+        set(YOUR_HIGH_SCORE_IS, "你的最高分是");
+        set(TIME, "时间");
                 set(MATCH_COMPLETED, "比赛完成");
         set(TRY_AGAIN, "重试");
         set(WORDS, "单词");
@@ -120,8 +120,7 @@ public class LangZh extends MorseLanguage {
 
         set(KOCH_METHOD, "柯赫方法");
         set(TARGET, "目标");
-        set(LISTEN, "听");
-        set(TARGET_MET, "目标达成");
+set(TARGET_MET, "目标达成");
         set(TARGET_NOT_MET, "目标未达成");
             set(LEVEL, "等级");
     
@@ -134,5 +133,7 @@ public class LangZh extends MorseLanguage {
         set(RESET, "重置");
             set(WPM, "WPM​");
         set(SPACING, "间距");
+        set(BACK, "返回");
+        set(NEXT_LEVEL, "下一关");
     }
 }

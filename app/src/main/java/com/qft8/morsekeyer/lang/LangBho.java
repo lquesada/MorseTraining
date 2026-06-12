@@ -84,10 +84,10 @@ public class LangBho extends MorseLanguage {
         set(QUIT, "बाहर निकलीं");
         set(QUIT_GAME_PROMPT, "का रउआ सचमुच एह खेल से बाहर निकलल चाहत बानी?");
 
-        set(SCORE, "स्कोर: ");
+        set(SCORE, "स्कोर");
         set(HIGH_SCORE, "उच्च अंक");
-        set(YOUR_HIGH_SCORE_IS, "राउर सबसे ढेर स्कोर बा:");
-        set(TIME, "समय: ");
+        set(YOUR_HIGH_SCORE_IS, "राउर सबसे ढेर स्कोर बा");
+        set(TIME, "समय");
                 set(MATCH_COMPLETED, "मैच पूरा भइल");
         set(TRY_AGAIN, "फेर से कोशिश करीं");
         set(WORDS, "शब्द");
@@ -113,8 +113,7 @@ public class LangBho extends MorseLanguage {
 
         set(KOCH_METHOD, "कोच विधि");
         set(TARGET, "लक्ष्य");
-        set(LISTEN, "सुनीं");
-        set(TARGET_MET, "लक्ष्य पूरा भइल");
+set(TARGET_MET, "लक्ष्य पूरा भइल");
         set(TARGET_NOT_MET, "लक्ष्य पूरा ना भइल");
             set(LEVEL, "स्तर");
     
@@ -127,5 +126,7 @@ public class LangBho extends MorseLanguage {
         set(RESET, "रीसेट करीं");
             set(WPM, "WPM");
         set(SPACING, "अंतर");
+        set(BACK, "पाछे");
+        set(NEXT_LEVEL, "अगिला लेवल");
     }
 }

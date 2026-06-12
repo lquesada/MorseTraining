@@ -101,9 +101,9 @@ public class LangEl extends MorseLanguage {
         set(THEME, "Θέμα");
 
         set(MATCH_RESULTS, "Αποτελέσματα αγώνων");
-        set(TIME, "Φορά: ");
+        set(TIME, "Φορά");
         set(TRY_AGAIN, "Προσπαθήστε ξανά");
-        set(SCORE, "Σκορ: ");
+        set(SCORE, "Σκορ");
         set(MATCH_COMPLETED, "Ολοκληρώθηκε ο αγώνας");
         set(HIGH_SCORE, "Υψηλή βαθμολογία");
 
@@ -119,8 +119,7 @@ public class LangEl extends MorseLanguage {
 
         set(KOCH_METHOD, "Μέθοδος Koch");
         set(TARGET, "Στόχος");
-        set(LISTEN, "Ακούστε");
-        set(TARGET_MET, "Ο στόχος επιτεύχθηκε");
+set(TARGET_MET, "Ο στόχος επιτεύχθηκε");
         set(TARGET_NOT_MET, "Ο στόχος δεν επιτεύχθηκε");
             set(LEVEL, "Επίπεδο");
     
@@ -133,5 +132,7 @@ public class LangEl extends MorseLanguage {
         set(RESET, "Επαναφορά");
             set(WPM, "WPM​");
         set(SPACING, "Διάστιχο");
+        set(BACK, "Πίσω");
+        set(NEXT_LEVEL, "Επόμενο επίπεδο");
     }
 }

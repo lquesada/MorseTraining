@@ -101,9 +101,9 @@ public class LangNo extends MorseLanguage {
         set(THEME, "Tema");
 
         set(MATCH_RESULTS, "Resultater");
-        set(TIME, "Tid: ");
+        set(TIME, "Tid");
         set(TRY_AGAIN, "Prøv igjen");
-        set(SCORE, "Poengsum: ");
+        set(SCORE, "Poengsum");
         set(MATCH_COMPLETED, "Kamp fullført");
         set(HIGH_SCORE, "Høy score");
 
@@ -119,8 +119,7 @@ public class LangNo extends MorseLanguage {
 
         set(KOCH_METHOD, "Koch-metoden");
         set(TARGET, "Mål");
-        set(LISTEN, "Lytt");
-        set(TARGET_MET, "Mål nådd");
+set(TARGET_MET, "Mål nådd");
         set(TARGET_NOT_MET, "Mål ikke nådd");
             set(LEVEL, "Nivå");
     
@@ -133,5 +132,7 @@ public class LangNo extends MorseLanguage {
         set(RESET, "Nullstill");
             set(WPM, "WPM​");
         set(SPACING, "Avstand");
+        set(BACK, "Tilbake");
+        set(NEXT_LEVEL, "Neste nivå");
     }
 }

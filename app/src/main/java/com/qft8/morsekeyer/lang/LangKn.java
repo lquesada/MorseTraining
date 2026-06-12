@@ -84,10 +84,10 @@ public class LangKn extends MorseLanguage {
         set(QUIT, "ನಿರ್ಗಮಿಸಿ");
         set(QUIT_GAME_PROMPT, "ನೀವು ಖಂಡಿತವಾಗಿಯೂ ಈ ಆಟದಿಂದ ನಿರ್ಗಮಿಸಲು ಬಯಸುತ್ತೀರಾ?");
 
-        set(SCORE, "ಸ್ಕೋರ್: ");
+        set(SCORE, "ಸ್ಕೋರ್");
         set(HIGH_SCORE, "ಹೆಚ್ಚಿನ ಅಂಕ");
-        set(YOUR_HIGH_SCORE_IS, "ನಿಮ್ಮ ಅತ್ಯಧಿಕ ಸ್ಕೋರ್:");
-        set(TIME, "ಸಮಯ: ");
+        set(YOUR_HIGH_SCORE_IS, "ನಿಮ್ಮ ಅತ್ಯಧಿಕ ಸ್ಕೋರ್");
+        set(TIME, "ಸಮಯ");
                 set(MATCH_COMPLETED, "ಪಂದ್ಯ ಮುಕ್ತಾಯ");
         set(TRY_AGAIN, "ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ");
         set(WORDS, "ಪದಗಳು");
@@ -113,8 +113,7 @@ public class LangKn extends MorseLanguage {
 
         set(KOCH_METHOD, "ಕೋಚ್ ವಿಧಾನ");
         set(TARGET, "ಗುರಿ");
-        set(LISTEN, "ಆಲಿಸಿ");
-        set(TARGET_MET, "ಗುರಿ ತಲುಪಿದೆ");
+set(TARGET_MET, "ಗುರಿ ತಲುಪಿದೆ");
         set(TARGET_NOT_MET, "ಗುರಿ ತಲುಪಿಲ್ಲ");
             set(LEVEL, "ಹಂತ");
     
@@ -127,5 +126,7 @@ public class LangKn extends MorseLanguage {
         set(RESET, "ಮರುಹೊಂದಿಸಿ");
             set(WPM, "WPM​");
         set(SPACING, "ಅಂತರ");
+        set(BACK, "ಹಿಂದೆ");
+        set(NEXT_LEVEL, "ಮುಂದಿನ ಹಂತ");
     }
 }

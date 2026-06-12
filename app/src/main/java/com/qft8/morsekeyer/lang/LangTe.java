@@ -84,10 +84,10 @@ public class LangTe extends MorseLanguage {
         set(QUIT, "నిష్క్రమించు");
         set(QUIT_GAME_PROMPT, "మీరు ఖచ్చితంగా ఈ గేమ్ నుండి నిష్క్రమించాలనుకుంటున్నారా?");
 
-        set(SCORE, "స్కోర్: ");
+        set(SCORE, "స్కోర్");
         set(HIGH_SCORE, "అధిక స్కోరు");
-        set(YOUR_HIGH_SCORE_IS, "మీ అత్యధిక స్కోరు:");
-        set(TIME, "సమయం: ");
+        set(YOUR_HIGH_SCORE_IS, "మీ అత్యధిక స్కోరు");
+        set(TIME, "సమయం");
                 set(MATCH_COMPLETED, "మ్యాచ్ పూర్తయింది");
         set(TRY_AGAIN, "మళ్లీ ప్రయత్నించండి");
         set(WORDS, "పదాలు");
@@ -113,8 +113,7 @@ public class LangTe extends MorseLanguage {
 
         set(KOCH_METHOD, "కోచ్ పద్ధతి");
         set(TARGET, "లక్ష్యం");
-        set(LISTEN, "వినండి");
-        set(TARGET_MET, "లక్ష్యం చేరుకుంది");
+set(TARGET_MET, "లక్ష్యం చేరుకుంది");
         set(TARGET_NOT_MET, "లక్ష్యం చేరుకోలేదు");
             set(LEVEL, "స్థాయి");
     
@@ -127,5 +126,7 @@ public class LangTe extends MorseLanguage {
         set(RESET, "రీసెట్ చేయండి");
             set(WPM, "WPM​");
         set(SPACING, "అంతరం");
+        set(BACK, "వెనుకకు");
+        set(NEXT_LEVEL, "తదుపరి స్థాయి");
     }
 }

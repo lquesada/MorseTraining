@@ -91,10 +91,10 @@ public class LangBn extends MorseLanguage {
         set(QUIT, "প্রস্থান");
         set(QUIT_GAME_PROMPT, "আপনি কি নিশ্চিত যে আপনি এই গেমটি থেকে প্রস্থান করতে চান?");
 
-        set(SCORE, "স্কোর: ");
+        set(SCORE, "স্কোর");
         set(HIGH_SCORE, "উচ্চ স্কোর");
-        set(YOUR_HIGH_SCORE_IS, "আপনার সর্বোচ্চ স্কোর:");
-        set(TIME, "সময়: ");
+        set(YOUR_HIGH_SCORE_IS, "আপনার সর্বোচ্চ স্কোর");
+        set(TIME, "সময়");
                 set(MATCH_COMPLETED, "ম্যাচ সম্পন্ন");
         set(TRY_AGAIN, "আবার চেষ্টা করুন");
         set(WORDS, "শব্দ");
@@ -120,8 +120,7 @@ public class LangBn extends MorseLanguage {
 
         set(KOCH_METHOD, "কোচ পদ্ধতি");
         set(TARGET, "লক্ষ্য");
-        set(LISTEN, "শুনুন");
-        set(TARGET_MET, "লক্ষ্য পূরণ হয়েছে");
+set(TARGET_MET, "লক্ষ্য পূরণ হয়েছে");
         set(TARGET_NOT_MET, "লক্ষ্য পূরণ হয়নি");
             set(LEVEL, "স্তর");
     
@@ -134,5 +133,7 @@ public class LangBn extends MorseLanguage {
         set(RESET, "রিসেট করুন");
             set(WPM, "WPM​");
         set(SPACING, "ব্যবধান");
+        set(BACK, "ফিরে যান");
+        set(NEXT_LEVEL, "পরবর্তী স্তর");
     }
 }

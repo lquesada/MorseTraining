@@ -91,10 +91,10 @@ public class LangHi extends MorseLanguage {
         set(QUIT, "बाहर निकलें");
         set(QUIT_GAME_PROMPT, "क्या आप वाकई इस गेम से बाहर निकलना चाहते हैं?");
 
-        set(SCORE, "स्कोर: ");
+        set(SCORE, "स्कोर");
         set(HIGH_SCORE, "उच्च अंक");
-        set(YOUR_HIGH_SCORE_IS, "आपका उच्चतम स्कोर है:");
-        set(TIME, "समय: ");
+        set(YOUR_HIGH_SCORE_IS, "आपका उच्चतम स्कोर है");
+        set(TIME, "समय");
                 set(MATCH_COMPLETED, "मैच पूरा हुआ");
         set(TRY_AGAIN, "फिर से प्रयास करें");
         set(WORDS, "शब्द");
@@ -120,8 +120,7 @@ public class LangHi extends MorseLanguage {
 
         set(KOCH_METHOD, "कोच विधि");
         set(TARGET, "लक्ष्य");
-        set(LISTEN, "सुनें");
-        set(TARGET_MET, "लक्ष्य पूरा हुआ");
+set(TARGET_MET, "लक्ष्य पूरा हुआ");
         set(TARGET_NOT_MET, "लक्ष्य पूरा नहीं हुआ");
             set(LEVEL, "स्तर");
     
@@ -134,5 +133,7 @@ public class LangHi extends MorseLanguage {
         set(RESET, "रीसेट करें");
             set(WPM, "WPM​");
         set(SPACING, "अंतर");
+        set(BACK, "वापस");
+        set(NEXT_LEVEL, "अगला स्तर");
     }
 }

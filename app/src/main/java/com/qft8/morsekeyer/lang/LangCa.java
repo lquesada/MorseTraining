@@ -84,10 +84,10 @@ public class LangCa extends MorseLanguage {
         set(QUIT, "Sortir");
         set(QUIT_GAME_PROMPT, "Estàs segur que vols sortir d'aquest joc?");
 
-        set(SCORE, "Puntuació: ");
+        set(SCORE, "Puntuació");
         set(HIGH_SCORE, "Puntuació alta");
-        set(YOUR_HIGH_SCORE_IS, "La teva puntuació més alta és:");
-        set(TIME, "Temps: ");
+        set(YOUR_HIGH_SCORE_IS, "La teva puntuació més alta és");
+        set(TIME, "Temps");
                 set(MATCH_COMPLETED, "Partida completada");
         set(TRY_AGAIN, "Torna-ho a provar");
         set(WORDS, "Paraules");
@@ -113,8 +113,7 @@ public class LangCa extends MorseLanguage {
 
         set(KOCH_METHOD, "Mètode Koch");
         set(TARGET, "Objectiu");
-        set(LISTEN, "Escolta");
-        set(TARGET_MET, "Objectiu assolit");
+set(TARGET_MET, "Objectiu assolit");
         set(TARGET_NOT_MET, "Objectiu no assolit");
             set(LEVEL, "Nivell");
     
@@ -127,5 +126,7 @@ public class LangCa extends MorseLanguage {
         set(RESET, "Restableix");
             set(WPM, "WPM​");
         set(SPACING, "Espaiat");
+        set(BACK, "Enrere");
+        set(NEXT_LEVEL, "Següent nivell");
     }
 }

@@ -91,10 +91,10 @@ public class LangFa extends MorseLanguage {
         set(QUIT, "خروج");
         set(QUIT_GAME_PROMPT, "آیا مطمئن هستید که می‌خواهید از این بازی خارج شوید؟");
 
-        set(SCORE, "امتیاز: ");
+        set(SCORE, "امتیاز");
         set(HIGH_SCORE, "نمره بالا");
-        set(YOUR_HIGH_SCORE_IS, "بالاترین امتیاز شما:");
-        set(TIME, "زمان: ");
+        set(YOUR_HIGH_SCORE_IS, "بالاترین امتیاز شما");
+        set(TIME, "زمان");
                 set(MATCH_COMPLETED, "بازی تمام شد");
         set(TRY_AGAIN, "دوباره تلاش کنید");
         set(WORDS, "کلمات");
@@ -120,8 +120,7 @@ public class LangFa extends MorseLanguage {
 
         set(KOCH_METHOD, "روش کخ");
         set(TARGET, "هدف");
-        set(LISTEN, "گوش دادن");
-        set(TARGET_MET, "هدف محقق شد");
+set(TARGET_MET, "هدف محقق شد");
         set(TARGET_NOT_MET, "هدف محقق نشد");
             set(LEVEL, "سطح");
     
@@ -134,5 +133,7 @@ public class LangFa extends MorseLanguage {
         set(RESET, "بازنشانی");
             set(WPM, "WPM​");
         set(SPACING, "فاصله");
+        set(BACK, "بازگشت");
+        set(NEXT_LEVEL, "مرحله بعدی");
     }
 }

@@ -84,10 +84,10 @@ public class LangUz extends MorseLanguage {
         set(QUIT, "Chiqish");
         set(QUIT_GAME_PROMPT, "Ushbu o'yindan chiqmoqchimisiz?");
 
-        set(SCORE, "Hisob: ");
+        set(SCORE, "Hisob");
         set(HIGH_SCORE, "Yuqori ball");
-        set(YOUR_HIGH_SCORE_IS, "Sizning eng yuqori balingiz:");
-        set(TIME, "Vaqt: ");
+        set(YOUR_HIGH_SCORE_IS, "Sizning eng yuqori balingiz");
+        set(TIME, "Vaqt");
                 set(MATCH_COMPLETED, "O'yin yakunlandi");
         set(TRY_AGAIN, "Qaytadan urinish");
         set(WORDS, "So'zlar");
@@ -113,8 +113,7 @@ public class LangUz extends MorseLanguage {
 
         set(KOCH_METHOD, "Koch usuli");
         set(TARGET, "Maqsad");
-        set(LISTEN, "Tinglash");
-        set(TARGET_MET, "Maqsadga erishildi");
+set(TARGET_MET, "Maqsadga erishildi");
         set(TARGET_NOT_MET, "Maqsadga erishilmadi");
             set(LEVEL, "Daraja");
     
@@ -127,5 +126,7 @@ public class LangUz extends MorseLanguage {
         set(RESET, "Qayta tiklash");
             set(WPM, "WPM​");
         set(SPACING, "Oraliği");
+        set(BACK, "Orqaga");
+        set(NEXT_LEVEL, "Keyingi bosqich");
     }
 }

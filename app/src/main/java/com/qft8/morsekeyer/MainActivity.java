@@ -1487,11 +1487,11 @@ public class MainActivity extends Activity {
         LinearLayout.LayoutParams backBtnLp = new LinearLayout.LayoutParams(dp(54), dp(54));
         backBtnLp.setMarginEnd(dp(8));
         backBtn.setLayoutParams(backBtnLp);
-        backBtn.setPadding(dp(12), dp(12), dp(12), dp(12));
         
         android.util.TypedValue outValue = new android.util.TypedValue();
         dialogCtx.getTheme().resolveAttribute(android.R.attr.selectableItemBackgroundBorderless, outValue, true);
         backBtn.setBackgroundResource(outValue.resourceId);
+        backBtn.setPadding(dp(12), dp(12), dp(12), dp(12));
         backBtn.setOnClickListener(v -> {
             if (settingsDialog != null) settingsDialog.dismiss();
         });
@@ -1806,11 +1806,11 @@ public class MainActivity extends Activity {
         LinearLayout.LayoutParams backBtnLp = new LinearLayout.LayoutParams(dp(54), dp(54));
         backBtnLp.setMarginEnd(dp(8));
         backBtn.setLayoutParams(backBtnLp);
-        backBtn.setPadding(dp(12), dp(12), dp(12), dp(12));
         
         android.util.TypedValue outValue = new android.util.TypedValue();
         infoCtx.getTheme().resolveAttribute(android.R.attr.selectableItemBackgroundBorderless, outValue, true);
         backBtn.setBackgroundResource(outValue.resourceId);
+        backBtn.setPadding(dp(12), dp(12), dp(12), dp(12));
         
         TextView titleView = new TextView(infoCtx);
         titleView.setText(LanguageManager.get(INFO_TITLE));

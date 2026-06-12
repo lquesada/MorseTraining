@@ -91,10 +91,10 @@ public class LangRu extends MorseLanguage {
         set(QUIT, "Выйти");
         set(QUIT_GAME_PROMPT, "Вы уверены, что хотите выйти из этой игры?");
 
-        set(SCORE, "Счет: ");
+        set(SCORE, "Счет");
         set(HIGH_SCORE, "Высокий балл");
-        set(YOUR_HIGH_SCORE_IS, "Ваш рекорд:");
-        set(TIME, "Время: ");
+        set(YOUR_HIGH_SCORE_IS, "Ваш рекорд");
+        set(TIME, "Время");
                 set(MATCH_COMPLETED, "Матч завершен");
         set(TRY_AGAIN, "Попробовать снова");
         set(WORDS, "Слова");
@@ -120,8 +120,7 @@ public class LangRu extends MorseLanguage {
 
         set(KOCH_METHOD, "Метод Коха");
         set(TARGET, "Цель");
-        set(LISTEN, "Слушать");
-        set(TARGET_MET, "Цель достигнута");
+set(TARGET_MET, "Цель достигнута");
         set(TARGET_NOT_MET, "Цель не достигнута");
             set(LEVEL, "Уровень");
     
@@ -134,5 +133,7 @@ public class LangRu extends MorseLanguage {
         set(RESET, "Сбросить");
             set(WPM, "WPM​");
         set(SPACING, "Интервал");
+        set(BACK, "Назад");
+        set(NEXT_LEVEL, "Следующий уровень");
     }
 }

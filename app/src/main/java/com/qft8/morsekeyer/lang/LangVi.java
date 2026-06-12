@@ -91,10 +91,10 @@ public class LangVi extends MorseLanguage {
         set(QUIT, "Thoát");
         set(QUIT_GAME_PROMPT, "Bạn có chắc chắn muốn thoát khỏi trò chơi này không?");
 
-        set(SCORE, "Điểm: ");
+        set(SCORE, "Điểm");
         set(HIGH_SCORE, "Điểm cao");
-        set(YOUR_HIGH_SCORE_IS, "Điểm cao nhất của bạn là:");
-        set(TIME, "Thời gian: ");
+        set(YOUR_HIGH_SCORE_IS, "Điểm cao nhất của bạn là");
+        set(TIME, "Thời gian");
                 set(MATCH_COMPLETED, "Trận đấu kết thúc");
         set(TRY_AGAIN, "Thử lại");
         set(WORDS, "Từ");
@@ -120,8 +120,7 @@ public class LangVi extends MorseLanguage {
 
         set(KOCH_METHOD, "Phương pháp Koch");
         set(TARGET, "Mục tiêu");
-        set(LISTEN, "Nghe");
-        set(TARGET_MET, "Đã đạt mục tiêu");
+set(TARGET_MET, "Đã đạt mục tiêu");
         set(TARGET_NOT_MET, "Chưa đạt mục tiêu");
             set(LEVEL, "Cấp độ");
     
@@ -134,5 +133,7 @@ public class LangVi extends MorseLanguage {
         set(RESET, "Đặt lại");
             set(WPM, "WPM​");
         set(SPACING, "Khoảng cách");
+        set(BACK, "Quay lại");
+        set(NEXT_LEVEL, "Cấp độ tiếp theo");
     }
 }

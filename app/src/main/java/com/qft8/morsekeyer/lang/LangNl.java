@@ -101,9 +101,9 @@ public class LangNl extends MorseLanguage {
         set(THEME, "Thema");
 
         set(MATCH_RESULTS, "Resultaten");
-        set(TIME, "Tijd: ");
+        set(TIME, "Tijd");
         set(TRY_AGAIN, "Probeer het opnieuw");
-        set(SCORE, "Score: ");
+        set(SCORE, "Score");
         set(MATCH_COMPLETED, "Wedstrijd voltooid");
         set(HIGH_SCORE, "Hoge score");
 
@@ -119,8 +119,7 @@ public class LangNl extends MorseLanguage {
 
         set(KOCH_METHOD, "Koch-methode");
         set(TARGET, "Doel");
-        set(LISTEN, "Luister");
-        set(TARGET_MET, "Doel bereikt");
+set(TARGET_MET, "Doel bereikt");
         set(TARGET_NOT_MET, "Doel niet bereikt");
             set(LEVEL, "Niveau");
     
@@ -133,5 +132,7 @@ public class LangNl extends MorseLanguage {
         set(RESET, "Resetten");
             set(WPM, "WPM​");
         set(SPACING, "Afstand");
+        set(BACK, "Terug");
+        set(NEXT_LEVEL, "Volgend niveau");
     }
 }

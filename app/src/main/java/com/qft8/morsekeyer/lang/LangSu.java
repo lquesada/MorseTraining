@@ -84,10 +84,10 @@ public class LangSu extends MorseLanguage {
         set(QUIT, "Kaluar");
         set(QUIT_GAME_PROMPT, "Naha anjeun yakin hoyong kaluar tina kaulinan ieu?");
 
-        set(SCORE, "Skor: ");
+        set(SCORE, "Skor");
         set(HIGH_SCORE, "Skor luhur");
-        set(YOUR_HIGH_SCORE_IS, "Skor pangluhurna anjeun:");
-        set(TIME, "Waktos: ");
+        set(YOUR_HIGH_SCORE_IS, "Skor pangluhurna anjeun");
+        set(TIME, "Waktos");
                 set(MATCH_COMPLETED, "Pertandingan réngsé");
         set(TRY_AGAIN, "Cobi deui");
         set(WORDS, "Kecap-kecap");
@@ -113,8 +113,7 @@ public class LangSu extends MorseLanguage {
 
         set(KOCH_METHOD, "Metode Koch");
         set(TARGET, "Target");
-        set(LISTEN, "Dengekeun");
-        set(TARGET_MET, "Target kahontal");
+set(TARGET_MET, "Target kahontal");
         set(TARGET_NOT_MET, "Target teu kahontal");
             set(LEVEL, "Tingkat");
     
@@ -127,5 +126,7 @@ public class LangSu extends MorseLanguage {
         set(RESET, "Reset");
             set(WPM, "WPM​");
         set(SPACING, "Spasi");
+        set(BACK, "Deui");
+        set(NEXT_LEVEL, "Tingkat salajengna");
     }
 }

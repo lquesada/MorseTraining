@@ -84,10 +84,10 @@ public class LangJv extends MorseLanguage {
         set(QUIT, "Metu");
         set(QUIT_GAME_PROMPT, "Apa sampeyan yakin arep metu saka game iki?");
 
-        set(SCORE, "Skor: ");
+        set(SCORE, "Skor");
         set(HIGH_SCORE, "Skor dhuwur");
-        set(YOUR_HIGH_SCORE_IS, "Skor paling dhuwur sampeyan:");
-        set(TIME, "Wektu: ");
+        set(YOUR_HIGH_SCORE_IS, "Skor paling dhuwur sampeyan");
+        set(TIME, "Wektu");
                 set(MATCH_COMPLETED, "Pertandhingan rampung");
         set(TRY_AGAIN, "Coba maneh");
         set(WORDS, "Tembung");
@@ -113,8 +113,7 @@ public class LangJv extends MorseLanguage {
 
         set(KOCH_METHOD, "Metode Koch");
         set(TARGET, "Target");
-        set(LISTEN, "Rungokake");
-        set(TARGET_MET, "Target digayuh");
+set(TARGET_MET, "Target digayuh");
         set(TARGET_NOT_MET, "Target ora digayuh");
             set(LEVEL, "Tingkat");
     
@@ -127,5 +126,7 @@ public class LangJv extends MorseLanguage {
         set(RESET, "Reset");
             set(WPM, "WPM​");
         set(SPACING, "Spasi");
+        set(BACK, "Mundur");
+        set(NEXT_LEVEL, "Tingkat sabanjuré");
     }
 }

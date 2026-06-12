@@ -84,10 +84,10 @@ public class LangGl extends MorseLanguage {
         set(QUIT, "Saír");
         set(QUIT_GAME_PROMPT, "Estás seguro de que queres saír deste xogo?");
 
-        set(SCORE, "Puntuación: ");
+        set(SCORE, "Puntuación");
         set(HIGH_SCORE, "Puntuación alta");
-        set(YOUR_HIGH_SCORE_IS, "A túa puntuación máis alta é:");
-        set(TIME, "Tempo: ");
+        set(YOUR_HIGH_SCORE_IS, "A túa puntuación máis alta é");
+        set(TIME, "Tempo");
                 set(MATCH_COMPLETED, "Partida completada");
         set(TRY_AGAIN, "Tentar de novo");
         set(WORDS, "Palabras");
@@ -113,8 +113,7 @@ public class LangGl extends MorseLanguage {
 
         set(KOCH_METHOD, "Método Koch");
         set(TARGET, "Obxectivo");
-        set(LISTEN, "Escoitar");
-        set(TARGET_MET, "Obxectivo acadado");
+set(TARGET_MET, "Obxectivo acadado");
         set(TARGET_NOT_MET, "Obxectivo non acadado");
             set(LEVEL, "Nivel");
     
@@ -127,5 +126,7 @@ public class LangGl extends MorseLanguage {
         set(RESET, "Restablecer");
             set(WPM, "WPM​");
         set(SPACING, "Espazamento");
+        set(BACK, "Atrás");
+        set(NEXT_LEVEL, "Seguinte nivel");
     }
 }

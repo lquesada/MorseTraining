@@ -52,8 +52,7 @@ public class LangEs extends MorseLanguage {
                 set(KEEP_ALIVE, "Mantener audio activo (reduce latencia)");
                 set(AUDIO_BUFFER, "Búfer de audio (hardware)");
                 set(PROCESSING_CHUNK, "Bloque de procesamiento");
-                set(PERFORMANCE_HINT,
-                                "Si el sonido se entrecorta, aumente el búfer o el bloque. Si la latencia es alta, redúzcalos.");
+                set(PERFORMANCE_HINT, "Si el sonido se entrecorta, aumente el búfer o el bloque. Si la latencia es alta, redúzcalos.");
 
                 set(INFO_TITLE, "Morse Training");
                 set(INFO_TEXT, "Entradas soportadas: teclado, pantalla táctil, ratón o palas con adaptador USB.\n\n" +
@@ -96,10 +95,10 @@ public class LangEs extends MorseLanguage {
                 set(QUIT, "Salir");
                 set(QUIT_GAME_PROMPT, "¿Estás seguro de que quieres salir de este juego?");
 
-                set(SCORE, "Puntos: ");
+                set(SCORE, "Puntos");
         set(HIGH_SCORE, "Récord");
-        set(YOUR_HIGH_SCORE_IS, "Tu puntuación más alta es:");
-                set(TIME, "Tiempo: ");
+        set(YOUR_HIGH_SCORE_IS, "Tu puntuación más alta es");
+                set(TIME, "Tiempo");
                                 set(MATCH_COMPLETED, "Partida completada");
                 set(TRY_AGAIN, "Reintentar");
                 set(WORDS, "Palabras");
@@ -125,8 +124,7 @@ public class LangEs extends MorseLanguage {
 
         set(KOCH_METHOD, "Método Koch");
         set(TARGET, "Objetivo");
-        set(LISTEN, "Escuchar");
-        set(TARGET_MET, "Objetivo cumplido");
+set(TARGET_MET, "Objetivo cumplido");
         set(TARGET_NOT_MET, "Objetivo no cumplido");
             set(LEVEL, "Nivel");
     
@@ -139,5 +137,7 @@ public class LangEs extends MorseLanguage {
         set(RESET, "Restablecer");
             set(WPM, "PPM");
         set(SPACING, "Espaciado");
+        set(BACK, "Atrás");
+        set(NEXT_LEVEL, "Siguiente nivel");
     }
 }

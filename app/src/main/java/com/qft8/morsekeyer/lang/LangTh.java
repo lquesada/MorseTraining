@@ -91,10 +91,10 @@ public class LangTh extends MorseLanguage {
         set(QUIT, "ออก");
         set(QUIT_GAME_PROMPT, "คุณแน่ใจหรือไม่ว่าต้องการออกจากเกมนี้?");
 
-        set(SCORE, "คะแนน: ");
+        set(SCORE, "คะแนน");
         set(HIGH_SCORE, "คะแนนสูง");
-        set(YOUR_HIGH_SCORE_IS, "คะแนนสูงสุดของคุณคือ:");
-        set(TIME, "เวลา: ");
+        set(YOUR_HIGH_SCORE_IS, "คะแนนสูงสุดของคุณคือ");
+        set(TIME, "เวลา");
                 set(MATCH_COMPLETED, "การแข่งขันจบลงแล้ว");
         set(TRY_AGAIN, "ลองอีกครั้ง");
         set(WORDS, "คำ");
@@ -120,8 +120,7 @@ public class LangTh extends MorseLanguage {
 
         set(KOCH_METHOD, "วิธีคอค");
         set(TARGET, "เป้าหมาย");
-        set(LISTEN, "ฟัง");
-        set(TARGET_MET, "บรรลุเป้าหมาย");
+set(TARGET_MET, "บรรลุเป้าหมาย");
         set(TARGET_NOT_MET, "ไม่บรรลุเป้าหมาย");
             set(LEVEL, "ระดับ");
     
@@ -134,5 +133,7 @@ public class LangTh extends MorseLanguage {
         set(RESET, "รีเซ็ต");
             set(WPM, "WPM​");
         set(SPACING, "ระยะห่าง");
+        set(BACK, "กลับ");
+        set(NEXT_LEVEL, "ด่านต่อไป");
     }
 }

@@ -105,10 +105,10 @@ public class LangEn extends MorseLanguage {
                 set(QUIT, "Quit");
                 set(QUIT_GAME_PROMPT, "Are you sure you want to quit this game?");
 
-                set(SCORE, "Score: ");
+                set(SCORE, "Score");
                 set(HIGH_SCORE, "High Score");
-                set(YOUR_HIGH_SCORE_IS, "Your high score is:");
-                set(TIME, "Time: ");
+                set(YOUR_HIGH_SCORE_IS, "Your high score is");
+                set(TIME, "Time");
                 set(MATCH_COMPLETED, "Match Complete");
                 set(TRY_AGAIN, "Try again");
 
@@ -148,10 +148,9 @@ public class LangEn extends MorseLanguage {
 
         set(KOCH_METHOD, "Koch method");
         set(TARGET, "Target");
-        set(LISTEN, "LISTEN");
-        set(TARGET_MET, "TARGET MET");
+set(TARGET_MET, "TARGET MET");
         set(TARGET_NOT_MET, "TARGET NOT MET");
-            set(LEVEL, "Level: ");
+            set(LEVEL, "Level");
             set(LEVELS_COMPLETED, "Levels completed");
     
     
@@ -159,13 +158,14 @@ public class LangEn extends MorseLanguage {
     
         set(KOCH_METHOD, "Koch method");
         set(TARGET, "Target");
-        set(LISTEN, "LISTEN");
-        set(TARGET_MET, "TARGET MET");
+set(TARGET_MET, "TARGET MET");
         set(TARGET_NOT_MET, "TARGET NOT MET");
         set(RESET_PROGRESS, "Reset progress");
         set(RESET_PROGRESS_CONFIRM, "Are you sure you want to reset progress?");
         set(RESET, "Reset");
         set(WPM, "WPM");
         set(SPACING, "Spacing");
+        set(BACK, "Back");
+        set(NEXT_LEVEL, "Next Level");
     }
 }

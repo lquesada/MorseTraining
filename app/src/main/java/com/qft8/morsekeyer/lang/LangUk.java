@@ -91,10 +91,10 @@ public class LangUk extends MorseLanguage {
         set(QUIT, "Вийти");
         set(QUIT_GAME_PROMPT, "Ви впевнені, що хочете вийти з цієї гри?");
 
-        set(SCORE, "Рахунок: ");
+        set(SCORE, "Рахунок");
         set(HIGH_SCORE, "Високий бал");
-        set(YOUR_HIGH_SCORE_IS, "Ваш рекорд:");
-        set(TIME, "Час: ");
+        set(YOUR_HIGH_SCORE_IS, "Ваш рекорд");
+        set(TIME, "Час");
                 set(MATCH_COMPLETED, "Матч завершено");
         set(TRY_AGAIN, "Спробувати ще раз");
         set(WORDS, "Слова");
@@ -120,8 +120,7 @@ public class LangUk extends MorseLanguage {
 
         set(KOCH_METHOD, "Метод Коха");
         set(TARGET, "Ціль");
-        set(LISTEN, "Слухати");
-        set(TARGET_MET, "Ціль досягнута");
+set(TARGET_MET, "Ціль досягнута");
         set(TARGET_NOT_MET, "Ціль не досягнута");
             set(LEVEL, "Рівень");
     
@@ -134,5 +133,7 @@ public class LangUk extends MorseLanguage {
         set(RESET, "Скинути");
             set(WPM, "WPM​");
         set(SPACING, "Інтервал");
+        set(BACK, "Назад");
+        set(NEXT_LEVEL, "Наступний рівень");
     }
 }

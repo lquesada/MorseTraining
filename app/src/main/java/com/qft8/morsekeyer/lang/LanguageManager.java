@@ -120,4 +120,4 @@ public class LanguageManager {
     public static String getCurrentKey() {
         return currentKey;
     }
-    }
+}

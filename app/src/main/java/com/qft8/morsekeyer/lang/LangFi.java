@@ -91,10 +91,10 @@ public class LangFi extends MorseLanguage {
         set(QUIT, "Lopeta");
         set(QUIT_GAME_PROMPT, "Haluatko varmasti lopettaa tämän pelin?");
 
-        set(SCORE, "Pisteet: ");
+        set(SCORE, "Pisteet");
         set(HIGH_SCORE, "Korkea pistemäärä");
-        set(YOUR_HIGH_SCORE_IS, "Ennätyspisteesi on:");
-        set(TIME, "Aika: ");
+        set(YOUR_HIGH_SCORE_IS, "Ennätyspisteesi on");
+        set(TIME, "Aika");
                 set(MATCH_COMPLETED, "Ottelu päättynyt");
         set(TRY_AGAIN, "Yritä uudelleen");
         set(WORDS, "Sanat");
@@ -120,8 +120,7 @@ public class LangFi extends MorseLanguage {
 
         set(KOCH_METHOD, "Koch-menetelmä");
         set(TARGET, "Tavoite");
-        set(LISTEN, "Kuuntele");
-        set(TARGET_MET, "Tavoite saavutettu");
+set(TARGET_MET, "Tavoite saavutettu");
         set(TARGET_NOT_MET, "Tavoite ei saavutettu");
             set(LEVEL, "Taso");
     
@@ -134,5 +133,7 @@ public class LangFi extends MorseLanguage {
         set(RESET, "Nollaa");
             set(WPM, "WPM​");
         set(SPACING, "Välistys");
+        set(BACK, "Takaisin");
+        set(NEXT_LEVEL, "Seuraava taso");
     }
 }

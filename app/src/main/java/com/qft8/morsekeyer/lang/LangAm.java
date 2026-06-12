@@ -91,10 +91,10 @@ public class LangAm extends MorseLanguage {
         set(QUIT, "ውጣ");
         set(QUIT_GAME_PROMPT, "በእርግጥ ከዚህ ጨዋታ መውጣት ይፈልጋሉ?");
 
-        set(SCORE, "ነጥብ: ");
+        set(SCORE, "ነጥብ");
         set(HIGH_SCORE, "ከፍተኛ ነጥብ");
-        set(YOUR_HIGH_SCORE_IS, "የእርስዎ ከፍተኛ ነጥብ:");
-        set(TIME, "ጊዜ: ");
+        set(YOUR_HIGH_SCORE_IS, "የእርስዎ ከፍተኛ ነጥብ");
+        set(TIME, "ጊዜ");
                 set(MATCH_COMPLETED, "ግጥሚያው ተጠናቋል");
         set(TRY_AGAIN, "እንደገና ሞክር");
         set(WORDS, "ቃላት");
@@ -120,8 +120,7 @@ public class LangAm extends MorseLanguage {
 
         set(KOCH_METHOD, "የኮክ ዘዴ");
         set(TARGET, "ዒላማ");
-        set(LISTEN, "አዳምጥ");
-        set(TARGET_MET, "ዒላማ ተሳክቷል");
+set(TARGET_MET, "ዒላማ ተሳክቷል");
         set(TARGET_NOT_MET, "ዒላማ አልተሳካም");
             set(LEVEL, "ደረጃ");
     
@@ -134,5 +133,7 @@ public class LangAm extends MorseLanguage {
         set(RESET, "ዳግም አስጀምር");
             set(WPM, "WPM​");
         set(SPACING, "ክፍተት");
+        set(BACK, "ተመለስ");
+        set(NEXT_LEVEL, "ቀጣይ ደረጃ");
     }
 }

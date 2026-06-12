@@ -91,10 +91,10 @@ public class LangPt extends MorseLanguage {
         set(QUIT, "Sair");
         set(QUIT_GAME_PROMPT, "Tem certeza de que deseja sair deste jogo?");
 
-        set(SCORE, "Pontos: ");
+        set(SCORE, "Pontos");
         set(HIGH_SCORE, "Pontuação alta");
-        set(YOUR_HIGH_SCORE_IS, "Sua pontuação mais alta é:");
-        set(TIME, "Tempo: ");
+        set(YOUR_HIGH_SCORE_IS, "Sua pontuação mais alta é");
+        set(TIME, "Tempo");
                 set(MATCH_COMPLETED, "Partida concluída");
         set(TRY_AGAIN, "Tentar novamente");
         set(WORDS, "Palavras");
@@ -120,8 +120,7 @@ public class LangPt extends MorseLanguage {
 
         set(KOCH_METHOD, "Método Koch");
         set(TARGET, "Alvo");
-        set(LISTEN, "Ouvir");
-        set(TARGET_MET, "Alvo atingido");
+set(TARGET_MET, "Alvo atingido");
         set(TARGET_NOT_MET, "Alvo não atingido");
             set(LEVEL, "Nível");
     
@@ -134,5 +133,7 @@ public class LangPt extends MorseLanguage {
         set(RESET, "Redefinir");
             set(WPM, "WPM​");
         set(SPACING, "Espaçamento");
+        set(BACK, "Voltar");
+        set(NEXT_LEVEL, "Próximo nível");
     }
 }

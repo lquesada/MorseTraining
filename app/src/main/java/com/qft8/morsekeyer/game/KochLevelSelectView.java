@@ -60,34 +60,57 @@ public class KochLevelSelectView extends FrameLayout {
         LinearLayout root = new LinearLayout(getContext());
         root.setOrientation(LinearLayout.VERTICAL);
 
-        // TOP BAR
-        FrameLayout topBar = new FrameLayout(getContext());
+        // TOP BAR (Matching game_menu_top_bar exactly)
+        LinearLayout topBar = new LinearLayout(getContext());
+        topBar.setOrientation(LinearLayout.HORIZONTAL);
         topBar.setBackgroundColor(cBar);
         topBar.setPadding(dp(3), dp(3), dp(3), dp(3));
+        topBar.setGravity(Gravity.CENTER_VERTICAL);
 
         // Back arrow
         android.widget.ImageButton backBtn = new android.widget.ImageButton(getContext());
         backBtn.setImageResource(com.qft8.morsekeyer.R.drawable.ic_arrow_back);
         backBtn.setScaleType(android.widget.ImageView.ScaleType.CENTER_INSIDE);
-        backBtn.setPadding(dp(12), dp(12), dp(12), dp(12));
         backBtn.setMinimumWidth(0);
         backBtn.setMinimumHeight(0);
         backBtn.setColorFilter(cText);
         
-        // Clone the EXACT background drawable from the game menu button to guarantee identical size/insets
+        int pad = dp(12);
+        int w = dp(54);
+        int h = dp(54);
+        int marginEnd = dp(8);
+        
+        // Clone EXACT properties from the game menu button
         if (getContext() instanceof android.app.Activity) {
             android.widget.ImageButton template = ((android.app.Activity) getContext()).findViewById(com.qft8.morsekeyer.R.id.game_menu_btn_back);
-            if (template != null && template.getBackground() != null) {
-                backBtn.setBackground(template.getBackground().getConstantState().newDrawable().mutate());
+            if (template != null) {
+                if (template.getBackground() != null) {
+                    backBtn.setBackground(template.getBackground().getConstantState().newDrawable().mutate());
+                } else {
+                    backBtn.setBackgroundTintList(android.content.res.ColorStateList.valueOf(cUtl));
+                }
+                pad = template.getPaddingTop(); // Copy actual padding
+                w = template.getLayoutParams().width;
+                h = template.getLayoutParams().height;
+                if (template.getLayoutParams() instanceof android.view.ViewGroup.MarginLayoutParams) {
+                    marginEnd = ((android.view.ViewGroup.MarginLayoutParams) template.getLayoutParams()).rightMargin;
+                }
             }
+        } else {
+            backBtn.setBackgroundTintList(android.content.res.ColorStateList.valueOf(cUtl));
         }
-        backBtn.setBackgroundTintList(android.content.res.ColorStateList.valueOf(cUtl));
         
+        backBtn.setPadding(pad, pad, pad, pad);
         backBtn.setOnClickListener(v -> onBackClick.run());
 
-        FrameLayout.LayoutParams backParams = new FrameLayout.LayoutParams(dp(54), dp(54));
-        backParams.gravity = Gravity.START | Gravity.CENTER_VERTICAL;
+        LinearLayout.LayoutParams backParams = new LinearLayout.LayoutParams(w, h);
+        backParams.rightMargin = marginEnd;
         topBar.addView(backBtn, backParams);
+
+        // Spacer
+        android.widget.Space space1 = new android.widget.Space(getContext());
+        LinearLayout.LayoutParams spaceParams1 = new LinearLayout.LayoutParams(0, LayoutParams.MATCH_PARENT, 1f);
+        topBar.addView(space1, spaceParams1);
 
         // Title
         TextView title = new TextView(getContext());
@@ -97,13 +120,21 @@ public class KochLevelSelectView extends FrameLayout {
         title.setTypeface(Typeface.DEFAULT_BOLD);
         title.setSingleLine();
         title.setEllipsize(android.text.TextUtils.TruncateAt.END);
-        title.setGravity(Gravity.CENTER);
-        FrameLayout.LayoutParams titleParams = new FrameLayout.LayoutParams(
-                LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-        titleParams.gravity = Gravity.CENTER;
-        titleParams.leftMargin = dp(56);
-        titleParams.rightMargin = dp(56);
+        
+        LinearLayout.LayoutParams titleParams = new LinearLayout.LayoutParams(
+                LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
         topBar.addView(title, titleParams);
+
+        // Spacer
+        android.widget.Space space2 = new android.widget.Space(getContext());
+        LinearLayout.LayoutParams spaceParams2 = new LinearLayout.LayoutParams(0, LayoutParams.MATCH_PARENT, 1f);
+        topBar.addView(space2, spaceParams2);
+
+        // Dummy view for symmetry (54dp width, 8dp marginStart)
+        android.view.View dummyView = new android.view.View(getContext());
+        LinearLayout.LayoutParams dummyParams = new LinearLayout.LayoutParams(dp(54), dp(54));
+        dummyParams.leftMargin = dp(8);
+        topBar.addView(dummyView, dummyParams);
 
         LinearLayout.LayoutParams topBarParams = new LinearLayout.LayoutParams(
                 LayoutParams.MATCH_PARENT, dp(60));

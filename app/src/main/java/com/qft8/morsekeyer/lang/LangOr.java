@@ -84,10 +84,10 @@ public class LangOr extends MorseLanguage {
         set(QUIT, "ବାହାରନ୍ତୁ");
         set(QUIT_GAME_PROMPT, "ଆପଣ ନିଶ୍ଚିତ କି ଆପଣ ଏହି ଖେଳରୁ ବାହାରିବାକୁ ଚାହୁଁଛନ୍ତି?");
 
-        set(SCORE, "ସ୍କୋର: ");
+        set(SCORE, "ସ୍କୋର");
         set(HIGH_SCORE, "ଉଚ୍ଚ ସ୍କୋର |");
-        set(YOUR_HIGH_SCORE_IS, "ଆପଣଙ୍କର ସର୍ବୋଚ୍ଚ ସ୍କୋର ହେଉଛି:");
-        set(TIME, "ସମୟ: ");
+        set(YOUR_HIGH_SCORE_IS, "ଆପଣଙ୍କର ସର୍ବୋଚ୍ଚ ସ୍କୋର ହେଉଛି");
+        set(TIME, "ସମୟ");
                 set(MATCH_COMPLETED, "ମ୍ୟାଚ୍ ସମ୍ପୂର୍ଣ୍ଣ");
         set(TRY_AGAIN, "ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ");
         set(WORDS, "ଶବ୍ଦ");
@@ -113,8 +113,7 @@ public class LangOr extends MorseLanguage {
 
         set(KOCH_METHOD, "କୋଚ୍ ପଦ୍ଧତି");
         set(TARGET, "ଲକ୍ଷ୍ୟ");
-        set(LISTEN, "ଶୁଣନ୍ତୁ");
-        set(TARGET_MET, "ଲକ୍ଷ୍ୟ ପୂରଣ ହୋଇଛି");
+set(TARGET_MET, "ଲକ୍ଷ୍ୟ ପୂରଣ ହୋଇଛି");
         set(TARGET_NOT_MET, "ଲକ୍ଷ୍ୟ ପୂରଣ ହୋଇନାହିଁ");
             set(LEVEL, "ସ୍ତର");
     
@@ -127,5 +126,7 @@ public class LangOr extends MorseLanguage {
         set(RESET, "ରିସେଟ୍ କରନ୍ତୁ");
             set(WPM, "WPM​");
         set(SPACING, "ବ୍ୟବଧାନ");
+        set(BACK, "ପଛକୁ");
+        set(NEXT_LEVEL, "ପରବର୍ତ୍ତୀ ସ୍ତର");
     }
 }

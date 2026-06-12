@@ -40,16 +40,18 @@ public class SummaryView extends LinearLayout {
     private final List<SummaryRow> params;
     private final Runnable onRetry;
     private final Runnable onQuit;
+    private final Runnable onNextLevel;
     private final Runnable onShare;
     private final boolean darkTheme;
     private final Activity activity;
     private final boolean isInfiniteMode;
     private final boolean isKochMode;
     private final int kochTarget;
+    private final int kochLevel;
 
     public SummaryView(Activity activity, String keyerType, int wpm, String timePlayed,
                        int words, int score, int record, List<SummaryRow> params,
-                       boolean isInfiniteMode, boolean isKochMode, int kochTarget, Runnable onRetry, Runnable onQuit, Runnable onShare, boolean darkTheme) {
+                       boolean isInfiniteMode, boolean isKochMode, int kochTarget, int kochLevel, Runnable onRetry, Runnable onQuit, Runnable onNextLevel, Runnable onShare, boolean darkTheme) {
         super(activity);
         this.activity = activity;
         this.keyerType = keyerType;
@@ -62,8 +64,10 @@ public class SummaryView extends LinearLayout {
         this.isInfiniteMode = isInfiniteMode;
         this.isKochMode = isKochMode;
         this.kochTarget = kochTarget;
+        this.kochLevel = kochLevel;
         this.onRetry = onRetry;
         this.onQuit = onQuit;
+        this.onNextLevel = onNextLevel;
         this.onShare = onShare;
         this.darkTheme = darkTheme;
         
@@ -89,50 +93,91 @@ public class SummaryView extends LinearLayout {
         setOrientation(LinearLayout.VERTICAL);
         setBackgroundColor(bgCol);
 
-        // TOP BAR
-        android.widget.FrameLayout topBar = new android.widget.FrameLayout(getContext());
+        // TOP BAR (Matching game_top_bar exactly)
+        LinearLayout topBar = new LinearLayout(getContext());
+        topBar.setOrientation(LinearLayout.HORIZONTAL);
         topBar.setBackgroundColor(barCol);
         topBar.setPadding(dp(3), dp(3), dp(3), dp(3));
+        topBar.setGravity(Gravity.CENTER_VERTICAL);
         
+        android.widget.ImageButton btnBack = new android.widget.ImageButton(getContext());
+        btnBack.setImageResource(R.drawable.ic_arrow_back);
+        btnBack.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+        btnBack.setColorFilter(darkTheme ? 0xFFFFFFFF : 0xFF000000);
+        
+        int pad = dp(12);
+        int w = dp(54);
+        int h = dp(54);
+        int marginEnd = dp(8);
+        
+        if (getContext() instanceof android.app.Activity) {
+            android.widget.ImageButton template = ((android.app.Activity) getContext()).findViewById(com.qft8.morsekeyer.R.id.game_btn_back);
+            if (template != null) {
+                if (template.getBackground() != null) {
+                    btnBack.setBackground(template.getBackground().getConstantState().newDrawable().mutate());
+                } else {
+                    btnBack.setBackgroundTintList(android.content.res.ColorStateList.valueOf(utlCol));
+                }
+                pad = template.getPaddingTop();
+                w = template.getLayoutParams().width;
+                h = template.getLayoutParams().height;
+                if (template.getLayoutParams() instanceof android.view.ViewGroup.MarginLayoutParams) {
+                    marginEnd = ((android.view.ViewGroup.MarginLayoutParams) template.getLayoutParams()).rightMargin;
+                }
+            } else {
+                btnBack.setBackgroundTintList(android.content.res.ColorStateList.valueOf(utlCol));
+            }
+        } else {
+            btnBack.setBackgroundTintList(android.content.res.ColorStateList.valueOf(utlCol));
+        }
+        
+        btnBack.setMinimumWidth(0);
+        btnBack.setMinimumHeight(0);
+        btnBack.setPadding(pad, pad, pad, pad);
+        
+        btnBack.setOnClickListener(v -> {
+            if (onQuit != null) onQuit.run();
+        });
+        
+        LinearLayout.LayoutParams backBtnParams = new LinearLayout.LayoutParams(w, h);
+        backBtnParams.rightMargin = marginEnd;
+        topBar.addView(btnBack, backBtnParams);
+
+        // Spacer
+        android.widget.Space space1 = new android.widget.Space(getContext());
+        topBar.addView(space1, new LinearLayout.LayoutParams(0, LayoutParams.MATCH_PARENT, 1f));
+
         TextView title = new TextView(getContext());
         title.setText(LanguageManager.get(MorseLanguage.MATCH_COMPLETED));
         title.setTextColor(textPrimary);
         title.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
         title.setTypeface(Typeface.DEFAULT_BOLD);
-        title.setGravity(Gravity.CENTER);
         title.setSingleLine(true);
         title.setEllipsize(android.text.TextUtils.TruncateAt.END);
         
-        android.widget.FrameLayout.LayoutParams titleParams = new android.widget.FrameLayout.LayoutParams(
-                LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-        titleParams.leftMargin = dp(60);
-        titleParams.rightMargin = dp(60);
-        topBar.addView(title, titleParams);
+        topBar.addView(title, new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
 
-        android.widget.ImageButton btnBack = new android.widget.ImageButton(getContext());
-        btnBack.setImageResource(R.drawable.ic_arrow_back);
-        btnBack.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
-        btnBack.setPadding(dp(12), dp(12), dp(12), dp(12));
-        btnBack.setColorFilter(darkTheme ? 0xFFFFFFFF : 0xFF000000);
-        btnBack.setBackgroundTintList(android.content.res.ColorStateList.valueOf(utlCol));
-        btnBack.setOnClickListener(v -> {
-            if (onQuit != null) onQuit.run();
-        });
-        
-        android.widget.FrameLayout.LayoutParams backBtnParams = new android.widget.FrameLayout.LayoutParams(dp(54), dp(54));
-        backBtnParams.gravity = Gravity.START | Gravity.CENTER_VERTICAL;
-        topBar.addView(btnBack, backBtnParams);
+        // Spacer
+        android.widget.Space space2 = new android.widget.Space(getContext());
+        topBar.addView(space2, new LinearLayout.LayoutParams(0, LayoutParams.MATCH_PARENT, 1f));
 
-
+        // Dummy view for symmetry (54dp width, 8dp marginStart)
+        android.view.View dummyView = new android.view.View(getContext());
+        LinearLayout.LayoutParams dummyParams = new LinearLayout.LayoutParams(dp(54), dp(54));
+        dummyParams.leftMargin = dp(8);
+        topBar.addView(dummyView, dummyParams);
 
         // Flash overlay for visual indicator
         View flashOverlay = new View(getContext());
         flashOverlay.setBackgroundColor(0xFFFFFFFF);
         flashOverlay.setVisibility(View.GONE);
         flashOverlay.setTag("summary_flash_overlay");
-        topBar.addView(flashOverlay, new android.widget.FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+        // Add to a wrapper so flash overlay works over the linear layout
+        android.widget.FrameLayout topBarWrapper = new android.widget.FrameLayout(getContext());
+        topBarWrapper.addView(topBar, new android.widget.FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT, dp(60)));
+        topBarWrapper.addView(flashOverlay, new android.widget.FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 
-        addView(topBar, new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, dp(60)));
+        addView(topBarWrapper, new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, dp(60)));
 
         // SCROLL VIEW FOR CONTENT
         ScrollView scrollView = new ScrollView(getContext());
@@ -217,9 +262,8 @@ public class SummaryView extends LinearLayout {
         statsCardParams.bottomMargin = dp(20);
         
         if (isKochMode) {
-            int kochLevel = (kochTarget - 10) + 1;
             TextView levelTxt = new TextView(getContext());
-            levelTxt.setText(LanguageManager.get(MorseLanguage.LEVEL) + kochLevel);
+            levelTxt.setText(LanguageManager.get(MorseLanguage.LEVEL) + ": " + kochLevel);
             levelTxt.setTextColor(textPrimary);
             levelTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
             levelTxt.setGravity(Gravity.CENTER);
@@ -247,7 +291,7 @@ public class SummaryView extends LinearLayout {
         // HIGH SCORE TEXT
         if (!isInfiniteMode && !isKochMode) {
             TextView highScoreTxt = new TextView(getContext());
-            highScoreTxt.setText(LanguageManager.get(MorseLanguage.YOUR_HIGH_SCORE_IS) + " " + record);
+            highScoreTxt.setText(LanguageManager.get(MorseLanguage.YOUR_HIGH_SCORE_IS) + ": " + record);
             highScoreTxt.setTextColor(textSecondary);
             highScoreTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
             highScoreTxt.setGravity(Gravity.CENTER);
@@ -263,7 +307,59 @@ public class SummaryView extends LinearLayout {
         buttonsRow.setOrientation(LinearLayout.HORIZONTAL);
         buttonsRow.setWeightSum(2f);
         
-        if (isKochMode || isInfiniteMode) {
+        if (isKochMode) {
+            // BACK BUTTON
+            TextView backBtn = new TextView(getContext());
+            backBtn.setText(LanguageManager.get(MorseLanguage.BACK));
+            backBtn.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+            backBtn.setTypeface(Typeface.DEFAULT_BOLD);
+            backBtn.setGravity(Gravity.CENTER);
+            backBtn.setPadding(dp(16), dp(18), dp(16), dp(18));
+            backBtn.setTextColor(textPrimary);
+            GradientDrawable backBg = new GradientDrawable();
+            backBg.setShape(GradientDrawable.RECTANGLE);
+            backBg.setCornerRadius(dp(16));
+            backBg.setColor(surfaceCol);
+            backBg.setStroke(dp(1), borderCol);
+            backBtn.setBackground(backBg);
+            backBtn.setOnClickListener(v -> {
+                if (onQuit != null) onQuit.run();
+            });
+
+            // ACTION BUTTON (Next Level or Try Again)
+            boolean passed = score >= kochTarget;
+            TextView actionBtn = new TextView(getContext());
+            actionBtn.setText(LanguageManager.get(passed ? MorseLanguage.NEXT_LEVEL : MorseLanguage.TRY_AGAIN));
+            actionBtn.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+            actionBtn.setTypeface(Typeface.DEFAULT_BOLD);
+            actionBtn.setTextColor(0xFFFFFFFF);
+            actionBtn.setGravity(Gravity.CENTER);
+            actionBtn.setPadding(dp(16), dp(18), dp(16), dp(18));
+
+            GradientDrawable actionBg = new GradientDrawable();
+            actionBg.setShape(GradientDrawable.RECTANGLE);
+            actionBg.setCornerRadius(dp(16));
+            actionBg.setColor(accentCol);
+            actionBtn.setBackground(actionBg);
+
+            actionBtn.setOnClickListener(v -> {
+                if (passed && onNextLevel != null) {
+                    onNextLevel.run();
+                } else if (!passed && onRetry != null) {
+                    onRetry.run();
+                }
+            });
+
+            LinearLayout.LayoutParams btnParams1 = new LinearLayout.LayoutParams(
+                    0, LayoutParams.WRAP_CONTENT, 1f);
+            btnParams1.rightMargin = dp(6);
+            LinearLayout.LayoutParams btnParams2 = new LinearLayout.LayoutParams(
+                    0, LayoutParams.WRAP_CONTENT, 1f);
+            btnParams2.leftMargin = dp(6);
+            
+            buttonsRow.addView(backBtn, btnParams1);
+            buttonsRow.addView(actionBtn, btnParams2);
+        } else if (isInfiniteMode) {
             TextView contBtn = new TextView(getContext());
             contBtn.setText(LanguageManager.get(MorseLanguage.CONTINUE));
             contBtn.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);

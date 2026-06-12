@@ -84,10 +84,10 @@ public class LangYo extends MorseLanguage {
         set(QUIT, "Kuro");
         set(QUIT_GAME_PROMPT, "Ṣé o dá ọ lójú pé o fẹ́ jáde nínú eré yìí?");
 
-        set(SCORE, "Ami: ");
+        set(SCORE, "Ami");
         set(HIGH_SCORE, "Dimegilio giga");
-        set(YOUR_HIGH_SCORE_IS, "Ami rẹ ti o ga julọ ni:");
-        set(TIME, "Aago: ");
+        set(YOUR_HIGH_SCORE_IS, "Ami rẹ ti o ga julọ ni");
+        set(TIME, "Aago");
                 set(MATCH_COMPLETED, "Ere ti pari");
         set(TRY_AGAIN, "Gbiyanju lẹẹkan si");
         set(WORDS, "Awọn ọrọ");
@@ -113,8 +113,7 @@ public class LangYo extends MorseLanguage {
 
         set(KOCH_METHOD, "Ọna Koch");
         set(TARGET, "Àfojúsùn");
-        set(LISTEN, "Tẹ́tí");
-        set(TARGET_MET, "Àfojúsùn ti tẹ́lọrùn");
+set(TARGET_MET, "Àfojúsùn ti tẹ́lọrùn");
         set(TARGET_NOT_MET, "Àfojúsùn kò tẹ́lọrùn");
             set(LEVEL, "Ipele");
     
@@ -127,5 +126,7 @@ public class LangYo extends MorseLanguage {
         set(RESET, "Tún bẹ̀rẹ̀");
             set(WPM, "WPM​");
         set(SPACING, "Aaye");
+        set(BACK, "Pada");
+        set(NEXT_LEVEL, "Ipele ti o tele");
     }
 }

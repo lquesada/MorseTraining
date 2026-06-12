@@ -84,10 +84,10 @@ public class LangApc extends MorseLanguage {
         set(QUIT, "خروج");
         set(QUIT_GAME_PROMPT, "متأكد بدك تطلع من هاللعبه؟");
 
-        set(SCORE, "النتيجة: ");
+        set(SCORE, "النتيجة");
         set(HIGH_SCORE, "درجة عالية");
-        set(YOUR_HIGH_SCORE_IS, "أعلى سكور إلك هو:");
-        set(TIME, "الوقت: ");
+        set(YOUR_HIGH_SCORE_IS, "أعلى سكور إلك هو");
+        set(TIME, "الوقت");
                 set(MATCH_COMPLETED, "خلصت اللعبة");
         set(TRY_AGAIN, "جرب كمان مرة");
         set(WORDS, "كلمات");
@@ -113,8 +113,7 @@ public class LangApc extends MorseLanguage {
 
         set(KOCH_METHOD, "طريقة كوخ");
         set(TARGET, "الهدف");
-        set(LISTEN, "استمع");
-        set(TARGET_MET, "تم تحقيق الهدف");
+set(TARGET_MET, "تم تحقيق الهدف");
         set(TARGET_NOT_MET, "لم يتم تحقيق الهدف");
             set(LEVEL, "مستوى");
     
@@ -127,5 +126,7 @@ public class LangApc extends MorseLanguage {
         set(RESET, "إعادة ضبط");
             set(WPM, "WPM");
         set(SPACING, "مسافة");
+        set(BACK, "رجوع");
+        set(NEXT_LEVEL, "المستوى التالي");
     }
 }

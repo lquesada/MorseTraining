@@ -91,10 +91,10 @@ public class LangTr extends MorseLanguage {
         set(QUIT, "Çık");
         set(QUIT_GAME_PROMPT, "Bu oyundan çıkmak istediğinize emin misiniz?");
 
-        set(SCORE, "Puan: ");
+        set(SCORE, "Puan");
         set(HIGH_SCORE, "Yüksek puan");
-        set(YOUR_HIGH_SCORE_IS, "En yüksek puanınız:");
-        set(TIME, "Zaman: ");
+        set(YOUR_HIGH_SCORE_IS, "En yüksek puanınız");
+        set(TIME, "Zaman");
                 set(MATCH_COMPLETED, "Maç tamamlandı");
         set(TRY_AGAIN, "Tekrar dene");
         set(WORDS, "Kelimeler");
@@ -120,8 +120,7 @@ public class LangTr extends MorseLanguage {
 
         set(KOCH_METHOD, "Koch yöntemi");
         set(TARGET, "Hedef");
-        set(LISTEN, "Dinle");
-        set(TARGET_MET, "Hedefe ulaşıldı");
+set(TARGET_MET, "Hedefe ulaşıldı");
         set(TARGET_NOT_MET, "Hedefe ulaşılmadı");
             set(LEVEL, "Seviye");
     
@@ -134,5 +133,7 @@ public class LangTr extends MorseLanguage {
         set(RESET, "Sıfırla");
             set(WPM, "WPM​");
         set(SPACING, "Aralık");
+        set(BACK, "Geri");
+        set(NEXT_LEVEL, "Sonraki seviye");
     }
 }

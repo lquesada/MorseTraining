@@ -91,10 +91,10 @@ public class LangEo extends MorseLanguage {
         set(QUIT, "Forlasi");
         set(QUIT_GAME_PROMPT, "Ĉu vi certas, ke vi volas forlasi ĉi tiun ludon?");
 
-        set(SCORE, "Poentaro: ");
+        set(SCORE, "Poentaro");
         set(HIGH_SCORE, "Alta poentaro");
-        set(YOUR_HIGH_SCORE_IS, "Via plej alta poentaro estas:");
-        set(TIME, "Tempo: ");
+        set(YOUR_HIGH_SCORE_IS, "Via plej alta poentaro estas");
+        set(TIME, "Tempo");
                 set(MATCH_COMPLETED, "Matĉo finita");
         set(TRY_AGAIN, "Provu denove");
         set(WORDS, "Vortoj");
@@ -120,8 +120,7 @@ public class LangEo extends MorseLanguage {
 
         set(KOCH_METHOD, "Koch-metodo");
         set(TARGET, "Celo");
-        set(LISTEN, "Aŭskulti");
-        set(TARGET_MET, "Celo atingita");
+set(TARGET_MET, "Celo atingita");
         set(TARGET_NOT_MET, "Celo ne atingita");
             set(LEVEL, "Nivelo");
     
@@ -134,5 +133,7 @@ public class LangEo extends MorseLanguage {
         set(RESET, "Restarigi");
             set(WPM, "WPM​");
         set(SPACING, "Interspaco");
+        set(BACK, "Reen");
+        set(NEXT_LEVEL, "Sekva nivelo");
     }
 }

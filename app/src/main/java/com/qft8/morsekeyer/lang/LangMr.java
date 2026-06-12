@@ -91,10 +91,10 @@ public class LangMr extends MorseLanguage {
         set(QUIT, "बाहेर पडा");
         set(QUIT_GAME_PROMPT, "तुम्हाला नक्की हा गेम सोडायचा आहे का?");
 
-        set(SCORE, "गुण: ");
+        set(SCORE, "गुण");
         set(HIGH_SCORE, "उच्च स्कोअर");
-        set(YOUR_HIGH_SCORE_IS, "तुमचा उच्चांक आहे:");
-        set(TIME, "वेळ: ");
+        set(YOUR_HIGH_SCORE_IS, "तुमचा उच्चांक आहे");
+        set(TIME, "वेळ");
                 set(MATCH_COMPLETED, "सामना पूर्ण झाला");
         set(TRY_AGAIN, "पुन्हा प्रयत्न करा");
         set(WORDS, "शब्द");
@@ -120,8 +120,7 @@ public class LangMr extends MorseLanguage {
 
         set(KOCH_METHOD, "कोच पद्धत");
         set(TARGET, "लक्ष्य");
-        set(LISTEN, "ऐका");
-        set(TARGET_MET, "लक्ष्य साध्य");
+set(TARGET_MET, "लक्ष्य साध्य");
         set(TARGET_NOT_MET, "लक्ष्य साध्य नाही");
             set(LEVEL, "पातळी");
     
@@ -134,5 +133,7 @@ public class LangMr extends MorseLanguage {
         set(RESET, "रीसेट करा");
             set(WPM, "WPM​");
         set(SPACING, "अंतर");
+        set(BACK, "मागे");
+        set(NEXT_LEVEL, "पुढची पातळी");
     }
 }

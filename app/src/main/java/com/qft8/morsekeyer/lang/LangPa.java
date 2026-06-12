@@ -84,10 +84,10 @@ public class LangPa extends MorseLanguage {
         set(QUIT, "ਬਾਹਰ ਜਾਓ");
         set(QUIT_GAME_PROMPT, "ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਤੌਰ 'ਤੇ ਇਸ ਗੇਮ ਤੋਂ ਬਾਹਰ ਜਾਣਾ ਚਾਹੁੰਦੇ ਹੋ?");
 
-        set(SCORE, "ਸਕੋਰ: ");
+        set(SCORE, "ਸਕੋਰ");
         set(HIGH_SCORE, "ਉੱਚ ਸਕੋਰ");
-        set(YOUR_HIGH_SCORE_IS, "ਤੁਹਾਡਾ ਸਭ ਤੋਂ ਵੱਧ ਸਕੋਰ ਹੈ:");
-        set(TIME, "ਸਮਾਂ: ");
+        set(YOUR_HIGH_SCORE_IS, "ਤੁਹਾਡਾ ਸਭ ਤੋਂ ਵੱਧ ਸਕੋਰ ਹੈ");
+        set(TIME, "ਸਮਾਂ");
                 set(MATCH_COMPLETED, "ਮੈਚ ਪੂਰਾ ਹੋਇਆ");
         set(TRY_AGAIN, "ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ");
         set(WORDS, "ਸ਼ਬਦ");
@@ -113,8 +113,7 @@ public class LangPa extends MorseLanguage {
 
         set(KOCH_METHOD, "ਕੋਚ ਵਿਧੀ");
         set(TARGET, "ਟੀਚਾ");
-        set(LISTEN, "ਸੁਣੋ");
-        set(TARGET_MET, "ਟੀਚਾ ਪੂਰਾ ਹੋਇਆ");
+set(TARGET_MET, "ਟੀਚਾ ਪੂਰਾ ਹੋਇਆ");
         set(TARGET_NOT_MET, "ਟੀਚਾ ਪੂਰਾ ਨਹੀਂ ਹੋਇਆ");
             set(LEVEL, "ਪੱਧਰ");
     
@@ -127,5 +126,7 @@ public class LangPa extends MorseLanguage {
         set(RESET, "ਰੀਸੈਟ ਕਰੋ");
             set(WPM, "WPM​");
         set(SPACING, "ਵਿੱਥ");
+        set(BACK, "ਪਿੱਛੇ");
+        set(NEXT_LEVEL, "ਅਗਲਾ ਪੱਧਰ");
     }
 }

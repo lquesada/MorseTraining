@@ -91,10 +91,10 @@ public class LangId extends MorseLanguage {
         set(QUIT, "Keluar");
         set(QUIT_GAME_PROMPT, "Apakah Anda yakin ingin keluar dari permainan ini?");
 
-        set(SCORE, "Skor: ");
+        set(SCORE, "Skor");
         set(HIGH_SCORE, "Skor tinggi");
-        set(YOUR_HIGH_SCORE_IS, "Skor tertinggi Anda:");
-        set(TIME, "Waktu: ");
+        set(YOUR_HIGH_SCORE_IS, "Skor tertinggi Anda");
+        set(TIME, "Waktu");
                 set(MATCH_COMPLETED, "Pertandingan selesai");
         set(TRY_AGAIN, "Coba lagi");
         set(WORDS, "Kata");
@@ -120,8 +120,7 @@ public class LangId extends MorseLanguage {
 
         set(KOCH_METHOD, "Metode Koch");
         set(TARGET, "Target");
-        set(LISTEN, "Dengarkan");
-        set(TARGET_MET, "Target tercapai");
+set(TARGET_MET, "Target tercapai");
         set(TARGET_NOT_MET, "Target tidak tercapai");
             set(LEVEL, "Tingkat");
     
@@ -134,5 +133,7 @@ public class LangId extends MorseLanguage {
         set(RESET, "Atur ulang");
             set(WPM, "WPM​");
         set(SPACING, "Spasi");
+        set(BACK, "Kembali");
+        set(NEXT_LEVEL, "Level berikutnya");
     }
 }

@@ -91,10 +91,10 @@ public class LangKo extends MorseLanguage {
         set(QUIT, "종료");
         set(QUIT_GAME_PROMPT, "이 게임을 종료하시겠습니까?");
 
-        set(SCORE, "점수: ");
+        set(SCORE, "점수");
         set(HIGH_SCORE, "높은 점수");
-        set(YOUR_HIGH_SCORE_IS, "당신의 최고 점수는:");
-        set(TIME, "시간: ");
+        set(YOUR_HIGH_SCORE_IS, "당신의 최고 점수는");
+        set(TIME, "시간");
                 set(MATCH_COMPLETED, "매치 완료");
         set(TRY_AGAIN, "다시 시도");
         set(WORDS, "단어");
@@ -120,8 +120,7 @@ public class LangKo extends MorseLanguage {
 
         set(KOCH_METHOD, "코흐 방법");
         set(TARGET, "목표");
-        set(LISTEN, "듣기");
-        set(TARGET_MET, "목표 달성");
+set(TARGET_MET, "목표 달성");
         set(TARGET_NOT_MET, "목표 미달성");
             set(LEVEL, "레벨");
     
@@ -134,5 +133,7 @@ public class LangKo extends MorseLanguage {
         set(RESET, "초기화");
             set(WPM, "WPM​");
         set(SPACING, "간격");
+        set(BACK, "뒤로");
+        set(NEXT_LEVEL, "다음 레벨");
     }
 }

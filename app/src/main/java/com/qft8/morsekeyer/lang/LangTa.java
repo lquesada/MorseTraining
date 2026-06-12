@@ -84,10 +84,10 @@ public class LangTa extends MorseLanguage {
         set(QUIT, "வெளியேறு");
         set(QUIT_GAME_PROMPT, "நிச்சயமாக இந்த விளையாட்டிலிருந்து வெளியேற விரும்புகிறீர்களா?");
 
-        set(SCORE, "மதிப்பெண்: ");
+        set(SCORE, "மதிப்பெண்");
         set(HIGH_SCORE, "அதிக மதிப்பெண்");
-        set(YOUR_HIGH_SCORE_IS, "உங்களின் அதிகபட்ச மதிப்பெண்:");
-        set(TIME, "நேரம்: ");
+        set(YOUR_HIGH_SCORE_IS, "உங்களின் அதிகபட்ச மதிப்பெண்");
+        set(TIME, "நேரம்");
                 set(MATCH_COMPLETED, "ஆட்டம் முடிந்தது");
         set(TRY_AGAIN, "மீண்டும் முயற்சி செய்");
         set(WORDS, "வார்த்தைகள்");
@@ -113,8 +113,7 @@ public class LangTa extends MorseLanguage {
 
         set(KOCH_METHOD, "கோச் முறை");
         set(TARGET, "இலக்கு");
-        set(LISTEN, "கேள்");
-        set(TARGET_MET, "இலக்கு எட்டப்பட்டது");
+set(TARGET_MET, "இலக்கு எட்டப்பட்டது");
         set(TARGET_NOT_MET, "இலக்கு எட்டப்படவில்லை");
             set(LEVEL, "நிலை");
     
@@ -127,5 +126,7 @@ public class LangTa extends MorseLanguage {
         set(RESET, "மீட்டமை");
             set(WPM, "WPM​");
         set(SPACING, "இடைவெளி");
+        set(BACK, "பின்செல்");
+        set(NEXT_LEVEL, "அடுத்த நிலை");
     }
 }

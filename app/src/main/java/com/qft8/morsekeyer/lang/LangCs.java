@@ -84,10 +84,10 @@ public class LangCs extends MorseLanguage {
         set(QUIT, "Ukončit");
         set(QUIT_GAME_PROMPT, "Opravdu chcete opustit tuto hru?");
 
-        set(SCORE, "Skóre: ");
+        set(SCORE, "Skóre");
         set(HIGH_SCORE, "Vysoké skóre");
-        set(YOUR_HIGH_SCORE_IS, "Vaše nejvyšší skóre je:");
-        set(TIME, "Čas: ");
+        set(YOUR_HIGH_SCORE_IS, "Vaše nejvyšší skóre je");
+        set(TIME, "Čas");
                 set(MATCH_COMPLETED, "Zápas dokončen");
         set(TRY_AGAIN, "Zkusit znovu");
         set(WORDS, "Slova");
@@ -113,8 +113,7 @@ public class LangCs extends MorseLanguage {
 
         set(KOCH_METHOD, "Kochova metoda");
         set(TARGET, "Cíl");
-        set(LISTEN, "Poslouchat");
-        set(TARGET_MET, "Cíl splněn");
+set(TARGET_MET, "Cíl splněn");
         set(TARGET_NOT_MET, "Cíl nesplněn");
             set(LEVEL, "Úroveň");
     
@@ -127,5 +126,7 @@ public class LangCs extends MorseLanguage {
         set(RESET, "Resetovat");
             set(WPM, "WPM​");
         set(SPACING, "Mezery");
+        set(BACK, "Zpět");
+        set(NEXT_LEVEL, "Další úroveň");
     }
 }

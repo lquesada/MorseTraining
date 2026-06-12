@@ -91,10 +91,10 @@ public class LangYue extends MorseLanguage {
         set(QUIT, "退出");
         set(QUIT_GAME_PROMPT, "你確定要退出呢個遊戲？");
 
-        set(SCORE, "分數：");
+        set(SCORE, "分數");
         set(HIGH_SCORE, "高分");
-        set(YOUR_HIGH_SCORE_IS, "你嘅最高分係：");
-        set(TIME, "時間：");
+        set(YOUR_HIGH_SCORE_IS, "你嘅最高分係");
+        set(TIME, "時間");
                 set(MATCH_COMPLETED, "比賽完成");
         set(TRY_AGAIN, "再試一次");
         set(WORDS, "单词");
@@ -120,8 +120,7 @@ public class LangYue extends MorseLanguage {
 
         set(KOCH_METHOD, "柯赫方法");
         set(TARGET, "目標");
-        set(LISTEN, "聽");
-        set(TARGET_MET, "目標達到");
+set(TARGET_MET, "目標達到");
         set(TARGET_NOT_MET, "目標未達到");
             set(LEVEL, "等級");
     
@@ -134,5 +133,7 @@ public class LangYue extends MorseLanguage {
         set(RESET, "重置");
             set(WPM, "WPM");
         set(SPACING, "間距");
+        set(BACK, "返去");
+        set(NEXT_LEVEL, "下一關");
     }
 }

@@ -28,6 +28,8 @@ public abstract class MorseLanguage {
     public static final String WPM = "WPM";
     public static final String SPACING = "SPACING";
     public static final String CLOSE = "CLOSE";
+    public static final String BACK = "BACK";
+    public static final String NEXT_LEVEL = "NEXT_LEVEL";
 
     public static final String CANCEL = "CANCEL";
     public static final String QUIT = "QUIT";
@@ -121,7 +123,7 @@ public abstract class MorseLanguage {
     public static final String LEARN = "LEARN";
     public static final String KOCH_METHOD = "KOCH_METHOD";
     public static final String TARGET = "TARGET";
-    public static final String LISTEN = "LISTEN";
+
     public static final String TARGET_MET = "TARGET_MET";
     public static final String TARGET_NOT_MET = "TARGET_NOT_MET";
     public static final String LEVEL = "LEVEL";

@@ -91,10 +91,10 @@ public class LangWuu extends MorseLanguage {
         set(QUIT, "退出");
         set(QUIT_GAME_PROMPT, "侬确定要退出搿个游戏伐？");
 
-        set(SCORE, "分数：");
+        set(SCORE, "分数");
         set(HIGH_SCORE, "高分");
-        set(YOUR_HIGH_SCORE_IS, "侬个最高分是：");
-        set(TIME, "辰光：");
+        set(YOUR_HIGH_SCORE_IS, "侬个最高分是");
+        set(TIME, "辰光");
                 set(MATCH_COMPLETED, "比赛结束");
         set(TRY_AGAIN, "再试一趟");
         set(WORDS, "单词");
@@ -120,8 +120,7 @@ public class LangWuu extends MorseLanguage {
 
         set(KOCH_METHOD, "柯赫方法");
         set(TARGET, "目标");
-        set(LISTEN, "听");
-        set(TARGET_MET, "目标达到");
+set(TARGET_MET, "目标达到");
         set(TARGET_NOT_MET, "目标呒没达到");
             set(LEVEL, "等级");
     
@@ -134,5 +133,7 @@ public class LangWuu extends MorseLanguage {
         set(RESET, "重置");
             set(WPM, "WPM");
         set(SPACING, "間距");
+        set(BACK, "转去");
+        set(NEXT_LEVEL, "下一级");
     }
 }

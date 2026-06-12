@@ -101,9 +101,9 @@ public class LangHe extends MorseLanguage {
         set(THEME, "נוֹשֵׂא");
 
         set(MATCH_RESULTS, "תוצאות התאמה");
-        set(TIME, "זְמַן: ");
+        set(TIME, "זְמַן");
         set(TRY_AGAIN, "נסה שוב");
-        set(SCORE, "צִיוּן: ");
+        set(SCORE, "צִיוּן");
         set(MATCH_COMPLETED, "התאמה הושלמה");
         set(HIGH_SCORE, "ציון גבוה");
 
@@ -119,8 +119,7 @@ public class LangHe extends MorseLanguage {
 
         set(KOCH_METHOD, "שיטת קוך");
         set(TARGET, "יעד");
-        set(LISTEN, "הקשב");
-        set(TARGET_MET, "היעד הושג");
+set(TARGET_MET, "היעד הושג");
         set(TARGET_NOT_MET, "היעד לא הושג");
             set(LEVEL, "שלב");
     
@@ -133,5 +132,7 @@ public class LangHe extends MorseLanguage {
         set(RESET, "אפס");
             set(WPM, "WPM​");
         set(SPACING, "ריווח");
+        set(BACK, "חזור");
+        set(NEXT_LEVEL, "השלב הבא");
     }
 }

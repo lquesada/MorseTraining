@@ -101,9 +101,9 @@ public class LangSk extends MorseLanguage {
         set(THEME, "Téma");
 
         set(MATCH_RESULTS, "Výsledky zápasov");
-        set(TIME, "čas: ");
+        set(TIME, "čas");
         set(TRY_AGAIN, "Skúste to znova");
-        set(SCORE, "skóre: ");
+        set(SCORE, "skóre");
         set(MATCH_COMPLETED, "Zápas dokončený");
         set(HIGH_SCORE, "Vysoké skóre");
 
@@ -119,8 +119,7 @@ public class LangSk extends MorseLanguage {
 
         set(KOCH_METHOD, "Kochova metóda");
         set(TARGET, "Cieľ");
-        set(LISTEN, "Počúvať");
-        set(TARGET_MET, "Cieľ splnený");
+set(TARGET_MET, "Cieľ splnený");
         set(TARGET_NOT_MET, "Cieľ nesplnený");
             set(LEVEL, "Úroveň");
     
@@ -133,5 +132,7 @@ public class LangSk extends MorseLanguage {
         set(RESET, "Resetovať");
             set(WPM, "WPM​");
         set(SPACING, "Medzery");
+        set(BACK, "Späť");
+        set(NEXT_LEVEL, "Ďalšia úroveň");
     }
 }

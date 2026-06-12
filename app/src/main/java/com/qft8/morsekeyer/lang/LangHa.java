@@ -91,10 +91,10 @@ public class LangHa extends MorseLanguage {
         set(QUIT, "Fita");
         set(QUIT_GAME_PROMPT, "Ka tabbata kana so ka fita daga wannan wasan?");
 
-        set(SCORE, "Maki: ");
+        set(SCORE, "Maki");
         set(HIGH_SCORE, "Babban maki");
-        set(YOUR_HIGH_SCORE_IS, "Mafi girman maki naku:");
-        set(TIME, "Lokaci: ");
+        set(YOUR_HIGH_SCORE_IS, "Mafi girman maki naku");
+        set(TIME, "Lokaci");
                 set(MATCH_COMPLETED, "An kammala wasan");
         set(TRY_AGAIN, "Sake gwadawa");
         set(WORDS, "Kalmomi");
@@ -120,8 +120,7 @@ public class LangHa extends MorseLanguage {
 
         set(KOCH_METHOD, "Hanyar Koch");
         set(TARGET, "Manufa");
-        set(LISTEN, "Saurara");
-        set(TARGET_MET, "An cimma manufa");
+set(TARGET_MET, "An cimma manufa");
         set(TARGET_NOT_MET, "Ba a cimma manufa ba");
             set(LEVEL, "Mataki");
     
@@ -134,5 +133,7 @@ public class LangHa extends MorseLanguage {
         set(RESET, "Sake saita");
             set(WPM, "WPM​");
         set(SPACING, "Tazarar");
+        set(BACK, "Baya");
+        set(NEXT_LEVEL, "Mataki na gaba");
     }
 }

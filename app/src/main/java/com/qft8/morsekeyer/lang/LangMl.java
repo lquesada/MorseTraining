@@ -84,10 +84,10 @@ public class LangMl extends MorseLanguage {
         set(QUIT, "പുറത്തുകടക്കുക");
         set(QUIT_GAME_PROMPT, "ഈ ഗെയിമിൽ നിന്ന് പുറത്തുകടക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ?");
 
-        set(SCORE, "സ്കോർ: ");
+        set(SCORE, "സ്കോർ");
         set(HIGH_SCORE, "ഉയർന്ന സ്കോർ");
-        set(YOUR_HIGH_SCORE_IS, "നിങ്ങളുടെ ഉയർന്ന സ്കോർ:");
-        set(TIME, "സമയം: ");
+        set(YOUR_HIGH_SCORE_IS, "നിങ്ങളുടെ ഉയർന്ന സ്കോർ");
+        set(TIME, "സമയം");
                 set(MATCH_COMPLETED, "മത്സരം പൂർത്തിയായി");
         set(TRY_AGAIN, "വീണ്ടും ശ്രമിക്കുക");
         set(WORDS, "വാക്കുകൾ");
@@ -113,8 +113,7 @@ public class LangMl extends MorseLanguage {
 
         set(KOCH_METHOD, "കോച്ച് രീതി");
         set(TARGET, "ലക്ഷ്യം");
-        set(LISTEN, "കേൾക്കുക");
-        set(TARGET_MET, "ലക്ഷ്യം നേടി");
+set(TARGET_MET, "ലക്ഷ്യം നേടി");
         set(TARGET_NOT_MET, "ലക്ഷ്യം നേടിയില്ല");
             set(LEVEL, "നില");
     
@@ -127,5 +126,7 @@ public class LangMl extends MorseLanguage {
         set(RESET, "പുനഃസജ്ജമാക്കുക");
             set(WPM, "WPM​");
         set(SPACING, "അകലം");
+        set(BACK, "പിന്നിലേക്ക്");
+        set(NEXT_LEVEL, "അടുത്ത ഘട്ടം");
     }
 }

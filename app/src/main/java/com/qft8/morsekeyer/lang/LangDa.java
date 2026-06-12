@@ -101,9 +101,9 @@ public class LangDa extends MorseLanguage {
         set(THEME, "Tema");
 
         set(MATCH_RESULTS, "Resultater");
-        set(TIME, "Tid: ");
+        set(TIME, "Tid");
         set(TRY_AGAIN, "Prøv igen");
-        set(SCORE, "Score: ");
+        set(SCORE, "Score");
         set(MATCH_COMPLETED, "Match fuldført");
         set(HIGH_SCORE, "Høj score");
 
@@ -119,8 +119,7 @@ public class LangDa extends MorseLanguage {
 
         set(KOCH_METHOD, "Koch-metoden");
         set(TARGET, "Mål");
-        set(LISTEN, "Lyt");
-        set(TARGET_MET, "Mål nået");
+set(TARGET_MET, "Mål nået");
         set(TARGET_NOT_MET, "Mål ikke nået");
             set(LEVEL, "Niveau");
     
@@ -133,5 +132,7 @@ public class LangDa extends MorseLanguage {
         set(RESET, "Nulstil");
             set(WPM, "WPM​");
         set(SPACING, "Mellemrum");
+        set(BACK, "Tilbage");
+        set(NEXT_LEVEL, "Næste niveau");
     }
 }

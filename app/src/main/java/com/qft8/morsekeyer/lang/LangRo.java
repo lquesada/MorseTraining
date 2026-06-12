@@ -91,10 +91,10 @@ public class LangRo extends MorseLanguage {
         set(QUIT, "Ieși");
         set(QUIT_GAME_PROMPT, "Ești sigur că vrei să părăsești acest joc?");
 
-        set(SCORE, "Scor: ");
+        set(SCORE, "Scor");
         set(HIGH_SCORE, "Scor mare");
-        set(YOUR_HIGH_SCORE_IS, "Cel mai mare scor al tău este:");
-        set(TIME, "Timp: ");
+        set(YOUR_HIGH_SCORE_IS, "Cel mai mare scor al tău este");
+        set(TIME, "Timp");
                 set(MATCH_COMPLETED, "Meci complet");
         set(TRY_AGAIN, "Încearcă din nou");
         set(WORDS, "Cuvinte");
@@ -120,8 +120,7 @@ public class LangRo extends MorseLanguage {
 
         set(KOCH_METHOD, "Metoda Koch");
         set(TARGET, "Țintă");
-        set(LISTEN, "Ascultă");
-        set(TARGET_MET, "Țintă atinsă");
+set(TARGET_MET, "Țintă atinsă");
         set(TARGET_NOT_MET, "Țintă neatinsă");
             set(LEVEL, "Nivel");
     
@@ -134,5 +133,7 @@ public class LangRo extends MorseLanguage {
         set(RESET, "Resetează");
             set(WPM, "WPM​");
         set(SPACING, "Spațiere");
+        set(BACK, "Înapoi");
+        set(NEXT_LEVEL, "Nivelul următor");
     }
 }

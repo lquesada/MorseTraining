@@ -84,10 +84,10 @@ public class LangMy extends MorseLanguage {
         set(QUIT, "ထွက်ရန်");
         set(QUIT_GAME_PROMPT, "သင် ဤဂိမ်းမှ အမှန်တကယ် ထွက်လိုပါသလား?");
 
-        set(SCORE, "ရမှတ်: ");
+        set(SCORE, "ရမှတ်");
         set(HIGH_SCORE, "မြင့်မားသောရမှတ်");
-        set(YOUR_HIGH_SCORE_IS, "သင့်၏ အမြင့်ဆုံးရမှတ်မှာ:");
-        set(TIME, "အချိန်: ");
+        set(YOUR_HIGH_SCORE_IS, "သင့်၏ အမြင့်ဆုံးရမှတ်မှာ");
+        set(TIME, "အချိန်");
                 set(MATCH_COMPLETED, "ပွဲပြီးဆုံးပါပြီ");
         set(TRY_AGAIN, "ထပ်စမ်းကြည့်ပါ");
         set(WORDS, "စကား");
@@ -113,8 +113,7 @@ public class LangMy extends MorseLanguage {
 
         set(KOCH_METHOD, "ကို့ချ်နည်းလမ်း");
         set(TARGET, "ပစ်မှတ်");
-        set(LISTEN, "နားထောင်ရန်");
-        set(TARGET_MET, "ပစ်မှတ်ပြည့်မီသည်");
+set(TARGET_MET, "ပစ်မှတ်ပြည့်မီသည်");
         set(TARGET_NOT_MET, "ပစ်မှတ်မပြည့်မီပါ");
             set(LEVEL, "အဆင့်");
     
@@ -127,5 +126,7 @@ public class LangMy extends MorseLanguage {
         set(RESET, "ပြန်လည်သတ်မှတ်ရန်");
             set(WPM, "WPM​");
         set(SPACING, "နေရာလွတ်");
+        set(BACK, "နောက်သို့");
+        set(NEXT_LEVEL, "နောက်အဆင့်");
     }
 }

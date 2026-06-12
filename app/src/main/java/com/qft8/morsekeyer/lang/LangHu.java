@@ -91,10 +91,10 @@ public class LangHu extends MorseLanguage {
         set(QUIT, "Kilépés");
         set(QUIT_GAME_PROMPT, "Biztosan ki akarsz lépni ebből a játékból?");
 
-        set(SCORE, "Pontszám: ");
+        set(SCORE, "Pontszám");
         set(HIGH_SCORE, "Magas pontszám");
-        set(YOUR_HIGH_SCORE_IS, "A legmagasabb pontszámod:");
-        set(TIME, "Idő: ");
+        set(YOUR_HIGH_SCORE_IS, "A legmagasabb pontszámod");
+        set(TIME, "Idő");
                 set(MATCH_COMPLETED, "Meccs befejezve");
         set(TRY_AGAIN, "Újra");
         set(WORDS, "Szavak");
@@ -120,8 +120,7 @@ public class LangHu extends MorseLanguage {
 
         set(KOCH_METHOD, "Koch-módszer");
         set(TARGET, "Cél");
-        set(LISTEN, "Hallgat");
-        set(TARGET_MET, "Cél elérve");
+set(TARGET_MET, "Cél elérve");
         set(TARGET_NOT_MET, "Cél nincs elérve");
             set(LEVEL, "Szint");
     
@@ -134,5 +133,7 @@ public class LangHu extends MorseLanguage {
         set(RESET, "Visszaállítás");
             set(WPM, "WPM​");
         set(SPACING, "Térköz");
+        set(BACK, "Vissza");
+        set(NEXT_LEVEL, "Következő szint");
     }
 }

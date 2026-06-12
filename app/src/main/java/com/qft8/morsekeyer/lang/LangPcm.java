@@ -91,10 +91,10 @@ public class LangPcm extends MorseLanguage {
         set(QUIT, "Comot");
         set(QUIT_GAME_PROMPT, "You sure say you want comot from dis game?");
 
-        set(SCORE, "Score: ");
+        set(SCORE, "Score");
         set(HIGH_SCORE, "High score");
-        set(YOUR_HIGH_SCORE_IS, "Your highest score na:");
-        set(TIME, "Time: ");
+        set(YOUR_HIGH_SCORE_IS, "Your highest score na");
+        set(TIME, "Time");
                 set(MATCH_COMPLETED, "Match don finish");
         set(TRY_AGAIN, "Try again");
         set(WORDS, "Words");
@@ -120,8 +120,7 @@ public class LangPcm extends MorseLanguage {
 
         set(KOCH_METHOD, "Koch method");
         set(TARGET, "Target");
-        set(LISTEN, "Hear");
-        set(TARGET_MET, "Target reach");
+set(TARGET_MET, "Target reach");
         set(TARGET_NOT_MET, "Target no reach");
             set(LEVEL, "Level");
     
@@ -134,5 +133,7 @@ public class LangPcm extends MorseLanguage {
         set(RESET, "Reset");
             set(WPM, "WPM");
         set(SPACING, "Space");
+        set(BACK, "Go back");
+        set(NEXT_LEVEL, "Next level");
     }
 }

@@ -91,10 +91,10 @@ public class LangSw extends MorseLanguage {
         set(QUIT, "Toka");
         set(QUIT_GAME_PROMPT, "Una uhakika unataka kutoka kwenye mchezo huu?");
 
-        set(SCORE, "Alama: ");
+        set(SCORE, "Alama");
         set(HIGH_SCORE, "Alama ya juu");
-        set(YOUR_HIGH_SCORE_IS, "Alama yako ya juu ni:");
-        set(TIME, "Muda: ");
+        set(YOUR_HIGH_SCORE_IS, "Alama yako ya juu ni");
+        set(TIME, "Muda");
                 set(MATCH_COMPLETED, "Mechi imekamilika");
         set(TRY_AGAIN, "Jaribu tena");
         set(WORDS, "Maneno");
@@ -120,8 +120,7 @@ public class LangSw extends MorseLanguage {
 
         set(KOCH_METHOD, "Mbinu ya Koch");
         set(TARGET, "Lengo");
-        set(LISTEN, "Sikiliza");
-        set(TARGET_MET, "Lengo limefikiwa");
+set(TARGET_MET, "Lengo limefikiwa");
         set(TARGET_NOT_MET, "Lengo halijafikiwa");
             set(LEVEL, "Kiwango");
     
@@ -134,5 +133,7 @@ public class LangSw extends MorseLanguage {
         set(RESET, "Wezesha upya");
             set(WPM, "WPM​");
         set(SPACING, "Nafasi");
+        set(BACK, "Nyuma");
+        set(NEXT_LEVEL, "Ngazi inayofuata");
     }
 }

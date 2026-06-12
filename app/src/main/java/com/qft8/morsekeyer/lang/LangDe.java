@@ -91,10 +91,10 @@ public class LangDe extends MorseLanguage {
         set(QUIT, "Beenden");
         set(QUIT_GAME_PROMPT, "Möchtest du dieses Spiel wirklich beenden?");
 
-        set(SCORE, "Punktzahl: ");
+        set(SCORE, "Punktzahl");
         set(HIGH_SCORE, "Hohe Punktzahl");
-        set(YOUR_HIGH_SCORE_IS, "Dein Highscore ist:");
-        set(TIME, "Zeit: ");
+        set(YOUR_HIGH_SCORE_IS, "Dein Highscore ist");
+        set(TIME, "Zeit");
                 set(MATCH_COMPLETED, "Spiel beendet");
         set(TRY_AGAIN, "Erneut versuchen");
         set(WORDS, "Wörter");
@@ -120,8 +120,7 @@ public class LangDe extends MorseLanguage {
 
         set(KOCH_METHOD, "Koch-Methode");
         set(TARGET, "Ziel");
-        set(LISTEN, "Zuhören");
-        set(TARGET_MET, "Ziel erreicht");
+set(TARGET_MET, "Ziel erreicht");
         set(TARGET_NOT_MET, "Ziel nicht erreicht");
             set(LEVEL, "Level");
     
@@ -134,5 +133,7 @@ public class LangDe extends MorseLanguage {
         set(RESET, "Zurücksetzen");
             set(WPM, "WPM​");
         set(SPACING, "Abstand");
+        set(BACK, "Zurück");
+        set(NEXT_LEVEL, "Nächste Stufe");
     }
 }

@@ -47,25 +47,61 @@ public class MorseSettings {
 
     public Map<String, String> decoderChoices = new HashMap<>();
 
+    private String getStringSafe(SharedPreferences prefs, String key, String defValue) {
+        try {
+            return prefs.getString(key, defValue);
+        } catch (ClassCastException e) {
+            prefs.edit().remove(key).apply();
+            return defValue;
+        }
+    }
+
+    private int getIntSafe(SharedPreferences prefs, String key, int defValue) {
+        try {
+            return prefs.getInt(key, defValue);
+        } catch (ClassCastException e) {
+            prefs.edit().remove(key).apply();
+            return defValue;
+        }
+    }
+
+    private boolean getBooleanSafe(SharedPreferences prefs, String key, boolean defValue) {
+        try {
+            return prefs.getBoolean(key, defValue);
+        } catch (ClassCastException e) {
+            prefs.edit().remove(key).apply();
+            return defValue;
+        }
+    }
+
+    private float getFloatSafe(SharedPreferences prefs, String key, float defValue) {
+        try {
+            return prefs.getFloat(key, defValue);
+        } catch (ClassCastException e) {
+            prefs.edit().remove(key).apply();
+            return defValue;
+        }
+    }
+
     public void load(Context ctx) {
         SharedPreferences prefs = ctx.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
-        mode = prefs.getString("mode", "iambic-a");
-        toneType = prefs.getString("toneType", "triangle");
-        wpm = prefs.getInt("wpm", 15);
-        vol = prefs.getInt("vol", 40);
-        tone = prefs.getInt("tone", 600);
-        polarity = prefs.getString("polarity", "normal");
-        strict = prefs.getBoolean("strict", true);
-        visual = prefs.getBoolean("visual", false);
-        showTable = prefs.getBoolean("showTable", true);
-        showTableCodes = prefs.getBoolean("showTableCodes", true);
-        showPaddles = prefs.getBoolean("showPaddles", true);
-        interletterSpacing = prefs.getInt("interletterSpacing", 100);
-        interwordSpacing = prefs.getInt("interwordSpacing", 75);
-        showNextWordIndicator = prefs.getBoolean("showNextWordIndicator", true);
-        letterColor = prefs.getString("letterColor", "green");
-        fontSize = prefs.getInt("fontSize", 35);
-        appTheme = prefs.getString("appTheme", "dark");
+        mode = getStringSafe(prefs, "mode", "iambic-a");
+        toneType = getStringSafe(prefs, "toneType", "triangle");
+        wpm = getIntSafe(prefs, "wpm", 15);
+        vol = getIntSafe(prefs, "vol", 40);
+        tone = getIntSafe(prefs, "tone", 600);
+        polarity = getStringSafe(prefs, "polarity", "normal");
+        strict = getBooleanSafe(prefs, "strict", true);
+        visual = getBooleanSafe(prefs, "visual", false);
+        showTable = getBooleanSafe(prefs, "showTable", true);
+        showTableCodes = getBooleanSafe(prefs, "showTableCodes", true);
+        showPaddles = getBooleanSafe(prefs, "showPaddles", true);
+        interletterSpacing = getIntSafe(prefs, "interletterSpacing", 100);
+        interwordSpacing = getIntSafe(prefs, "interwordSpacing", 75);
+        showNextWordIndicator = getBooleanSafe(prefs, "showNextWordIndicator", true);
+        letterColor = getStringSafe(prefs, "letterColor", "green");
+        fontSize = getIntSafe(prefs, "fontSize", 35);
+        appTheme = getStringSafe(prefs, "appTheme", "dark");
         
         boolean needsSave = false;
         if ("system".equals(appTheme) || "white".equals(appTheme)) {
@@ -73,26 +109,26 @@ public class MorseSettings {
             needsSave = true;
         }
         
-        bufferMs = prefs.getFloat("bufferMs", 25.0f);
-        envelopeMs = prefs.getFloat("envelopeMs", 0.75f);
-        chunkMs = prefs.getFloat("chunkMs", 4.0f);
-        tableFontSizeDelta = prefs.getInt("tableFontSizeDelta", 0);
-        tableRatio = prefs.getInt("tableRatio", 50);
-        keepAlive = prefs.getBoolean("keepAlive", true);
-        keepScreenOn = prefs.getBoolean("keepScreenOn", false);
-        language = prefs.getString("language", "system");
+        bufferMs = getFloatSafe(prefs, "bufferMs", 25.0f);
+        envelopeMs = getFloatSafe(prefs, "envelopeMs", 0.75f);
+        chunkMs = getFloatSafe(prefs, "chunkMs", 4.0f);
+        tableFontSizeDelta = getIntSafe(prefs, "tableFontSizeDelta", 0);
+        tableRatio = getIntSafe(prefs, "tableRatio", 50);
+        keepAlive = getBooleanSafe(prefs, "keepAlive", true);
+        keepScreenOn = getBooleanSafe(prefs, "keepScreenOn", false);
+        language = getStringSafe(prefs, "language", "system");
         
         boolean kbNeedsSave = false;
         if (!prefs.contains("keyboardType")) {
             keyboardType = guessKeyboardType(language);
             needsSave = true;
         } else {
-            keyboardType = prefs.getString("keyboardType", "QWERTY");
+            keyboardType = getStringSafe(prefs, "keyboardType", "QWERTY");
         }
         
-        pickLangThemeOnShare = prefs.getBoolean("pickLangThemeOnShare", false);
+        pickLangThemeOnShare = getBooleanSafe(prefs, "pickLangThemeOnShare", false);
 
-        String choicesStr = prefs.getString("decoderChoices", "{}");
+        String choicesStr = getStringSafe(prefs, "decoderChoices", "{}");
         decoderChoices.clear();
         try {
             JSONObject obj = new JSONObject(choicesStr);

@@ -93,37 +93,46 @@ public class ToneEngine {
         if (this.sampleRate == 0)
             this.sampleRate = 44100;
 
-        int bufferSize = AudioTrack.getMinBufferSize(
-                sampleRate,
-                AudioFormat.CHANNEL_OUT_MONO,
-                AudioFormat.ENCODING_PCM_FLOAT);
+        try {
+            int bufferSize = AudioTrack.getMinBufferSize(
+                    sampleRate,
+                    AudioFormat.CHANNEL_OUT_MONO,
+                    AudioFormat.ENCODING_PCM_FLOAT);
 
-        audioTrack = new AudioTrack.Builder()
-                .setAudioAttributes(attrs)
-                .setAudioFormat(new AudioFormat.Builder()
-                        .setEncoding(AudioFormat.ENCODING_PCM_FLOAT)
-                        .setSampleRate(sampleRate)
-                        .setChannelMask(AudioFormat.CHANNEL_OUT_MONO)
-                        .build())
-                .setBufferSizeInBytes(bufferSize)
-                .setTransferMode(AudioTrack.MODE_STREAM)
-                .setPerformanceMode(AudioTrack.PERFORMANCE_MODE_LOW_LATENCY)
-                .build();
+            if (bufferSize <= 0) {
+                return; // Device does not support this format
+            }
 
-        // Ensure we use the smallest possible active buffer within the track
-        applyBufferSettings();
+            audioTrack = new AudioTrack.Builder()
+                    .setAudioAttributes(attrs)
+                    .setAudioFormat(new AudioFormat.Builder()
+                            .setEncoding(AudioFormat.ENCODING_PCM_FLOAT)
+                            .setSampleRate(sampleRate)
+                            .setChannelMask(AudioFormat.CHANNEL_OUT_MONO)
+                            .build())
+                    .setBufferSizeInBytes(bufferSize)
+                    .setTransferMode(AudioTrack.MODE_STREAM)
+                    .setPerformanceMode(AudioTrack.PERFORMANCE_MODE_LOW_LATENCY)
+                    .build();
 
-        // Ensure full stream volume
-        audioTrack.setVolume(1.0f);
+            // Ensure we use the smallest possible active buffer within the track
+            applyBufferSettings();
 
-        callbackHandler = new Handler(Looper.getMainLooper());
+            // Ensure full stream volume
+            audioTrack.setVolume(1.0f);
 
-        running = true;
-        audioTrack.play();
+            callbackHandler = new Handler(Looper.getMainLooper());
 
-        audioThread = new Thread(this::audioLoop, "ToneEngine");
-        audioThread.setPriority(Thread.MAX_PRIORITY);
-        audioThread.start();
+            running = true;
+            audioTrack.play();
+
+            audioThread = new Thread(this::audioLoop, "ToneEngine");
+            audioThread.setPriority(Thread.MAX_PRIORITY);
+            audioThread.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+            running = false;
+        }
     }
 
     /**

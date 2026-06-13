@@ -77,6 +77,7 @@ public class LanguageManager {
     }
 
     public static void init(String setting) {
+        if (setting == null) setting = "system";
         if ("system".equals(setting)) {
             String sys = Locale.getDefault().getLanguage();
             if (LANGUAGES.containsKey(sys)) {

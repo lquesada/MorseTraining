@@ -344,6 +344,7 @@ public class MainActivity extends Activity {
         // Apply same to game paddles
         if (gameController != null) {
             float density = getResources().getDisplayMetrics().scaledDensity;
+            if (density <= 0) density = 1.0f;
             gameController.updatePaddleText(
                 paddleLeft.getText().toString(),
                 paddleLeft.getTextSize() / density,
@@ -2123,7 +2124,9 @@ public class MainActivity extends Activity {
             int availableWidth = screenWidth;
 
             // Subtract padding (approx 12dp on each side) and calculate items per row
-            int itemsPerRow = Math.max(1, (availableWidth - dp(24)) / dp(cellSizeDp + 4));
+            int itemWidth = dp(cellSizeDp + 4);
+            if (itemWidth <= 0) itemWidth = 1;
+            int itemsPerRow = Math.max(1, (availableWidth - dp(24)) / itemWidth);
 
             for (int i = 0; i < section.items.size(); i++) {
                 if (i % itemsPerRow == 0) {

@@ -319,7 +319,7 @@ This application has been extensively developed leveraging Large Language Models
 
 ## License
 
-qFT8 is **Source-Available** software. Its license is intentionally more restrictive than standard Open Source Initiative (OSI) licenses to protect the amateur radio community. It explicitly prohibits commercial exploitation by individuals or companies, ensuring the software remains a free resource for radio amateurs.
+Morse Training is **Source-Available** software. Its license is intentionally more restrictive than standard Open Source Initiative (OSI) licenses to protect the amateur radio community. It explicitly prohibits commercial exploitation by individuals or companies, ensuring the software remains a free resource for radio amateurs.
 
 By using this software, you agree to the conditions in the [LICENSE](LICENSE) file, including the non-commercial limitations and liability disclaimers.
 

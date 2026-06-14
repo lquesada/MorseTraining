@@ -317,7 +317,7 @@ public class MorseKeyer {
                 state.isTransmitting = true;
                 toneEngine.setToneActive(true);
                 notifyVisual(true);
-                state.lastElementTime = System.currentTimeMillis();
+                state.lastElementTime = android.os.SystemClock.elapsedRealtime();
             }
         } else {
             if (state.isTransmitting) {
@@ -325,7 +325,7 @@ public class MorseKeyer {
                 toneEngine.setToneActive(false);
                 notifyVisual(false);
 
-                long now = System.currentTimeMillis();
+                long now = android.os.SystemClock.elapsedRealtime();
                 final double[] timings = getRecognitionTimings();
 
                 long duration = now - (long) state.lastElementTime;
@@ -432,7 +432,7 @@ public class MorseKeyer {
     private void onElementToneEnd() {
         notifyVisual(false);
         state.currentCode += state.lastElement;
-        state.lastElementTime = System.currentTimeMillis();
+        state.lastElementTime = android.os.SystemClock.elapsedRealtime();
 
         // Start recognition timer from tone end
         setupLetterWordTimeouts();
@@ -535,7 +535,7 @@ public class MorseKeyer {
     private void onUltimaticElementToneEnd() {
         notifyVisual(false);
         state.currentCode += state.lastElement;
-        state.lastElementTime = System.currentTimeMillis();
+        state.lastElementTime = android.os.SystemClock.elapsedRealtime();
         setupLetterWordTimeouts();
         updateQueuedUltimaticElement();
     }
@@ -605,7 +605,7 @@ public class MorseKeyer {
     private void onBugDitToneEnd() {
         notifyVisual(false);
         state.currentCode += ".";
-        state.lastElementTime = System.currentTimeMillis();
+        state.lastElementTime = android.os.SystemClock.elapsedRealtime();
         setupLetterWordTimeouts();
 
         // If key side is now held, transition to continuous tone
@@ -671,7 +671,7 @@ public class MorseKeyer {
         state.bugKeyActive = true;
         toneEngine.setToneActive(true);
         notifyVisual(true);
-        state.lastElementTime = System.currentTimeMillis();
+        state.lastElementTime = android.os.SystemClock.elapsedRealtime();
     }
 
     /**
@@ -685,7 +685,7 @@ public class MorseKeyer {
         notifyVisual(false);
 
         // Character recognition: classify duration as dit or dah
-        long now = System.currentTimeMillis();
+        long now = android.os.SystemClock.elapsedRealtime();
         final double[] timings = getRecognitionTimings();
         long duration = now - (long) state.lastElementTime;
         String element = duration < (timings[0] + timings[1]) / 2 ? "." : "-";
@@ -747,7 +747,7 @@ public class MorseKeyer {
                 state.isTransmitting = true;
                 toneEngine.setToneActive(true);
                 notifyVisual(true);
-                state.lastElementTime = System.currentTimeMillis();
+                state.lastElementTime = android.os.SystemClock.elapsedRealtime();
             }
         } else {
             if (state.isTransmitting) {
@@ -755,7 +755,7 @@ public class MorseKeyer {
                 toneEngine.setToneActive(false);
                 notifyVisual(false);
 
-                long now = System.currentTimeMillis();
+                long now = android.os.SystemClock.elapsedRealtime();
                 final double[] timings = getRecognitionTimings();
 
                 long duration = now - (long) state.lastElementTime;

@@ -94,6 +94,9 @@ public class GameController {
     private Runnable rxGreenDelayRunnable = null;
     private Runnable delRepeatRunnable = null;
     private int gameTimeElapsed = 0;
+    private long gameStartTimeRealtime = 0;
+    private long accumulatedRealtime = 0;
+    private int lastElapsedSecond = -1;
     private int gameScore = 0;
     private int gameWordsSolved = 0;
     private int gameRecord = 0;
@@ -228,12 +231,18 @@ public class GameController {
             public void run() {
                 if (!gameActive || isPaused)
                     return;
-                ticks++;
+                
                 if (!gameStarted) {
+                    ticks++;
                     updateGameStats(ticks % 2 == 0);
+                    gameHandler.postDelayed(this, 500);
                 } else {
-                    if (ticks % 2 == 0) {
-                        gameTimeElapsed++;
+                    long now = android.os.SystemClock.elapsedRealtime();
+                    int currentElapsed = (int) ((accumulatedRealtime + (now - gameStartTimeRealtime)) / 1000);
+                    
+                    if (currentElapsed != lastElapsedSecond) {
+                        lastElapsedSecond = currentElapsed;
+                        gameTimeElapsed = currentElapsed;
                         updateGameStats();
                         if (gameTimeLimit > 0 && gameTimeElapsed >= gameTimeLimit) {
                             if (isRxMode) {
@@ -251,8 +260,8 @@ public class GameController {
                             return;
                         }
                     }
+                    gameHandler.postDelayed(this, 250);
                 }
-                gameHandler.postDelayed(this, 500);
             }
         };
 
@@ -860,6 +869,8 @@ public class GameController {
                         rxPlayRunnable = () -> {
                             if (gameActive && isRxMode && morseKeyer != null) {
                                 gameStarted = true;
+                                gameStartTimeRealtime = android.os.SystemClock.elapsedRealtime();
+                                lastElapsedSecond = -1;
                                 morseKeyer.playText(currentRxWord, () -> {
                                     gameHandler.post(() -> setRxActionBtnEnabled(true));
                                 });
@@ -1458,6 +1469,8 @@ public class GameController {
     public void updatePaddleVisual(String side, boolean pressed, int actCol, int bgCol) {
         if (pressed && gameActive && !gameStarted) {
             gameStarted = true;
+            gameStartTimeRealtime = android.os.SystemClock.elapsedRealtime();
+            lastElapsedSecond = -1;
             gameTextInput.setGravity(android.view.Gravity.END | android.view.Gravity.CENTER_VERTICAL);
                 gameTextInput.setText("");
             updateGameStats();
@@ -1633,6 +1646,8 @@ public class GameController {
         WordGenerator.reset();
         gameActive = true;
         gameTimeElapsed = 0;
+        accumulatedRealtime = 0;
+        lastElapsedSecond = -1;
         gameScore = 0;
         gameWordsSolved = 0;
         currentCustomInput = "";
@@ -1665,6 +1680,8 @@ public class GameController {
                 gameRxBtnAction.setText(LanguageManager.get(MorseLanguage.REPEAT));
                 setupRxKeyboardVisibility();
                 gameStarted = true;
+                gameStartTimeRealtime = android.os.SystemClock.elapsedRealtime();
+                lastElapsedSecond = -1;
                 
                 rxPlayRunnable = () -> {
                     if (gameActive && isRxMode && morseKeyer != null) {
@@ -1950,6 +1967,9 @@ public class GameController {
     public void onPause() {
         if (gameActive) {
             isPaused = true;
+            if (gameStarted) {
+                accumulatedRealtime += (android.os.SystemClock.elapsedRealtime() - gameStartTimeRealtime);
+            }
             gameHandler.removeCallbacks(gameRunnable);
             if (isRxMode) {
                 if (rxPlayRunnable != null) {
@@ -1963,6 +1983,9 @@ public class GameController {
     public void onResume() {
         if (gameActive) {
             isPaused = false;
+            if (gameStarted) {
+                gameStartTimeRealtime = android.os.SystemClock.elapsedRealtime();
+            }
             gameHandler.removeCallbacks(gameRunnable);
             gameHandler.postDelayed(gameRunnable, 500);
             if (isRxMode) {

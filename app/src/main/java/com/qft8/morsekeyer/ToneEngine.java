@@ -374,7 +374,12 @@ public class ToneEngine {
             }
 
             if (audioTrack != null && running) {
-                audioTrack.write(buffer, 0, currentChunkSize, AudioTrack.WRITE_BLOCKING);
+                int written = audioTrack.write(buffer, 0, currentChunkSize, AudioTrack.WRITE_BLOCKING);
+                if (written < 0) {
+                    try {
+                        Thread.sleep(50);
+                    } catch (InterruptedException e) {}
+                }
             }
         }
     }

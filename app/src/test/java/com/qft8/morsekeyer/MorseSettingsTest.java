@@ -118,4 +118,47 @@ public class MorseSettingsTest {
         assertEquals(40, settings.fontSize);
         assertEquals("white", settings.appTheme);
     }
+
+    @Test
+    public void testDefaultFontSize() {
+        MorseSettings settings = new MorseSettings();
+        assertEquals(35, settings.fontSize);
+    }
+
+    @Test
+    public void testFontSizeRecoveryOnLoad() {
+        android.content.Context mockContext = org.mockito.Mockito.mock(android.content.Context.class);
+        android.content.SharedPreferences mockPrefs = org.mockito.Mockito.mock(android.content.SharedPreferences.class);
+        android.content.SharedPreferences.Editor mockEditor = org.mockito.Mockito.mock(android.content.SharedPreferences.Editor.class);
+
+        org.mockito.Mockito.when(mockContext.getSharedPreferences(org.mockito.Mockito.anyString(), org.mockito.Mockito.anyInt()))
+                .thenReturn(mockPrefs);
+
+        // Stub SharedPreferences to return the default value (second arg) by default
+        org.mockito.Mockito.when(mockPrefs.getString(org.mockito.Mockito.any(), org.mockito.Mockito.any()))
+                .thenAnswer(invocation -> invocation.getArgument(1));
+        org.mockito.Mockito.when(mockPrefs.getInt(org.mockito.Mockito.any(), org.mockito.Mockito.anyInt()))
+                .thenAnswer(invocation -> invocation.getArgument(1));
+        org.mockito.Mockito.when(mockPrefs.getBoolean(org.mockito.Mockito.any(), org.mockito.Mockito.anyBoolean()))
+                .thenAnswer(invocation -> invocation.getArgument(1));
+        org.mockito.Mockito.when(mockPrefs.getFloat(org.mockito.Mockito.any(), org.mockito.Mockito.anyFloat()))
+                .thenAnswer(invocation -> invocation.getArgument(1));
+
+        // Specifically return 10 for fontSize
+        org.mockito.Mockito.when(mockPrefs.getInt(org.mockito.Mockito.eq("fontSize"), org.mockito.Mockito.anyInt()))
+                .thenReturn(10);
+
+        // Stub Editor to return itself for chaining
+        org.mockito.Mockito.when(mockPrefs.edit()).thenReturn(mockEditor);
+        org.mockito.Mockito.when(mockEditor.putString(org.mockito.Mockito.any(), org.mockito.Mockito.any())).thenReturn(mockEditor);
+        org.mockito.Mockito.when(mockEditor.putInt(org.mockito.Mockito.any(), org.mockito.Mockito.anyInt())).thenReturn(mockEditor);
+        org.mockito.Mockito.when(mockEditor.putBoolean(org.mockito.Mockito.any(), org.mockito.Mockito.anyBoolean())).thenReturn(mockEditor);
+        org.mockito.Mockito.when(mockEditor.putFloat(org.mockito.Mockito.any(), org.mockito.Mockito.anyFloat())).thenReturn(mockEditor);
+
+        MorseSettings settings = new MorseSettings();
+        settings.load(mockContext);
+
+        assertEquals(13, settings.fontSize); // Should recover to 13
+        org.mockito.Mockito.verify(mockEditor).putInt("fontSize", 13); // Should save the corrected value
+    }
 }

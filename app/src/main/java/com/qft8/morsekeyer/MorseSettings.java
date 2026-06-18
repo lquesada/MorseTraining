@@ -85,6 +85,7 @@ public class MorseSettings {
 
     public void load(Context ctx) {
         SharedPreferences prefs = ctx.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        boolean needsSave = false;
         mode = getStringSafe(prefs, "mode", "iambic-a");
         toneType = getStringSafe(prefs, "toneType", "triangle");
         wpm = getIntSafe(prefs, "wpm", 15);
@@ -101,9 +102,12 @@ public class MorseSettings {
         showNextWordIndicator = getBooleanSafe(prefs, "showNextWordIndicator", true);
         letterColor = getStringSafe(prefs, "letterColor", "green");
         fontSize = getIntSafe(prefs, "fontSize", 35);
+        if (fontSize < 13) {
+            fontSize = 13;
+            needsSave = true;
+        }
         appTheme = getStringSafe(prefs, "appTheme", "dark");
         
-        boolean needsSave = false;
         if ("system".equals(appTheme) || "white".equals(appTheme)) {
             appTheme = "dark";
             needsSave = true;

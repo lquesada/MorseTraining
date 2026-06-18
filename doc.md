@@ -16,7 +16,7 @@ Current defaults:
 - **Tone Type**: Triangle
 - **App Theme**: System setting
 - **Text color**: Green
-- **Text font size**: 28 (Slider: 10 - 60)
+- **Text font size**: 28 (Slider: 13 - 60)
 - **Table font size**: Default 0 delta (Slider: -5 - +5)
 - **Ratio of table to text screen**: 50% (Slider: 20% - 80%)
 - **Interletter spacing**: 100% (Slider: 10% - 200%)

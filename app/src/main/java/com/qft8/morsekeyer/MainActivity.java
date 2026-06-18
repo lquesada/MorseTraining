@@ -1190,7 +1190,7 @@ public class MainActivity extends Activity {
         LinearLayout fsRow = hRow();
         fsRow.setPadding(dp(16), 0, 0, 0);
         dlgSeekFontSize = new SeekBar(this);
-        dlgSeekFontSize.setMax(50); // 10 to 60
+        dlgSeekFontSize.setMax(47); // 13 to 60
         dlgSeekFontSize.setLayoutParams(new LinearLayout.LayoutParams(0, -2, 1));
         dlgTxtFontSize = new TextView(this);
         dlgTxtFontSize.setTextColor(C_TEXT);
@@ -1202,7 +1202,7 @@ public class MainActivity extends Activity {
         dlgSeekFontSize.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if (!fromUser) return;
-                settings.fontSize = 10 + progress;
+                settings.fontSize = 13 + progress;
                 dlgTxtFontSize.setText(settings.fontSize + " sp");
             }
             @Override public void onStartTrackingTouch(SeekBar seekBar) {}
@@ -1347,7 +1347,7 @@ public class MainActivity extends Activity {
             settings.chunkMs = v;
             toneEngine.setChunkMs(v);
         });
-        setupClickableLabel(dlgTxtFontSize, 10, 60, false, v -> {
+        setupClickableLabel(dlgTxtFontSize, 13, 60, false, v -> {
             settings.fontSize = (int)v;
             applyUiSettings();
         });
@@ -1662,7 +1662,7 @@ public class MainActivity extends Activity {
             }
         }
 
-        dlgSeekFontSize.setProgress(settings.fontSize - 10);
+        dlgSeekFontSize.setProgress(settings.fontSize - 13);
         dlgTxtFontSize.setText(settings.fontSize + " sp");
 
         dlgSeekTableFontSize.setProgress(settings.tableFontSizeDelta + 5);

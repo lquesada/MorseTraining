@@ -39,6 +39,7 @@ public class LangGl extends MorseLanguage {
         set(TABLE_RATIO, "Proporción táboa/pantalla");
         
         set(KEEP_ALIVE, "Manter audio activo (reduce a latencia)");
+        set(WHITE_NOISE, "Máis forte (reproducir ruído branco)");
         set(AUDIO_BUFFER, "Búfer de audio (hardware)");
         set(PROCESSING_CHUNK, "Fragmento de procesamento");
         set(PERFORMANCE_HINT, "Se o son se corta, aumenta o búfer. Se a latencia é alta, redúceo.");

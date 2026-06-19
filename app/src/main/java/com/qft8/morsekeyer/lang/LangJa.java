@@ -39,6 +39,7 @@ public class LangJa extends MorseLanguage {
         set(TABLE_RATIO, "表の表示比率");
         
         set(KEEP_ALIVE, "オーディオを維持（遅延を低減）");
+        set(WHITE_NOISE, "より強く（ホワイトノイズを再生）");
         set(AUDIO_BUFFER, "オーディオバッファ（ハードウェア）");
         set(PROCESSING_CHUNK, "処理チャンク");
         set(PERFORMANCE_HINT, "音が途切れる場合はバッファを増やしてください。遅延が大きい場合は減らしてください。");

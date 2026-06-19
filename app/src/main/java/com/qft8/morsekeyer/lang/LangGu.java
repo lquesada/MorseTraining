@@ -39,6 +39,7 @@ public class LangGu extends MorseLanguage {
         set(TABLE_RATIO, "ટેબલ/સ્ક્રીન રેશિયો");
         
         set(KEEP_ALIVE, "ઓડિયો સક્રિય રાખો");
+        set(WHITE_NOISE, "વધુ મજબૂત (સફેદ અવાજ વગાડો)");
         set(AUDIO_BUFFER, "ઓડિયો બફર");
         set(PROCESSING_CHUNK, "પ્રોસેસિંગ ચંક");
         set(PERFORMANCE_HINT, "જો અવાજ કપાય, તો બફર વધારો. જો વિલંબ વધારે હોય, તો ઘટાડો.");

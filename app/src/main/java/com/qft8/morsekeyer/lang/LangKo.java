@@ -39,6 +39,7 @@ public class LangKo extends MorseLanguage {
         set(TABLE_RATIO, "표/화면 비율");
         
         set(KEEP_ALIVE, "오디오 활성 유지 (지연 시간 감소)");
+        set(WHITE_NOISE, "더 강하게 (백색 소음 재생)");
         set(AUDIO_BUFFER, "오디오 버퍼 (하드웨어)");
         set(PROCESSING_CHUNK, "처리 청크");
         set(PERFORMANCE_HINT, "소리가 끊기면 버퍼를 늘리세요. 지연이 심하면 줄이세요.");

@@ -39,6 +39,7 @@ public class LangTl extends MorseLanguage {
         set(TABLE_RATIO, "Ratio ng talahanayan/screen");
         
         set(KEEP_ALIVE, "Panatilihing aktibo ang audio (binabawasan ang latency)");
+        set(WHITE_NOISE, "Mas malakas (mag-play ng white noise)");
         set(AUDIO_BUFFER, "Audio buffer (hardware)");
         set(PROCESSING_CHUNK, "Bahagi ng pagproseso");
         set(PERFORMANCE_HINT, "Kung napuputol ang tunog, dagdagan ang buffer. Kung mataas ang latency, bawasan ito.");

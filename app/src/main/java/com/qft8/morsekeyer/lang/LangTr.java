@@ -39,6 +39,7 @@ public class LangTr extends MorseLanguage {
         set(TABLE_RATIO, "Tablo/ekran oranı");
         
         set(KEEP_ALIVE, "Sesi aktif tut (gecikmeyi azaltır)");
+        set(WHITE_NOISE, "Daha güçlü (beyaz gürültü çal)");
         set(AUDIO_BUFFER, "Ses arabelleği (donanım)");
         set(PROCESSING_CHUNK, "İşleme bloğu");
         set(PERFORMANCE_HINT, "Ses kesilirse arabelleği veya bloğu artırın. Gecikme yüksekse azaltın.");

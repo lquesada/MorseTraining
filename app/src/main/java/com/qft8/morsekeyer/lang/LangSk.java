@@ -50,6 +50,7 @@ public class LangSk extends MorseLanguage {
         set(COLOR_PINK, "Ružová");
         
         set(KEEP_ALIVE, "Udržiavať zvuk aktívny (znižuje oneskorenie)");
+        set(WHITE_NOISE, "Silnejší (prehrať biely šum)");
         set(AUDIO_BUFFER, "Zvuková vyrovnávacia pamäť (hardvér)");
         set(PROCESSING_CHUNK, "Dávka spracovania");
         set(PERFORMANCE_HINT, "Ak zvuk vypadáva, zväčšite vyrovnávaciu pamäť alebo dávku. Ak je oneskorenie vysoké, zmenšite ich.");

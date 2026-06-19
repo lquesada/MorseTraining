@@ -39,6 +39,7 @@ public class LangUz extends MorseLanguage {
         set(TABLE_RATIO, "Jadval/ekran nisbati");
         
         set(KEEP_ALIVE, "Audioni faol saqlash (kechikishni kamaytiradi)");
+        set(WHITE_NOISE, "Kuchliroq (oq shovqin ijro eting)");
         set(AUDIO_BUFFER, "Audio bufer (apparat)");
         set(PROCESSING_CHUNK, "Qayta ishlash bo'lagi");
         set(PERFORMANCE_HINT, "Agar ovoz uzilsa, buferni oshiring. Kechikish yuqori bo'lsa, kamaytiring.");

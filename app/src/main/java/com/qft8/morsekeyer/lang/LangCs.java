@@ -39,6 +39,7 @@ public class LangCs extends MorseLanguage {
         set(TABLE_RATIO, "Poměr tabulka/obrazovka");
         
         set(KEEP_ALIVE, "Udržovat audio aktivní (snižuje latenci)");
+        set(WHITE_NOISE, "Silnější (přehrát bílý šum)");
         set(AUDIO_BUFFER, "Vyrovnávací paměť zvuku (hardware)");
         set(PROCESSING_CHUNK, "Zpracovávaný blok");
         set(PERFORMANCE_HINT, "Pokud zvuk koktá, zvyšte buffer. Pokud je latence vysoká, snižte jej.");

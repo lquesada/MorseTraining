@@ -39,6 +39,7 @@ public class LangPa extends MorseLanguage {
         set(TABLE_RATIO, "ਟੇਬਲ/ਸਕ੍ਰੀਨ ਅਨੁਪਾਤ");
         
         set(KEEP_ALIVE, "ਆਡੀਓ ਚਾਲੂ ਰੱਖੋ");
+        set(WHITE_NOISE, "ਹੋਰ ਮਜ਼ਬੂਤ (ਚਿੱਟੀ ਆਵਾਜ਼ ਚਲਾਓ)");
         set(AUDIO_BUFFER, "ਆਡੀਓ ਬਫਰ");
         set(PROCESSING_CHUNK, "ਪ੍ਰੋਸੈਸਿੰਗ ਚੰਕ");
         set(PERFORMANCE_HINT, "ਜੇ ਆਵਾਜ਼ ਕੱਟਦੀ ਹੈ ਤਾਂ ਬਫਰ ਵਧਾਓ। ਜੇ ਦੇਰੀ ਹੈ ਤਾਂ ਘਟਾਓ।");

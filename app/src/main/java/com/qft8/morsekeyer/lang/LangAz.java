@@ -39,6 +39,7 @@ public class LangAz extends MorseLanguage {
         set(TABLE_RATIO, "Cədvəl/ekran nisbəti");
         
         set(KEEP_ALIVE, "Audionu aktiv saxla (gecikməni azaldır)");
+        set(WHITE_NOISE, "Daha güclü (ağ səs çal)");
         set(AUDIO_BUFFER, "Audio bufer (apparat)");
         set(PROCESSING_CHUNK, "Emal hissəsi");
         set(PERFORMANCE_HINT, "Əgər səs kəsilirsə, buferi artırın. Gecikmə yüksəkdirsə, azaldın.");

@@ -39,6 +39,7 @@ public class LangPnb extends MorseLanguage {
         set(TABLE_RATIO, "ٹیبل دا حساب");
         
         set(KEEP_ALIVE, "آڈیو چالو رکھو");
+        set(WHITE_NOISE, "ودھیریاں (چٹا شور چلاؤ)");
         set(AUDIO_BUFFER, "آڈیو بفر");
         set(PROCESSING_CHUNK, "پروسیسنگ چنک");
         set(PERFORMANCE_HINT, "جے آواز کٹدی اے تے بفر ودھاؤ۔ جے تاخیر اے تے گھٹ کرو۔");

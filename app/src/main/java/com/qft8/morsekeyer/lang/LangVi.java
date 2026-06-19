@@ -39,6 +39,7 @@ public class LangVi extends MorseLanguage {
         set(TABLE_RATIO, "Tỷ lệ bảng/màn hình");
         
         set(KEEP_ALIVE, "Giữ âm thanh luôn bật (giảm độ trễ)");
+        set(WHITE_NOISE, "Mạnh hơn (phát tiếng ồn trắng)");
         set(AUDIO_BUFFER, "Bộ đệm âm thanh (phần cứng)");
         set(PROCESSING_CHUNK, "Khối xử lý");
         set(PERFORMANCE_HINT, "Nếu âm thanh bị ngắt quãng, hãy tăng bộ đệm. Nếu độ trễ cao, hãy giảm chúng.");

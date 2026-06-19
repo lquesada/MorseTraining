@@ -39,6 +39,7 @@ public class LangKn extends MorseLanguage {
         set(TABLE_RATIO, "ಟೇಬಲ್/ಸ್ಕ್ರೀನ್ ಅನುಪಾತ");
         
         set(KEEP_ALIVE, "ಆಡಿಯೋ ಸಕ್ರಿಯವಾಗಿರಿಸಿ");
+        set(WHITE_NOISE, "ಹೆಚ್ಚು ಶಕ್ತಿಶಾಲಿ (ಬಿಳಿ ಶಬ್ದ ಪ್ಲೇ ಮಾಡಿ)");
         set(AUDIO_BUFFER, "ಆಡಿಯೋ ಬಫರ್");
         set(PROCESSING_CHUNK, "ಪ್ರೊಸೆಸಿಂಗ್ ಚಂಕ್");
         set(PERFORMANCE_HINT, "ಶಬ್ದ ಕಟ್ ಆದರೆ ಬಫರ್ ಹೆಚ್ಚಿಸಿ. ವಿಳಂಬ ಹೆಚ್ಚಿದ್ದರೆ ಕಡಿಮೆ ಮಾಡಿ.");

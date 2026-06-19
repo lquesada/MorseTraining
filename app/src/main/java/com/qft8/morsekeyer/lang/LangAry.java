@@ -39,6 +39,7 @@ public class LangAry extends MorseLanguage {
         set(TABLE_RATIO, "نسبة الجدول ف الشاشة");
         
         set(KEEP_ALIVE, "خلي الصوت خدام (كاينقص التعطال)");
+        set(WHITE_NOISE, "أقوى (شغّل ضوضاء بيضاء)");
         set(AUDIO_BUFFER, "مخزن الصوت");
         set(PROCESSING_CHUNK, "حجم المعالجة");
         set(PERFORMANCE_HINT, "إلا كان الصوت كيتقطع، زيد ف الـ Buffer. إلا كان التعطال، نقصهم.");

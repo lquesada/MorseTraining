@@ -39,6 +39,7 @@ public class LangEo extends MorseLanguage {
         set(TABLE_RATIO, "Proporcio tabelo/teksto");
         
         set(KEEP_ALIVE, "Teni aŭdon aktiva (malpliigas malfruon)");
+        set(WHITE_NOISE, "Pli forta (reproduktu blankan bruon)");
         set(AUDIO_BUFFER, "Aŭda bufro (aparataro)");
         set(PROCESSING_CHUNK, "Pretiga fragmento");
         set(PERFORMANCE_HINT, "Se la sono krakas, pligrandigu la bufron aŭ fragmenton. Se la malfruo estas alta, malpligrandigu ilin.");

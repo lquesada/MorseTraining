@@ -39,6 +39,7 @@ public class LangCa extends MorseLanguage {
         set(TABLE_RATIO, "Proporció taula/pantalla");
 
         set(KEEP_ALIVE, "Mantén l'àudio actiu (redueix la latència)");
+        set(WHITE_NOISE, "Més fort (reprodueix soroll blanc)");
         set(AUDIO_BUFFER, "Búfer d'àudio (hardware)");
         set(PROCESSING_CHUNK, "Fragment de processament");
         set(PERFORMANCE_HINT, "Si el so s'entretalla, augmenta el búfer. Si la latència és alta, redueix-lo.");

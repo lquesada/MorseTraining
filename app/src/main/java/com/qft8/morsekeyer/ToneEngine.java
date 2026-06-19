@@ -37,6 +37,10 @@ public class ToneEngine {
     private volatile boolean running = false;
     private volatile boolean toneActive = false;
     private volatile boolean keepAlive = true;
+    private volatile boolean whiteNoise = false;
+    private volatile float whiteNoiseVolume = 5.0f;
+    private volatile int whiteNoiseFrequency = 500;
+    private float noiseFilterState = 0.0f;
     private final java.util.Random random = new java.util.Random();
 
     private volatile String toneType = "triangle";
@@ -361,9 +365,21 @@ public class ToneEngine {
 
                 float sampleValue = sample * currentGain;
                 if (keepAlive && currentGain < 0.00001f) {
-                    // Inject extremely low level white noise (-100dB approx)
-                    // to keep the audio hardware/mixer from suspending.
-                    sampleValue += (random.nextFloat() * 2.0f - 1.0f) * 0.00001f;
+                    // Keep the audio hardware/mixer awake with white noise.
+                    float rawNoise = (random.nextFloat() * 2.0f - 1.0f);
+                    float noiseValue;
+                    
+                    if (whiteNoise) {
+                        float omega_dt = (float) (2.0 * Math.PI * whiteNoiseFrequency / sampleRate);
+                        float filterAlpha = omega_dt / (omega_dt + 1.0f);
+                        noiseFilterState += filterAlpha * (rawNoise - noiseFilterState);
+                        
+                        float noiseLevel = (float) activeVolume / 100.0f * (whiteNoiseVolume / 100.0f);
+                        noiseValue = noiseFilterState * noiseLevel;
+                    } else {
+                        noiseValue = rawNoise * 0.00001f;
+                    }
+                    sampleValue += noiseValue;
                 }
                 buffer[i] = sampleValue;
 
@@ -412,6 +428,18 @@ public class ToneEngine {
 
     public void setKeepAlive(boolean keepAlive) {
         this.keepAlive = keepAlive;
+    }
+
+    public void setWhiteNoise(boolean whiteNoise) {
+        this.whiteNoise = whiteNoise;
+    }
+
+    public void setWhiteNoiseVolume(float volume) {
+        this.whiteNoiseVolume = volume;
+    }
+
+    public void setWhiteNoiseFrequency(int hz) {
+        this.whiteNoiseFrequency = hz;
     }
 
     private void applyBufferSettings() {

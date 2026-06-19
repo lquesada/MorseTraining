@@ -39,6 +39,7 @@ public class LangZh extends MorseLanguage {
         set(TABLE_RATIO, "表格/屏幕比例");
         
         set(KEEP_ALIVE, "保持音频活动（降低延迟）");
+        set(WHITE_NOISE, "更强（播放白噪音）");
         set(AUDIO_BUFFER, "音频缓冲区（硬件）");
         set(PROCESSING_CHUNK, "处理块");
         set(PERFORMANCE_HINT, "如果声音断断续续，请增大缓冲区。如果延迟较高，请减小。");

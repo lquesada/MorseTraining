@@ -39,6 +39,7 @@ public class LangFi extends MorseLanguage {
         set(TABLE_RATIO, "Taulukon suhde näyttöön");
         
         set(KEEP_ALIVE, "Pidä ääni aktiivisena (pienentää viivettä)");
+        set(WHITE_NOISE, "Voimakkaampi (toista valkoista kohinaa)");
         set(AUDIO_BUFFER, "Äänipuskuri (laitteisto)");
         set(PROCESSING_CHUNK, "Käsittelypala");
         set(PERFORMANCE_HINT, "Jos ääni pätkii, suurenna puskuria. Jos viive on suuri, pienennä sitä.");

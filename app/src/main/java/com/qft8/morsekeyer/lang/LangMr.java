@@ -39,6 +39,7 @@ public class LangMr extends MorseLanguage {
         set(TABLE_RATIO, "टेबल/स्क्रीन प्रमाण");
         
         set(KEEP_ALIVE, "ऑडिओ सक्रिय ठेवा (विलंब कमी होतो)");
+        set(WHITE_NOISE, "अधिक मजबूत (पांढरा आवाज वाजवा)");
         set(AUDIO_BUFFER, "ऑडिओ बफर (हार्डवेअर)");
         set(PROCESSING_CHUNK, "प्रोसेसिंग चंक");
         set(PERFORMANCE_HINT, "जर आवाज अडकला तर बफर किंवा चंक वाढवा. विलंब जास्त असल्यास कमी करा.");

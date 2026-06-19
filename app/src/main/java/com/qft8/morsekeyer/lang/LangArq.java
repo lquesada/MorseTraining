@@ -39,6 +39,7 @@ public class LangArq extends MorseLanguage {
         set(TABLE_RATIO, "نسبة الجدول ف الشاشة");
         
         set(KEEP_ALIVE, "خلي الصوت خدام (ينقص البطء)");
+        set(WHITE_NOISE, "قوى أكثر (شغّل ضوضاء بيضاء)");
         set(AUDIO_BUFFER, "Buffer الصوت");
         set(PROCESSING_CHUNK, "حجم المعالجة");
         set(PERFORMANCE_HINT, "إلا الصوت يتقطع، زيد ف الـ Buffer. إلا كاين بطء، نقصهم.");

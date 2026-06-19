@@ -39,6 +39,7 @@ public class LangTa extends MorseLanguage {
         set(TABLE_RATIO, "அட்டவணை/திரை விகிதம்");
         
         set(KEEP_ALIVE, "ஆடியோவைச் செயல்பாட்டில் வை (தாமதத்தைக் குறைக்கும்)");
+        set(WHITE_NOISE, "வலுவானது (வெள்ளை இரைச்சலை இசைக்க)");
         set(AUDIO_BUFFER, "ஆடியோ பஃபர் (வன்பொருள்)");
         set(PROCESSING_CHUNK, "செயலாக்கப் பகுதி");
         set(PERFORMANCE_HINT, "ஒலி தடைபட்டால், பஃபரை அதிகரிக்கவும். தாமதம் அதிகமாக இருந்தால், அதைக் குறைக்கவும்.");

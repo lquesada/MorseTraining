@@ -39,6 +39,7 @@ public class LangPcm extends MorseLanguage {
         set(TABLE_RATIO, "Table/Screen ratio");
         
         set(KEEP_ALIVE, "Keep audio active (make e fast)");
+        set(WHITE_NOISE, "Stronger (play white noise)");
         set(AUDIO_BUFFER, "Audio buffer (hardware)");
         set(PROCESSING_CHUNK, "Processing chunk");
         set(PERFORMANCE_HINT, "If sound dey break, increase buffer. If e dey delay, reduce am.");

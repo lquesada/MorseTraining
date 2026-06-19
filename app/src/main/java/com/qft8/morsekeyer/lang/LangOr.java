@@ -39,6 +39,7 @@ public class LangOr extends MorseLanguage {
         set(TABLE_RATIO, "ଟେବୁଲ୍/ସ୍କ୍ରିନ୍ ଅନୁପାତ");
         
         set(KEEP_ALIVE, "ଅଡିଓ ସକ୍ରିୟ ରଖନ୍ତୁ");
+        set(WHITE_NOISE, "ଅଧିକ ଶକ୍ତିଶାଳୀ (ଧଳା ଶବ୍ଦ ଚଲାନ୍ତୁ)");
         set(AUDIO_BUFFER, "ଅଡିଓ ବଫର୍");
         set(PROCESSING_CHUNK, "ପ୍ରୋସେସିଂ ଚଙ୍କ");
         set(PERFORMANCE_HINT, "ଯଦି ଶବ୍ଦ କଟିଯାଏ, ବଫର୍ ବଢାନ୍ତୁ | ଯଦି ବିଳମ୍ବ ହୁଏ, କମାନ୍ତୁ |");

@@ -39,6 +39,7 @@ public class LangYue extends MorseLanguage {
         set(TABLE_RATIO, "表格/屏幕比例");
         
         set(KEEP_ALIVE, "保持音訊活動（降低延遲）");
+        set(WHITE_NOISE, "更強（播放白噪音）");
         set(AUDIO_BUFFER, "音訊緩衝區（硬件）");
         set(PROCESSING_CHUNK, "處理塊");
         set(PERFORMANCE_HINT, "如果聲音斷斷續續，請增大緩衝區。如果延遲較高，請減小。");

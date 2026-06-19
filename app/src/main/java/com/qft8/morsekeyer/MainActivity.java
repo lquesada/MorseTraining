@@ -76,15 +76,18 @@ public class MainActivity extends Activity {
 
     // Settings dialog widget refs (created dynamically)
     private Spinner dlgMode;
-    private CheckBox dlgInverse, dlgStrict, dlgNoclick, dlgTable, dlgTableCodes, dlgVisual, dlgShowPaddles, dlgKeepAlive, dlgNextWordIndicator, dlgKeepScreenOn, dlgChkPickLangThemeOnShare;
+    private CheckBox dlgInverse, dlgStrict, dlgNoclick, dlgTable, dlgTableCodes, dlgVisual, dlgShowPaddles, dlgKeepAlive, dlgWhiteNoise, dlgNextWordIndicator, dlgKeepScreenOn, dlgChkPickLangThemeOnShare;
     private Spinner dlgLetterColor, dlgAppTheme, dlgLanguage, dlgKeyboardType;
     private String[] settingsLangKeys;
     private Button dlgWpmMinus, dlgWpmPlus;
     private TextView dlgTxtWpm, dlgTxtFreq, dlgTxtVol, dlgTxtBuffer, dlgTxtEnvelope, dlgTxtChunk;
     private TextView dlgTxtFontSize, dlgTxtTableFontSize, dlgTxtTableRatio, dlgTxtInterletterSpacing, dlgTxtInterwordSpacing;
     private TextView dlgLblInterletterSpacing, dlgLblInterwordSpacing;
+    private TextView dlgLblWhiteNoiseVol, dlgLblWhiteNoiseFreq;
+    private TextView dlgTxtWhiteNoiseVol, dlgTxtWhiteNoiseFreq;
     private SeekBar dlgSeekFreq, dlgSeekVol, dlgSeekBuffer, dlgSeekEnvelope, dlgSeekChunk;
     private SeekBar dlgSeekFontSize, dlgSeekTableFontSize, dlgSeekTableRatio, dlgSeekInterletterSpacing, dlgSeekInterwordSpacing;
+    private SeekBar dlgSeekWhiteNoiseVol, dlgSeekWhiteNoiseFreq;
     private AlertDialog settingsDialog;
     private Map<String, Spinner> dlgDecoderSpinners = new HashMap<>();
 
@@ -1276,6 +1279,90 @@ public class MainActivity extends Activity {
             syncSettingsDialog();
         });
 
+        dlgWhiteNoise = chkBox(WHITE_NOISE);
+        LinearLayout.LayoutParams wnLp = (LinearLayout.LayoutParams) dlgWhiteNoise.getLayoutParams();
+        wnLp.setMargins(dp(40), 0, 0, dp(4));
+        dlgWhiteNoise.setLayoutParams(wnLp);
+        root.addView(dlgWhiteNoise);
+        dlgWhiteNoise.setOnClickListener(v -> {
+            settings.whiteNoise = dlgWhiteNoise.isChecked();
+            toneEngine.setWhiteNoise(settings.whiteNoise);
+            settings.save(this);
+            syncSettingsDialog();
+        });
+
+        dlgLblWhiteNoiseVol = subLabel(VOLUME);
+        LinearLayout.LayoutParams lblWnVolLp = (LinearLayout.LayoutParams) dlgLblWhiteNoiseVol.getLayoutParams();
+        lblWnVolLp.setMargins(dp(40), 0, 0, 0);
+        dlgLblWhiteNoiseVol.setLayoutParams(lblWnVolLp);
+        root.addView(dlgLblWhiteNoiseVol);
+
+        LinearLayout wnVolRow = hRow();
+        wnVolRow.setPadding(dp(56), 0, 0, 0);
+        dlgSeekWhiteNoiseVol = new SeekBar(this);
+        dlgSeekWhiteNoiseVol.setMax(99); // 0.1 to 10.0 in 0.1 steps
+        dlgSeekWhiteNoiseVol.setLayoutParams(new LinearLayout.LayoutParams(0, -2, 1));
+        dlgTxtWhiteNoiseVol = new TextView(this);
+        dlgTxtWhiteNoiseVol.setTextColor(C_TEXT);
+        dlgTxtWhiteNoiseVol.setMinWidth(dp(64));
+        dlgTxtWhiteNoiseVol.setTextSize(15);
+        wnVolRow.addView(dlgSeekWhiteNoiseVol);
+        wnVolRow.addView(dlgTxtWhiteNoiseVol);
+        root.addView(wnVolRow);
+
+        dlgSeekWhiteNoiseVol.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override public void onProgressChanged(SeekBar sb, int p, boolean u) {
+                float v = 0.1f + p / 10.0f;
+                dlgTxtWhiteNoiseVol.setText(String.format(java.util.Locale.US, "%.1f%%", v));
+                settings.whiteNoiseVolume = v;
+                toneEngine.setWhiteNoiseVolume(v);
+            }
+            @Override public void onStartTrackingTouch(SeekBar sb) {}
+            @Override public void onStopTrackingTouch(SeekBar sb) { settings.save(MainActivity.this); }
+        });
+
+        setupClickableLabel(dlgTxtWhiteNoiseVol, 0.1f, 10.0f, true, v -> {
+            settings.whiteNoiseVolume = v;
+            toneEngine.setWhiteNoiseVolume(v);
+            dlgSeekWhiteNoiseVol.setProgress(Math.round((v - 0.1f) * 10.0f));
+        });
+
+        dlgLblWhiteNoiseFreq = subLabel(FREQUENCY);
+        LinearLayout.LayoutParams lblWnFreqLp = (LinearLayout.LayoutParams) dlgLblWhiteNoiseFreq.getLayoutParams();
+        lblWnFreqLp.setMargins(dp(40), 0, 0, 0);
+        dlgLblWhiteNoiseFreq.setLayoutParams(lblWnFreqLp);
+        root.addView(dlgLblWhiteNoiseFreq);
+
+        LinearLayout wnFreqRow = hRow();
+        wnFreqRow.setPadding(dp(56), 0, 0, 0);
+        dlgSeekWhiteNoiseFreq = new SeekBar(this);
+        dlgSeekWhiteNoiseFreq.setMax(3850); // 150 to 4000
+        dlgSeekWhiteNoiseFreq.setLayoutParams(new LinearLayout.LayoutParams(0, -2, 1));
+        dlgTxtWhiteNoiseFreq = new TextView(this);
+        dlgTxtWhiteNoiseFreq.setTextColor(C_TEXT);
+        dlgTxtWhiteNoiseFreq.setMinWidth(dp(64));
+        dlgTxtWhiteNoiseFreq.setTextSize(15);
+        wnFreqRow.addView(dlgSeekWhiteNoiseFreq);
+        wnFreqRow.addView(dlgTxtWhiteNoiseFreq);
+        root.addView(wnFreqRow);
+
+        dlgSeekWhiteNoiseFreq.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override public void onProgressChanged(SeekBar sb, int p, boolean u) {
+                int hz = 150 + p;
+                dlgTxtWhiteNoiseFreq.setText(hz + " Hz");
+                settings.whiteNoiseFrequency = hz;
+                toneEngine.setWhiteNoiseFrequency(hz);
+            }
+            @Override public void onStartTrackingTouch(SeekBar sb) {}
+            @Override public void onStopTrackingTouch(SeekBar sb) { settings.save(MainActivity.this); }
+        });
+
+        setupClickableLabel(dlgTxtWhiteNoiseFreq, 150, 4000, false, v -> {
+            settings.whiteNoiseFrequency = (int)v;
+            toneEngine.setWhiteNoiseFrequency((int)v);
+            dlgSeekWhiteNoiseFreq.setProgress((int)v - 150);
+        });
+
         root.addView(subLabel(AUDIO_BUFFER));
         LinearLayout bufRow = hRow();
         bufRow.setPadding(dp(16), 0, 0, 0);
@@ -1541,6 +1628,10 @@ public class MainActivity extends Activity {
                 toneEngine.setBufferMs(settings.bufferMs);
                 toneEngine.setEnvelopeMs(settings.envelopeMs);
                 toneEngine.setChunkMs(settings.chunkMs);
+                toneEngine.setKeepAlive(settings.keepAlive);
+                toneEngine.setWhiteNoise(settings.whiteNoise);
+                toneEngine.setWhiteNoiseVolume(settings.whiteNoiseVolume);
+                toneEngine.setWhiteNoiseFrequency(settings.whiteNoiseFrequency);
                 applyTheme();
                 updateDialogStrings(dialogRoot);
                 applyUiSettings();
@@ -1614,6 +1705,30 @@ public class MainActivity extends Activity {
         dlgNextWordIndicator.setChecked(settings.showNextWordIndicator);
         dlgKeepScreenOn.setChecked(settings.keepScreenOn);
         dlgKeepAlive.setChecked(settings.keepAlive);
+        dlgWhiteNoise.setChecked(settings.whiteNoise);
+        dlgWhiteNoise.setEnabled(settings.keepAlive);
+        dlgWhiteNoise.setAlpha(settings.keepAlive ? 1.0f : 0.4f);
+
+        dlgSeekWhiteNoiseVol.setProgress(Math.round((settings.whiteNoiseVolume - 0.1f) * 10.0f));
+        dlgTxtWhiteNoiseVol.setText(String.format(java.util.Locale.US, "%.1f%%", settings.whiteNoiseVolume));
+        dlgSeekWhiteNoiseFreq.setProgress(settings.whiteNoiseFrequency - 150);
+        dlgTxtWhiteNoiseFreq.setText(settings.whiteNoiseFrequency + " Hz");
+
+        boolean wnEnabled = settings.keepAlive && settings.whiteNoise;
+        float wnAlpha = wnEnabled ? 1.0f : 0.4f;
+        dlgLblWhiteNoiseVol.setEnabled(wnEnabled);
+        dlgLblWhiteNoiseVol.setAlpha(wnAlpha);
+        dlgSeekWhiteNoiseVol.setEnabled(wnEnabled);
+        dlgSeekWhiteNoiseVol.setAlpha(wnAlpha);
+        dlgTxtWhiteNoiseVol.setEnabled(wnEnabled);
+        dlgTxtWhiteNoiseVol.setAlpha(wnAlpha);
+        
+        dlgLblWhiteNoiseFreq.setEnabled(wnEnabled);
+        dlgLblWhiteNoiseFreq.setAlpha(wnAlpha);
+        dlgSeekWhiteNoiseFreq.setEnabled(wnEnabled);
+        dlgSeekWhiteNoiseFreq.setAlpha(wnAlpha);
+        dlgTxtWhiteNoiseFreq.setEnabled(wnEnabled);
+        dlgTxtWhiteNoiseFreq.setAlpha(wnAlpha);
 
         String[] themes = { "dark", "light" };
         for (int i = 0; i < themes.length; i++) {
@@ -2684,6 +2799,7 @@ public class MainActivity extends Activity {
             toneEngine.setEnvelopeMs(settings.envelopeMs);
             toneEngine.setChunkMs(settings.chunkMs);
             toneEngine.setKeepAlive(settings.keepAlive);
+            toneEngine.setWhiteNoise(settings.whiteNoise);
             toneEngine.init();
         }
     }

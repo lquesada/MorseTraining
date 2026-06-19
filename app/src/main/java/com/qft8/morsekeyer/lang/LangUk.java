@@ -39,6 +39,7 @@ public class LangUk extends MorseLanguage {
         set(TABLE_RATIO, "Пропорція таблиця/текст");
         
         set(KEEP_ALIVE, "Постійний звук (знижує затримку)");
+        set(WHITE_NOISE, "Сильніше (відтворювати білий шум)");
         set(AUDIO_BUFFER, "Аудіо-буфер (апаратний)");
         set(PROCESSING_CHUNK, "Фрагмент обробки");
         set(PERFORMANCE_HINT, "Якщо звук переривається, збільште буфер. Якщо затримка велика, зменште.");

@@ -50,6 +50,7 @@ public class LangEl extends MorseLanguage {
         set(COLOR_PINK, "Ροζ");
         
         set(KEEP_ALIVE, "Διατήρηση ήχου (μειώνει την καθυστέρηση)");
+        set(WHITE_NOISE, "Πιο δυνατό (αναπαραγωγή λευκού θορύβου)");
         set(AUDIO_BUFFER, "Προσωρινή μνήμη ήχου (υλικό)");
         set(PROCESSING_CHUNK, "Τμήμα επεξεργασίας");
         set(PERFORMANCE_HINT, "Αν ο ήχος διακόπτεται, αυξήστε την προσωρινή μνήμη ή το τμήμα. Αν η καθυστέρηση είναι υψηλή, μειώστε τα.");

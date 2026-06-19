@@ -39,6 +39,7 @@ public class LangYo extends MorseLanguage {
         set(TABLE_RATIO, "Ìpín tábìlì/tẹlifíṣọ̀n");
         
         set(KEEP_ALIVE, "Jẹ́ kí ohùn ṣiṣẹ́");
+        set(WHITE_NOISE, "Kigbe sii (dun ariwo funfun)");
         set(AUDIO_BUFFER, "Ààyè ohùn");
         set(PROCESSING_CHUNK, "Ìpín iṣẹ́");
         set(PERFORMANCE_HINT, "Tí ohùn bá ń gé, jẹ́ kí ààyè ohùn pọ̀ sí i. Tí ó bá lọ́ra, dín i kù.");

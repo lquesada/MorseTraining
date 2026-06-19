@@ -50,6 +50,7 @@ public class LangHe extends MorseLanguage {
         set(COLOR_PINK, "ורוד");
         
         set(KEEP_ALIVE, "שמור שמע פעיל (מפחית השהיה)");
+        set(WHITE_NOISE, "חזק יותר (נגן רעש לבן)");
         set(AUDIO_BUFFER, "באפר שמע (חומרה)");
         set(PROCESSING_CHUNK, "מקטע עיבוד");
         set(PERFORMANCE_HINT, "אם הצליל נחתך, הגדל את הבאפר או את המקטע. אם ההשהיה גבוהה, הקטן אותם.");

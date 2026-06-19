@@ -39,6 +39,7 @@ public class LangHa extends MorseLanguage {
         set(TABLE_RATIO, "Yawan tebur akan allo");
         
         set(KEEP_ALIVE, "Bar sauti a buɗe (rage jinkiri)");
+        set(WHITE_NOISE, "Ƙarin ƙarfi (kunna farin hayaniya)");
         set(AUDIO_BUFFER, "Ma'adanar sauti (hardware)");
         set(PROCESSING_CHUNK, "Guntun aiki");
         set(PERFORMANCE_HINT, "Idan sauti yana yankewa, ƙara ma'adanar. Idan akwai jinkiri, rage su.");

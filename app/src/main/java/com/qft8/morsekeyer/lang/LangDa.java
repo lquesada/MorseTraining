@@ -50,6 +50,7 @@ public class LangDa extends MorseLanguage {
         set(COLOR_PINK, "Lyserød");
         
         set(KEEP_ALIVE, "Hold lyden i live (sænker forsinkelsen)");
+        set(WHITE_NOISE, "Stærkere (afspil hvid støj)");
         set(AUDIO_BUFFER, "Lydbuffer (hardware)");
         set(PROCESSING_CHUNK, "Behandlingschunk");
         set(PERFORMANCE_HINT, "Hvis lyden afbrydes, skal du øge bufferen eller chunken. Hvis forsinkelsen er høj, skal du mindske dem.");

@@ -39,6 +39,7 @@ public class LangBho extends MorseLanguage {
         set(TABLE_RATIO, "टेबल/स्क्रीन के हिसाब");
         
         set(KEEP_ALIVE, "आवाज़ चालू राखीं");
+        set(WHITE_NOISE, "अउर तेज़ (सफेद शोर बजाईं)");
         set(AUDIO_BUFFER, "ऑडियो बफ़र");
         set(PROCESSING_CHUNK, "प्रोसेसिंग चंक");
         set(PERFORMANCE_HINT, "अगर आवाज़ कटी, त बफ़र बढ़ाईं। अगर देरी होखे, त कम करीं।");

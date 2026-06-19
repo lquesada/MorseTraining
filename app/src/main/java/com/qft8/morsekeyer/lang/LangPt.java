@@ -39,6 +39,7 @@ public class LangPt extends MorseLanguage {
         set(TABLE_RATIO, "Proporção tabela/tela");
         
         set(KEEP_ALIVE, "Manter áudio ativo (reduz latência)");
+        set(WHITE_NOISE, "Mais forte (reproduzir ruído branco)");
         set(AUDIO_BUFFER, "Buffer de áudio (hardware)");
         set(PROCESSING_CHUNK, "Fragmento de processamento");
         set(PERFORMANCE_HINT, "Se o som falhar, aumente o buffer. Se a latência for alta, diminua.");

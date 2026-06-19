@@ -50,6 +50,7 @@ public class LangNl extends MorseLanguage {
         set(COLOR_PINK, "Roze");
         
         set(KEEP_ALIVE, "Houd audio actief (verlaagt latentie)");
+        set(WHITE_NOISE, "Sterker (witte ruis afspelen)");
         set(AUDIO_BUFFER, "Audiobuffer (hardware)");
         set(PROCESSING_CHUNK, "Verwerkingschunk");
         set(PERFORMANCE_HINT, "Als het geluid hapert, vergroot dan de buffer of chunk. Als de latentie hoog is, verklein ze dan.");

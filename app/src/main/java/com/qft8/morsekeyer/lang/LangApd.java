@@ -39,6 +39,7 @@ public class LangApd extends MorseLanguage {
         set(TABLE_RATIO, "نسبة الجدول للشاشة");
         
         set(KEEP_ALIVE, "خلي الصوت شغال (بقلل التأخير)");
+        set(WHITE_NOISE, "أقوى (شغّل ضوضاء بيضاء)");
         set(AUDIO_BUFFER, "Buffer الصوت");
         set(PROCESSING_CHUNK, "حجم المعالجة");
         set(PERFORMANCE_HINT, "لو الصوت بقطع، زيد الـ Buffer. لو في تأخير قللهم.");

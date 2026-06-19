@@ -39,6 +39,7 @@ public class LangMy extends MorseLanguage {
         set(TABLE_RATIO, "ဇယား/မျက်နှာပြင် အချိုး");
         
         set(KEEP_ALIVE, "အသံအသင့်ဖြစ်စေရန် (နှောင့်နှေးမှုလျှော့ချရန်)");
+        set(WHITE_NOISE, "ပိုအားကောင်းသည် (ဖြူသောဆူညံသံဖွင့်ပါ)");
         set(AUDIO_BUFFER, "အသံ ဘတ်ဖာ (Hardware)");
         set(PROCESSING_CHUNK, "လုပ်ဆောင်ချက် အပိုင်းအစ");
         set(PERFORMANCE_HINT, "အသံထစ်ပါက ဘတ်ဖာကို တိုးပါ။ နှောင့်နှေးပါက လျှော့ပါ။");

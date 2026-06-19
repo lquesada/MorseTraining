@@ -39,6 +39,7 @@ public class LangSv extends MorseLanguage {
         set(TABLE_RATIO, "Förhållande tabell/text");
         
         set(KEEP_ALIVE, "Håll ljudet aktivt (minskar latens)");
+        set(WHITE_NOISE, "Starkare (spela vitt brus)");
         set(AUDIO_BUFFER, "Ljudbuffer (hårdvara)");
         set(PROCESSING_CHUNK, "Bearbetningsenhet");
         set(PERFORMANCE_HINT, "Om ljudet hackar, öka buffert eller enhet. Vid hög latens, minska dem.");

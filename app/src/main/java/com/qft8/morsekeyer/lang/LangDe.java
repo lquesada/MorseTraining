@@ -39,6 +39,7 @@ public class LangDe extends MorseLanguage {
         set(TABLE_RATIO, "Verhältnis Tabelle/Text");
         
         set(KEEP_ALIVE, "Audio aktiv halten (verringert Latenz)");
+        set(WHITE_NOISE, "Stärker (weißes Rauschen abspielen)");
         set(AUDIO_BUFFER, "Audio-Puffer (Hardware)");
         set(PROCESSING_CHUNK, "Verarbeitungs-Chunk");
         set(PERFORMANCE_HINT, "Wenn der Ton hakt, Puffer oder Chunk erhöhen. Bei hoher Latenz verringern.");

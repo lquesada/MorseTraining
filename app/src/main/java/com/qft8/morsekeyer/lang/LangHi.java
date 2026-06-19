@@ -39,6 +39,7 @@ public class LangHi extends MorseLanguage {
         set(TABLE_RATIO, "तालिका/स्क्रीन अनुपात");
         
         set(KEEP_ALIVE, "ऑडियो सक्रिय रखें (विलंबता कम करता है)");
+        set(WHITE_NOISE, "अधिक मजबूत (सफेद शोर चलाएं)");
         set(AUDIO_BUFFER, "ऑडियो बफ़र (हार्डवेयर)");
         set(PROCESSING_CHUNK, "प्रोसेसिंग चंक");
         set(PERFORMANCE_HINT, "यदि ध्वनि रुकती है, तो बफ़र या चंक बढ़ाएँ। यदि विलंबता अधिक है, तो उन्हें कम करें।");

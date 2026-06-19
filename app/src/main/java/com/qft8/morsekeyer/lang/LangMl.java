@@ -39,6 +39,7 @@ public class LangMl extends MorseLanguage {
         set(TABLE_RATIO, "ടേബിൾ/സ്ക്രീൻ അനുപാതം");
         
         set(KEEP_ALIVE, "ഓഡിയോ സജീവമാക്കുക");
+        set(WHITE_NOISE, "ശക്തമായ (വൈറ്റ് നോയ്സ് പ്ലേ ചെയ്യുക)");
         set(AUDIO_BUFFER, "ഓഡിയോ ബഫർ");
         set(PROCESSING_CHUNK, "പ്രോസസ്സിംഗ് ചങ്ക്");
         set(PERFORMANCE_HINT, "ശബ്ദം മുറിയുന്നുണ്ടെങ്കിൽ ബഫർ കൂട്ടുക. താമസം ഉണ്ടെങ്കിൽ കുറയ്ക്കുക.");

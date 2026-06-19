@@ -39,6 +39,7 @@ public class LangFr extends MorseLanguage {
         set(TABLE_RATIO, "Ratio tableau/texte");
         
         set(KEEP_ALIVE, "Maintenir l'audio actif (réduit la latence)");
+        set(WHITE_NOISE, "Plus fort (jouer du bruit blanc)");
         set(AUDIO_BUFFER, "Tampon audio (matériel)");
         set(PROCESSING_CHUNK, "Fragment de traitement");
         set(PERFORMANCE_HINT, "Si le son coupe, augmentez le tampon ou le fragment. Si la latence est élevée, réduisez-les.");

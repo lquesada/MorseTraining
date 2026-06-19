@@ -39,6 +39,7 @@ public class LangPl extends MorseLanguage {
         set(TABLE_RATIO, "Proporcja tabela/tekst");
         
         set(KEEP_ALIVE, "Utrzymuj dźwięk (zmniejsza opóźnienie)");
+        set(WHITE_NOISE, "Silniejszy (odtwórz biały szum)");
         set(AUDIO_BUFFER, "Bufor audio (sprzętowy)");
         set(PROCESSING_CHUNK, "Fragment przetwarzania");
         set(PERFORMANCE_HINT, "Jeśli dźwięk przerywa, zwiększ bufor. Jeśli opóźnienie jest duże, zmniejsz go.");

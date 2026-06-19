@@ -39,6 +39,7 @@ public class LangRo extends MorseLanguage {
         set(TABLE_RATIO, "Proporție tabel/ecran");
         
         set(KEEP_ALIVE, "Menține audio activ (reduce latența)");
+        set(WHITE_NOISE, "Mai puternic (redă zgomot alb)");
         set(AUDIO_BUFFER, "Buffer audio (hardware)");
         set(PROCESSING_CHUNK, "Fragment de procesare");
         set(PERFORMANCE_HINT, "Dacă sunetul se întrerupe, mărește bufferul. Dacă latența e mare, redu-l.");

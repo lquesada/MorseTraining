@@ -50,6 +50,7 @@ public class LangNo extends MorseLanguage {
         set(COLOR_PINK, "Rosa");
         
         set(KEEP_ALIVE, "Hold lyd i live (senker forsinkelse)");
+        set(WHITE_NOISE, "Sterkere (spill hvit støy)");
         set(AUDIO_BUFFER, "Lydbuffer (maskinvare)");
         set(PROCESSING_CHUNK, "Behandlingschunk");
         set(PERFORMANCE_HINT, "Hvis lyden hakker, øk bufferen eller chunken. Hvis forsinkelsen er høy, senk dem.");

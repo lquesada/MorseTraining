@@ -39,6 +39,7 @@ public class LangArz extends MorseLanguage {
         set(TABLE_RATIO, "نسبة الجدول للشاشة");
         
         set(KEEP_ALIVE, "خلي الصوت شغال (بيقلل التأخير)");
+        set(WHITE_NOISE, "أقوى (شغّل ضوضاء بيضاء)");
         set(AUDIO_BUFFER, "مخزن الصوت (Buffer)");
         set(PROCESSING_CHUNK, "حجم المعالجة");
         set(PERFORMANCE_HINT, "لو الصوت بيقطع زود المخزن. لو فيه تأخير قللهم.");

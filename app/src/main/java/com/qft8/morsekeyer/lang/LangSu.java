@@ -39,6 +39,7 @@ public class LangSu extends MorseLanguage {
         set(TABLE_RATIO, "Rasio tabél/layar");
         
         set(KEEP_ALIVE, "Audio tetep aktif");
+        set(WHITE_NOISE, "Leuwih kenceng (mainake white noise)");
         set(AUDIO_BUFFER, "Buffer audio");
         set(PROCESSING_CHUNK, "Bagian pamrosésan");
         set(PERFORMANCE_HINT, "Upami sora peget, tambah buffer. Upami lami, kirangan.");

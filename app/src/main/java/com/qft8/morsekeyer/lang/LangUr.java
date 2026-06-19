@@ -39,6 +39,7 @@ public class LangUr extends MorseLanguage {
         set(TABLE_RATIO, "ٹیبل/اسکرین تناسب");
         
         set(KEEP_ALIVE, "آڈیو فعال رکھیں (تاخیر کم کرتا ہے)");
+        set(WHITE_NOISE, "مضبوط (سفید شور چلائیں)");
         set(AUDIO_BUFFER, "آڈیو بفر (ہارڈ ویئر)");
         set(PROCESSING_CHUNK, "پروسیسنگ چنک");
         set(PERFORMANCE_HINT, "اگر آواز کٹتی ہے تو بفر یا چنک بڑھائیں۔ اگر تاخیر زیادہ ہے تو انہیں کم کریں۔");

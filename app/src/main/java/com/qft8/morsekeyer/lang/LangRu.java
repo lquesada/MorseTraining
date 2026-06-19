@@ -39,6 +39,7 @@ public class LangRu extends MorseLanguage {
         set(TABLE_RATIO, "Пропорция таблица/текст");
         
         set(KEEP_ALIVE, "Постоянный звук (снижает задержку)");
+        set(WHITE_NOISE, "Сильнее (воспроизвести белый шум)");
         set(AUDIO_BUFFER, "Аудио-буфер (аппаратный)");
         set(PROCESSING_CHUNK, "Фрагмент обработки");
         set(PERFORMANCE_HINT, "Если звук прерывается, увеличьте буфер. Если задержка велика, уменьшите.");

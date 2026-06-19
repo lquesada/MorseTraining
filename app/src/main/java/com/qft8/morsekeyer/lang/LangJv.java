@@ -39,6 +39,7 @@ public class LangJv extends MorseLanguage {
         set(TABLE_RATIO, "Rasio tabel/layar");
         
         set(KEEP_ALIVE, "Audio tetep aktif (nyuda latensi)");
+        set(WHITE_NOISE, "Luwih kenceng (mainake white noise)");
         set(AUDIO_BUFFER, "Buffer audio (hardware)");
         set(PROCESSING_CHUNK, "Fragmen pangolahan");
         set(PERFORMANCE_HINT, "Yen swara pedhot-pedhot, tambah buffer. Yen latensi dhuwur, suda buffer.");

@@ -39,6 +39,7 @@ public class LangTe extends MorseLanguage {
         set(TABLE_RATIO, "టేబుల్/స్క్రీన్ నిష్పత్తి");
         
         set(KEEP_ALIVE, "ఆడియోను సక్రియంగా ఉంచండి");
+        set(WHITE_NOISE, "బలమైన (తెల్లని శబ్దం ప్లే చేయండి)");
         set(AUDIO_BUFFER, "ఆడియో బఫర్");
         set(PROCESSING_CHUNK, "ప్రాసెసింగ్ చంక్");
         set(PERFORMANCE_HINT, "ధ్వని ఆగిపోతే, బఫర్ పెంచండి. ఆలస్యం ఎక్కువగా ఉంటే, తగ్గించండి.");

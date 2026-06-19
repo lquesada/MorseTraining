@@ -39,6 +39,7 @@ public class LangIt extends MorseLanguage {
         set(TABLE_RATIO, "Rapporto tabella/testo");
         
         set(KEEP_ALIVE, "Mantieni audio attivo (riduce latenza)");
+        set(WHITE_NOISE, "Più forte (riproduci rumore bianco)");
         set(AUDIO_BUFFER, "Buffer audio (hardware)");
         set(PROCESSING_CHUNK, "Frammento di elaborazione");
         set(PERFORMANCE_HINT, "Se il suono si interrompe, aumenta il buffer o il frammento. Se la latenza è alta, riducili.");

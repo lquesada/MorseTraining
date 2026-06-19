@@ -39,6 +39,7 @@ public class LangId extends MorseLanguage {
         set(TABLE_RATIO, "Rasio tabel/layar");
         
         set(KEEP_ALIVE, "Jaga audio tetap aktif (mengurangi latensi)");
+        set(WHITE_NOISE, "Lebih kuat (putar white noise)");
         set(AUDIO_BUFFER, "Buffer audio (perangkat keras)");
         set(PROCESSING_CHUNK, "Fragmen pemrosesan");
         set(PERFORMANCE_HINT, "Jika suara putus-putus, tingkatkan buffer. Jika latensi tinggi, kurangi.");

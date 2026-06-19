@@ -39,6 +39,7 @@ public class LangFa extends MorseLanguage {
         set(TABLE_RATIO, "نسبت جدول/صفحه");
         
         set(KEEP_ALIVE, "فعال نگه داشتن صدا (کاهش تأخیر)");
+        set(WHITE_NOISE, "قوی‌تر (نویز سفید پخش کن)");
         set(AUDIO_BUFFER, "بافر صدا (سخت‌افزار)");
         set(PROCESSING_CHUNK, "بخش پردازش");
         set(PERFORMANCE_HINT, "اگر صدا قطع و وصل می‌شود، بافر را افزایش دهید. اگر تأخیر زیاد است، آن را کاهش دهید.");

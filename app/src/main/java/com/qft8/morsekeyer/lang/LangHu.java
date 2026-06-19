@@ -39,6 +39,7 @@ public class LangHu extends MorseLanguage {
         set(TABLE_RATIO, "Táblázat/szöveg arány");
         
         set(KEEP_ALIVE, "Audio ébrentartása (kisebb késleltetés)");
+        set(WHITE_NOISE, "Erősebb (fehér zaj lejátszása)");
         set(AUDIO_BUFFER, "Audio puffer (hardver)");
         set(PROCESSING_CHUNK, "Feldolgozási egység");
         set(PERFORMANCE_HINT, "Ha akadozik a hang, növelje a puffert. Ha nagy a késleltetés, csökkentse.");

@@ -56,6 +56,7 @@ public class LangEn extends MorseLanguage {
 
                 // --- ADVANCED ---
                 set(KEEP_ALIVE, "Keep audio alive (lowers latency)");
+                set(WHITE_NOISE, "Stronger (play white noise)");
                 set(AUDIO_BUFFER, "Audio buffer (hardware)");
                 set(PROCESSING_CHUNK, "Processing chunk");
                 set(PERFORMANCE_HINT, "If sound cuts, increase buffer or chunk. If latency is high, decrease them.");

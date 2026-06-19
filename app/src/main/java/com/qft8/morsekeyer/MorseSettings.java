@@ -40,6 +40,9 @@ public class MorseSettings {
     public int tableFontSizeDelta = 0;
     public int tableRatio = 50;
     public boolean keepAlive = true;
+    public boolean whiteNoise = false;
+    public float whiteNoiseVolume = 5.0f;
+    public int whiteNoiseFrequency = 500;
     public boolean keepScreenOn = false;
     public String language = "system";
     public String keyboardType = "QWERTY";
@@ -119,6 +122,9 @@ public class MorseSettings {
         tableFontSizeDelta = getIntSafe(prefs, "tableFontSizeDelta", 0);
         tableRatio = getIntSafe(prefs, "tableRatio", 50);
         keepAlive = getBooleanSafe(prefs, "keepAlive", true);
+        whiteNoise = getBooleanSafe(prefs, "whiteNoise", false);
+        whiteNoiseVolume = getFloatSafe(prefs, "whiteNoiseVolume", 5.0f);
+        whiteNoiseFrequency = getIntSafe(prefs, "whiteNoiseFrequency", 500);
         keepScreenOn = getBooleanSafe(prefs, "keepScreenOn", false);
         language = getStringSafe(prefs, "language", "system");
         
@@ -174,6 +180,9 @@ public class MorseSettings {
             .putInt("tableFontSizeDelta", tableFontSizeDelta)
             .putInt("tableRatio", tableRatio)
             .putBoolean("keepAlive", keepAlive)
+            .putBoolean("whiteNoise", whiteNoise)
+            .putFloat("whiteNoiseVolume", whiteNoiseVolume)
+            .putInt("whiteNoiseFrequency", whiteNoiseFrequency)
             .putBoolean("keepScreenOn", keepScreenOn)
             .putString("language", language)
             .putString("keyboardType", keyboardType)
@@ -216,6 +225,9 @@ public class MorseSettings {
         tableFontSizeDelta = 0;
         tableRatio = 50;
         keepAlive = true;
+        whiteNoise = false;
+        whiteNoiseVolume = 5.0f;
+        whiteNoiseFrequency = 500;
         keepScreenOn = false;
         language = "system";
         keyboardType = guessKeyboardType(language);

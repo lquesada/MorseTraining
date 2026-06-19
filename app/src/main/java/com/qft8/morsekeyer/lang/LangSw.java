@@ -39,6 +39,7 @@ public class LangSw extends MorseLanguage {
         set(TABLE_RATIO, "Uwiano wa jedwali/skrini");
         
         set(KEEP_ALIVE, "Weka sauti iwe hai (hupunguza kuchelewa)");
+        set(WHITE_NOISE, "Nguvu zaidi (cheza kelele nyeupe)");
         set(AUDIO_BUFFER, "Hifadhi ya sauti (vifaa)");
         set(PROCESSING_CHUNK, "Kipande cha usindikaji");
         set(PERFORMANCE_HINT, "Sauti ikikatika, ongeza hifadhi. Sauti ikichelewa sana, ipunguze.");

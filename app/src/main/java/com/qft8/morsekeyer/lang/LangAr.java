@@ -39,6 +39,7 @@ public class LangAr extends MorseLanguage {
         set(TABLE_RATIO, "نسبة الجدول/الشاشة");
         
         set(KEEP_ALIVE, "إبقاء الصوت نشطاً (يقلل التأخير)");
+        set(WHITE_NOISE, "أقوى (تشغيل ضوضاء بيضاء)");
         set(AUDIO_BUFFER, "مخزن الصوت (الأجهزة)");
         set(PROCESSING_CHUNK, "قطعة المعالجة");
         set(PERFORMANCE_HINT, "إذا انقطع الصوت، فقم بزيادة المخزن أو القطعة. إذا كان التأخير عالياً، فقم بتقليلهما.");

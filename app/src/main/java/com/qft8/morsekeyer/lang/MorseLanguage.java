@@ -83,6 +83,7 @@ public abstract class MorseLanguage {
     
     public static final String ADVANCED = "ADVANCED";
     public static final String KEEP_ALIVE = "KEEP_ALIVE";
+    public static final String WHITE_NOISE = "WHITE_NOISE";
     public static final String AUDIO_BUFFER = "AUDIO_BUFFER";
     public static final String PROCESSING_CHUNK = "PROCESSING_CHUNK";
     public static final String PERFORMANCE_HINT = "PERFORMANCE_HINT";

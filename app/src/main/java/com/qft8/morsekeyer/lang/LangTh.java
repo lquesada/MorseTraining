@@ -39,6 +39,7 @@ public class LangTh extends MorseLanguage {
         set(TABLE_RATIO, "สัดส่วนตาราง/หน้าจอ");
         
         set(KEEP_ALIVE, "เปิดเสียงค้างไว้ (ลดความล่าช้า)");
+        set(WHITE_NOISE, "แข็งแกร่งขึ้น (เล่นเสียงรบกวนสีขาว)");
         set(AUDIO_BUFFER, "บัฟเฟอร์เสียง (ฮาร์ดแวร์)");
         set(PROCESSING_CHUNK, "หน่วยการประมวลผล");
         set(PERFORMANCE_HINT, "ถ้าเสียงกระตุก ให้เพิ่มบัฟเฟอร์ ถ้าความล่าช้าสูง ให้ลดลง");

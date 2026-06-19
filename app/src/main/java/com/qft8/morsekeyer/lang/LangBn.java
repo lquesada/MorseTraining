@@ -39,6 +39,7 @@ public class LangBn extends MorseLanguage {
         set(TABLE_RATIO, "টেবিল/স্ক্রিন অনুপাত");
         
         set(KEEP_ALIVE, "অডিও সক্রিয় রাখুন (ল্যাটেন্সি কমায়)");
+        set(WHITE_NOISE, "আরও শক্তিশালী (সাদা নয়েজ চালান)");
         set(AUDIO_BUFFER, "অডিও বাফার (হার্ডওয়্যার)");
         set(PROCESSING_CHUNK, "প্রসেসিং চাঙ্ক");
         set(PERFORMANCE_HINT, "শব্দ কেটে গেলে বাফার বা চাঙ্ক বাড়ান। ল্যাটেন্সি বেশি হলে কমান।");

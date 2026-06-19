@@ -50,6 +50,7 @@ public class LangEs extends MorseLanguage {
                 set(COLOR_PINK, "Rosa");
 
                 set(KEEP_ALIVE, "Mantener audio activo (reduce latencia)");
+                set(WHITE_NOISE, "Más fuerte (reproducir ruido blanco)");
                 set(AUDIO_BUFFER, "Búfer de audio (hardware)");
                 set(PROCESSING_CHUNK, "Bloque de procesamiento");
                 set(PERFORMANCE_HINT, "Si el sonido se entrecorta, aumente el búfer o el bloque. Si la latencia es alta, redúzcalos.");

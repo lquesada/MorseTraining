@@ -39,6 +39,7 @@ public class LangAm extends MorseLanguage {
         set(TABLE_RATIO, "የሰንጠረዥ/ስክሪን መጠን");
         
         set(KEEP_ALIVE, "ድምጽ ዝግጁ አድርግ (መዘግየትን ይቀንሳል)");
+        set(WHITE_NOISE, "ጠንካራ (ነጭ ድምፅ ያጫውቱ)");
         set(AUDIO_BUFFER, "የድምጽ ማጠራቀሚያ (hardware)");
         set(PROCESSING_CHUNK, "የሂደት መጠን");
         set(PERFORMANCE_HINT, "ድምጹ የሚቆራረጥ ከሆነ ማጠራቀሚያውን ይጨምሩ። መዘግየት ካለ ይቀንሱ።");

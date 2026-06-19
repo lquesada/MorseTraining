@@ -39,6 +39,7 @@ public class LangEu extends MorseLanguage {
         set(TABLE_RATIO, "Taula/pantaila proportzioa");
         
         set(KEEP_ALIVE, "Mantendu audioa aktibo (latentzia murrizten du)");
+        set(WHITE_NOISE, "Indartsuagoa (zarata zuria erreproduzitu)");
         set(AUDIO_BUFFER, "Audio bufferra (hardwarea)");
         set(PROCESSING_CHUNK, "Prozesatze zatia");
         set(PERFORMANCE_HINT, "Soinua mozten bada, handitu bufferra. Latentzia handia bada, murriztu.");

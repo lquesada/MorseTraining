@@ -300,7 +300,7 @@ public class GameController {
         }
         
         List<String> rxTimes = java.util.Arrays.asList("3:00", "5:00", "7:00", "10:00", "20:00", "60:00", "\u221E");
-        List<String> txTimes = java.util.Arrays.asList("3:00", "5:00", "7:00", "10:00", "20:00", "60:00");
+        List<String> txTimes = java.util.Arrays.asList("3:00", "5:00", "7:00", "10:00", "20:00", "60:00", "\u221E");
         
         rxAdapter = new android.widget.ArrayAdapter<String>(activity, android.R.layout.simple_spinner_item, rxTimes) {
             @Override
@@ -374,7 +374,7 @@ public class GameController {
 
         btnTxPlay.setOnClickListener(v -> {
             String sel = (String) spinnerTxTime.getSelectedItem();
-            gameTimeLimit = Integer.parseInt(sel.split(":")[0]) * 60;
+            gameTimeLimit = "\u221E".equals(sel) ? 0 : Integer.parseInt(sel.split(":")[0]) * 60;
             isRxMode = false;
             isKochMode = false;
             gameMenuLayout.setVisibility(View.GONE);

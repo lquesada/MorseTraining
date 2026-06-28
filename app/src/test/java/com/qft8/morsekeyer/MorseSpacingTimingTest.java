@@ -114,6 +114,17 @@ public class MorseSpacingTimingTest {
     }
 
     @Test
+    public void testSpacing_500Percent() {
+        settings.wpm = 15;
+        settings.strict = false;
+        settings.interletterSpacing = 500;
+        settings.interwordSpacing = 500;
+
+        performSingleDitAndVerifyTimings(80.0, 80.0, 1200L, 2800L);
+    }
+
+
+    @Test
     public void testSpacing_50Percent() {
         settings.wpm = 15;
         settings.strict = false;

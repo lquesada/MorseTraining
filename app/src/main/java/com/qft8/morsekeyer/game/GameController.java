@@ -1041,12 +1041,7 @@ public class GameController {
                     }
                 }
             };
-            android.content.SharedPreferences prefs = activity.getSharedPreferences("morseKeyerSettings", android.content.Context.MODE_PRIVATE);
-            int wpm = getIntSafe(prefs, "wpm", 15);
-            boolean strict = prefs.getBoolean("strict", true);
-            int iws = getIntSafe(prefs, "interwordSpacing", 100);
-            double iwsFactor = strict ? 1.0 : (iws / 100.0);
-            long delayMs = (long) (7.0 * iwsFactor * (1200.0 / wpm));
+            long delayMs = 1000;
             gameHandler.postDelayed(rxGreenDelayRunnable, delayMs);
         } else {
             if (isKochMode && !rxErrorState) {
@@ -1103,6 +1098,11 @@ public class GameController {
             } else {
                 showQuitDialog();
             }
+            return true;
+        }
+        if (kochLevelLayout != null && kochLevelLayout.getVisibility() == android.view.View.VISIBLE) {
+            kochLevelLayout.setVisibility(android.view.View.GONE);
+            gameMenuLayout.setVisibility(android.view.View.VISIBLE);
             return true;
         }
         if (gameMenuLayout != null && gameMenuLayout.getVisibility() == android.view.View.VISIBLE) {
@@ -1691,11 +1691,7 @@ public class GameController {
                     }
                 };
                 
-                int wpm = getIntSafe(prefs, "wpm", 15);
-                boolean strict = prefs.getBoolean("strict", true);
-                int iws = getIntSafe(prefs, "interwordSpacing", 100);
-                double iwsFactor = strict ? 1.0 : (iws / 100.0);
-                long delayMs = (long) (7.0 * iwsFactor * (1200.0 / wpm));
+                long delayMs = 500;
                 
                 setRxActionBtnEnabled(false);
                 gameHandler.postDelayed(rxPlayRunnable, delayMs);

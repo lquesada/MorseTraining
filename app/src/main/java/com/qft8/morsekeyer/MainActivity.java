@@ -838,7 +838,7 @@ public class MainActivity extends Activity {
         LinearLayout ilRow = hRow();
         ilRow.setPadding(dp(16), 0, 0, 0);
         dlgSeekInterletterSpacing = new SeekBar(this);
-        dlgSeekInterletterSpacing.setMax(190); // 10 to 200
+        dlgSeekInterletterSpacing.setMax(490); // 10 to 500
         dlgSeekInterletterSpacing.setLayoutParams(new LinearLayout.LayoutParams(0, -2, 1));
         dlgTxtInterletterSpacing = new TextView(this);
         dlgTxtInterletterSpacing.setTextColor(C_TEXT);
@@ -865,7 +865,7 @@ public class MainActivity extends Activity {
         LinearLayout isRow = hRow();
         isRow.setPadding(dp(16), 0, 0, 0);
         dlgSeekInterwordSpacing = new SeekBar(this);
-        dlgSeekInterwordSpacing.setMax(190); // 10 to 200
+        dlgSeekInterwordSpacing.setMax(490); // 10 to 500
         dlgSeekInterwordSpacing.setLayoutParams(new LinearLayout.LayoutParams(0, -2, 1));
         dlgTxtInterwordSpacing = new TextView(this);
         dlgTxtInterwordSpacing.setTextColor(C_TEXT);
@@ -1451,10 +1451,10 @@ public class MainActivity extends Activity {
             settings.tableRatio = (int)v;
             applyOrientation();
         });
-        setupClickableLabel(dlgTxtInterletterSpacing, 10, 200, false, v -> {
+        setupClickableLabel(dlgTxtInterletterSpacing, 10, 500, false, v -> {
             settings.interletterSpacing = (int)v;
         });
-        setupClickableLabel(dlgTxtInterwordSpacing, 10, 200, false, v -> {
+        setupClickableLabel(dlgTxtInterwordSpacing, 10, 500, false, v -> {
             settings.interwordSpacing = (int)v;
         });
 

@@ -26,7 +26,7 @@ public class MorseAdvancedLogicTest {
         assertTrue(settings.strict);
         assertEquals(15, settings.wpm);
         assertEquals(100, settings.interletterSpacing);
-        assertEquals(75, settings.interwordSpacing);
+        assertEquals(100, settings.interwordSpacing);
         assertTrue(settings.showNextWordIndicator);
         assertEquals(600, settings.tone);
     }

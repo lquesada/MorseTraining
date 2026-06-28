@@ -29,7 +29,7 @@ public class MorseSettings {
     public boolean showTableCodes = true;
     public boolean showPaddles = true;
     public int interletterSpacing = 100;
-    public int interwordSpacing = 75;
+    public int interwordSpacing = 100;
     public boolean showNextWordIndicator = true;
     public String letterColor = "green";
     public int fontSize = 35;
@@ -101,7 +101,7 @@ public class MorseSettings {
         showTableCodes = getBooleanSafe(prefs, "showTableCodes", true);
         showPaddles = getBooleanSafe(prefs, "showPaddles", true);
         interletterSpacing = getIntSafe(prefs, "interletterSpacing", 100);
-        interwordSpacing = getIntSafe(prefs, "interwordSpacing", 75);
+        interwordSpacing = getIntSafe(prefs, "interwordSpacing", 100);
         showNextWordIndicator = getBooleanSafe(prefs, "showNextWordIndicator", true);
         letterColor = getStringSafe(prefs, "letterColor", "green");
         fontSize = getIntSafe(prefs, "fontSize", 35);
@@ -214,7 +214,7 @@ public class MorseSettings {
         showTableCodes = true;
         showPaddles = true;
         interletterSpacing = 100;
-        interwordSpacing = 75;
+        interwordSpacing = 100;
         showNextWordIndicator = true;
         letterColor = "green";
         fontSize = 35;

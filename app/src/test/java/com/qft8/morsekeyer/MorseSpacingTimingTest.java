@@ -246,4 +246,56 @@ public class MorseSpacingTimingTest {
         assertFalse("isTransmitting should be false after silenceEnd", state.isTransmitting);
         assertFalse("iambicScheduled should be false after silenceEnd", state.iambicScheduled);
     }
+
+    @Test
+    public void testPlayTextSpacing_CustomSpacing() {
+        settings.wpm = 15; // 1 dit = 80ms
+        settings.strict = false;
+        settings.interletterSpacing = 200; // letterGap = 480ms
+        settings.interwordSpacing = 200;   // wordGap = 1120ms
+
+        keyer.playText("A B", null);
+
+        // 1st element: playElement (dit of A)
+        ArgumentCaptor<Double> toneCaptor = ArgumentCaptor.forClass(Double.class);
+        ArgumentCaptor<Double> silenceCaptor = ArgumentCaptor.forClass(Double.class);
+        ArgumentCaptor<Runnable> toneEndCaptor = ArgumentCaptor.forClass(Runnable.class);
+        ArgumentCaptor<Runnable> silenceEndCaptor = ArgumentCaptor.forClass(Runnable.class);
+
+        verify(toneEngine, times(1)).playElement(
+                toneCaptor.capture(), silenceCaptor.capture(),
+                toneEndCaptor.capture(), silenceEndCaptor.capture());
+        
+        assertEquals(80.0, toneCaptor.getValue(), 0.001);
+        assertEquals(80.0, silenceCaptor.getValue(), 0.001);
+
+        // Fire toneEnd of 1st element -> triggers queuing of 2nd element
+        toneEndCaptor.getValue().run();
+
+        // 2nd element: queueNextElement (dah of A with wordGap = 1120ms)
+        ArgumentCaptor<Double> queueToneCaptor1 = ArgumentCaptor.forClass(Double.class);
+        ArgumentCaptor<Double> queueSilenceCaptor1 = ArgumentCaptor.forClass(Double.class);
+        ArgumentCaptor<Runnable> queueToneEndCaptor1 = ArgumentCaptor.forClass(Runnable.class);
+
+        verify(toneEngine, times(1)).queueNextElement(
+                queueToneCaptor1.capture(), queueSilenceCaptor1.capture(),
+                any(Runnable.class), queueToneEndCaptor1.capture(), any(Runnable.class));
+
+        assertEquals(240.0, queueToneCaptor1.getValue(), 0.001);
+        assertEquals(1120.0, queueSilenceCaptor1.getValue(), 0.001);
+
+        // Fire toneEnd of 2nd element -> triggers queuing of 3rd element
+        queueToneEndCaptor1.getValue().run();
+
+        // 3rd element: queueNextElement (dah of B)
+        ArgumentCaptor<Double> queueToneCaptor2 = ArgumentCaptor.forClass(Double.class);
+        ArgumentCaptor<Double> queueSilenceCaptor2 = ArgumentCaptor.forClass(Double.class);
+
+        verify(toneEngine, times(2)).queueNextElement(
+                queueToneCaptor2.capture(), queueSilenceCaptor2.capture(),
+                any(Runnable.class), any(Runnable.class), any(Runnable.class));
+
+        assertEquals(240.0, queueToneCaptor2.getAllValues().get(1), 0.001);
+        assertEquals(80.0, queueSilenceCaptor2.getAllValues().get(1), 0.001);
+    }
 }

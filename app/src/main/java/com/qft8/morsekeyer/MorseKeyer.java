@@ -216,7 +216,7 @@ public class MorseKeyer {
         state.isSequencePlaying = true;
         sequenceCompleteCallback = onComplete;
         
-        final double[] timings = getTransmissionTimings();
+        final double[] timings = getRecognitionTimings();
         sequenceElements = new java.util.ArrayList<>();
         
         String upperText = text.toUpperCase(java.util.Locale.US);
@@ -227,7 +227,7 @@ public class MorseKeyer {
             if (ch.equals(" ")) {
                 if (!sequenceElements.isEmpty()) {
                     double[] last = sequenceElements.get(sequenceElements.size() - 1);
-                    last[1] = timings[4] - timings[2]; // Replace element gap with word gap
+                    last[1] = timings[4]; // Replace letter gap with word gap
                 }
                 continue;
             }
@@ -252,9 +252,6 @@ public class MorseKeyer {
             // Replace last element gap with letter gap
             if (!sequenceElements.isEmpty()) {
                 double[] last = sequenceElements.get(sequenceElements.size() - 1);
-                last[1] = timings[3] - timings[2]; 
-                // timings[3] is letterGap which is 3 dits. 
-                // wait, if we replace the element gap (1) with letter gap (3), it should be timings[3], not timings[3] - timings[2] if we assign it directly.
                 last[1] = timings[3];
             }
         }

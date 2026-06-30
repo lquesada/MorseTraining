@@ -1600,6 +1600,11 @@ public class MainActivity extends Activity {
                 .setPositiveButton(LanguageManager.get(SAVE), null)
                 .setNeutralButton(LanguageManager.get(RESET_DEFAULTS), null)
                 .create();
+        settingsDialog.setOnDismissListener(dialog -> {
+            if (gameController != null) {
+                gameController.updateLanguage();
+            }
+        });
         settingsDialog.show();
 
         Button btnSave = settingsDialog.getButton(AlertDialog.BUTTON_POSITIVE);

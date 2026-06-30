@@ -1,5 +1,6 @@
 # Gradle
 .gradle/
+.gradle_home/
 build/
 app/build/
 local.properties
@@ -27,3 +28,4 @@ Thumbs.db
 # Misc
 *.zip
 *.tar.gz
+/com/

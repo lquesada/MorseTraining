@@ -16,8 +16,6 @@ public class LangKn extends MorseLanguage {
         set(WPM_SPEED, "ವೇಗ (WPM)");
         set(INVERSE_PADDLES, "ಪ್ಯಾಡಲ್‌ಗಳನ್ನು ಬದಲಾಯಿಸಿ");
         set(STRICT_TIMING, "ಕಟ್ಟುನಿಟ್ಟಾದ ಸಮಯ");
-        set(INTERLETTER_SPACING, "ಅಕ್ಷರಗಳ ನಡುವಿನ ಅಂತರ");
-        set(INTERWORD_SPACING, "ಪದಗಳ ನಡುವಿನ ಅಂತರ");
         
         set(FREQUENCY, "ಫ್ರೀಕ್ವೆನ್ಸಿ");
         set(VOLUME, "ವಾಲ್ಯೂಮ್");
@@ -126,8 +124,13 @@ set(TARGET_MET, "ಗುರಿ ತಲುಪಿದೆ");
         set(RESET_PROGRESS_CONFIRM, "ಪ್ರಗತಿಯನ್ನು ಮರುಹೊಂದಿಸಲು ನೀವು ಖಚಿತವೇ?");
         set(RESET, "ಮರುಹೊಂದಿಸಿ");
             set(WPM, "WPM​");
-        set(SPACING, "ಅಂತರ");
         set(BACK, "ಹಿಂದೆ");
         set(NEXT_LEVEL, "ಮುಂದಿನ ಹಂತ");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "ಪರಿಣಾಮಕಾರಿ WPM (ಫಾರ್ನ್ಸ್‌ವರ್ತ್)");
+                set(EXTRA_WORD_SPACING, "ಹೆಚ್ಚುವರಿ ಪದ ಅಂತರ");
+                set(EFFECTIVE_WPM_SHORT, "ಪರಿಣಾಮಕಾರಿ");
+
+                set(WORD_SPACING_ADD, "ಪದ +");
     }
 }

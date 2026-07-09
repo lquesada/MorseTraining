@@ -16,8 +16,6 @@ public class LangPa extends MorseLanguage {
         set(WPM_SPEED, "ਰਫਤਾਰ (WPM)");
         set(INVERSE_PADDLES, "ਪੈਡਲ ਉਲਟਾ ਕਰੋ");
         set(STRICT_TIMING, "ਸਖਤ ਟਾਈਮਿੰਗ");
-        set(INTERLETTER_SPACING, "ਅੱਖਰਾਂ ਵਿਚਕਾਰ ਵਿੱਥ");
-        set(INTERWORD_SPACING, "ਸ਼ਬਦਾਂ ਵਿਚਕਾਰ ਵਿੱਥ");
         
         set(FREQUENCY, "ਫ੍ਰੀਕੁਐਂਸੀ");
         set(VOLUME, "ਆਵਾਜ਼");
@@ -126,8 +124,13 @@ set(TARGET_MET, "ਟੀਚਾ ਪੂਰਾ ਹੋਇਆ");
         set(RESET_PROGRESS_CONFIRM, "ਕੀ ਤੁਸੀਂ ਤਰੱਕੀ ਰੀਸੈਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?");
         set(RESET, "ਰੀਸੈਟ ਕਰੋ");
             set(WPM, "WPM​");
-        set(SPACING, "ਵਿੱਥ");
         set(BACK, "ਪਿੱਛੇ");
         set(NEXT_LEVEL, "ਅਗਲਾ ਪੱਧਰ");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "ਪ੍ਰਭਾਵਸ਼ਾਲੀ ਡਬਲਯੂਪੀਐਮ (ਫਾਰਨਸਵਰਥ)");
+                set(EXTRA_WORD_SPACING, "ਵਾਧੂ ਸ਼ਬਦ ਵਿੱਥ");
+                set(EFFECTIVE_WPM_SHORT, "ਪ੍ਰਭਾਵਸ਼ਾਲੀ");
+
+                set(WORD_SPACING_ADD, "ਸ਼ਬਦ +");
     }
 }

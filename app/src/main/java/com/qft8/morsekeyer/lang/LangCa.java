@@ -16,8 +16,6 @@ public class LangCa extends MorseLanguage {
         set(WPM_SPEED, "Velocitat (WPM)");
         set(INVERSE_PADDLES, "Inverteix les pales");
         set(STRICT_TIMING, "Temporització estricta");
-        set(INTERLETTER_SPACING, "Espaiat entre lletres");
-        set(INTERWORD_SPACING, "Espaiat entre paraules");
 
         set(FREQUENCY, "Freqüència");
         set(VOLUME, "Volum");
@@ -126,8 +124,13 @@ set(TARGET_MET, "Objectiu assolit");
         set(RESET_PROGRESS_CONFIRM, "Estàs segur que vols restablir el progrés?");
         set(RESET, "Restableix");
             set(WPM, "WPM​");
-        set(SPACING, "Espaiat");
         set(BACK, "Enrere");
         set(NEXT_LEVEL, "Següent nivell");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "WPM efectiu (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Espai addicional de paraula");
+                set(EFFECTIVE_WPM_SHORT, "Efectiu");
+
+                set(WORD_SPACING_ADD, "Paraula +");
     }
 }

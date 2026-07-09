@@ -16,8 +16,6 @@ public class LangYue extends MorseLanguage {
         set(WPM_SPEED, "速度 (WPM)");
         set(INVERSE_PADDLES, "反轉撥片");
         set(STRICT_TIMING, "嚴格時序");
-        set(INTERLETTER_SPACING, "字母間距");
-        set(INTERWORD_SPACING, "單詞間距");
         
         set(FREQUENCY, "頻率");
         set(VOLUME, "音量");
@@ -133,8 +131,13 @@ set(TARGET_MET, "目標達到");
         set(RESET_PROGRESS_CONFIRM, "你確定要重置進度？");
         set(RESET, "重置");
             set(WPM, "WPM");
-        set(SPACING, "間距");
         set(BACK, "返去");
         set(NEXT_LEVEL, "下一關");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "有效 WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "額外單詞間距");
+                set(EFFECTIVE_WPM_SHORT, "有效");
+
+                set(WORD_SPACING_ADD, "單詞 +");
     }
 }

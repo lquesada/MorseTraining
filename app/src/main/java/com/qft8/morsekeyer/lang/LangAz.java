@@ -16,8 +16,6 @@ public class LangAz extends MorseLanguage {
         set(WPM_SPEED, "Sürət (WPM)");
         set(INVERSE_PADDLES, "Paddles yerini dəyiş");
         set(STRICT_TIMING, "Dəqiq vaxt");
-        set(INTERLETTER_SPACING, "Hərflər arası məsafə");
-        set(INTERWORD_SPACING, "Sözlər arası məsafə");
         
         set(FREQUENCY, "Tezlik");
         set(VOLUME, "Səs səviyyəsi");
@@ -126,8 +124,13 @@ set(TARGET_MET, "Hədəfə çatıldı");
         set(RESET_PROGRESS_CONFIRM, "Sıfırlamaq istədiyinizə əminsiniz?");
         set(RESET, "Sıfırla");
             set(WPM, "WPM​");
-        set(SPACING, "Aralıq");
         set(BACK, "Geri");
         set(NEXT_LEVEL, "Növbəti səviyyə");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "Effektiv WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Əlavə söz məsafəsi");
+                set(EFFECTIVE_WPM_SHORT, "Effektiv");
+
+                set(WORD_SPACING_ADD, "Söz +");
     }
 }

@@ -16,8 +16,6 @@ public class LangTh extends MorseLanguage {
         set(WPM_SPEED, "ความเร็ว (WPM)");
         set(INVERSE_PADDLES, "สลับด้านคันเคาะ");
         set(STRICT_TIMING, "จังหวะเข้มงวด");
-        set(INTERLETTER_SPACING, "ระยะห่างระหว่างตัวอักษร");
-        set(INTERWORD_SPACING, "ระยะห่างระหว่างคำ");
         
         set(FREQUENCY, "ความถี่");
         set(VOLUME, "ระดับเสียง");
@@ -133,8 +131,13 @@ set(TARGET_MET, "บรรลุเป้าหมาย");
         set(RESET_PROGRESS_CONFIRM, "แน่ใจหรือไม่ว่าต้องการรีเซ็ตความคืบหน้า?");
         set(RESET, "รีเซ็ต");
             set(WPM, "WPM​");
-        set(SPACING, "ระยะห่าง");
         set(BACK, "กลับ");
         set(NEXT_LEVEL, "ด่านต่อไป");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "WPM ที่มีผลจริง (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "ระยะห่างคำพิเศษ");
+                set(EFFECTIVE_WPM_SHORT, "ผลจริง");
+
+                set(WORD_SPACING_ADD, "คำ +");
     }
 }

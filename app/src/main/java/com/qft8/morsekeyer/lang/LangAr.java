@@ -16,8 +16,6 @@ public class LangAr extends MorseLanguage {
         set(WPM_SPEED, "السرعة (كلمة في الدقيقة)");
         set(INVERSE_PADDLES, "عكس المجاذيف");
         set(STRICT_TIMING, "توقيت صارم");
-        set(INTERLETTER_SPACING, "تباعد الأحرف");
-        set(INTERWORD_SPACING, "تباعد الكلمات");
         
         set(FREQUENCY, "التردد");
         set(VOLUME, "مستوى الصوت");
@@ -133,8 +131,13 @@ set(TARGET_MET, "تم تحقيق الهدف");
         set(RESET_PROGRESS_CONFIRM, "هل أنت متأكد أنك تريد إعادة ضبط التقدم؟");
         set(RESET, "إعادة ضبط");
             set(WPM, "كلمة/د");
-        set(SPACING, "التباعد");
         set(BACK, "رجوع");
         set(NEXT_LEVEL, "المستوى التالي");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "السرعة الفعلية (فارنسورث)");
+                set(EXTRA_WORD_SPACING, "مسافة إضافية بين الكلمات");
+                set(EFFECTIVE_WPM_SHORT, "الفعلية");
+
+                set(WORD_SPACING_ADD, "كلمة +");
     }
 }

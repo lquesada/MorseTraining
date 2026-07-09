@@ -16,8 +16,6 @@ public class LangTl extends MorseLanguage {
         set(WPM_SPEED, "Bilis (WPM)");
         set(INVERSE_PADDLES, "I-baligtad ang mga paddle");
         set(STRICT_TIMING, "Mahigpit na timing");
-        set(INTERLETTER_SPACING, "Patlang sa pagitan ng mga titik");
-        set(INTERWORD_SPACING, "Patlang sa pagitan ng mga salita");
         
         set(FREQUENCY, "Dalas");
         set(VOLUME, "Lakas ng tunog");
@@ -133,8 +131,13 @@ set(TARGET_MET, "Naabot ang target");
         set(RESET_PROGRESS_CONFIRM, "Sigurado ka bang gusto mong i-reset ang pag-unlad?");
         set(RESET, "I-reset");
             set(WPM, "WPM");
-        set(SPACING, "Espasyo");
         set(BACK, "Bumalik");
         set(NEXT_LEVEL, "Susunod na antas");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "Epektibong WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Karagdagang espasyo ng salita");
+                set(EFFECTIVE_WPM_SHORT, "Epektibo");
+
+                set(WORD_SPACING_ADD, "Salita +");
     }
 }

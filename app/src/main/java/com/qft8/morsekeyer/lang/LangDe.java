@@ -16,8 +16,6 @@ public class LangDe extends MorseLanguage {
         set(WPM_SPEED, "Geschwindigkeit (WPM)");
         set(INVERSE_PADDLES, "Paddles vertauschen");
         set(STRICT_TIMING, "Striktes Timing");
-        set(INTERLETTER_SPACING, "Buchstabenabstand");
-        set(INTERWORD_SPACING, "Wortabstand");
         
         set(FREQUENCY, "Frequenz");
         set(VOLUME, "Lautstärke");
@@ -133,8 +131,13 @@ set(TARGET_MET, "Ziel erreicht");
         set(RESET_PROGRESS_CONFIRM, "Bist du sicher, dass du den Fortschritt zurücksetzen möchtest?");
         set(RESET, "Zurücksetzen");
             set(WPM, "WPM​");
-        set(SPACING, "Abstand");
         set(BACK, "Zurück");
         set(NEXT_LEVEL, "Nächste Stufe");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "Effektive WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Zusätzlicher Wortabstand");
+                set(EFFECTIVE_WPM_SHORT, "Effektiv");
+
+                set(WORD_SPACING_ADD, "Wort +");
     }
 }

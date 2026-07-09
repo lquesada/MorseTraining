@@ -16,8 +16,6 @@ public class LangYo extends MorseLanguage {
         set(WPM_SPEED, "Ìyá (WPM)");
         set(INVERSE_PADDLES, "Yí bọtini padà");
         set(STRICT_TIMING, "Àkókò gangan");
-        set(INTERLETTER_SPACING, "Ààyè láàrin lẹ́tà");
-        set(INTERWORD_SPACING, "Ààyè láàrin ọ̀rọ̀");
         
         set(FREQUENCY, "Ìgbàgbọ́");
         set(VOLUME, "Ìró");
@@ -126,8 +124,13 @@ set(TARGET_MET, "Àfojúsùn ti tẹ́lọrùn");
         set(RESET_PROGRESS_CONFIRM, "Ṣé o dá ọ lójú pé o fẹ́ tún bẹ̀rẹ̀?");
         set(RESET, "Tún bẹ̀rẹ̀");
             set(WPM, "WPM​");
-        set(SPACING, "Aaye");
         set(BACK, "Pada");
         set(NEXT_LEVEL, "Ipele ti o tele");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "WPM to munadoko (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Alafo ọrọ afikun");
+                set(EFFECTIVE_WPM_SHORT, "Munadoko");
+
+                set(WORD_SPACING_ADD, "Ọrọ +");
     }
 }

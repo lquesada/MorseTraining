@@ -16,8 +16,6 @@ public class LangEs extends MorseLanguage {
                 set(WPM_SPEED, "Velocidad (WPM)");
                 set(INVERSE_PADDLES, "Invertir palas");
                 set(STRICT_TIMING, "Temporización estricta");
-                set(INTERLETTER_SPACING, "Espaciado entre letras");
-                set(INTERWORD_SPACING, "Espaciado entre palabras");
 
                 set(FREQUENCY, "Frecuencia");
                 set(VOLUME, "Volumen");
@@ -137,8 +135,13 @@ set(TARGET_MET, "Objetivo cumplido");
         set(RESET_PROGRESS_CONFIRM, "¿Estás seguro de que deseas restablecer el progreso?");
         set(RESET, "Restablecer");
             set(WPM, "PPM");
-        set(SPACING, "Espaciado");
         set(BACK, "Atrás");
         set(NEXT_LEVEL, "Siguiente nivel");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "WPM efectivo (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Espacio de palabra extra");
+                set(EFFECTIVE_WPM_SHORT, "Efectivo");
+
+                set(WORD_SPACING_ADD, "Palabra +");
     }
 }

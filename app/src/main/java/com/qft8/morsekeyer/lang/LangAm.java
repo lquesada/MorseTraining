@@ -16,8 +16,6 @@ public class LangAm extends MorseLanguage {
         set(WPM_SPEED, "ፍጥነት (WPM)");
         set(INVERSE_PADDLES, "ቀኝና ግራ ቀይር");
         set(STRICT_TIMING, "ትክክለኛ ሰዓት");
-        set(INTERLETTER_SPACING, "በፊደላት መካከል ያለው ክፍተት");
-        set(INTERWORD_SPACING, "በቃላት መካከል ያለው ክፍተት");
         
         set(FREQUENCY, "ድግግሞሽ (Frequency)");
         set(VOLUME, "ድምጽ መጠን");
@@ -133,8 +131,13 @@ set(TARGET_MET, "ዒላማ ተሳክቷል");
         set(RESET_PROGRESS_CONFIRM, "እድገትን ዳግም ማስጀመር እርግጠኛ ነዎት?");
         set(RESET, "ዳግም አስጀምር");
             set(WPM, "WPM​");
-        set(SPACING, "ክፍተት");
         set(BACK, "ተመለስ");
         set(NEXT_LEVEL, "ቀጣይ ደረጃ");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "ውጤታማ WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "ተጨማሪ የቃል ክፍተት");
+                set(EFFECTIVE_WPM_SHORT, "ውጤታማ");
+
+                set(WORD_SPACING_ADD, "ቃል +");
     }
 }

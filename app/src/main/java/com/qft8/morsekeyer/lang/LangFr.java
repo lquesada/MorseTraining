@@ -16,8 +16,6 @@ public class LangFr extends MorseLanguage {
         set(WPM_SPEED, "Vitesse (WPM)");
         set(INVERSE_PADDLES, "Inverser les palettes");
         set(STRICT_TIMING, "Temporisation stricte");
-        set(INTERLETTER_SPACING, "Espacement des lettres");
-        set(INTERWORD_SPACING, "Espacement des mots");
         
         set(FREQUENCY, "Fréquence");
         set(VOLUME, "Volume");
@@ -133,8 +131,13 @@ set(TARGET_MET, "Objectif atteint");
         set(RESET_PROGRESS_CONFIRM, "Êtes-vous sûr de vouloir réinitialiser la progression ?");
         set(RESET, "Réinitialiser");
             set(WPM, "MPM");
-        set(SPACING, "Espacement");
         set(BACK, "Retour");
         set(NEXT_LEVEL, "Niveau suivant");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "WPM effectif (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Espacement supplémentaire des mots");
+                set(EFFECTIVE_WPM_SHORT, "Effectif");
+
+                set(WORD_SPACING_ADD, "Mot +");
     }
 }

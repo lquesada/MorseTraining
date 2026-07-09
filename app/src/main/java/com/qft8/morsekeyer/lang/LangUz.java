@@ -16,8 +16,6 @@ public class LangUz extends MorseLanguage {
         set(WPM_SPEED, "Tezlik (WPM)");
         set(INVERSE_PADDLES, "Pedallarni almashtirish");
         set(STRICT_TIMING, "Qat'iy vaqt");
-        set(INTERLETTER_SPACING, "Harflar aro masofa");
-        set(INTERWORD_SPACING, "So'zlar aro masofa");
         
         set(FREQUENCY, "Chastota");
         set(VOLUME, "Ovoz balandligi");
@@ -126,8 +124,13 @@ set(TARGET_MET, "Maqsadga erishildi");
         set(RESET_PROGRESS_CONFIRM, "Jarayonni qayta tiklashga ishonchingiz komilmi?");
         set(RESET, "Qayta tiklash");
             set(WPM, "WPM​");
-        set(SPACING, "Oraliği");
         set(BACK, "Orqaga");
         set(NEXT_LEVEL, "Keyingi bosqich");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "Samarali WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Qo'shimcha so'z masofasi");
+                set(EFFECTIVE_WPM_SHORT, "Samarali");
+
+                set(WORD_SPACING_ADD, "So'z +");
     }
 }

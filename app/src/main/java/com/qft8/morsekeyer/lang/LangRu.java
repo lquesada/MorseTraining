@@ -16,8 +16,6 @@ public class LangRu extends MorseLanguage {
         set(WPM_SPEED, "Скорость (WPM)");
         set(INVERSE_PADDLES, "Инверсия рычагов");
         set(STRICT_TIMING, "Строгие интервалы");
-        set(INTERLETTER_SPACING, "Межбуквенный интервал");
-        set(INTERWORD_SPACING, "Межсловный интервал");
         
         set(FREQUENCY, "Частота");
         set(VOLUME, "Громкость");
@@ -133,8 +131,13 @@ set(TARGET_MET, "Цель достигнута");
         set(RESET_PROGRESS_CONFIRM, "Вы уверены, что хотите сбросить прогресс?");
         set(RESET, "Сбросить");
             set(WPM, "WPM​");
-        set(SPACING, "Интервал");
         set(BACK, "Назад");
         set(NEXT_LEVEL, "Следующий уровень");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "Эффективная скорость (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Дополнительный интервал слов");
+                set(EFFECTIVE_WPM_SHORT, "Эффективная");
+
+                set(WORD_SPACING_ADD, "Слово +");
     }
 }

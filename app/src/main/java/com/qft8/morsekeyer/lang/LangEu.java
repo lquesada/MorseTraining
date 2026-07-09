@@ -16,8 +16,6 @@ public class LangEu extends MorseLanguage {
         set(WPM_SPEED, "Abiadura (WPM)");
         set(INVERSE_PADDLES, "Alderantzikatu palak");
         set(STRICT_TIMING, "Denbora zorrotza");
-        set(INTERLETTER_SPACING, "Letra arteko tartea");
-        set(INTERWORD_SPACING, "Hitz arteko tartea");
         
         set(FREQUENCY, "Maiztasuna");
         set(VOLUME, "Bolumena");
@@ -126,8 +124,13 @@ set(TARGET_MET, "Helburua lortuta");
         set(RESET_PROGRESS_CONFIRM, "Ziur zaude progresioa berrezarri nahi duzula?");
         set(RESET, "Berrezarri");
             set(WPM, "WPM​");
-        set(SPACING, "Tartea");
         set(BACK, "Atzera");
         set(NEXT_LEVEL, "Hurrengo maila");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "WPM eraginkorra (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Hitz tarte gehigarria");
+                set(EFFECTIVE_WPM_SHORT, "Eraginkorra");
+
+                set(WORD_SPACING_ADD, "Hitz +");
     }
 }

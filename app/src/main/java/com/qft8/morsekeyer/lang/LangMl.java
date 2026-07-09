@@ -16,8 +16,6 @@ public class LangMl extends MorseLanguage {
         set(WPM_SPEED, "വേഗത (WPM)");
         set(INVERSE_PADDLES, "പാഡിലുകൾ മാറ്റുക");
         set(STRICT_TIMING, "കൃത്യമായ ടൈമിംഗ്");
-        set(INTERLETTER_SPACING, "അക്ഷരങ്ങൾക്കിടയിലുള്ള സ്ഥലം");
-        set(INTERWORD_SPACING, "വാക്കുകൾക്കിടയിലുള്ള സ്ഥലം");
         
         set(FREQUENCY, "ഫ്രീക്വൻസി");
         set(VOLUME, "ശബ്ദം");
@@ -126,8 +124,13 @@ set(TARGET_MET, "ലക്ഷ്യം നേടി");
         set(RESET_PROGRESS_CONFIRM, "പുരോഗതി പുനഃസജ്ജമാക്കണമെന്ന് ഉറപ്പാണോ?");
         set(RESET, "പുനഃസജ്ജമാക്കുക");
             set(WPM, "WPM​");
-        set(SPACING, "അകലം");
         set(BACK, "പിന്നിലേക്ക്");
         set(NEXT_LEVEL, "അടുത്ത ഘട്ടം");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "ഫലപ്രദമായ ഡബ്ല്യുപിഎം (ഫാൺസ്വർത്ത്)");
+                set(EXTRA_WORD_SPACING, "അധിക വാക്ക് അകലം");
+                set(EFFECTIVE_WPM_SHORT, "ഫലപ്രദമായ");
+
+                set(WORD_SPACING_ADD, "വാക്ക് +");
     }
 }

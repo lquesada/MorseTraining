@@ -16,8 +16,6 @@ public class LangBn extends MorseLanguage {
         set(WPM_SPEED, "গতি (WPM)");
         set(INVERSE_PADDLES, "প্যাডেল উল্টান");
         set(STRICT_TIMING, "কঠোর টাইমিং");
-        set(INTERLETTER_SPACING, "অক্ষরের ব্যবধান");
-        set(INTERWORD_SPACING, "শব্দের ব্যবধান");
         
         set(FREQUENCY, "ফ্রিকোয়েন্সি");
         set(VOLUME, "ভলিউম");
@@ -133,8 +131,13 @@ set(TARGET_MET, "লক্ষ্য পূরণ হয়েছে");
         set(RESET_PROGRESS_CONFIRM, "আপনি কি অগ্রগতি রিসেট করতে চান?");
         set(RESET, "রিসেট করুন");
             set(WPM, "WPM​");
-        set(SPACING, "ব্যবধান");
         set(BACK, "ফিরে যান");
         set(NEXT_LEVEL, "পরবর্তী স্তর");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "কার্যকর ডব্লিউপিএম (ফার্নসওয়ার্থ)");
+                set(EXTRA_WORD_SPACING, "অতিরিক্ত শব্দ ব্যবধান");
+                set(EFFECTIVE_WPM_SHORT, "কার্যকর");
+
+                set(WORD_SPACING_ADD, "শব্দ +");
     }
 }

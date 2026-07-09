@@ -16,8 +16,6 @@ public class LangRo extends MorseLanguage {
         set(WPM_SPEED, "Viteză (WPM)");
         set(INVERSE_PADDLES, "Inversează padelele");
         set(STRICT_TIMING, "Temporizare strictă");
-        set(INTERLETTER_SPACING, "Spațiere între litere");
-        set(INTERWORD_SPACING, "Spațiere între cuvinte");
         
         set(FREQUENCY, "Frecvență");
         set(VOLUME, "Volum");
@@ -133,8 +131,13 @@ set(TARGET_MET, "Țintă atinsă");
         set(RESET_PROGRESS_CONFIRM, "Sigur vrei să resetezi progresul?");
         set(RESET, "Resetează");
             set(WPM, "WPM​");
-        set(SPACING, "Spațiere");
         set(BACK, "Înapoi");
         set(NEXT_LEVEL, "Nivelul următor");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "WPM efectiv (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Spațiu suplimentar între cuvinte");
+                set(EFFECTIVE_WPM_SHORT, "Efectiv");
+
+                set(WORD_SPACING_ADD, "Cuvânt +");
     }
 }

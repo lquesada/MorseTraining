@@ -16,8 +16,6 @@ public class LangCs extends MorseLanguage {
         set(WPM_SPEED, "Rychlost (WPM)");
         set(INVERSE_PADDLES, "Inverzní pádla");
         set(STRICT_TIMING, "Přesné časování");
-        set(INTERLETTER_SPACING, "Mezera mezi písmeny");
-        set(INTERWORD_SPACING, "Mezera mezi slovy");
         
         set(FREQUENCY, "Frekvence");
         set(VOLUME, "Hlasitost");
@@ -126,8 +124,13 @@ set(TARGET_MET, "Cíl splněn");
         set(RESET_PROGRESS_CONFIRM, "Opravdu chcete resetovat postup?");
         set(RESET, "Resetovat");
             set(WPM, "WPM​");
-        set(SPACING, "Mezery");
         set(BACK, "Zpět");
         set(NEXT_LEVEL, "Další úroveň");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "Efektivní WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Extra mezera mezi slovy");
+                set(EFFECTIVE_WPM_SHORT, "Efektivní");
+
+                set(WORD_SPACING_ADD, "Slovo +");
     }
 }

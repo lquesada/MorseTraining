@@ -16,8 +16,6 @@ public class LangPt extends MorseLanguage {
         set(WPM_SPEED, "Velocidade (WPM)");
         set(INVERSE_PADDLES, "Inverter palhetas");
         set(STRICT_TIMING, "Temporização estrita");
-        set(INTERLETTER_SPACING, "Espaçamento entre letras");
-        set(INTERWORD_SPACING, "Espaçamento entre palavras");
         
         set(FREQUENCY, "Frequência");
         set(VOLUME, "Volume");
@@ -133,8 +131,13 @@ set(TARGET_MET, "Alvo atingido");
         set(RESET_PROGRESS_CONFIRM, "Tem certeza de que deseja redefinir o progresso?");
         set(RESET, "Redefinir");
             set(WPM, "WPM​");
-        set(SPACING, "Espaçamento");
         set(BACK, "Voltar");
         set(NEXT_LEVEL, "Próximo nível");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "WPM efetivo (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Espaçamento extra de palavras");
+                set(EFFECTIVE_WPM_SHORT, "Efetivo");
+
+                set(WORD_SPACING_ADD, "Palavra +");
     }
 }

@@ -16,8 +16,6 @@ public class LangGu extends MorseLanguage {
         set(WPM_SPEED, "ઝડપ (WPM)");
         set(INVERSE_PADDLES, "પેડલ્સ ઉલટાવો");
         set(STRICT_TIMING, "કડક સમય");
-        set(INTERLETTER_SPACING, "અક્ષરો વચ્ચેની જગ્યા");
-        set(INTERWORD_SPACING, "શબ્દો વચ્ચેની જગ્યા");
         
         set(FREQUENCY, "ફ્રીક્વન્સી");
         set(VOLUME, "વોલ્યુમ");
@@ -126,8 +124,13 @@ set(TARGET_MET, "લક્ષ્ય પ્રાપ્ત");
         set(RESET_PROGRESS_CONFIRM, "શું તમે પ્રગતિ રીસેટ કરવા માંગો છો?");
         set(RESET, "રીસેટ કરો");
             set(WPM, "WPM​");
-        set(SPACING, "અંતર");
         set(BACK, "પાછળ");
         set(NEXT_LEVEL, "આગળનું સ્તર");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "અસરકારક ડબ્લ્યુપીએમ (ફાર્ન્સવર્થ)");
+                set(EXTRA_WORD_SPACING, "વધારાની શબ્દ જગ્યા");
+                set(EFFECTIVE_WPM_SHORT, "અસરકારક");
+
+                set(WORD_SPACING_ADD, "શબ્દ +");
     }
 }

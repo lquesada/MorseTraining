@@ -16,8 +16,6 @@ public class LangHu extends MorseLanguage {
         set(WPM_SPEED, "Sebesség (WPM)");
         set(INVERSE_PADDLES, "Fordított paddle-ök");
         set(STRICT_TIMING, "Szigorú időzítés");
-        set(INTERLETTER_SPACING, "Betűköz");
-        set(INTERWORD_SPACING, "Szóköz");
         
         set(FREQUENCY, "Frekvencia");
         set(VOLUME, "Hangerő");
@@ -133,8 +131,13 @@ set(TARGET_MET, "Cél elérve");
         set(RESET_PROGRESS_CONFIRM, "Biztosan vissza akarja állítani a haladást?");
         set(RESET, "Visszaállítás");
             set(WPM, "WPM​");
-        set(SPACING, "Térköz");
         set(BACK, "Vissza");
         set(NEXT_LEVEL, "Következő szint");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "Effektív WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Extra szóköz");
+                set(EFFECTIVE_WPM_SHORT, "Effektív");
+
+                set(WORD_SPACING_ADD, "Szó +");
     }
 }

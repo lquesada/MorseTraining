@@ -10,7 +10,7 @@ public class KochWordGenerator {
     public static String generateWord(int level, int wordIndex) {
         int length = wordIndex < LENGTHS.length ? LENGTHS[wordIndex] : 5;
         
-        String newChar = KochLevelSelectView.KOCH_CHARS[level - 1];
+        String newChar = KochLevelSelectView.KOCH_CHARS[level];
         
         StringBuilder sb = new StringBuilder();
         int newCharPos = random.nextInt(length);
@@ -19,7 +19,7 @@ public class KochWordGenerator {
             if (i == newCharPos) {
                 sb.append(newChar);
             } else {
-                int rndLevel = random.nextInt(level);
+                int rndLevel = random.nextInt(level + 1);
                 sb.append(KochLevelSelectView.KOCH_CHARS[rndLevel]);
             }
         }

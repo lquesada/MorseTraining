@@ -19,8 +19,6 @@ public class LangEn extends MorseLanguage {
                 set(WPM_SPEED, "WPM speed");
                 set(INVERSE_PADDLES, "Inverse paddles");
                 set(STRICT_TIMING, "Strict timing");
-                set(INTERLETTER_SPACING, "Interletter spacing");
-                set(INTERWORD_SPACING, "Interword spacing");
 
                 // --- AUDIO ---
                 set(FREQUENCY, "Frequency");
@@ -165,8 +163,13 @@ set(TARGET_MET, "TARGET MET");
         set(RESET_PROGRESS_CONFIRM, "Are you sure you want to reset progress?");
         set(RESET, "Reset");
         set(WPM, "WPM");
-        set(SPACING, "Spacing");
         set(BACK, "Back");
         set(NEXT_LEVEL, "Next Level");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "Effective WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Extra word spacing");
+                set(EFFECTIVE_WPM_SHORT, "Effective");
+
+                set(WORD_SPACING_ADD, "Word +");
     }
 }

@@ -329,7 +329,7 @@
                 android:id="@+id/game_menu_koch_levels"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Levels completed: 0/40"
+                android:text="Levels completed: 0/41"
                 android:textColor="#888888"
                 android:textSize="15sp"
                 android:textStyle="bold"

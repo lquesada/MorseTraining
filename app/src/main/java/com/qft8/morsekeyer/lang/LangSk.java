@@ -16,8 +16,6 @@ public class LangSk extends MorseLanguage {
         set(WPM_SPEED, "Rýchlosť WPM");
         set(INVERSE_PADDLES, "Inverzné pádla");
         set(STRICT_TIMING, "Prísne načasovanie");
-        set(INTERLETTER_SPACING, "Medzera medzi písmenami");
-        set(INTERWORD_SPACING, "Medzera medzi slovami");
         
         set(FREQUENCY, "Frekvencia");
         set(VOLUME, "Hlasitosť");
@@ -132,8 +130,13 @@ set(TARGET_MET, "Cieľ splnený");
         set(RESET_PROGRESS_CONFIRM, "Naozaj chcete resetovať postup?");
         set(RESET, "Resetovať");
             set(WPM, "WPM​");
-        set(SPACING, "Medzery");
         set(BACK, "Späť");
         set(NEXT_LEVEL, "Ďalšia úroveň");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "Efektívne WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Extra medzera medzi slovami");
+                set(EFFECTIVE_WPM_SHORT, "Efektívne");
+
+                set(WORD_SPACING_ADD, "Slovo +");
     }
 }

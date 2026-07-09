@@ -16,8 +16,6 @@ public class LangPl extends MorseLanguage {
         set(WPM_SPEED, "Prędkość (WPM)");
         set(INVERSE_PADDLES, "Odwróć łopatki");
         set(STRICT_TIMING, "Rygorystyczny timing");
-        set(INTERLETTER_SPACING, "Odstęp między literami");
-        set(INTERWORD_SPACING, "Odstęp między słowami");
         
         set(FREQUENCY, "Częstotliwość");
         set(VOLUME, "Głośność");
@@ -133,8 +131,13 @@ set(TARGET_MET, "Cel osiągnięty");
         set(RESET_PROGRESS_CONFIRM, "Czy na pewno chcesz zresetować postęp?");
         set(RESET, "Zresetuj");
             set(WPM, "WPM​");
-        set(SPACING, "Odstępy");
         set(BACK, "Wstecz");
         set(NEXT_LEVEL, "Następny poziom");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "Efektywne WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Dodatkowy odstęp między słowami");
+                set(EFFECTIVE_WPM_SHORT, "Efektywne");
+
+                set(WORD_SPACING_ADD, "Słowo +");
     }
 }

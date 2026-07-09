@@ -16,8 +16,6 @@ public class LangIt extends MorseLanguage {
         set(WPM_SPEED, "Velocità (WPM)");
         set(INVERSE_PADDLES, "Inverti palette");
         set(STRICT_TIMING, "Timing rigoroso");
-        set(INTERLETTER_SPACING, "Spaziatura tra lettere");
-        set(INTERWORD_SPACING, "Spaziatura tra parole");
         
         set(FREQUENCY, "Frequenza");
         set(VOLUME, "Volume");
@@ -133,8 +131,13 @@ set(TARGET_MET, "Obiettivo raggiunto");
         set(RESET_PROGRESS_CONFIRM, "Sei sicuro di voler ripristinare i progressi?");
         set(RESET, "Ripristina");
             set(WPM, "WPM​");
-        set(SPACING, "Spaziatura");
         set(BACK, "Indietro");
         set(NEXT_LEVEL, "Livello successivo");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "WPM effettivo (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Spaziatura parole extra");
+                set(EFFECTIVE_WPM_SHORT, "Effettivo");
+
+                set(WORD_SPACING_ADD, "Parola +");
     }
 }

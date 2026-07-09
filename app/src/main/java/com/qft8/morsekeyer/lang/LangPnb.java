@@ -16,8 +16,6 @@ public class LangPnb extends MorseLanguage {
         set(WPM_SPEED, "رفتار (WPM)");
         set(INVERSE_PADDLES, "پیڈل الٹ کرو");
         set(STRICT_TIMING, "سخت ٹائمنگ");
-        set(INTERLETTER_SPACING, "حرفاں وچکار تھاں");
-        set(INTERWORD_SPACING, "لفظاں وچکار تھاں");
         
         set(FREQUENCY, "فریکوئنسی");
         set(VOLUME, "آواز");
@@ -125,8 +123,13 @@ set(TARGET_MET, "ہدف حاصل ہو گیا");
         set(RESET_PROGRESS_CONFIRM, "کیا آپ پیشرفت ری سیٹ کرنا چاہتے ہیں؟");
         set(RESET, "ری سیٹ کریں");
             set(WPM, "WPM");
-        set(SPACING, "فاصلہ");
         set(BACK, "پچھے");
         set(NEXT_LEVEL, "اگلا درجہ");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "موثر ڈبلیو پی ایم (فارنس ورتھ)");
+                set(EXTRA_WORD_SPACING, "ਵਾਧੂ ਸ਼ਬਦ ਵਿੱਥ");
+                set(EFFECTIVE_WPM_SHORT, "موثر");
+
+                set(WORD_SPACING_ADD, "ਸ਼ਬਦ +");
     }
 }

@@ -16,8 +16,6 @@ public class LangSv extends MorseLanguage {
         set(WPM_SPEED, "Hastighet (WPM)");
         set(INVERSE_PADDLES, "Inverterade paddlar");
         set(STRICT_TIMING, "Strikt timing");
-        set(INTERLETTER_SPACING, "Bokstavsavstånd");
-        set(INTERWORD_SPACING, "Ordavstånd");
         
         set(FREQUENCY, "Frekvens");
         set(VOLUME, "Volym");
@@ -133,8 +131,13 @@ set(TARGET_MET, "Mål uppnått");
         set(RESET_PROGRESS_CONFIRM, "Är du säker på att du vill återställa framstegen?");
         set(RESET, "Återställ");
             set(WPM, "WPM​");
-        set(SPACING, "Avstånd");
         set(BACK, "Tillbaka");
         set(NEXT_LEVEL, "Nästa nivå");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "Effektiv WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Extra ordmellanrum");
+                set(EFFECTIVE_WPM_SHORT, "Effektiv");
+
+                set(WORD_SPACING_ADD, "Ord +");
     }
 }

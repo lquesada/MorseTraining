@@ -16,8 +16,6 @@ public class LangHi extends MorseLanguage {
         set(WPM_SPEED, "गति (WPM)");
         set(INVERSE_PADDLES, "पैडल को उल्टा करें");
         set(STRICT_TIMING, "सख्त समय (Strict Timing)");
-        set(INTERLETTER_SPACING, "अक्षरों के बीच रिक्ति");
-        set(INTERWORD_SPACING, "शब्दों के बीच रिक्ति");
         
         set(FREQUENCY, "आवृत्ति");
         set(VOLUME, "वॉल्यूम");
@@ -133,8 +131,13 @@ set(TARGET_MET, "लक्ष्य पूरा हुआ");
         set(RESET_PROGRESS_CONFIRM, "क्या आप वाकई प्रगति रीसेट करना चाहते हैं?");
         set(RESET, "रीसेट करें");
             set(WPM, "WPM​");
-        set(SPACING, "अंतर");
         set(BACK, "वापस");
         set(NEXT_LEVEL, "अगला स्तर");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "प्रभावी डब्ल्यूपीएम (फार्न्सवर्थ)");
+                set(EXTRA_WORD_SPACING, "अतिरिक्त शब्द रिक्ति");
+                set(EFFECTIVE_WPM_SHORT, "प्रभावी");
+
+                set(WORD_SPACING_ADD, "शब्द +");
     }
 }

@@ -16,8 +16,6 @@ public class LangNl extends MorseLanguage {
         set(WPM_SPEED, "WPM-snelheid");
         set(INVERSE_PADDLES, "Omgekeerde paddles");
         set(STRICT_TIMING, "Strikte timing");
-        set(INTERLETTER_SPACING, "Afstand tussen letters");
-        set(INTERWORD_SPACING, "Afstand tussen woorden");
         
         set(FREQUENCY, "Frequentie");
         set(VOLUME, "Volume");
@@ -132,8 +130,13 @@ set(TARGET_MET, "Doel bereikt");
         set(RESET_PROGRESS_CONFIRM, "Weet u zeker dat u de voortgang wilt resetten?");
         set(RESET, "Resetten");
             set(WPM, "WPM​");
-        set(SPACING, "Afstand");
         set(BACK, "Terug");
         set(NEXT_LEVEL, "Volgend niveau");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "Effectieve WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Extra woordtussenruimte");
+                set(EFFECTIVE_WPM_SHORT, "Effectieve");
+
+                set(WORD_SPACING_ADD, "Woord +");
     }
 }

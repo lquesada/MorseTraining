@@ -16,8 +16,6 @@ public class LangJv extends MorseLanguage {
         set(WPM_SPEED, "Kacepetan (WPM)");
         set(INVERSE_PADDLES, "Walik Pedal");
         set(STRICT_TIMING, "Wektu Ketat");
-        set(INTERLETTER_SPACING, "Jarak Antar Aksara");
-        set(INTERWORD_SPACING, "Jarak Antar Tembung");
         
         set(FREQUENCY, "Frekuensi");
         set(VOLUME, "Volume");
@@ -126,8 +124,13 @@ set(TARGET_MET, "Target digayuh");
         set(RESET_PROGRESS_CONFIRM, "Sampeyan yakin arep ngreset kemajuan?");
         set(RESET, "Reset");
             set(WPM, "WPM​");
-        set(SPACING, "Spasi");
         set(BACK, "Mundur");
         set(NEXT_LEVEL, "Tingkat sabanjuré");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "WPM Efektif (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Spasi tembung ekstra");
+                set(EFFECTIVE_WPM_SHORT, "Efektif");
+
+                set(WORD_SPACING_ADD, "Tembung +");
     }
 }

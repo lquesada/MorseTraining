@@ -47,6 +47,8 @@ public class MorseSettings {
     public String language = "system";
     public String keyboardType = "QWERTY";
     public boolean pickLangThemeOnShare = false;
+    public int effectiveWpm = 15;
+    public int extraWordSpacing = 0;
 
     public Map<String, String> decoderChoices = new HashMap<>();
 
@@ -137,6 +139,21 @@ public class MorseSettings {
         }
         
         pickLangThemeOnShare = getBooleanSafe(prefs, "pickLangThemeOnShare", false);
+        
+        if (!prefs.contains("effectiveWpm")) {
+            effectiveWpm = Math.min(wpm, Math.max(3, (int) Math.round(100.0 * wpm / interletterSpacing)));
+            needsSave = true;
+        } else {
+            effectiveWpm = getIntSafe(prefs, "effectiveWpm", wpm);
+        }
+        
+        if (!prefs.contains("extraWordSpacing")) {
+            extraWordSpacing = Math.min(2000, Math.max(0, (int) Math.round((84.0 * interwordSpacing / wpm) - (8400.0 / effectiveWpm))));
+            needsSave = true;
+        } else {
+            extraWordSpacing = getIntSafe(prefs, "extraWordSpacing", 0);
+        }
+        updateDerivedSpacingSettings();
 
         String choicesStr = getStringSafe(prefs, "decoderChoices", "{}");
         decoderChoices.clear();
@@ -155,6 +172,7 @@ public class MorseSettings {
     }
 
     public void save(Context ctx) {
+        updateDerivedSpacingSettings();
         SharedPreferences prefs = ctx.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit()
             .putString("mode", mode)
@@ -186,7 +204,9 @@ public class MorseSettings {
             .putBoolean("keepScreenOn", keepScreenOn)
             .putString("language", language)
             .putString("keyboardType", keyboardType)
-            .putBoolean("pickLangThemeOnShare", pickLangThemeOnShare);
+            .putBoolean("pickLangThemeOnShare", pickLangThemeOnShare)
+            .putInt("effectiveWpm", effectiveWpm)
+            .putInt("extraWordSpacing", extraWordSpacing);
 
         String choicesStr = "{}";
         try {
@@ -232,7 +252,25 @@ public class MorseSettings {
         language = "system";
         keyboardType = guessKeyboardType(language);
         pickLangThemeOnShare = false;
+        effectiveWpm = 15;
+        extraWordSpacing = 0;
         decoderChoices.clear();
+    }
+
+    public void updateDerivedSpacingSettings() {
+        if (strict) {
+            interletterSpacing = 100;
+            interwordSpacing = 100;
+            return;
+        }
+        if (effectiveWpm > wpm) {
+            effectiveWpm = wpm;
+        }
+        if (effectiveWpm < 3) {
+            effectiveWpm = 3;
+        }
+        interletterSpacing = (int) Math.round(100.0 * wpm / effectiveWpm);
+        interwordSpacing = (int) Math.round((100.0 * wpm / effectiveWpm) + (wpm * extraWordSpacing / 84.0));
     }
 
     private String guessKeyboardType(String langSetting) {

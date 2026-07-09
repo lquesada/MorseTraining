@@ -16,8 +16,6 @@ public class LangEo extends MorseLanguage {
         set(WPM_SPEED, "Rapideco (VPM)");
         set(INVERSE_PADDLES, "Inversigi padelejojn");
         set(STRICT_TIMING, "Strikta tempado");
-        set(INTERLETTER_SPACING, "Interlitera spacado");
-        set(INTERWORD_SPACING, "Intervorta spacado");
         
         set(FREQUENCY, "Frekvenco");
         set(VOLUME, "Laŭteco");
@@ -133,8 +131,13 @@ set(TARGET_MET, "Celo atingita");
         set(RESET_PROGRESS_CONFIRM, "Ĉu vi certas restarigi progreson?");
         set(RESET, "Restarigi");
             set(WPM, "WPM​");
-        set(SPACING, "Interspaco");
         set(BACK, "Reen");
         set(NEXT_LEVEL, "Sekva nivelo");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "Efektiva WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Kroma vortspaco");
+                set(EFFECTIVE_WPM_SHORT, "Efektiva");
+
+                set(WORD_SPACING_ADD, "Vorto +");
     }
 }

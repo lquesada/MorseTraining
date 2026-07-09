@@ -81,13 +81,19 @@ public class MainActivity extends Activity {
     private String[] settingsLangKeys;
     private Button dlgWpmMinus, dlgWpmPlus;
     private TextView dlgTxtWpm, dlgTxtFreq, dlgTxtVol, dlgTxtBuffer, dlgTxtEnvelope, dlgTxtChunk;
-    private TextView dlgTxtFontSize, dlgTxtTableFontSize, dlgTxtTableRatio, dlgTxtInterletterSpacing, dlgTxtInterwordSpacing;
-    private TextView dlgLblInterletterSpacing, dlgLblInterwordSpacing;
+    private TextView dlgTxtFontSize, dlgTxtTableFontSize, dlgTxtTableRatio;
     private TextView dlgLblWhiteNoiseVol, dlgLblWhiteNoiseFreq;
     private TextView dlgTxtWhiteNoiseVol, dlgTxtWhiteNoiseFreq;
     private SeekBar dlgSeekFreq, dlgSeekVol, dlgSeekBuffer, dlgSeekEnvelope, dlgSeekChunk;
-    private SeekBar dlgSeekFontSize, dlgSeekTableFontSize, dlgSeekTableRatio, dlgSeekInterletterSpacing, dlgSeekInterwordSpacing;
+    private SeekBar dlgSeekFontSize, dlgSeekTableFontSize, dlgSeekTableRatio;
     private SeekBar dlgSeekWhiteNoiseVol, dlgSeekWhiteNoiseFreq;
+
+    private TextView dlgLblEffectiveWpm, dlgLblExtraWordSpacing;
+    private Button dlgEffectiveWpmMinus, dlgEffectiveWpmPlus;
+    private TextView dlgTxtEffectiveWpm, dlgTxtExtraWordSpacing;
+    private SeekBar dlgSeekExtraWordSpacing;
+    private LinearLayout effWpmRow, extraWordSpacingRow;
+
     private AlertDialog settingsDialog;
     private Map<String, Spinner> dlgDecoderSpinners = new HashMap<>();
 
@@ -832,53 +838,73 @@ public class MainActivity extends Activity {
             syncSettingsDialog();
         });
 
-        // Interletter spacing (inside mode)
-        dlgLblInterletterSpacing = subLabel(INTERLETTER_SPACING);
-        root.addView(dlgLblInterletterSpacing);
-        LinearLayout ilRow = hRow();
-        ilRow.setPadding(dp(16), 0, 0, 0);
-        dlgSeekInterletterSpacing = new SeekBar(this);
-        dlgSeekInterletterSpacing.setMax(490); // 10 to 500
-        dlgSeekInterletterSpacing.setLayoutParams(new LinearLayout.LayoutParams(0, -2, 1));
-        dlgTxtInterletterSpacing = new TextView(this);
-        dlgTxtInterletterSpacing.setTextColor(C_TEXT);
-        dlgTxtInterletterSpacing.setGravity(Gravity.CENTER);
-        dlgTxtInterletterSpacing.setLayoutParams(new LinearLayout.LayoutParams(dp(60), -2));
-        ilRow.addView(dlgSeekInterletterSpacing);
-        ilRow.addView(dlgTxtInterletterSpacing);
-        root.addView(ilRow);
-        dlgSeekInterletterSpacing.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                if (!fromUser) return;
-                settings.interletterSpacing = 10 + progress;
-                dlgTxtInterletterSpacing.setText(settings.interletterSpacing + "%");
-            }
-            @Override public void onStartTrackingTouch(SeekBar seekBar) {}
-            @Override public void onStopTrackingTouch(SeekBar seekBar) {
-                settings.save(MainActivity.this);
-            }
-        });
+        // Effective WPM (Farnsworth)
+        dlgLblEffectiveWpm = subLabel(EFFECTIVE_WPM_FARNSWORTH);
+        dlgLblEffectiveWpm.setPadding(dp(32), 0, 0, dp(8));
+        root.addView(dlgLblEffectiveWpm);
+        
+        effWpmRow = hRow();
+        effWpmRow.setGravity(Gravity.CENTER_VERTICAL);
+        LinearLayout.LayoutParams effWpmLp = (LinearLayout.LayoutParams) effWpmRow.getLayoutParams();
+        effWpmLp.setMargins(dp(32), 0, 0, 0);
+        effWpmRow.setLayoutParams(effWpmLp);
+        
+        dlgEffectiveWpmMinus = togBtn("\u2212");
+        dlgEffectiveWpmPlus = togBtn("+");
+        dlgEffectiveWpmMinus.setBackgroundTintList(android.content.res.ColorStateList.valueOf(0xFF555555));
+        dlgEffectiveWpmPlus.setBackgroundTintList(android.content.res.ColorStateList.valueOf(0xFF555555));
+        dlgEffectiveWpmMinus.setTextSize(18);
+        dlgEffectiveWpmPlus.setTextSize(18);
+        dlgEffectiveWpmMinus.setPadding(0, 0, 0, 0);
+        dlgEffectiveWpmPlus.setPadding(0, 0, 0, 0);
 
-        // Interword spacing (inside mode)
-        dlgLblInterwordSpacing = subLabel(INTERWORD_SPACING);
-        root.addView(dlgLblInterwordSpacing);
-        LinearLayout isRow = hRow();
-        isRow.setPadding(dp(16), 0, 0, 0);
-        dlgSeekInterwordSpacing = new SeekBar(this);
-        dlgSeekInterwordSpacing.setMax(490); // 10 to 500
-        dlgSeekInterwordSpacing.setLayoutParams(new LinearLayout.LayoutParams(0, -2, 1));
-        dlgTxtInterwordSpacing = new TextView(this);
-        dlgTxtInterwordSpacing.setTextColor(C_TEXT);
-        dlgTxtInterwordSpacing.setGravity(Gravity.CENTER);
-        dlgTxtInterwordSpacing.setLayoutParams(new LinearLayout.LayoutParams(dp(60), -2));
-        isRow.addView(dlgSeekInterwordSpacing);
-        isRow.addView(dlgTxtInterwordSpacing);
-        root.addView(isRow);
-        dlgSeekInterwordSpacing.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        LinearLayout.LayoutParams effBtnLp = new LinearLayout.LayoutParams(dp(42), dp(42));
+        effBtnLp.setMargins(0, 0, dp(10), dp(10));
+        dlgEffectiveWpmMinus.setLayoutParams(effBtnLp);
+        dlgEffectiveWpmPlus.setLayoutParams(effBtnLp);
+
+        dlgTxtEffectiveWpm = new TextView(this);
+        dlgTxtEffectiveWpm.setTextColor(C_TEXT);
+        dlgTxtEffectiveWpm.setTextSize(15);
+        dlgTxtEffectiveWpm.setTypeface(null, Typeface.BOLD);
+        dlgTxtEffectiveWpm.setGravity(Gravity.CENTER);
+        LinearLayout.LayoutParams effTxtLp = new LinearLayout.LayoutParams(dp(46), dp(42));
+        effTxtLp.setMargins(0, 0, dp(10), dp(10));
+        dlgTxtEffectiveWpm.setLayoutParams(effTxtLp);
+        
+        effWpmRow.addView(dlgEffectiveWpmMinus);
+        effWpmRow.addView(dlgTxtEffectiveWpm);
+        effWpmRow.addView(dlgEffectiveWpmPlus);
+        root.addView(effWpmRow);
+        
+        setupEffectiveWpmBtn(dlgEffectiveWpmMinus, -1);
+        setupEffectiveWpmBtn(dlgEffectiveWpmPlus, 1);
+        
+        // Extra word spacing (Farnsworth)
+        dlgLblExtraWordSpacing = subLabel(EXTRA_WORD_SPACING);
+        dlgLblExtraWordSpacing.setPadding(dp(32), 0, 0, dp(8));
+        root.addView(dlgLblExtraWordSpacing);
+        
+        extraWordSpacingRow = hRow();
+        extraWordSpacingRow.setPadding(dp(32), 0, 0, 0);
+        dlgSeekExtraWordSpacing = new SeekBar(this);
+        dlgSeekExtraWordSpacing.setMax(2000);
+        dlgSeekExtraWordSpacing.setLayoutParams(new LinearLayout.LayoutParams(0, -2, 1));
+        
+        dlgTxtExtraWordSpacing = new TextView(this);
+        dlgTxtExtraWordSpacing.setTextColor(C_TEXT);
+        dlgTxtExtraWordSpacing.setGravity(Gravity.CENTER);
+        dlgTxtExtraWordSpacing.setLayoutParams(new LinearLayout.LayoutParams(dp(60), -2));
+        
+        extraWordSpacingRow.addView(dlgSeekExtraWordSpacing);
+        extraWordSpacingRow.addView(dlgTxtExtraWordSpacing);
+        root.addView(extraWordSpacingRow);
+        
+        dlgSeekExtraWordSpacing.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if (!fromUser) return;
-                settings.interwordSpacing = 10 + progress;
-                dlgTxtInterwordSpacing.setText(settings.interwordSpacing + "%");
+                settings.extraWordSpacing = progress;
+                dlgTxtExtraWordSpacing.setText(settings.extraWordSpacing + " ms");
             }
             @Override public void onStartTrackingTouch(SeekBar seekBar) {}
             @Override public void onStopTrackingTouch(SeekBar seekBar) {
@@ -1451,11 +1477,15 @@ public class MainActivity extends Activity {
             settings.tableRatio = (int)v;
             applyOrientation();
         });
-        setupClickableLabel(dlgTxtInterletterSpacing, 10, 500, false, v -> {
-            settings.interletterSpacing = (int)v;
+        setupClickableLabel(dlgTxtEffectiveWpm, 3, settings.wpm, false, v -> {
+            settings.effectiveWpm = (int)v;
+            settings.save(this);
+            syncSettingsDialog();
         });
-        setupClickableLabel(dlgTxtInterwordSpacing, 10, 500, false, v -> {
-            settings.interwordSpacing = (int)v;
+        setupClickableLabel(dlgTxtExtraWordSpacing, 0, 2000, false, v -> {
+            settings.extraWordSpacing = (int)v;
+            settings.save(this);
+            syncSettingsDialog();
         });
 
         // Decoder behavior
@@ -1791,19 +1821,37 @@ public class MainActivity extends Activity {
         dlgSeekTableRatio.setProgress(settings.tableRatio - 20);
         dlgTxtTableRatio.setText(settings.tableRatio + "%");
 
-        dlgSeekInterletterSpacing.setProgress((settings.strict ? 100 : settings.interletterSpacing) - 10);
-        dlgTxtInterletterSpacing.setText(settings.strict ? "100%" : (settings.interletterSpacing + "%"));
-        dlgSeekInterletterSpacing.setEnabled(!settings.strict);
-        dlgSeekInterletterSpacing.setAlpha(settings.strict ? 0.4f : 1.0f);
-        dlgTxtInterletterSpacing.setAlpha(settings.strict ? 0.4f : 1.0f);
-        if (dlgLblInterletterSpacing != null) dlgLblInterletterSpacing.setAlpha(settings.strict ? 0.4f : 1.0f);
+        int effWpm = settings.strict ? settings.wpm : settings.effectiveWpm;
+        int extraSpc = settings.strict ? 0 : settings.extraWordSpacing;
 
-        dlgSeekInterwordSpacing.setProgress((settings.strict ? 100 : settings.interwordSpacing) - 10);
-        dlgTxtInterwordSpacing.setText(settings.strict ? "100%" : (settings.interwordSpacing + "%"));
-        dlgSeekInterwordSpacing.setEnabled(!settings.strict);
-        dlgSeekInterwordSpacing.setAlpha(settings.strict ? 0.4f : 1.0f);
-        dlgTxtInterwordSpacing.setAlpha(settings.strict ? 0.4f : 1.0f);
-        if (dlgLblInterwordSpacing != null) dlgLblInterwordSpacing.setAlpha(settings.strict ? 0.4f : 1.0f);
+        if (dlgTxtEffectiveWpm != null) {
+            dlgTxtEffectiveWpm.setText(String.valueOf(effWpm));
+            dlgTxtEffectiveWpm.setAlpha(settings.strict ? 0.4f : 1.0f);
+        }
+        if (dlgEffectiveWpmMinus != null) {
+            dlgEffectiveWpmMinus.setEnabled(!settings.strict);
+            dlgEffectiveWpmMinus.setAlpha(settings.strict ? 0.4f : 1.0f);
+        }
+        if (dlgEffectiveWpmPlus != null) {
+            dlgEffectiveWpmPlus.setEnabled(!settings.strict);
+            dlgEffectiveWpmPlus.setAlpha(settings.strict ? 0.4f : 1.0f);
+        }
+        if (dlgLblEffectiveWpm != null) {
+            dlgLblEffectiveWpm.setAlpha(settings.strict ? 0.4f : 1.0f);
+        }
+
+        if (dlgSeekExtraWordSpacing != null) {
+            dlgSeekExtraWordSpacing.setProgress(extraSpc);
+            dlgSeekExtraWordSpacing.setEnabled(!settings.strict);
+            dlgSeekExtraWordSpacing.setAlpha(settings.strict ? 0.4f : 1.0f);
+        }
+        if (dlgTxtExtraWordSpacing != null) {
+            dlgTxtExtraWordSpacing.setText(extraSpc + " ms");
+            dlgTxtExtraWordSpacing.setAlpha(settings.strict ? 0.4f : 1.0f);
+        }
+        if (dlgLblExtraWordSpacing != null) {
+            dlgLblExtraWordSpacing.setAlpha(settings.strict ? 0.4f : 1.0f);
+        }
 
         dlgSeekBuffer.setProgress((int) (settings.bufferMs - 5));
         dlgTxtBuffer.setText(String.format("%.0f ms", settings.bufferMs));
@@ -1867,6 +1915,40 @@ public class MainActivity extends Activity {
 
     private void updateWpm(int delta) {
         settings.wpm = Math.max(1, Math.min(60, settings.wpm + delta));
+        settings.save(this);
+        syncSettingsDialog();
+    }
+
+    private void setupEffectiveWpmBtn(Button btn, int delta) {
+        btn.setBackgroundTintList(android.content.res.ColorStateList.valueOf(C_UTL));
+        btn.setTextColor(C_TEXT);
+        btn.setOnTouchListener((v, event) -> {
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    updateEffectiveWpm(delta);
+                    wpmHandler.postDelayed(() -> {
+                        Runnable r = new Runnable() {
+                            @Override
+                            public void run() {
+                                updateEffectiveWpm(delta);
+                                wpmHandler.postDelayed(this, 120);
+                            }
+                        };
+                        wpmHandler.post(r);
+                    }, 180);
+                    return true;
+                case MotionEvent.ACTION_UP:
+                case MotionEvent.ACTION_CANCEL:
+                    wpmHandler.removeCallbacksAndMessages(null);
+                    return true;
+            }
+            return false;
+        });
+    }
+
+    private void updateEffectiveWpm(int delta) {
+        int maxEff = Math.max(3, settings.wpm);
+        settings.effectiveWpm = Math.max(3, Math.min(maxEff, settings.effectiveWpm + delta));
         settings.save(this);
         syncSettingsDialog();
     }
@@ -2599,10 +2681,14 @@ public class MainActivity extends Activity {
     private void setupClickableLabel(TextView tv, float min, float max, boolean isFloat, ValueSetter setter) {
         tv.setOnClickListener(v -> {
             if (v.getAlpha() < 1.0f) return;
+            float currentMax = max;
+            if (tv == dlgTxtEffectiveWpm) {
+                currentMax = settings.wpm;
+            }
             AlertDialog.Builder builder = new AlertDialog.Builder(this, getDialogTheme());
             String title = "Enter value";
-            if (isFloat) title += String.format(" (%.1f - %.1f)", min, max);
-            else title += String.format(" (%d - %d)", (int)min, (int)max);
+            if (isFloat) title += String.format(" (%.1f - %.1f)", min, currentMax);
+            else title += String.format(" (%d - %d)", (int)min, (int)currentMax);
             builder.setTitle(title);
 
             final android.widget.EditText input = new android.widget.EditText(this);
@@ -2619,10 +2705,11 @@ public class MainActivity extends Activity {
             container.addView(input, lp);
             builder.setView(container);
 
+            final float finalMax = currentMax;
             builder.setPositiveButton("OK", (dialog, which) -> {
                 try {
                     float val = Float.parseFloat(input.getText().toString());
-                    if (val >= min && val <= max) {
+                    if (val >= min && val <= finalMax) {
                         setter.set(val);
                         settings.save(this);
                         syncSettingsDialog();

@@ -16,8 +16,6 @@ public class LangFa extends MorseLanguage {
         set(WPM_SPEED, "سرعت (WPM)");
         set(INVERSE_PADDLES, "معکوس کردن پدال‌ها");
         set(STRICT_TIMING, "زمان‌بندی دقیق");
-        set(INTERLETTER_SPACING, "فاصله بین حروف");
-        set(INTERWORD_SPACING, "فاصله بین کلمات");
         
         set(FREQUENCY, "فرکانس");
         set(VOLUME, "میزان صدا");
@@ -133,8 +131,13 @@ set(TARGET_MET, "هدف محقق شد");
         set(RESET_PROGRESS_CONFIRM, "آیا از بازنشانی پیشرفت مطمئن هستید؟");
         set(RESET, "بازنشانی");
             set(WPM, "WPM​");
-        set(SPACING, "فاصله");
         set(BACK, "بازگشت");
         set(NEXT_LEVEL, "مرحله بعدی");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "سرعت موثر (فارنسورث)");
+                set(EXTRA_WORD_SPACING, "فاصله اضافی کلمات");
+                set(EFFECTIVE_WPM_SHORT, "موثر");
+
+                set(WORD_SPACING_ADD, "کلمه +");
     }
 }

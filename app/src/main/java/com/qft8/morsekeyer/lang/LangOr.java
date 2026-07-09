@@ -16,8 +16,6 @@ public class LangOr extends MorseLanguage {
         set(WPM_SPEED, "ବେଗ (WPM)");
         set(INVERSE_PADDLES, "ପ୍ୟାଡଲ୍ ଓଲଟାନ୍ତୁ");
         set(STRICT_TIMING, "କଠୋର ସମୟ");
-        set(INTERLETTER_SPACING, "ଅକ୍ଷର ମଧ୍ୟରେ ବ୍ୟବଧାନ");
-        set(INTERWORD_SPACING, "ଶବ୍ଦ ମଧ୍ୟରେ ବ୍ୟବଧାନ");
         
         set(FREQUENCY, "ଫ୍ରିକ୍ୱେନ୍ସି");
         set(VOLUME, "ଶବ୍ଦର ମାତ୍ରା");
@@ -126,8 +124,13 @@ set(TARGET_MET, "ଲକ୍ଷ୍ୟ ପୂରଣ ହୋଇଛି");
         set(RESET_PROGRESS_CONFIRM, "ଆପଣ ନିଶ୍ଚିତ କି ଆପଣ ପ୍ରଗତି ରିସେଟ୍ କରିବାକୁ ଚାହୁଁଛନ୍ତି?");
         set(RESET, "ରିସେଟ୍ କରନ୍ତୁ");
             set(WPM, "WPM​");
-        set(SPACING, "ବ୍ୟବଧାନ");
         set(BACK, "ପଛକୁ");
         set(NEXT_LEVEL, "ପରବର୍ତ୍ତୀ ସ୍ତର");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "ପ୍ରଭାବଶାଳୀ WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "ଅତିରିକ୍ତ ଶବ୍ଦ ବ୍ୟବଧାନ");
+                set(EFFECTIVE_WPM_SHORT, "ପ୍ରଭାବଶାଳୀ");
+
+                set(WORD_SPACING_ADD, "ଶব୍ਦ +");
     }
 }

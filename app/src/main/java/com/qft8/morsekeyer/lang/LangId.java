@@ -16,8 +16,6 @@ public class LangId extends MorseLanguage {
         set(WPM_SPEED, "Kecepatan (WPM)");
         set(INVERSE_PADDLES, "Balikkan Pedal");
         set(STRICT_TIMING, "Timing Ketat");
-        set(INTERLETTER_SPACING, "Jarak Antar Huruf");
-        set(INTERWORD_SPACING, "Jarak Antar Kata");
         
         set(FREQUENCY, "Frekuensi");
         set(VOLUME, "Volume");
@@ -133,8 +131,13 @@ set(TARGET_MET, "Target tercapai");
         set(RESET_PROGRESS_CONFIRM, "Anda yakin ingin mengatur ulang kemajuan?");
         set(RESET, "Atur ulang");
             set(WPM, "WPM​");
-        set(SPACING, "Spasi");
         set(BACK, "Kembali");
         set(NEXT_LEVEL, "Level berikutnya");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "WPM Efektif (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Spasi kata ekstra");
+                set(EFFECTIVE_WPM_SHORT, "Efektif");
+
+                set(WORD_SPACING_ADD, "Kata +");
     }
 }

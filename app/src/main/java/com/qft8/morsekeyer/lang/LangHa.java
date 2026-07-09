@@ -16,8 +16,6 @@ public class LangHa extends MorseLanguage {
         set(WPM_SPEED, "Sauri (WPM)");
         set(INVERSE_PADDLES, "Juya mazauna");
         set(STRICT_TIMING, "Lokaci mai kyau");
-        set(INTERLETTER_SPACING, "Filin tsakanin haruffa");
-        set(INTERWORD_SPACING, "Filin tsakanin kalmomi");
         
         set(FREQUENCY, "Maimaitawa");
         set(VOLUME, "Ƙarar murya");
@@ -133,8 +131,13 @@ set(TARGET_MET, "An cimma manufa");
         set(RESET_PROGRESS_CONFIRM, "Tabbas kana so ka sake saita ci gaba?");
         set(RESET, "Sake saita");
             set(WPM, "WPM​");
-        set(SPACING, "Tazarar");
         set(BACK, "Baya");
         set(NEXT_LEVEL, "Mataki na gaba");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "WPM mai inganci (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Karin tazarar kalmomi");
+                set(EFFECTIVE_WPM_SHORT, "Mai inganci");
+
+                set(WORD_SPACING_ADD, "Kalma +");
     }
 }

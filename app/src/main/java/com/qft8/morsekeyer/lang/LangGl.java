@@ -16,8 +16,6 @@ public class LangGl extends MorseLanguage {
         set(WPM_SPEED, "Velocidade (WPM)");
         set(INVERSE_PADDLES, "Inverter palas");
         set(STRICT_TIMING, "Temporización estrita");
-        set(INTERLETTER_SPACING, "Espazamento entre letras");
-        set(INTERWORD_SPACING, "Espazamento entre palabras");
         
         set(FREQUENCY, "Frecuencia");
         set(VOLUME, "Volume");
@@ -126,8 +124,13 @@ set(TARGET_MET, "Obxectivo acadado");
         set(RESET_PROGRESS_CONFIRM, "Estás seguro de que queres restablecer o progreso?");
         set(RESET, "Restablecer");
             set(WPM, "WPM​");
-        set(SPACING, "Espazamento");
         set(BACK, "Atrás");
         set(NEXT_LEVEL, "Seguinte nivel");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "WPM efectivo (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Espazado extra de palabras");
+                set(EFFECTIVE_WPM_SHORT, "Efectivo");
+
+                set(WORD_SPACING_ADD, "Palabra +");
     }
 }

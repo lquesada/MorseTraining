@@ -16,8 +16,6 @@ public class LangJa extends MorseLanguage {
         set(WPM_SPEED, "速度 (WPM)");
         set(INVERSE_PADDLES, "パドル反転");
         set(STRICT_TIMING, "厳密なタイミング");
-        set(INTERLETTER_SPACING, "文字間隔");
-        set(INTERWORD_SPACING, "単語間隔");
         
         set(FREQUENCY, "周波数");
         set(VOLUME, "音量");
@@ -133,8 +131,13 @@ set(TARGET_MET, "目標達成");
         set(RESET_PROGRESS_CONFIRM, "進捗をリセットしてもよろしいですか？");
         set(RESET, "リセット");
             set(WPM, "WPM​");
-        set(SPACING, "間隔");
         set(BACK, "戻る");
         set(NEXT_LEVEL, "次のレベル");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "実効WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "追加の単語スペース");
+                set(EFFECTIVE_WPM_SHORT, "実効");
+
+                set(WORD_SPACING_ADD, "単語 +");
     }
 }

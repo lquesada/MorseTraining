@@ -16,14 +16,15 @@ import java.util.function.Consumer;
 public class KochLevelSelectView extends FrameLayout {
 
     public static final String[] KOCH_CHARS = {
-        "K", "M", "R", "S", "U", "A", "P", "T", "L", "O",
-        "W", "I", ".", "N", "J", "E", "F", "0", "Y", ",",
-        "V", "G", "5", "/", "Q", "9", "Z", "H", "3", "8",
-        "B", "?", "4", "2", "7", "C", "1", "D", "6", "X"
+        "K", "M", "U", "R", "E", "S", "N", "A", "P", "T",
+        "L", "W", "I", ".", "J", "Z", "=", "F", "O", "Y",
+        ",", "V", "G", "5", "/", "Q", "9", "2", "H", "3",
+        "8", "B", "?", "4", "7", "C", "1", "D", "6", "0",
+        "X"
     };
 
     private static final int COLS = 4;
-    private final int totalLevels = 40;
+    private final int totalLevels = 41;
     private int highestCompletedLevel;
     private final Consumer<Integer> onLevelClick;
     private final Runnable onBackClick;
@@ -168,10 +169,10 @@ public class KochLevelSelectView extends FrameLayout {
             rowLayout.setGravity(Gravity.CENTER);
 
             for (int col = 0; col < COLS; col++) {
-                int level = row * COLS + col + 1;
-                if (level > totalLevels) break;
+                int level = row * COLS + col;
+                if (level >= totalLevels) break;
 
-                String newChar = KOCH_CHARS[level - 1];
+                String newChar = KOCH_CHARS[level];
 
                 TextView btn = new TextView(getContext());
                 btn.setText(level + ": " + newChar);
@@ -221,6 +222,23 @@ public class KochLevelSelectView extends FrameLayout {
         resetParams.topMargin = dp(32);
         gridContainer.addView(resetBtn, resetParams);
 
+        // Auto scroll to center the next uncompleted level
+        if (highestCompletedLevel >= 0) {
+            final int targetLevel = Math.min(highestCompletedLevel + 1, totalLevels - 1);
+            final int targetRow = targetLevel / COLS;
+            final int paddingTop = dp(24);
+            final int rowHeight = buttonSize + buttonMargin * 2;
+            scrollView.post(() -> {
+                int scrollViewHeight = scrollView.getHeight();
+                int yTop = paddingTop + targetRow * rowHeight;
+                int yCenter = yTop + rowHeight / 2;
+                int scrollY = yCenter - scrollViewHeight / 2;
+                int maxScroll = Math.max(0, gridContainer.getHeight() - scrollViewHeight);
+                scrollY = Math.max(0, Math.min(scrollY, maxScroll));
+                scrollView.scrollTo(0, scrollY);
+            });
+        }
+
         addView(root, new FrameLayout.LayoutParams(
                 LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
     }
@@ -268,11 +286,11 @@ public class KochLevelSelectView extends FrameLayout {
         btnReset.setBackgroundResource(outValue.resourceId);
         btnReset.setOnClickListener(v -> {
             android.content.SharedPreferences prefs = getContext().getSharedPreferences("morseKeyerSettings", android.content.Context.MODE_PRIVATE);
-            prefs.edit().putInt("koch_highest_completed_level", 0).apply();
+            prefs.edit().putInt("koch_highest_completed_level_v2", -1).apply();
             removeView(overlay);
             // Re-render
             removeAllViews();
-            KochLevelSelectView.this.highestCompletedLevel = 0;
+            KochLevelSelectView.this.highestCompletedLevel = -1;
             buildUI();
             if (getContext() instanceof com.qft8.morsekeyer.MainActivity) {
                 ((com.qft8.morsekeyer.MainActivity)getContext()).gameController.updateLanguage();

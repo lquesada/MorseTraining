@@ -16,8 +16,6 @@ public class LangDa extends MorseLanguage {
         set(WPM_SPEED, "WPM-hastighed");
         set(INVERSE_PADDLES, "Omvendte padler");
         set(STRICT_TIMING, "Streng timing");
-        set(INTERLETTER_SPACING, "Mellemrum mellem bogstaver");
-        set(INTERWORD_SPACING, "Mellemrum mellem ord");
         
         set(FREQUENCY, "Frekvens");
         set(VOLUME, "Lydstyrke");
@@ -132,8 +130,13 @@ set(TARGET_MET, "Mål nået");
         set(RESET_PROGRESS_CONFIRM, "Er du sikker på, at du vil nulstille fremskridtet?");
         set(RESET, "Nulstil");
             set(WPM, "WPM​");
-        set(SPACING, "Mellemrum");
         set(BACK, "Tilbage");
         set(NEXT_LEVEL, "Næste niveau");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "Effektiv WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Ekstra ordaafstand");
+                set(EFFECTIVE_WPM_SHORT, "Effektiv");
+
+                set(WORD_SPACING_ADD, "Ord +");
     }
 }

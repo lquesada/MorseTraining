@@ -16,8 +16,6 @@ public class LangSu extends MorseLanguage {
         set(WPM_SPEED, "Kecepatan (WPM)");
         set(INVERSE_PADDLES, "Balikkeun Pedal");
         set(STRICT_TIMING, "Waktu Ketat");
-        set(INTERLETTER_SPACING, "Jarak Antar Aksara");
-        set(INTERWORD_SPACING, "Jarak Antar Kecap");
         
         set(FREQUENCY, "Frékuénsi");
         set(VOLUME, "Volume");
@@ -126,8 +124,13 @@ set(TARGET_MET, "Target kahontal");
         set(RESET_PROGRESS_CONFIRM, "Anjeun yakin rek mereset kamajuan?");
         set(RESET, "Reset");
             set(WPM, "WPM​");
-        set(SPACING, "Spasi");
         set(BACK, "Deui");
         set(NEXT_LEVEL, "Tingkat salajengna");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "WPM Efektif (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Spasi kecap ekstra");
+                set(EFFECTIVE_WPM_SHORT, "Efektif");
+
+                set(WORD_SPACING_ADD, "Kecap +");
     }
 }

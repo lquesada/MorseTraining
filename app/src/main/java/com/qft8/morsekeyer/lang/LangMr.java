@@ -16,8 +16,6 @@ public class LangMr extends MorseLanguage {
         set(WPM_SPEED, "वेग (WPM)");
         set(INVERSE_PADDLES, "पॅडल उलटे करा");
         set(STRICT_TIMING, "कठोर वेळ (Strict Timing)");
-        set(INTERLETTER_SPACING, "अक्षरांमधील अंतर");
-        set(INTERWORD_SPACING, "शब्दांमधील अंतर");
         
         set(FREQUENCY, "वारंवारता (Frequency)");
         set(VOLUME, "आवाज");
@@ -133,8 +131,13 @@ set(TARGET_MET, "लक्ष्य साध्य");
         set(RESET_PROGRESS_CONFIRM, "तुम्हाला नक्की प्रगती रीसेट करायची आहे का?");
         set(RESET, "रीसेट करा");
             set(WPM, "WPM​");
-        set(SPACING, "अंतर");
         set(BACK, "मागे");
         set(NEXT_LEVEL, "पुढची पातळी");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "प्रभावी डब्ल्यूपीएम (फार्न्सवर्थ)");
+                set(EXTRA_WORD_SPACING, "अतिरिक्त शब्द अंतर");
+                set(EFFECTIVE_WPM_SHORT, "प्रभावी");
+
+                set(WORD_SPACING_ADD, "शब्द +");
     }
 }

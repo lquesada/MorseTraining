@@ -16,8 +16,6 @@ public class LangFi extends MorseLanguage {
         set(WPM_SPEED, "Nopeus (WPM)");
         set(INVERSE_PADDLES, "Käänteiset lavat");
         set(STRICT_TIMING, "Tarkka ajoitus");
-        set(INTERLETTER_SPACING, "Kirjainväli");
-        set(INTERWORD_SPACING, "Sanaväli");
         
         set(FREQUENCY, "Taajuus");
         set(VOLUME, "Äänenvoimakkuus");
@@ -133,8 +131,13 @@ set(TARGET_MET, "Tavoite saavutettu");
         set(RESET_PROGRESS_CONFIRM, "Haluatko varmasti nollata edistymisen?");
         set(RESET, "Nollaa");
             set(WPM, "WPM​");
-        set(SPACING, "Välistys");
         set(BACK, "Takaisin");
         set(NEXT_LEVEL, "Seuraava taso");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "Tehollinen WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Ylimääräinen sanaväli");
+                set(EFFECTIVE_WPM_SHORT, "Tehollinen");
+
+                set(WORD_SPACING_ADD, "Sana +");
     }
 }

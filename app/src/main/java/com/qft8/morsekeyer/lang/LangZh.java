@@ -16,8 +16,6 @@ public class LangZh extends MorseLanguage {
         set(WPM_SPEED, "速度 (WPM)");
         set(INVERSE_PADDLES, "反转拨片");
         set(STRICT_TIMING, "严格时序");
-        set(INTERLETTER_SPACING, "字母间距");
-        set(INTERWORD_SPACING, "单词间距");
         
         set(FREQUENCY, "频率");
         set(VOLUME, "音量");
@@ -133,8 +131,13 @@ set(TARGET_MET, "目标达成");
         set(RESET_PROGRESS_CONFIRM, "您确定要重置进度吗？");
         set(RESET, "重置");
             set(WPM, "WPM​");
-        set(SPACING, "间距");
         set(BACK, "返回");
         set(NEXT_LEVEL, "下一关");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "有效 WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "额外单词间距");
+                set(EFFECTIVE_WPM_SHORT, "有效");
+
+                set(WORD_SPACING_ADD, "单词 +");
     }
 }

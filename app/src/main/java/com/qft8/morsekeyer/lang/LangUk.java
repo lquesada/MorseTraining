@@ -16,8 +16,6 @@ public class LangUk extends MorseLanguage {
         set(WPM_SPEED, "Швидкість (WPM)");
         set(INVERSE_PADDLES, "Інверсія важелів");
         set(STRICT_TIMING, "Суворі інтервали");
-        set(INTERLETTER_SPACING, "Міжлітерний інтервал");
-        set(INTERWORD_SPACING, "Міжслівний інтервал");
         
         set(FREQUENCY, "Частота");
         set(VOLUME, "Гучність");
@@ -133,8 +131,13 @@ set(TARGET_MET, "Ціль досягнута");
         set(RESET_PROGRESS_CONFIRM, "Ви впевнені, що хочете скинути прогрес?");
         set(RESET, "Скинути");
             set(WPM, "WPM​");
-        set(SPACING, "Інтервал");
         set(BACK, "Назад");
         set(NEXT_LEVEL, "Наступний рівень");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "Ефективна швидкість (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Додатковий інтервал слів");
+                set(EFFECTIVE_WPM_SHORT, "Ефективна");
+
+                set(WORD_SPACING_ADD, "Слово +");
     }
 }

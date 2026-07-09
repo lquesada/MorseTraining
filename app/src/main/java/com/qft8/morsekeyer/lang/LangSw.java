@@ -16,8 +16,6 @@ public class LangSw extends MorseLanguage {
         set(WPM_SPEED, "Kasi (WPM)");
         set(INVERSE_PADDLES, "Geuza pedali");
         set(STRICT_TIMING, "Muda madhubuti");
-        set(INTERLETTER_SPACING, "Nafasi kati ya herufi");
-        set(INTERWORD_SPACING, "Nafasi kati ya maneno");
         
         set(FREQUENCY, "Masafa");
         set(VOLUME, "Sauti");
@@ -133,8 +131,13 @@ set(TARGET_MET, "Lengo limefikiwa");
         set(RESET_PROGRESS_CONFIRM, "Una uhakika unataka kuwezesha upya?");
         set(RESET, "Wezesha upya");
             set(WPM, "WPM​");
-        set(SPACING, "Nafasi");
         set(BACK, "Nyuma");
         set(NEXT_LEVEL, "Ngazi inayofuata");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "WPM Thabiti (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Nafasi ya ziada ya maneno");
+                set(EFFECTIVE_WPM_SHORT, "Thabiti");
+
+                set(WORD_SPACING_ADD, "Neno +");
     }
 }

@@ -16,8 +16,6 @@ public class LangKo extends MorseLanguage {
         set(WPM_SPEED, "속도 (WPM)");
         set(INVERSE_PADDLES, "패들 반전");
         set(STRICT_TIMING, "엄격한 타이밍");
-        set(INTERLETTER_SPACING, "글자 간격");
-        set(INTERWORD_SPACING, "단어 간격");
         
         set(FREQUENCY, "주파수");
         set(VOLUME, "볼륨");
@@ -133,8 +131,13 @@ set(TARGET_MET, "목표 달성");
         set(RESET_PROGRESS_CONFIRM, "진행 상황을 초기화하시겠습니까?");
         set(RESET, "초기화");
             set(WPM, "WPM​");
-        set(SPACING, "간격");
         set(BACK, "뒤로");
         set(NEXT_LEVEL, "다음 레벨");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "유효 WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "추가 단어 간격");
+                set(EFFECTIVE_WPM_SHORT, "유효");
+
+                set(WORD_SPACING_ADD, "단어 +");
     }
 }

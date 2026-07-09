@@ -16,8 +16,6 @@ public class LangUr extends MorseLanguage {
         set(WPM_SPEED, "رفتار (WPM)");
         set(INVERSE_PADDLES, "پیڈل الٹ دیں");
         set(STRICT_TIMING, "سخت ٹائمنگ");
-        set(INTERLETTER_SPACING, "حروف کے درمیان فاصلہ");
-        set(INTERWORD_SPACING, "الفاظ کے درمیان فاصلہ");
         
         set(FREQUENCY, "فریکوئنسی");
         set(VOLUME, "آواز");
@@ -133,8 +131,13 @@ set(TARGET_MET, "ہدف حاصل ہو گیا");
         set(RESET_PROGRESS_CONFIRM, "کیا آپ پیشرفت ری سیٹ کرنا چاہتے ہیں؟");
         set(RESET, "ری سیٹ کریں");
             set(WPM, "WPM​");
-        set(SPACING, "فاصلہ");
         set(BACK, "واپس");
         set(NEXT_LEVEL, "اگلا درجہ");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "موثر ڈبلیو پی ایم (فارنس ورتھ)");
+                set(EXTRA_WORD_SPACING, "اضافی لفظی فاصلہ");
+                set(EFFECTIVE_WPM_SHORT, "موثر");
+
+                set(WORD_SPACING_ADD, "لفظ +");
     }
 }

@@ -16,8 +16,6 @@ public class LangArz extends MorseLanguage {
         set(WPM_SPEED, "السرعة (WPM)");
         set(INVERSE_PADDLES, "اعكس المجاذيف");
         set(STRICT_TIMING, "توقيت مظبوط بالملي");
-        set(INTERLETTER_SPACING, "المسافة بين الحروف");
-        set(INTERWORD_SPACING, "المسافة بين الكلمات");
         
         set(FREQUENCY, "التردد");
         set(VOLUME, "العلو");
@@ -133,8 +131,13 @@ set(TARGET_MET, "تم تحقيق الهدف");
         set(RESET_PROGRESS_CONFIRM, "هل أنت متأكد من إعادة الضبط؟");
         set(RESET, "إعادة ضبط");
             set(WPM, "WPM");
-        set(SPACING, "مسافة");
         set(BACK, "رجوع");
         set(NEXT_LEVEL, "المستوى اللي بعده");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "السرعة الفعلية (فارنسورث)");
+                set(EXTRA_WORD_SPACING, "مسافة إضافية بين الكلمات");
+                set(EFFECTIVE_WPM_SHORT, "الفعلية");
+
+                set(WORD_SPACING_ADD, "كلمة +");
     }
 }

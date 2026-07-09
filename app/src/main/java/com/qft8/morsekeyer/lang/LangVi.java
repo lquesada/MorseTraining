@@ -16,8 +16,6 @@ public class LangVi extends MorseLanguage {
         set(WPM_SPEED, "Tốc độ (WPM)");
         set(INVERSE_PADDLES, "Đảo ngược cần gạt");
         set(STRICT_TIMING, "Thời gian nghiêm ngặt");
-        set(INTERLETTER_SPACING, "Khoảng cách giữa các chữ");
-        set(INTERWORD_SPACING, "Khoảng cách giữa các từ");
         
         set(FREQUENCY, "Tần số");
         set(VOLUME, "Âm lượng");
@@ -133,8 +131,13 @@ set(TARGET_MET, "Đã đạt mục tiêu");
         set(RESET_PROGRESS_CONFIRM, "Bạn có chắc chắn muốn đặt lại tiến trình?");
         set(RESET, "Đặt lại");
             set(WPM, "WPM​");
-        set(SPACING, "Khoảng cách");
         set(BACK, "Quay lại");
         set(NEXT_LEVEL, "Cấp độ tiếp theo");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "WPM Hiệu quả (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Khoảng cách từ bổ sung");
+                set(EFFECTIVE_WPM_SHORT, "Hiệu quả");
+
+                set(WORD_SPACING_ADD, "Từ +");
     }
 }

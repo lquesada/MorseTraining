@@ -16,8 +16,6 @@ public class LangPcm extends MorseLanguage {
         set(WPM_SPEED, "Speed (WPM)");
         set(INVERSE_PADDLES, "Turn paddles reverse");
         set(STRICT_TIMING, "Strict timing");
-        set(INTERLETTER_SPACING, "Space between letters");
-        set(INTERWORD_SPACING, "Space between words");
         
         set(FREQUENCY, "Frequency");
         set(VOLUME, "Volume");
@@ -133,8 +131,13 @@ set(TARGET_MET, "Target reach");
         set(RESET_PROGRESS_CONFIRM, "You sure say you won reset progress?");
         set(RESET, "Reset");
             set(WPM, "WPM");
-        set(SPACING, "Space");
         set(BACK, "Go back");
         set(NEXT_LEVEL, "Next level");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "Effective WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Extra word space");
+                set(EFFECTIVE_WPM_SHORT, "Effective");
+
+                set(WORD_SPACING_ADD, "Word +");
     }
 }

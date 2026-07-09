@@ -16,8 +16,6 @@ public class LangTr extends MorseLanguage {
         set(WPM_SPEED, "Hız (WPM)");
         set(INVERSE_PADDLES, "Manipleleri ters çevir");
         set(STRICT_TIMING, "Katı zamanlama");
-        set(INTERLETTER_SPACING, "Harf arası boşluk");
-        set(INTERWORD_SPACING, "Kelime arası boşluk");
         
         set(FREQUENCY, "Frekans");
         set(VOLUME, "Ses");
@@ -133,8 +131,13 @@ set(TARGET_MET, "Hedefe ulaşıldı");
         set(RESET_PROGRESS_CONFIRM, "İlerlemeyi sıfırlamak istediğinizden emin misiniz?");
         set(RESET, "Sıfırla");
             set(WPM, "WPM​");
-        set(SPACING, "Aralık");
         set(BACK, "Geri");
         set(NEXT_LEVEL, "Sonraki seviye");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "Etkin WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Ekstra kelime boşluğu");
+                set(EFFECTIVE_WPM_SHORT, "Etkin");
+
+                set(WORD_SPACING_ADD, "Kelime +");
     }
 }

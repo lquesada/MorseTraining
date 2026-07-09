@@ -16,8 +16,6 @@ public class LangTe extends MorseLanguage {
         set(WPM_SPEED, "వేగం (WPM)");
         set(INVERSE_PADDLES, "పాడిల్స్ మార్చండి");
         set(STRICT_TIMING, "కఠినమైన టైమింగ్");
-        set(INTERLETTER_SPACING, "అక్షరాల మధ్య అంతరం");
-        set(INTERWORD_SPACING, "పదాల మధ్య అంతరం");
         
         set(FREQUENCY, "ఫ్రీక్వెన్సీ");
         set(VOLUME, "వాల్యూమ్");
@@ -126,8 +124,13 @@ set(TARGET_MET, "లక్ష్యం చేరుకుంది");
         set(RESET_PROGRESS_CONFIRM, "పురోగతిని రీసెట్ చేయాలనుకుంటున్నారా?");
         set(RESET, "రీసెట్ చేయండి");
             set(WPM, "WPM​");
-        set(SPACING, "అంతరం");
         set(BACK, "వెనుకకు");
         set(NEXT_LEVEL, "తదుపరి స్థాయి");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "ప్రభావవంతమైన WPM (ఫార్న్స్‌వర్త్)");
+                set(EXTRA_WORD_SPACING, "అదనపు పద స్థలం");
+                set(EFFECTIVE_WPM_SHORT, "ప్రభావవంతమైన");
+
+                set(WORD_SPACING_ADD, "पదం +");
     }
 }

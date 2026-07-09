@@ -16,8 +16,6 @@ public class LangNo extends MorseLanguage {
         set(WPM_SPEED, "WPM-hastighet");
         set(INVERSE_PADDLES, "Omvendte padler");
         set(STRICT_TIMING, "Streng timing");
-        set(INTERLETTER_SPACING, "Bokstavavstand");
-        set(INTERWORD_SPACING, "Ordavstand");
         
         set(FREQUENCY, "Frekvens");
         set(VOLUME, "Volum");
@@ -132,8 +130,13 @@ set(TARGET_MET, "Mål nådd");
         set(RESET_PROGRESS_CONFIRM, "Er du sikker på at du vil nullstille fremdriften?");
         set(RESET, "Nullstill");
             set(WPM, "WPM​");
-        set(SPACING, "Avstand");
         set(BACK, "Tilbake");
         set(NEXT_LEVEL, "Neste nivå");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "Effektiv WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Ekstra ordmellomrom");
+                set(EFFECTIVE_WPM_SHORT, "Effektiv");
+
+                set(WORD_SPACING_ADD, "Ord +");
     }
 }

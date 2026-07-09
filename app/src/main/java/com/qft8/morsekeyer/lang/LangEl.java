@@ -16,8 +16,6 @@ public class LangEl extends MorseLanguage {
         set(WPM_SPEED, "Ταχύτητα WPM");
         set(INVERSE_PADDLES, "Αντίστροφα paddles");
         set(STRICT_TIMING, "Αυστηρός συγχρονισμός");
-        set(INTERLETTER_SPACING, "Διάστημα μεταξύ γραμμάτων");
-        set(INTERWORD_SPACING, "Διάστημα μεταξύ λέξεων");
         
         set(FREQUENCY, "Συχνότητα");
         set(VOLUME, "Ένταση");
@@ -132,8 +130,13 @@ set(TARGET_MET, "Ο στόχος επιτεύχθηκε");
         set(RESET_PROGRESS_CONFIRM, "Είστε σίγουροι για την επαναφορά;");
         set(RESET, "Επαναφορά");
             set(WPM, "WPM​");
-        set(SPACING, "Διάστιχο");
         set(BACK, "Πίσω");
         set(NEXT_LEVEL, "Επόμενο επίπεδο");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "Πραγματικό WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "Πρόσθετο διάστημα λέξεων");
+                set(EFFECTIVE_WPM_SHORT, "Πραγματικό");
+
+                set(WORD_SPACING_ADD, "Λέξη +");
     }
 }

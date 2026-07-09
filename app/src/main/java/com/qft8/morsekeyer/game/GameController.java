@@ -73,7 +73,7 @@ public class GameController {
     private FrameLayout kochLevelLayout;
     private KochLevelSelectView kochLevelSelectView;
     private boolean isKochMode = false;
-    private int kochLevel = 1;
+    private int kochLevel = 0;
     private int kochTarget = 0;
     private LinearLayout gameMenuPaddleContainer;
     private TextView gameMenuPaddleLeft, gameMenuPaddleRight;
@@ -169,9 +169,9 @@ public class GameController {
                     if (isKochMode) {
                         gameScore = kochTarget;
                         android.content.SharedPreferences prefs = activity.getSharedPreferences("morseKeyerSettings", android.content.Context.MODE_PRIVATE);
-                        int highest = getIntSafe(prefs, "koch_highest_completed_level", 0);
+                        int highest = getIntSafe(prefs, "koch_highest_completed_level_v2", -1);
                         if (kochLevel > highest) {
-                            prefs.edit().putInt("koch_highest_completed_level", kochLevel).apply();
+                            prefs.edit().putInt("koch_highest_completed_level_v2", kochLevel).apply();
                         }
                         endGame();
                     } else {
@@ -289,7 +289,23 @@ public class GameController {
         gameMenuTitle.setText(LanguageManager.get(MorseLanguage.GAMES));
 
         SharedPreferences prefs = activity.getSharedPreferences("morseKeyerSettings", Context.MODE_PRIVATE);
-        
+
+        if (!prefs.contains("koch_highest_completed_level_v2")) {
+            if (prefs.contains("koch_highest_completed_level")) {
+                int oldVal = getIntSafe(prefs, "koch_highest_completed_level", 0);
+                int newVal = -1;
+                if (oldVal == 1) newVal = 0;
+                else if (oldVal >= 2 && oldVal <= 4) newVal = 1;
+                else if (oldVal >= 5 && oldVal <= 15) newVal = 3;
+                else if (oldVal >= 16 && oldVal <= 26) newVal = 14;
+                else if (oldVal >= 27) newVal = 15;
+                prefs.edit().putInt("koch_highest_completed_level_v2", newVal).apply();
+            } else {
+                prefs.edit().putInt("koch_highest_completed_level_v2", -1).apply();
+            }
+            prefs.edit().remove("koch_highest_completed_level").apply();
+        }
+
         if (prefs.contains("record_rx")) {
             if (!prefs.contains("record_rx_3")) prefs.edit().putInt("record_rx_3", getIntSafe(prefs, "record_rx", 0)).apply();
             prefs.edit().remove("record_rx").apply();
@@ -400,7 +416,7 @@ public class GameController {
         kochLevelLayout.setVisibility(View.VISIBLE);
         
         android.content.SharedPreferences prefs = activity.getSharedPreferences("morseKeyerSettings", android.content.Context.MODE_PRIVATE);
-        int highest = getIntSafe(prefs, "koch_highest_completed_level", 0);
+        int highest = getIntSafe(prefs, "koch_highest_completed_level_v2", -1);
         
         if (kochLevelSelectView != null) {
             kochLevelLayout.removeView(kochLevelSelectView);
@@ -900,7 +916,7 @@ public class GameController {
     private void startKochGame(int level) {
         isKochMode = true;
         kochLevel = level;
-        kochTarget = level == 1 ? 4 : 10 + (level - 1);
+        kochTarget = level == 0 ? 4 : 10 + level;
         gameTimeLimit = 0;
         isRxMode = true;
         gameLayout.setVisibility(View.VISIBLE);
@@ -914,7 +930,7 @@ public class GameController {
         visibleTags.add("SPACE");
         visibleTags.add("CLEAR");
         if (isKochMode) {
-            for (int i = 0; i < kochLevel; i++) {
+            for (int i = 0; i <= kochLevel; i++) {
                 String c = KochLevelSelectView.KOCH_CHARS[i];
                 visibleTags.add(c);
                 if ("/".equals(c)) visibleTags.add("SLASH");
@@ -990,7 +1006,7 @@ public class GameController {
             updateRxTextDisplay(false, true); // show green
             
             if (isKochMode) {
-                String targetChar = KochLevelSelectView.KOCH_CHARS[kochLevel - 1];
+                String targetChar = KochLevelSelectView.KOCH_CHARS[kochLevel];
                 int points = 0;
                 for (int i = 0; i < currentRxWord.length(); i++) {
                     if (String.valueOf(currentRxWord.charAt(i)).equals(targetChar)) {
@@ -1002,9 +1018,9 @@ public class GameController {
                 updateGameStats();
                 if (gameScore >= kochTarget) {
                     android.content.SharedPreferences prefs = activity.getSharedPreferences("morseKeyerSettings", android.content.Context.MODE_PRIVATE);
-                    int highest = getIntSafe(prefs, "koch_highest_completed_level", 0);
+                    int highest = getIntSafe(prefs, "koch_highest_completed_level_v2", -1);
                     if (kochLevel > highest) {
-                        prefs.edit().putInt("koch_highest_completed_level", kochLevel).apply();
+                        prefs.edit().putInt("koch_highest_completed_level_v2", kochLevel).apply();
                     }
                     gameActive = false;
                     gameHandler.postDelayed(this::endGame, 1000); // 1 sec delay to show green before ending
@@ -1086,7 +1102,7 @@ public class GameController {
             closeSummary();
             gameLayout.setVisibility(android.view.View.GONE);
             if (isKochMode) {
-                kochLevelLayout.setVisibility(android.view.View.VISIBLE);
+                showKochMenu();
             } else {
                 gameMenuLayout.setVisibility(android.view.View.VISIBLE);
             }
@@ -1389,16 +1405,16 @@ public class GameController {
         if (gameMenuWpmDisplay != null) {
             android.content.SharedPreferences prefs = activity.getSharedPreferences("morseKeyerSettings", android.content.Context.MODE_PRIVATE);
             int wpm = getIntSafe(prefs, "wpm", 15);
-            int interletterSpacing = getIntSafe(prefs, "interletterSpacing", 100);
-            int interwordSpacing = getIntSafe(prefs, "interwordSpacing", 100);
             boolean strict = prefs.getBoolean("strict", true);
             
-            String wpmStr = LanguageManager.get(MorseLanguage.WPM) + ": " + wpm;
-            String spcStr = LanguageManager.get(MorseLanguage.SPACING) + ": " + 
-                            (strict ? "100%" : interletterSpacing + "%") + "/" + 
-                            (strict ? "100%" : interwordSpacing + "%");
+            int effWpm = strict ? wpm : getIntSafe(prefs, "effectiveWpm", wpm);
+            int extraSpc = strict ? 0 : getIntSafe(prefs, "extraWordSpacing", 0);
             
-            gameMenuWpmDisplay.setText(wpmStr + "; " + spcStr);
+            String wpmStr = LanguageManager.get(MorseLanguage.WPM) + ": " + wpm;
+            String effStr = LanguageManager.get(MorseLanguage.EFFECTIVE_WPM_SHORT) + ": " + effWpm;
+            String extraStr = LanguageManager.get(MorseLanguage.WORD_SPACING_ADD) + extraSpc + "ms";
+            
+            gameMenuWpmDisplay.setText(wpmStr + "; " + effStr + "; " + extraStr);
         }
         if (btnGame != null) {
             btnGame.setText(LanguageManager.get(MorseLanguage.GAMES));
@@ -1420,11 +1436,11 @@ public class GameController {
         }
         if (btnRxKoch != null) {
             SharedPreferences prefs = activity.getSharedPreferences("morseKeyerSettings", Context.MODE_PRIVATE);
-            int highest = getIntSafe(prefs, "koch_highest_completed_level", 0);
+            int highest = getIntSafe(prefs, "koch_highest_completed_level_v2", -1);
             btnRxKoch.setText(LanguageManager.get(MorseLanguage.KOCH_METHOD));
             TextView kochLevelsView = activity.findViewById(R.id.game_menu_koch_levels);
             if (kochLevelsView != null) {
-                kochLevelsView.setText(LanguageManager.get(MorseLanguage.LEVELS_COMPLETED) + ": " + highest + "/40");
+                kochLevelsView.setText(LanguageManager.get(MorseLanguage.LEVELS_COMPLETED) + ": " + (highest + 1) + "/41");
             }
         }
         updateHighScoreDisplay(true);
@@ -1676,7 +1692,7 @@ public class GameController {
             if (isKochMode) {
                 gameTimeLabel.setVisibility(View.GONE);
                 gameTimeVal.setVisibility(View.GONE);
-                currentRxWord = KochLevelSelectView.KOCH_CHARS[kochLevel - 1];
+                currentRxWord = KochLevelSelectView.KOCH_CHARS[kochLevel];
                 gameRxBtnAction.setText(LanguageManager.get(MorseLanguage.REPEAT));
                 setupRxKeyboardVisibility();
                 gameStarted = true;
@@ -1846,14 +1862,14 @@ public class GameController {
         String rawMode = isRxMode ? null : getStringSafe(prefs, "mode", "iambic-a");
         int wpm = getIntSafe(prefs, "wpm", 15);
         boolean strict = prefs.getBoolean("strict", true);
-        int interletterSpacing = getIntSafe(prefs, "interletterSpacing", 100);
-        int interwordSpacing = getIntSafe(prefs, "interwordSpacing", 100);
+        int effWpm = strict ? wpm : getIntSafe(prefs, "effectiveWpm", wpm);
+        int extraSpc = strict ? 0 : getIntSafe(prefs, "extraWordSpacing", 0);
 
         List<SummaryView.SummaryRow> params = new ArrayList<>();
-        params.add(new SummaryView.SummaryRow(MorseLanguage.INTERLETTER_SPACING,
-                strict ? "100%" : interletterSpacing + "%"));
-        params.add(
-                new SummaryView.SummaryRow(MorseLanguage.INTERWORD_SPACING, strict ? "100%" : interwordSpacing + "%"));
+        params.add(new SummaryView.SummaryRow(MorseLanguage.EFFECTIVE_WPM_FARNSWORTH,
+                String.valueOf(effWpm)));
+        params.add(new SummaryView.SummaryRow(MorseLanguage.EXTRA_WORD_SPACING,
+                extraSpc + " ms"));
 
         int t = gameTimeElapsed;
         int min = t / 60;

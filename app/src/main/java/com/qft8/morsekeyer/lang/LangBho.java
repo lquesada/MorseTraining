@@ -16,8 +16,6 @@ public class LangBho extends MorseLanguage {
         set(WPM_SPEED, "रफ़्तार (WPM)");
         set(INVERSE_PADDLES, "पैडल उल्टा करीं");
         set(STRICT_TIMING, "कड़क टाइमिंग");
-        set(INTERLETTER_SPACING, "अक्षरन के बीच के जगह");
-        set(INTERWORD_SPACING, "शब्दन के बीच के जगह");
         
         set(FREQUENCY, "फ्रीक्वेंसी");
         set(VOLUME, "आवाज़");
@@ -126,8 +124,13 @@ set(TARGET_MET, "लक्ष्य पूरा भइल");
         set(RESET_PROGRESS_CONFIRM, "का रउआ प्रगति रीसेट करे के चाहत बानी?");
         set(RESET, "रीसेट करीं");
             set(WPM, "WPM");
-        set(SPACING, "अंतर");
         set(BACK, "पाछे");
         set(NEXT_LEVEL, "अगिला लेवल");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "प्रभावी डब्ल्यूपीएम (फार्न्सवर्थ)");
+                set(EXTRA_WORD_SPACING, "अतिरिक्त शब्द स्थान");
+                set(EFFECTIVE_WPM_SHORT, "प्रभावी");
+
+                set(WORD_SPACING_ADD, "शब्द +");
     }
 }

@@ -16,8 +16,6 @@ public class LangMy extends MorseLanguage {
         set(WPM_SPEED, "အမြန်နှုန်း (WPM)");
         set(INVERSE_PADDLES, "ခလုတ်ပြောင်းရန်");
         set(STRICT_TIMING, "တိကျသော အချိန်ကိုက်မှု");
-        set(INTERLETTER_SPACING, "စာလုံးကြား အကွာအဝေး");
-        set(INTERWORD_SPACING, "စာလုံးစုကြား အကွာအဝေး");
         
         set(FREQUENCY, "ကြိမ်နှုန်း");
         set(VOLUME, "အသံပမာဏ");
@@ -126,8 +124,13 @@ set(TARGET_MET, "ပစ်မှတ်ပြည့်မီသည်");
         set(RESET_PROGRESS_CONFIRM, "တိုးတက်မှုကို ပြန်လည်သတ်မှတ်မည်မှာ သေချာပါသလား?");
         set(RESET, "ပြန်လည်သတ်မှတ်ရန်");
             set(WPM, "WPM​");
-        set(SPACING, "နေရာလွတ်");
         set(BACK, "နောက်သို့");
         set(NEXT_LEVEL, "နောက်အဆင့်");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "ထိရောက်သော WPM (Farnsworth)");
+                set(EXTRA_WORD_SPACING, "အပိုစကားလုံး ခြားနားချက်");
+                set(EFFECTIVE_WPM_SHORT, "ထိရောက်သော");
+
+                set(WORD_SPACING_ADD, "စကား +");
     }
 }

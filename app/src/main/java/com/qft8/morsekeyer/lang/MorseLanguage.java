@@ -26,7 +26,6 @@ public abstract class MorseLanguage {
     public static final String RESET_PROGRESS_CONFIRM = "RESET_PROGRESS_CONFIRM";
     public static final String RESET = "RESET";
     public static final String WPM = "WPM";
-    public static final String SPACING = "SPACING";
     public static final String CLOSE = "CLOSE";
     public static final String BACK = "BACK";
     public static final String NEXT_LEVEL = "NEXT_LEVEL";
@@ -46,8 +45,6 @@ public abstract class MorseLanguage {
     public static final String INVERSE_PADDLES = "INVERSE_PADDLES";
     public static final String STRICT_TIMING = "STRICT_TIMING";
     public static final String PICK_LANG_THEME_ON_SHARE = "PICK_LANG_THEME_ON_SHARE";
-    public static final String INTERLETTER_SPACING = "INTERLETTER_SPACING";
-    public static final String INTERWORD_SPACING = "INTERWORD_SPACING";
     
     public static final String TONE = "TONE";
     public static final String FREQUENCY = "FREQUENCY";
@@ -145,4 +142,8 @@ public abstract class MorseLanguage {
     public static final String SHARE_SUBJECT = "SHARE_SUBJECT";
     public static final String SHARE_PROMO_TEXT = "SHARE_PROMO_TEXT";
     public static final String THEME = "THEME";
+    public static final String EFFECTIVE_WPM_FARNSWORTH = "EFFECTIVE_WPM_FARNSWORTH";
+    public static final String EXTRA_WORD_SPACING = "EXTRA_WORD_SPACING";
+    public static final String EFFECTIVE_WPM_SHORT = "EFFECTIVE_WPM_SHORT";
+    public static final String WORD_SPACING_ADD = "WORD_SPACING_ADD";
 }

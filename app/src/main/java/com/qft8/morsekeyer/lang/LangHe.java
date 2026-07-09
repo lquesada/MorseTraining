@@ -16,8 +16,6 @@ public class LangHe extends MorseLanguage {
         set(WPM_SPEED, "מהירות WPM");
         set(INVERSE_PADDLES, "משוטים הפוכים (Paddles)");
         set(STRICT_TIMING, "תזמון קפדני");
-        set(INTERLETTER_SPACING, "מרווח בין אותיות");
-        set(INTERWORD_SPACING, "מרווח בין מילים");
         
         set(FREQUENCY, "תדר");
         set(VOLUME, "עוצמת שמע");
@@ -132,8 +130,13 @@ set(TARGET_MET, "היעד הושג");
         set(RESET_PROGRESS_CONFIRM, "האם אתה בטוח שברצונך לאפס התקדמות?");
         set(RESET, "אפס");
             set(WPM, "WPM​");
-        set(SPACING, "ריווח");
         set(BACK, "חזור");
         set(NEXT_LEVEL, "השלב הבא");
+
+                set(EFFECTIVE_WPM_FARNSWORTH, "WPM אפקטיבי (פרנסוורת')");
+                set(EXTRA_WORD_SPACING, "מרווח מילים נוסף");
+                set(EFFECTIVE_WPM_SHORT, "אפקטיבי");
+
+                set(WORD_SPACING_ADD, "מילה +");
     }
 }

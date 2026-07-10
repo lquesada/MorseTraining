@@ -128,7 +128,7 @@ set(TARGET_MET, "Hədəfə çatıldı");
         set(NEXT_LEVEL, "Növbəti səviyyə");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Effektiv WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Əlavə söz məsafəsi");
+                set(EXTRA_WORD_SPACING, "Söz məsafəsi");
                 set(EFFECTIVE_WPM_SHORT, "Effektiv");
 
                 set(WORD_SPACING_ADD, "Söz +");

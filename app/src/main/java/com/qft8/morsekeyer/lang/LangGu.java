@@ -128,7 +128,7 @@ set(TARGET_MET, "લક્ષ્ય પ્રાપ્ત");
         set(NEXT_LEVEL, "આગળનું સ્તર");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "અસરકારક ડબ્લ્યુપીએમ (ફાર્ન્સવર્થ)");
-                set(EXTRA_WORD_SPACING, "વધારાની શબ્દ જગ્યા");
+                set(EXTRA_WORD_SPACING, "શબ્દ જગ્યા");
                 set(EFFECTIVE_WPM_SHORT, "અસરકારક");
 
                 set(WORD_SPACING_ADD, "શબ્દ +");

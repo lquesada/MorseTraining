@@ -103,6 +103,7 @@ public class MorseSettingsTest {
         settings.letterColor = "blue";
         settings.fontSize = 40;
         settings.appTheme = "white";
+        settings.wordSpacing = 150;
 
         assertEquals("straight", settings.mode);
         assertEquals("sawtooth", settings.toneType);
@@ -117,6 +118,13 @@ public class MorseSettingsTest {
         assertEquals("blue", settings.letterColor);
         assertEquals(40, settings.fontSize);
         assertEquals("white", settings.appTheme);
+        assertEquals(150, settings.wordSpacing);
+    }
+
+    @Test
+    public void testDefaultWordSpacing() {
+        MorseSettings settings = new MorseSettings();
+        assertEquals(100, settings.wordSpacing);
     }
 
     @Test
@@ -160,5 +168,52 @@ public class MorseSettingsTest {
 
         assertEquals(13, settings.fontSize); // Should recover to 13
         org.mockito.Mockito.verify(mockEditor).putInt("fontSize", 13); // Should save the corrected value
+    }
+
+    @Test
+    public void testWordSpacingTimingDerivation() {
+        MorseSettings settings = new MorseSettings();
+        settings.strict = false;
+        settings.wpm = 15;
+        settings.effectiveWpm = 10;
+        settings.wordSpacing = 200;
+        settings.updateDerivedSpacingSettings();
+
+        assertEquals(150, settings.interletterSpacing);
+        assertEquals(300, settings.interwordSpacing);
+    }
+
+    @Test
+    public void testWordSpacingClamping() {
+        MorseSettings settings = new MorseSettings();
+        settings.strict = false;
+        settings.wpm = 15;
+        settings.effectiveWpm = 10;
+        
+        // test min clamping
+        settings.wordSpacing = 10;
+        settings.updateDerivedSpacingSettings();
+        assertEquals(25, settings.wordSpacing);
+        
+        // test max clamping
+        settings.wordSpacing = 500;
+        settings.updateDerivedSpacingSettings();
+        assertEquals(250, settings.wordSpacing);
+    }
+
+    @Test
+    public void testEffectiveWpmSoftCap() {
+        MorseSettings settings = new MorseSettings();
+        settings.strict = false;
+        settings.wpm = 5;
+        settings.effectiveWpm = 20; // 20 > 5 * 2.0 (10)
+        settings.updateDerivedSpacingSettings();
+        
+        // Settings field remains 20 (soft cap doesn't mutate the user setting)
+        assertEquals(20, settings.effectiveWpm);
+        
+        // But spacing calculations are capped at 10 WPM
+        // interletterSpacing = 100 * 5 / 10 = 50
+        assertEquals(50, settings.interletterSpacing);
     }
 }

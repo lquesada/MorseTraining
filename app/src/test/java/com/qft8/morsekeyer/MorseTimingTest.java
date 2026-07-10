@@ -86,7 +86,7 @@ public class MorseTimingTest {
         
         double[] timings = keyer.getRecognitionTimings();
         
-        assertEquals("Letter gap should be 10ms (floor)", 10.0, timings[3], 0.001);
-        assertEquals("Word gap should be 20ms (floor)", 20.0, timings[4], 0.001);
+        assertEquals("Letter gap should be 24ms (floor 1.2 * dit)", 24.0, timings[3], 0.001);
+        assertEquals("Word gap should be 34ms (floor letter + 0.5 * dit)", 34.0, timings[4], 0.001);
     }
 }

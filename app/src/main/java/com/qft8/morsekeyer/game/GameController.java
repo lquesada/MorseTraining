@@ -1408,11 +1408,11 @@ public class GameController {
             boolean strict = prefs.getBoolean("strict", true);
             
             int effWpm = strict ? wpm : getIntSafe(prefs, "effectiveWpm", wpm);
-            int extraSpc = strict ? 0 : getIntSafe(prefs, "extraWordSpacing", 0);
+            int wordSpc = strict ? 100 : getIntSafe(prefs, "wordSpacing", 100);
             
             String wpmStr = LanguageManager.get(MorseLanguage.WPM) + ": " + wpm;
             String effStr = LanguageManager.get(MorseLanguage.EFFECTIVE_WPM_SHORT) + ": " + effWpm;
-            String extraStr = LanguageManager.get(MorseLanguage.WORD_SPACING_ADD) + extraSpc + "ms";
+            String extraStr = LanguageManager.get(MorseLanguage.EXTRA_WORD_SPACING) + ": " + wordSpc + "%";
             
             gameMenuWpmDisplay.setText(wpmStr + "; " + effStr + "; " + extraStr);
         }
@@ -1863,13 +1863,13 @@ public class GameController {
         int wpm = getIntSafe(prefs, "wpm", 15);
         boolean strict = prefs.getBoolean("strict", true);
         int effWpm = strict ? wpm : getIntSafe(prefs, "effectiveWpm", wpm);
-        int extraSpc = strict ? 0 : getIntSafe(prefs, "extraWordSpacing", 0);
+        int wordSpc = strict ? 100 : getIntSafe(prefs, "wordSpacing", 100);
 
         List<SummaryView.SummaryRow> params = new ArrayList<>();
         params.add(new SummaryView.SummaryRow(MorseLanguage.EFFECTIVE_WPM_FARNSWORTH,
                 String.valueOf(effWpm)));
         params.add(new SummaryView.SummaryRow(MorseLanguage.EXTRA_WORD_SPACING,
-                extraSpc + " ms"));
+                wordSpc + "%"));
 
         int t = gameTimeElapsed;
         int min = t / 60;

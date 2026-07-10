@@ -135,7 +135,7 @@ set(TARGET_MET, "An cimma manufa");
         set(NEXT_LEVEL, "Mataki na gaba");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM mai inganci (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Karin tazarar kalmomi");
+                set(EXTRA_WORD_SPACING, "Tazarar kalmomi");
                 set(EFFECTIVE_WPM_SHORT, "Mai inganci");
 
                 set(WORD_SPACING_ADD, "Kalma +");

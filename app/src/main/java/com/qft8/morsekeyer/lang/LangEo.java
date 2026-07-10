@@ -135,7 +135,7 @@ set(TARGET_MET, "Celo atingita");
         set(NEXT_LEVEL, "Sekva nivelo");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Efektiva WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Kroma vortspaco");
+                set(EXTRA_WORD_SPACING, "Vortspaco");
                 set(EFFECTIVE_WPM_SHORT, "Efektiva");
 
                 set(WORD_SPACING_ADD, "Vorto +");

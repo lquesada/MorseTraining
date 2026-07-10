@@ -99,7 +99,7 @@ public class MorseKeyer {
         double ilsFactor = settings.strict ? 1.0 : (settings.interletterSpacing / 100.0);
         double iwsFactor = settings.strict ? 1.0 : (settings.interwordSpacing / 100.0);
 
-        double letterGap = Math.max(ditLength * 3.0 * ilsFactor, 0.5 * ditLength);
+        double letterGap = Math.max(ditLength * 3.0 * ilsFactor, 1.2 * ditLength);
 
         // Ensure word gap is always at least 0.5 dits longer than letter gap
         double wordGap = Math.max(ditLength * 7.0 * iwsFactor, letterGap + 0.5 * ditLength);

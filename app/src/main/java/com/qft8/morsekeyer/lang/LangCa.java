@@ -128,7 +128,7 @@ set(TARGET_MET, "Objectiu assolit");
         set(NEXT_LEVEL, "Següent nivell");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM efectiu (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Espai addicional de paraula");
+                set(EXTRA_WORD_SPACING, "Espai de paraula");
                 set(EFFECTIVE_WPM_SHORT, "Efectiu");
 
                 set(WORD_SPACING_ADD, "Paraula +");

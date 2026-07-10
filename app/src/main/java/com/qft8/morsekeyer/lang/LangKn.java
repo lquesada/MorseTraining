@@ -128,7 +128,7 @@ set(TARGET_MET, "ಗುರಿ ತಲುಪಿದೆ");
         set(NEXT_LEVEL, "ಮುಂದಿನ ಹಂತ");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "ಪರಿಣಾಮಕಾರಿ WPM (ಫಾರ್ನ್ಸ್‌ವರ್ತ್)");
-                set(EXTRA_WORD_SPACING, "ಹೆಚ್ಚುವರಿ ಪದ ಅಂತರ");
+                set(EXTRA_WORD_SPACING, "ಪದ ಅಂತರ");
                 set(EFFECTIVE_WPM_SHORT, "ಪರಿಣಾಮಕಾರಿ");
 
                 set(WORD_SPACING_ADD, "ಪದ +");

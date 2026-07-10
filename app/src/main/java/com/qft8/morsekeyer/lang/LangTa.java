@@ -128,7 +128,7 @@ set(TARGET_MET, "இலக்கு எட்டப்பட்டது");
         set(NEXT_LEVEL, "அடுத்த நிலை");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "செயல்திறன் மிக்க WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "கூடுதல் வார்த்தை இடைவெளி");
+                set(EXTRA_WORD_SPACING, "வார்த்தை இடைவெளி");
                 set(EFFECTIVE_WPM_SHORT, "செயல்திறன்");
 
                 set(WORD_SPACING_ADD, "வார்த்தை +");

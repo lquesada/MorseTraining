@@ -134,7 +134,7 @@ set(TARGET_MET, "Doel bereikt");
         set(NEXT_LEVEL, "Volgend niveau");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Effectieve WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Extra woordtussenruimte");
+                set(EXTRA_WORD_SPACING, "Woordtussenruimte");
                 set(EFFECTIVE_WPM_SHORT, "Effectieve");
 
                 set(WORD_SPACING_ADD, "Woord +");

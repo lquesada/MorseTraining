@@ -135,7 +135,7 @@ set(TARGET_MET, "Target tercapai");
         set(NEXT_LEVEL, "Level berikutnya");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM Efektif (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Spasi kata ekstra");
+                set(EXTRA_WORD_SPACING, "Spasi kata");
                 set(EFFECTIVE_WPM_SHORT, "Efektif");
 
                 set(WORD_SPACING_ADD, "Kata +");

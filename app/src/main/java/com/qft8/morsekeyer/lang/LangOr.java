@@ -128,7 +128,7 @@ set(TARGET_MET, "ଲକ୍ଷ୍ୟ ପୂରଣ ହୋଇଛି");
         set(NEXT_LEVEL, "ପରବର୍ତ୍ତୀ ସ୍ତର");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "ପ୍ରଭାବଶାଳୀ WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "ଅତିରିକ୍ତ ଶବ୍ଦ ବ୍ୟବଧାନ");
+                set(EXTRA_WORD_SPACING, "ଶବ୍ଦ ବ୍ୟବଧାନ");
                 set(EFFECTIVE_WPM_SHORT, "ପ୍ରଭାବଶାଳୀ");
 
                 set(WORD_SPACING_ADD, "ଶব୍ਦ +");

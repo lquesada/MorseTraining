@@ -134,7 +134,7 @@ set(TARGET_MET, "Cieľ splnený");
         set(NEXT_LEVEL, "Ďalšia úroveň");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Efektívne WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Extra medzera medzi slovami");
+                set(EXTRA_WORD_SPACING, "Medzera medzi slovami");
                 set(EFFECTIVE_WPM_SHORT, "Efektívne");
 
                 set(WORD_SPACING_ADD, "Slovo +");

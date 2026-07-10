@@ -135,7 +135,7 @@ set(TARGET_MET, "目標達成");
         set(NEXT_LEVEL, "次のレベル");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "実効WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "追加の単語スペース");
+                set(EXTRA_WORD_SPACING, "単語スペース");
                 set(EFFECTIVE_WPM_SHORT, "実効");
 
                 set(WORD_SPACING_ADD, "単語 +");

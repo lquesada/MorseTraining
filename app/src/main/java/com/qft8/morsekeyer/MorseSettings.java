@@ -49,6 +49,7 @@ public class MorseSettings {
     public boolean pickLangThemeOnShare = false;
     public int effectiveWpm = 15;
     public int extraWordSpacing = 0;
+    public int wordSpacing = 100;
 
     public Map<String, String> decoderChoices = new HashMap<>();
 
@@ -153,6 +154,7 @@ public class MorseSettings {
         } else {
             extraWordSpacing = getIntSafe(prefs, "extraWordSpacing", 0);
         }
+        wordSpacing = getIntSafe(prefs, "wordSpacing", 100);
         updateDerivedSpacingSettings();
 
         String choicesStr = getStringSafe(prefs, "decoderChoices", "{}");
@@ -206,7 +208,8 @@ public class MorseSettings {
             .putString("keyboardType", keyboardType)
             .putBoolean("pickLangThemeOnShare", pickLangThemeOnShare)
             .putInt("effectiveWpm", effectiveWpm)
-            .putInt("extraWordSpacing", extraWordSpacing);
+            .putInt("extraWordSpacing", extraWordSpacing)
+            .putInt("wordSpacing", wordSpacing);
 
         String choicesStr = "{}";
         try {
@@ -254,6 +257,7 @@ public class MorseSettings {
         pickLangThemeOnShare = false;
         effectiveWpm = 15;
         extraWordSpacing = 0;
+        wordSpacing = 100;
         decoderChoices.clear();
     }
 
@@ -263,14 +267,30 @@ public class MorseSettings {
             interwordSpacing = 100;
             return;
         }
-        if (effectiveWpm > wpm) {
-            effectiveWpm = wpm;
+        if (effectiveWpm > 60) {
+            effectiveWpm = 60;
         }
         if (effectiveWpm < 3) {
             effectiveWpm = 3;
         }
-        interletterSpacing = (int) Math.round(100.0 * wpm / effectiveWpm);
-        interwordSpacing = (int) Math.round((100.0 * wpm / effectiveWpm) + (wpm * extraWordSpacing / 84.0));
+        if (wordSpacing > 250) {
+            wordSpacing = 250;
+        }
+        if (wordSpacing < 25) {
+            wordSpacing = 25;
+        }
+
+        int eff = effectiveWpm;
+        int maxEff = (int) Math.floor(wpm * 2.0);
+        if (maxEff < 3) {
+            maxEff = 3;
+        }
+        if (eff > maxEff) {
+            eff = maxEff;
+        }
+
+        interletterSpacing = (int) Math.round(100.0 * wpm / eff);
+        interwordSpacing = (int) Math.round((wpm * wordSpacing) / (double) eff);
     }
 
     private String guessKeyboardType(String langSetting) {

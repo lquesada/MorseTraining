@@ -135,7 +135,7 @@ set(TARGET_MET, "목표 달성");
         set(NEXT_LEVEL, "다음 레벨");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "유효 WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "추가 단어 간격");
+                set(EXTRA_WORD_SPACING, "단어 간격");
                 set(EFFECTIVE_WPM_SHORT, "유효");
 
                 set(WORD_SPACING_ADD, "단어 +");

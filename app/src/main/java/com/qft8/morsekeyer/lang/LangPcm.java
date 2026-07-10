@@ -135,7 +135,7 @@ set(TARGET_MET, "Target reach");
         set(NEXT_LEVEL, "Next level");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Effective WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Extra word space");
+                set(EXTRA_WORD_SPACING, "Word space");
                 set(EFFECTIVE_WPM_SHORT, "Effective");
 
                 set(WORD_SPACING_ADD, "Word +");

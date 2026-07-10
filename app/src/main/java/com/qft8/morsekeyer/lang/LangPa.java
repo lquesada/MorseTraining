@@ -128,7 +128,7 @@ set(TARGET_MET, "ਟੀਚਾ ਪੂਰਾ ਹੋਇਆ");
         set(NEXT_LEVEL, "ਅਗਲਾ ਪੱਧਰ");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "ਪ੍ਰਭਾਵਸ਼ਾਲੀ ਡਬਲਯੂਪੀਐਮ (ਫਾਰਨਸਵਰਥ)");
-                set(EXTRA_WORD_SPACING, "ਵਾਧੂ ਸ਼ਬਦ ਵਿੱਥ");
+                set(EXTRA_WORD_SPACING, "ਸ਼ਬਦ ਵਿੱਥ");
                 set(EFFECTIVE_WPM_SHORT, "ਪ੍ਰਭਾਵਸ਼ਾਲੀ");
 
                 set(WORD_SPACING_ADD, "ਸ਼ਬਦ +");

@@ -135,7 +135,7 @@ set(TARGET_MET, "लक्ष्य साध्य");
         set(NEXT_LEVEL, "पुढची पातळी");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "प्रभावी डब्ल्यूपीएम (फार्न्सवर्थ)");
-                set(EXTRA_WORD_SPACING, "अतिरिक्त शब्द अंतर");
+                set(EXTRA_WORD_SPACING, "शब्द अंतर");
                 set(EFFECTIVE_WPM_SHORT, "प्रभावी");
 
                 set(WORD_SPACING_ADD, "शब्द +");

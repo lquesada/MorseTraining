@@ -135,7 +135,7 @@ set(TARGET_MET, "Obiettivo raggiunto");
         set(NEXT_LEVEL, "Livello successivo");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM effettivo (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Spaziatura parole extra");
+                set(EXTRA_WORD_SPACING, "Spaziatura parole");
                 set(EFFECTIVE_WPM_SHORT, "Effettivo");
 
                 set(WORD_SPACING_ADD, "Parola +");

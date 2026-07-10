@@ -135,7 +135,7 @@ set(TARGET_MET, "Țintă atinsă");
         set(NEXT_LEVEL, "Nivelul următor");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM efectiv (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Spațiu suplimentar între cuvinte");
+                set(EXTRA_WORD_SPACING, "Spațiu între cuvinte");
                 set(EFFECTIVE_WPM_SHORT, "Efectiv");
 
                 set(WORD_SPACING_ADD, "Cuvânt +");

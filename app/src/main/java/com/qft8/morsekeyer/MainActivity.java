@@ -888,7 +888,7 @@ public class MainActivity extends Activity {
         extraWordSpacingRow = hRow();
         extraWordSpacingRow.setPadding(dp(32), 0, 0, 0);
         dlgSeekExtraWordSpacing = new SeekBar(this);
-        dlgSeekExtraWordSpacing.setMax(2000);
+        dlgSeekExtraWordSpacing.setMax(225);
         dlgSeekExtraWordSpacing.setLayoutParams(new LinearLayout.LayoutParams(0, -2, 1));
         
         dlgTxtExtraWordSpacing = new TextView(this);
@@ -903,8 +903,8 @@ public class MainActivity extends Activity {
         dlgSeekExtraWordSpacing.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if (!fromUser) return;
-                settings.extraWordSpacing = progress;
-                dlgTxtExtraWordSpacing.setText(settings.extraWordSpacing + " ms");
+                settings.wordSpacing = 25 + progress;
+                dlgTxtExtraWordSpacing.setText(settings.wordSpacing + "%");
             }
             @Override public void onStartTrackingTouch(SeekBar seekBar) {}
             @Override public void onStopTrackingTouch(SeekBar seekBar) {
@@ -1477,13 +1477,13 @@ public class MainActivity extends Activity {
             settings.tableRatio = (int)v;
             applyOrientation();
         });
-        setupClickableLabel(dlgTxtEffectiveWpm, 3, settings.wpm, false, v -> {
+        setupClickableLabel(dlgTxtEffectiveWpm, 3, 60, false, v -> {
             settings.effectiveWpm = (int)v;
             settings.save(this);
             syncSettingsDialog();
         });
-        setupClickableLabel(dlgTxtExtraWordSpacing, 0, 2000, false, v -> {
-            settings.extraWordSpacing = (int)v;
+        setupClickableLabel(dlgTxtExtraWordSpacing, 25, 250, false, v -> {
+            settings.wordSpacing = (int)v;
             settings.save(this);
             syncSettingsDialog();
         });
@@ -1822,7 +1822,7 @@ public class MainActivity extends Activity {
         dlgTxtTableRatio.setText(settings.tableRatio + "%");
 
         int effWpm = settings.strict ? settings.wpm : settings.effectiveWpm;
-        int extraSpc = settings.strict ? 0 : settings.extraWordSpacing;
+        int wordSpc = settings.strict ? 100 : settings.wordSpacing;
 
         if (dlgTxtEffectiveWpm != null) {
             dlgTxtEffectiveWpm.setText(String.valueOf(effWpm));
@@ -1841,12 +1841,12 @@ public class MainActivity extends Activity {
         }
 
         if (dlgSeekExtraWordSpacing != null) {
-            dlgSeekExtraWordSpacing.setProgress(extraSpc);
+            dlgSeekExtraWordSpacing.setProgress(wordSpc - 25);
             dlgSeekExtraWordSpacing.setEnabled(!settings.strict);
             dlgSeekExtraWordSpacing.setAlpha(settings.strict ? 0.4f : 1.0f);
         }
         if (dlgTxtExtraWordSpacing != null) {
-            dlgTxtExtraWordSpacing.setText(extraSpc + " ms");
+            dlgTxtExtraWordSpacing.setText(wordSpc + "%");
             dlgTxtExtraWordSpacing.setAlpha(settings.strict ? 0.4f : 1.0f);
         }
         if (dlgLblExtraWordSpacing != null) {
@@ -1947,8 +1947,7 @@ public class MainActivity extends Activity {
     }
 
     private void updateEffectiveWpm(int delta) {
-        int maxEff = Math.max(3, settings.wpm);
-        settings.effectiveWpm = Math.max(3, Math.min(maxEff, settings.effectiveWpm + delta));
+        settings.effectiveWpm = Math.max(3, Math.min(60, settings.effectiveWpm + delta));
         settings.save(this);
         syncSettingsDialog();
     }
@@ -2682,9 +2681,6 @@ public class MainActivity extends Activity {
         tv.setOnClickListener(v -> {
             if (v.getAlpha() < 1.0f) return;
             float currentMax = max;
-            if (tv == dlgTxtEffectiveWpm) {
-                currentMax = settings.wpm;
-            }
             AlertDialog.Builder builder = new AlertDialog.Builder(this, getDialogTheme());
             String title = "Enter value";
             if (isFloat) title += String.format(" (%.1f - %.1f)", min, currentMax);

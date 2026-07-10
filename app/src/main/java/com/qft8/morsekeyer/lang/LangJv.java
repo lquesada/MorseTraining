@@ -128,7 +128,7 @@ set(TARGET_MET, "Target digayuh");
         set(NEXT_LEVEL, "Tingkat sabanjuré");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM Efektif (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Spasi tembung ekstra");
+                set(EXTRA_WORD_SPACING, "Spasi tembung");
                 set(EFFECTIVE_WPM_SHORT, "Efektif");
 
                 set(WORD_SPACING_ADD, "Tembung +");

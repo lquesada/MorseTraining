@@ -135,7 +135,7 @@ set(TARGET_MET, "Tavoite saavutettu");
         set(NEXT_LEVEL, "Seuraava taso");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Tehollinen WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Ylimääräinen sanaväli");
+                set(EXTRA_WORD_SPACING, "Sanaväli");
                 set(EFFECTIVE_WPM_SHORT, "Tehollinen");
 
                 set(WORD_SPACING_ADD, "Sana +");

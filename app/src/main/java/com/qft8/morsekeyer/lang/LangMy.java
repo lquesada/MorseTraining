@@ -128,7 +128,7 @@ set(TARGET_MET, "ပစ်မှတ်ပြည့်မီသည်");
         set(NEXT_LEVEL, "နောက်အဆင့်");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "ထိရောက်သော WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "အပိုစကားလုံး ခြားနားချက်");
+                set(EXTRA_WORD_SPACING, "စကားလုံး ခြားနားချက်");
                 set(EFFECTIVE_WPM_SHORT, "ထိရောက်သော");
 
                 set(WORD_SPACING_ADD, "စကား +");

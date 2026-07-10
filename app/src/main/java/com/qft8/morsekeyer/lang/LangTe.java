@@ -128,7 +128,7 @@ set(TARGET_MET, "లక్ష్యం చేరుకుంది");
         set(NEXT_LEVEL, "తదుపరి స్థాయి");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "ప్రభావవంతమైన WPM (ఫార్న్స్‌వర్త్)");
-                set(EXTRA_WORD_SPACING, "అదనపు పద స్థలం");
+                set(EXTRA_WORD_SPACING, "పద స్థలం");
                 set(EFFECTIVE_WPM_SHORT, "ప్రభావవంతమైన");
 
                 set(WORD_SPACING_ADD, "पదం +");

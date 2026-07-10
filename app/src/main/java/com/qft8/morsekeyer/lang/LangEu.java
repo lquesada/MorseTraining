@@ -128,7 +128,7 @@ set(TARGET_MET, "Helburua lortuta");
         set(NEXT_LEVEL, "Hurrengo maila");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM eraginkorra (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Hitz tarte gehigarria");
+                set(EXTRA_WORD_SPACING, "Hitz tarte");
                 set(EFFECTIVE_WPM_SHORT, "Eraginkorra");
 
                 set(WORD_SPACING_ADD, "Hitz +");

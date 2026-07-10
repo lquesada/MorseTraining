@@ -135,7 +135,7 @@ set(TARGET_MET, "Đã đạt mục tiêu");
         set(NEXT_LEVEL, "Cấp độ tiếp theo");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM Hiệu quả (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Khoảng cách từ bổ sung");
+                set(EXTRA_WORD_SPACING, "Khoảng cách từ");
                 set(EFFECTIVE_WPM_SHORT, "Hiệu quả");
 
                 set(WORD_SPACING_ADD, "Từ +");

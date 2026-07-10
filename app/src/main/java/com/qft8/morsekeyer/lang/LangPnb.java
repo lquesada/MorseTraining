@@ -127,7 +127,7 @@ set(TARGET_MET, "ہدف حاصل ہو گیا");
         set(NEXT_LEVEL, "اگلا درجہ");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "موثر ڈبلیو پی ایم (فارنس ورتھ)");
-                set(EXTRA_WORD_SPACING, "ਵਾਧੂ ਸ਼ਬਦ ਵਿੱਥ");
+                set(EXTRA_WORD_SPACING, "ਸ਼ਬਦ ਵਿੱਥ");
                 set(EFFECTIVE_WPM_SHORT, "موثر");
 
                 set(WORD_SPACING_ADD, "ਸ਼ਬਦ +");

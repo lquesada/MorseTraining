@@ -135,7 +135,7 @@ set(TARGET_MET, "Lengo limefikiwa");
         set(NEXT_LEVEL, "Ngazi inayofuata");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM Thabiti (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Nafasi ya ziada ya maneno");
+                set(EXTRA_WORD_SPACING, "Nafasi ya maneno");
                 set(EFFECTIVE_WPM_SHORT, "Thabiti");
 
                 set(WORD_SPACING_ADD, "Neno +");

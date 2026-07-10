@@ -135,7 +135,7 @@ set(TARGET_MET, "目標達到");
         set(NEXT_LEVEL, "下一關");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "有效 WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "額外單詞間距");
+                set(EXTRA_WORD_SPACING, "單詞間距");
                 set(EFFECTIVE_WPM_SHORT, "有效");
 
                 set(WORD_SPACING_ADD, "單詞 +");

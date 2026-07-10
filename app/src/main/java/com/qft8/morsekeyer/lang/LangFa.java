@@ -135,7 +135,7 @@ set(TARGET_MET, "هدف محقق شد");
         set(NEXT_LEVEL, "مرحله بعدی");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "سرعت موثر (فارنسورث)");
-                set(EXTRA_WORD_SPACING, "فاصله اضافی کلمات");
+                set(EXTRA_WORD_SPACING, "فاصله کلمات");
                 set(EFFECTIVE_WPM_SHORT, "موثر");
 
                 set(WORD_SPACING_ADD, "کلمه +");

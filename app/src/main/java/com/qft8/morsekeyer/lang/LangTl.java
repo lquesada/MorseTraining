@@ -135,7 +135,7 @@ set(TARGET_MET, "Naabot ang target");
         set(NEXT_LEVEL, "Susunod na antas");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Epektibong WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Karagdagang espasyo ng salita");
+                set(EXTRA_WORD_SPACING, "Espasyo ng salita");
                 set(EFFECTIVE_WPM_SHORT, "Epektibo");
 
                 set(WORD_SPACING_ADD, "Salita +");

@@ -135,7 +135,7 @@ set(TARGET_MET, "บรรลุเป้าหมาย");
         set(NEXT_LEVEL, "ด่านต่อไป");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM ที่มีผลจริง (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "ระยะห่างคำพิเศษ");
+                set(EXTRA_WORD_SPACING, "ระยะห่างคำ");
                 set(EFFECTIVE_WPM_SHORT, "ผลจริง");
 
                 set(WORD_SPACING_ADD, "คำ +");

@@ -128,7 +128,7 @@ set(TARGET_MET, "ലക്ഷ്യം നേടി");
         set(NEXT_LEVEL, "അടുത്ത ഘട്ടം");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "ഫലപ്രദമായ ഡബ്ല്യുപിഎം (ഫാൺസ്വർത്ത്)");
-                set(EXTRA_WORD_SPACING, "അധിക വാക്ക് അകലം");
+                set(EXTRA_WORD_SPACING, "വാക്ക് അകലം");
                 set(EFFECTIVE_WPM_SHORT, "ഫലപ്രദമായ");
 
                 set(WORD_SPACING_ADD, "വാക്ക് +");

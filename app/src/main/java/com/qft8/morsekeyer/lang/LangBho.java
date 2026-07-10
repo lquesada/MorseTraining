@@ -128,7 +128,7 @@ set(TARGET_MET, "लक्ष्य पूरा भइल");
         set(NEXT_LEVEL, "अगिला लेवल");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "प्रभावी डब्ल्यूपीएम (फार्न्सवर्थ)");
-                set(EXTRA_WORD_SPACING, "अतिरिक्त शब्द स्थान");
+                set(EXTRA_WORD_SPACING, "शब्द स्थान");
                 set(EFFECTIVE_WPM_SHORT, "प्रभावी");
 
                 set(WORD_SPACING_ADD, "शब्द +");

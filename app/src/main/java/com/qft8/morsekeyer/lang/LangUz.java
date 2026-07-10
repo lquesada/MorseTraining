@@ -128,7 +128,7 @@ set(TARGET_MET, "Maqsadga erishildi");
         set(NEXT_LEVEL, "Keyingi bosqich");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Samarali WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Qo'shimcha so'z masofasi");
+                set(EXTRA_WORD_SPACING, "So'z masofasi");
                 set(EFFECTIVE_WPM_SHORT, "Samarali");
 
                 set(WORD_SPACING_ADD, "So'z +");

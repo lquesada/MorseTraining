@@ -134,7 +134,7 @@ set(TARGET_MET, "Mål nådd");
         set(NEXT_LEVEL, "Neste nivå");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Effektiv WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Ekstra ordmellomrom");
+                set(EXTRA_WORD_SPACING, "Ordmellomrom");
                 set(EFFECTIVE_WPM_SHORT, "Effektiv");
 
                 set(WORD_SPACING_ADD, "Ord +");

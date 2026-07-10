@@ -134,7 +134,7 @@ set(TARGET_MET, "היעד הושג");
         set(NEXT_LEVEL, "השלב הבא");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM אפקטיבי (פרנסוורת')");
-                set(EXTRA_WORD_SPACING, "מרווח מילים נוסף");
+                set(EXTRA_WORD_SPACING, "מרווח מילים");
                 set(EFFECTIVE_WPM_SHORT, "אפקטיבי");
 
                 set(WORD_SPACING_ADD, "מילה +");

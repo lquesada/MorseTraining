@@ -128,7 +128,7 @@ set(TARGET_MET, "Àfojúsùn ti tẹ́lọrùn");
         set(NEXT_LEVEL, "Ipele ti o tele");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM to munadoko (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Alafo ọrọ afikun");
+                set(EXTRA_WORD_SPACING, "Alafo ọrọ");
                 set(EFFECTIVE_WPM_SHORT, "Munadoko");
 
                 set(WORD_SPACING_ADD, "Ọrọ +");

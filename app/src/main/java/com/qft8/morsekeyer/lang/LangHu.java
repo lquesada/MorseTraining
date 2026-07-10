@@ -135,7 +135,7 @@ set(TARGET_MET, "Cél elérve");
         set(NEXT_LEVEL, "Következő szint");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Effektív WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Extra szóköz");
+                set(EXTRA_WORD_SPACING, "Szóköz");
                 set(EFFECTIVE_WPM_SHORT, "Effektív");
 
                 set(WORD_SPACING_ADD, "Szó +");

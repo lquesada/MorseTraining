@@ -128,7 +128,7 @@ set(TARGET_MET, "Target kahontal");
         set(NEXT_LEVEL, "Tingkat salajengna");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM Efektif (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Spasi kecap ekstra");
+                set(EXTRA_WORD_SPACING, "Spasi kecap");
                 set(EFFECTIVE_WPM_SHORT, "Efektif");
 
                 set(WORD_SPACING_ADD, "Kecap +");

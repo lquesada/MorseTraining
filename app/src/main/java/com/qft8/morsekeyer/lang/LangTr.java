@@ -135,7 +135,7 @@ set(TARGET_MET, "Hedefe ulaşıldı");
         set(NEXT_LEVEL, "Sonraki seviye");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Etkin WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Ekstra kelime boşluğu");
+                set(EXTRA_WORD_SPACING, "Kelime boşluğu");
                 set(EFFECTIVE_WPM_SHORT, "Etkin");
 
                 set(WORD_SPACING_ADD, "Kelime +");

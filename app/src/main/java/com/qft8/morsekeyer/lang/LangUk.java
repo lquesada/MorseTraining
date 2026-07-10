@@ -135,7 +135,7 @@ set(TARGET_MET, "Ціль досягнута");
         set(NEXT_LEVEL, "Наступний рівень");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Ефективна швидкість (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Додатковий інтервал слів");
+                set(EXTRA_WORD_SPACING, "Інтервал слів");
                 set(EFFECTIVE_WPM_SHORT, "Ефективна");
 
                 set(WORD_SPACING_ADD, "Слово +");

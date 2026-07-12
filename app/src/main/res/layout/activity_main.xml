@@ -891,7 +891,8 @@
     </LinearLayout>
     <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal">
         <Space android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1.5" />
-        <Button android:id="@+id/btn_kb_space" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="6" android:text="SPACE" android:layout_margin="1.5dp" android:backgroundTint="#FFFFFF" android:textColor="#000000" android:padding="0dp" />
+        <Button android:id="@+id/btn_kb_equal" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2" android:text="=" android:layout_margin="1.5dp" android:backgroundTint="#FFFFFF" android:textColor="#000000" android:padding="0dp" />
+        <Button android:id="@+id/btn_kb_space" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="4" android:text="SPACE" android:layout_margin="1.5dp" android:backgroundTint="#FFFFFF" android:textColor="#000000" android:padding="0dp" />
         <ImageButton android:id="@+id/btn_kb_enter" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2.5" android:src="@drawable/ic_check" android:scaleType="centerInside" android:layout_margin="1.5dp" android:backgroundTint="#FFFFFF" android:tint="#000000" android:padding="12dp" />
     </LinearLayout>
 </LinearLayout>

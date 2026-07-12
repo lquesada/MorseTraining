@@ -457,14 +457,14 @@ public class GameController {
                         { "A", "Z", "E", "R", "T", "Y", "U", "I", "O", "P" },
                         { "Q", "S", "D", "F", "G", "H", "J", "K", "L", "M" },
                         { "?", "W", "X", "C", "V", "B", "N", "<1.0>", "DEL" },
-                        { "CLEAR", "SLASH", "SPACE", ",", ".", "ENTER" }
+                        { "CLEAR", "SLASH", "EQUAL", "SPACE", ",", ".", "ENTER" }
                 };
                 weightRows = new float[][] {
                         { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
                         { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
                         { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
                         { 1.5f, 1, 1, 1, 1, 1, 1, 1.0f, 1.5f },
-                        { 1.5f, 1, 3, 1, 1, 2.5f }
+                        { 1.5f, 1, 1, 2, 1, 1, 2.5f }
                 };
             } else if ("QWERTZ".equals(kbType)) {
                 layoutRows = new String[][] {
@@ -472,14 +472,14 @@ public class GameController {
                         { "Q", "W", "E", "R", "T", "Z", "U", "I", "O", "P" },
                         { "<0.5>", "A", "S", "D", "F", "G", "H", "J", "K", "L", "<0.5>" },
                         { "?", "Y", "X", "C", "V", "B", "N", "M", "DEL" },
-                        { "CLEAR", "SLASH", "SPACE", ",", ".", "ENTER" }
+                        { "CLEAR", "SLASH", "EQUAL", "SPACE", ",", ".", "ENTER" }
                 };
                 weightRows = new float[][] {
                         { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
                         { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
                         { 0.5f, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.5f },
                         { 1.5f, 1, 1, 1, 1, 1, 1, 1, 1.5f },
-                        { 1.5f, 1, 3, 1, 1, 2.5f }
+                        { 1.5f, 1, 1, 2, 1, 1, 2.5f }
                 };
             } else { // QWERTY
                 layoutRows = new String[][] {
@@ -487,14 +487,14 @@ public class GameController {
                         { "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P" },
                         { "<0.5>", "A", "S", "D", "F", "G", "H", "J", "K", "L", "<0.5>" },
                         { "?", "Z", "X", "C", "V", "B", "N", "M", "DEL" },
-                        { "CLEAR", "SLASH", "SPACE", ",", ".", "ENTER" }
+                        { "CLEAR", "SLASH", "EQUAL", "SPACE", ",", ".", "ENTER" }
                 };
                 weightRows = new float[][] {
                         { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
                         { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
                         { 0.5f, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.5f },
                         { 1.5f, 1, 1, 1, 1, 1, 1, 1, 1.5f },
-                        { 1.5f, 1, 3, 1, 1, 2.5f }
+                        { 1.5f, 1, 1, 2, 1, 1, 2.5f }
                 };
             }
 
@@ -541,7 +541,7 @@ public class GameController {
 
                         } else {
                             Button b = new Button(activity);
-                            b.setText("SLASH".equals(key) ? "/" : ("SPACE".equals(key) ? "" : key));
+                            b.setText("SLASH".equals(key) ? "/" : ("EQUAL".equals(key) ? "=" : ("SPACE".equals(key) ? "" : key)));
                             b.setTextColor(initFg);
                             b.setPadding(0, 0, 0, 0);
                             b.setBackgroundTintList(android.content.res.ColorStateList.valueOf(initBg));
@@ -801,6 +801,9 @@ public class GameController {
         if (key.equals("SLASH")) {
             key = "/";
         }
+        if (key.equals("EQUAL")) {
+            key = "=";
+        }
 
         if (rxGreenDelayActive) {
             return;
@@ -934,6 +937,7 @@ public class GameController {
                 String c = KochLevelSelectView.KOCH_CHARS[i];
                 visibleTags.add(c);
                 if ("/".equals(c)) visibleTags.add("SLASH");
+                if ("=".equals(c)) visibleTags.add("EQUAL");
             }
         }
 

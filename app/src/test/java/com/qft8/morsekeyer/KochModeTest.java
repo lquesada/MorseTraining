@@ -18,6 +18,11 @@ public class KochModeTest {
     }
 
     @Test
+    public void testKochEqualCharLevel() {
+        assertEquals("=", KochLevelSelectView.KOCH_CHARS[16]);
+    }
+
+    @Test
     public void testWordGeneratorLevel0() {
         // Level 0 word generator should only generate words consisting of 'K'
         String word = KochWordGenerator.generateWord(0, 0);

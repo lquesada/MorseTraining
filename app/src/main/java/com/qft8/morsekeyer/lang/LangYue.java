@@ -109,6 +109,7 @@ public class LangYue extends MorseLanguage {
                 
 
         set(REPEAT, "重複");
+        set(HINT, "提示");
 
         set(START, "開始");
         set(PICK_LANG_THEME_ON_SHARE, "分享分數時選擇語言同主題");
@@ -135,7 +136,7 @@ set(TARGET_MET, "目標達到");
         set(NEXT_LEVEL, "下一關");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "有效 WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "單詞間距");
+                set(EXTRA_WORD_SPACING, "間距");
                 set(EFFECTIVE_WPM_SHORT, "有效");
 
                 set(WORD_SPACING_ADD, "單詞 +");

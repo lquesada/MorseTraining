@@ -109,6 +109,7 @@ public class LangPcm extends MorseLanguage {
                 
 
         set(REPEAT, "REPEAT");
+        set(HINT, "HINT");
 
         set(START, "START");
         set(PICK_LANG_THEME_ON_SHARE, "Choose language and theme when you dey share scores");
@@ -135,7 +136,7 @@ set(TARGET_MET, "Target reach");
         set(NEXT_LEVEL, "Next level");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Effective WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Word space");
+                set(EXTRA_WORD_SPACING, "Spacing");
                 set(EFFECTIVE_WPM_SHORT, "Effective");
 
                 set(WORD_SPACING_ADD, "Word +");

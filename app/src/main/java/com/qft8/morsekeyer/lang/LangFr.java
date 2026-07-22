@@ -110,6 +110,7 @@ public class LangFr extends MorseLanguage {
                 
 
         set(REPEAT, "RÉPÉTER");
+        set(HINT, "INDICE");
 
         set(START, "DÉMARRER");
         set(PICK_LANG_THEME_ON_SHARE, "Choisir la langue et le thème lors du partage des scores");
@@ -135,7 +136,7 @@ set(TARGET_MET, "Objectif atteint");
         set(NEXT_LEVEL, "Niveau suivant");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM effectif (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Espacement des mots");
+                set(EXTRA_WORD_SPACING, "Espacement");
                 set(EFFECTIVE_WPM_SHORT, "Effectif");
 
                 set(WORD_SPACING_ADD, "Mot +");

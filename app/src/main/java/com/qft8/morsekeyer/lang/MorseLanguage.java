@@ -129,6 +129,7 @@ public abstract class MorseLanguage {
 
     public static final String PLAY = "PLAY";
     public static final String REPEAT = "REPEAT";
+    public static final String HINT = "HINT";
     public static final String START = "START";
     public static final String CONTINUE = "CONTINUE";
     public static final String QUIT_GAME = "QUIT_GAME";

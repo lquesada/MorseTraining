@@ -110,6 +110,7 @@ public class LangDe extends MorseLanguage {
                 
 
         set(REPEAT, "WIEDERHOLEN");
+        set(HINT, "HINWEIS");
 
         set(START, "START");
         set(PICK_LANG_THEME_ON_SHARE, "Sprache und Design beim Teilen von Punktzahlen auswählen");
@@ -135,7 +136,7 @@ set(TARGET_MET, "Ziel erreicht");
         set(NEXT_LEVEL, "Nächste Stufe");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Effektive WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Wortabstand");
+                set(EXTRA_WORD_SPACING, "Abstand");
                 set(EFFECTIVE_WPM_SHORT, "Effektiv");
 
                 set(WORD_SPACING_ADD, "Wort +");

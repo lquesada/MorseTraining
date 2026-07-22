@@ -109,6 +109,7 @@ public class LangEo extends MorseLanguage {
                 
 
         set(REPEAT, "RIPETI");
+        set(HINT, "HELPETO");
 
         set(START, "KOMENCI");
         set(PICK_LANG_THEME_ON_SHARE, "Elekti lingvon kaj etoson kiam vi dividas poentojn");
@@ -135,7 +136,7 @@ set(TARGET_MET, "Celo atingita");
         set(NEXT_LEVEL, "Sekva nivelo");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Efektiva WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Vortspaco");
+                set(EXTRA_WORD_SPACING, "Spaco");
                 set(EFFECTIVE_WPM_SHORT, "Efektiva");
 
                 set(WORD_SPACING_ADD, "Vorto +");

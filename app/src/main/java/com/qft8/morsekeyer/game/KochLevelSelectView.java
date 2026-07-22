@@ -25,6 +25,8 @@ public class KochLevelSelectView extends FrameLayout {
 
     private static final int COLS = 4;
     private final int totalLevels = 41;
+    private String titleText;
+    private String resetPrefKey = "koch_highest_completed_level_v2";
     private int highestCompletedLevel;
     private final Consumer<Integer> onLevelClick;
     private final Runnable onBackClick;
@@ -33,7 +35,13 @@ public class KochLevelSelectView extends FrameLayout {
     private boolean isDarkTheme;
 
     public KochLevelSelectView(Context context, int highestCompletedLevel, Consumer<Integer> onLevelClick, Runnable onBackClick) {
+        this(context, LanguageManager.get(MorseLanguage.RX), "koch_highest_completed_level_v2", highestCompletedLevel, onLevelClick, onBackClick);
+    }
+
+    public KochLevelSelectView(Context context, String titleText, String resetPrefKey, int highestCompletedLevel, Consumer<Integer> onLevelClick, Runnable onBackClick) {
         super(context);
+        this.titleText = titleText;
+        this.resetPrefKey = resetPrefKey;
         this.highestCompletedLevel = highestCompletedLevel;
         this.onLevelClick = onLevelClick;
         this.onBackClick = onBackClick;
@@ -115,7 +123,7 @@ public class KochLevelSelectView extends FrameLayout {
 
         // Title
         TextView title = new TextView(getContext());
-        title.setText(LanguageManager.get(MorseLanguage.KOCH_METHOD));
+        title.setText(titleText != null ? titleText : LanguageManager.get(MorseLanguage.RX));
         title.setTextColor(cText);
         title.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
         title.setTypeface(Typeface.DEFAULT_BOLD);
@@ -286,7 +294,7 @@ public class KochLevelSelectView extends FrameLayout {
         btnReset.setBackgroundResource(outValue.resourceId);
         btnReset.setOnClickListener(v -> {
             android.content.SharedPreferences prefs = getContext().getSharedPreferences("morseKeyerSettings", android.content.Context.MODE_PRIVATE);
-            prefs.edit().putInt("koch_highest_completed_level_v2", -1).apply();
+            prefs.edit().putInt(resetPrefKey != null ? resetPrefKey : "koch_highest_completed_level_v2", -1).apply();
             removeView(overlay);
             // Re-render
             removeAllViews();

@@ -102,6 +102,7 @@ public class LangGl extends MorseLanguage {
                 
 
         set(REPEAT, "REPETIR");
+        set(HINT, "PISTA");
 
         set(START, "COMEZAR");
         set(PICK_LANG_THEME_ON_SHARE, "Escoller idioma e tema ao compartir puntuacións");
@@ -128,7 +129,7 @@ set(TARGET_MET, "Obxectivo acadado");
         set(NEXT_LEVEL, "Seguinte nivel");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM efectivo (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Espazado de palabras");
+                set(EXTRA_WORD_SPACING, "Espazado");
                 set(EFFECTIVE_WPM_SHORT, "Efectivo");
 
                 set(WORD_SPACING_ADD, "Palabra +");

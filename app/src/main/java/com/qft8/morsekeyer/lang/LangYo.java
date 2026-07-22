@@ -102,6 +102,7 @@ public class LangYo extends MorseLanguage {
                 
 
         set(REPEAT, "TUN SỌ");
+        set(HINT, "ÀMÌ");
 
         set(START, "BẸRẸ");
         set(PICK_LANG_THEME_ON_SHARE, "Yan ede ati akori nigbati o ba n pin awọn ikun");
@@ -128,7 +129,7 @@ set(TARGET_MET, "Àfojúsùn ti tẹ́lọrùn");
         set(NEXT_LEVEL, "Ipele ti o tele");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM to munadoko (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Alafo ọrọ");
+                set(EXTRA_WORD_SPACING, "Alafo");
                 set(EFFECTIVE_WPM_SHORT, "Munadoko");
 
                 set(WORD_SPACING_ADD, "Ọrọ +");

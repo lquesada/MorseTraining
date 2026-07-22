@@ -109,6 +109,7 @@ public class LangSk extends MorseLanguage {
                 
 
         set(REPEAT, "OPAKOVAŤ");
+        set(HINT, "NÁPOVEDA");
 
         set(START, "ŠTART");
         set(PICK_LANG_THEME_ON_SHARE, "Pri zdieľaní skóre vyberte jazyk a tému");
@@ -134,7 +135,7 @@ set(TARGET_MET, "Cieľ splnený");
         set(NEXT_LEVEL, "Ďalšia úroveň");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Efektívne WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Medzera medzi slovami");
+                set(EXTRA_WORD_SPACING, "Medzera");
                 set(EFFECTIVE_WPM_SHORT, "Efektívne");
 
                 set(WORD_SPACING_ADD, "Slovo +");

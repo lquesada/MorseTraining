@@ -102,6 +102,7 @@ public class LangSu extends MorseLanguage {
                 
 
         set(REPEAT, "ULANGI");
+        set(HINT, "PETUNJUK");
 
         set(START, "MIMITIAN");
         set(PICK_LANG_THEME_ON_SHARE, "Pilih basa jeung tema nalika ngabagi skor");
@@ -128,7 +129,7 @@ set(TARGET_MET, "Target kahontal");
         set(NEXT_LEVEL, "Tingkat salajengna");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM Efektif (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Spasi kecap");
+                set(EXTRA_WORD_SPACING, "Spasi");
                 set(EFFECTIVE_WPM_SHORT, "Efektif");
 
                 set(WORD_SPACING_ADD, "Kecap +");

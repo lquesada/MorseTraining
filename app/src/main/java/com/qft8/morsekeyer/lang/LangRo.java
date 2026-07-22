@@ -110,6 +110,7 @@ public class LangRo extends MorseLanguage {
                 
 
         set(REPEAT, "REPETĂ");
+        set(HINT, "INDICIU");
 
         set(START, "START");
         set(PICK_LANG_THEME_ON_SHARE, "Alege limba și tema la partajarea scorurilor");
@@ -135,7 +136,7 @@ set(TARGET_MET, "Țintă atinsă");
         set(NEXT_LEVEL, "Nivelul următor");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM efectiv (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Spațiu între cuvinte");
+                set(EXTRA_WORD_SPACING, "Spațiere");
                 set(EFFECTIVE_WPM_SHORT, "Efectiv");
 
                 set(WORD_SPACING_ADD, "Cuvânt +");

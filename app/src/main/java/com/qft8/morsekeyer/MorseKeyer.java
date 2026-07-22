@@ -62,6 +62,7 @@ public class MorseKeyer {
         state.bugKeyActive = false;
         state.isSequencePlaying = false;
         sequenceElements = null;
+        sequenceCharCallback = null;
         toneEngine.cancelElement();
         toneEngine.setToneActive(false);
         state.currentCode = "";
@@ -202,7 +203,13 @@ public class MorseKeyer {
         playNextSequenceElement();
     }
 
+    private java.util.function.Consumer<Integer> sequenceCharCallback;
+
     public void playText(String text, Runnable onComplete) {
+        playText(text, null, onComplete);
+    }
+
+    public void playText(String text, java.util.function.Consumer<Integer> onCharIndex, Runnable onComplete) {
         if (text == null || text.isEmpty()) {
             if (onComplete != null) onComplete.run();
             return;
@@ -215,6 +222,7 @@ public class MorseKeyer {
         cancelAll();
         state.isSequencePlaying = true;
         sequenceCompleteCallback = onComplete;
+        sequenceCharCallback = onCharIndex;
         
         final double[] timings = getRecognitionTimings();
         sequenceElements = new java.util.ArrayList<>();
@@ -246,7 +254,7 @@ public class MorseKeyer {
                 char element = code.charAt(j);
                 double toneDuration = (element == '.') ? timings[0] : timings[1];
                 double silenceDuration = timings[2];
-                sequenceElements.add(new double[]{toneDuration, silenceDuration});
+                sequenceElements.add(new double[]{toneDuration, silenceDuration, (double) i});
             }
             
             // Replace last element gap with letter gap
@@ -265,16 +273,29 @@ public class MorseKeyer {
         playNextSequenceElement();
     }
 
+    private void onElementToneStart(double[] element) {
+        notifyVisual(true);
+        if (sequenceCharCallback != null && element != null && element.length > 2) {
+            final int charIdx = (int) element[2];
+            uiHandler.post(() -> {
+                if (sequenceCharCallback != null) {
+                    sequenceCharCallback.accept(charIdx);
+                }
+            });
+        }
+    }
+
     private void playNextSequenceElement() {
         if (!state.isSequencePlaying || sequenceElements == null || state.sequenceIndex >= sequenceElements.size()) {
             state.isSequencePlaying = false;
+            sequenceCharCallback = null;
             return;
         }
 
         double[] element = sequenceElements.get(state.sequenceIndex);
         state.sequenceIndex++;
 
-        notifyVisual(true);
+        onElementToneStart(element);
         toneEngine.playElement(element[0], element[1],
                 this::onSequenceToneEnd, this::onSequenceSilenceEnd);
     }
@@ -286,7 +307,7 @@ public class MorseKeyer {
             state.sequenceIndex++;
 
             toneEngine.queueNextElement(nextElement[0], nextElement[1],
-                    () -> notifyVisual(true),
+                    () -> onElementToneStart(nextElement),
                     this::onSequenceToneEnd,
                     this::onSequenceSilenceEnd);
         }
@@ -295,6 +316,7 @@ public class MorseKeyer {
     private void onSequenceSilenceEnd() {
         if (sequenceElements == null || state.sequenceIndex >= sequenceElements.size()) {
             state.isSequencePlaying = false;
+            sequenceCharCallback = null;
             if (sequenceCompleteCallback != null) {
                 uiHandler.post(sequenceCompleteCallback);
                 sequenceCompleteCallback = null;

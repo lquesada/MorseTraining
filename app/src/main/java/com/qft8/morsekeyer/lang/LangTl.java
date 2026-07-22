@@ -109,6 +109,7 @@ public class LangTl extends MorseLanguage {
                 
 
         set(REPEAT, "ULITIN");
+        set(HINT, "PAHIWATIG");
 
         set(START, "SIMULAN");
         set(PICK_LANG_THEME_ON_SHARE, "Pumili ng wika at tema kapag nagbabahagi ng mga marka");
@@ -135,7 +136,7 @@ set(TARGET_MET, "Naabot ang target");
         set(NEXT_LEVEL, "Susunod na antas");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Epektibong WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Espasyo ng salita");
+                set(EXTRA_WORD_SPACING, "Espasyo");
                 set(EFFECTIVE_WPM_SHORT, "Epektibo");
 
                 set(WORD_SPACING_ADD, "Salita +");

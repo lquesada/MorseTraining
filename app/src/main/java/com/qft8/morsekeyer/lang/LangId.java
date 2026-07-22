@@ -110,6 +110,7 @@ public class LangId extends MorseLanguage {
                 
 
         set(REPEAT, "ULANGI");
+        set(HINT, "PETUNJUK");
 
         set(START, "MULAI");
         set(PICK_LANG_THEME_ON_SHARE, "Pilih bahasa dan tema saat membagikan skor");
@@ -135,7 +136,7 @@ set(TARGET_MET, "Target tercapai");
         set(NEXT_LEVEL, "Level berikutnya");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM Efektif (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Spasi kata");
+                set(EXTRA_WORD_SPACING, "Spasi");
                 set(EFFECTIVE_WPM_SHORT, "Efektif");
 
                 set(WORD_SPACING_ADD, "Kata +");

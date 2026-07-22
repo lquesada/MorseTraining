@@ -110,6 +110,7 @@ public class LangRu extends MorseLanguage {
                 
 
         set(REPEAT, "ПОВТОРИТЬ");
+        set(HINT, "ПОДСКАЗКА");
 
         set(START, "СТАРТ");
         set(PICK_LANG_THEME_ON_SHARE, "Выбирать язык и тему при публикации результатов");
@@ -135,7 +136,7 @@ set(TARGET_MET, "Цель достигнута");
         set(NEXT_LEVEL, "Следующий уровень");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Эффективная скорость (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Интервал слов");
+                set(EXTRA_WORD_SPACING, "Интервал");
                 set(EFFECTIVE_WPM_SHORT, "Эффективная");
 
                 set(WORD_SPACING_ADD, "Слово +");

@@ -109,6 +109,7 @@ public class LangWuu extends MorseLanguage {
                 
 
         set(REPEAT, "重复");
+        set(HINT, "提示");
 
         set(START, "开始");
         set(PICK_LANG_THEME_ON_SHARE, "分享分数时选择语言和主题");
@@ -135,7 +136,7 @@ set(TARGET_MET, "目标达到");
         set(NEXT_LEVEL, "下一级");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "有效 WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "单词间距");
+                set(EXTRA_WORD_SPACING, "间距");
                 set(EFFECTIVE_WPM_SHORT, "有效");
 
                 set(WORD_SPACING_ADD, "单词 +");

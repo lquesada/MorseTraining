@@ -103,6 +103,7 @@ public class LangCs extends MorseLanguage {
                 
 
         set(REPEAT, "OPAKOVAT");
+        set(HINT, "NÁPOVĚDA");
 
         set(START, "ZAČÍT");
         set(PICK_LANG_THEME_ON_SHARE, "Vyberte jazyk a motiv při sdílení skóre");
@@ -128,7 +129,7 @@ set(TARGET_MET, "Cíl splněn");
         set(NEXT_LEVEL, "Další úroveň");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Efektivní WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Mezera mezi slovy");
+                set(EXTRA_WORD_SPACING, "Mezera");
                 set(EFFECTIVE_WPM_SHORT, "Efektivní");
 
                 set(WORD_SPACING_ADD, "Slovo +");

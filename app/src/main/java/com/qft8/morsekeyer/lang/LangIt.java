@@ -110,6 +110,7 @@ public class LangIt extends MorseLanguage {
                 
 
         set(REPEAT, "RIPETI");
+        set(HINT, "SUGGERIMENTO");
 
         set(START, "INIZIA");
         set(PICK_LANG_THEME_ON_SHARE, "Scegli lingua e tema quando condividi i punteggi");
@@ -135,7 +136,7 @@ set(TARGET_MET, "Obiettivo raggiunto");
         set(NEXT_LEVEL, "Livello successivo");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM effettivo (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Spaziatura parole");
+                set(EXTRA_WORD_SPACING, "Spaziatura");
                 set(EFFECTIVE_WPM_SHORT, "Effettivo");
 
                 set(WORD_SPACING_ADD, "Parola +");

@@ -109,6 +109,7 @@ public class LangDa extends MorseLanguage {
                 
 
         set(REPEAT, "GENTAG");
+        set(HINT, "TIP");
 
         set(START, "START");
         set(PICK_LANG_THEME_ON_SHARE, "Vælg sprog og tema, når du deler resultater");
@@ -134,7 +135,7 @@ set(TARGET_MET, "Mål nået");
         set(NEXT_LEVEL, "Næste niveau");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Effektiv WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Ordaafstand");
+                set(EXTRA_WORD_SPACING, "Afstand");
                 set(EFFECTIVE_WPM_SHORT, "Effektiv");
 
                 set(WORD_SPACING_ADD, "Ord +");

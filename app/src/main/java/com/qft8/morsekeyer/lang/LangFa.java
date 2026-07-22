@@ -109,6 +109,7 @@ public class LangFa extends MorseLanguage {
                 
 
         set(REPEAT, "تکرار");
+        set(HINT, "راهنمایی");
 
         set(START, "شروع");
         set(PICK_LANG_THEME_ON_SHARE, "انتخاب زبان و تم هنگام اشتراک‌گذاری امتیازات");
@@ -135,7 +136,7 @@ set(TARGET_MET, "هدف محقق شد");
         set(NEXT_LEVEL, "مرحله بعدی");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "سرعت موثر (فارنسورث)");
-                set(EXTRA_WORD_SPACING, "فاصله کلمات");
+                set(EXTRA_WORD_SPACING, "فاصله");
                 set(EFFECTIVE_WPM_SHORT, "موثر");
 
                 set(WORD_SPACING_ADD, "کلمه +");

@@ -102,6 +102,7 @@ public class LangMy extends MorseLanguage {
                 
 
         set(REPEAT, "ထပ်လုပ်ပါ");
+        set(HINT, "အရိပ်အမြွက်");
 
         set(START, "စတင်ရန်");
         set(PICK_LANG_THEME_ON_SHARE, "ရမှတ်များ မျှဝေသည့်အခါ ဘာသာစကားနှင့် အပြင်အဆင်ကို ရွေးချယ်ပါ");
@@ -128,7 +129,7 @@ set(TARGET_MET, "ပစ်မှတ်ပြည့်မီသည်");
         set(NEXT_LEVEL, "နောက်အဆင့်");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "ထိရောက်သော WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "စကားလုံး ခြားနားချက်");
+                set(EXTRA_WORD_SPACING, "ခြားနားချက်");
                 set(EFFECTIVE_WPM_SHORT, "ထိရောက်သော");
 
                 set(WORD_SPACING_ADD, "စကား +");

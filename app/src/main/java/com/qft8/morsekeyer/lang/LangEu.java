@@ -103,6 +103,7 @@ public class LangEu extends MorseLanguage {
                 
 
         set(REPEAT, "ERREPIKATU");
+        set(HINT, "ARGIBIDEA");
 
         set(START, "HASI");
         set(PICK_LANG_THEME_ON_SHARE, "Aukeratu hizkuntza eta gaia puntuazioak partekatzean");
@@ -128,7 +129,7 @@ set(TARGET_MET, "Helburua lortuta");
         set(NEXT_LEVEL, "Hurrengo maila");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM eraginkorra (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Hitz tarte");
+                set(EXTRA_WORD_SPACING, "Tartea");
                 set(EFFECTIVE_WPM_SHORT, "Eraginkorra");
 
                 set(WORD_SPACING_ADD, "Hitz +");

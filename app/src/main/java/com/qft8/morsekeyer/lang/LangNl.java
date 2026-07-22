@@ -109,6 +109,7 @@ public class LangNl extends MorseLanguage {
                 
 
         set(REPEAT, "HERHALEN");
+        set(HINT, "HINT");
 
         set(START, "START");
         set(PICK_LANG_THEME_ON_SHARE, "Kies taal en thema bij het delen van partituren");
@@ -134,7 +135,7 @@ set(TARGET_MET, "Doel bereikt");
         set(NEXT_LEVEL, "Volgend niveau");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Effectieve WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Woordtussenruimte");
+                set(EXTRA_WORD_SPACING, "Tussenruimte");
                 set(EFFECTIVE_WPM_SHORT, "Effectieve");
 
                 set(WORD_SPACING_ADD, "Woord +");

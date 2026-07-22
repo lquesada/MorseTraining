@@ -109,6 +109,7 @@ public class LangUk extends MorseLanguage {
                 
 
         set(REPEAT, "ПОВТОРИТИ");
+        set(HINT, "ПІДКАЗКА");
 
         set(START, "ПОЧАТИ");
         set(PICK_LANG_THEME_ON_SHARE, "Вибирати мову та тему під час публікації результатів");
@@ -135,7 +136,7 @@ set(TARGET_MET, "Ціль досягнута");
         set(NEXT_LEVEL, "Наступний рівень");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Ефективна швидкість (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Інтервал слів");
+                set(EXTRA_WORD_SPACING, "Інтервал");
                 set(EFFECTIVE_WPM_SHORT, "Ефективна");
 
                 set(WORD_SPACING_ADD, "Слово +");

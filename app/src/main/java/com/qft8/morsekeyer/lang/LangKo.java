@@ -110,6 +110,7 @@ public class LangKo extends MorseLanguage {
                 
 
         set(REPEAT, "반복");
+        set(HINT, "힌트");
 
         set(START, "시작");
         set(PICK_LANG_THEME_ON_SHARE, "점수 공유 시 언어 및 테마 선택");
@@ -135,7 +136,7 @@ set(TARGET_MET, "목표 달성");
         set(NEXT_LEVEL, "다음 레벨");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "유효 WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "단어 간격");
+                set(EXTRA_WORD_SPACING, "간격");
                 set(EFFECTIVE_WPM_SHORT, "유효");
 
                 set(WORD_SPACING_ADD, "단어 +");

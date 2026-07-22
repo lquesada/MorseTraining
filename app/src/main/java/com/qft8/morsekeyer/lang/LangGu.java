@@ -102,6 +102,7 @@ public class LangGu extends MorseLanguage {
                 
 
         set(REPEAT, "પુનરાવર્તન");
+        set(HINT, "ઇશારો");
 
         set(START, "શરૂ કરો");
         set(PICK_LANG_THEME_ON_SHARE, "સ્કોર શેર કરતી વખતે ભાષા અને થીમ પસંદ કરો");
@@ -128,7 +129,7 @@ set(TARGET_MET, "લક્ષ્ય પ્રાપ્ત");
         set(NEXT_LEVEL, "આગળનું સ્તર");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "અસરકારક ડબ્લ્યુપીએમ (ફાર્ન્સવર્થ)");
-                set(EXTRA_WORD_SPACING, "શબ્દ જગ્યા");
+                set(EXTRA_WORD_SPACING, "જગ્યા");
                 set(EFFECTIVE_WPM_SHORT, "અસરકારક");
 
                 set(WORD_SPACING_ADD, "શબ્દ +");

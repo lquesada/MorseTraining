@@ -550,7 +550,8 @@ public class ShareManager {
         TextView modeTitle = new TextView(context);
         String modeText;
         if (isKochMode) {
-            modeText = "Koch";
+            String modeName = (keyerType == null) ? LanguageManager.get(MorseLanguage.RX) : LanguageManager.get(MorseLanguage.TX);
+            modeText = "Koch " + modeName;
         } else {
             modeText = (keyerType == null) ? LanguageManager.get(MorseLanguage.RX) : LanguageManager.get(MorseLanguage.TX);
         }

@@ -109,6 +109,7 @@ public class LangMr extends MorseLanguage {
                 
 
         set(REPEAT, "पुन्हा सांगा");
+        set(HINT, "संकेत");
 
         set(START, "सुरू करा");
         set(PICK_LANG_THEME_ON_SHARE, "स्कोर शेअर करताना भाषा आणि थीम निवडा");
@@ -135,7 +136,7 @@ set(TARGET_MET, "लक्ष्य साध्य");
         set(NEXT_LEVEL, "पुढची पातळी");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "प्रभावी डब्ल्यूपीएम (फार्न्सवर्थ)");
-                set(EXTRA_WORD_SPACING, "शब्द अंतर");
+                set(EXTRA_WORD_SPACING, "अंतर");
                 set(EFFECTIVE_WPM_SHORT, "प्रभावी");
 
                 set(WORD_SPACING_ADD, "शब्द +");

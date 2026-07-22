@@ -109,6 +109,7 @@ public class LangSw extends MorseLanguage {
                 
 
         set(REPEAT, "RUDIA");
+        set(HINT, "DOKEZO");
 
         set(START, "ANZA");
         set(PICK_LANG_THEME_ON_SHARE, "Chagua lugha na mandhari unaposhiriki alama");
@@ -135,7 +136,7 @@ set(TARGET_MET, "Lengo limefikiwa");
         set(NEXT_LEVEL, "Ngazi inayofuata");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM Thabiti (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Nafasi ya maneno");
+                set(EXTRA_WORD_SPACING, "Nafasi");
                 set(EFFECTIVE_WPM_SHORT, "Thabiti");
 
                 set(WORD_SPACING_ADD, "Neno +");

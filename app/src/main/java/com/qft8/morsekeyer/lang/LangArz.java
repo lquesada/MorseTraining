@@ -109,6 +109,7 @@ public class LangArz extends MorseLanguage {
                 
 
         set(REPEAT, "تكرار");
+        set(HINT, "تلميح");
 
         set(START, "بدء");
         set(PICK_LANG_THEME_ON_SHARE, "اختار لغة وثيم لما تشارك السكور");
@@ -135,7 +136,7 @@ set(TARGET_MET, "تم تحقيق الهدف");
         set(NEXT_LEVEL, "المستوى اللي بعده");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "السرعة الفعلية (فارنسورث)");
-                set(EXTRA_WORD_SPACING, "مسافة بين الكلمات");
+                set(EXTRA_WORD_SPACING, "مسافة");
                 set(EFFECTIVE_WPM_SHORT, "الفعلية");
 
                 set(WORD_SPACING_ADD, "كلمة +");

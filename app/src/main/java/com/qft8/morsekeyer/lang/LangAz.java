@@ -102,6 +102,7 @@ public class LangAz extends MorseLanguage {
                 
 
         set(REPEAT, "TƏKRARLA");
+        set(HINT, "İPUCU");
 
         set(START, "BAŞLA");
         set(PICK_LANG_THEME_ON_SHARE, "Xalları paylaşarkən dil və mövzu seçin");
@@ -128,7 +129,7 @@ set(TARGET_MET, "Hədəfə çatıldı");
         set(NEXT_LEVEL, "Növbəti səviyyə");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Effektiv WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Söz məsafəsi");
+                set(EXTRA_WORD_SPACING, "Məsafə");
                 set(EFFECTIVE_WPM_SHORT, "Effektiv");
 
                 set(WORD_SPACING_ADD, "Söz +");

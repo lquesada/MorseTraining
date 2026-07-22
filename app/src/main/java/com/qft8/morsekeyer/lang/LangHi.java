@@ -109,6 +109,7 @@ public class LangHi extends MorseLanguage {
                 
 
         set(REPEAT, "दोहराएं");
+        set(HINT, "संकेत");
 
         set(START, "शुरू करें");
         set(PICK_LANG_THEME_ON_SHARE, "स्कोर साझा करते समय भाषा और थीम चुनें");
@@ -135,7 +136,7 @@ set(TARGET_MET, "लक्ष्य पूरा हुआ");
         set(NEXT_LEVEL, "अगला स्तर");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "प्रभावी डब्ल्यूपीएम (फार्न्सवर्थ)");
-                set(EXTRA_WORD_SPACING, "शब्द रिक्ति");
+                set(EXTRA_WORD_SPACING, "रिक्ति");
                 set(EFFECTIVE_WPM_SHORT, "प्रभावी");
 
                 set(WORD_SPACING_ADD, "शब्द +");

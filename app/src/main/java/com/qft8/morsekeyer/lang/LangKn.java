@@ -102,6 +102,7 @@ public class LangKn extends MorseLanguage {
                 
 
         set(REPEAT, "ಪುನರಾವರ್ತಿಸಿ");
+        set(HINT, "ಸುಳಿವು");
 
         set(START, "ಪ್ರಾರಂಭಿಸಿ");
         set(PICK_LANG_THEME_ON_SHARE, "ಸ್ಕೋರ್‌ಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳುವಾಗ ಭಾಷೆ ಮತ್ತು ಥೀಮ್ ಅನ್ನು ಆಯ್ಕೆಮಾಡಿ");
@@ -128,7 +129,7 @@ set(TARGET_MET, "ಗುರಿ ತಲುಪಿದೆ");
         set(NEXT_LEVEL, "ಮುಂದಿನ ಹಂತ");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "ಪರಿಣಾಮಕಾರಿ WPM (ಫಾರ್ನ್ಸ್‌ವರ್ತ್)");
-                set(EXTRA_WORD_SPACING, "ಪದ ಅಂತರ");
+                set(EXTRA_WORD_SPACING, "ಅಂತರ");
                 set(EFFECTIVE_WPM_SHORT, "ಪರಿಣಾಮಕಾರಿ");
 
                 set(WORD_SPACING_ADD, "ಪದ +");

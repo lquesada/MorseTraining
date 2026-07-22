@@ -109,6 +109,7 @@ public class LangNo extends MorseLanguage {
                 
 
         set(REPEAT, "GJENTA");
+        set(HINT, "TIPS");
 
         set(START, "START");
         set(PICK_LANG_THEME_ON_SHARE, "Velg språk og tema når du deler poeng");
@@ -134,7 +135,7 @@ set(TARGET_MET, "Mål nådd");
         set(NEXT_LEVEL, "Neste nivå");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Effektiv WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Ordmellomrom");
+                set(EXTRA_WORD_SPACING, "Mellomrom");
                 set(EFFECTIVE_WPM_SHORT, "Effektiv");
 
                 set(WORD_SPACING_ADD, "Ord +");

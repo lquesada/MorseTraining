@@ -110,6 +110,7 @@ public class LangFi extends MorseLanguage {
                 
 
         set(REPEAT, "TOISTA");
+        set(HINT, "VIHJE");
 
         set(START, "ALOITA");
         set(PICK_LANG_THEME_ON_SHARE, "Valitse kieli ja teema tuloksia jaettaessa");
@@ -135,7 +136,7 @@ set(TARGET_MET, "Tavoite saavutettu");
         set(NEXT_LEVEL, "Seuraava taso");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Tehollinen WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Sanaväli");
+                set(EXTRA_WORD_SPACING, "Väli");
                 set(EFFECTIVE_WPM_SHORT, "Tehollinen");
 
                 set(WORD_SPACING_ADD, "Sana +");

@@ -109,6 +109,7 @@ public class LangVi extends MorseLanguage {
                 
 
         set(REPEAT, "LẶP LẠI");
+        set(HINT, "GỢI Ý");
 
         set(START, "BẮT ĐẦU");
         set(PICK_LANG_THEME_ON_SHARE, "Chọn ngôn ngữ và chủ đề khi chia sẻ điểm số");
@@ -135,7 +136,7 @@ set(TARGET_MET, "Đã đạt mục tiêu");
         set(NEXT_LEVEL, "Cấp độ tiếp theo");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM Hiệu quả (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Khoảng cách từ");
+                set(EXTRA_WORD_SPACING, "Khoảng cách");
                 set(EFFECTIVE_WPM_SHORT, "Hiệu quả");
 
                 set(WORD_SPACING_ADD, "Từ +");

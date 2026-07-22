@@ -23,6 +23,10 @@ public class KochWordGenerator {
                 sb.append(KochLevelSelectView.KOCH_CHARS[rndLevel]);
             }
         }
-        return sb.toString();
+        String word = sb.toString();
+        if ("KKK".equals(word)) {
+            word = "KK";
+        }
+        return word;
     }
 }

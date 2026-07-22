@@ -110,6 +110,7 @@ public class LangHu extends MorseLanguage {
                 
 
         set(REPEAT, "ISMÉTLÉS");
+        set(HINT, "TIPP");
 
         set(START, "INDÍTÁS");
         set(PICK_LANG_THEME_ON_SHARE, "Nyelv és téma kiválasztása pontszámok megosztásakor");
@@ -135,7 +136,7 @@ set(TARGET_MET, "Cél elérve");
         set(NEXT_LEVEL, "Következő szint");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Effektív WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Szóköz");
+                set(EXTRA_WORD_SPACING, "Térköz");
                 set(EFFECTIVE_WPM_SHORT, "Effektív");
 
                 set(WORD_SPACING_ADD, "Szó +");

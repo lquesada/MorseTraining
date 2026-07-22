@@ -102,6 +102,7 @@ public class LangTe extends MorseLanguage {
                 
 
         set(REPEAT, "పునరావృతం");
+        set(HINT, "సూచన");
 
         set(START, "ప్రారంభించండి");
         set(PICK_LANG_THEME_ON_SHARE, "స్కోర్‌లను షేర్ చేస్తున్నప్పుడు భాష మరియు థీమ్‌ని ఎంచుకోండి");
@@ -128,7 +129,7 @@ set(TARGET_MET, "లక్ష్యం చేరుకుంది");
         set(NEXT_LEVEL, "తదుపరి స్థాయి");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "ప్రభావవంతమైన WPM (ఫార్న్స్‌వర్త్)");
-                set(EXTRA_WORD_SPACING, "పద స్థలం");
+                set(EXTRA_WORD_SPACING, "అంతరం");
                 set(EFFECTIVE_WPM_SHORT, "ప్రభావవంతమైన");
 
                 set(WORD_SPACING_ADD, "पదం +");

@@ -110,6 +110,7 @@ public class LangSv extends MorseLanguage {
                 
 
         set(REPEAT, "UPPREPA");
+        set(HINT, "TIPS");
 
         set(START, "STARTA");
         set(PICK_LANG_THEME_ON_SHARE, "Välj språk och tema när du delar poäng");
@@ -135,7 +136,7 @@ set(TARGET_MET, "Mål uppnått");
         set(NEXT_LEVEL, "Nästa nivå");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Effektiv WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Ordmellanrum");
+                set(EXTRA_WORD_SPACING, "Mellanrum");
                 set(EFFECTIVE_WPM_SHORT, "Effektiv");
 
                 set(WORD_SPACING_ADD, "Ord +");

@@ -102,6 +102,7 @@ public class LangJv extends MorseLanguage {
                 
 
         set(REPEAT, "BALENI");
+        set(HINT, "PETUNJUK");
 
         set(START, "MULAI");
         set(PICK_LANG_THEME_ON_SHARE, "Pilih basa lan tema nalika nuduhake skor");
@@ -128,7 +129,7 @@ set(TARGET_MET, "Target digayuh");
         set(NEXT_LEVEL, "Tingkat sabanjuré");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM Efektif (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Spasi tembung");
+                set(EXTRA_WORD_SPACING, "Spasi");
                 set(EFFECTIVE_WPM_SHORT, "Efektif");
 
                 set(WORD_SPACING_ADD, "Tembung +");

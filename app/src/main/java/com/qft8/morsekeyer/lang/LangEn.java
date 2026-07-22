@@ -139,6 +139,7 @@ public class LangEn extends MorseLanguage {
                 set(LEARN, "Learn"); // Header for the learn section in the game menu
                 set(PLAY, "Play"); // Button to start the game
                 set(REPEAT, "REPEAT");
+        set(HINT, "HINT");
 
                 set(START, "START");
                 set(CONTINUE, "Continue");
@@ -167,7 +168,7 @@ set(TARGET_MET, "TARGET MET");
         set(NEXT_LEVEL, "Next Level");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Effective WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Word spacing");
+                set(EXTRA_WORD_SPACING, "Spacing");
                 set(EFFECTIVE_WPM_SHORT, "Effective");
 
                 set(WORD_SPACING_ADD, "Word +");

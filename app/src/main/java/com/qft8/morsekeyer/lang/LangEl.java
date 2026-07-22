@@ -109,6 +109,7 @@ public class LangEl extends MorseLanguage {
                 
 
         set(REPEAT, "ΕΠΑΝΆΛΗΨΗ");
+        set(HINT, "ΥΠΌΔΕΙΞΗ");
 
         set(START, "ΈΝΑΡΞΗ");
         set(PICK_LANG_THEME_ON_SHARE, "Επιλέξτε γλώσσα και θέμα κατά την κοινή χρήση βαθμολογιών");
@@ -134,7 +135,7 @@ set(TARGET_MET, "Ο στόχος επιτεύχθηκε");
         set(NEXT_LEVEL, "Επόμενο επίπεδο");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Πραγματικό WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Διάστημα λέξεων");
+                set(EXTRA_WORD_SPACING, "Διάστημα");
                 set(EFFECTIVE_WPM_SHORT, "Πραγματικό");
 
                 set(WORD_SPACING_ADD, "Λέξη +");

@@ -109,6 +109,7 @@ public class LangBn extends MorseLanguage {
                 
 
         set(REPEAT, "পুনরাবৃত্তি");
+        set(HINT, "ইঙ্গিত");
 
         set(START, "শুরু করুন");
         set(PICK_LANG_THEME_ON_SHARE, "স্কোর শেয়ার করার সময় ভাষা এবং থيم বেছে নিন");
@@ -135,7 +136,7 @@ set(TARGET_MET, "লক্ষ্য পূরণ হয়েছে");
         set(NEXT_LEVEL, "পরবর্তী স্তর");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "কার্যকর ডব্লিউপিএম (ফার্নসওয়ার্থ)");
-                set(EXTRA_WORD_SPACING, "শব্দ ব্যবধান");
+                set(EXTRA_WORD_SPACING, "ব্যবধান");
                 set(EFFECTIVE_WPM_SHORT, "কার্যকর");
 
                 set(WORD_SPACING_ADD, "শব্দ +");

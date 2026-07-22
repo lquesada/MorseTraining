@@ -110,6 +110,7 @@ public class LangPl extends MorseLanguage {
                 
 
         set(REPEAT, "POWTÓRZ");
+        set(HINT, "WSKAZÓWKA");
 
         set(START, "START");
         set(PICK_LANG_THEME_ON_SHARE, "Wybierz język i motyw podczas udostępniania wyników");
@@ -135,7 +136,7 @@ set(TARGET_MET, "Cel osiągnięty");
         set(NEXT_LEVEL, "Następny poziom");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Efektywne WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Odstęp między słowami");
+                set(EXTRA_WORD_SPACING, "Odstęp");
                 set(EFFECTIVE_WPM_SHORT, "Efektywne");
 
                 set(WORD_SPACING_ADD, "Słowo +");

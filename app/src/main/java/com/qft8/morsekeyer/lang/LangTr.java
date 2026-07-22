@@ -110,6 +110,7 @@ public class LangTr extends MorseLanguage {
                 
 
         set(REPEAT, "TEKRARLA");
+        set(HINT, "İPUCU");
 
         set(START, "BAŞLA");
         set(PICK_LANG_THEME_ON_SHARE, "Puanları paylaşırken dil ve tema seçin");
@@ -135,7 +136,7 @@ set(TARGET_MET, "Hedefe ulaşıldı");
         set(NEXT_LEVEL, "Sonraki seviye");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Etkin WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Kelime boşluğu");
+                set(EXTRA_WORD_SPACING, "Boşluk");
                 set(EFFECTIVE_WPM_SHORT, "Etkin");
 
                 set(WORD_SPACING_ADD, "Kelime +");

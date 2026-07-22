@@ -114,6 +114,7 @@ public class LangEs extends MorseLanguage {
                                         
 
         set(REPEAT, "REPETIR");
+        set(HINT, "PISTA");
 
         set(START, "EMPEZAR");
         set(PICK_LANG_THEME_ON_SHARE, "Elegir idioma y tema al compartir puntuaciones");
@@ -139,7 +140,7 @@ set(TARGET_MET, "Objetivo cumplido");
         set(NEXT_LEVEL, "Siguiente nivel");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM efectivo (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Espacio de palabra");
+                set(EXTRA_WORD_SPACING, "Espaciado");
                 set(EFFECTIVE_WPM_SHORT, "Efectivo");
 
                 set(WORD_SPACING_ADD, "Palabra +");

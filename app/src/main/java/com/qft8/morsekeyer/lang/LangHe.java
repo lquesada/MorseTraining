@@ -109,6 +109,7 @@ public class LangHe extends MorseLanguage {
                 
 
         set(REPEAT, "חזור");
+        set(HINT, "רמז");
 
         set(START, "התחל");
         set(PICK_LANG_THEME_ON_SHARE, "בחר שפה ונושא בעת שיתוף ציונים");
@@ -134,7 +135,7 @@ set(TARGET_MET, "היעד הושג");
         set(NEXT_LEVEL, "השלב הבא");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM אפקטיבי (פרנסוורת')");
-                set(EXTRA_WORD_SPACING, "מרווח מילים");
+                set(EXTRA_WORD_SPACING, "מרווח");
                 set(EFFECTIVE_WPM_SHORT, "אפקטיבי");
 
                 set(WORD_SPACING_ADD, "מילה +");

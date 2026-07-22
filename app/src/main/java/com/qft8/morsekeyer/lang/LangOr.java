@@ -102,6 +102,7 @@ public class LangOr extends MorseLanguage {
                 
 
         set(REPEAT, "ପୁନରାବୃତ୍ତି");
+        set(HINT, "ସଙ୍କେତ");
 
         set(START, "ଆରମ୍ଭ କରନ୍ତୁ");
         set(PICK_LANG_THEME_ON_SHARE, "ସ୍କୋର ସେୟାର କରିବା ସମୟରେ ଭାଷା ଏବଂ ଥିମ୍ ବାଛନ୍ତୁ");
@@ -128,7 +129,7 @@ set(TARGET_MET, "ଲକ୍ଷ୍ୟ ପୂରଣ ହୋଇଛି");
         set(NEXT_LEVEL, "ପରବର୍ତ୍ତୀ ସ୍ତର");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "ପ୍ରଭାବଶାଳୀ WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "ଶବ୍ଦ ବ୍ୟବଧାନ");
+                set(EXTRA_WORD_SPACING, "ବ୍ୟବଧାନ");
                 set(EFFECTIVE_WPM_SHORT, "ପ୍ରଭାବଶାଳୀ");
 
                 set(WORD_SPACING_ADD, "ଶব୍ਦ +");

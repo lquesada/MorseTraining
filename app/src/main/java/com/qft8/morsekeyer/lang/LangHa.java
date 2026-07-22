@@ -109,6 +109,7 @@ public class LangHa extends MorseLanguage {
                 
 
         set(REPEAT, "MAIMAITA");
+        set(HINT, "MANUNIYA");
 
         set(START, "FARA");
         set(PICK_LANG_THEME_ON_SHARE, "Zaɓi yare da jigo lokacin raba maki");
@@ -135,7 +136,7 @@ set(TARGET_MET, "An cimma manufa");
         set(NEXT_LEVEL, "Mataki na gaba");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM mai inganci (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Tazarar kalmomi");
+                set(EXTRA_WORD_SPACING, "Tazara");
                 set(EFFECTIVE_WPM_SHORT, "Mai inganci");
 
                 set(WORD_SPACING_ADD, "Kalma +");

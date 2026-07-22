@@ -102,6 +102,7 @@ public class LangPa extends MorseLanguage {
                 
 
         set(REPEAT, "ਦੁਹਰਾਓ");
+        set(HINT, "ਇਸ਼ਾਰਾ");
 
         set(START, "ਸ਼ੁਰੂ ਕਰੋ");
         set(PICK_LANG_THEME_ON_SHARE, "ਸਕੋਰ ਸਾਂਝੇ ਕਰਨ ਵੇਲੇ ਭਾਸ਼ਾ ਅਤੇ ਥੀਮ ਚੁਣੋ");
@@ -128,7 +129,7 @@ set(TARGET_MET, "ਟੀਚਾ ਪੂਰਾ ਹੋਇਆ");
         set(NEXT_LEVEL, "ਅਗਲਾ ਪੱਧਰ");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "ਪ੍ਰਭਾਵਸ਼ਾਲੀ ਡਬਲਯੂਪੀਐਮ (ਫਾਰਨਸਵਰਥ)");
-                set(EXTRA_WORD_SPACING, "ਸ਼ਬਦ ਵਿੱਥ");
+                set(EXTRA_WORD_SPACING, "ਵਿੱਥ");
                 set(EFFECTIVE_WPM_SHORT, "ਪ੍ਰਭਾਵਸ਼ਾਲੀ");
 
                 set(WORD_SPACING_ADD, "ਸ਼ਬਦ +");

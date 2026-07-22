@@ -109,6 +109,7 @@ public class LangAm extends MorseLanguage {
                 
 
         set(REPEAT, "ድገም");
+        set(HINT, "ጥቆማ");
 
         set(START, "ጀምር");
         set(PICK_LANG_THEME_ON_SHARE, "ውጤቶችን ሲያጋሩ ቋንቋ እና ገጽታ ይምረጡ");
@@ -135,7 +136,7 @@ set(TARGET_MET, "ዒላማ ተሳክቷል");
         set(NEXT_LEVEL, "ቀጣይ ደረጃ");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "ውጤታማ WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "የቃል ክፍተት");
+                set(EXTRA_WORD_SPACING, "ክፍተት");
                 set(EFFECTIVE_WPM_SHORT, "ውጤታማ");
 
                 set(WORD_SPACING_ADD, "ቃል +");

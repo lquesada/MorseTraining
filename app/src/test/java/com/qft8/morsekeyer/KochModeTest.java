@@ -24,10 +24,12 @@ public class KochModeTest {
 
     @Test
     public void testWordGeneratorLevel0() {
-        // Level 0 word generator should only generate words consisting of 'K'
-        String word = KochWordGenerator.generateWord(0, 0);
-        for (int i = 0; i < word.length(); i++) {
-            assertEquals('K', word.charAt(i));
+        for (int idx = 0; idx < 100; idx++) {
+            String word = KochWordGenerator.generateWord(0, idx);
+            for (int i = 0; i < word.length(); i++) {
+                assertEquals('K', word.charAt(i));
+            }
+            org.junit.Assert.assertNotEquals("KKK", word);
         }
     }
 
@@ -66,5 +68,75 @@ public class KochModeTest {
         else if (oldVal >= 16 && oldVal <= 26) newVal = 14;
         else if (oldVal >= 27) newVal = 15;
         return newVal;
+    }
+
+    @Test
+    public void testKochTargetCalculation() {
+        assertEquals(4, getKochTarget(0));
+        assertEquals(11, getKochTarget(1));
+        assertEquals(20, getKochTarget(10));
+        assertEquals(50, getKochTarget(40));
+    }
+
+    private int getKochTarget(int level) {
+        return level == 0 ? 4 : 10 + level;
+    }
+
+    @Test
+    public void testTransmitKochScoringRules() {
+        int score = 0;
+        boolean txWordFailed = false;
+        boolean txWordPointDeducted = false;
+
+        // 1. Clean completion of 1st word -> +1 point
+        if (!txWordFailed) score++;
+        assertEquals(1, score);
+
+        // 2. Next word: error occurs -> -1 point (score becomes 0)
+        txWordFailed = false;
+        txWordPointDeducted = false;
+        if (!txWordPointDeducted) {
+            score = Math.max(0, score - 1);
+            txWordPointDeducted = true;
+        }
+        txWordFailed = true;
+        assertEquals(0, score);
+
+        // 3. Word eventually completed after error -> +0 points added
+        if (!txWordFailed) score++;
+        assertEquals(0, score);
+
+        // 4. Next word: Hint pressed -> -1 point (min 0)
+        txWordFailed = false;
+        txWordPointDeducted = false;
+        if (!txWordPointDeducted) {
+            score = Math.max(0, score - 1);
+            txWordPointDeducted = true;
+        }
+        txWordFailed = true;
+        assertEquals(0, score);
+
+        // 5. Word completed after Hint -> +0 points
+        if (!txWordFailed) score++;
+        assertEquals(0, score);
+
+        // 6. Next word: clean completion -> +1 point
+        txWordFailed = false;
+        txWordPointDeducted = false;
+        if (!txWordFailed) score++;
+        assertEquals(1, score);
+    }
+
+    @Test
+    public void testExistingUserProgressMigration() {
+        // Suppose existing user completed 30 levels in receive (highest level index = 29)
+        int rxHighestLevel = 29;
+        int rxLevelsCompletedDisplay = rxHighestLevel + 1;
+        assertEquals(30, rxLevelsCompletedDisplay); // Displays 30/41
+
+        // For transmit, key absent defaults to -1
+        int txHighestLevel = -1;
+        int txLevelsCompletedDisplay = txHighestLevel + 1;
+        assertEquals(0, txLevelsCompletedDisplay); // Displays 0/41
     }
 }

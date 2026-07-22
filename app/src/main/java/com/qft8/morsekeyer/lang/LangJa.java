@@ -109,6 +109,7 @@ public class LangJa extends MorseLanguage {
                 
 
         set(REPEAT, "リピート");
+        set(HINT, "ヒント");
 
         set(START, "開始");
         set(PICK_LANG_THEME_ON_SHARE, "スコア共有時に言語とテーマを選択する");
@@ -135,7 +136,7 @@ set(TARGET_MET, "目標達成");
         set(NEXT_LEVEL, "次のレベル");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "実効WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "単語スペース");
+                set(EXTRA_WORD_SPACING, "スペース");
                 set(EFFECTIVE_WPM_SHORT, "実効");
 
                 set(WORD_SPACING_ADD, "単語 +");

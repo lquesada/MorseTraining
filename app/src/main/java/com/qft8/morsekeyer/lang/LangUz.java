@@ -102,6 +102,7 @@ public class LangUz extends MorseLanguage {
                 
 
         set(REPEAT, "TAKRORLASH");
+        set(HINT, "MASLAHAT");
 
         set(START, "BOSHLASH");
         set(PICK_LANG_THEME_ON_SHARE, "Ballarni ulashishda til va mavzuni tanlang");
@@ -128,7 +129,7 @@ set(TARGET_MET, "Maqsadga erishildi");
         set(NEXT_LEVEL, "Keyingi bosqich");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "Samarali WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "So'z masofasi");
+                set(EXTRA_WORD_SPACING, "Masofa");
                 set(EFFECTIVE_WPM_SHORT, "Samarali");
 
                 set(WORD_SPACING_ADD, "So'z +");

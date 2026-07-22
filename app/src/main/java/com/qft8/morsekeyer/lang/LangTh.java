@@ -109,6 +109,7 @@ public class LangTh extends MorseLanguage {
                 
 
         set(REPEAT, "ทำซ้ำ");
+        set(HINT, "คำใบ้");
 
         set(START, "เริ่ม");
         set(PICK_LANG_THEME_ON_SHARE, "เลือกภาษาและธีมเมื่อแชร์คะแนน");
@@ -135,7 +136,7 @@ set(TARGET_MET, "บรรลุเป้าหมาย");
         set(NEXT_LEVEL, "ด่านต่อไป");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM ที่มีผลจริง (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "ระยะห่างคำ");
+                set(EXTRA_WORD_SPACING, "ระยะห่าง");
                 set(EFFECTIVE_WPM_SHORT, "ผลจริง");
 
                 set(WORD_SPACING_ADD, "คำ +");

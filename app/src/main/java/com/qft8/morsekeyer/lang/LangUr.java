@@ -109,6 +109,7 @@ public class LangUr extends MorseLanguage {
                 
 
         set(REPEAT, "دہراؤ");
+        set(HINT, "اشارہ");
 
         set(START, "شروع کریں");
         set(PICK_LANG_THEME_ON_SHARE, "اسکور شیئر کرتے وقت زبان اور تھیم منتخب کریں");
@@ -135,7 +136,7 @@ set(TARGET_MET, "ہدف حاصل ہو گیا");
         set(NEXT_LEVEL, "اگلا درجہ");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "موثر ڈبلیو پی ایم (فارنس ورتھ)");
-                set(EXTRA_WORD_SPACING, "لفظی فاصلہ");
+                set(EXTRA_WORD_SPACING, "فاصلہ");
                 set(EFFECTIVE_WPM_SHORT, "موثر");
 
                 set(WORD_SPACING_ADD, "لفظ +");

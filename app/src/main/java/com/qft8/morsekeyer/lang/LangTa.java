@@ -102,6 +102,7 @@ public class LangTa extends MorseLanguage {
                 
 
         set(REPEAT, "மீண்டும் சொல்");
+        set(HINT, "குறிப்பு");
 
         set(START, "தொடங்கு");
         set(PICK_LANG_THEME_ON_SHARE, "மதிப்பெண்களைப் பகிரும்போது மொழி மற்றும் தீமைத் தேர்ந்தெடுக்கவும்");
@@ -128,7 +129,7 @@ set(TARGET_MET, "இலக்கு எட்டப்பட்டது");
         set(NEXT_LEVEL, "அடுத்த நிலை");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "செயல்திறன் மிக்க WPM (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "வார்த்தை இடைவெளி");
+                set(EXTRA_WORD_SPACING, "இடைவெளி");
                 set(EFFECTIVE_WPM_SHORT, "செயல்திறன்");
 
                 set(WORD_SPACING_ADD, "வார்த்தை +");

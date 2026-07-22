@@ -102,6 +102,7 @@ public class LangMl extends MorseLanguage {
                 
 
         set(REPEAT, "ആവർത്തിക്കുക");
+        set(HINT, "സൂചന");
 
         set(START, "തുടങ്ങുക");
         set(PICK_LANG_THEME_ON_SHARE, "സ്കോറുകൾ പങ്കിടുമ്പോൾ ഭാഷയും തീമും തിരഞ്ഞെടുക്കുക");
@@ -128,7 +129,7 @@ set(TARGET_MET, "ലക്ഷ്യം നേടി");
         set(NEXT_LEVEL, "അടുത്ത ഘട്ടം");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "ഫലപ്രദമായ ഡബ്ല്യുപിഎം (ഫാൺസ്വർത്ത്)");
-                set(EXTRA_WORD_SPACING, "വാക്ക് അകലം");
+                set(EXTRA_WORD_SPACING, "അകലം");
                 set(EFFECTIVE_WPM_SHORT, "ഫലപ്രദമായ");
 
                 set(WORD_SPACING_ADD, "വാക്ക് +");

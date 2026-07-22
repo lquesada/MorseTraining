@@ -110,6 +110,7 @@ public class LangPt extends MorseLanguage {
                 
 
         set(REPEAT, "REPETIR");
+        set(HINT, "DICA");
 
         set(START, "COMEÇAR");
         set(PICK_LANG_THEME_ON_SHARE, "Escolher idioma e tema ao compartilhar pontuações");
@@ -135,7 +136,7 @@ set(TARGET_MET, "Alvo atingido");
         set(NEXT_LEVEL, "Próximo nível");
 
                 set(EFFECTIVE_WPM_FARNSWORTH, "WPM efetivo (Farnsworth)");
-                set(EXTRA_WORD_SPACING, "Espaçamento de palavras");
+                set(EXTRA_WORD_SPACING, "Espaçamento");
                 set(EFFECTIVE_WPM_SHORT, "Efetivo");
 
                 set(WORD_SPACING_ADD, "Palavra +");

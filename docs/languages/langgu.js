@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "મોર્સ પ્રાપ્ત ટ્રેનર",
     "BTN_GOOGLE_PLAY_ALT": "Google Play પરથી મેળવો",
     "BTN_DOWNLOAD_APK": ".apk ડાઉનલોડ કરો",
-    "TAGLINE": "મફત રમત, કોઈ જાહેરાતો નહીં, કનેક્શનની જરૂર નથી",
+    "TAGLINE": "મફત એપ્લિકેશન, કોઈ જાહેરાતો નહીં, કનેક્શનની જરૂર નથી",
     "DOWNLOAD_TITLE": "ડાઉનલોડ કરો",
     "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store પરથી એપ્લિકેશન મેળવવી</a> વધુ સારું છે.",
     "DOWNLOAD_TEXT_2": "તમે નીચે આપેલ .apk ફાઇલ ડાઉનલોડ કરીને તેને જાતે ઇન્સ્ટોલ પણ કરી શકો છો. આ માટે Android માં કેટલાક સેટિંગ્સ બદલવાની જરૂર પડી શકે છે (એપ્લિકેશનો ઇન્સ્ટોલ કરવાની પરવાનગી આપવી, ડેવલપર વિકલ્પો ચાલુ કરવા વગેરે).",

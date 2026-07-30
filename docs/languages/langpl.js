@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse Odbierz trenera",
     "BTN_GOOGLE_PLAY_ALT": "Pobierz z Google Play",
     "BTN_DOWNLOAD_APK": "Pobierz .apk",
-    "TAGLINE": "Darmowa gra, bez reklam, nie wymaga połączenia",
+    "TAGLINE": "Darmowa aplikacja, bez reklam, nie wymaga połączenia",
     "DOWNLOAD_TITLE": "Pobierz",
     "DOWNLOAD_TEXT_1": "Najlepiej jest <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">pobrać aplikację ze sklepu Google Play</a>.",
     "DOWNLOAD_TEXT_2": "Możesz także pobrać poniższy plik .apk i zainstalować go ręcznie. Może to wymagać zmiany ustawień w systemie Android (zezwolenie na instalację aplikacji, włączenie opcji programisty itp.).",

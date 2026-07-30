@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse Pokea mkufunzi",
     "BTN_GOOGLE_PLAY_ALT": "Ipate kwenye Google Play",
     "BTN_DOWNLOAD_APK": "Pakua .apk",
-    "TAGLINE": "Mchezo wa bure, hakuna matangazo, haihitaji mtandao",
+    "TAGLINE": "Programu ya bure, hakuna matangazo, haihitaji mtandao",
     "DOWNLOAD_TITLE": "Pakua",
     "DOWNLOAD_TEXT_1": "Ni bora <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">kupata programu kutoka Google Play Store</a>.",
     "DOWNLOAD_TEXT_2": "Unaweza pia kupakua faili ya .apk hapa chini na kuisakinisha wewe mwenyewe. Hii inaweza kuhitaji mipangilio kadhaa katika Android (kutoa ruhusa ya kusakinisha programu, kuwezesha chaguzi za msanidi programu, nk).",

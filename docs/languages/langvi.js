@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse Nhận huấn luyện viên",
     "BTN_GOOGLE_PLAY_ALT": "Tải trên Google Play",
     "BTN_DOWNLOAD_APK": "Tải xuống .apk",
-    "TAGLINE": "Trò chơi miễn phí, không có quảng cáo, không cần kết nối",
+    "TAGLINE": "Ứng dụng miễn phí, không có quảng cáo, không cần kết nối",
     "DOWNLOAD_TITLE": "Tải xuống",
     "DOWNLOAD_TEXT_1": "Tốt nhất là nên <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">tải ứng dụng từ Cửa hàng Google Play</a>.",
     "DOWNLOAD_TEXT_2": "Bạn cũng có thể tải tệp .apk bên dưới và cài đặt thủ công. Việc này có thể cần điều chỉnh cài đặt trên Android (cấp quyền cài đặt ứng dụng, bật tùy chọn nhà phát triển, v.v.).",

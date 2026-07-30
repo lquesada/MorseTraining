@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "مورس ریسیو ٹرینر",
     "BTN_GOOGLE_PLAY_ALT": "Google Play سے حاصل کریں",
     "BTN_DOWNLOAD_APK": ".apk ڈاؤن لوڈ کریں",
-    "TAGLINE": "مفت گیم، کوئی اشتہار نہیں، انٹرنیٹ کی ضرورت نہیں",
+    "TAGLINE": "مفت ایپ، کوئی اشتہار نہیں، انٹرنیٹ کی ضرورت نہیں",
     "DOWNLOAD_TITLE": "ڈاؤن لوڈ کریں",
     "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store سے ایپ حاصل کرنا</a> بہتر ہے۔",
     "DOWNLOAD_TEXT_2": "آپ ذیل میں .apk فائل ڈاؤن لوڈ کرکے اسے دستی طور پر بھی انسٹال کرسکتے ہیں۔ اس کے لیے اینڈرائیڈ میں کچھ ترتیبات کی ضرورت پڑسکتی ہے (ایپس انسٹال کرنے کی اجازت دینا، ڈیولپر کے اختیارات کو فعال کرنا وغیرہ)۔",

@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Trenér příjmu Morse",
     "BTN_GOOGLE_PLAY_ALT": "Získat na Google Play",
     "BTN_DOWNLOAD_APK": "Stáhnout .apk",
-    "TAGLINE": "Hra zdarma, bez reklam, nevyžaduje připojení",
+    "TAGLINE": "Aplikace zdarma, bez reklam, nevyžaduje připojení",
     "DOWNLOAD_TITLE": "Stáhnout",
     "DOWNLOAD_TEXT_1": "Nejlepší je <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">získat aplikaci z obchodu Google Play</a>.",
     "DOWNLOAD_TEXT_2": "Můžete si také stáhnout soubor .apk níže a nainstalovat jej ručně. To může vyžadovat další nastavování Androidu (udělení oprávnění k instalaci aplikací, povolení možností vývojáře atd.).",

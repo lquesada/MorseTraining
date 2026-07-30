@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morso Ricevu trejnisto",
     "BTN_GOOGLE_PLAY_ALT": "Akiru ĝin ĉe Google Play",
     "BTN_DOWNLOAD_APK": "Elŝuti .apk",
-    "TAGLINE": "Senpaga ludo, sen reklamoj, ne postulas konekton",
+    "TAGLINE": "Senpaga apo, sen reklamoj, ne postulas konekton",
     "DOWNLOAD_TITLE": "Elŝuti",
     "DOWNLOAD_TEXT_1": "Plej bone estas <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">akiri la apon el la Google Play Store</a>.",
     "DOWNLOAD_TEXT_2": "Vi ankaŭ povas elŝuti la .apk dosieron sube kaj instali ĝin permane. Ĉi tio eble postulos agordojn en Android (permesi instaladon de apoj, aktivigi programistajn opciojn ktp.).",

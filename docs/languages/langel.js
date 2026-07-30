@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Εκπαιδευτής Morse Receive",
     "BTN_GOOGLE_PLAY_ALT": "Αποκτήστε το στο Google Play",
     "BTN_DOWNLOAD_APK": "Λήψη .apk",
-    "TAGLINE": "Δωρεάν παιχνίδι, χωρίς διαφημίσεις, δεν απαιτεί σύνδεση",
+    "TAGLINE": "Δωρεάν εφαρμογή, χωρίς διαφημίσεις, δεν απαιτεί σύνδεση",
     "DOWNLOAD_TITLE": "Λήψη",
     "DOWNLOAD_TEXT_1": "Είναι προτιμότερο να <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">κατεβάσετε την εφαρμογή από το Google Play Store</a>.",
     "DOWNLOAD_TEXT_2": "Μπορείτε επίσης να κατεβάσετε το αρχείο .apk παρακάτω και να το εγκαταστήσετε χειροκίνητα. Αυτό ενδέχεται να απαιτεί ρυθμίσεις στο Android (χορήγηση αδειών για εγκατάσταση εφαρμογών, ενεργοποίηση επιλογών προγραμματιστή κ.λπ.).",

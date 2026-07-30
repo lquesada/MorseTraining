@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse Ontvang-trainer",
     "BTN_GOOGLE_PLAY_ALT": "Downloaden via Google Play",
     "BTN_DOWNLOAD_APK": ".apk downloaden",
-    "TAGLINE": "Gratis spel, geen advertenties, vereist geen verbinding",
+    "TAGLINE": "Gratis app, geen advertenties, vereist geen verbinding",
     "DOWNLOAD_TITLE": "Downloaden",
     "DOWNLOAD_TEXT_1": "Het is beter om <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">de app uit de Google Play Store te halen</a>.",
     "DOWNLOAD_TEXT_2": "Je kunt ook het onderstaande .apk-bestand downloaden en het handmatig installeren. Hiervoor zijn mogelijk enkele instellingen in Android vereist (machtigingen verlenen om apps te installeren, ontwikkelaarsopties inschakelen, enz.).",

@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "مربی دریافت مورس",
     "BTN_GOOGLE_PLAY_ALT": "دریافت از Google Play",
     "BTN_DOWNLOAD_APK": "دانلود .apk",
-    "TAGLINE": "بازی رایگان، بدون تبلیغات، نیاز به اینترنت ندارد",
+    "TAGLINE": "برنامه رایگان، بدون تبلیغات، نیاز به اینترنت ندارد",
     "DOWNLOAD_TITLE": "دانلود",
     "DOWNLOAD_TEXT_1": "بهتر است <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">برنامه را از Google Play Store دریافت کنید</a>.",
     "DOWNLOAD_TEXT_2": "همچنین می‌توانید فایل .apk را از پایین دانلود کرده و آن را به صورت دستی نصب کنید. این کار ممکن است به تنظیماتی در اندروید نیاز داشته باشد (اجازه نصب برنامه‌ها، فعال کردن گزینه‌های توسعه‌دهنده و غیره).",

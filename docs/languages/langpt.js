@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse recebe treinador",
     "BTN_GOOGLE_PLAY_ALT": "Disponível no Google Play",
     "BTN_DOWNLOAD_APK": "Baixar .apk",
-    "TAGLINE": "Jogo gratuito, sem anúncios, não requer conexão",
+    "TAGLINE": "Aplicativo gratuito, sem anúncios, não requer conexão",
     "DOWNLOAD_TITLE": "Download",
     "DOWNLOAD_TEXT_1": "É preferível <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">obter o aplicativo na Google Play Store</a>.",
     "DOWNLOAD_TEXT_2": "Você também pode baixar o arquivo .apk abaixo e instalá-lo manualmente. Isso pode exigir ajustes no Android (conceder permissões para instalar aplicativos, ativar opções de desenvolvedor, etc.).",

@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Entrenador Morse Receive",
     "BTN_GOOGLE_PLAY_ALT": "Aconsegueix-ho a Google Play",
     "BTN_DOWNLOAD_APK": "Descarrega .apk",
-    "TAGLINE": "Joc gratuït, sense anuncis, no requereix connexió",
+    "TAGLINE": "Aplicació gratuïta, sense anuncis, no requereix connexió",
     "DOWNLOAD_TITLE": "Descarregar",
     "DOWNLOAD_TEXT_1": "És preferible <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">obtenir l'aplicació a la Google Play Store</a>.",
     "DOWNLOAD_TEXT_2": "També pots descarregar el fitxer .apk a continuació i instal·lar-lo manualment. Això pot requerir ajustar algunes opcions a Android (concedir permisos per instal·lar aplicacions, activar opcions de desenvolupador, etc.).",

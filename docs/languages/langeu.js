@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse Receive entrenatzailea",
     "BTN_GOOGLE_PLAY_ALT": "Eskuratu Google Play-n",
     "BTN_DOWNLOAD_APK": "Deskargatu .apk",
-    "TAGLINE": "Doako jokoa, iragarkirik gabe, ez du konexiorik behar",
+    "TAGLINE": "Doako aplikazioa, iragarkirik gabe, ez du konexiorik behar",
     "DOWNLOAD_TITLE": "Deskargatu",
     "DOWNLOAD_TEXT_1": "Hobe da <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">aplikazioa Google Play Storetik eskuratzea</a>.",
     "DOWNLOAD_TEXT_2": "Beheko .apk fitxategia deskargatu eta eskuz instala dezakezu. Horrek Androiden doikuntzak eska ditzake (aplikazioak instalatzeko baimenak ematea, garatzailearen aukerak gaitzea, etab.).",

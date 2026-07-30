@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Entraîneur de réception Morse",
     "BTN_GOOGLE_PLAY_ALT": "Disponible sur Google Play",
     "BTN_DOWNLOAD_APK": "Télécharger l'.apk",
-    "TAGLINE": "Jeu gratuit, sans pub, ne nécessite pas de connexion",
+    "TAGLINE": "Application gratuite, sans pub, ne nécessite pas de connexion",
     "DOWNLOAD_TITLE": "Télécharger",
     "DOWNLOAD_TEXT_1": "Il est préférable <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">d'obtenir l'application sur le Google Play Store</a>.",
     "DOWNLOAD_TEXT_2": "Vous pouvez également télécharger le fichier .apk ci-dessous et l'installer manuellement. Cela peut nécessiter de configurer Android (accorder des autorisations d'installation, activer les options pour les développeurs, etc.).",

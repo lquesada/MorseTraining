@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "莫尔斯接收训练器",
     "BTN_GOOGLE_PLAY_ALT": "喺 Google Play 度取得",
     "BTN_DOWNLOAD_APK": "下載 .apk",
-    "TAGLINE": "免費遊戲，無廣告，唔需要連線",
+    "TAGLINE": "免費應用程式，無廣告，唔需要連線",
     "DOWNLOAD_TITLE": "下載",
     "DOWNLOAD_TEXT_1": "最好係 <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">喺 Google Play 商店取得應用程式</a>。",
     "DOWNLOAD_TEXT_2": "你亦都可以下載下面嘅 .apk 檔案，然後自己安裝。呢個可能需要喺 Android 裡面進行啲設定（畀安裝應用程式嘅權限、啟用開發人員選項等）。",

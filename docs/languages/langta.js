@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "மோர்ஸ் ரிசீவ் பயிற்சியாளர்",
     "BTN_GOOGLE_PLAY_ALT": "Google Play இல் பெறுங்கள்",
     "BTN_DOWNLOAD_APK": ".apk ஐ பதிவிறக்குக",
-    "TAGLINE": "இலவச விளையாட்டு, விளம்பரங்கள் இல்லை, இணைய இணைப்பு தேவையில்லை",
+    "TAGLINE": "இலவச செயலி, விளம்பரங்கள் இல்லை, இணைய இணைப்பு தேவையில்லை",
     "DOWNLOAD_TITLE": "பதிவிறக்குக",
     "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store இலிருந்து பயன்பாட்டைப் பெறுவது</a> சிறந்தது.",
     "DOWNLOAD_TEXT_2": "கீழேயுள்ள .apk கோப்பைப் பதிவிறக்கம் செய்து கைமுறையாக நிறுவலாம். இதற்கு Android இல் சில அமைப்புகளை மாற்ற வேண்டியிருக்கலாம் (பயன்பாடுகளை நிறுவ அனுமதி வழங்குதல், டெவலப்பர் விருப்பங்களை இயக்குதல் போன்றவை).",

@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Adestrador Morse Receive",
     "BTN_GOOGLE_PLAY_ALT": "Consígueo en Google Play",
     "BTN_DOWNLOAD_APK": "Descargar .apk",
-    "TAGLINE": "Xogo gratuíto, sen anuncios, non require conexión",
+    "TAGLINE": "Aplicación gratuíta, sen anuncios, non require conexión",
     "DOWNLOAD_TITLE": "Descargar",
     "DOWNLOAD_TEXT_1": "É preferible <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">obter a aplicación na Google Play Store</a>.",
     "DOWNLOAD_TEXT_2": "Tamén podes descargar o ficheiro .apk a continuación e instalalo manualmente. Isto pode requirir configurar Android (conceder permisos para instalar aplicacións, activar opcións de programador, etc.).",

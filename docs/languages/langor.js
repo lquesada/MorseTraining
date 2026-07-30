@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "ମୋର୍ସ ପ୍ରଶିକ୍ଷକ ଗ୍ରହଣ କରନ୍ତୁ |",
     "BTN_GOOGLE_PLAY_ALT": "Google Play ରୁ ପ୍ରାପ୍ତ କରନ୍ତୁ",
     "BTN_DOWNLOAD_APK": ".apk ଡାଉନଲୋଡ୍ କରନ୍ତୁ",
-    "TAGLINE": "ମାଗଣା ଗେମ୍, କୌଣସି ବିଜ୍ଞାପନ ନାହିଁ, ଇଣ୍ଟରନେଟ୍ ଆବଶ୍ୟକ ନାହିଁ",
+    "TAGLINE": "ମାଗଣା ଆପ୍, କୌଣସି ବିଜ୍ଞାପନ ନାହିଁ, ଇଣ୍ଟରନେଟ୍ ଆବଶ୍ୟକ ନାହିଁ",
     "DOWNLOAD_TITLE": "ଡାଉନଲୋଡ୍",
     "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store ରୁ ଆପ୍ ପ୍ରାପ୍ତ କରିବା</a> ଭଲ ଅଟେ।",
     "DOWNLOAD_TEXT_2": "ଆପଣ ନିମ୍ନରେ ଥିବା .apk ଫାଇଲ୍ ଡାଉନଲୋଡ୍ କରି ଏହାକୁ ମାନୁଆଲି ଇନଷ୍ଟଲ୍ କରିପାରିବେ। ଏଥିପାଇଁ ଆଣ୍ଡ୍ରଏଡ୍ ରେ କିଛି ସେଟିଂସ୍ ବଦଳାଇବା ଆବଶ್ಯକ ହୋଇପାରେ (ଆପ୍ସ ଇନଷ୍ଟଲ୍ କରିବାକୁ ଅନୁମତି ଦେବା, ଡେଭେଲପର୍ ବିକଳ୍ପ ସକ୍ଷମ କରିବା ଇତ୍ୟାଦି)।",

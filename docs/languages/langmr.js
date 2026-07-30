@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "मोर्स प्राप्त प्रशिक्षक",
     "BTN_GOOGLE_PLAY_ALT": "Google Play वरून मिळवा",
     "BTN_DOWNLOAD_APK": ".apk डाउनलोड करा",
-    "TAGLINE": "मोफत गेम, कोणत्याही जाहिराती नाहीत, इंटरनेट कनेक्शनची आवश्यकता नाही",
+    "TAGLINE": "मोफत ॲप, कोणत्याही जाहिराती नाहीत, इंटरनेट कनेक्शनची आवश्यकता नाही",
     "DOWNLOAD_TITLE": "डाउनलोड",
     "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store वरून अॅप मिळवणे</a> अधिक सोयीचे आहे.",
     "DOWNLOAD_TEXT_2": "आपण खालील .apk फाईल डाउनलोड करून व्यक्तिचलितपणे स्थापित करू शकता. यासाठी Android मध्ये काही सेटिंग्ज बदलण्याची आवश्यकता असू शकते (अॅप्स स्थापित करण्यासाठी परवानगी देणे, विकसक पर्याय सक्षम करणे इ.).",

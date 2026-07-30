@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "ሞርስ ተቀባዩ አሰልጣኝ",
     "BTN_GOOGLE_PLAY_ALT": "በ Google Play ላይ ያግኙት",
     "BTN_DOWNLOAD_APK": ".apk ያውርዱ",
-    "TAGLINE": "ነፃ ጨዋታ፣ ምንም ማስታወቂያዎች የሉም፣ ግንኙነት አያስፈልገውም",
+    "TAGLINE": "ነፃ መተግበሪያ፣ ምንም ማስታወቂያዎች የሉም፣ ግንኙነት አያስፈልገውም",
     "DOWNLOAD_TITLE": "አውርድ",
     "DOWNLOAD_TEXT_1": "መተግበሪያውን ከ <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store ማግኘት</a> ይመረጣል።",
     "DOWNLOAD_TEXT_2": "ከታች ያለውን የ .apk ፋይል አውርደው በእጅዎ መጫን ይችላሉ። ይህ ከ Android ጋር ተጨማሪ ማስተካከል ሊጠይቅ ይችላል (መተግበሪያዎችን ለመጫን ፈቃድ መስጠት፣ የገንቢ አማራጮችን ማንቃት፣ ወዘተ)።",

@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse Receive trainer",
     "BTN_GOOGLE_PLAY_ALT": "Get am for Google Play",
     "BTN_DOWNLOAD_APK": "Download .apk",
-    "TAGLINE": "Free game, no ads, no need connection",
+    "TAGLINE": "Free app, no ads, no need connection",
     "DOWNLOAD_TITLE": "Download",
     "DOWNLOAD_TEXT_1": "E better make you <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">get di app from Google Play Store</a>.",
     "DOWNLOAD_TEXT_2": "You fit still download di .apk file below and install am yourself. This one fit require some settings for Android (to allow app installation, enable developer options, etc.).",

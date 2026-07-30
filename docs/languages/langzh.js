@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse Receive trainer",
     "BTN_GOOGLE_PLAY_ALT": "在 Google Play 获取",
     "BTN_DOWNLOAD_APK": "下载 .apk",
-    "TAGLINE": "免费游戏，无广告，不需要网络连接",
+    "TAGLINE": "免费应用，无广告，不需要网络连接",
     "DOWNLOAD_TITLE": "下载",
     "DOWNLOAD_TEXT_1": "建议您<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">从 Google Play 商店获取该应用</a>。",
     "DOWNLOAD_TEXT_2": "您也可以下载下方的 .apk 文件并手动安装。这可能需要您在 Android 中进行一些设置（允许安装应用、启用开发者选项等）。",

@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse Receive tränare",
     "BTN_GOOGLE_PLAY_ALT": "Hämta på Google Play",
     "BTN_DOWNLOAD_APK": "Ladda ner .apk",
-    "TAGLINE": "Gratis spel, inga annonser, kräver ingen anslutning",
+    "TAGLINE": "Gratis app, inga annonser, kräver ingen anslutning",
     "DOWNLOAD_TITLE": "Ladda ner",
     "DOWNLOAD_TEXT_1": "Det är bäst att <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">hämta appen från Google Play Butik</a>.",
     "DOWNLOAD_TEXT_2": "Du kan också ladda ner .apk-filen nedan och installera den manuellt. Detta kan kräva vissa inställningar i Android (ge behörighet att installera appar, aktivera utvecklaralternativ, etc.).",

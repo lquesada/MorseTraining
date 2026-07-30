@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse Receive məşqçisi",
     "BTN_GOOGLE_PLAY_ALT": "Google Play-dən əldə edin",
     "BTN_DOWNLOAD_APK": ".apk yüklə",
-    "TAGLINE": "Pulsuz oyun, reklamsız, internet tələb etmir",
+    "TAGLINE": "Pulsuz tətbiq, reklamsız, internet tələb etmir",
     "DOWNLOAD_TITLE": "Yüklə",
     "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Tətbiqi Google Play Store-dan əldə etmək</a> tövsiyə olunur.",
     "DOWNLOAD_TEXT_2": "Həmçinin aşağıdakı .apk faylını yükləyib əl ilə quraşdıra bilərsiniz. Bu, Android-də bəzi tənzimləmələr tələb edə bilər (tətbiqləri quraşdırmaq üçün icazə vermək, tərtibatçı seçimlərini aktivləşdirmək və s.).",

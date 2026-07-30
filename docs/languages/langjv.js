@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse Receive trainer",
     "BTN_GOOGLE_PLAY_ALT": "Golek ing Google Play",
     "BTN_DOWNLOAD_APK": "Unduh .apk",
-    "TAGLINE": "Dolanan gratis, ora ana iklan, ora butuh koneksi",
+    "TAGLINE": "Aplikasi gratis, ora ana iklan, ora butuh koneksi",
     "DOWNLOAD_TITLE": "Unduh",
     "DOWNLOAD_TEXT_1": "Luwih apik <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">entuk aplikasi saka Google Play Store</a>.",
     "DOWNLOAD_TEXT_2": "Sampeyan uga bisa ngunduh file .apk ing ngisor iki lan nginstal kanthi manual. Iki bisa uga butuh sawetara pangaturan ing Android (menehi ijin kanggo nginstal aplikasi, ngaktifake pilihan pangembang, lsp).",

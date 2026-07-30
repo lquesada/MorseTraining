@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse Nampi palatih",
     "BTN_GOOGLE_PLAY_ALT": "Kéngingkeun di Google Play",
     "BTN_DOWNLOAD_APK": "Unduh .apk",
-    "TAGLINE": "Kaulinan gratis, tanpa iklan, teu butuh koneksi",
+    "TAGLINE": "Aplikasi gratis, tanpa iklan, teu butuh koneksi",
     "DOWNLOAD_TITLE": "Unduh",
     "DOWNLOAD_TEXT_1": "Leuwih hade <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">ngunduh aplikasi ti Google Play Store</a>.",
     "DOWNLOAD_TEXT_2": "Anjeun ogé tiasa ngaunduh file .apk di handap ieu teras dipasang sacara manual. Ieu panginten peryogi sababaraha pangaturan dina Android (masihan idin pikeun masang aplikasi, ngaktipkeun pilihan pamekar, jsb).",

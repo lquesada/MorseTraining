@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "มอร์ส รับเทรนเนอร์",
     "BTN_GOOGLE_PLAY_ALT": "ดาวน์โหลดได้ที่ Google Play",
     "BTN_DOWNLOAD_APK": "ดาวน์โหลด .apk",
-    "TAGLINE": "เกมฟรี ไม่มีโฆษณา ไม่ต้องใช้การเชื่อมต่อ",
+    "TAGLINE": "แอปฟรี ไม่มีโฆษณา ไม่ต้องใช้การเชื่อมต่อ",
     "DOWNLOAD_TITLE": "ดาวน์โหลด",
     "DOWNLOAD_TEXT_1": "ขอแนะนำให้<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">ดาวน์โหลดแอปจาก Google Play Store</a>",
     "DOWNLOAD_TEXT_2": "คุณยังสามารถดาวน์โหลดไฟล์ .apk ด้านล่างและติดตั้งด้วยตนเองได้ สิ่งนี้อาจต้องการการตั้งค่าบางอย่างใน Android (ให้สิทธิ์ในการติดตั้งแอป เปิดใช้งานตัวเลือกสำหรับนักพัฒนาซอฟต์แวร์ ฯลฯ)",

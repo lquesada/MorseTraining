@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Trainer Morse Receive",
     "BTN_GOOGLE_PLAY_ALT": "Descarcă de pe Google Play",
     "BTN_DOWNLOAD_APK": "Descărcați .apk",
-    "TAGLINE": "Joc gratuit, fără reclame, nu necesită conexiune",
+    "TAGLINE": "Aplicație gratuită, fără reclame, nu necesită conexiune",
     "DOWNLOAD_TITLE": "Descărcare",
     "DOWNLOAD_TEXT_1": "Este de preferat să <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">obțineți aplicația din Magazinul Google Play</a>.",
     "DOWNLOAD_TEXT_2": "De asemenea, puteți descărca fișierul .apk de mai jos și îl puteți instala manual. Acest lucru poate necesita ajustarea setărilor în Android (acordarea de permisiuni pentru instalarea aplicațiilor, activarea opțiunilor pentru dezvoltatori etc.).",

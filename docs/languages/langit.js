@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Allenatore di ricezione Morse",
     "BTN_GOOGLE_PLAY_ALT": "Disponibile su Google Play",
     "BTN_DOWNLOAD_APK": "Scarica .apk",
-    "TAGLINE": "Gioco gratuito, nessuna pubblicità, non richiede connessione",
+    "TAGLINE": "App gratuita, nessuna pubblicità, non richiede connessione",
     "DOWNLOAD_TITLE": "Scarica",
     "DOWNLOAD_TEXT_1": "È preferibile <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">scaricare l'app dal Google Play Store</a>.",
     "DOWNLOAD_TEXT_2": "Puoi anche scaricare il file .apk qui sotto e installarlo manualmente. Ciò potrebbe richiedere alcune impostazioni in Android (concedere autorizzazioni per l'installazione di app, abilitare le opzioni sviluppatore, ecc.).",

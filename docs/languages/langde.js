@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse-Empfangstrainer",
     "BTN_GOOGLE_PLAY_ALT": "Holen Sie es sich bei Google Play",
     "BTN_DOWNLOAD_APK": ".apk herunterladen",
-    "TAGLINE": "Kostenloses Spiel, keine Werbung, benötigt keine Verbindung",
+    "TAGLINE": "Kostenlose App, keine Werbung, benötigt keine Verbindung",
     "DOWNLOAD_TITLE": "Herunterladen",
     "DOWNLOAD_TEXT_1": "Es ist besser, <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">die App aus dem Google Play Store zu beziehen</a>.",
     "DOWNLOAD_TEXT_2": "Sie können auch die unten stehende .apk-Datei herunterladen und manuell installieren. Dies erfordert möglicherweise einige Einstellungen in Android (Berechtigungen zur Installation von Apps erteilen, Entwickleroptionen aktivieren usw.).",

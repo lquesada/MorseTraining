@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "مورس يستقبل المدرب",
     "BTN_GOOGLE_PLAY_ALT": "احصل عليه من Google Play",
     "BTN_DOWNLOAD_APK": "تنزيل .apk",
-    "TAGLINE": "لعبة مجانية، بدون إعلانات، مش محتاج نت",
+    "TAGLINE": "تطبيق مجاني، بدون إعلانات، مش محتاج نت",
     "DOWNLOAD_TITLE": "تنزيل",
     "DOWNLOAD_TEXT_1": "يُفضل <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">الحصول على التطبيق من متجر Google Play</a>.",
     "DOWNLOAD_TEXT_2": "يمكنك أيضًا تنزيل ملف .apk أدناه وتثبيته يدويًا. قد يتطلب هذا بعض التعديلات في نظام Android (منح أذونات لتثبيت التطبيقات، تمكين خيارات المطور، وما إلى ذلك).",

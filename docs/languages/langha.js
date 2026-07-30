@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse Karɓi mai horo",
     "BTN_GOOGLE_PLAY_ALT": "Samo a Google Play",
     "BTN_DOWNLOAD_APK": "Zazzage .apk",
-    "TAGLINE": "Wasa kyauta, babu tallace-tallace, ba ya buƙatar haɗin intanet",
+    "TAGLINE": "Manhaja kyauta, babu tallace-tallace, ba ya buƙatar haɗin intanet",
     "DOWNLOAD_TITLE": "Zazzagewa",
     "DOWNLOAD_TEXT_1": "Zai fi kyau a <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">sami manhajar daga Google Play Store</a>.",
     "DOWNLOAD_TEXT_2": "Hakanan za ku iya zazzage fayil ɗin .apk a ƙasa ku sanya shi da kanku. Wannan na iya buƙatar wasu gyare-gyare a Android (bayar da damar sanya manhajoji, kunna zaɓuɓɓukan masu haɓakawa, da sauransu).",

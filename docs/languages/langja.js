@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "モールス受信トレーナー",
     "BTN_GOOGLE_PLAY_ALT": "Google Play で手に入れよう",
     "BTN_DOWNLOAD_APK": ".apkをダウンロード",
-    "TAGLINE": "無料ゲーム、広告なし、インターネット接続不要",
+    "TAGLINE": "無料アプリ、広告なし、インターネット接続不要",
     "DOWNLOAD_TITLE": "ダウンロード",
     "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play ストアからアプリを入手</a>することをお勧めします。",
     "DOWNLOAD_TEXT_2": "以下の .apk ファイルをダウンロードして手動でインストールすることもできます。これには、Androidでの設定が必要になる場合があります（アプリのインストール権限の付与、開発者向けオプションの有効化など）。",

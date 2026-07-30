@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "मोर्स रिसीव ट्रेनर",
     "BTN_GOOGLE_PLAY_ALT": "Google Play पर प्राप्त करें",
     "BTN_DOWNLOAD_APK": ".apk डाउनलोड करें",
-    "TAGLINE": "मुफ्त गेम, कोई विज्ञापन नहीं, कनेक्शन की आवश्यकता नहीं है",
+    "TAGLINE": "मुफ्त ऐप, कोई विज्ञापन नहीं, कनेक्शन की आवश्यकता नहीं है",
     "DOWNLOAD_TITLE": "डाउनलोड",
     "DOWNLOAD_TEXT_1": "यह बेहतर है कि <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store से ऐप प्राप्त करें</a>।",
     "DOWNLOAD_TEXT_2": "आप नीचे दी गई .apk फ़ाइल भी डाउनलोड कर सकते हैं और इसे मैन्युअल रूप से इंस्टॉल कर सकते हैं। इसके लिए Android में कुछ सेटिंग की आवश्यकता हो सकती है (ऐप्स इंस्टॉल करने की अनुमति देना, डेवलपर विकल्प सक्षम करना आदि)।",

@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse Gba olukọni",
     "BTN_GOOGLE_PLAY_ALT": "Gba lori Google Play",
     "BTN_DOWNLOAD_APK": "Ṣe igbasilẹ .apk",
-    "TAGLINE": "Ere ọfẹ, ko si ipolowo, ko nilo intanẹẹti",
+    "TAGLINE": "App ọfẹ, ko si ipolowo, ko nilo intanẹẹti",
     "DOWNLOAD_TITLE": "Ṣe igbasilẹ",
     "DOWNLOAD_TEXT_1": "O dara ki o <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">gba app lati Google Play Store</a>.",
     "DOWNLOAD_TEXT_2": "O tun le ṣe igbasilẹ faili .apk ni isalẹ ki o fi sii pẹlu ọwọ rẹ. Eyi le nilo awọn eto kan lori Android (gbigba igbanilaaye lati fi awọn app sii, titan awọn aṣayan olupilẹṣẹ, ati bẹbẹ lọ).",

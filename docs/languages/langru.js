@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Тренажер по приему Морзе",
     "BTN_GOOGLE_PLAY_ALT": "Доступно в Google Play",
     "BTN_DOWNLOAD_APK": "Скачать .apk",
-    "TAGLINE": "Бесплатная игра, без рекламы, не требует подключения",
+    "TAGLINE": "Бесплатное приложение, без рекламы, не требует подключения",
     "DOWNLOAD_TITLE": "Скачать",
     "DOWNLOAD_TEXT_1": "Лучше всего <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">скачать приложение из Google Play Маркета</a>.",
     "DOWNLOAD_TEXT_2": "Вы также можете скачать файл .apk ниже и установить его вручную. Это может потребовать некоторых настроек в Android (предоставление разрешений на установку приложений, включение параметров разработчика и т. д.).",

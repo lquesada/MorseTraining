@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "മോർസ് റിസീവ് പരിശീലകൻ",
     "BTN_GOOGLE_PLAY_ALT": "Google Play-യിൽ നിന്ന് നേടുക",
     "BTN_DOWNLOAD_APK": ".apk ഡൗൺലോഡ് ചെയ്യുക",
-    "TAGLINE": "സൗജന്യ ഗെയിം, പരസ്യങ്ങളില്ല, ഇന്റർനെറ്റ് ആവശ്യമില്ല",
+    "TAGLINE": "സൗജന്യ ആപ്പ്, പരസ്യങ്ങളില്ല, ഇന്റർനെറ്റ് ആവശ്യമില്ല",
     "DOWNLOAD_TITLE": "ഡൗൺലോഡ്",
     "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store-ൽ നിന്ന് ആപ്പ് ഡൗൺലോഡ് ചെയ്യുന്നതാണ്</a> നല്ലത്.",
     "DOWNLOAD_TEXT_2": "നിങ്ങൾക്ക് താഴെയുള്ള .apk ഫയൽ ഡൗൺലോഡ് ചെയ്ത് മാനുവലായി ഇൻസ്റ്റാൾ ചെയ്യാനും കഴിയും. ഇതിന് Android-ൽ ചില ക്രമീകരണങ്ങൾ ആവശ്യമായി വന്നേക്കാം (ആപ്പുകൾ ഇൻസ്റ്റാൾ ചെയ്യാൻ അനുമതി നൽകുക, ഡെവലപ്പർ ഓപ്ഷനുകൾ പ്രവർത്തനക്ഷമമാക്കുക മുതലായവ).",

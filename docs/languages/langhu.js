@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse Receive tréner",
     "BTN_GOOGLE_PLAY_ALT": "Szerezd meg a Google Playen",
     "BTN_DOWNLOAD_APK": ".apk letöltése",
-    "TAGLINE": "Ingyenes játék, reklámmentes, nem igényel kapcsolatot",
+    "TAGLINE": "Ingyenes alkalmazás, reklámmentes, nem igényel kapcsolatot",
     "DOWNLOAD_TITLE": "Letöltés",
     "DOWNLOAD_TEXT_1": "Célszerű <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">az alkalmazást a Google Play Áruházból beszerezni</a>.",
     "DOWNLOAD_TEXT_2": "A lenti .apk fájlt is letöltheted és manuálisan telepítheted. Ehhez az Android beállításainak módosítása lehet szükséges (alkalmazások telepítésének engedélyezése, fejlesztői beállítások engedélyezése stb.).",

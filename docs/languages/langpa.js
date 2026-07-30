@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "ਮੋਰਸ ਰਿਸੀਵ ਟ੍ਰੇਨਰ",
     "BTN_GOOGLE_PLAY_ALT": "Google Play ਤੋਂ ਪ੍ਰਾਪਤ ਕਰੋ",
     "BTN_DOWNLOAD_APK": ".apk ਡਾਊਨਲੋਡ ਕਰੋ",
-    "TAGLINE": "ਮੁਫਤ ਗੇਮ, ਕੋਈ ਇਸ਼ਤਿਹਾਰ ਨਹੀਂ, ਕਨੈਕਸ਼ਨ ਦੀ ਲੋੜ ਨਹੀਂ",
+    "TAGLINE": "ਮੁਫਤ ਐਪ, ਕੋਈ ਇਸ਼ਤਿਹਾਰ ਨਹੀਂ, ਕਨੈਕਸ਼ਨ ਦੀ ਲੋੜ ਨਹੀਂ",
     "DOWNLOAD_TITLE": "ਡਾਊਨਲੋਡ",
     "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store ਤੋਂ ਐਪ ਪ੍ਰਾਪਤ ਕਰਨਾ</a> ਬਿਹਤਰ ਹੈ।",
     "DOWNLOAD_TEXT_2": "ਤੁਸੀਂ ਹੇਠਾਂ ਦਿੱਤੀ .apk ਫਾਈਲ ਨੂੰ ਵੀ ਡਾਊਨਲੋਡ ਕਰ ਸਕਦੇ ਹੋ ਅਤੇ ਇਸਨੂੰ ਹੱਥੀਂ ਸਥਾਪਿਤ ਕਰ ਸਕਦੇ ਹੋ। ਇਸ ਲਈ Android ਵਿੱਚ ਕੁਝ ਵਿਵਸਥਾਵਾਂ ਦੀ ਲੋੜ ਹੋ ਸਕਦੀ ਹੈ (ਐਪਾਂ ਸਥਾਪਤ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਦੇਣਾ, ਡਿਵੈਲਪਰ ਵਿਕਲਪਾਂ ਨੂੰ ਸਮਰੱਥ ਕਰਨਾ, ਆਦਿ)।",

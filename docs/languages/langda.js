@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse modtager træner",
     "BTN_GOOGLE_PLAY_ALT": "Hent på Google Play",
     "BTN_DOWNLOAD_APK": "Download .apk",
-    "TAGLINE": "Gratis spil, ingen annoncer, kræver ikke forbindelse",
+    "TAGLINE": "Gratis app, ingen annoncer, kræver ikke forbindelse",
     "DOWNLOAD_TITLE": "Download",
     "DOWNLOAD_TEXT_1": "Det foretrækkes at <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">hente appen fra Google Play Butik</a>.",
     "DOWNLOAD_TEXT_2": "Du kan også downloade .apk-filen nedenfor og installere den manuelt. Dette kan kræve justeringer i Android (give tilladelse til at installere apps, aktivere udviklerindstillinger osv.).",

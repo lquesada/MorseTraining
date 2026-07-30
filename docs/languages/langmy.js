@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse သင်တန်းဆရာလက်ခံပါ။",
     "BTN_GOOGLE_PLAY_ALT": "Google Play တွင် ရယူပါ",
     "BTN_DOWNLOAD_APK": ".apk ဒေါင်းလုဒ်လုပ်ပါ",
-    "TAGLINE": "အခမဲ့ဂိမ်း၊ ကြော်ငြာမရှိပါ၊ အင်တာနက်ချိတ်ဆက်ရန်မလိုပါ",
+    "TAGLINE": "အခမဲ့အက်ပ်၊ ကြော်ငြာမရှိပါ၊ အင်တာနက်ချိတ်ဆက်ရန်မလိုပါ",
     "DOWNLOAD_TITLE": "ဒေါင်းလုဒ်လုပ်ရန်",
     "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store မှ အက်ပ်ကို ရယူရန်</a> အကြံပြုပါသည်။",
     "DOWNLOAD_TEXT_2": "အောက်ပါ .apk ဖိုင်ကို ဒေါင်းလုဒ်လုပ်ပြီး ကိုယ်တိုင် ထည့်သွင်းနိုင်သည်။ ၎င်းအတွက် Android တွင် ချိန်ညှိမှုအချို့ လိုအပ်နိုင်သည် (အက်ပ်များ ထည့်သွင်းခွင့် ပြုခြင်း၊ developer ရွေးချယ်မှုများ ဖွင့်ခြင်း စသည်)။",

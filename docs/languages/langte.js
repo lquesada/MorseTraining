@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "మోర్స్ రిసీవ్ ట్రైనర్",
     "BTN_GOOGLE_PLAY_ALT": "Google Play లో పొందండి",
     "BTN_DOWNLOAD_APK": ".apk డౌన్‌లోడ్ చేయండి",
-    "TAGLINE": "ఉచిత గేమ్, ప్రకటనలు లేవు, ఇంటర్నెట్ అవసరం లేదు",
+    "TAGLINE": "ఉచిత యాప్, ప్రకటనలు లేవు, ఇంటర్నెట్ అవసరం లేదు",
     "DOWNLOAD_TITLE": "డౌన్‌లోడ్ చేయండి",
     "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store నుండి యాప్‌ను పొందడం</a> మంచిది.",
     "DOWNLOAD_TEXT_2": "మీరు దిగువ ఉన్న .apk ఫైల్‌ను డౌన్‌లోడ్ చేసి, దాన్ని మానవీయంగా ఇన్‌స్టాల్ చేయవచ్చు. దీనికి Android లో కొన్ని సెట్టింగ్‌లు అవసరం కావచ్చు (యాప్‌లను ఇన్‌స్టాల్ చేయడానికి అనుమతి ఇవ్వడం, డెవలపర్ ఎంపికలను ప్రారంభించడం మొదలైనవి).",

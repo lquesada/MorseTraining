@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse Alma antrenörü",
     "BTN_GOOGLE_PLAY_ALT": "Google Play'den edinin",
     "BTN_DOWNLOAD_APK": ".apk indir",
-    "TAGLINE": "Ücretsiz oyun, reklamsız, bağlantı gerektirmez",
+    "TAGLINE": "Ücretsiz uygulama, reklamsız, bağlantı gerektirmez",
     "DOWNLOAD_TITLE": "İndir",
     "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Uygulamayı Google Play Store'dan indirmek</a> daha iyidir.",
     "DOWNLOAD_TEXT_2": "Ayrıca aşağıdaki .apk dosyasını indirip manuel olarak yükleyebilirsiniz. Bu, Android'de bazı ayarlar gerektirebilir (uygulama yükleme izni verme, geliştirici seçeneklerini etkinleştirme vb.).",

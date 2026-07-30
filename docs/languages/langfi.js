@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse Receive -kouluttaja",
     "BTN_GOOGLE_PLAY_ALT": "Hanki Google Playsta",
     "BTN_DOWNLOAD_APK": "Lataa .apk",
-    "TAGLINE": "Ilmainen peli, ei mainoksia, ei vaadi yhteyttä",
+    "TAGLINE": "Ilmainen sovellus, ei mainoksia, ei vaadi yhteyttä",
     "DOWNLOAD_TITLE": "Lataa",
     "DOWNLOAD_TEXT_1": "On suositeltavaa <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">ladata sovellus Google Play -kaupasta</a>.",
     "DOWNLOAD_TEXT_2": "Voit myös ladata alla olevan .apk-tiedoston ja asentaa sen manuaalisesti. Tämä saattaa edellyttää Androidin asetusten muuttamista (sovellusten asennusluvan myöntäminen, kehittäjäasetusten käyttöönotto jne.).",

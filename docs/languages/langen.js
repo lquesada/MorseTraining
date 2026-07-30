@@ -39,7 +39,7 @@ const langData = {
     // Text for the direct APK download button
     "BTN_DOWNLOAD_APK": "Download .apk",
     // Tagline text below the buttons
-    "TAGLINE": "Free game, no ads, doesn't require connection",
+    "TAGLINE": "Free app, no ads, doesn't require connection",
 
 
     // ==========================================

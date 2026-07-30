@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "ಮೋರ್ಸ್ ರಿಸೀವ್ ಟ್ರೈನರ್",
     "BTN_GOOGLE_PLAY_ALT": "Google Play ನಿಂದ ಪಡೆಯಿರಿ",
     "BTN_DOWNLOAD_APK": ".apk ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
-    "TAGLINE": "ಉಚಿತ ಆಟ, ಯಾವುದೇ ಜಾಹೀರಾತುಗಳಿಲ್ಲ, ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕದ ಅಗತ್ಯವಿಲ್ಲ",
+    "TAGLINE": "ಉಚಿತ ಅಪ್ಲಿಕೇಶನ್, ಯಾವುದೇ ಜಾಹೀರಾತುಗಳಿಲ್ಲ, ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕದ ಅಗತ್ಯವಿಲ್ಲ",
     "DOWNLOAD_TITLE": "ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
     "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store ನಿಂದ ಅಪ್ಲಿಕೇಶನ್ ಪಡೆಯುವುದು</a> ಉತ್ತಮ.",
     "DOWNLOAD_TEXT_2": "ನೀವು ಕೆಳಗಿನ .apk ಫೈಲ್ ಅನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಬಹುದು ಮತ್ತು ಅದನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಸ್ಥಾಪಿಸಬಹುದು. ಇದಕ್ಕೆ Android ನಲ್ಲಿ ಕೆಲವು ಹೊಂದಾಣಿಕೆಗಳು ಬೇಕಾಗಬಹುದು (ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಸ್ಥಾಪಿಸಲು ಅನುಮತಿ ನೀಡುವುದು, ಡೆವಲಪರ್ ಆಯ್ಕೆಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸುವುದು ಇತ್ಯಾದಿ).",

@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "মোর্স প্রশিক্ষক গ্রহণ",
     "BTN_GOOGLE_PLAY_ALT": "Google Play থেকে নিন",
     "BTN_DOWNLOAD_APK": ".apk ডাউনলোড করুন",
-    "TAGLINE": "বিনামূল্যের গেম, কোনো বিজ্ঞাপন নেই, ইন্টারনেট সংযোগের প্রয়োজন নেই",
+    "TAGLINE": "বিনামূল্যের অ্যাপ, কোনো বিজ্ঞাপন নেই, ইন্টারনেট সংযোগের প্রয়োজন নেই",
     "DOWNLOAD_TITLE": "ডাউনলোড",
     "DOWNLOAD_TEXT_1": "<a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">Google Play Store থেকে অ্যাপটি নেওয়া</a> সবচেয়ে ভালো।",
     "DOWNLOAD_TEXT_2": "আপনি চাইলে নিচের .apk ফাইলটি ডাউনলোড করে ম্যানুয়ালি ইনস্টল করতে পারেন। এর জন্য Android-এ কিছু সেটিংস পরিবর্তন করতে হতে পারে (অ্যাপ ইনস্টল করার অনুমতি দেওয়া, ডেভেলপার অপশন চালু করা ইত্যাদি)।",

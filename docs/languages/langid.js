@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "Morse Terima pelatih",
     "BTN_GOOGLE_PLAY_ALT": "Dapatkan di Google Play",
     "BTN_DOWNLOAD_APK": "Unduh .apk",
-    "TAGLINE": "Gim gratis, tanpa iklan, tidak memerlukan koneksi",
+    "TAGLINE": "Aplikasi gratis, tanpa iklan, tidak memerlukan koneksi",
     "DOWNLOAD_TITLE": "Unduh",
     "DOWNLOAD_TEXT_1": "Lebih baik <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">mendapatkan aplikasi dari Google Play Store</a>.",
     "DOWNLOAD_TEXT_2": "Anda juga dapat mengunduh berkas .apk di bawah ini dan menginstalnya secara manual. Hal ini mungkin memerlukan penyesuaian di Android (memberikan izin untuk menginstal aplikasi, mengaktifkan opsi pengembang, dll.).",

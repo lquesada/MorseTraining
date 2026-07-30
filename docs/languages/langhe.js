@@ -10,7 +10,7 @@ const langData = {
     "SCREENSHOT_3_ALT": "מאמן מורס קבלי",
     "BTN_GOOGLE_PLAY_ALT": "הורד מ-Google Play",
     "BTN_DOWNLOAD_APK": "הורד .apk",
-    "TAGLINE": "משחק חינמי, ללא פרסומות, לא דורש חיבור אינטרנט",
+    "TAGLINE": "אפליקציה חינמית, ללא פרסומות, לא דורשת חיבור אינטרנט",
     "DOWNLOAD_TITLE": "הורדה",
     "DOWNLOAD_TEXT_1": "עדיף <a href=\"https://play.google.com/store/apps/details?id=com.qft8.morsekeyer\" style=\"color: #a78bfa; font-weight: 600;\">להוריד את האפליקציה מחנות Google Play</a>.",
     "DOWNLOAD_TEXT_2": "תוכל גם להוריד את קובץ ה-.apk למטה ולהתקין אותו ידנית. זה עשוי לדרוש הגדרות ב-Android (מתן הרשאות להתקנת אפליקציות, הפעלת אפשרויות מפתחים וכו').",

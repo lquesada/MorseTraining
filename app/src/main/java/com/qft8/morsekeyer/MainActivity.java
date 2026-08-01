@@ -2319,13 +2319,17 @@ public class MainActivity extends Activity {
             tableContent.addView(title);
 
             LinearLayout flowRow = null;
-            int cellSizeDp = 54 + settings.tableFontSizeDelta * 6;
+            float fontScale = getResources().getConfiguration().fontScale;
+            if (fontScale <= 0f) fontScale = 1.0f;
+
+            int delta = settings.tableFontSizeDelta;
+            int cellSize = Math.round(dp(54 + delta * 6) * fontScale);
             
             int screenWidth = getResources().getDisplayMetrics().widthPixels;
             int availableWidth = screenWidth;
 
             // Subtract padding (approx 12dp on each side) and calculate items per row
-            int itemWidth = dp(cellSizeDp + 4);
+            int itemWidth = cellSize + dp(4);
             if (itemWidth <= 0) itemWidth = 1;
             int itemsPerRow = Math.max(1, (availableWidth - dp(24)) / itemWidth);
 
@@ -2351,8 +2355,6 @@ public class MainActivity extends Activity {
                 iv.setBackground(bg);
                 iv.setPadding(dp(4), dp(4), dp(4), dp(4));
 
-                int delta = settings.tableFontSizeDelta;
-                int cellSize = dp(54 + delta * 6);
                 LinearLayout.LayoutParams ip = new LinearLayout.LayoutParams(cellSize, cellSize);
                 ip.setMargins(dp(2), 0, dp(2), 0);
 

@@ -341,8 +341,9 @@ public class SummaryView extends LinearLayout {
 
             // ACTION BUTTON (Next Level or Try Again)
             boolean passed = score >= kochTarget;
+            boolean showNextLevel = passed && !isCustomKochMode;
             TextView actionBtn = new TextView(getContext());
-            actionBtn.setText(LanguageManager.get(passed ? MorseLanguage.NEXT_LEVEL : MorseLanguage.TRY_AGAIN));
+            actionBtn.setText(LanguageManager.get(showNextLevel ? MorseLanguage.NEXT_LEVEL : MorseLanguage.TRY_AGAIN));
             actionBtn.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
             actionBtn.setTypeface(Typeface.DEFAULT_BOLD);
             actionBtn.setTextColor(0xFFFFFFFF);
@@ -356,9 +357,9 @@ public class SummaryView extends LinearLayout {
             actionBtn.setBackground(actionBg);
 
             actionBtn.setOnClickListener(v -> {
-                if (passed && onNextLevel != null) {
+                if (showNextLevel && onNextLevel != null) {
                     onNextLevel.run();
-                } else if (!passed && onRetry != null) {
+                } else if (onRetry != null) {
                     onRetry.run();
                 }
             });

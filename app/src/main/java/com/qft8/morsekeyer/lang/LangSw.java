@@ -140,5 +140,9 @@ set(TARGET_MET, "Lengo limefikiwa");
                 set(EFFECTIVE_WPM_SHORT, "Thabiti");
 
                 set(WORD_SPACING_ADD, "Neno +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Kiwango maalum");
+        set(SELECT_CHARACTERS_PROMPT, "Gonga kibodi ili kuchagua herufi unazozipenda");
     }
 }

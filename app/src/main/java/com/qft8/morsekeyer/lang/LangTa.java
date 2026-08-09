@@ -133,5 +133,9 @@ set(TARGET_MET, "இலக்கு எட்டப்பட்டது");
                 set(EFFECTIVE_WPM_SHORT, "செயல்திறன்");
 
                 set(WORD_SPACING_ADD, "வார்த்தை +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "தனிப்பயன் நிலை");
+        set(SELECT_CHARACTERS_PROMPT, "நீங்கள் விரும்பும் எழுத்துகளைத் தேர்ந்தெடுக்க விசைப்பலகையை தட்டவும்");
     }
 }

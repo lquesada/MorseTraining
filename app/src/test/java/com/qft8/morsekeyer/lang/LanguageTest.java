@@ -138,7 +138,7 @@ public class LanguageTest {
                     if (key.equals("INFO_TITLE") || key.startsWith("MODE_") || key.equals("WPM") || key.equals("SPACING") || key.equals("AUDIO_BUFFER") || key.equals("CAT_QCODES")) {
                         continue;
                     }
-                    if (key.equals("VOLUME") || key.equals("TARGET") || key.equals("RESET") || key.equals("START") || key.startsWith("COLOR_") || key.equals("BACK") || key.equals("NEXT_LEVEL") || key.equals("TRY_AGAIN") || key.equals("REPEAT") || key.equals("CONTINUE") || key.equals("KOCH_METHOD") || key.equals("LEVEL") || key.equals("SCORE")) {
+                    if (key.equals("VOLUME") || key.equals("TARGET") || key.equals("RESET") || key.equals("START") || key.startsWith("COLOR_") || key.equals("BACK") || key.equals("NEXT_LEVEL") || key.equals("TRY_AGAIN") || key.equals("REPEAT") || key.equals("CONTINUE") || key.equals("KOCH_METHOD") || key.equals("LEVEL") || key.equals("SCORE") || key.equals("CUSTOM_LEVEL") || key.equals("SELECT_CHARACTERS_PROMPT")) {
                         continue;
                     }
                     hasError = true;

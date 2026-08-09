@@ -140,5 +140,9 @@ set(TARGET_MET, "লক্ষ্য পূরণ হয়েছে");
                 set(EFFECTIVE_WPM_SHORT, "কার্যকর");
 
                 set(WORD_SPACING_ADD, "শব্দ +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "কাস্টম স্তর");
+        set(SELECT_CHARACTERS_PROMPT, "আপনার পছন্দের অক্ষরগুলি নির্বাচন করতে কীবোর্ডে ট্যাপ করুন");
     }
 }

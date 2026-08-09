@@ -147,4 +147,8 @@ public abstract class MorseLanguage {
     public static final String EXTRA_WORD_SPACING = "EXTRA_WORD_SPACING";
     public static final String EFFECTIVE_WPM_SHORT = "EFFECTIVE_WPM_SHORT";
     public static final String WORD_SPACING_ADD = "WORD_SPACING_ADD";
+
+    // Custom level (Koch)
+    public static final String CUSTOM_LEVEL = "CUSTOM_LEVEL";
+    public static final String SELECT_CHARACTERS_PROMPT = "SELECT_CHARACTERS_PROMPT";
 }

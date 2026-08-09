@@ -30,21 +30,27 @@ public class KochLevelSelectView extends FrameLayout {
     private int highestCompletedLevel;
     private final Consumer<Integer> onLevelClick;
     private final Runnable onBackClick;
+    private final Runnable onCustomLevelClick;
 
     private int cBg, cBar, cUtl, cText;
     private boolean isDarkTheme;
 
     public KochLevelSelectView(Context context, int highestCompletedLevel, Consumer<Integer> onLevelClick, Runnable onBackClick) {
-        this(context, LanguageManager.get(MorseLanguage.RX), "koch_highest_completed_level_v2", highestCompletedLevel, onLevelClick, onBackClick);
+        this(context, LanguageManager.get(MorseLanguage.RX), "koch_highest_completed_level_v2", highestCompletedLevel, onLevelClick, onBackClick, null);
     }
 
     public KochLevelSelectView(Context context, String titleText, String resetPrefKey, int highestCompletedLevel, Consumer<Integer> onLevelClick, Runnable onBackClick) {
+        this(context, titleText, resetPrefKey, highestCompletedLevel, onLevelClick, onBackClick, null);
+    }
+
+    public KochLevelSelectView(Context context, String titleText, String resetPrefKey, int highestCompletedLevel, Consumer<Integer> onLevelClick, Runnable onBackClick, Runnable onCustomLevelClick) {
         super(context);
         this.titleText = titleText;
         this.resetPrefKey = resetPrefKey;
         this.highestCompletedLevel = highestCompletedLevel;
         this.onLevelClick = onLevelClick;
         this.onBackClick = onBackClick;
+        this.onCustomLevelClick = onCustomLevelClick;
     }
 
     public void applyTheme(int cBg, int cBar, int cUtl, int cText, boolean isDarkTheme) {
@@ -155,7 +161,31 @@ public class KochLevelSelectView extends FrameLayout {
         LinearLayout gridContainer = new LinearLayout(getContext());
         gridContainer.setOrientation(LinearLayout.VERTICAL);
         gridContainer.setGravity(Gravity.CENTER_HORIZONTAL);
-        gridContainer.setPadding(dp(12), dp(24), dp(12), dp(24));
+        gridContainer.setPadding(dp(12), dp(16), dp(12), dp(24));
+
+        // CUSTOM LEVEL BUTTON
+        if (onCustomLevelClick != null) {
+            TextView customBtn = new TextView(getContext());
+            customBtn.setText(LanguageManager.get(MorseLanguage.CUSTOM_LEVEL));
+            customBtn.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
+            customBtn.setTypeface(android.graphics.Typeface.DEFAULT_BOLD);
+            customBtn.setGravity(Gravity.CENTER);
+            customBtn.setPadding(dp(24), dp(14), dp(24), dp(14));
+            customBtn.setTextColor(0xFFFFFFFF);
+
+            GradientDrawable customBtnBg = new GradientDrawable();
+            customBtnBg.setShape(GradientDrawable.RECTANGLE);
+            customBtnBg.setCornerRadius(dp(32));
+            customBtnBg.setColor(isDarkTheme ? 0xFF2D5FA0 : 0xFF1565C0);
+            customBtn.setBackground(customBtnBg);
+
+            customBtn.setOnClickListener(v -> onCustomLevelClick.run());
+
+            LinearLayout.LayoutParams customBtnParams = new LinearLayout.LayoutParams(
+                    LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+            customBtnParams.setMargins(dp(8), dp(8), dp(8), dp(20));
+            gridContainer.addView(customBtn, customBtnParams);
+        }
 
         scrollView.addView(gridContainer);
         LinearLayout.LayoutParams scrollParams = new LinearLayout.LayoutParams(

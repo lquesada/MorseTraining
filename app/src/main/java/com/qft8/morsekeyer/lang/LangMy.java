@@ -133,5 +133,9 @@ set(TARGET_MET, "ပစ်မှတ်ပြည့်မီသည်");
                 set(EFFECTIVE_WPM_SHORT, "ထိရောက်သော");
 
                 set(WORD_SPACING_ADD, "စကား +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "ကိုယ်ပိုင်အဆင့်");
+        set(SELECT_CHARACTERS_PROMPT, "စိတ်ဝင်စားသောစာလုံးများကိုရွေးချယ်ရန် ကီးဘုတ်ကိုနှိပ်ပါ");
     }
 }

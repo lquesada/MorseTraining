@@ -133,5 +133,9 @@ set(TARGET_MET, "ଲକ୍ଷ୍ୟ ପୂରଣ ହୋଇଛି");
                 set(EFFECTIVE_WPM_SHORT, "ପ୍ରଭାବଶାଳୀ");
 
                 set(WORD_SPACING_ADD, "ଶব୍ਦ +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "କଷ୍ଟମ ସ୍ତର");
+        set(SELECT_CHARACTERS_PROMPT, "ଆପଣ ଆଗ୍ରହୀ ଥିବା ଅକ୍ଷରଗୁଡ଼ିକ ବାଛିବା ପାଇଁ କୀବୋର୍ଡ ଟ୍ୟାପ କରନ୍ତୁ");
     }
 }

@@ -133,5 +133,9 @@ set(TARGET_MET, "Maqsadga erishildi");
                 set(EFFECTIVE_WPM_SHORT, "Samarali");
 
                 set(WORD_SPACING_ADD, "So'z +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Maxsus daraja");
+        set(SELECT_CHARACTERS_PROMPT, "Qiziqtirgan belgilarni tanlash uchun klaviaturaga bosing");
     }
 }

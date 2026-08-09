@@ -133,5 +133,9 @@ set(TARGET_MET, "ಗುರಿ ತಲುಪಿದೆ");
                 set(EFFECTIVE_WPM_SHORT, "ಪರಿಣಾಮಕಾರಿ");
 
                 set(WORD_SPACING_ADD, "ಪದ +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "ಕಸ್ಟಮ್ ಹಂತ");
+        set(SELECT_CHARACTERS_PROMPT, "ನಿಮಗೆ ಆಸಕ್ತಿ ಇರುವ ಅಕ್ಷರಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಕೀಬೋರ್ಡ್ ಅನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ");
     }
 }

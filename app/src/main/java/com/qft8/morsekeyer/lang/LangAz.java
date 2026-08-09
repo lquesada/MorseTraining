@@ -133,5 +133,9 @@ set(TARGET_MET, "Hədəfə çatıldı");
                 set(EFFECTIVE_WPM_SHORT, "Effektiv");
 
                 set(WORD_SPACING_ADD, "Söz +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Xüsusi səviyyə");
+        set(SELECT_CHARACTERS_PROMPT, "Maraqlandığınız simvolları seçmək üçün klaviaturaya toxunun");
     }
 }

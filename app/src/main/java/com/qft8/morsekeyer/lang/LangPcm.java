@@ -140,5 +140,9 @@ set(TARGET_MET, "Target reach");
                 set(EFFECTIVE_WPM_SHORT, "Effective");
 
                 set(WORD_SPACING_ADD, "Word +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Custom level");
+        set(SELECT_CHARACTERS_PROMPT, "Tap di keyboard to pick di characters wey you dey interested in");
     }
 }

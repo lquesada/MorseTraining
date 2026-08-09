@@ -140,5 +140,9 @@ set(TARGET_MET, "लक्ष्य पूरा हुआ");
                 set(EFFECTIVE_WPM_SHORT, "प्रभावी");
 
                 set(WORD_SPACING_ADD, "शब्द +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "कस्टम स्तर");
+        set(SELECT_CHARACTERS_PROMPT, "जिन वर्णों में आपकी रुचि है उन्हें चुनने के लिए कीबोर्ड पर टैप करें");
     }
 }

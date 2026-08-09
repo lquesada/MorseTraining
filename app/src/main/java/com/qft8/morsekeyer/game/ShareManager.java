@@ -45,7 +45,10 @@ public class ShareManager {
                 context.getResources().getDisplayMetrics());
     }
 
-    public static View createShareView(Activity activity, String keyerType, int wpm, String timePlayed, int words, int score, int record, List<SummaryView.SummaryRow> params, boolean isInfiniteMode, boolean isKochMode, int kochTarget, int kochLevel, boolean isDarkInitially, Runnable onBack, Runnable onQuit) {
+    public static View createShareView(Activity activity, String keyerType, int wpm, String timePlayed,
+                                       int words, int score, int record, List<SummaryView.SummaryRow> params,
+                                       boolean isInfiniteMode, boolean isKochMode, boolean isCustomKochMode, int kochTarget, int kochLevel, boolean isDarkInitially,
+                                       Runnable onBack, Runnable onQuit) {
         final LinearLayout contentWrapper = new LinearLayout(activity);
         final FrameLayout previewContainer = new FrameLayout(activity);
         final LinearLayout rightColumn = new LinearLayout(activity);
@@ -226,7 +229,20 @@ public class ShareManager {
             langNames.add(entry.getValue());
         }
         
-        ArrayAdapter<String> langAdapter = new ArrayAdapter<>(activity, android.R.layout.simple_spinner_item, langNames);
+        ArrayAdapter<String> langAdapter = new ArrayAdapter<String>(activity, android.R.layout.simple_spinner_item, langNames) {
+            @Override
+            public View getView(int position, View convertView, android.view.ViewGroup parent) {
+                TextView v = (TextView) super.getView(position, convertView, parent);
+                v.setTextColor(textPrimary);
+                return v;
+            }
+            @Override
+            public View getDropDownView(int position, View convertView, android.view.ViewGroup parent) {
+                TextView v = (TextView) super.getDropDownView(position, convertView, parent);
+                v.setTextColor(textPrimary);
+                return v;
+            }
+        };
         langAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         langSpinner.setAdapter(langAdapter);
         langSpinner.setSelection(0);
@@ -260,7 +276,20 @@ public class ShareManager {
             themeOptions.add(LanguageManager.get(MorseLanguage.LIGHT_THEME));
             themeOptions.add(LanguageManager.get(MorseLanguage.DARK_THEME));
         }
-        ArrayAdapter<String> themeAdapter = new ArrayAdapter<>(activity, android.R.layout.simple_spinner_item, themeOptions);
+        ArrayAdapter<String> themeAdapter = new ArrayAdapter<String>(activity, android.R.layout.simple_spinner_item, themeOptions) {
+            @Override
+            public View getView(int position, View convertView, android.view.ViewGroup parent) {
+                TextView v = (TextView) super.getView(position, convertView, parent);
+                v.setTextColor(textPrimary);
+                return v;
+            }
+            @Override
+            public View getDropDownView(int position, View convertView, android.view.ViewGroup parent) {
+                TextView v = (TextView) super.getDropDownView(position, convertView, parent);
+                v.setTextColor(textPrimary);
+                return v;
+            }
+        };
         themeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         themeSpinner.setAdapter(themeAdapter);
         themeSpinner.setSelection(0);
@@ -332,7 +361,7 @@ public class ShareManager {
             String originalLang = LanguageManager.getCurrentKey();
             LanguageManager.init(currentLangToShare[0]);
             
-            View shareView = createMatchShareView(activity, keyerType, wpm, timePlayed, words, score, record, params, isInfiniteMode, isKochMode, kochTarget, kochLevel, isDark);
+            View shareView = createMatchShareView(activity, keyerType, wpm, timePlayed, words, score, record, params, isInfiniteMode, isKochMode, isCustomKochMode, kochTarget, kochLevel, isDark);
             currentShareView[0] = shareView;
 
             // Render view offscreen for preview
@@ -447,8 +476,8 @@ public class ShareManager {
         return root;
     }
 
-    public static void shareDirectly(Activity activity, String keyerType, int wpm, String timePlayed, int words, int score, int record, List<SummaryView.SummaryRow> params, boolean isInfiniteMode, boolean isKochMode, int kochTarget, int kochLevel, boolean isDarkTheme, Runnable onComplete) {
-        View view = createMatchShareView(activity, keyerType, wpm, timePlayed, words, score, record, params, isInfiniteMode, isKochMode, kochTarget, kochLevel, isDarkTheme);
+    public static void shareDirectly(Activity activity, String keyerType, int wpm, String timePlayed, int words, int score, int record, List<SummaryView.SummaryRow> params, boolean isInfiniteMode, boolean isKochMode, boolean isCustomKochMode, int kochTarget, int kochLevel, boolean isDarkTheme, Runnable onComplete) {
+        View view = createMatchShareView(activity, keyerType, wpm, timePlayed, words, score, record, params, isInfiniteMode, isKochMode, isCustomKochMode, kochTarget, kochLevel, isDarkTheme);
         view.measure(
             View.MeasureSpec.makeMeasureSpec(1080, View.MeasureSpec.EXACTLY),
             View.MeasureSpec.makeMeasureSpec(1920, View.MeasureSpec.UNSPECIFIED)
@@ -501,7 +530,7 @@ public class ShareManager {
         return (int) (value * 3.0f);
     }
 
-    private static View createMatchShareView(Context context, String keyerType, int wpm, String timePlayed, int words, int score, int record, List<SummaryView.SummaryRow> params, boolean isInfiniteMode, boolean isKochMode, int kochTarget, int kochLevel, boolean darkTheme) {
+    private static View createMatchShareView(Context context, String keyerType, int wpm, String timePlayed, int words, int score, int record, List<SummaryView.SummaryRow> params, boolean isInfiniteMode, boolean isKochMode, boolean isCustomKochMode, int kochTarget, int kochLevel, boolean darkTheme) {
         int bgCol = darkTheme ? 0xFF1A1A1A : 0xFFFFFFFF;
         int textPrimary = darkTheme ? 0xFFFFFFFF : 0xFF000000;
         int textSecondary = darkTheme ? 0xFFAAAAAA : 0xFF555555;
@@ -593,7 +622,7 @@ public class ShareManager {
         }
         addStatRow(context, statsCard, textPrimary, textSecondary, LanguageManager.get(MorseLanguage.TIME).replace(":", "").trim(), timePlayed, timeColor);
 
-        if (isKochMode) {
+        if (isKochMode && !isCustomKochMode) {
             TextView levelTxt = new TextView(context);
             levelTxt.setText(LanguageManager.get(MorseLanguage.LEVEL) + ": " + kochLevel);
             levelTxt.setTextColor(textPrimary);
@@ -605,6 +634,17 @@ public class ShareManager {
             levelParams.bottomMargin = px(8);
             root.addView(levelTxt, levelParams);
 
+            TextView targetTxt = new TextView(context);
+            targetTxt.setText(LanguageManager.get(score >= kochTarget ? MorseLanguage.TARGET_MET : MorseLanguage.TARGET_NOT_MET));
+            targetTxt.setTextColor(score >= kochTarget ? 0xFF00C853 : 0xFFD50000);
+            targetTxt.setTextSize(TypedValue.COMPLEX_UNIT_PX, px(20));
+            targetTxt.setGravity(Gravity.CENTER);
+            targetTxt.setTypeface(Typeface.DEFAULT_BOLD);
+            LinearLayout.LayoutParams targetParams = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            targetParams.bottomMargin = px(10);
+            root.addView(targetTxt, targetParams);
+        } else if (isKochMode && isCustomKochMode) {
             TextView targetTxt = new TextView(context);
             targetTxt.setText(LanguageManager.get(score >= kochTarget ? MorseLanguage.TARGET_MET : MorseLanguage.TARGET_NOT_MET));
             targetTxt.setTextColor(score >= kochTarget ? 0xFF00C853 : 0xFFD50000);

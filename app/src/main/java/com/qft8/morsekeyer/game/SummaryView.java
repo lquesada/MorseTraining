@@ -46,12 +46,13 @@ public class SummaryView extends LinearLayout {
     private final Activity activity;
     private final boolean isInfiniteMode;
     private final boolean isKochMode;
+    private final boolean isCustomKochMode;
     private final int kochTarget;
     private final int kochLevel;
 
     public SummaryView(Activity activity, String keyerType, int wpm, String timePlayed,
                        int words, int score, int record, List<SummaryRow> params,
-                       boolean isInfiniteMode, boolean isKochMode, int kochTarget, int kochLevel, Runnable onRetry, Runnable onQuit, Runnable onNextLevel, Runnable onShare, boolean darkTheme) {
+                       boolean isInfiniteMode, boolean isKochMode, boolean isCustomKochMode, int kochTarget, int kochLevel, Runnable onRetry, Runnable onQuit, Runnable onNextLevel, Runnable onShare, boolean darkTheme) {
         super(activity);
         this.activity = activity;
         this.keyerType = keyerType;
@@ -63,6 +64,7 @@ public class SummaryView extends LinearLayout {
         this.params = params;
         this.isInfiniteMode = isInfiniteMode;
         this.isKochMode = isKochMode;
+        this.isCustomKochMode = isCustomKochMode;
         this.kochTarget = kochTarget;
         this.kochLevel = kochLevel;
         this.onRetry = onRetry;
@@ -261,7 +263,7 @@ public class SummaryView extends LinearLayout {
                 LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         statsCardParams.bottomMargin = dp(20);
         
-        if (isKochMode) {
+        if (isKochMode && !isCustomKochMode) {
             TextView levelTxt = new TextView(getContext());
             levelTxt.setText(LanguageManager.get(MorseLanguage.LEVEL) + ": " + kochLevel);
             levelTxt.setTextColor(textPrimary);
@@ -273,6 +275,17 @@ public class SummaryView extends LinearLayout {
             levelParams.bottomMargin = dp(8);
             root.addView(levelTxt, levelParams);
 
+            TextView targetTxt = new TextView(getContext());
+            targetTxt.setText(LanguageManager.get(score >= kochTarget ? MorseLanguage.TARGET_MET : MorseLanguage.TARGET_NOT_MET));
+            targetTxt.setTextColor(score >= kochTarget ? 0xFF00C853 : 0xFFD50000);
+            targetTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+            targetTxt.setGravity(Gravity.CENTER);
+            targetTxt.setTypeface(Typeface.DEFAULT_BOLD);
+            LinearLayout.LayoutParams targetParams = new LinearLayout.LayoutParams(
+                    LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+            targetParams.bottomMargin = dp(24);
+            root.addView(targetTxt, targetParams);
+        } else if (isKochMode && isCustomKochMode) {
             TextView targetTxt = new TextView(getContext());
             targetTxt.setText(LanguageManager.get(score >= kochTarget ? MorseLanguage.TARGET_MET : MorseLanguage.TARGET_NOT_MET));
             targetTxt.setTextColor(score >= kochTarget ? 0xFF00C853 : 0xFFD50000);

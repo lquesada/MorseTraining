@@ -140,5 +140,9 @@ set(TARGET_MET, "هدف محقق شد");
                 set(EFFECTIVE_WPM_SHORT, "موثر");
 
                 set(WORD_SPACING_ADD, "کلمه +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "سطح سفارشی");
+        set(SELECT_CHARACTERS_PROMPT, "روی صفحه‌کلید ضربه بزنید تا کاراکترهای مورد علاقه‌تان را انتخاب کنید");
     }
 }

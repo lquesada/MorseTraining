@@ -140,5 +140,9 @@ set(TARGET_MET, "Hedefe ulaşıldı");
                 set(EFFECTIVE_WPM_SHORT, "Etkin");
 
                 set(WORD_SPACING_ADD, "Kelime +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Özel seviye");
+        set(SELECT_CHARACTERS_PROMPT, "İlgilendiğiniz karakterleri seçmek için klavyeye dokunun");
     }
 }

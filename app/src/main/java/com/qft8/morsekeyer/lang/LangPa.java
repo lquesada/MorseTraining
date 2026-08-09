@@ -133,5 +133,9 @@ set(TARGET_MET, "ਟੀਚਾ ਪੂਰਾ ਹੋਇਆ");
                 set(EFFECTIVE_WPM_SHORT, "ਪ੍ਰਭਾਵਸ਼ਾਲੀ");
 
                 set(WORD_SPACING_ADD, "ਸ਼ਬਦ +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "ਕਸਟਮ ਪੱਧਰ");
+        set(SELECT_CHARACTERS_PROMPT, "ਉਹ ਅੱਖਰ ਚੁਣਨ ਲਈ ਕੀਬੋਰਡ ਤੇ ਟੈਪ ਕਰੋ ਜਿਨ੍ਹਾਂ ਵਿੱਚ ਤੁਹਾਡੀ ਦਿਲਚਸਪੀ ਹੈ");
     }
 }

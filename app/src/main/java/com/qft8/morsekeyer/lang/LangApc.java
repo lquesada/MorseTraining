@@ -133,5 +133,9 @@ set(TARGET_MET, "تم تحقيق الهدف");
                 set(EFFECTIVE_WPM_SHORT, "الفعلية");
 
                 set(WORD_SPACING_ADD, "كلمة +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Nivel personalizado");
+        set(SELECT_CHARACTERS_PROMPT, "Pulsa el teclado para seleccionar los caracteres que te interesan");
     }
 }

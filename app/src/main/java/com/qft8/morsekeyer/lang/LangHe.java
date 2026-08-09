@@ -139,5 +139,9 @@ set(TARGET_MET, "היעד הושג");
                 set(EFFECTIVE_WPM_SHORT, "אפקטיבי");
 
                 set(WORD_SPACING_ADD, "מילה +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "רמה מותאמת אישית");
+        set(SELECT_CHARACTERS_PROMPT, "הקש על המקלדת כדי לבחור את התווים שמעניינים אותך");
     }
 }

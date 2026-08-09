@@ -140,5 +140,9 @@ set(TARGET_MET, "An cimma manufa");
                 set(EFFECTIVE_WPM_SHORT, "Mai inganci");
 
                 set(WORD_SPACING_ADD, "Kalma +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Matakin al'ada");
+        set(SELECT_CHARACTERS_PROMPT, "Taɓa madannin don zaɓar haruffan da kake sha'awa");
     }
 }

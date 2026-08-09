@@ -140,5 +140,9 @@ set(TARGET_MET, "Mål uppnått");
                 set(EFFECTIVE_WPM_SHORT, "Effektiv");
 
                 set(WORD_SPACING_ADD, "Ord +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Anpassad nivå");
+        set(SELECT_CHARACTERS_PROMPT, "Tryck på tangentbordet för att välja de tecken du är intresserad av");
     }
 }

@@ -140,5 +140,9 @@ set(TARGET_MET, "Đã đạt mục tiêu");
                 set(EFFECTIVE_WPM_SHORT, "Hiệu quả");
 
                 set(WORD_SPACING_ADD, "Từ +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Cấp độ tùy chỉnh");
+        set(SELECT_CHARACTERS_PROMPT, "Nhấn vào bàn phím để chọn các ký tự bạn quan tâm");
     }
 }

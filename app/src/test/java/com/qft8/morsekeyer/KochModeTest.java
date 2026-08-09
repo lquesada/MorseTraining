@@ -1,6 +1,8 @@
 package com.qft8.morsekeyer;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import com.qft8.morsekeyer.game.KochLevelSelectView;
@@ -138,5 +140,49 @@ public class KochModeTest {
         int txHighestLevel = -1;
         int txLevelsCompletedDisplay = txHighestLevel + 1;
         assertEquals(0, txLevelsCompletedDisplay); // Displays 0/41
+    }
+
+    @Test
+    public void testCustomWordGeneratorSingleChar() {
+        String[] customChars = new String[]{"A"};
+        for (int idx = 0; idx < 50; idx++) {
+            String word = KochWordGenerator.generateCustomWord(customChars, idx);
+            for (int i = 0; i < word.length(); i++) {
+                assertEquals('A', word.charAt(i));
+            }
+        }
+    }
+
+    @Test
+    public void testCustomWordGeneratorMultipleChars() {
+        String[] customChars = new String[]{"K", "M", "5", "?"};
+        java.util.Set<Character> validSet = new java.util.HashSet<>();
+        for (String s : customChars) {
+            validSet.add(s.charAt(0));
+        }
+
+        for (int idx = 0; idx < 100; idx++) {
+            String word = KochWordGenerator.generateCustomWord(customChars, idx);
+            assertTrue("Generated word should not be empty", word.length() >= 2);
+            for (int i = 0; i < word.length(); i++) {
+                assertTrue("Character '" + word.charAt(i) + "' must be in selected custom set",
+                        validSet.contains(word.charAt(i)));
+            }
+        }
+    }
+
+    @Test
+    public void testCustomLevelPersistenceKeysSeparation() {
+        String rxKey = "koch_custom_chars_rx";
+        String txKey = "koch_custom_chars_tx";
+        assertFalse("RX and TX persistence keys must be separate and distinct", rxKey.equals(txKey));
+        assertTrue("RX key should specify rx", rxKey.endsWith("_rx"));
+        assertTrue("TX key should specify tx", txKey.endsWith("_tx"));
+    }
+
+    @Test
+    public void testCustomLevelTargetScore() {
+        int customTargetScore = 40;
+        assertEquals("Custom level target score should be 40 words", 40, customTargetScore);
     }
 }

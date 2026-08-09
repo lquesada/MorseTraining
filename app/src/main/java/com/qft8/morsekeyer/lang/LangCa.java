@@ -133,5 +133,9 @@ set(TARGET_MET, "Objectiu assolit");
                 set(EFFECTIVE_WPM_SHORT, "Efectiu");
 
                 set(WORD_SPACING_ADD, "Paraula +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Nivell personalitzat");
+        set(SELECT_CHARACTERS_PROMPT, "Toca el teclat per seleccionar els caràcters que t'interessen");
     }
 }

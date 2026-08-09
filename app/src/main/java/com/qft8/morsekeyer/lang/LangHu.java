@@ -140,5 +140,9 @@ set(TARGET_MET, "Cél elérve");
                 set(EFFECTIVE_WPM_SHORT, "Effektív");
 
                 set(WORD_SPACING_ADD, "Szó +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Egyéni szint");
+        set(SELECT_CHARACTERS_PROMPT, "Koppintson a billentyűzetre a kívánt karakterek kiválasztásához");
     }
 }

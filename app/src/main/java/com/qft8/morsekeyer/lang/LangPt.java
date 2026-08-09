@@ -140,5 +140,9 @@ set(TARGET_MET, "Alvo atingido");
                 set(EFFECTIVE_WPM_SHORT, "Efetivo");
 
                 set(WORD_SPACING_ADD, "Palavra +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Nível personalizado");
+        set(SELECT_CHARACTERS_PROMPT, "Toque no teclado para selecionar os caracteres que lhe interessam");
     }
 }

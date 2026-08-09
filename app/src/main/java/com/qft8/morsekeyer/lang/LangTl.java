@@ -140,5 +140,9 @@ set(TARGET_MET, "Naabot ang target");
                 set(EFFECTIVE_WPM_SHORT, "Epektibo");
 
                 set(WORD_SPACING_ADD, "Salita +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Custom na antas");
+        set(SELECT_CHARACTERS_PROMPT, "I-tap ang keyboard para piliin ang mga character na interesado ka");
     }
 }

@@ -140,5 +140,9 @@ set(TARGET_MET, "目標達到");
                 set(EFFECTIVE_WPM_SHORT, "有效");
 
                 set(WORD_SPACING_ADD, "單詞 +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "自訂級別");
+        set(SELECT_CHARACTERS_PROMPT, "點擊鍵盤以選擇您感興趣的字符");
     }
 }

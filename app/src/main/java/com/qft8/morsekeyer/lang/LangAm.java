@@ -140,5 +140,9 @@ set(TARGET_MET, "ዒላማ ተሳክቷል");
                 set(EFFECTIVE_WPM_SHORT, "ውጤታማ");
 
                 set(WORD_SPACING_ADD, "ቃል +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Custom level");
+        set(SELECT_CHARACTERS_PROMPT, "Tap the keyboard to select the characters you're interested in");
     }
 }

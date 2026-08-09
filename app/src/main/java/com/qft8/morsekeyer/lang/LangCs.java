@@ -133,5 +133,9 @@ set(TARGET_MET, "Cíl splněn");
                 set(EFFECTIVE_WPM_SHORT, "Efektivní");
 
                 set(WORD_SPACING_ADD, "Slovo +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Vlastní úroveň");
+        set(SELECT_CHARACTERS_PROMPT, "Klepnutím na klávesnici vyberte znaky, které vás zajímají");
     }
 }

@@ -140,5 +140,9 @@ set(TARGET_MET, "Target tercapai");
                 set(EFFECTIVE_WPM_SHORT, "Efektif");
 
                 set(WORD_SPACING_ADD, "Kata +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Level kustom");
+        set(SELECT_CHARACTERS_PROMPT, "Ketuk keyboard untuk memilih karakter yang Anda minati");
     }
 }

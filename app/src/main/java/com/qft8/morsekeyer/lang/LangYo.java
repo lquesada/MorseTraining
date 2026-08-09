@@ -133,5 +133,9 @@ set(TARGET_MET, "Àfojúsùn ti tẹ́lọrùn");
                 set(EFFECTIVE_WPM_SHORT, "Munadoko");
 
                 set(WORD_SPACING_ADD, "Ọrọ +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Ipele aṣa");
+        set(SELECT_CHARACTERS_PROMPT, "Tẹ keyboard lati yan awọn ohun kikọ ti o nifẹ si");
     }
 }

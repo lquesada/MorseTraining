@@ -133,5 +133,9 @@ set(TARGET_MET, "లక్ష్యం చేరుకుంది");
                 set(EFFECTIVE_WPM_SHORT, "ప్రభావవంతమైన");
 
                 set(WORD_SPACING_ADD, "पదం +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "కస్టమ్ స్థాయి");
+        set(SELECT_CHARACTERS_PROMPT, "మీకు ఆసక్తి ఉన్న అక్షరాలను ఎంచుకోవడానికి కీబోర్డ్‌ను నొక్కండి");
     }
 }

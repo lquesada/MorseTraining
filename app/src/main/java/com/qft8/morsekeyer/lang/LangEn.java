@@ -172,5 +172,9 @@ set(TARGET_MET, "TARGET MET");
                 set(EFFECTIVE_WPM_SHORT, "Effective");
 
                 set(WORD_SPACING_ADD, "Word +");
+
+                // Koch custom level
+                set(CUSTOM_LEVEL, "Custom level");
+                set(SELECT_CHARACTERS_PROMPT, "Tap the keyboard to select the characters you're interested in");
     }
 }

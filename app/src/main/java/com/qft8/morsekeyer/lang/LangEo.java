@@ -140,5 +140,9 @@ set(TARGET_MET, "Celo atingita");
                 set(EFFECTIVE_WPM_SHORT, "Efektiva");
 
                 set(WORD_SPACING_ADD, "Vorto +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Propra nivelo");
+        set(SELECT_CHARACTERS_PROMPT, "Tuŝu la klavaron por elekti la signojn, kiuj interesas vin");
     }
 }

@@ -140,5 +140,9 @@ set(TARGET_MET, "ہدف حاصل ہو گیا");
                 set(EFFECTIVE_WPM_SHORT, "موثر");
 
                 set(WORD_SPACING_ADD, "لفظ +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "حسب ضرورت سطح");
+        set(SELECT_CHARACTERS_PROMPT, "جن حروف میں آپ کی دلچسپی ہے انہیں منتخب کرنے کیلئے کی بورڈ کو ٹیپ کریں");
     }
 }

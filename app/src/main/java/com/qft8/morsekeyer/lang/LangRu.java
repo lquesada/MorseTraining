@@ -140,5 +140,9 @@ set(TARGET_MET, "Цель достигнута");
                 set(EFFECTIVE_WPM_SHORT, "Эффективная");
 
                 set(WORD_SPACING_ADD, "Слово +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Пользовательский уровень");
+        set(SELECT_CHARACTERS_PROMPT, "Нажмите на клавиатуру, чтобы выбрать интересующие вас символы");
     }
 }

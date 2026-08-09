@@ -133,5 +133,9 @@ set(TARGET_MET, "Helburua lortuta");
                 set(EFFECTIVE_WPM_SHORT, "Eraginkorra");
 
                 set(WORD_SPACING_ADD, "Hitz +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Maila pertsonalizatua");
+        set(SELECT_CHARACTERS_PROMPT, "Sakatu teklatua interesatzen zatzun karaktereak hautatzeko");
     }
 }

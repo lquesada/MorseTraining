@@ -140,5 +140,9 @@ set(TARGET_MET, "Tavoite saavutettu");
                 set(EFFECTIVE_WPM_SHORT, "Tehollinen");
 
                 set(WORD_SPACING_ADD, "Sana +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Mukautettu taso");
+        set(SELECT_CHARACTERS_PROMPT, "Napauta näppäimistöä valitaksesi kiinnostavat merkit");
     }
 }

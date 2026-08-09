@@ -133,5 +133,9 @@ set(TARGET_MET, "Target digayuh");
                 set(EFFECTIVE_WPM_SHORT, "Efektif");
 
                 set(WORD_SPACING_ADD, "Tembung +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Tingkat khusus");
+        set(SELECT_CHARACTERS_PROMPT, "Tutul keyboard kanggo milih karakter sing sampeyan kapengin");
     }
 }

@@ -140,5 +140,9 @@ set(TARGET_MET, "บรรลุเป้าหมาย");
                 set(EFFECTIVE_WPM_SHORT, "ผลจริง");
 
                 set(WORD_SPACING_ADD, "คำ +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "ระดับที่กำหนดเอง");
+        set(SELECT_CHARACTERS_PROMPT, "แตะแป้นพิมพ์เพื่อเลือกตัวอักษรที่คุณสนใจ");
     }
 }

@@ -133,5 +133,9 @@ set(TARGET_MET, "ലക്ഷ്യം നേടി");
                 set(EFFECTIVE_WPM_SHORT, "ഫലപ്രദമായ");
 
                 set(WORD_SPACING_ADD, "വാക്ക് +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "ഇഷ്ടാനുസൃത നില");
+        set(SELECT_CHARACTERS_PROMPT, "നിങ്ങൾക്ക് താൽപ്പര്യമുള്ള അക്ഷരങ്ങൾ തിരഞ്ഞെടുക്കാൻ കീബോർഡ് ടാപ്പ് ചെയ്യുക");
     }
 }

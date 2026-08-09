@@ -140,5 +140,9 @@ set(TARGET_MET, "تم تحقيق الهدف");
                 set(EFFECTIVE_WPM_SHORT, "الفعلية");
 
                 set(WORD_SPACING_ADD, "كلمة +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "مستوى مخصص");
+        set(SELECT_CHARACTERS_PROMPT, "انقر على لوحة المفاتيح لتحديد الأحرف التي تهتم بها");
     }
 }

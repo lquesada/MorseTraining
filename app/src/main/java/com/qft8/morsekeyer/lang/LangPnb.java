@@ -132,5 +132,9 @@ set(TARGET_MET, "ہدف حاصل ہو گیا");
                 set(EFFECTIVE_WPM_SHORT, "موثر");
 
                 set(WORD_SPACING_ADD, "ਸ਼ਬਦ +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "ਕਸਟਮ ਪੱਧਰ");
+        set(SELECT_CHARACTERS_PROMPT, "ਉਹ ਅੱਖਰ ਚੁਣਨ ਲਈ ਕੀਬੋਰਡ ਤੇ ਟੈਪ ਕਰੋ ਜਿਨ੍ਹਾਂ ਵਿੱਚ ਤੁਹਾਡੀ ਦਿਲਚਸਪੀ ਹੈ");
     }
 }

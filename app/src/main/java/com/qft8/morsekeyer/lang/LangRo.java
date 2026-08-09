@@ -140,5 +140,9 @@ set(TARGET_MET, "Țintă atinsă");
                 set(EFFECTIVE_WPM_SHORT, "Efectiv");
 
                 set(WORD_SPACING_ADD, "Cuvânt +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Nivel personalizat");
+        set(SELECT_CHARACTERS_PROMPT, "Atingeți tastatura pentru a selecta caracterele care vă interesează");
     }
 }

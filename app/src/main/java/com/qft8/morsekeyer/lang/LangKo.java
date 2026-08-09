@@ -140,5 +140,9 @@ set(TARGET_MET, "목표 달성");
                 set(EFFECTIVE_WPM_SHORT, "유효");
 
                 set(WORD_SPACING_ADD, "단어 +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "사용자 정의 레벨");
+        set(SELECT_CHARACTERS_PROMPT, "관심 있는 문자를 선택하려면 키보드를 탭하세요");
     }
 }

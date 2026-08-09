@@ -139,5 +139,9 @@ set(TARGET_MET, "Doel bereikt");
                 set(EFFECTIVE_WPM_SHORT, "Effectieve");
 
                 set(WORD_SPACING_ADD, "Woord +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Aangepast niveau");
+        set(SELECT_CHARACTERS_PROMPT, "Tik op het toetsenbord om de tekens te selecteren die je interesseren");
     }
 }

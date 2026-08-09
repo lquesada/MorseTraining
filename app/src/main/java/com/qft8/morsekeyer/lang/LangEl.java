@@ -139,5 +139,9 @@ set(TARGET_MET, "Ο στόχος επιτεύχθηκε");
                 set(EFFECTIVE_WPM_SHORT, "Πραγματικό");
 
                 set(WORD_SPACING_ADD, "Λέξη +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "Προσαρμοσμένο επίπεδο");
+        set(SELECT_CHARACTERS_PROMPT, "Πατήστε στο πληκτρολόγιο για να επιλέξετε τους χαρακτήρες που σας ενδιαφέρουν");
     }
 }

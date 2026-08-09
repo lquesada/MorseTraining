@@ -133,5 +133,9 @@ set(TARGET_MET, "લક્ષ્ય પ્રાપ્ત");
                 set(EFFECTIVE_WPM_SHORT, "અસરકારક");
 
                 set(WORD_SPACING_ADD, "શબ્દ +");
+
+        // Koch custom level
+        set(CUSTOM_LEVEL, "કસ્ટમ સ્તર");
+        set(SELECT_CHARACTERS_PROMPT, "જે અક્ષરો તમને ગમે છે તે પસંદ કરવા માટે કીબોર્ડ ટૅપ કરો");
     }
 }

@@ -2007,9 +2007,31 @@ public class GameController {
         }
     }
 
+    public static String normalizeTxGameDecoded(String text) {
+        if (text == null || text.isEmpty()) {
+            return "";
+        }
+        if ("<BT/=>".equals(text) || "<BT>".equals(text) || "BT".equals(text) || "<=>".equals(text)) {
+            return "=";
+        }
+        if ("<AR/+>".equals(text) || "<AR>".equals(text) || "AR".equals(text) || "<+>".equals(text)) {
+            return "+";
+        }
+        if ("<AS/&>".equals(text) || "<AS>".equals(text) || "AS".equals(text) || "<&>".equals(text)) {
+            return "&";
+        }
+        if ("<KN/(>".equals(text) || "<KN>".equals(text) || "KN".equals(text) || "<(>".equals(text)) {
+            return "(";
+        }
+        return text;
+    }
+
     public void onDecode(String text) {
         if (!gameActive)
             return;
+        if (!isRxMode) {
+            text = normalizeTxGameDecoded(text);
+        }
         if (isKochMode && !isRxMode) {
             String gCurrent = gameTextInput.getText().toString();
             if (gCurrent.endsWith("​_")) {

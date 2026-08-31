@@ -1,13 +1,13 @@
 #!/bin/bash
 echo "Building Project..."
-./gradlew assembleDebug
+bash ./gradlew assembleDebug
 if [ $? -ne 0 ]; then
     echo "ERROR: Build Failed! Aborting tests."
     exit 1
 fi
 
 echo "Running Unit Tests..."
-./gradlew test
+bash ./gradlew test
 if [ $? -ne 0 ]; then
     echo ""
     echo "========================================"

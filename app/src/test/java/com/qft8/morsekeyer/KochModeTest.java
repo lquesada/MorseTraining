@@ -185,4 +185,44 @@ public class KochModeTest {
         int customTargetScore = 40;
         assertEquals("Custom level target score should be 40 words", 40, customTargetScore);
     }
+
+    @Test
+    public void testNormalizeTxGameDecoded() {
+        // Equal symbol and BT collision
+        assertEquals("=", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("<BT/=>"));
+        assertEquals("=", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("<BT>"));
+        assertEquals("=", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("BT"));
+        assertEquals("=", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("<=>"));
+        assertEquals("=", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("="));
+
+        // Plus symbol and AR collision
+        assertEquals("+", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("<AR/+>"));
+        assertEquals("+", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("<AR>"));
+        assertEquals("+", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("AR"));
+        assertEquals("+", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("<+>"));
+        assertEquals("+", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("+"));
+
+        // Ampersand symbol and AS collision
+        assertEquals("&", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("<AS/&>"));
+        assertEquals("&", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("<AS>"));
+        assertEquals("&", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("AS"));
+        assertEquals("&", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("<&>"));
+        assertEquals("&", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("&"));
+
+        // Left parenthesis and KN collision
+        assertEquals("(", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("<KN/(>"));
+        assertEquals("(", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("<KN>"));
+        assertEquals("(", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("KN"));
+        assertEquals("(", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("<(>"));
+        assertEquals("(", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("("));
+
+        // Regular characters remain unchanged
+        assertEquals("K", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("K"));
+        assertEquals("M", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("M"));
+        assertEquals(".", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("."));
+        assertEquals("?", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("?"));
+        assertEquals("/", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded("/"));
+        assertEquals("", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded(null));
+        assertEquals("", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded(""));
+    }
 }

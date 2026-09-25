@@ -21,6 +21,23 @@ public class MorseSettings {
     public String toneType = "triangle";
     public String soundType = "tone";
     public String paddleType = "standard";
+
+    public boolean isIambic() {
+        return "iambic-a".equals(mode) || "iambic-b".equals(mode)
+                || "iambic-a-one-finger".equals(mode) || "iambic-b-one-finger".equals(mode);
+    }
+
+    public boolean isIambicA() {
+        return "iambic-a".equals(mode) || "iambic-a-one-finger".equals(mode);
+    }
+
+    public boolean isIambicB() {
+        return "iambic-b".equals(mode) || "iambic-b-one-finger".equals(mode);
+    }
+
+    public boolean isOneFinger() {
+        return "iambic-a-one-finger".equals(mode) || "iambic-b-one-finger".equals(mode);
+    }
     public int squeezeWidth = 15;
     public int wpm = 15;
     public int vol = 40;
@@ -99,6 +116,13 @@ public class MorseSettings {
         toneType = getStringSafe(prefs, "toneType", "triangle");
         soundType = getStringSafe(prefs, "soundType", "tone");
         paddleType = getStringSafe(prefs, "paddleType", "standard");
+        if ("iambic_one_finger".equals(paddleType)) {
+            if ("iambic-b".equals(mode)) {
+                mode = "iambic-b-one-finger";
+            } else if ("iambic-a".equals(mode)) {
+                mode = "iambic-a-one-finger";
+            }
+        }
         squeezeWidth = getIntSafe(prefs, "squeezeWidth", 15);
         if (squeezeWidth < 5) squeezeWidth = 5;
         if (squeezeWidth > 30) squeezeWidth = 30;
@@ -186,6 +210,7 @@ public class MorseSettings {
 
     public void save(Context ctx) {
         updateDerivedSpacingSettings();
+        paddleType = isOneFinger() ? "iambic_one_finger" : "standard";
         SharedPreferences prefs = ctx.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit()
             .putString("mode", mode)

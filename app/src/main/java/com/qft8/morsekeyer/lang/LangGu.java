@@ -54,6 +54,8 @@ public class LangGu extends MorseLanguage {
         set(MODE_STRAIGHT, "સીધી કી");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A એક આંગળી");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B એક આંગળી");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "બગ (અર્ધ-સ્વચાલિત)");
         set(MODE_COOTIE, "કુટી (Sideswiper)");

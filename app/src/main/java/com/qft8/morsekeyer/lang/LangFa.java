@@ -61,6 +61,8 @@ public class LangFa extends MorseLanguage {
         set(MODE_STRAIGHT, "کلید عمودی (Straight key)");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A تک‌انگشتی");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B تک‌انگشتی");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "باگ (نیمه خودکار)");
         set(MODE_COOTIE, "کوتی (Sideswiper)");

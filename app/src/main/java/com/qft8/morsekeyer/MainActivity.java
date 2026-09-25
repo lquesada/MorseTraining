@@ -77,8 +77,8 @@ public class MainActivity extends Activity {
     public com.qft8.morsekeyer.game.GameController gameController;
 
     // Settings dialog widget refs (created dynamically)
-    private Spinner dlgMode, dlgSound, dlgPaddleType;
-    private TextView dlgLblPaddleType, dlgLblSqueezeWidth, dlgTxtSqueezeWidth;
+    private Spinner dlgMode, dlgSound;
+    private TextView dlgLblSqueezeWidth, dlgTxtSqueezeWidth;
     private SeekBar dlgSeekSqueezeWidth;
     private LinearLayout squeezeWidthRow;
     private CheckBox dlgInverse, dlgStrict, dlgNoclick, dlgTable, dlgTableCodes, dlgVisual, dlgShowPaddles, dlgKeepAlive, dlgWhiteNoise, dlgNextWordIndicator, dlgKeepScreenOn, dlgChkPickLangThemeOnShare;
@@ -346,8 +346,8 @@ public class MainActivity extends Activity {
         boolean isStraight = "straight".equals(settings.mode);
         boolean isBug = "bug".equals(settings.mode);
         boolean isCootie = "cootie".equals(settings.mode);
-        boolean isIambic = "iambic-a".equals(settings.mode) || "iambic-b".equals(settings.mode);
-        boolean isOneFinger = "iambic_one_finger".equals(settings.paddleType) && isIambic;
+        boolean isIambic = settings.isIambic();
+        boolean isOneFinger = settings.isOneFinger();
 
         if (isStraight) {
             paddleRight.setVisibility(View.GONE);
@@ -418,12 +418,16 @@ public class MainActivity extends Activity {
             modeLabel = "Straight";
         else if ("iambic-a".equals(settings.mode))
             modeLabel = "Iambic A";
+        else if ("iambic-a-one-finger".equals(settings.mode))
+            modeLabel = "Iambic A one finger";
         else if ("ultimatic".equals(settings.mode))
             modeLabel = "Ultimatic";
         else if ("bug".equals(settings.mode))
             modeLabel = "Bug";
         else if ("cootie".equals(settings.mode))
             modeLabel = "Cootie";
+        else if ("iambic-b-one-finger".equals(settings.mode))
+            modeLabel = "Iambic B one finger";
         else
             modeLabel = "Iambic B";
     }
@@ -782,6 +786,92 @@ public class MainActivity extends Activity {
         return dark ? android.R.style.Theme_DeviceDefault_Dialog : android.R.style.Theme_DeviceDefault_Light_Dialog;
     }
 
+    private void setupDialogButtonTouch(Button btn, Runnable onClick) {
+        if (btn == null) return;
+        btn.setClickable(true);
+        btn.setFocusable(true);
+        btn.setMinHeight(dp(50));
+        btn.setMinimumHeight(dp(50));
+        btn.setPadding(dp(16), dp(12), dp(16), dp(12));
+
+        btn.setOnClickListener(v -> {
+            if (onClick != null) onClick.run();
+        });
+
+        final float maxSlop = dp(60);
+        final float slopX = dp(25);
+        final float slopY = dp(40);
+        final float[] downPos = new float[2];
+        final boolean[] isDown = new boolean[1];
+
+        btn.setOnTouchListener((v, event) -> {
+            int action = event.getActionMasked();
+            switch (action) {
+                case MotionEvent.ACTION_DOWN: {
+                    if (v.getParent() != null) {
+                        v.getParent().requestDisallowInterceptTouchEvent(true);
+                    }
+                    downPos[0] = event.getX();
+                    downPos[1] = event.getY();
+                    isDown[0] = true;
+                    v.setPressed(true);
+                    v.setAlpha(0.6f);
+                    return true;
+                }
+                case MotionEvent.ACTION_MOVE: {
+                    if (!isDown[0]) return false;
+                    if (v.getParent() != null) {
+                        v.getParent().requestDisallowInterceptTouchEvent(true);
+                    }
+                    float dx = event.getX() - downPos[0];
+                    float dy = event.getY() - downPos[1];
+                    float dist = (float) Math.hypot(dx, dy);
+
+                    boolean withinBounds = event.getX() >= -slopX &&
+                                           event.getX() <= v.getWidth() + slopX &&
+                                           event.getY() >= -slopY &&
+                                           event.getY() <= v.getHeight() + slopY;
+
+                    boolean stillValid = dist <= maxSlop || withinBounds;
+                    v.setPressed(stillValid);
+                    v.setAlpha(stillValid ? 0.6f : 1.0f);
+                    return true;
+                }
+                case MotionEvent.ACTION_UP: {
+                    if (!isDown[0]) return false;
+                    isDown[0] = false;
+                    v.setPressed(false);
+                    v.setAlpha(1.0f);
+
+                    float dx = event.getX() - downPos[0];
+                    float dy = event.getY() - downPos[1];
+                    float dist = (float) Math.hypot(dx, dy);
+
+                    boolean withinBounds = event.getX() >= -slopX &&
+                                           event.getX() <= v.getWidth() + slopX &&
+                                           event.getY() >= -slopY &&
+                                           event.getY() <= v.getHeight() + slopY;
+
+                    boolean shouldClick = dist <= maxSlop || withinBounds;
+                    if (shouldClick) {
+                        v.playSoundEffect(android.view.SoundEffectConstants.CLICK);
+                        if (onClick != null) {
+                            onClick.run();
+                        }
+                    }
+                    return true;
+                }
+                case MotionEvent.ACTION_CANCEL: {
+                    isDown[0] = false;
+                    v.setPressed(false);
+                    v.setAlpha(1.0f);
+                    return true;
+                }
+            }
+            return false;
+        });
+    }
+
     public void showSettingsDialog() {
         dialogCtx = new ContextThemeWrapper(this, getDialogTheme());
         LinearLayout root = new LinearLayout(dialogCtx);
@@ -798,6 +888,8 @@ public class MainActivity extends Activity {
             LanguageManager.get(MODE_STRAIGHT),
             LanguageManager.get(MODE_IAMBIC_A),
             LanguageManager.get(MODE_IAMBIC_B),
+            LanguageManager.get(MODE_IAMBIC_A_ONE_FINGER),
+            LanguageManager.get(MODE_IAMBIC_B_ONE_FINGER),
             LanguageManager.get(MODE_ULTIMATIC),
             LanguageManager.get(MODE_BUG),
             LanguageManager.get(MODE_COOTIE)
@@ -824,10 +916,13 @@ public class MainActivity extends Activity {
                     case 0: settings.mode = "straight"; break;
                     case 1: settings.mode = "iambic-a"; break;
                     case 2: settings.mode = "iambic-b"; break;
-                    case 3: settings.mode = "ultimatic"; break;
-                    case 4: settings.mode = "bug"; break;
-                    case 5: settings.mode = "cootie"; break;
+                    case 3: settings.mode = "iambic-a-one-finger"; break;
+                    case 4: settings.mode = "iambic-b-one-finger"; break;
+                    case 5: settings.mode = "ultimatic"; break;
+                    case 6: settings.mode = "bug"; break;
+                    case 7: settings.mode = "cootie"; break;
                 }
+                settings.paddleType = settings.isOneFinger() ? "iambic_one_finger" : "standard";
                 settings.save(MainActivity.this);
                 applyMode();
                 syncSettingsDialog();
@@ -843,37 +938,6 @@ public class MainActivity extends Activity {
             settings.save(this);
             syncSettingsDialog();
             applyOrientation();
-        });
-
-        dlgLblPaddleType = subLabel(PADDLES_TYPE);
-        root.addView(dlgLblPaddleType);
-        dlgPaddleType = new Spinner(dialogCtx);
-        dlgPaddleType.setTag("PADDLES_TYPE_SPINNER");
-        String[] paddleTypes = {
-            LanguageManager.get(PADDLES_STANDARD),
-            LanguageManager.get(PADDLES_IAMBIC_ONE_FINGER)
-        };
-        dlgPaddleType.setAdapter(themedAdapter(dialogCtx, paddleTypes));
-        applySpinnerStyle(dlgPaddleType);
-        dlgPaddleType.setLayoutParams(spLp);
-        root.addView(dlgPaddleType);
-
-        dlgPaddleType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (isSyncing) return;
-                keyer.handlePaddlePress("left", false);
-                keyer.handlePaddlePress("center", false);
-                keyer.handlePaddlePress("right", false);
-                updatePaddleVisual("left", false);
-                updatePaddleVisual("center", false);
-                updatePaddleVisual("right", false);
-                settings.paddleType = (position == 1) ? "iambic_one_finger" : "standard";
-                settings.save(MainActivity.this);
-                applyMode();
-                syncSettingsDialog();
-            }
-            @Override public void onNothingSelected(AdapterView<?> parent) {}
         });
 
         dlgLblSqueezeWidth = subLabel(SQUEEZE_BUTTON_WIDTH);
@@ -1787,6 +1851,12 @@ public class MainActivity extends Activity {
             btnSave.setTextColor(0xFF007ACC);
             float currentSizeSp = btnSave.getTextSize() / getResources().getDisplayMetrics().scaledDensity;
             btnSave.setTextSize(android.util.TypedValue.COMPLEX_UNIT_SP, currentSizeSp + 2);
+            setupDialogButtonTouch(btnSave, () -> {
+                settings.save(MainActivity.this);
+                if (settingsDialog != null) {
+                    settingsDialog.dismiss();
+                }
+            });
         }
 
         Button btnReset = settingsDialog.getButton(AlertDialog.BUTTON_NEUTRAL);
@@ -1796,7 +1866,7 @@ public class MainActivity extends Activity {
             btnReset.setTextColor(0xFFCC0000);
             float currentSizeSp = btnReset.getTextSize() / getResources().getDisplayMetrics().scaledDensity;
             btnReset.setTextSize(android.util.TypedValue.COMPLEX_UNIT_SP, currentSizeSp + 2);
-            btnReset.setOnClickListener(v -> {
+            setupDialogButtonTouch(btnReset, () -> {
                 settings.resetToDefaults();
                 settings.save(this);
                 LanguageManager.init(settings.language);
@@ -1859,21 +1929,14 @@ public class MainActivity extends Activity {
         if ("straight".equals(settings.mode)) pos = 0;
         else if ("iambic-a".equals(settings.mode)) pos = 1;
         else if ("iambic-b".equals(settings.mode)) pos = 2;
-        else if ("ultimatic".equals(settings.mode)) pos = 3;
-        else if ("bug".equals(settings.mode)) pos = 4;
-        else if ("cootie".equals(settings.mode)) pos = 5;
+        else if ("iambic-a-one-finger".equals(settings.mode)) pos = 3;
+        else if ("iambic-b-one-finger".equals(settings.mode)) pos = 4;
+        else if ("ultimatic".equals(settings.mode)) pos = 5;
+        else if ("bug".equals(settings.mode)) pos = 6;
+        else if ("cootie".equals(settings.mode)) pos = 7;
         dlgMode.setSelection(pos);
 
-        boolean isIambic = "iambic-a".equals(settings.mode) || "iambic-b".equals(settings.mode);
-        boolean isOneFinger = "iambic_one_finger".equals(settings.paddleType) && isIambic;
-        if (dlgPaddleType != null) {
-            int ptPos = "iambic_one_finger".equals(settings.paddleType) ? 1 : 0;
-            dlgPaddleType.setSelection(ptPos);
-            dlgPaddleType.setVisibility(isIambic ? View.VISIBLE : View.GONE);
-        }
-        if (dlgLblPaddleType != null) {
-            dlgLblPaddleType.setVisibility(isIambic ? View.VISIBLE : View.GONE);
-        }
+        boolean isOneFinger = settings.isOneFinger();
         if (dlgSeekSqueezeWidth != null) {
             dlgSeekSqueezeWidth.setProgress(settings.squeezeWidth - 5);
         }
@@ -2219,6 +2282,11 @@ public class MainActivity extends Activity {
             btnClose.setAllCaps(false);
             btnClose.setTypeface(null, Typeface.BOLD);
             btnClose.setTextColor(0xFF007ACC);
+            setupDialogButtonTouch(btnClose, () -> {
+                if (diagRef[0] != null) {
+                    diagRef[0].dismiss();
+                }
+            });
         }
         if (diag.getWindow() != null) {
             diag.getWindow().setBackgroundDrawable(new ColorDrawable(C_BG));
@@ -2232,8 +2300,7 @@ public class MainActivity extends Activity {
     // ============================================================
 
     private boolean isOneFinger() {
-        boolean isIambic = "iambic-a".equals(settings.mode) || "iambic-b".equals(settings.mode);
-        return "iambic_one_finger".equals(settings.paddleType) && isIambic;
+        return settings.isOneFinger();
     }
 
     private String resolvePaddleSide(View v, float localX, float localY) {
@@ -2321,25 +2388,23 @@ public class MainActivity extends Activity {
                 if (v != null && v.getParent() != null) {
                     v.getParent().requestDisallowInterceptTouchEvent(true);
                 }
-                if (isOneFinger()) {
-                    int pointerCount = event.getPointerCount();
-                    for (int i = 0; i < pointerCount; i++) {
-                        int id = event.getPointerId(i);
-                        String oldSide = touchMap.get(id);
-                        String newSide = resolvePaddleSide(v, event.getX(i), event.getY(i));
+                int pointerCount = event.getPointerCount();
+                for (int i = 0; i < pointerCount; i++) {
+                    int id = event.getPointerId(i);
+                    String oldSide = touchMap.get(id);
+                    String newSide = resolvePaddleSide(v, event.getX(i), event.getY(i));
 
-                        boolean changed = (oldSide == null && newSide != null) ||
-                                          (oldSide != null && !oldSide.equals(newSide));
-                        if (changed) {
-                            touchMap.put(id, newSide);
-                            if (oldSide != null && !touchMap.containsValue(oldSide)) {
-                                keyer.handlePaddlePress(oldSide, false);
-                                updatePaddleVisual(oldSide, false);
-                            }
-                            if (newSide != null) {
-                                keyer.handlePaddlePress(newSide, true);
-                                updatePaddleVisual(newSide, true);
-                            }
+                    boolean changed = (oldSide == null && newSide != null) ||
+                                      (oldSide != null && !oldSide.equals(newSide));
+                    if (changed) {
+                        touchMap.put(id, newSide);
+                        if (oldSide != null && !touchMap.containsValue(oldSide)) {
+                            keyer.handlePaddlePress(oldSide, false);
+                            updatePaddleVisual(oldSide, false);
+                        }
+                        if (newSide != null) {
+                            keyer.handlePaddlePress(newSide, true);
+                            updatePaddleVisual(newSide, true);
                         }
                     }
                 }
@@ -2953,6 +3018,8 @@ public class MainActivity extends Activity {
                 LanguageManager.get(MODE_STRAIGHT),
                 LanguageManager.get(MODE_IAMBIC_A),
                 LanguageManager.get(MODE_IAMBIC_B),
+                LanguageManager.get(MODE_IAMBIC_A_ONE_FINGER),
+                LanguageManager.get(MODE_IAMBIC_B_ONE_FINGER),
                 LanguageManager.get(MODE_ULTIMATIC),
                 LanguageManager.get(MODE_BUG),
                 LanguageManager.get(MODE_COOTIE)
@@ -2991,13 +3058,6 @@ public class MainActivity extends Activity {
             };
             s.setAdapter(themedAdapter(ctx, soundOptions));
             s.setSelection(pos);
-        } else if ("PADDLES_TYPE_SPINNER".equals(t)) {
-            String[] paddleOptions = {
-                LanguageManager.get(PADDLES_STANDARD),
-                LanguageManager.get(PADDLES_IAMBIC_ONE_FINGER)
-            };
-            s.setAdapter(themedAdapter(ctx, paddleOptions));
-            s.setSelection(pos);
         }
     }
 
@@ -3030,23 +3090,35 @@ public class MainActivity extends Activity {
             builder.setView(container);
 
             final float finalMax = currentMax;
-            builder.setPositiveButton("OK", (dialog, which) -> {
-                try {
-                    float val = Float.parseFloat(input.getText().toString());
-                    if (val >= min && val <= finalMax) {
-                        setter.set(val);
-                        settings.save(this);
-                        syncSettingsDialog();
-                    } else {
-                        Toast.makeText(this, "Value out of range", Toast.LENGTH_SHORT).show();
-                    }
-                } catch (Exception e) {}
-            });
+            builder.setPositiveButton("OK", null);
             builder.setNegativeButton("Cancel", null);
             AlertDialog d = builder.create();
             d.show();
             if (d.getWindow() != null) {
                 d.getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(C_BG));
+            }
+            Button btnOk = d.getButton(AlertDialog.BUTTON_POSITIVE);
+            if (btnOk != null) {
+                btnOk.setAllCaps(false);
+                btnOk.setTextColor(0xFF007ACC);
+                setupDialogButtonTouch(btnOk, () -> {
+                    try {
+                        float val = Float.parseFloat(input.getText().toString());
+                        if (val >= min && val <= finalMax) {
+                            setter.set(val);
+                            settings.save(this);
+                            syncSettingsDialog();
+                            d.dismiss();
+                        } else {
+                            Toast.makeText(this, "Value out of range", Toast.LENGTH_SHORT).show();
+                        }
+                    } catch (Exception e) {}
+                });
+            }
+            Button btnCancel = d.getButton(AlertDialog.BUTTON_NEGATIVE);
+            if (btnCancel != null) {
+                btnCancel.setAllCaps(false);
+                setupDialogButtonTouch(btnCancel, d::dismiss);
             }
         });
     }

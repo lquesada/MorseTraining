@@ -61,6 +61,8 @@ public class LangZh extends MorseLanguage {
         set(MODE_STRAIGHT, "直键");
         set(MODE_IAMBIC_A, "双桨 A");
         set(MODE_IAMBIC_B, "双桨 B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "双桨 A 单指");
+        set(MODE_IAMBIC_B_ONE_FINGER, "双桨 B 单指");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "快键 (Bug)");
         set(MODE_COOTIE, "双向键 (Cootie)");

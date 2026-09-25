@@ -61,6 +61,8 @@ public class LangYue extends MorseLanguage {
         set(MODE_STRAIGHT, "直鍵");
         set(MODE_IAMBIC_A, "雙槳 A");
         set(MODE_IAMBIC_B, "雙槳 B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "雙槳 A 單指");
+        set(MODE_IAMBIC_B_ONE_FINGER, "雙槳 B 單指");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "快鍵 (Bug)");
         set(MODE_COOTIE, "雙向鍵 (Cootie)");

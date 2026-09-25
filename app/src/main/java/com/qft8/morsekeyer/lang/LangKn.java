@@ -54,6 +54,8 @@ public class LangKn extends MorseLanguage {
         set(MODE_STRAIGHT, "ಸ್ಟ್ರೈಟ್ ಕೀ");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A ಒಂದು ಬೆರಳು");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B ಒಂದು ಬೆರಳು");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "ಬಗ್ (ಸೆಮಿ-ಆಟೋ)");
         set(MODE_COOTIE, "ಕೂಟಿ (Sideswiper)");

@@ -54,6 +54,8 @@ public class LangCa extends MorseLanguage {
         set(MODE_STRAIGHT, "Clau vertical");
         set(MODE_IAMBIC_A, "Iàmbic A");
         set(MODE_IAMBIC_B, "Iàmbic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iàmbic A un dit");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iàmbic B un dit");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "Bug (Semiautomàtic)");
         set(MODE_COOTIE, "Cootie / Sideswiper");

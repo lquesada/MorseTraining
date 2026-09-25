@@ -61,6 +61,8 @@ public class LangKo extends MorseLanguage {
         set(MODE_STRAIGHT, "수직 키");
         set(MODE_IAMBIC_A, "아이앰빅 A");
         set(MODE_IAMBIC_B, "아이앰빅 B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "아이앰빅 A 원핑거");
+        set(MODE_IAMBIC_B_ONE_FINGER, "아이앰빅 B 원핑거");
         set(MODE_ULTIMATIC, "얼티매틱");
         set(MODE_BUG, "버그 (반자동)");
         set(MODE_COOTIE, "쿠티 (Sideswiper)");

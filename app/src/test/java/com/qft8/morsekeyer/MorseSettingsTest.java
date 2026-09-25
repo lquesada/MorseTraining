@@ -246,4 +246,26 @@ public class MorseSettingsTest {
         assertEquals("standard", settings.paddleType);
         assertEquals(15, settings.squeezeWidth);
     }
+
+    @Test
+    public void testOneFingerModeHelpers() {
+        MorseSettings settings = new MorseSettings();
+        settings.mode = "iambic-a-one-finger";
+        assertTrue(settings.isOneFinger());
+        assertTrue(settings.isIambic());
+        assertTrue(settings.isIambicA());
+        assertFalse(settings.isIambicB());
+
+        settings.mode = "iambic-b-one-finger";
+        assertTrue(settings.isOneFinger());
+        assertTrue(settings.isIambic());
+        assertFalse(settings.isIambicA());
+        assertTrue(settings.isIambicB());
+
+        settings.mode = "iambic-a";
+        assertFalse(settings.isOneFinger());
+        assertTrue(settings.isIambic());
+        assertTrue(settings.isIambicA());
+        assertFalse(settings.isIambicB());
+    }
 }

@@ -54,6 +54,8 @@ public class LangTe extends MorseLanguage {
         set(MODE_STRAIGHT, "స్ట్రెయిట్ కీ");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A ఒక వేలు");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B ఒక వేలు");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "బగ్ (సెమీ-ఆటో)");
         set(MODE_COOTIE, "కూటీ (Sideswiper)");

@@ -54,6 +54,8 @@ public class LangTa extends MorseLanguage {
         set(MODE_STRAIGHT, "நேரடி விசை (Straight key)");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A ஒரு விரல்");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B ஒரு விரல்");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "பக் (அரை தானியங்கி)");
         set(MODE_COOTIE, "கூட்டி (Sideswiper)");

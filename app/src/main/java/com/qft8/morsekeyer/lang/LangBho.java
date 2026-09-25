@@ -54,6 +54,8 @@ public class LangBho extends MorseLanguage {
         set(MODE_STRAIGHT, "सीधी कुंजी");
         set(MODE_IAMBIC_A, "आयम्बिक A");
         set(MODE_IAMBIC_B, "आयम्बिक B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "आयम्बिक A एक उंगली");
+        set(MODE_IAMBIC_B_ONE_FINGER, "आयम्बिक B एक उंगली");
         set(MODE_ULTIMATIC, "अल्टीमेटिक");
         set(MODE_BUG, "बग (अर्ध-स्वचालित)");
         set(MODE_COOTIE, "कूटी (Sideswiper)");

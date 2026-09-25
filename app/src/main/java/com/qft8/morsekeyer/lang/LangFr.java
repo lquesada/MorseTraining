@@ -61,6 +61,8 @@ public class LangFr extends MorseLanguage {
         set(MODE_STRAIGHT, "Pioche (Vertical)");
         set(MODE_IAMBIC_A, "Iambique A");
         set(MODE_IAMBIC_B, "Iambique B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambique A un doigt");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambique B un doigt");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "Bug (Semi-automatique)");
         set(MODE_COOTIE, "Cootie / Sideswiper");

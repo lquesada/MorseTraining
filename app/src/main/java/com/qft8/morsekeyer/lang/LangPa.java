@@ -54,6 +54,8 @@ public class LangPa extends MorseLanguage {
         set(MODE_STRAIGHT, "ਸਿੱਧੀ ਕੀ");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A ਇੱਕ ਉਂਗਲ");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B ਇੱਕ ਉਂਗਲ");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "ਬੱਗ (ਅਰਧ-ਸਵੈਚਾਲਿਤ)");
         set(MODE_COOTIE, "ਕੂਟੀ (Sideswiper)");

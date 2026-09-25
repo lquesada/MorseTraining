@@ -61,6 +61,8 @@ public class LangTh extends MorseLanguage {
         set(MODE_STRAIGHT, "คันเคาะแนวตั้ง");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A นิ้วเดียว");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B นิ้วเดียว");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "Bug (กึ่งอัตโนมัติ)");
         set(MODE_COOTIE, "Cootie / Sideswiper");

@@ -61,6 +61,8 @@ public class LangAm extends MorseLanguage {
         set(MODE_STRAIGHT, "ቀጥተኛ ቁልፍ");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A አንድ ጣት");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B አንድ ጣት");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "Bug (ግማሽ-አውቶማቲክ)");
         set(MODE_COOTIE, "Cootie / Sideswiper");

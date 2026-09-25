@@ -61,6 +61,8 @@ public class LangUk extends MorseLanguage {
         set(MODE_STRAIGHT, "Вертикальний");
         set(MODE_IAMBIC_A, "Ямбічний A");
         set(MODE_IAMBIC_B, "Ямбічний B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Ямбічний A один палець");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Ямбічний B один палець");
         set(MODE_ULTIMATIC, "Ультиматик");
         set(MODE_BUG, "Віброплекс (Bug)");
         set(MODE_COOTIE, "Куті (Sideswiper)");

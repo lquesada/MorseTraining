@@ -61,6 +61,8 @@ public class LangPt extends MorseLanguage {
         set(MODE_STRAIGHT, "Chave vertical");
         set(MODE_IAMBIC_A, "Iâmbico A");
         set(MODE_IAMBIC_B, "Iâmbico B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iâmbico A um dedo");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iâmbico B um dedo");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "Bug (Semiautomático)");
         set(MODE_COOTIE, "Cootie / Sideswiper");

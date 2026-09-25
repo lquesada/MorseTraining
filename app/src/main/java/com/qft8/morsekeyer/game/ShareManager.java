@@ -688,6 +688,8 @@ public class ShareManager {
         if ("straight".equals(keyerType)) translatedKeyerType = LanguageManager.get(MorseLanguage.MODE_STRAIGHT);
         else if ("iambic-a".equals(keyerType)) translatedKeyerType = LanguageManager.get(MorseLanguage.MODE_IAMBIC_A);
         else if ("iambic-b".equals(keyerType)) translatedKeyerType = LanguageManager.get(MorseLanguage.MODE_IAMBIC_B);
+        else if ("iambic-a-one-finger".equals(keyerType)) translatedKeyerType = LanguageManager.get(MorseLanguage.MODE_IAMBIC_A_ONE_FINGER);
+        else if ("iambic-b-one-finger".equals(keyerType)) translatedKeyerType = LanguageManager.get(MorseLanguage.MODE_IAMBIC_B_ONE_FINGER);
         else if ("ultimatic".equals(keyerType)) translatedKeyerType = LanguageManager.get(MorseLanguage.MODE_ULTIMATIC);
         else if ("bug".equals(keyerType)) translatedKeyerType = LanguageManager.get(MorseLanguage.MODE_BUG);
         else if ("cootie".equals(keyerType)) translatedKeyerType = LanguageManager.get(MorseLanguage.MODE_COOTIE);

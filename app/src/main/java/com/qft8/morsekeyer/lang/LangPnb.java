@@ -54,6 +54,8 @@ public class LangPnb extends MorseLanguage {
         set(MODE_STRAIGHT, "سدھی کی");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A اک انگلی");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B اک انگلی");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "بگ (نیم خودکار)");
         set(MODE_COOTIE, "کوٹی (Sideswiper)");

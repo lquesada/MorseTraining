@@ -61,6 +61,8 @@ public class LangVi extends MorseLanguage {
         set(MODE_STRAIGHT, "Phím dọc");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A một ngón");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B một ngón");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "Bug (Bán tự động)");
         set(MODE_COOTIE, "Cootie / Sideswiper");

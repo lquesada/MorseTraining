@@ -130,15 +130,32 @@ public class MorseAllModesTest {
 
     @Test
     public void testOneFingerGatedOnlyToIambicAAndB() {
-        String[] allModes = {"straight", "iambic-a", "iambic-b", "ultimatic", "bug", "cootie"};
+        String[] allModes = {"straight", "iambic-a", "iambic-b", "iambic-a-one-finger", "iambic-b-one-finger", "ultimatic", "bug", "cootie"};
+        MorseSettings settings = new MorseSettings();
         for (String mode : allModes) {
-            boolean isIambic = "iambic-a".equals(mode) || "iambic-b".equals(mode);
-            boolean isOneFinger = "iambic_one_finger".equals("iambic_one_finger") && isIambic;
-            if ("iambic-a".equals(mode) || "iambic-b".equals(mode)) {
-                assertTrue("One-finger should be active in " + mode, isOneFinger);
+            settings.mode = mode;
+            if ("iambic-a-one-finger".equals(mode) || "iambic-b-one-finger".equals(mode)) {
+                assertTrue("One-finger should be active in " + mode, settings.isOneFinger());
+                assertTrue("Mode should be recognized as iambic in " + mode, settings.isIambic());
             } else {
-                assertFalse("One-finger must NOT be active in " + mode, isOneFinger);
+                assertFalse("One-finger must NOT be active in " + mode, settings.isOneFinger());
             }
         }
+    }
+
+    @Test
+    public void testIambicOneFingerModesKeyerLogic() {
+        MorseSettings settings = new MorseSettings();
+        settings.mode = "iambic-a-one-finger";
+        assertTrue(settings.isIambic());
+        assertTrue(settings.isIambicA());
+        assertFalse(settings.isIambicB());
+        assertTrue(settings.isOneFinger());
+
+        settings.mode = "iambic-b-one-finger";
+        assertTrue(settings.isIambic());
+        assertFalse(settings.isIambicA());
+        assertTrue(settings.isIambicB());
+        assertTrue(settings.isOneFinger());
     }
 }

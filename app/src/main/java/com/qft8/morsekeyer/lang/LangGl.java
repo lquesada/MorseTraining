@@ -54,6 +54,8 @@ public class LangGl extends MorseLanguage {
         set(MODE_STRAIGHT, "Chave vertical");
         set(MODE_IAMBIC_A, "Iámbico A");
         set(MODE_IAMBIC_B, "Iámbico B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iámbico A un dedo");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iámbico B un dedo");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "Bug (Semiautomático)");
         set(MODE_COOTIE, "Cootie / Sideswiper");

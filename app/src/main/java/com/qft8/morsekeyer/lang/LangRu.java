@@ -61,6 +61,8 @@ public class LangRu extends MorseLanguage {
         set(MODE_STRAIGHT, "Вертикальный");
         set(MODE_IAMBIC_A, "Ямбический A");
         set(MODE_IAMBIC_B, "Ямбический B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Ямбический A один палец");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Ямбический B один палец");
         set(MODE_ULTIMATIC, "Ультиматик");
         set(MODE_BUG, "Виброплекс (Bug)");
         set(MODE_COOTIE, "Кути (Sideswiper)");

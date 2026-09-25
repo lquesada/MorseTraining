@@ -72,6 +72,8 @@ public class LangEl extends MorseLanguage {
         set(MODE_STRAIGHT, "Ευθύ (Straight)");
         set(MODE_IAMBIC_A, "Ιαμβικό A");
         set(MODE_IAMBIC_B, "Ιαμβικό B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Ιαμβικό A ένα δάχτυλο");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Ιαμβικό B ένα δάχτυλο");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "Bug");
         set(MODE_COOTIE, "Cootie");

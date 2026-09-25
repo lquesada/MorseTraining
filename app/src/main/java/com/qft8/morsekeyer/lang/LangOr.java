@@ -54,6 +54,8 @@ public class LangOr extends MorseLanguage {
         set(MODE_STRAIGHT, "ଷ୍ଟ୍ରେଟ୍ କି");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A ଏକ ଆଙ୍ଗୁଠି");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B ଏକ ଆଙ୍ଗୁଠି");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "ବଗ୍ (ଅର୍ଦ୍ଧ-ସ୍ୱୟଂଚାଳିତ)");
         set(MODE_COOTIE, "କୁଟି (Sideswiper)");

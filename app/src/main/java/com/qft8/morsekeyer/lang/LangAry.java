@@ -54,6 +54,8 @@ public class LangAry extends MorseLanguage {
         set(MODE_STRAIGHT, "ساروت عادي");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A بصبع واحد");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B بصبع واحد");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "باج (نص أوتوماتيك)");
         set(MODE_COOTIE, "كوتي (Sideswiper)");

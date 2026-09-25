@@ -72,6 +72,8 @@ public class LangHe extends MorseLanguage {
         set(MODE_STRAIGHT, "ישיר (Straight)");
         set(MODE_IAMBIC_A, "יאמבי A");
         set(MODE_IAMBIC_B, "יאמבי B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "יאמבי A אצבע אחת");
+        set(MODE_IAMBIC_B_ONE_FINGER, "יאמבי B אצבע אחת");
         set(MODE_ULTIMATIC, "אולטימטיבי (Ultimatic)");
         set(MODE_BUG, "באג");
         set(MODE_COOTIE, "קוטי (Cootie)");

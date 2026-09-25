@@ -61,6 +61,8 @@ public class LangAr extends MorseLanguage {
         set(MODE_STRAIGHT, "مفتاح رأسي");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A بإصبع واحد");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B بإصبع واحد");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "Bug (نصف آلي)");
         set(MODE_COOTIE, "Cootie / Sideswiper");

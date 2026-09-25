@@ -61,6 +61,8 @@ public class LangHu extends MorseLanguage {
         set(MODE_STRAIGHT, "Függőleges billentyű");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A egy ujj");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B egy ujj");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "Bug (Félautomata)");
         set(MODE_COOTIE, "Cootie / Sideswiper");

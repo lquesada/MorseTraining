@@ -54,6 +54,8 @@ public class LangAz extends MorseLanguage {
         set(MODE_STRAIGHT, "Vertikal açar");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A bir barmaq");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B bir barmaq");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "Bug (Yarım avtomatik)");
         set(MODE_COOTIE, "Cootie / Sideswiper");

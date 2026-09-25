@@ -54,6 +54,8 @@ public class LangMy extends MorseLanguage {
         set(MODE_STRAIGHT, "ဒေါင်လိုက်ခလုတ်");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A လက်တစ်ချောင်း");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B လက်တစ်ချောင်း");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "ဘတ်ဂ် (တစ်ပိုင်းအလိုအလျောက်)");
         set(MODE_COOTIE, "ကူတီး (Sideswiper)");

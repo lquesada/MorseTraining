@@ -100,6 +100,8 @@ public abstract class MorseLanguage {
     public static final String MODE_STRAIGHT = "MODE_STRAIGHT";
     public static final String MODE_IAMBIC_A = "MODE_IAMBIC_A";
     public static final String MODE_IAMBIC_B = "MODE_IAMBIC_B";
+    public static final String MODE_IAMBIC_A_ONE_FINGER = "MODE_IAMBIC_A_ONE_FINGER";
+    public static final String MODE_IAMBIC_B_ONE_FINGER = "MODE_IAMBIC_B_ONE_FINGER";
     public static final String MODE_ULTIMATIC = "MODE_ULTIMATIC";
     public static final String MODE_BUG = "MODE_BUG";
     public static final String MODE_COOTIE = "MODE_COOTIE";

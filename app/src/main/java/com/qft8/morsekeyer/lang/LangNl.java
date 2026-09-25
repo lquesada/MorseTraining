@@ -72,6 +72,8 @@ public class LangNl extends MorseLanguage {
         set(MODE_STRAIGHT, "Recht (Straight)");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A één vinger");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B één vinger");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "Bug");
         set(MODE_COOTIE, "Cootie");

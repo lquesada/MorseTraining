@@ -61,6 +61,8 @@ public class LangHa extends MorseLanguage {
         set(MODE_STRAIGHT, "Maballin tsaye");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A yatsa ɗaya");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B yatsa ɗaya");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "Bug (Semi-auto)");
         set(MODE_COOTIE, "Cootie / Sideswiper");

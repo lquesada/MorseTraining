@@ -72,6 +72,8 @@ public class LangSk extends MorseLanguage {
         set(MODE_STRAIGHT, "Rovný (Straight)");
         set(MODE_IAMBIC_A, "Jambický A");
         set(MODE_IAMBIC_B, "Jambický B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Jambický A jedným prstom");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Jambický B jedným prstom");
         set(MODE_ULTIMATIC, "Ultimatický (Ultimatic)");
         set(MODE_BUG, "Bug");
         set(MODE_COOTIE, "Cootie");

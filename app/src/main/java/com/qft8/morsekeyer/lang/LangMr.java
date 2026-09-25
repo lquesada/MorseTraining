@@ -61,6 +61,8 @@ public class LangMr extends MorseLanguage {
         set(MODE_STRAIGHT, "सरळ की (Vertical)");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A एक बोट");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B एक बोट");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "बग (अर्ध-स्वयंचलित)");
         set(MODE_COOTIE, "कूटी (Sideswiper)");

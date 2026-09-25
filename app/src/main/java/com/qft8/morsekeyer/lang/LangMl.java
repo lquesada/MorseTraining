@@ -54,6 +54,8 @@ public class LangMl extends MorseLanguage {
         set(MODE_STRAIGHT, "സ്ട്രൈറ്റ് കീ");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A ഒരു വിരൽ");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B ഒരു വിരൽ");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "ബഗ് (സെമി-ഓട്ടോ)");
         set(MODE_COOTIE, "കൂട്ടി (Sideswiper)");

@@ -72,6 +72,8 @@ public class LangDa extends MorseLanguage {
         set(MODE_STRAIGHT, "Lige (Straight)");
         set(MODE_IAMBIC_A, "Jambisk A");
         set(MODE_IAMBIC_B, "Jambisk B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Jambisk A én finger");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Jambisk B én finger");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "Bug");
         set(MODE_COOTIE, "Cootie");

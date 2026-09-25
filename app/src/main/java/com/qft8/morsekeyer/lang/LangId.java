@@ -61,6 +61,8 @@ public class LangId extends MorseLanguage {
         set(MODE_STRAIGHT, "Kunci lurus");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A satu jari");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B satu jari");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "Bug (Semi-otomatis)");
         set(MODE_COOTIE, "Cootie / Sideswiper");

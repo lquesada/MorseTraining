@@ -61,6 +61,8 @@ public class LangJa extends MorseLanguage {
         set(MODE_STRAIGHT, "縦振り");
         set(MODE_IAMBIC_A, "アイアンビック A");
         set(MODE_IAMBIC_B, "アイアンビック B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "アイアンビック A 1本指");
+        set(MODE_IAMBIC_B_ONE_FINGER, "アイアンビック B 1本指");
         set(MODE_ULTIMATIC, "アルティマチック");
         set(MODE_BUG, "バグキー");
         set(MODE_COOTIE, "クーティー（複式）");

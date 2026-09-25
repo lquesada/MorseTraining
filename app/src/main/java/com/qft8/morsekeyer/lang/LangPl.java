@@ -61,6 +61,8 @@ public class LangPl extends MorseLanguage {
         set(MODE_STRAIGHT, "Klucz pionowy");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A jeden palec");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B jeden palec");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "Bug (Półautomatyczny)");
         set(MODE_COOTIE, "Cootie / Sideswiper");

@@ -61,6 +61,8 @@ public class LangRo extends MorseLanguage {
         set(MODE_STRAIGHT, "Cheie verticală");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A un deget");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B un deget");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "Bug (Semi-automat)");
         set(MODE_COOTIE, "Cootie / Sideswiper");

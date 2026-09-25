@@ -54,6 +54,8 @@ public class LangUz extends MorseLanguage {
         set(MODE_STRAIGHT, "Vertikal kalit");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A bir barmoq");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B bir barmoq");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "Bug (Yarim avtomatik)");
         set(MODE_COOTIE, "Cootie / Sideswiper");

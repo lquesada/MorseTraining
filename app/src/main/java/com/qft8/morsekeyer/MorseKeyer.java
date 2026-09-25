@@ -399,7 +399,7 @@ public class MorseKeyer {
         boolean dahHeld = state.dahCurrentlyPressed;
         boolean squeezeHeld = (ditHeld && dahHeld) || state.centerCurrentlyPressed;
 
-        boolean squeezeActive = squeezeHeld || ("iambic-b".equals(settings.mode) && state.squeezePressedDuringElement);
+        boolean squeezeActive = squeezeHeld || (settings.isIambicB() && state.squeezePressedDuringElement);
 
         boolean ditMemory = state.ditPressedDuringElement;
         boolean dahMemory = state.dahPressedDuringElement;
@@ -439,7 +439,7 @@ public class MorseKeyer {
         state.lastElement = elementToSend;
 
         // Reset memory — must match reference exactly per mode
-        if ("iambic-a".equals(settings.mode)) {
+        if (settings.isIambicA()) {
             state.ditPressedDuringElement = false;
             state.dahPressedDuringElement = false;
         } else {

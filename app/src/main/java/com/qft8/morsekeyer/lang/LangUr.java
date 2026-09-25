@@ -61,6 +61,8 @@ public class LangUr extends MorseLanguage {
         set(MODE_STRAIGHT, "سیدھی کلید");
         set(MODE_IAMBIC_A, "Iambic A");
         set(MODE_IAMBIC_B, "Iambic B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "Iambic A ایک انگلی");
+        set(MODE_IAMBIC_B_ONE_FINGER, "Iambic B ایک انگلی");
         set(MODE_ULTIMATIC, "Ultimatic");
         set(MODE_BUG, "بگ (نیم خودکار)");
         set(MODE_COOTIE, "کوٹی (Sideswiper)");

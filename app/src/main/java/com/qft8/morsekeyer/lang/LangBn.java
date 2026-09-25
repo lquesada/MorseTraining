@@ -61,6 +61,8 @@ public class LangBn extends MorseLanguage {
         set(MODE_STRAIGHT, "স্ট্রেইট কী");
         set(MODE_IAMBIC_A, "আয়াম্বিক A");
         set(MODE_IAMBIC_B, "আয়াম্বিক B");
+        set(MODE_IAMBIC_A_ONE_FINGER, "আয়াম্বিক A এক আঙুল");
+        set(MODE_IAMBIC_B_ONE_FINGER, "আয়াম্বিক B এক আঙুল");
         set(MODE_ULTIMATIC, "আল্টিমেটিক");
         set(MODE_BUG, "বাগ (আধা-স্বয়ংক্রিয়)");
         set(MODE_COOTIE, "কুটি (Sideswiper)");

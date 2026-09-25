@@ -24,7 +24,7 @@ public class KochLevelSelectView extends FrameLayout {
     };
 
     private static final int COLS = 4;
-    private final int totalLevels = 41;
+    private final int totalLevels = 42;
     private String titleText;
     private String resetPrefKey = "koch_highest_completed_level_v2";
     private int highestCompletedLevel;
@@ -206,9 +206,72 @@ public class KochLevelSelectView extends FrameLayout {
             rowLayout.setOrientation(LinearLayout.HORIZONTAL);
             rowLayout.setGravity(Gravity.CENTER);
 
+            if (row == 10) {
+                // Row 10: Col 0 is Level 40 ("40: X"), Cols 1-3 is Level 41 ("41: Prosigns")
+                int level40 = 40;
+                String char40 = KOCH_CHARS[level40];
+
+                TextView btn40 = new TextView(getContext());
+                btn40.setText(level40 + ": " + char40);
+                btn40.setTypeface(mono, Typeface.BOLD);
+                btn40.setGravity(Gravity.CENTER);
+                btn40.setTextSize(TypedValue.COMPLEX_UNIT_PX, buttonSize * 0.22f);
+
+                GradientDrawable bg40 = new GradientDrawable();
+                bg40.setShape(GradientDrawable.OVAL);
+
+                if (level40 <= highestCompletedLevel) {
+                    bg40.setColor(isDarkTheme ? 0xFF008800 : 0xFF00AA00);
+                    btn40.setTextColor(0xFFFFFFFF);
+                } else {
+                    bg40.setColor(isDarkTheme ? 0xFF444444 : 0xFFDDDDDD);
+                    btn40.setTextColor(cText);
+                }
+
+                btn40.setOnClickListener(v -> onLevelClick.accept(level40));
+                btn40.setBackground(bg40);
+
+                LinearLayout.LayoutParams btnParams40 = new LinearLayout.LayoutParams(
+                        buttonSize, buttonSize);
+                btnParams40.setMargins(buttonMargin, buttonMargin, buttonMargin, buttonMargin);
+                rowLayout.addView(btn40, btnParams40);
+
+                // Level 41 (3 buttons wide)
+                int level41 = 41;
+                TextView btn41 = new TextView(getContext());
+                btn41.setText("41: " + LanguageManager.get(MorseLanguage.PROSIGNS));
+                btn41.setTypeface(mono, Typeface.BOLD);
+                btn41.setGravity(Gravity.CENTER);
+                btn41.setTextSize(TypedValue.COMPLEX_UNIT_PX, buttonSize * 0.22f);
+
+                GradientDrawable bg41 = new GradientDrawable();
+                bg41.setShape(GradientDrawable.RECTANGLE);
+                bg41.setCornerRadius(buttonSize / 2f);
+
+                if (level41 <= highestCompletedLevel) {
+                    bg41.setColor(isDarkTheme ? 0xFF008800 : 0xFF00AA00);
+                    btn41.setTextColor(0xFFFFFFFF);
+                } else {
+                    bg41.setColor(isDarkTheme ? 0xFF444444 : 0xFFDDDDDD);
+                    btn41.setTextColor(cText);
+                }
+
+                btn41.setOnClickListener(v -> onLevelClick.accept(level41));
+                btn41.setBackground(bg41);
+
+                int width41 = buttonSize * 3 + buttonMargin * 4;
+                LinearLayout.LayoutParams btnParams41 = new LinearLayout.LayoutParams(
+                        width41, buttonSize);
+                btnParams41.setMargins(buttonMargin, buttonMargin, buttonMargin, buttonMargin);
+                rowLayout.addView(btn41, btnParams41);
+
+                gridContainer.addView(rowLayout);
+                continue;
+            }
+
             for (int col = 0; col < COLS; col++) {
                 int level = row * COLS + col;
-                if (level >= totalLevels) break;
+                if (level >= 40) break;
 
                 String newChar = KOCH_CHARS[level];
 

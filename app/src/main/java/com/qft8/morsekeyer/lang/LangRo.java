@@ -144,5 +144,21 @@ set(TARGET_MET, "Țintă atinsă");
         // Koch custom level
         set(CUSTOM_LEVEL, "Nivel personalizat");
         set(SELECT_CHARACTERS_PROMPT, "Atingeți tastatura pentru a selecta caracterele care vă interesează");
+
+        // Audio & Sound
+        set(AUDIO, "Audio");
+        set(SOUND, "Sunet");
+        set(CLICKS, "Clicuri");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Logică manipulator");
+        set(SCREEN_PADDLES, "Padele pe ecran");
+        set(PADDLES_TYPE, "Tip padele");
+        set(PADDLES_STANDARD, "Standard");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Iambic un deget");
+        set(SQUEEZE_BUTTON_WIDTH, "Lățimea butonului squeeze");
+
+        // Prosigns level
+        set(PROSIGNS, "semnale procedurale");
     }
 }

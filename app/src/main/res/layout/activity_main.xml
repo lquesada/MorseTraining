@@ -194,6 +194,27 @@
                 android:background="#FF666666" />
 
             <TextView
+                android:id="@+id/paddle_center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#FF4C4C4C"
+                android:gravity="center"
+                android:text="\u00B7 \u2013"
+                android:textSize="42sp"
+                android:textColor="#FFFFFFFF"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <!-- Divider between center and right -->
+            <View
+                android:id="@+id/paddle_divider_right"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#FF666666"
+                android:visibility="gone" />
+
+            <TextView
                 android:id="@+id/paddle_right"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -488,6 +509,27 @@
                 android:layout_width="2dp"
                 android:layout_height="match_parent"
                 android:background="#FF666666" />
+
+            <TextView
+                android:id="@+id/game_menu_paddle_center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#FF4C4C4C"
+                android:gravity="center"
+                android:text="\u00B7 \u2013"
+                android:textSize="42sp"
+                android:textColor="#FFFFFFFF"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <!-- Divider between center and right -->
+            <View
+                android:id="@+id/game_menu_paddle_divider_right"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#FF666666"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/game_menu_paddle_right"
@@ -985,6 +1027,27 @@
                 android:layout_width="2dp"
                 android:layout_height="match_parent"
                 android:background="#FF666666" />
+
+            <TextView
+                android:id="@+id/game_paddle_center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#FF4C4C4C"
+                android:gravity="center"
+                android:text="\u00B7 \u2013"
+                android:textSize="42sp"
+                android:textColor="#FFFFFFFF"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <!-- Divider between center and right -->
+            <View
+                android:id="@+id/game_paddle_divider_right"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#FF666666"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/game_paddle_right"

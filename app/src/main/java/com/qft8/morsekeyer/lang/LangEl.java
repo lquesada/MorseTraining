@@ -105,6 +105,7 @@ public class LangEl extends MorseLanguage {
         set(SCORE, "Σκορ");
         set(MATCH_COMPLETED, "Ολοκληρώθηκε ο αγώνας");
         set(HIGH_SCORE, "Υψηλή βαθμολογία");
+        set(YOUR_HIGH_SCORE_IS, "Η υψηλότερη βαθμολογία σου είναι");
 
                 
 
@@ -143,5 +144,21 @@ set(TARGET_MET, "Ο στόχος επιτεύχθηκε");
         // Koch custom level
         set(CUSTOM_LEVEL, "Προσαρμοσμένο επίπεδο");
         set(SELECT_CHARACTERS_PROMPT, "Πατήστε στο πληκτρολόγιο για να επιλέξετε τους χαρακτήρες που σας ενδιαφέρουν");
+
+        // Audio & Sound
+        set(AUDIO, "Ήχος");
+        set(SOUND, "Είδος ήχου");
+        set(CLICKS, "Κλικ");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Λογική κλειδιού");
+        set(SCREEN_PADDLES, "Χειριστήρια οθόνης");
+        set(PADDLES_TYPE, "Τύπος χειριστηρίου");
+        set(PADDLES_STANDARD, "Τυπικό");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Ιαμβικό ένα δάχτυλο");
+        set(SQUEEZE_BUTTON_WIDTH, "Πλάτος κουμπιού squeeze");
+
+        // Prosigns level
+        set(PROSIGNS, "σήματα διαδικασίας");
     }
 }

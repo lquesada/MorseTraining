@@ -52,8 +52,10 @@ import static com.qft8.morsekeyer.lang.MorseLanguage.*;
 import android.app.Activity;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class MainActivity extends Activity {
 
@@ -68,14 +70,17 @@ public class MainActivity extends Activity {
     private TextView txtOutput;
     private ScrollView scrollOutput, scrollTable;
     private LinearLayout middleLayout, tableContent, paddleContainer;
-    private TextView paddleLeft, paddleRight;
-    private View paddleDivider;
+    private TextView paddleLeft, paddleCenter, paddleRight;
+    private View paddleDivider, paddleDividerRight;
 
     // Game Controller
     public com.qft8.morsekeyer.game.GameController gameController;
 
     // Settings dialog widget refs (created dynamically)
-    private Spinner dlgMode;
+    private Spinner dlgMode, dlgSound, dlgPaddleType;
+    private TextView dlgLblPaddleType, dlgLblSqueezeWidth, dlgTxtSqueezeWidth;
+    private SeekBar dlgSeekSqueezeWidth;
+    private LinearLayout squeezeWidthRow;
     private CheckBox dlgInverse, dlgStrict, dlgNoclick, dlgTable, dlgTableCodes, dlgVisual, dlgShowPaddles, dlgKeepAlive, dlgWhiteNoise, dlgNextWordIndicator, dlgKeepScreenOn, dlgChkPickLangThemeOnShare;
     private Spinner dlgLetterColor, dlgAppTheme, dlgLanguage, dlgKeyboardType;
     private String[] settingsLangKeys;
@@ -93,6 +98,8 @@ public class MainActivity extends Activity {
     private TextView dlgTxtEffectiveWpm, dlgTxtExtraWordSpacing;
     private SeekBar dlgSeekExtraWordSpacing;
     private LinearLayout effWpmRow, extraWordSpacingRow;
+    private TextView dlgLblFreq, dlgLblEnvelope;
+    private LinearLayout freqRow, envRow;
 
     private AlertDialog settingsDialog;
     private Map<String, Spinner> dlgDecoderSpinners = new HashMap<>();
@@ -115,7 +122,7 @@ public class MainActivity extends Activity {
 
 
 
-    private int C_BG, C_BAR, C_UTL, C_BTN, C_PP, C_PL, C_PR, C_TEXT, C_TERM, C_TABLE, C_W;
+    private int C_BG, C_BAR, C_UTL, C_BTN, C_PP, C_PL, C_PC, C_PR, C_TEXT, C_TERM, C_TABLE, C_W;
     private int C_ACT = 0xFF007ACC;
     private KeyInterceptLayout rootLayout;
     private LinearLayout contentLayout;
@@ -145,8 +152,10 @@ public class MainActivity extends Activity {
         tableContent = findViewById(R.id.table_content);
         paddleContainer = findViewById(R.id.paddle_container);
         paddleLeft = findViewById(R.id.paddle_left);
+        paddleCenter = findViewById(R.id.paddle_center);
         paddleRight = findViewById(R.id.paddle_right);
         paddleDivider = findViewById(R.id.paddle_divider);
+        paddleDividerRight = findViewById(R.id.paddle_divider_right);
 
         gameController = new com.qft8.morsekeyer.game.GameController(this, contentLayout);
 
@@ -164,6 +173,7 @@ public class MainActivity extends Activity {
         toneEngine.setToneType(settings.toneType);
         toneEngine.setFrequency(settings.tone);
         toneEngine.setVolume(settings.vol);
+        toneEngine.setSoundType(settings.soundType);
         toneEngine.init();
 
         applyKeepScreenOn();
@@ -250,11 +260,27 @@ public class MainActivity extends Activity {
         
         setupBlipButton(btnClear, () -> txtOutput.setText(""));
 
-        paddleLeft.setOnTouchListener((v, event) -> handlePaddleTouch(event, "left"));
-        paddleRight.setOnTouchListener((v, event) -> handlePaddleTouch(event, "right"));
+        paddleLeft.setOnTouchListener((v, event) -> handlePaddleTouch(v, event, "left"));
+        if (paddleCenter != null) {
+            paddleCenter.setOnTouchListener((v, event) -> handlePaddleTouch(v, event, "center"));
+        }
+        paddleRight.setOnTouchListener((v, event) -> handlePaddleTouch(v, event, "right"));
+        if (paddleDivider != null) {
+            paddleDivider.setOnTouchListener((v, event) -> handlePaddleTouch(v, event, "left"));
+        }
+        if (paddleDividerRight != null) {
+            paddleDividerRight.setOnTouchListener((v, event) -> handlePaddleTouch(v, event, "right"));
+        }
+        if (paddleContainer != null) {
+            paddleContainer.setOnTouchListener((v, event) -> handlePaddleTouch(v, event, "center"));
+        }
         
         if (gameController != null) {
-            gameController.setPaddleListeners((v, event) -> handlePaddleTouch(event, "left"), (v, event) -> handlePaddleTouch(event, "right"));
+            gameController.setPaddleListeners(
+                (v, event) -> handlePaddleTouch(v, event, "left"),
+                (v, event) -> handlePaddleTouch(v, event, "center"),
+                (v, event) -> handlePaddleTouch(v, event, "right")
+            );
         }
 
         applyMode();
@@ -320,34 +346,56 @@ public class MainActivity extends Activity {
         boolean isStraight = "straight".equals(settings.mode);
         boolean isBug = "bug".equals(settings.mode);
         boolean isCootie = "cootie".equals(settings.mode);
+        boolean isIambic = "iambic-a".equals(settings.mode) || "iambic-b".equals(settings.mode);
+        boolean isOneFinger = "iambic_one_finger".equals(settings.paddleType) && isIambic;
+
         if (isStraight) {
             paddleRight.setVisibility(View.GONE);
             paddleDivider.setVisibility(View.GONE);
+            if (paddleCenter != null) paddleCenter.setVisibility(View.GONE);
+            if (paddleDividerRight != null) paddleDividerRight.setVisibility(View.GONE);
+            paddleLeft.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 1.0f));
             paddleLeft.setText(LanguageManager.get(KEY));
             paddleLeft.setTextSize(36);
-        } else if (isCootie) {
-            paddleRight.setVisibility(View.VISIBLE);
-            paddleDivider.setVisibility(View.VISIBLE);
-            paddleLeft.setText(LanguageManager.get(KEY));
-            paddleLeft.setTextSize(36);
-            paddleRight.setText(LanguageManager.get(KEY));
-            paddleRight.setTextSize(36);
-        } else if (isBug) {
-            paddleRight.setVisibility(View.VISIBLE);
-            paddleDivider.setVisibility(View.VISIBLE);
-            boolean inverse = "inverse".equals(settings.polarity);
-            paddleLeft.setText(inverse ? LanguageManager.get(KEY) : "\u00B7");
-            paddleLeft.setTextSize(inverse ? 36 : 72);
-            paddleRight.setText(inverse ? "\u00B7" : LanguageManager.get(KEY));
-            paddleRight.setTextSize(inverse ? 72 : 36);
         } else {
+            float centerWeight = settings.squeezeWidth / 100.0f;
+            float sideWeight = (1.0f - centerWeight) / 2.0f;
+            int centerTextSize = Math.max(16, Math.min(42, Math.round(settings.squeezeWidth * 2.2f)));
+
             paddleRight.setVisibility(View.VISIBLE);
             paddleDivider.setVisibility(View.VISIBLE);
-            boolean inverse = "inverse".equals(settings.polarity);
-            paddleLeft.setText(inverse ? "\u2013" : "\u00B7");
-            paddleLeft.setTextSize(72);
-            paddleRight.setText(inverse ? "\u00B7" : "\u2013");
-            paddleRight.setTextSize(72);
+            if (paddleCenter != null) {
+                paddleCenter.setVisibility(isOneFinger ? View.VISIBLE : View.GONE);
+                paddleCenter.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, isOneFinger ? centerWeight : 1.0f));
+                if (isOneFinger) {
+                    paddleCenter.setText("\u00B7 \u2013");
+                    paddleCenter.setTextSize(centerTextSize);
+                }
+            }
+            if (paddleDividerRight != null) {
+                paddleDividerRight.setVisibility(isOneFinger ? View.VISIBLE : View.GONE);
+            }
+            paddleLeft.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, isOneFinger ? sideWeight : 1.0f));
+            paddleRight.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, isOneFinger ? sideWeight : 1.0f));
+
+            if (isCootie) {
+                paddleLeft.setText(LanguageManager.get(KEY));
+                paddleLeft.setTextSize(36);
+                paddleRight.setText(LanguageManager.get(KEY));
+                paddleRight.setTextSize(36);
+            } else if (isBug) {
+                boolean inverse = "inverse".equals(settings.polarity);
+                paddleLeft.setText(inverse ? LanguageManager.get(KEY) : "\u00B7");
+                paddleLeft.setTextSize(inverse ? 36 : 72);
+                paddleRight.setText(inverse ? "\u00B7" : LanguageManager.get(KEY));
+                paddleRight.setTextSize(inverse ? 72 : 36);
+            } else {
+                boolean inverse = "inverse".equals(settings.polarity);
+                paddleLeft.setText(inverse ? "\u2013" : "\u00B7");
+                paddleLeft.setTextSize(72);
+                paddleRight.setText(inverse ? "\u00B7" : "\u2013");
+                paddleRight.setTextSize(72);
+            }
         }
 
         // Apply same to game paddles
@@ -362,6 +410,7 @@ public class MainActivity extends Activity {
                 paddleRight.getVisibility(),
                 paddleDivider.getVisibility()
             );
+            gameController.updatePaddleLayout(isOneFinger, settings.squeezeWidth);
         }
 
         String modeLabel;
@@ -452,6 +501,7 @@ public class MainActivity extends Activity {
             C_TERM = 0xFF000000;
             C_TABLE = 0xFF111111;
             C_PL = 0xFF444444;
+            C_PC = 0xFF4C4C4C;
             C_PR = 0xFF555555;
             C_W = 0xFFFFFFFF;
             C_PP = C_ACT;
@@ -466,6 +516,7 @@ public class MainActivity extends Activity {
             C_TERM = 0xFFFFFFFF;
             C_TABLE = 0xFFE8E8E8;
             C_PL = 0xFFD0D0D0;
+            C_PC = 0xFFC8C8C8;
             C_PR = 0xFFC0C0C0;
             C_W = 0xFFFFFFFF;
             C_ACT = 0xFF007ACC;
@@ -491,10 +542,14 @@ public class MainActivity extends Activity {
             scrollTable.setBackgroundColor(C_TABLE);
             paddleContainer.setBackgroundColor(C_BAR);
             updatePaddleVisual("left", false);
+            updatePaddleVisual("center", false);
             updatePaddleVisual("right", false);
             paddleLeft.setTextColor(C_TEXT);
+            if (paddleCenter != null) paddleCenter.setTextColor(C_TEXT);
             paddleRight.setTextColor(C_TEXT);
             findViewById(R.id.paddle_divider).setBackgroundColor(dark ? 0xFF666666 : 0xFFCCCCCC);
+            View divR = findViewById(R.id.paddle_divider_right);
+            if (divR != null) divR.setBackgroundColor(dark ? 0xFF666666 : 0xFFCCCCCC);
             
             if (gameController != null) {
                 gameController.applyTheme(C_BG, C_TERM, C_PR, C_BAR, C_UTL, C_TEXT, dark);
@@ -542,11 +597,7 @@ public class MainActivity extends Activity {
             }
         }
         if (v instanceof CheckBox) {
-            CheckBox cb = (CheckBox) v;
-            cb.setTextColor(C_TEXT);
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-                cb.setButtonTintList(android.content.res.ColorStateList.valueOf(C_TEXT));
-            }
+            applySquareCheckBoxStyle((CheckBox) v);
         }
         if (v instanceof RadioButton) {
             RadioButton rb = (RadioButton) v;
@@ -740,6 +791,7 @@ public class MainActivity extends Activity {
 
         // Mode
         root.addView(label(KEY_MODE));
+        root.addView(subLabel(KEYER_LOGIC));
         dlgMode = new Spinner(dialogCtx);
         dlgMode.setTag("MODE_SPINNER");
         String[] modes = {
@@ -763,8 +815,10 @@ public class MainActivity extends Activity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (isSyncing) return;
                 keyer.handlePaddlePress("left", false);
+                keyer.handlePaddlePress("center", false);
                 keyer.handlePaddlePress("right", false);
                 updatePaddleVisual("left", false);
+                updatePaddleVisual("center", false);
                 updatePaddleVisual("right", false);
                 switch (position) {
                     case 0: settings.mode = "straight"; break;
@@ -779,6 +833,76 @@ public class MainActivity extends Activity {
                 syncSettingsDialog();
             }
             @Override public void onNothingSelected(AdapterView<?> parent) {}
+        });
+
+        root.addView(subLabel(SCREEN_PADDLES));
+        dlgShowPaddles = chkBox(SHOW_PADDLES);
+        root.addView(dlgShowPaddles);
+        dlgShowPaddles.setOnClickListener(v -> {
+            settings.showPaddles = dlgShowPaddles.isChecked();
+            settings.save(this);
+            syncSettingsDialog();
+            applyOrientation();
+        });
+
+        dlgLblPaddleType = subLabel(PADDLES_TYPE);
+        root.addView(dlgLblPaddleType);
+        dlgPaddleType = new Spinner(dialogCtx);
+        dlgPaddleType.setTag("PADDLES_TYPE_SPINNER");
+        String[] paddleTypes = {
+            LanguageManager.get(PADDLES_STANDARD),
+            LanguageManager.get(PADDLES_IAMBIC_ONE_FINGER)
+        };
+        dlgPaddleType.setAdapter(themedAdapter(dialogCtx, paddleTypes));
+        applySpinnerStyle(dlgPaddleType);
+        dlgPaddleType.setLayoutParams(spLp);
+        root.addView(dlgPaddleType);
+
+        dlgPaddleType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (isSyncing) return;
+                keyer.handlePaddlePress("left", false);
+                keyer.handlePaddlePress("center", false);
+                keyer.handlePaddlePress("right", false);
+                updatePaddleVisual("left", false);
+                updatePaddleVisual("center", false);
+                updatePaddleVisual("right", false);
+                settings.paddleType = (position == 1) ? "iambic_one_finger" : "standard";
+                settings.save(MainActivity.this);
+                applyMode();
+                syncSettingsDialog();
+            }
+            @Override public void onNothingSelected(AdapterView<?> parent) {}
+        });
+
+        dlgLblSqueezeWidth = subLabel(SQUEEZE_BUTTON_WIDTH);
+        root.addView(dlgLblSqueezeWidth);
+        squeezeWidthRow = hRow();
+        squeezeWidthRow.setPadding(dp(16), 0, 0, 0);
+        dlgSeekSqueezeWidth = new SeekBar(this);
+        dlgSeekSqueezeWidth.setMax(25); // 5% to 30%
+        dlgSeekSqueezeWidth.setLayoutParams(new LinearLayout.LayoutParams(0, -2, 1));
+        dlgTxtSqueezeWidth = new TextView(this);
+        dlgTxtSqueezeWidth.setTextColor(C_TEXT);
+        dlgTxtSqueezeWidth.setGravity(Gravity.CENTER);
+        dlgTxtSqueezeWidth.setLayoutParams(new LinearLayout.LayoutParams(dp(60), -2));
+        squeezeWidthRow.addView(dlgSeekSqueezeWidth);
+        squeezeWidthRow.addView(dlgTxtSqueezeWidth);
+        root.addView(squeezeWidthRow);
+
+        dlgSeekSqueezeWidth.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if (!fromUser) return;
+                settings.squeezeWidth = 5 + progress;
+                dlgTxtSqueezeWidth.setText(settings.squeezeWidth + "%");
+                applyMode();
+            }
+            @Override public void onStartTrackingTouch(SeekBar seekBar) {}
+            @Override public void onStopTrackingTouch(SeekBar seekBar) {
+                settings.save(MainActivity.this);
+                applyMode();
+            }
         });
 
         // WPM (inside mode)
@@ -912,10 +1036,36 @@ public class MainActivity extends Activity {
             }
         });
 
-        // Tone
-        root.addView(label(TONE));
-        root.addView(subLabel(FREQUENCY));
-        LinearLayout freqRow = hRow();
+        // Audio
+        root.addView(label(AUDIO));
+
+        root.addView(subLabel(SOUND));
+        dlgSound = new Spinner(dialogCtx);
+        dlgSound.setTag("SOUND_SPINNER");
+        String[] soundOptions = {
+            LanguageManager.get(TONE),
+            LanguageManager.get(CLICKS)
+        };
+        dlgSound.setAdapter(themedAdapter(dialogCtx, soundOptions));
+        applySpinnerStyle(dlgSound);
+        dlgSound.setLayoutParams(spLp);
+        root.addView(dlgSound);
+
+        dlgSound.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (isSyncing) return;
+                settings.soundType = (position == 1) ? "clicks" : "tone";
+                toneEngine.setSoundType(settings.soundType);
+                settings.save(MainActivity.this);
+                syncSettingsDialog();
+            }
+            @Override public void onNothingSelected(AdapterView<?> parent) {}
+        });
+
+        dlgLblFreq = subLabel(FREQUENCY);
+        root.addView(dlgLblFreq);
+        freqRow = hRow();
         LinearLayout.LayoutParams freqLp = (LinearLayout.LayoutParams) freqRow.getLayoutParams();
         freqLp.setMargins(dp(16), 0, 0, 0);
         freqRow.setLayoutParams(freqLp);
@@ -975,8 +1125,9 @@ public class MainActivity extends Activity {
             @Override public void onStopTrackingTouch(SeekBar sb) { settings.save(MainActivity.this); }
         });
 
-        root.addView(subLabel(ENVELOPE));
-        LinearLayout envRow = hRow();
+        dlgLblEnvelope = subLabel(ENVELOPE);
+        root.addView(dlgLblEnvelope);
+        envRow = hRow();
         envRow.setPadding(dp(16), 0, 0, 0);
         dlgSeekEnvelope = new SeekBar(this);
         dlgSeekEnvelope.setMax(200); // 0.0 to 2.0
@@ -1110,14 +1261,12 @@ public class MainActivity extends Activity {
         dlgTable = chkBox(SHOW_TABLE);
         dlgTableCodes = chkBox(SHOW_TABLE_CODES);
         dlgVisual = chkBox(SHOW_VISUAL);
-        dlgShowPaddles = chkBox(SHOW_PADDLES);
         dlgNextWordIndicator = chkBox(NEXT_WORD_INDICATOR);
         dlgKeepScreenOn = chkBox(KEEP_SCREEN_ON);
         root.addView(dlgTable);
         root.addView(dlgTableCodes);
         dlgVisual.setId(View.generateViewId());
         root.addView(dlgVisual);
-        root.addView(dlgShowPaddles);
         root.addView(dlgNextWordIndicator);
         root.addView(dlgKeepScreenOn);
 
@@ -1144,12 +1293,6 @@ public class MainActivity extends Activity {
             settings.visual = dlgVisual.isChecked();
             settings.save(this);
             syncSettingsDialog();
-        });
-        dlgShowPaddles.setOnClickListener(v -> {
-            settings.showPaddles = dlgShowPaddles.isChecked();
-            settings.save(this);
-            syncSettingsDialog();
-            applyOrientation();
         });
         dlgNextWordIndicator.setOnClickListener(v -> {
             settings.showNextWordIndicator = dlgNextWordIndicator.isChecked();
@@ -1660,6 +1803,7 @@ public class MainActivity extends Activity {
                 toneEngine.setToneType(settings.toneType);
                 toneEngine.setFrequency(settings.tone);
                 toneEngine.setVolume(settings.vol);
+                toneEngine.setSoundType(settings.soundType);
                 toneEngine.setBufferMs(settings.bufferMs);
                 toneEngine.setEnvelopeMs(settings.envelopeMs);
                 toneEngine.setChunkMs(settings.chunkMs);
@@ -1719,6 +1863,40 @@ public class MainActivity extends Activity {
         else if ("bug".equals(settings.mode)) pos = 4;
         else if ("cootie".equals(settings.mode)) pos = 5;
         dlgMode.setSelection(pos);
+
+        boolean isIambic = "iambic-a".equals(settings.mode) || "iambic-b".equals(settings.mode);
+        boolean isOneFinger = "iambic_one_finger".equals(settings.paddleType) && isIambic;
+        if (dlgPaddleType != null) {
+            int ptPos = "iambic_one_finger".equals(settings.paddleType) ? 1 : 0;
+            dlgPaddleType.setSelection(ptPos);
+            dlgPaddleType.setVisibility(isIambic ? View.VISIBLE : View.GONE);
+        }
+        if (dlgLblPaddleType != null) {
+            dlgLblPaddleType.setVisibility(isIambic ? View.VISIBLE : View.GONE);
+        }
+        if (dlgSeekSqueezeWidth != null) {
+            dlgSeekSqueezeWidth.setProgress(settings.squeezeWidth - 5);
+        }
+        if (dlgTxtSqueezeWidth != null) {
+            dlgTxtSqueezeWidth.setText(settings.squeezeWidth + "%");
+        }
+        if (dlgLblSqueezeWidth != null) {
+            dlgLblSqueezeWidth.setVisibility(isOneFinger ? View.VISIBLE : View.GONE);
+        }
+        if (squeezeWidthRow != null) {
+            squeezeWidthRow.setVisibility(isOneFinger ? View.VISIBLE : View.GONE);
+        }
+
+        if (dlgSound != null) {
+            int sndPos = "clicks".equals(settings.soundType) ? 1 : 0;
+            dlgSound.setSelection(sndPos);
+        }
+        boolean isClicks = "clicks".equals(settings.soundType);
+        if (dlgLblFreq != null) dlgLblFreq.setVisibility(isClicks ? View.GONE : View.VISIBLE);
+        if (freqRow != null) freqRow.setVisibility(isClicks ? View.GONE : View.VISIBLE);
+        if (dlgLblEnvelope != null) dlgLblEnvelope.setVisibility(isClicks ? View.GONE : View.VISIBLE);
+        if (envRow != null) envRow.setVisibility(isClicks ? View.GONE : View.VISIBLE);
+        if (dlgNoclick != null) dlgNoclick.setVisibility(isClicks ? View.GONE : View.VISIBLE);
 
         dlgInverse.setChecked("inverse".equals(settings.polarity));
         boolean hideInverse = "straight".equals(settings.mode) || "cootie".equals(settings.mode);
@@ -2053,7 +2231,66 @@ public class MainActivity extends Activity {
     // Paddle touch
     // ============================================================
 
-    private boolean handlePaddleTouch(MotionEvent event, String side) {
+    private boolean isOneFinger() {
+        boolean isIambic = "iambic-a".equals(settings.mode) || "iambic-b".equals(settings.mode);
+        return "iambic_one_finger".equals(settings.paddleType) && isIambic;
+    }
+
+    private String resolvePaddleSide(View v, float localX, float localY) {
+        if (v == null) return null;
+        ViewGroup container = (v instanceof ViewGroup) ? (ViewGroup) v : (ViewGroup) v.getParent();
+        if (container == null) return null;
+
+        int[] viewLoc = new int[2];
+        v.getLocationOnScreen(viewLoc);
+        float screenX = viewLoc[0] + localX;
+        float screenY = viewLoc[1] + localY;
+
+        int[] containerLoc = new int[2];
+        container.getLocationOnScreen(containerLoc);
+        float relX = screenX - containerLoc[0];
+        float relY = screenY - containerLoc[1];
+
+        int containerHeight = container.getHeight();
+        if (containerHeight <= 0) containerHeight = 1;
+        float verticalSlop = Math.max(containerHeight * 0.75f, 100);
+        if (relY < -verticalSlop || relY > containerHeight + verticalSlop) {
+            return null;
+        }
+
+        View centerView = container.findViewById(R.id.paddle_center);
+        if (centerView == null) centerView = container.findViewById(R.id.game_paddle_center);
+        if (centerView == null) centerView = container.findViewById(R.id.game_menu_paddle_center);
+
+        if (isOneFinger() && centerView != null && centerView.getVisibility() == View.VISIBLE) {
+            int centerLeft = centerView.getLeft();
+            int centerRight = centerView.getRight();
+            if (relX < centerLeft) {
+                return "left";
+            } else if (relX <= centerRight) {
+                return "center";
+            } else {
+                return "right";
+            }
+        }
+
+        if ("straight".equals(settings.mode)) {
+            return "left";
+        }
+
+        View rightView = container.findViewById(R.id.paddle_right);
+        if (rightView == null) rightView = container.findViewById(R.id.game_paddle_right);
+        if (rightView == null) rightView = container.findViewById(R.id.game_menu_paddle_right);
+
+        int rightBoundary = rightView != null ? rightView.getLeft() : (container.getWidth() / 2);
+        if (relX < rightBoundary) {
+            return "left";
+        } else {
+            return "right";
+        }
+    }
+
+    private boolean handlePaddleTouch(View v, MotionEvent event, String initialSide) {
         int action = event.getActionMasked();
         boolean isMouse = event.getToolType(0) == MotionEvent.TOOL_TYPE_MOUSE;
 
@@ -2064,26 +2301,67 @@ public class MainActivity extends Activity {
         switch (action) {
             case MotionEvent.ACTION_DOWN:
             case MotionEvent.ACTION_POINTER_DOWN: {
-                int id = event.getPointerId(event.getActionIndex());
+                if (v != null && v.getParent() != null) {
+                    v.getParent().requestDisallowInterceptTouchEvent(true);
+                }
+                int actionIndex = event.getActionIndex();
+                int id = event.getPointerId(actionIndex);
+                String side = resolvePaddleSide(v, event.getX(actionIndex), event.getY(actionIndex));
+                if (side == null) {
+                    side = initialSide;
+                }
                 touchMap.put(id, side);
-                keyer.handlePaddlePress(side, true);
-                updatePaddleVisual(side, true);
+                if (side != null) {
+                    keyer.handlePaddlePress(side, true);
+                    updatePaddleVisual(side, true);
+                }
+                return true;
+            }
+            case MotionEvent.ACTION_MOVE: {
+                if (v != null && v.getParent() != null) {
+                    v.getParent().requestDisallowInterceptTouchEvent(true);
+                }
+                if (isOneFinger()) {
+                    int pointerCount = event.getPointerCount();
+                    for (int i = 0; i < pointerCount; i++) {
+                        int id = event.getPointerId(i);
+                        String oldSide = touchMap.get(id);
+                        String newSide = resolvePaddleSide(v, event.getX(i), event.getY(i));
+
+                        boolean changed = (oldSide == null && newSide != null) ||
+                                          (oldSide != null && !oldSide.equals(newSide));
+                        if (changed) {
+                            touchMap.put(id, newSide);
+                            if (oldSide != null && !touchMap.containsValue(oldSide)) {
+                                keyer.handlePaddlePress(oldSide, false);
+                                updatePaddleVisual(oldSide, false);
+                            }
+                            if (newSide != null) {
+                                keyer.handlePaddlePress(newSide, true);
+                                updatePaddleVisual(newSide, true);
+                            }
+                        }
+                    }
+                }
                 return true;
             }
             case MotionEvent.ACTION_UP:
             case MotionEvent.ACTION_POINTER_UP: {
-                int id = event.getPointerId(event.getActionIndex());
+                int actionIndex = event.getActionIndex();
+                int id = event.getPointerId(actionIndex);
                 String s = touchMap.remove(id);
-                if (s != null) {
+                if (s != null && !touchMap.containsValue(s)) {
                     keyer.handlePaddlePress(s, false);
                     updatePaddleVisual(s, false);
                 }
                 return true;
             }
             case MotionEvent.ACTION_CANCEL: {
-                for (Map.Entry<Integer, String> entry : touchMap.entrySet()) {
-                    keyer.handlePaddlePress(entry.getValue(), false);
-                    updatePaddleVisual(entry.getValue(), false);
+                for (String side : new HashSet<>(touchMap.values())) {
+                    if (side != null) {
+                        keyer.handlePaddlePress(side, false);
+                        updatePaddleVisual(side, false);
+                    }
                 }
                 touchMap.clear();
                 return true;
@@ -2095,11 +2373,14 @@ public class MainActivity extends Activity {
     private void updatePaddleVisual(String side, boolean pressed) {
         if ("left".equals(side)) {
             paddleLeft.setBackgroundColor(pressed ? C_PP : C_PL);
+        } else if ("center".equals(side)) {
+            if (paddleCenter != null) paddleCenter.setBackgroundColor(pressed ? C_PP : C_PC);
         } else if ("right".equals(side)) {
             paddleRight.setBackgroundColor(pressed ? C_PP : C_PR);
         }
         if (gameController != null) {
-            gameController.updatePaddleVisual(side, pressed, C_PP, "left".equals(side) ? C_PL : C_PR);
+            int unpressedColor = "left".equals(side) ? C_PL : ("center".equals(side) ? C_PC : C_PR);
+            gameController.updatePaddleVisual(side, pressed, C_PP, unpressedColor);
         }
     }
 
@@ -2161,10 +2442,10 @@ public class MainActivity extends Activity {
 
         if (mouseActiveSide == null) {
             if (btnState != 0) {
-                int[] leftLoc = new int[2];
-                paddleLeft.getLocationOnScreen(leftLoc);
                 int rx = (int) event.getRawX();
                 int ry = (int) event.getRawY();
+                int[] leftLoc = new int[2];
+                paddleLeft.getLocationOnScreen(leftLoc);
                 if (rx >= leftLoc[0] && rx < leftLoc[0] + paddleLeft.getWidth() &&
                     ry >= leftLoc[1] && ry < leftLoc[1] + paddleLeft.getHeight()) {
                     mouseActiveSide = "left";
@@ -2482,7 +2763,15 @@ public class MainActivity extends Activity {
         int screenW = getResources().getDisplayMetrics().widthPixels;
         if (x + tv.getMeasuredWidth() > screenW - dp(8)) x = screenW - dp(8) - tv.getMeasuredWidth();
 
-        tooltipWindow.showAtLocation(anchor, Gravity.NO_GRAVITY, x, y);
+        if (isFinishing() || isDestroyed() || anchor.getWindowToken() == null) {
+            return;
+        }
+        try {
+            tooltipWindow.showAtLocation(anchor, Gravity.NO_GRAVITY, x, y);
+        } catch (Exception e) {
+            tooltipWindow = null;
+            return;
+        }
         
         // Auto-dismiss after 3 seconds
         tooltipHandler.postDelayed(tooltipDismissRunnable, 3000);
@@ -2529,14 +2818,37 @@ public class MainActivity extends Activity {
         CheckBox c = new CheckBox(this);
         c.setText(LanguageManager.get(key));
         c.setTag(key);
-        c.setTextColor(C_TEXT);
         c.setTextSize(15);
-        c.setButtonTintList(android.content.res.ColorStateList.valueOf(C_TEXT));
+        c.setGravity(Gravity.CENTER_VERTICAL);
+        c.setPaddingRelative(dp(10), dp(4), 0, dp(4));
+        applySquareCheckBoxStyle(c);
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         lp.setMargins(dp(16), 0, 0, dp(4));
         c.setLayoutParams(lp);
         return c;
+    }
+
+    private void applySquareCheckBoxStyle(CheckBox cb) {
+        cb.setTextColor(C_TEXT);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            cb.setButtonTintList(null);
+        }
+        boolean dark = "dark".equals(settings.appTheme);
+        int uncheckedStroke = dark ? 0xFFAAAAAA : 0xFF757575;
+        int checkedBg = C_ACT;
+        int checkColor = 0xFFFFFFFF;
+
+        Drawable current = cb.getButtonDrawable();
+        if (current instanceof SquareCheckBoxDrawable) {
+            ((SquareCheckBoxDrawable) current).setColors(uncheckedStroke, checkedBg, checkColor);
+            cb.invalidate();
+        } else {
+            SquareCheckBoxDrawable scb = new SquareCheckBoxDrawable(
+                    getResources().getDisplayMetrics().density,
+                    uncheckedStroke, checkedBg, checkColor);
+            cb.setButtonDrawable(scb);
+        }
     }
 
     private RadioButton radBtn(String key) {
@@ -2671,6 +2983,20 @@ public class MainActivity extends Activity {
             ArrayList<String> currentColorsDisp = new ArrayList<>();
             for (String color : currentColors) currentColorsDisp.add(getLocalizedColorName(color));
             s.setAdapter(themedAdapterStr(ctx, currentColorsDisp));
+            s.setSelection(pos);
+        } else if ("SOUND_SPINNER".equals(t)) {
+            String[] soundOptions = {
+                LanguageManager.get(TONE),
+                LanguageManager.get(CLICKS)
+            };
+            s.setAdapter(themedAdapter(ctx, soundOptions));
+            s.setSelection(pos);
+        } else if ("PADDLES_TYPE_SPINNER".equals(t)) {
+            String[] paddleOptions = {
+                LanguageManager.get(PADDLES_STANDARD),
+                LanguageManager.get(PADDLES_IAMBIC_ONE_FINGER)
+            };
+            s.setAdapter(themedAdapter(ctx, paddleOptions));
             s.setSelection(pos);
         }
     }
@@ -2855,6 +3181,7 @@ public class MainActivity extends Activity {
         }
 
         paddleContainer.setVisibility(settings.showPaddles ? View.VISIBLE : View.GONE);
+        applyMode();
         if (gameController != null) {
             gameController.applySettings(settings.fontSize, C_TEXT, settings.showPaddles);
         }
@@ -2885,6 +3212,7 @@ public class MainActivity extends Activity {
             toneEngine.setToneType(settings.toneType);
             toneEngine.setFrequency(settings.tone);
             toneEngine.setVolume(settings.vol);
+            toneEngine.setSoundType(settings.soundType);
             toneEngine.setBufferMs(settings.bufferMs);
             toneEngine.setEnvelopeMs(settings.envelopeMs);
             toneEngine.setChunkMs(settings.chunkMs);
@@ -2897,15 +3225,19 @@ public class MainActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
+        hideTooltip();
         if (gameController != null) {
             gameController.onPause();
         }
-        if (keyer != null)
+        if (keyer != null) {
             keyer.cancelAll();
-        keyer.handlePaddlePress("left", false);
-        keyer.handlePaddlePress("right", false);
+            keyer.handlePaddlePress("left", false);
+            keyer.handlePaddlePress("right", false);
+            keyer.handlePaddlePress("center", false);
+        }
         updatePaddleVisual("left", false);
         updatePaddleVisual("right", false);
+        updatePaddleVisual("center", false);
         touchMap.clear();
         if (toneEngine != null)
             toneEngine.release();
@@ -2914,6 +3246,16 @@ public class MainActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        hideTooltip();
+        if (settingsDialog != null && settingsDialog.isShowing()) {
+            try {
+                settingsDialog.dismiss();
+            } catch (Exception ignored) {}
+            settingsDialog = null;
+        }
+        if (gameController != null) {
+            gameController.onDestroy();
+        }
         if (toneEngine != null)
             toneEngine.release();
     }

@@ -144,5 +144,21 @@ set(TARGET_MET, "Mål uppnått");
         // Koch custom level
         set(CUSTOM_LEVEL, "Anpassad nivå");
         set(SELECT_CHARACTERS_PROMPT, "Tryck på tangentbordet för att välja de tecken du är intresserad av");
+
+        // Audio & Sound
+        set(AUDIO, "Ljud");
+        set(SOUND, "Ljudtyp");
+        set(CLICKS, "Klick");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Keyer-logik");
+        set(SCREEN_PADDLES, "Skärmpaddlar");
+        set(PADDLES_TYPE, "Paddeltyp");
+        set(PADDLES_STANDARD, "Standard");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Jambisk ett finger");
+        set(SQUEEZE_BUTTON_WIDTH, "Bredd på squeeze-knapp");
+
+        // Prosigns level
+        set(PROSIGNS, "prosigns");
     }
 }

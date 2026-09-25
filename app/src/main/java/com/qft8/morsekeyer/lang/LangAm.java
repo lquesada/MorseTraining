@@ -144,5 +144,21 @@ set(TARGET_MET, "ዒላማ ተሳክቷል");
         // Koch custom level
         set(CUSTOM_LEVEL, "Custom level");
         set(SELECT_CHARACTERS_PROMPT, "Tap the keyboard to select the characters you're interested in");
+
+        // Audio & Sound
+        set(AUDIO, "ድምጽ");
+        set(SOUND, "የድምጽ አይነት");
+        set(CLICKS, "ጠቅታዎች");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "የኪየር አመክንዮ");
+        set(SCREEN_PADDLES, "የማያ መቅዘፊያዎች");
+        set(PADDLES_TYPE, "የመቅዘፊያ አይነት");
+        set(PADDLES_STANDARD, "መደበኛ");
+        set(PADDLES_IAMBIC_ONE_FINGER, "አያምቢክ አንድ ጣት");
+        set(SQUEEZE_BUTTON_WIDTH, "የsqueeze አዝራር ስፋት");
+
+        // Prosigns level
+        set(PROSIGNS, "የአሰራር ምልክቶች");
     }
 }

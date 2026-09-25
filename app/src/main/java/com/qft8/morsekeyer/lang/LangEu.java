@@ -137,5 +137,21 @@ set(TARGET_MET, "Helburua lortuta");
         // Koch custom level
         set(CUSTOM_LEVEL, "Maila pertsonalizatua");
         set(SELECT_CHARACTERS_PROMPT, "Sakatu teklatua interesatzen zatzun karaktereak hautatzeko");
+
+        // Audio & Sound
+        set(AUDIO, "Audioa");
+        set(SOUND, "Soinua");
+        set(CLICKS, "Klikak");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Keyer logika");
+        set(SCREEN_PADDLES, "Pantailako palak");
+        set(PADDLES_TYPE, "Pala mota");
+        set(PADDLES_STANDARD, "Estandarra");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Iambic hatz bakarra");
+        set(SQUEEZE_BUTTON_WIDTH, "Squeeze botoiaren zabalera");
+
+        // Prosigns level
+        set(PROSIGNS, "prozeinuak");
     }
 }

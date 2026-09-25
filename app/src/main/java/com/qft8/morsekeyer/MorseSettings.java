@@ -19,6 +19,9 @@ public class MorseSettings {
 
     public String mode = "iambic-a";
     public String toneType = "triangle";
+    public String soundType = "tone";
+    public String paddleType = "standard";
+    public int squeezeWidth = 15;
     public int wpm = 15;
     public int vol = 40;
     public int tone = 600;
@@ -94,7 +97,12 @@ public class MorseSettings {
         boolean needsSave = false;
         mode = getStringSafe(prefs, "mode", "iambic-a");
         toneType = getStringSafe(prefs, "toneType", "triangle");
-        wpm = getIntSafe(prefs, "wpm", 15);
+        soundType = getStringSafe(prefs, "soundType", "tone");
+        paddleType = getStringSafe(prefs, "paddleType", "standard");
+        squeezeWidth = getIntSafe(prefs, "squeezeWidth", 15);
+        if (squeezeWidth < 5) squeezeWidth = 5;
+        if (squeezeWidth > 30) squeezeWidth = 30;
+        wpm = Math.max(1, getIntSafe(prefs, "wpm", 15));
         vol = getIntSafe(prefs, "vol", 40);
         tone = getIntSafe(prefs, "tone", 600);
         polarity = getStringSafe(prefs, "polarity", "normal");
@@ -142,14 +150,17 @@ public class MorseSettings {
         pickLangThemeOnShare = getBooleanSafe(prefs, "pickLangThemeOnShare", false);
         
         if (!prefs.contains("effectiveWpm")) {
-            effectiveWpm = Math.min(wpm, Math.max(3, (int) Math.round(100.0 * wpm / interletterSpacing)));
+            int safeIls = Math.max(10, interletterSpacing);
+            effectiveWpm = Math.min(wpm, Math.max(3, (int) Math.round(100.0 * wpm / safeIls)));
             needsSave = true;
         } else {
-            effectiveWpm = getIntSafe(prefs, "effectiveWpm", wpm);
+            effectiveWpm = Math.max(1, getIntSafe(prefs, "effectiveWpm", wpm));
         }
         
         if (!prefs.contains("extraWordSpacing")) {
-            extraWordSpacing = Math.min(2000, Math.max(0, (int) Math.round((84.0 * interwordSpacing / wpm) - (8400.0 / effectiveWpm))));
+            int safeWpm = Math.max(1, wpm);
+            int safeEff = Math.max(1, effectiveWpm);
+            extraWordSpacing = Math.min(2000, Math.max(0, (int) Math.round((84.0 * interwordSpacing / safeWpm) - (8400.0 / safeEff))));
             needsSave = true;
         } else {
             extraWordSpacing = getIntSafe(prefs, "extraWordSpacing", 0);
@@ -179,6 +190,9 @@ public class MorseSettings {
         SharedPreferences.Editor editor = prefs.edit()
             .putString("mode", mode)
             .putString("toneType", toneType)
+            .putString("soundType", soundType)
+            .putString("paddleType", paddleType)
+            .putInt("squeezeWidth", squeezeWidth)
             .putInt("wpm", wpm)
             .putInt("vol", vol)
             .putInt("tone", tone)
@@ -227,6 +241,9 @@ public class MorseSettings {
     public void resetToDefaults() {
         mode = "iambic-a";
         toneType = "triangle";
+        soundType = "tone";
+        paddleType = "standard";
+        squeezeWidth = 15;
         wpm = 15;
         vol = 40;
         tone = 600;
@@ -280,8 +297,9 @@ public class MorseSettings {
             wordSpacing = 25;
         }
 
-        int eff = effectiveWpm;
-        int maxEff = (int) Math.floor(wpm * 2.0);
+        int safeWpm = Math.max(1, wpm);
+        int eff = Math.max(1, effectiveWpm);
+        int maxEff = (int) Math.floor(safeWpm * 2.0);
         if (maxEff < 3) {
             maxEff = 3;
         }
@@ -289,8 +307,8 @@ public class MorseSettings {
             eff = maxEff;
         }
 
-        interletterSpacing = (int) Math.round(100.0 * wpm / eff);
-        interwordSpacing = (int) Math.round((wpm * wordSpacing) / (double) eff);
+        interletterSpacing = (int) Math.round(100.0 * safeWpm / eff);
+        interwordSpacing = (int) Math.round((safeWpm * wordSpacing) / (double) eff);
     }
 
     private String guessKeyboardType(String langSetting) {

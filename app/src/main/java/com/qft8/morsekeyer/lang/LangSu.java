@@ -137,5 +137,21 @@ set(TARGET_MET, "Target kahontal");
         // Koch custom level
         set(CUSTOM_LEVEL, "Tingkat khusus");
         set(SELECT_CHARACTERS_PROMPT, "Pencét keyboard pikeun milih karakter anu dipikaresep");
+
+        // Audio & Sound
+        set(AUDIO, "Audio");
+        set(SOUND, "Sora");
+        set(CLICKS, "Klik");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Logika keyer");
+        set(SCREEN_PADDLES, "Dayung layar");
+        set(PADDLES_TYPE, "Jinis dayung");
+        set(PADDLES_STANDARD, "Standar");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Iambik hiji ramo");
+        set(SQUEEZE_BUTTON_WIDTH, "Lega tombol squeeze");
+
+        // Prosigns level
+        set(PROSIGNS, "tanda prosedur");
     }
 }

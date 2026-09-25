@@ -144,5 +144,21 @@ set(TARGET_MET, "Naabot ang target");
         // Koch custom level
         set(CUSTOM_LEVEL, "Custom na antas");
         set(SELECT_CHARACTERS_PROMPT, "I-tap ang keyboard para piliin ang mga character na interesado ka");
+
+        // Audio & Sound
+        set(AUDIO, "Tunog");
+        set(SOUND, "Uri ng tunog");
+        set(CLICKS, "Mga lagitik");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Lohika ng keyer");
+        set(SCREEN_PADDLES, "Mga paddle sa screen");
+        set(PADDLES_TYPE, "Uri ng paddle");
+        set(PADDLES_STANDARD, "Karaniwan");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Iambic isang daliri");
+        set(SQUEEZE_BUTTON_WIDTH, "Lapad ng squeeze button");
+
+        // Prosigns level
+        set(PROSIGNS, "mga prosign");
     }
 }

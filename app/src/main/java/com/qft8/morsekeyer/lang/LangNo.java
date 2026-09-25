@@ -105,6 +105,7 @@ public class LangNo extends MorseLanguage {
         set(SCORE, "Poengsum");
         set(MATCH_COMPLETED, "Kamp fullført");
         set(HIGH_SCORE, "Høy score");
+        set(YOUR_HIGH_SCORE_IS, "Din beste poengsum er");
 
                 
 
@@ -143,5 +144,21 @@ set(TARGET_MET, "Mål nådd");
         // Koch custom level
         set(CUSTOM_LEVEL, "Tilpasset nivå");
         set(SELECT_CHARACTERS_PROMPT, "Trykk på tastaturet for å velge tegnene du er interessert i");
+
+        // Audio & Sound
+        set(AUDIO, "Lyd");
+        set(SOUND, "Lydtype");
+        set(CLICKS, "Klikk");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Keyer-logikk");
+        set(SCREEN_PADDLES, "Skjermpadler");
+        set(PADDLES_TYPE, "Padletype");
+        set(PADDLES_STANDARD, "Standard");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Jambisk én finger");
+        set(SQUEEZE_BUTTON_WIDTH, "Bredde på squeeze-knapp");
+
+        // Prosigns level
+        set(PROSIGNS, "prosigns");
     }
 }

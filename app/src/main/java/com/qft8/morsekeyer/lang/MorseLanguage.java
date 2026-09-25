@@ -151,4 +151,20 @@ public abstract class MorseLanguage {
     // Custom level (Koch)
     public static final String CUSTOM_LEVEL = "CUSTOM_LEVEL";
     public static final String SELECT_CHARACTERS_PROMPT = "SELECT_CHARACTERS_PROMPT";
+
+    // Audio & Sound
+    public static final String AUDIO = "AUDIO";
+    public static final String SOUND = "SOUND";
+    public static final String CLICKS = "CLICKS";
+
+    // Keyer logic & Screen paddles
+    public static final String KEYER_LOGIC = "KEYER_LOGIC";
+    public static final String SCREEN_PADDLES = "SCREEN_PADDLES";
+    public static final String PADDLES_TYPE = "PADDLES_TYPE";
+    public static final String PADDLES_STANDARD = "PADDLES_STANDARD";
+    public static final String PADDLES_IAMBIC_ONE_FINGER = "PADDLES_IAMBIC_ONE_FINGER";
+    public static final String SQUEEZE_BUTTON_WIDTH = "SQUEEZE_BUTTON_WIDTH";
+
+    // Prosigns level
+    public static final String PROSIGNS = "PROSIGNS";
 }

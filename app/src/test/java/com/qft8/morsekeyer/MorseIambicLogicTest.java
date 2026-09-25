@@ -101,4 +101,83 @@ public class MorseIambicLogicTest {
         // In Iambic-B, squeeze is remembered
         assertTrue(state.squeezePressedDuringElement);
     }
+
+    @Test
+    public void testCenterPaddle_PressFromIdle_TransmitsDit() {
+        settings.mode = "iambic-a";
+        settings.polarity = "normal";
+
+        keyer.handlePaddlePress("center", true);
+
+        assertTrue("Center paddle should be marked pressed", state.centerCurrentlyPressed);
+        assertTrue("Center paddle should activate squeeze", state.squeezeCurrentlyPressed);
+        assertTrue("Keyer should start transmitting", state.isTransmitting);
+        assertEquals("Center paddle pressed from idle must start with dit", ".", state.lastElement);
+    }
+
+    @Test
+    public void testCenterPaddle_WithLeftOrRight_ActsAsSqueeze() {
+        settings.mode = "iambic-a";
+        settings.polarity = "normal";
+
+        // Center + Left
+        keyer.handlePaddlePress("center", true);
+        keyer.handlePaddlePress("left", true);
+        assertTrue(state.squeezeCurrentlyPressed);
+
+        // Center + Right
+        keyer.handlePaddlePress("left", false);
+        keyer.handlePaddlePress("right", true);
+        assertTrue(state.squeezeCurrentlyPressed);
+
+        // Center + Left + Right
+        keyer.handlePaddlePress("left", true);
+        assertTrue(state.squeezeCurrentlyPressed);
+
+        // Release center, left + right still squeeze
+        keyer.handlePaddlePress("center", false);
+        assertTrue(state.squeezeCurrentlyPressed);
+
+        // Release left, only right pressed -> no squeeze
+        keyer.handlePaddlePress("left", false);
+        assertFalse(state.squeezeCurrentlyPressed);
+    }
+
+    @Test
+    public void testSlideTransition_LeftToCenterToRight() {
+        settings.mode = "iambic-b";
+        settings.polarity = "normal";
+
+        // Slide into left paddle
+        keyer.handlePaddlePress("left", true);
+        assertTrue(state.ditCurrentlyPressed);
+        assertFalse(state.centerCurrentlyPressed);
+        assertFalse(state.dahCurrentlyPressed);
+
+        // Slide from left to center
+        keyer.handlePaddlePress("left", false);
+        keyer.handlePaddlePress("center", true);
+        assertFalse(state.ditCurrentlyPressed);
+        assertTrue(state.centerCurrentlyPressed);
+        assertTrue(state.squeezeCurrentlyPressed);
+
+        // Slide from center to right
+        keyer.handlePaddlePress("center", false);
+        keyer.handlePaddlePress("right", true);
+        assertFalse(state.centerCurrentlyPressed);
+        assertFalse(state.squeezeCurrentlyPressed);
+        assertTrue(state.dahCurrentlyPressed);
+
+        // Slide from right to center
+        keyer.handlePaddlePress("right", false);
+        keyer.handlePaddlePress("center", true);
+        assertFalse(state.dahCurrentlyPressed);
+        assertTrue(state.centerCurrentlyPressed);
+        assertTrue(state.squeezeCurrentlyPressed);
+
+        // Lift finger
+        keyer.handlePaddlePress("center", false);
+        assertFalse(state.centerCurrentlyPressed);
+        assertFalse(state.squeezeCurrentlyPressed);
+    }
 }

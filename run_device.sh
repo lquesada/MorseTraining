@@ -3,17 +3,11 @@
 # Define paths
 ANDROID_SDK="$HOME/Android/Sdk"
 ADB="$ANDROID_SDK/platform-tools/adb"
+[ -x "$ADB" ] || ADB="$(command -v adb 2>/dev/null)"
 
-echo "📱 Checking for connected physical device..."
-# -d targets the only connected USB device. Returns error if 0 or >1 devices.
-DEVICE_CHECK=$($ADB devices -l | grep -v "emulator" | grep -v "List of devices attached" | grep "device")
-
-if [ -z "$DEVICE_CHECK" ]; then
-    echo "❌ No physical device found or authorized. Please connect your phone and enable USB Debugging."
-    exit 1
-fi
-
-echo "✅ Device found: $DEVICE_CHECK"
+# With more than one device attached, ask which one instead of failing. A serial can also be
+# given as the first argument (or in $MORSE_DEVICE / $QFT8_DEVICE / $ANDROID_SERIAL).
+SERIAL="$("$(dirname "$0")/tools/pick_device.sh" "$@")" || exit 1
 
 echo "🔨 Building and installing APK..."
 # We use assembleDebug to build, then adb install to target the specific device type
@@ -26,8 +20,24 @@ fi
 
 APK_PATH="app/build/outputs/apk/debug/app-debug.apk"
 
-echo "📦 Installing to device..."
-$ADB -d install -t -r $APK_PATH
+echo "📦 Installing to $SERIAL..."
+if ! $ADB -s "$SERIAL" install -t -r "$APK_PATH"; then
+    echo "⚠️  Install refused -- most likely this phone has a build signed with a different key."
+    echo "    Replacing it means uninstalling first, which ERASES the app's settings and data"
+    echo "    on $SERIAL."
+    printf "    Uninstall and install clean? [y/N]: "
+    read -r reply
+    case "$reply" in
+        y|Y|yes|YES)
+            $ADB -s "$SERIAL" uninstall com.qft8.morsekeyer 2>/dev/null || true
+            $ADB -s "$SERIAL" install -t -r "$APK_PATH" || exit 1
+            ;;
+        *)
+            echo "    Left as it is."
+            exit 1
+            ;;
+    esac
+fi
 
 echo "🚀 Launching application..."
-$ADB -d shell am start -n com.qft8.morsekeyer/.MainActivity
+$ADB -s "$SERIAL" shell am start -n com.qft8.morsekeyer/.MainActivity

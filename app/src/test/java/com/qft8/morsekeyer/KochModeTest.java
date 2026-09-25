@@ -225,4 +225,60 @@ public class KochModeTest {
         assertEquals("", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded(null));
         assertEquals("", com.qft8.morsekeyer.game.GameController.normalizeTxGameDecoded(""));
     }
+
+    @Test
+    public void testKochLevel41ProsignsWordGenerator() {
+        java.util.Set<String> expectedProsigns = new java.util.HashSet<>(java.util.Arrays.asList(
+            "<AR>", "<AS>", "<SK>", "<BT>", "<KN>", "<SN>", "<HH>", "<VE>", "<SOS>"
+        ));
+        java.util.Set<String> seenProsigns = new java.util.HashSet<>();
+
+        for (int idx = 0; idx < 200; idx++) {
+            String word = KochWordGenerator.generateWord(41, idx);
+            assertTrue("Generated prosign '" + word + "' must be in the 9 expected prosigns",
+                expectedProsigns.contains(word));
+            seenProsigns.add(word);
+        }
+
+        assertEquals("All 9 prosigns should appear across 200 random generations",
+            expectedProsigns.size(), seenProsigns.size());
+    }
+
+    @Test
+    public void testKochLevel41Target() {
+        assertEquals(51, getKochTarget(41));
+    }
+
+    @Test
+    public void testNormalizeKochProsignTx() {
+        assertEquals("<AR>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("<AR/+>", "<AR>"));
+        assertEquals("<AR>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("+", "<AR>"));
+        assertEquals("<AR>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("AR", "<AR>"));
+
+        assertEquals("<AS>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("<AS/&>", "<AS>"));
+        assertEquals("<AS>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("&", "<AS>"));
+
+        assertEquals("<SK>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("<SK/VA>", "<SK>"));
+        assertEquals("<SK>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("SK", "<SK>"));
+        assertEquals("<SK>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("<VA>", "<SK>"));
+
+        assertEquals("<BT>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("<BT/=>", "<BT>"));
+        assertEquals("<BT>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("=", "<BT>"));
+        assertEquals("<BT>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("BT", "<BT>"));
+
+        assertEquals("<KN>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("<KN/(>", "<KN>"));
+        assertEquals("<KN>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("(", "<KN>"));
+        assertEquals("<KN>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("KN", "<KN>"));
+
+        assertEquals("<SOS>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("<SOS>", "<SOS>"));
+        assertEquals("<SOS>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("SOS", "<SOS>"));
+
+        assertEquals("<HH>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("<HH>", "<HH>"));
+        assertEquals("<HH>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("HH", "<HH>"));
+
+        assertEquals("<VE>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("<SN>", "<VE>"));
+        assertEquals("<SN>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("<VE>", "<SN>"));
+        assertEquals("<SN>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("<SN>", "<SN>"));
+        assertEquals("<VE>", com.qft8.morsekeyer.game.GameController.normalizeKochProsignTx("<VE>", "<VE>"));
+    }
 }

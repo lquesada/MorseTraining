@@ -137,5 +137,21 @@ set(TARGET_MET, "ပစ်မှတ်ပြည့်မီသည်");
         // Koch custom level
         set(CUSTOM_LEVEL, "ကိုယ်ပိုင်အဆင့်");
         set(SELECT_CHARACTERS_PROMPT, "စိတ်ဝင်စားသောစာလုံးများကိုရွေးချယ်ရန် ကီးဘုတ်ကိုနှိပ်ပါ");
+
+        // Audio & Sound
+        set(AUDIO, "အသံ");
+        set(SOUND, "အသံအမျိုးအစား");
+        set(CLICKS, "ကလစ်သံများ");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "ကီးယား ယုတ္တိ");
+        set(SCREEN_PADDLES, "မျက်နှာပြင် လက်တံများ");
+        set(PADDLES_TYPE, "လက်တံ အမျိုးအစား");
+        set(PADDLES_STANDARD, "ပုံမှန်");
+        set(PADDLES_IAMBIC_ONE_FINGER, "အိုင်ယမ်ဘစ် လက်တစ်ချောင်း");
+        set(SQUEEZE_BUTTON_WIDTH, "squeeze ခလုတ် အကျယ်");
+
+        // Prosigns level
+        set(PROSIGNS, "အချက်ပြသင်္ကေတများ");
     }
 }

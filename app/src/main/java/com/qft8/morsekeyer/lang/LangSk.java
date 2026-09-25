@@ -105,6 +105,7 @@ public class LangSk extends MorseLanguage {
         set(SCORE, "skóre");
         set(MATCH_COMPLETED, "Zápas dokončený");
         set(HIGH_SCORE, "Vysoké skóre");
+        set(YOUR_HIGH_SCORE_IS, "Vaše najvyššie skóre je");
 
                 
 
@@ -143,5 +144,21 @@ set(TARGET_MET, "Cieľ splnený");
         // Koch custom level
         set(CUSTOM_LEVEL, "Vlastná úroveň");
         set(SELECT_CHARACTERS_PROMPT, "Klepnutím na klávesnicu vyberte znaky, ktoré vás zaujímajú");
+
+        // Audio & Sound
+        set(AUDIO, "Zvuk");
+        set(SOUND, "Typ zvuku");
+        set(CLICKS, "Klapnutia");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Logika kľúča");
+        set(SCREEN_PADDLES, "Pádla na obrazovke");
+        set(PADDLES_TYPE, "Typ pádiel");
+        set(PADDLES_STANDARD, "Štandardný");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Jambický jedným prstom");
+        set(SQUEEZE_BUTTON_WIDTH, "Šírka tlačidla squeeze");
+
+        // Prosigns level
+        set(PROSIGNS, "prosigny");
     }
 }

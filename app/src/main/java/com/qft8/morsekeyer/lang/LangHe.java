@@ -105,6 +105,7 @@ public class LangHe extends MorseLanguage {
         set(SCORE, "צִיוּן");
         set(MATCH_COMPLETED, "התאמה הושלמה");
         set(HIGH_SCORE, "ציון גבוה");
+        set(YOUR_HIGH_SCORE_IS, "הציון הגבוה שלך הוא");
 
                 
 
@@ -143,5 +144,21 @@ set(TARGET_MET, "היעד הושג");
         // Koch custom level
         set(CUSTOM_LEVEL, "רמה מותאמת אישית");
         set(SELECT_CHARACTERS_PROMPT, "הקש על המקלדת כדי לבחור את התווים שמעניינים אותך");
+
+        // Audio & Sound
+        set(AUDIO, "שמע");
+        set(SOUND, "סוג צליל");
+        set(CLICKS, "תקתוקים");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "לוגיקת מפתח");
+        set(SCREEN_PADDLES, "משוטים במסך");
+        set(PADDLES_TYPE, "סוג משוטים");
+        set(PADDLES_STANDARD, "רגיל");
+        set(PADDLES_IAMBIC_ONE_FINGER, "יאמבי אצבע אחת");
+        set(SQUEEZE_BUTTON_WIDTH, "רוחב כפתור squeeze");
+
+        // Prosigns level
+        set(PROSIGNS, "אותות נוהל");
     }
 }

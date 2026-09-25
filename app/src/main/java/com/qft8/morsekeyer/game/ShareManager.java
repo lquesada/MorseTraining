@@ -323,7 +323,12 @@ public class ShareManager {
         cancelBg.setColor(surfaceCol);
         cancelBg.setStroke(dp(activity, 1), borderCol);
         cancelBtn.setBackground(cancelBg);
+        final Bitmap[] currentPreviewBitmap = {null}; // declared here so cancelBtn lambda can capture it
         cancelBtn.setOnClickListener(v -> {
+            if (currentPreviewBitmap[0] != null && !currentPreviewBitmap[0].isRecycled()) {
+                currentPreviewBitmap[0].recycle();
+                currentPreviewBitmap[0] = null;
+            }
             if (onBack != null) onBack.run();
         });
         LinearLayout.LayoutParams cancelParams = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f);
@@ -376,7 +381,12 @@ public class ShareManager {
             shareView.measure(widthSpec, heightSpec);
             shareView.layout(0, 0, 1080, measuredHeight);
 
+            // Recycle the previous preview bitmap to avoid ~5.8MB leaks on each update
+            if (currentPreviewBitmap[0] != null && !currentPreviewBitmap[0].isRecycled()) {
+                currentPreviewBitmap[0].recycle();
+            }
             Bitmap b = Bitmap.createBitmap(shareView.getMeasuredWidth(), shareView.getMeasuredHeight(), Bitmap.Config.ARGB_8888);
+            currentPreviewBitmap[0] = b;
             Canvas c = new Canvas(b);
             shareView.draw(c);
             

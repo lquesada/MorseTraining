@@ -216,4 +216,34 @@ public class MorseSettingsTest {
         // interletterSpacing = 100 * 5 / 10 = 50
         assertEquals(50, settings.interletterSpacing);
     }
+
+    @Test
+    public void testDefaultSoundType() {
+        MorseSettings settings = new MorseSettings();
+        assertEquals("tone", settings.soundType);
+    }
+
+    @Test
+    public void testDefaultPaddleType() {
+        MorseSettings settings = new MorseSettings();
+        assertEquals("standard", settings.paddleType);
+    }
+
+    @Test
+    public void testDefaultSqueezeWidth() {
+        MorseSettings settings = new MorseSettings();
+        assertEquals(15, settings.squeezeWidth);
+    }
+
+    @Test
+    public void testResetToDefaultsSoundAndPaddleType() {
+        MorseSettings settings = new MorseSettings();
+        settings.soundType = "clicks";
+        settings.paddleType = "iambic_one_finger";
+        settings.squeezeWidth = 25;
+        settings.resetToDefaults();
+        assertEquals("tone", settings.soundType);
+        assertEquals("standard", settings.paddleType);
+        assertEquals(15, settings.squeezeWidth);
+    }
 }

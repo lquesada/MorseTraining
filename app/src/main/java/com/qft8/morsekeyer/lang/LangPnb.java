@@ -97,6 +97,7 @@ public class LangPnb extends MorseLanguage {
         set(SCORE, "ਸਕੋਰ");
         set(MATCH_COMPLETED, "ਮੈਚ ਪੂਰਾ ਹੋਇਆ");
         set(HIGH_SCORE, "ਉੱਚ ਸਕੋਰ");
+        set(YOUR_HIGH_SCORE_IS, "ਤੁਹਾਡਾ ਸਭ ਤੋਂ ਵੱਧ ਸਕੋਰ ਹੈ");
 
                 
 
@@ -136,5 +137,21 @@ set(TARGET_MET, "ہدف حاصل ہو گیا");
         // Koch custom level
         set(CUSTOM_LEVEL, "ਕਸਟਮ ਪੱਧਰ");
         set(SELECT_CHARACTERS_PROMPT, "ਉਹ ਅੱਖਰ ਚੁਣਨ ਲਈ ਕੀਬੋਰਡ ਤੇ ਟੈਪ ਕਰੋ ਜਿਨ੍ਹਾਂ ਵਿੱਚ ਤੁਹਾਡੀ ਦਿਲਚਸਪੀ ਹੈ");
+
+        // Audio & Sound
+        set(AUDIO, "آواز");
+        set(SOUND, "آواز دی قسم");
+        set(CLICKS, "ٹک ٹک");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "کیئر لاجک");
+        set(SCREEN_PADDLES, "سکرین پیڈلز");
+        set(PADDLES_TYPE, "پیڈل دی قسم");
+        set(PADDLES_STANDARD, "معیاری");
+        set(PADDLES_IAMBIC_ONE_FINGER, "آئیمبک اک انگلی");
+        set(SQUEEZE_BUTTON_WIDTH, "squeeze بٹن دی چوڑائی");
+
+        // Prosigns level
+        set(PROSIGNS, "اشارے");
     }
 }

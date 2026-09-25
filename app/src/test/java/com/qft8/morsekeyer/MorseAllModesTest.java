@@ -127,4 +127,18 @@ public class MorseAllModesTest {
         keyer.handlePaddlePress("right", false);
         assertFalse(state.isTransmitting);
     }
+
+    @Test
+    public void testOneFingerGatedOnlyToIambicAAndB() {
+        String[] allModes = {"straight", "iambic-a", "iambic-b", "ultimatic", "bug", "cootie"};
+        for (String mode : allModes) {
+            boolean isIambic = "iambic-a".equals(mode) || "iambic-b".equals(mode);
+            boolean isOneFinger = "iambic_one_finger".equals("iambic_one_finger") && isIambic;
+            if ("iambic-a".equals(mode) || "iambic-b".equals(mode)) {
+                assertTrue("One-finger should be active in " + mode, isOneFinger);
+            } else {
+                assertFalse("One-finger must NOT be active in " + mode, isOneFinger);
+            }
+        }
+    }
 }

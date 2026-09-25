@@ -137,5 +137,21 @@ set(TARGET_MET, "ಗುರಿ ತಲುಪಿದೆ");
         // Koch custom level
         set(CUSTOM_LEVEL, "ಕಸ್ಟಮ್ ಹಂತ");
         set(SELECT_CHARACTERS_PROMPT, "ನಿಮಗೆ ಆಸಕ್ತಿ ಇರುವ ಅಕ್ಷರಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಕೀಬೋರ್ಡ್ ಅನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ");
+
+        // Audio & Sound
+        set(AUDIO, "ಆಡಿಯೋ");
+        set(SOUND, "ಧ್ವನಿ");
+        set(CLICKS, "ಕ್ಲಿಕ್‌ಗಳು");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "ಕೀಯರ್ ತರ್ಕ");
+        set(SCREEN_PADDLES, "ಪರದೆಯ ಪ್ಯಾಡಲ್‌ಗಳು");
+        set(PADDLES_TYPE, "ಪ್ಯಾಡಲ್ ಪ್ರಕಾರ");
+        set(PADDLES_STANDARD, "ಪ್ರಮಾಣಿತ");
+        set(PADDLES_IAMBIC_ONE_FINGER, "ಐಯಾಂಬಿಕ್ ಒಂದು ಬೆರಳು");
+        set(SQUEEZE_BUTTON_WIDTH, "squeeze ಬಟನ್ ಅಗಲ");
+
+        // Prosigns level
+        set(PROSIGNS, "ಪ್ರಕ್ರಿಯಾ ಸಂಕೇತಗಳು");
     }
 }

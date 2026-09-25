@@ -144,5 +144,21 @@ set(TARGET_MET, "هدف محقق شد");
         // Koch custom level
         set(CUSTOM_LEVEL, "سطح سفارشی");
         set(SELECT_CHARACTERS_PROMPT, "روی صفحه‌کلید ضربه بزنید تا کاراکترهای مورد علاقه‌تان را انتخاب کنید");
+
+        // Audio & Sound
+        set(AUDIO, "صدا");
+        set(SOUND, "نوع صدا");
+        set(CLICKS, "کلیک‌ها");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "منطق کلیدزن");
+        set(SCREEN_PADDLES, "پدال‌های صفحه");
+        set(PADDLES_TYPE, "نوع پدال");
+        set(PADDLES_STANDARD, "استاندارد");
+        set(PADDLES_IAMBIC_ONE_FINGER, "یامبیک تک‌انگشتی");
+        set(SQUEEZE_BUTTON_WIDTH, "عرض دکمه squeeze");
+
+        // Prosigns level
+        set(PROSIGNS, "علائم عملیاتی");
     }
 }

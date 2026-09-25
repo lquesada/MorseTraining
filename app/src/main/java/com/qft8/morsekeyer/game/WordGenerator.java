@@ -59,7 +59,8 @@ public class WordGenerator {
 
     public static String generateGameWord(int gameWordsSolved, String[] currentActive) {
         String word = "";
-        while (true) {
+        int attempts = 0;
+        while (attempts++ < 50) {
             int qCodeChance = (gameWordsSolved <= 30) ? 40 : 60;
             if (Math.random() * qCodeChance < 1.0) {
                 word = Q_CODES_WITH_QUESTION[(int) (Math.random() * Q_CODES_WITH_QUESTION.length)];
@@ -148,5 +149,7 @@ public class WordGenerator {
                 return word;
             }
         }
+        wordsGenerated++;
+        return word.isEmpty() ? "CQ" : word;
     }
 }

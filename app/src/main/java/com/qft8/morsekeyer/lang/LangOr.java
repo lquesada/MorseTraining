@@ -137,5 +137,21 @@ set(TARGET_MET, "ଲକ୍ଷ୍ୟ ପୂରଣ ହୋଇଛି");
         // Koch custom level
         set(CUSTOM_LEVEL, "କଷ୍ଟମ ସ୍ତର");
         set(SELECT_CHARACTERS_PROMPT, "ଆପଣ ଆଗ୍ରହୀ ଥିବା ଅକ୍ଷରଗୁଡ଼ିକ ବାଛିବା ପାଇଁ କୀବୋର୍ଡ ଟ୍ୟାପ କରନ୍ତୁ");
+
+        // Audio & Sound
+        set(AUDIO, "ଅଡିଓ");
+        set(SOUND, "ଶବ୍ଦ");
+        set(CLICKS, "କ୍ଲିକ୍");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "କିୟର ଯୁକ୍ତି");
+        set(SCREEN_PADDLES, "ସ୍କ୍ରିନ୍ ପ୍ୟାଡଲ୍");
+        set(PADDLES_TYPE, "ପ୍ୟାଡଲ୍ ପ୍ରକାର");
+        set(PADDLES_STANDARD, "ମାନକ");
+        set(PADDLES_IAMBIC_ONE_FINGER, "ଇୟାମ୍ବିକ୍ ଏକ ଆଙ୍ଗୁଠି");
+        set(SQUEEZE_BUTTON_WIDTH, "squeeze ବଟନ୍ ପ୍ରସ୍ଥ");
+
+        // Prosigns level
+        set(PROSIGNS, "ପ୍ରକ୍ରିୟା ସଙ୍କେତ");
     }
 }

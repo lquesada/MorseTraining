@@ -44,6 +44,7 @@ public class ToneEngine {
     private final java.util.Random random = new java.util.Random();
 
     private volatile String toneType = "triangle";
+    private volatile String soundType = "tone";
     private volatile int frequencyHz = 700;
     private volatile int volume = 40; // 0-100
     private volatile float bufferMs = 25.0f;
@@ -107,7 +108,7 @@ public class ToneEngine {
                 return; // Device does not support this format
             }
 
-            audioTrack = new AudioTrack.Builder()
+            AudioTrack.Builder builder = new AudioTrack.Builder()
                     .setAudioAttributes(attrs)
                     .setAudioFormat(new AudioFormat.Builder()
                             .setEncoding(AudioFormat.ENCODING_PCM_FLOAT)
@@ -115,9 +116,11 @@ public class ToneEngine {
                             .setChannelMask(AudioFormat.CHANNEL_OUT_MONO)
                             .build())
                     .setBufferSizeInBytes(bufferSize)
-                    .setTransferMode(AudioTrack.MODE_STREAM)
-                    .setPerformanceMode(AudioTrack.PERFORMANCE_MODE_LOW_LATENCY)
-                    .build();
+                    .setTransferMode(AudioTrack.MODE_STREAM);
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                builder.setPerformanceMode(AudioTrack.PERFORMANCE_MODE_LOW_LATENCY);
+            }
+            audioTrack = builder.build();
 
             // Ensure we use the smallest possible active buffer within the track
             applyBufferSettings();
@@ -133,7 +136,7 @@ public class ToneEngine {
             audioThread = new Thread(this::audioLoop, "ToneEngine");
             audioThread.setPriority(Thread.MAX_PRIORITY);
             audioThread.start();
-        } catch (Exception e) {
+        } catch (Throwable e) {
             e.printStackTrace();
             running = false;
         }
@@ -166,6 +169,7 @@ public class ToneEngine {
      * and the midpoint of the fall aligns with the nominal tone end.
      */
     private int envelopeCompensationSamples() {
+        if ("clicks".equals(soundType)) return 0;
         return (int) Math.round(envelopeMs * sampleRate / 1000.0);
     }
 
@@ -278,6 +282,10 @@ public class ToneEngine {
         // Pre-allocate a large buffer to avoid GC pressure (max 100ms at 44.1kHz)
         float[] buffer = new float[sampleRate / 10];
 
+        boolean prevActive = false;
+        int clickPhase = 0; // 0 = none, 1 = down-click, 2 = up-click
+        int clickSampleCounter = 0;
+
         while (running) {
             int currentChunkSize = (int) (sampleRate * chunkMs / 1000.0);
             if (currentChunkSize < 1)
@@ -350,43 +358,117 @@ public class ToneEngine {
                     targetGain = 0.0f; // Absolute silence
                 }
 
-                // Exponential envelope
-                currentGain += alphaLocal * (targetGain - currentGain);
+                boolean currentActive = (localElementPhase > 0) ? (localElementPhase == 1) : toneActive;
 
-                // Generate waveform sample
-                float sample;
-                double p = phase - Math.floor(phase + 0.5);
-                if ("sawtooth".equals(activeToneType)) {
-                    sample = (float) (2.0 * p);
-                } else {
-                    // triangle
-                    sample = (float) (2.0 * Math.abs(2.0 * p) - 1.0);
-                }
-
-                float sampleValue = sample * currentGain;
-                if (keepAlive && currentGain < 0.00001f) {
-                    // Keep the audio hardware/mixer awake with white noise.
-                    float rawNoise = (random.nextFloat() * 2.0f - 1.0f);
-                    float noiseValue;
-                    
-                    if (whiteNoise) {
-                        float omega_dt = (float) (2.0 * Math.PI * whiteNoiseFrequency / sampleRate);
-                        float filterAlpha = omega_dt / (omega_dt + 1.0f);
-                        noiseFilterState += filterAlpha * (rawNoise - noiseFilterState);
-                        
-                        float noiseLevel = (float) activeVolume / 100.0f * (whiteNoiseVolume / 100.0f);
-                        noiseValue = noiseFilterState * noiseLevel;
-                    } else {
-                        noiseValue = rawNoise * 0.00001f;
+                float sampleValue = 0.0f;
+                if ("clicks".equals(soundType)) {
+                    if (currentActive && !prevActive) {
+                        clickPhase = 1; // Down-click on key down / element start
+                        clickSampleCounter = 0;
+                    } else if (!currentActive && prevActive) {
+                        clickPhase = 2; // Up-click on key up / element end
+                        clickSampleCounter = 0;
                     }
-                    sampleValue += noiseValue;
-                }
-                buffer[i] = sampleValue;
+                    prevActive = currentActive;
 
-                // Advance phase
-                phase += (double) activeFrequencyHz / sampleRate;
-                if (phase >= 1.0)
-                    phase -= 1.0;
+                    if (clickPhase > 0) {
+                        float t = (float) clickSampleCounter / sampleRate;
+                        if (clickPhase == 1) {
+                            // Down-click: solid mechanical strike against front contact/anvil
+                            int maxSamples = (int) (sampleRate * 0.009f);
+                            if (clickSampleCounter < maxSamples) {
+                                float decay = (float) Math.exp(-t / 0.0018f);
+                                float toneComponent = 0.7f * (float) Math.sin(2.0 * Math.PI * 1350.0 * t)
+                                        + 0.3f * (float) Math.sin(2.0 * Math.PI * 2700.0 * t);
+                                float noiseComponent = ((random.nextFloat() * 2.0f - 1.0f) * 0.4f) * (float) Math.exp(-t / 0.0008f);
+                                sampleValue = (toneComponent + noiseComponent) * decay * ((float) activeVolume / 100.0f) * 1.5f;
+                                clickSampleCounter++;
+                            } else {
+                                clickPhase = 0;
+                                clickSampleCounter = 0;
+                            }
+                        } else {
+                            // Up-click: lighter spring-loaded return strike against upper stop
+                            int maxSamples = (int) (sampleRate * 0.006f);
+                            if (clickSampleCounter < maxSamples) {
+                                float decay = (float) Math.exp(-t / 0.0012f);
+                                float toneComponent = 0.6f * (float) Math.sin(2.0 * Math.PI * 2100.0 * t)
+                                        + 0.3f * (float) Math.sin(2.0 * Math.PI * 3800.0 * t);
+                                float noiseComponent = ((random.nextFloat() * 2.0f - 1.0f) * 0.3f) * (float) Math.exp(-t / 0.0006f);
+                                sampleValue = (toneComponent + noiseComponent) * decay * ((float) activeVolume / 100.0f) * 1.1f;
+                                clickSampleCounter++;
+                            } else {
+                                clickPhase = 0;
+                                clickSampleCounter = 0;
+                            }
+                        }
+                    }
+
+                    if (sampleValue > 1.0f) sampleValue = 1.0f;
+                    else if (sampleValue < -1.0f) sampleValue = -1.0f;
+
+                    if (keepAlive && Math.abs(sampleValue) < 0.00001f) {
+                        float rawNoise = (random.nextFloat() * 2.0f - 1.0f);
+                        float noiseValue;
+                        if (whiteNoise) {
+                            float omega_dt = (float) (2.0 * Math.PI * whiteNoiseFrequency / sampleRate);
+                            float filterAlpha = omega_dt / (omega_dt + 1.0f);
+                            noiseFilterState += filterAlpha * (rawNoise - noiseFilterState);
+                            if (Float.isNaN(noiseFilterState) || Float.isInfinite(noiseFilterState)) {
+                                noiseFilterState = 0.0f;
+                            }
+                            float noiseLevel = (float) activeVolume / 100.0f * (whiteNoiseVolume / 100.0f);
+                            noiseValue = noiseFilterState * noiseLevel;
+                        } else {
+                            noiseValue = rawNoise * 0.00001f;
+                        }
+                        sampleValue += noiseValue;
+                    }
+                    buffer[i] = sampleValue;
+                } else {
+                    prevActive = currentActive;
+
+                    // Exponential envelope
+                    currentGain += alphaLocal * (targetGain - currentGain);
+
+                    // Generate waveform sample
+                    float sample;
+                    double p = phase - Math.floor(phase + 0.5);
+                    if ("sawtooth".equals(activeToneType)) {
+                        sample = (float) (2.0 * p);
+                    } else {
+                        // triangle
+                        sample = (float) (2.0 * Math.abs(2.0 * p) - 1.0);
+                    }
+
+                    sampleValue = sample * currentGain;
+                    if (keepAlive && currentGain < 0.00001f) {
+                        // Keep the audio hardware/mixer awake with white noise.
+                        float rawNoise = (random.nextFloat() * 2.0f - 1.0f);
+                        float noiseValue;
+                        
+                        if (whiteNoise) {
+                            float omega_dt = (float) (2.0 * Math.PI * whiteNoiseFrequency / sampleRate);
+                            float filterAlpha = omega_dt / (omega_dt + 1.0f);
+                            noiseFilterState += filterAlpha * (rawNoise - noiseFilterState);
+                            if (Float.isNaN(noiseFilterState) || Float.isInfinite(noiseFilterState)) {
+                                noiseFilterState = 0.0f;
+                            }
+                            
+                            float noiseLevel = (float) activeVolume / 100.0f * (whiteNoiseVolume / 100.0f);
+                            noiseValue = noiseFilterState * noiseLevel;
+                        } else {
+                            noiseValue = rawNoise * 0.00001f;
+                        }
+                        sampleValue += noiseValue;
+                    }
+                    buffer[i] = sampleValue;
+
+                    // Advance phase
+                    phase += (double) activeFrequencyHz / sampleRate;
+                    if (phase >= 1.0)
+                        phase -= 1.0;
+                }
             }
 
             if (audioTrack != null && running) {
@@ -398,6 +480,14 @@ public class ToneEngine {
                 }
             }
         }
+    }
+
+    public void setSoundType(String soundType) {
+        this.soundType = soundType != null ? soundType : "tone";
+    }
+
+    public String getSoundType() {
+        return this.soundType;
     }
 
     public void setToneType(String type) {
@@ -418,8 +508,9 @@ public class ToneEngine {
     }
 
     public void setEnvelopeMs(float ms) {
-        this.envelopeMs = ms;
-        this.alpha = (float) (1.0 - Math.exp(-1.0 / (ms * sampleRate / 1000.0)));
+        float safeMs = Math.max(0.1f, ms);
+        this.envelopeMs = safeMs;
+        this.alpha = (float) (1.0 - Math.exp(-1.0 / (safeMs * sampleRate / 1000.0)));
     }
 
     public void setChunkMs(float ms) {
@@ -452,6 +543,9 @@ public class ToneEngine {
     }
 
     public boolean isPlaying() {
+        if ("clicks".equals(soundType)) {
+            return toneActive || elementPhase == 1;
+        }
         return toneActive || currentGain > 0.0001f;
     }
 

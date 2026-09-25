@@ -137,5 +137,21 @@ set(TARGET_MET, "تم تحقيق الهدف");
         // Koch custom level
         set(CUSTOM_LEVEL, "Nivel personalizado");
         set(SELECT_CHARACTERS_PROMPT, "Pulsa el teclado para seleccionar los caracteres que te interesan");
+
+        // Audio & Sound
+        set(AUDIO, "الصوت");
+        set(SOUND, "نوع الصوت");
+        set(CLICKS, "طقطقة");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "منطق المفتاح");
+        set(SCREEN_PADDLES, "مجاديف الشاشة");
+        set(PADDLES_TYPE, "نوع المجداف");
+        set(PADDLES_STANDARD, "عادي");
+        set(PADDLES_IAMBIC_ONE_FINGER, "يامبيك بإصبع واحد");
+        set(SQUEEZE_BUTTON_WIDTH, "عرض زر squeeze");
+
+        // Prosigns level
+        set(PROSIGNS, "إشارات الإجراءات");
     }
 }

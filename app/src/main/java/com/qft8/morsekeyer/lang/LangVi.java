@@ -144,5 +144,21 @@ set(TARGET_MET, "Đã đạt mục tiêu");
         // Koch custom level
         set(CUSTOM_LEVEL, "Cấp độ tùy chỉnh");
         set(SELECT_CHARACTERS_PROMPT, "Nhấn vào bàn phím để chọn các ký tự bạn quan tâm");
+
+        // Audio & Sound
+        set(AUDIO, "Âm thanh");
+        set(SOUND, "Kiểu âm thanh");
+        set(CLICKS, "Tiếng tách");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Logic khóa");
+        set(SCREEN_PADDLES, "Cần gạt trên màn hình");
+        set(PADDLES_TYPE, "Loại cần gạt");
+        set(PADDLES_STANDARD, "Tiêu chuẩn");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Iambic một ngón");
+        set(SQUEEZE_BUTTON_WIDTH, "Độ rộng nút squeeze");
+
+        // Prosigns level
+        set(PROSIGNS, "ký hiệu quy trình");
     }
 }

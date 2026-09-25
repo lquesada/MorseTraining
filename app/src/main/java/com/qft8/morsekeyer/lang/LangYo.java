@@ -137,5 +137,21 @@ set(TARGET_MET, "Àfojúsùn ti tẹ́lọrùn");
         // Koch custom level
         set(CUSTOM_LEVEL, "Ipele aṣa");
         set(SELECT_CHARACTERS_PROMPT, "Tẹ keyboard lati yan awọn ohun kikọ ti o nifẹ si");
+
+        // Audio & Sound
+        set(AUDIO, "Ohùn");
+        set(SOUND, "Irú ohùn");
+        set(CLICKS, "Àwọn ìtẹ́");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Ọgbọ́n kọ́kọ́rọ́");
+        set(SCREEN_PADDLES, "Àwọn pádù lórí ojú-ìwé");
+        set(PADDLES_TYPE, "Irú pádù");
+        set(PADDLES_STANDARD, "Bí ó ti yẹ");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Iambic ìka kan");
+        set(SQUEEZE_BUTTON_WIDTH, "Ìbú bọ́tìnnì squeeze");
+
+        // Prosigns level
+        set(PROSIGNS, "àwọn àmì ìlànà");
     }
 }

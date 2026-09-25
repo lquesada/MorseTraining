@@ -137,5 +137,21 @@ set(TARGET_MET, "Hədəfə çatıldı");
         // Koch custom level
         set(CUSTOM_LEVEL, "Xüsusi səviyyə");
         set(SELECT_CHARACTERS_PROMPT, "Maraqlandığınız simvolları seçmək üçün klaviaturaya toxunun");
+
+        // Audio & Sound
+        set(AUDIO, "Audio");
+        set(SOUND, "Səs növü");
+        set(CLICKS, "Kliklər");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Manipulyator məntiqi");
+        set(SCREEN_PADDLES, "Ekran manipulyatorları");
+        set(PADDLES_TYPE, "Manipulyator növü");
+        set(PADDLES_STANDARD, "Standart");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Yambik bir barmaq");
+        set(SQUEEZE_BUTTON_WIDTH, "Squeeze düyməsinin eni");
+
+        // Prosigns level
+        set(PROSIGNS, "prosedur siqnalları");
     }
 }

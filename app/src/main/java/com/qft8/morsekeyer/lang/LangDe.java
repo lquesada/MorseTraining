@@ -144,5 +144,21 @@ set(TARGET_MET, "Ziel erreicht");
         // Koch custom level
         set(CUSTOM_LEVEL, "Eigene Stufe");
         set(SELECT_CHARACTERS_PROMPT, "Tippe auf die Tastatur, um die Zeichen auszuwählen, die dich interessieren");
+
+        // Audio & Sound
+        set(AUDIO, "Audio");
+        set(SOUND, "Ton/Klang");
+        set(CLICKS, "Klicks");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Keyer-Logik");
+        set(SCREEN_PADDLES, "Bildschirm-Paddles");
+        set(PADDLES_TYPE, "Paddle-Typ");
+        set(PADDLES_STANDARD, "Standard");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Iambic Ein-Finger");
+        set(SQUEEZE_BUTTON_WIDTH, "Breite der Squeeze-Taste");
+
+        // Prosigns level
+        set(PROSIGNS, "Prosigns");
     }
 }

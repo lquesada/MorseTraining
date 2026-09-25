@@ -144,5 +144,21 @@ set(TARGET_MET, "Celo atingita");
         // Koch custom level
         set(CUSTOM_LEVEL, "Propra nivelo");
         set(SELECT_CHARACTERS_PROMPT, "Tuŝu la klavaron por elekti la signojn, kiuj interesas vin");
+
+        // Audio & Sound
+        set(AUDIO, "Sono");
+        set(SOUND, "Sontipo");
+        set(CLICKS, "Klakoj");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Klavara logiko");
+        set(SCREEN_PADDLES, "Ekrana manipulilo");
+        set(PADDLES_TYPE, "Manipulila speco");
+        set(PADDLES_STANDARD, "Norma");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Jamba unu fingro");
+        set(SQUEEZE_BUTTON_WIDTH, "Larĝo de la squeeze-butono");
+
+        // Prosigns level
+        set(PROSIGNS, "prosignoj");
     }
 }

@@ -7,10 +7,19 @@ public class KochWordGenerator {
     
     private static final int[] LENGTHS = {2, 2, 3, 3, 3, 4, 4, 4, 4, 4};
     
+    public static final String[] PROSIGNS = {
+        "<AR>", "<AS>", "<SK>", "<BT>", "<KN>", "<SN>", "<HH>", "<VE>", "<SOS>"
+    };
+
     public static String generateWord(int level, int wordIndex) {
-        int length = wordIndex < LENGTHS.length ? LENGTHS[wordIndex] : 5;
+        int safeLevel = Math.max(0, Math.min(41, level));
+        int safeWordIndex = Math.max(0, wordIndex);
+        if (safeLevel == 41) {
+            return PROSIGNS[random.nextInt(PROSIGNS.length)];
+        }
+        int length = safeWordIndex < LENGTHS.length ? LENGTHS[safeWordIndex] : 5;
         
-        String newChar = KochLevelSelectView.KOCH_CHARS[level];
+        String newChar = KochLevelSelectView.KOCH_CHARS[safeLevel];
         
         StringBuilder sb = new StringBuilder();
         int newCharPos = random.nextInt(length);
@@ -19,7 +28,7 @@ public class KochWordGenerator {
             if (i == newCharPos) {
                 sb.append(newChar);
             } else {
-                int rndLevel = random.nextInt(level + 1);
+                int rndLevel = random.nextInt(safeLevel + 1);
                 sb.append(KochLevelSelectView.KOCH_CHARS[rndLevel]);
             }
         }
@@ -42,7 +51,8 @@ public class KochWordGenerator {
         if (customChars == null || customChars.length == 0) {
             return "K"; // fallback, should never happen
         }
-        int length = wordIndex < LENGTHS.length ? LENGTHS[wordIndex] : 5;
+        int safeWordIndex = Math.max(0, wordIndex);
+        int length = safeWordIndex < LENGTHS.length ? LENGTHS[safeWordIndex] : 5;
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < length; i++) {
             sb.append(customChars[random.nextInt(customChars.length)]);

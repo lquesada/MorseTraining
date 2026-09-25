@@ -144,5 +144,21 @@ set(TARGET_MET, "Hedefe ulaşıldı");
         // Koch custom level
         set(CUSTOM_LEVEL, "Özel seviye");
         set(SELECT_CHARACTERS_PROMPT, "İlgilendiğiniz karakterleri seçmek için klavyeye dokunun");
+
+        // Audio & Sound
+        set(AUDIO, "Ses");
+        set(SOUND, "Ses türü");
+        set(CLICKS, "Tıklamalar");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Manipülatör mantığı");
+        set(SCREEN_PADDLES, "Ekran manipleleri");
+        set(PADDLES_TYPE, "Maniple türü");
+        set(PADDLES_STANDARD, "Standart");
+        set(PADDLES_IAMBIC_ONE_FINGER, "İyambik tek parmak");
+        set(SQUEEZE_BUTTON_WIDTH, "Squeeze düğmesi genişliği");
+
+        // Prosigns level
+        set(PROSIGNS, "prosedür sinyalleri");
     }
 }

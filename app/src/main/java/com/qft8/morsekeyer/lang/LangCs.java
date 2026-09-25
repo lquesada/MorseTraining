@@ -137,5 +137,21 @@ set(TARGET_MET, "Cíl splněn");
         // Koch custom level
         set(CUSTOM_LEVEL, "Vlastní úroveň");
         set(SELECT_CHARACTERS_PROMPT, "Klepnutím na klávesnici vyberte znaky, které vás zajímají");
+
+        // Audio & Sound
+        set(AUDIO, "Zvuk");
+        set(SOUND, "Typ zvuku");
+        set(CLICKS, "Klapání");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Logika klíče");
+        set(SCREEN_PADDLES, "Pádla na obrazovce");
+        set(PADDLES_TYPE, "Typ pádel");
+        set(PADDLES_STANDARD, "Standardní");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Jambický jedním prstem");
+        set(SQUEEZE_BUTTON_WIDTH, "Šířka tlačítka squeeze");
+
+        // Prosigns level
+        set(PROSIGNS, "prosigny");
     }
 }

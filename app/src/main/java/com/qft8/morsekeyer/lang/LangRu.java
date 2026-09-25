@@ -144,5 +144,21 @@ set(TARGET_MET, "Цель достигнута");
         // Koch custom level
         set(CUSTOM_LEVEL, "Пользовательский уровень");
         set(SELECT_CHARACTERS_PROMPT, "Нажмите на клавиатуру, чтобы выбрать интересующие вас символы");
+
+        // Audio & Sound
+        set(AUDIO, "Аудио");
+        set(SOUND, "Звук");
+        set(CLICKS, "Щелчки");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Логика манипулятора");
+        set(SCREEN_PADDLES, "Экранные манипуляторы");
+        set(PADDLES_TYPE, "Тип манипулятора");
+        set(PADDLES_STANDARD, "Стандартный");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Ямбический один палец");
+        set(SQUEEZE_BUTTON_WIDTH, "Ширина кнопки squeeze");
+
+        // Prosigns level
+        set(PROSIGNS, "служебные знаки");
     }
 }

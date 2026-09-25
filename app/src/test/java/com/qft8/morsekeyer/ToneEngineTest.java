@@ -42,6 +42,15 @@ public class ToneEngineTest {
     }
 
     @Test
+    public void testSetSoundTypeDoesNotThrow() {
+        ToneEngine engine = new ToneEngine();
+        engine.setSoundType("tone");
+        engine.setSoundType("clicks");
+        engine.setSoundType(null);
+        engine.setSoundType("unknown");
+    }
+
+    @Test
     public void testReleaseWithoutInitDoesNotThrow() {
         ToneEngine engine = new ToneEngine();
         engine.release();

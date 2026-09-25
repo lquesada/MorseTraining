@@ -144,5 +144,21 @@ set(TARGET_MET, "Lengo limefikiwa");
         // Koch custom level
         set(CUSTOM_LEVEL, "Kiwango maalum");
         set(SELECT_CHARACTERS_PROMPT, "Gonga kibodi ili kuchagua herufi unazozipenda");
+
+        // Audio & Sound
+        set(AUDIO, "Sauti");
+        set(SOUND, "Aina ya sauti");
+        set(CLICKS, "Milipuko");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Mantiki ya keyer");
+        set(SCREEN_PADDLES, "Makasia ya skrini");
+        set(PADDLES_TYPE, "Aina ya makasia");
+        set(PADDLES_STANDARD, "Kawaida");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Iambic kidole kimoja");
+        set(SQUEEZE_BUTTON_WIDTH, "Upana wa kitufe cha squeeze");
+
+        // Prosigns level
+        set(PROSIGNS, "ishara za utaratibu");
     }
 }

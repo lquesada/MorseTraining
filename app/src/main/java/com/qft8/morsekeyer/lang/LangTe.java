@@ -137,5 +137,21 @@ set(TARGET_MET, "లక్ష్యం చేరుకుంది");
         // Koch custom level
         set(CUSTOM_LEVEL, "కస్టమ్ స్థాయి");
         set(SELECT_CHARACTERS_PROMPT, "మీకు ఆసక్తి ఉన్న అక్షరాలను ఎంచుకోవడానికి కీబోర్డ్‌ను నొక్కండి");
+
+        // Audio & Sound
+        set(AUDIO, "ఆడియో");
+        set(SOUND, "ధ్వని");
+        set(CLICKS, "క్లిక్‌లు");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "కీయర్ లాజిక్");
+        set(SCREEN_PADDLES, "స్క్రీన్ తెడ్లు");
+        set(PADDLES_TYPE, "తెడ్డు రకం");
+        set(PADDLES_STANDARD, "ప్రామాణికం");
+        set(PADDLES_IAMBIC_ONE_FINGER, "ఐయాంబిక్ ఒక వేలు");
+        set(SQUEEZE_BUTTON_WIDTH, "squeeze బటన్ వెడల్పు");
+
+        // Prosigns level
+        set(PROSIGNS, "ప్రక్రియ సంకేతాలు");
     }
 }

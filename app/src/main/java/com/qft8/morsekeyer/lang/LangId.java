@@ -144,5 +144,21 @@ set(TARGET_MET, "Target tercapai");
         // Koch custom level
         set(CUSTOM_LEVEL, "Level kustom");
         set(SELECT_CHARACTERS_PROMPT, "Ketuk keyboard untuk memilih karakter yang Anda minati");
+
+        // Audio & Sound
+        set(AUDIO, "Audio");
+        set(SOUND, "Suara");
+        set(CLICKS, "Klik");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Logika keyer");
+        set(SCREEN_PADDLES, "Dayung layar");
+        set(PADDLES_TYPE, "Tipe dayung");
+        set(PADDLES_STANDARD, "Standar");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Iambik satu jari");
+        set(SQUEEZE_BUTTON_WIDTH, "Lebar tombol squeeze");
+
+        // Prosigns level
+        set(PROSIGNS, "tanda prosedur");
     }
 }

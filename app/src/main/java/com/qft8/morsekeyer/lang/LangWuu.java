@@ -144,5 +144,21 @@ set(TARGET_MET, "目标达到");
         // Koch custom level
         set(CUSTOM_LEVEL, "自定义级别");
         set(SELECT_CHARACTERS_PROMPT, "点击键盘选择您感兴趣的字符");
+
+        // Audio & Sound
+        set(AUDIO, "声音");
+        set(SOUND, "声音种类");
+        set(CLICKS, "咔嗒响");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "键控逻辑");
+        set(SCREEN_PADDLES, "屏幕键板");
+        set(PADDLES_TYPE, "键板类型");
+        set(PADDLES_STANDARD, "标准");
+        set(PADDLES_IAMBIC_ONE_FINGER, "双桨单指");
+        set(SQUEEZE_BUTTON_WIDTH, "Squeeze 按钮宽度");
+
+        // Prosigns level
+        set(PROSIGNS, "常用简语");
     }
 }

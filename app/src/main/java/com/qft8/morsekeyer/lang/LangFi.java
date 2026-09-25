@@ -144,5 +144,21 @@ set(TARGET_MET, "Tavoite saavutettu");
         // Koch custom level
         set(CUSTOM_LEVEL, "Mukautettu taso");
         set(SELECT_CHARACTERS_PROMPT, "Napauta näppäimistöä valitaksesi kiinnostavat merkit");
+
+        // Audio & Sound
+        set(AUDIO, "Ääni");
+        set(SOUND, "Äänityyppi");
+        set(CLICKS, "Napsahdukset");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Keyer-logiikka");
+        set(SCREEN_PADDLES, "Näyttölapaterät");
+        set(PADDLES_TYPE, "Lapatyyppi");
+        set(PADDLES_STANDARD, "Vakio");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Jambinen yksi sormi");
+        set(SQUEEZE_BUTTON_WIDTH, "Squeeze-painikkeen leveys");
+
+        // Prosigns level
+        set(PROSIGNS, "prosignit");
     }
 }

@@ -144,5 +144,21 @@ set(TARGET_MET, "Cél elérve");
         // Koch custom level
         set(CUSTOM_LEVEL, "Egyéni szint");
         set(SELECT_CHARACTERS_PROMPT, "Koppintson a billentyűzetre a kívánt karakterek kiválasztásához");
+
+        // Audio & Sound
+        set(AUDIO, "Hang");
+        set(SOUND, "Hangtípus");
+        set(CLICKS, "Kattogás");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Billentyűző logika");
+        set(SCREEN_PADDLES, "Képernyő lapátok");
+        set(PADDLES_TYPE, "Lapáttípus");
+        set(PADDLES_STANDARD, "Szabványos");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Iambikus egy ujj");
+        set(SQUEEZE_BUTTON_WIDTH, "Squeeze gomb szélessége");
+
+        // Prosigns level
+        set(PROSIGNS, "eljárási jelek");
     }
 }

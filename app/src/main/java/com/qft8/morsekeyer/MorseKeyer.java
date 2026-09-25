@@ -60,6 +60,7 @@ public class MorseKeyer {
         state.isTransmitting = false;
         state.iambicScheduled = false;
         state.bugKeyActive = false;
+        state.centerCurrentlyPressed = false;
         state.isSequencePlaying = false;
         sequenceElements = null;
         sequenceCharCallback = null;
@@ -83,7 +84,8 @@ public class MorseKeyer {
     // ============================================================
 
     double[] getTransmissionTimings() {
-        double ditLength = 1200.0 / settings.wpm;
+        int safeWpm = Math.max(1, settings != null ? settings.wpm : 15);
+        double ditLength = 1200.0 / safeWpm;
         return new double[] {
                 ditLength, // [0] dit
                 ditLength * 3.0, // [1] dah
@@ -94,11 +96,12 @@ public class MorseKeyer {
     }
 
     double[] getRecognitionTimings() {
-        double ditLength = 1200.0 / settings.wpm;
+        int safeWpm = Math.max(1, settings != null ? settings.wpm : 15);
+        double ditLength = 1200.0 / safeWpm;
 
         // At 100%, these factors are exactly 1.0, matching strict mode perfectly.
-        double ilsFactor = settings.strict ? 1.0 : (settings.interletterSpacing / 100.0);
-        double iwsFactor = settings.strict ? 1.0 : (settings.interwordSpacing / 100.0);
+        double ilsFactor = (settings == null || settings.strict) ? 1.0 : (settings.interletterSpacing / 100.0);
+        double iwsFactor = (settings == null || settings.strict) ? 1.0 : (settings.interwordSpacing / 100.0);
 
         double letterGap = Math.max(ditLength * 3.0 * ilsFactor, 1.2 * ditLength);
 
@@ -231,6 +234,34 @@ public class MorseKeyer {
         
         // Convert to sequence of elements
         for (int i = 0; i < upperText.length(); i++) {
+            if (upperText.charAt(i) == '<') {
+                int closeIdx = upperText.indexOf('>', i);
+                if (closeIdx != -1) {
+                    String token = upperText.substring(i + 1, closeIdx);
+                    String code = "";
+                    for (MorseDictionary.Entry entry : MorseDictionary.ENTRIES) {
+                        if (entry.name.equals(token)) {
+                            code = entry.code;
+                            break;
+                        }
+                    }
+                    if (code != null && !code.isEmpty()) {
+                        for (int j = 0; j < code.length(); j++) {
+                            char element = code.charAt(j);
+                            double toneDuration = (element == '.') ? timings[0] : timings[1];
+                            double silenceDuration = timings[2];
+                            sequenceElements.add(new double[]{toneDuration, silenceDuration, (double) i});
+                        }
+                        if (!sequenceElements.isEmpty()) {
+                            double[] last = sequenceElements.get(sequenceElements.size() - 1);
+                            last[1] = timings[3];
+                        }
+                    }
+                    i = closeIdx;
+                    continue;
+                }
+            }
+
             String ch = upperText.substring(i, i+1);
             if (ch.equals(" ")) {
                 if (!sequenceElements.isEmpty()) {
@@ -366,7 +397,7 @@ public class MorseKeyer {
     private String determineNextElement() {
         boolean ditHeld = state.ditCurrentlyPressed;
         boolean dahHeld = state.dahCurrentlyPressed;
-        boolean squeezeHeld = ditHeld && dahHeld;
+        boolean squeezeHeld = (ditHeld && dahHeld) || state.centerCurrentlyPressed;
 
         boolean squeezeActive = squeezeHeld || ("iambic-b".equals(settings.mode) && state.squeezePressedDuringElement);
 
@@ -377,6 +408,12 @@ public class MorseKeyer {
         if (squeezeActive ||
            (".".equals(state.lastElement) && ditHeld && dahMemory) ||
            ("-".equals(state.lastElement) && dahHeld && ditMemory)) {
+            if (state.centerCurrentlyPressed && !ditHeld && !dahHeld && (!state.isTransmitting && !state.iambicScheduled)) {
+                return ".";
+            }
+            if (state.lastElement == null || state.lastElement.isEmpty()) {
+                return ".";
+            }
             return ".".equals(state.lastElement) ? "-" : ".";
         }
         // 2. Priority: Current Press (if only one held)
@@ -502,6 +539,15 @@ public class MorseKeyer {
     // ============================================================
 
     private String determineNextUltimaticElement() {
+        if (state.centerCurrentlyPressed) {
+            if (!state.ditCurrentlyPressed && !state.dahCurrentlyPressed && (!state.isTransmitting && !state.iambicScheduled)) {
+                return ".";
+            }
+            if (state.lastElement == null || state.lastElement.isEmpty()) {
+                return ".";
+            }
+            return ".".equals(state.lastElement) ? "-" : ".";
+        }
         boolean ditHeld = state.ditCurrentlyPressed;
         boolean dahHeld = state.dahCurrentlyPressed;
         boolean squeezeHeld = ditHeld && dahHeld;
@@ -801,7 +847,11 @@ public class MorseKeyer {
             cancelAll();
         }
         if (isPressed) {
-            if ("left".equals(side)) {
+            if ("center".equals(side)) {
+                state.centerCurrentlyPressed = true;
+                if (state.isTransmitting || state.iambicScheduled)
+                    state.squeezePressedDuringElement = true;
+            } else if ("left".equals(side)) {
                 if ("normal".equals(settings.polarity)) {
                     state.ditCurrentlyPressed = true;
                     state.ultimaticLastPaddle = ".";
@@ -827,7 +877,9 @@ public class MorseKeyer {
                 }
             }
         } else {
-            if ("left".equals(side)) {
+            if ("center".equals(side)) {
+                state.centerCurrentlyPressed = false;
+            } else if ("left".equals(side)) {
                 if ("normal".equals(settings.polarity))
                     state.ditCurrentlyPressed = false;
                 else
@@ -840,13 +892,13 @@ public class MorseKeyer {
             }
         }
 
-        state.squeezeCurrentlyPressed = state.ditCurrentlyPressed && state.dahCurrentlyPressed;
+        state.squeezeCurrentlyPressed = (state.ditCurrentlyPressed && state.dahCurrentlyPressed) || state.centerCurrentlyPressed;
         if (state.squeezeCurrentlyPressed && (state.isTransmitting || state.iambicScheduled)) {
             state.squeezePressedDuringElement = true;
         }
 
         if ("straight".equals(settings.mode)) {
-            if ("left".equals(side)) {
+            if ("left".equals(side) || "center".equals(side)) {
                 handleStraightKey(isPressed);
             }
         } else if ("ultimatic".equals(settings.mode)) {

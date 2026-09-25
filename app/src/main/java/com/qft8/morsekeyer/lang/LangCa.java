@@ -137,5 +137,21 @@ set(TARGET_MET, "Objectiu assolit");
         // Koch custom level
         set(CUSTOM_LEVEL, "Nivell personalitzat");
         set(SELECT_CHARACTERS_PROMPT, "Toca el teclat per seleccionar els caràcters que t'interessen");
+
+        // Audio & Sound
+        set(AUDIO, "Àudio");
+        set(SOUND, "So");
+        set(CLICKS, "Clics");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Lògica de manipulador");
+        set(SCREEN_PADDLES, "Pales en pantalla");
+        set(PADDLES_TYPE, "Tipus de pales");
+        set(PADDLES_STANDARD, "Estàndard");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Iàmbic un dit");
+        set(SQUEEZE_BUTTON_WIDTH, "Amplada del botó squeeze");
+
+        // Prosigns level
+        set(PROSIGNS, "prosignes");
     }
 }

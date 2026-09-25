@@ -137,5 +137,21 @@ set(TARGET_MET, "Maqsadga erishildi");
         // Koch custom level
         set(CUSTOM_LEVEL, "Maxsus daraja");
         set(SELECT_CHARACTERS_PROMPT, "Qiziqtirgan belgilarni tanlash uchun klaviaturaga bosing");
+
+        // Audio & Sound
+        set(AUDIO, "Audio");
+        set(SOUND, "Ovoz turi");
+        set(CLICKS, "Chertishlar");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Manipulyator mantiqi");
+        set(SCREEN_PADDLES, "Ekran manipulyatorlari");
+        set(PADDLES_TYPE, "Manipulyator turi");
+        set(PADDLES_STANDARD, "Standart");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Yambik bir barmoq");
+        set(SQUEEZE_BUTTON_WIDTH, "Squeeze tugmasi kengligi");
+
+        // Prosigns level
+        set(PROSIGNS, "prosignlar");
     }
 }

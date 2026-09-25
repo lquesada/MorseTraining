@@ -17,16 +17,22 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
     @Override
     public void uncaughtException(Thread thread, Throwable throwable) {
         try {
-            File file = new File(context.getExternalFilesDir(null), "crash_log.txt");
-            FileWriter fw = new FileWriter(file, true);
-            PrintWriter pw = new PrintWriter(fw);
-            throwable.printStackTrace(pw);
-            pw.flush();
-            pw.close();
-            fw.close();
-        } catch (Exception e) {
+            File dir = context != null ? context.getExternalFilesDir(null) : null;
+            if (dir != null) {
+                File file = new File(dir, "crash_log.txt");
+                try (FileWriter fw = new FileWriter(file, true);
+                     PrintWriter pw = new PrintWriter(fw)) {
+                    throwable.printStackTrace(pw);
+                    pw.flush();
+                }
+            }
+        } catch (Throwable e) {
             // Ignore
         }
-        defaultHandler.uncaughtException(thread, throwable);
+        if (defaultHandler != null) {
+            defaultHandler.uncaughtException(thread, throwable);
+        } else {
+            System.exit(1);
+        }
     }
 }

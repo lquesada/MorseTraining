@@ -137,5 +137,21 @@ set(TARGET_MET, "இலக்கு எட்டப்பட்டது");
         // Koch custom level
         set(CUSTOM_LEVEL, "தனிப்பயன் நிலை");
         set(SELECT_CHARACTERS_PROMPT, "நீங்கள் விரும்பும் எழுத்துகளைத் தேர்ந்தெடுக்க விசைப்பலகையை தட்டவும்");
+
+        // Audio & Sound
+        set(AUDIO, "ஆடியோ");
+        set(SOUND, "ஒலி");
+        set(CLICKS, "கிளிக்குகள்");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "கீயர் தர்க்கம்");
+        set(SCREEN_PADDLES, "திரை துடுப்புகள்");
+        set(PADDLES_TYPE, "துடுப்பு வகை");
+        set(PADDLES_STANDARD, "நிலையானது");
+        set(PADDLES_IAMBIC_ONE_FINGER, "அயம்பிக் ஒரு விரல்");
+        set(SQUEEZE_BUTTON_WIDTH, "squeeze பொத்தான் அகலம்");
+
+        // Prosigns level
+        set(PROSIGNS, "செயல்முறை குறிகள்");
     }
 }

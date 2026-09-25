@@ -17,6 +17,7 @@ public class MorseState {
     // paddleState fields (from index.html)
     public boolean ditCurrentlyPressed = false;
     public boolean dahCurrentlyPressed = false;
+    public boolean centerCurrentlyPressed = false;
     public boolean ditPressedDuringElement = false;
     public boolean dahPressedDuringElement = false;
     public boolean squeezeCurrentlyPressed = false;

@@ -144,5 +144,21 @@ set(TARGET_MET, "目標達到");
         // Koch custom level
         set(CUSTOM_LEVEL, "自訂級別");
         set(SELECT_CHARACTERS_PROMPT, "點擊鍵盤以選擇您感興趣的字符");
+
+        // Audio & Sound
+        set(AUDIO, "音訊");
+        set(SOUND, "聲音");
+        set(CLICKS, "咔嗒聲");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "自動鍵邏輯");
+        set(SCREEN_PADDLES, "螢幕按鍵");
+        set(PADDLES_TYPE, "按鍵類型");
+        set(PADDLES_STANDARD, "標準");
+        set(PADDLES_IAMBIC_ONE_FINGER, "雙槳單指");
+        set(SQUEEZE_BUTTON_WIDTH, "Squeeze 按鈕闊度");
+
+        // Prosigns level
+        set(PROSIGNS, "簡語");
     }
 }

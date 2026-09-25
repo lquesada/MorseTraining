@@ -144,5 +144,21 @@ set(TARGET_MET, "An cimma manufa");
         // Koch custom level
         set(CUSTOM_LEVEL, "Matakin al'ada");
         set(SELECT_CHARACTERS_PROMPT, "Taɓa madannin don zaɓar haruffan da kake sha'awa");
+
+        // Audio & Sound
+        set(AUDIO, "Sauti");
+        set(SOUND, "Irin sauti");
+        set(CLICKS, "Kukan karfe");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Dabarar maɓalli");
+        set(SCREEN_PADDLES, "Fadul na allo");
+        set(PADDLES_TYPE, "Irin fadul");
+        set(PADDLES_STANDARD, "Daidai");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Iambic yatsa ɗaya");
+        set(SQUEEZE_BUTTON_WIDTH, "Faɗin maɓallin squeeze");
+
+        // Prosigns level
+        set(PROSIGNS, "alamomin aiki");
     }
 }

@@ -144,5 +144,21 @@ set(TARGET_MET, "目標達成");
         // Koch custom level
         set(CUSTOM_LEVEL, "カスタムレベル");
         set(SELECT_CHARACTERS_PROMPT, "キーボードをタップして興味のある文字を選択してください");
+
+        // Audio & Sound
+        set(AUDIO, "オーディオ");
+        set(SOUND, "サウンド");
+        set(CLICKS, "クリック音");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "キーヤーロジック");
+        set(SCREEN_PADDLES, "画面パドル");
+        set(PADDLES_TYPE, "パドルの種類");
+        set(PADDLES_STANDARD, "標準");
+        set(PADDLES_IAMBIC_ONE_FINGER, "アイアンビック1本指");
+        set(SQUEEZE_BUTTON_WIDTH, "Squeeze ボタンの幅");
+
+        // Prosigns level
+        set(PROSIGNS, "プロサイン");
     }
 }

@@ -105,6 +105,7 @@ public class LangDa extends MorseLanguage {
         set(SCORE, "Score");
         set(MATCH_COMPLETED, "Match fuldført");
         set(HIGH_SCORE, "Høj score");
+        set(YOUR_HIGH_SCORE_IS, "Din højeste score er");
 
                 
 
@@ -143,5 +144,21 @@ set(TARGET_MET, "Mål nået");
         // Koch custom level
         set(CUSTOM_LEVEL, "Tilpasset niveau");
         set(SELECT_CHARACTERS_PROMPT, "Tryk på tastaturet for at vælge de tegn, du er interesseret i");
+
+        // Audio & Sound
+        set(AUDIO, "Lyd");
+        set(SOUND, "Lydtype");
+        set(CLICKS, "Klik");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Keyer-logik");
+        set(SCREEN_PADDLES, "Skærmpadler");
+        set(PADDLES_TYPE, "Padletype");
+        set(PADDLES_STANDARD, "Standard");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Iambisk én finger");
+        set(SQUEEZE_BUTTON_WIDTH, "Bredde på squeeze-knap");
+
+        // Prosigns level
+        set(PROSIGNS, "prosigns");
     }
 }

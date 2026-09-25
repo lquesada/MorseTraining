@@ -144,5 +144,21 @@ set(TARGET_MET, "목표 달성");
         // Koch custom level
         set(CUSTOM_LEVEL, "사용자 정의 레벨");
         set(SELECT_CHARACTERS_PROMPT, "관심 있는 문자를 선택하려면 키보드를 탭하세요");
+
+        // Audio & Sound
+        set(AUDIO, "오디오");
+        set(SOUND, "사운드");
+        set(CLICKS, "클릭음");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "키어 로직");
+        set(SCREEN_PADDLES, "화면 패들");
+        set(PADDLES_TYPE, "패들 유형");
+        set(PADDLES_STANDARD, "표준");
+        set(PADDLES_IAMBIC_ONE_FINGER, "아이앰빅 원핑거");
+        set(SQUEEZE_BUTTON_WIDTH, "Squeeze 버튼 너비");
+
+        // Prosigns level
+        set(PROSIGNS, "약호");
     }
 }

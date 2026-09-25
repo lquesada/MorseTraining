@@ -144,5 +144,21 @@ set(TARGET_MET, "लक्ष्य पूरा हुआ");
         // Koch custom level
         set(CUSTOM_LEVEL, "कस्टम स्तर");
         set(SELECT_CHARACTERS_PROMPT, "जिन वर्णों में आपकी रुचि है उन्हें चुनने के लिए कीबोर्ड पर टैप करें");
+
+        // Audio & Sound
+        set(AUDIO, "ऑडियो");
+        set(SOUND, "ध्वनि");
+        set(CLICKS, "क्लिक्स");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "कीयर तर्क");
+        set(SCREEN_PADDLES, "स्क्रीन पैडल");
+        set(PADDLES_TYPE, "पैडल प्रकार");
+        set(PADDLES_STANDARD, "मानक");
+        set(PADDLES_IAMBIC_ONE_FINGER, "इयाम्बिक एक उंगली");
+        set(SQUEEZE_BUTTON_WIDTH, "squeeze बटन की चौड़ाई");
+
+        // Prosigns level
+        set(PROSIGNS, "प्रक्रिया संकेत");
     }
 }

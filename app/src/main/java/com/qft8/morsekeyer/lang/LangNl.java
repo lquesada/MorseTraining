@@ -105,6 +105,7 @@ public class LangNl extends MorseLanguage {
         set(SCORE, "Score");
         set(MATCH_COMPLETED, "Wedstrijd voltooid");
         set(HIGH_SCORE, "Hoge score");
+        set(YOUR_HIGH_SCORE_IS, "Je hoogste score is");
 
                 
 
@@ -143,5 +144,21 @@ set(TARGET_MET, "Doel bereikt");
         // Koch custom level
         set(CUSTOM_LEVEL, "Aangepast niveau");
         set(SELECT_CHARACTERS_PROMPT, "Tik op het toetsenbord om de tekens te selecteren die je interesseren");
+
+        // Audio & Sound
+        set(AUDIO, "Audio");
+        set(SOUND, "Geluid");
+        set(CLICKS, "Kliks");
+
+        // Keyer logic & Screen paddles
+        set(KEYER_LOGIC, "Keyer-logica");
+        set(SCREEN_PADDLES, "Schermpaddles");
+        set(PADDLES_TYPE, "Paddletype");
+        set(PADDLES_STANDARD, "Standaard");
+        set(PADDLES_IAMBIC_ONE_FINGER, "Iambic één vinger");
+        set(SQUEEZE_BUTTON_WIDTH, "Breedte squeeze-knop");
+
+        // Prosigns level
+        set(PROSIGNS, "prosigns");
     }
 }
